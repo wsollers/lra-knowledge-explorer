@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Knowledge Explorer</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+<style>
+:root {
+  --bg:#0f172a; --panel:#111827; --ink:#e5e7eb; --muted:#94a3b8; --grid:#1f2937;
+  --def:#14b8a6; --thm:#60a5fa; --sel:#f59e0b; --dep:#94a3b8; --impl:#f59e0b; --use:#a78bfa; --equiv:#22c55e; --danger:#ef4444;
+}
+*{box-sizing:border-box} html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif}
+body{display:grid;grid-template-columns:360px minmax(0,1fr) minmax(410px,34vw);height:100vh;overflow:hidden}
+.sidebar{background:var(--panel);overflow:auto;border-right:1px solid #243041}
+.detail{background:var(--panel);overflow-y:auto;overflow-x:hidden;border-left:1px solid #243041}
+.main{position:relative;overflow:auto;background:
+  linear-gradient(to right, transparent 0 31px, var(--grid) 31px 32px),
+  linear-gradient(to bottom, transparent 0 31px, var(--grid) 31px 32px); background-size:32px 32px}
+.section{padding:16px 18px;border-bottom:1px solid #243041}
+.detail .section{min-height:100%;overflow:visible}
+h1{font-size:1.2rem;margin:0 0 8px} h2{font-size:1rem;margin:0 0 10px}
+p,.tiny{color:var(--muted);line-height:1.4} .tiny{font-size:.8rem}
+input,select,button{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #334155;background:#0b1220;color:var(--ink)}
+button{cursor:pointer;font-weight:600} button:hover{background:#111827}
+.row{display:flex;gap:8px;flex-wrap:wrap} .row>*{flex:1}
+label.chk{display:flex;align-items:center;gap:8px;font-size:.9rem;color:var(--ink);padding:8px 10px;border:1px solid #334155;border-radius:10px;background:#0b1220}
+label.chk input{width:auto;padding:0}
+#graphInner{position:relative;min-width:2800px;min-height:2000px;transform-origin:top left}
+svg{position:absolute;inset:0}
+#edgeLayer{z-index:1;pointer-events:none;overflow:visible}
+#nodeLayer{position:relative;z-index:2}
+.node{position:absolute;width:250px;min-height:86px;padding:14px;border-radius:18px;cursor:pointer;border:2px solid rgba(255,255,255,.08);
+ box-shadow:0 10px 24px rgba(0,0,0,.28);touch-action:none;user-select:none}
+.node.dragging{cursor:grabbing;z-index:5}
+.node.definition{background:linear-gradient(180deg, rgba(58,154,130,.18), rgba(58,154,130,.1));border-color:rgba(58,154,130,.75)}
+.node.axiom{background:linear-gradient(180deg, rgba(138,106,191,.22), rgba(138,106,191,.13));border-color:rgba(138,106,191,.85)}
+.node.theorem{background:linear-gradient(180deg, rgba(192,120,64,.22), rgba(192,120,64,.13));border-color:rgba(192,120,64,.85)}
+.node.lemma,.node.proposition,.node.corollary{background:linear-gradient(180deg, rgba(96,165,250,.18), rgba(96,165,250,.1));border-color:rgba(147,197,253,.55)}
+.node.selected{outline:3px solid rgba(245,158,11,.8)}
+.type{font-size:.73rem;text-transform:uppercase;letter-spacing:.08em;color:#cbd5e1;font-weight:700;margin-bottom:6px}
+.title{font-size:.97rem;line-height:1.25;font-weight:700;color:white}
+.meta{margin-top:8px;font-size:.78rem;color:#cbd5e1;display:flex;justify-content:space-between;gap:8px}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:12px;border-radius:14px;margin-bottom:12px;overflow:visible}
+.label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:5px}
+.value{white-space:pre-wrap;line-height:1.42;overflow-wrap:anywhere;word-break:break-word;max-width:100%;overflow:visible}
+.danger{border:2px solid var(--danger)!important;background:rgba(127,29,29,.16)!important}
+.tooltip{position:fixed;display:none;pointer-events:none;max-width:520px;background:rgba(15,23,42,.98);border:1px solid #334155;border-radius:14px;padding:12px;z-index:50;box-shadow:0 18px 38px rgba(0,0,0,.4)}
+.tooltip .block{margin-top:8px;padding:9px 10px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);white-space:pre-wrap}
+.tooltip .danger{border:2px solid var(--danger);background:rgba(127,29,29,.16)}
+code{background:#111827;padding:1px 5px;border-radius:6px}
+.value .katex-display,.tooltip .block .katex-display{max-width:100%;overflow:visible;padding:.25rem 0;margin:.45rem 0;white-space:normal}
+.value .katex,.tooltip .block .katex{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+.value .katex-html,.tooltip .block .katex-html{white-space:normal;overflow-wrap:anywhere}
+.value .katex-display>.katex,.tooltip .block .katex-display>.katex{white-space:normal;text-align:left}
+.value .katex .base,.tooltip .block .katex .base{white-space:normal;max-width:100%}
+.math-list{margin:.35rem 0 .2rem 1.25rem;padding-left:1rem}
+.math-list li{margin:.35rem 0}
+.proof-panel{border-color:rgba(96,165,250,.28);background:rgba(96,165,250,.08)}
+</style>
+</head>
+<body>
+<aside class="sidebar">
+  <div class="section">
+    <h1>Knowledge Explorer</h1>
+    <p>Auto-loads <code>knowledge.json</code> and <code>graph-edges.json</code> from the same folder when served via GitHub Pages or a local server.</p>
+    <div class="tiny" id="status">No data loaded yet.</div>
+  </div>
+  <div class="section">
+    <h2>Data</h2>
+    <div class="row" style="margin-top:10px">
+      <button id="autoBtn">Try auto-load</button>
+    </div>
+    <div class="tiny" style="margin:10px 0 4px">knowledge.json</div>
+    <input type="file" id="knowledgeFile" accept=".json"/>
+    <div class="tiny" style="margin:10px 0 4px">graph-edges.json</div>
+    <input type="file" id="edgesFile" accept=".json"/>
+    <div class="row" style="margin-top:10px">
+      <button id="loadFilesBtn">Load selected files</button>
+    </div>
+  </div>
+  <div class="section">
+    <h2>Filters</h2>
+    <input type="text" id="searchBox" placeholder="Search title, id, statement..."/>
+    <div class="row" style="margin-top:10px">
+      <label class="chk"><input type="checkbox" id="showDefinitions" checked/>Definitions</label>
+      <label class="chk"><input type="checkbox" id="showAxioms" checked/>Axioms</label>
+      <label class="chk"><input type="checkbox" id="showResults" checked/>Results</label>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <label class="chk"><input type="checkbox" id="showDepends" checked/>Dependencies</label>
+      <label class="chk"><input type="checkbox" id="showImplies" checked/>Implications</label>
+    </div>
+    <div style="margin-top:10px">
+      <select id="deckFilter"><option value="All">All decks</option></select>
+    </div>
+  </div>
+  <div class="section">
+    <h2>View</h2>
+    <div class="row">
+      <button id="zoomInBtn">Zoom in</button>
+      <button id="zoomOutBtn">Zoom out</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <label class="chk"><input type="checkbox" id="dependencyTreeMode"/>Dependency Tree</label>
+    </div>
+  </div>
+</aside>
+<main class="main" id="graphWrap">
+  <div id="graphInner">
+    <svg id="edgeLayer"></svg>
+    <div id="nodeLayer"></div>
+  </div>
+  <div class="tooltip" id="tooltip"></div>
+</main>
+<aside class="detail">
+  <div class="section">
+    <h2>Node details</h2>
+    <div id="detailEmpty" class="tiny">Click a node to inspect its extracted fields.</div>
+    <div id="detailContent" style="display:none"></div>
+  </div>
+</aside>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"></script>
+<script>
+const state={knowledge:{metadata:{},nodes:[]},edges:[],cards:[],zoom:1,selectedId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showDepends:true,showUses:true,showImplies:true,deck:'All',dependencyTreeMode:false}};
+const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),dependencyTreeMode:document.getElementById('dependencyTreeMode'),deckFilter:document.getElementById('deckFilter'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn')};
+function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function htmlWithBreaks(s){return esc(s).replace(/\n/g,'<br>');}
+const KATEX_OPTIONS={throwOnError:false,strict:'warn',macros:{'\\colonequiv':'\\equiv','\\coloniff':'\\Longleftrightarrow'}};
+function renderMath(el){if(!el||typeof renderMathInElement!=='function')return;const targets=el.matches?.('.value,.block')?[el]:Array.from(el.querySelectorAll('.value,.block'));for(const t of(targets.length?targets:[el])){try{renderMathInElement(t,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'$',right:'$',display:false}],...KATEX_OPTIONS,ignoredTags:['script','noscript','style','textarea','pre','code','span']});}catch(e){}}}
+function kindClass(k){const s=String(k||'').toLowerCase();if(s.includes('definition'))return 'definition';if(s.includes('axiom'))return 'axiom';return s||'theorem';}
+function texToHtml(s){if(!s)return'';return renderMixedMath(s);}
+function normalizeLatex(t){let o=Array.isArray(t)?t.join('\n'):String(t??'');o=o.replace(/\\colonequiv\b/g,'\\equiv');o=o.replace(/\\coloniff\b/g,'\\Longleftrightarrow');o=o.replace(/\\textbf\s*\{([^{}]*)\}/g,'$1');o=o.replace(/\\textit\s*\{([^{}]*)\}/g,'$1');return o;}
+function hasMath(t){return/\$\$?[^$]+\$\$?|\\\[[\s\S]*?\\\]/.test(t);}
+function renderLatex(src,display=false){const l=src.trim();if(!l)return'';try{return katex.renderToString(l,{...KATEX_OPTIONS,displayMode:display});}catch(e){return htmlWithBreaks(display?`\\[\n${src}\n\\]`:`$${src}$`);}}
+function renderList(src){const t=src.trim();const m=t.match(/^\\begin\{(itemize|enumerate)\}([\s\S]*?)\\end\{\1\}$/);if(!m)return null;const tag=m[1]==='enumerate'?'ol':'ul';const items=m[2].split(/\\item(?:\[[^\]]*\])?\s*/).map(x=>x.trim()).filter(Boolean);if(!items.length)return null;return`<${tag} class="math-list">${items.map(i=>`<li>${renderMixedMath(i)}</li>`).join('')}</${tag}>`;}
+function renderMixedMath(text){const l=renderList(text);if(l)return l;const n=normalizeLatex(text);const re=/(\\\[[\s\S]*?\\\]|\$\$[\s\S]*?\$\$|\$[^$\n]*(?:\\.[^$\n]*)*\$)/g;let o='',p=0,m;while((m=re.exec(n))!==null){o+=htmlWithBreaks(n.slice(p,m.index));const tk=m[0];if(tk.startsWith('\\['))o+=renderLatex(tk.slice(2,-2),true);else if(tk.startsWith('$$'))o+=renderLatex(tk.slice(2,-2),true);else o+=renderLatex(tk.slice(1,-1),false);p=re.lastIndex;}o+=htmlWithBreaks(n.slice(p));return o;}
+function getNodes(){return state.knowledge.nodes||[];}
+function normalizeEdgeKind(k){const s=String(k||'').toLowerCase();if(s==='dependency'||s==='links_to_proof'||s==='prereq')return'depends_on';if(s==='use'||s==='uses')return'uses';if(s==='used_by')return'used_by';if(s==='implication'||s==='consequence'||s==='implies')return'implies';if(s==='equivalent'||s==='equivalence')return'equivalent_to';return s||'depends_on';}
+function edgeVisual(k){const n=normalizeEdgeKind(k);if(n==='implies')return{color:'var(--impl)',marker:'url(#arrowImp)',width:'2.8',opacity:'.92'};if(n==='uses'||n==='used_by')return{color:'var(--use)',marker:'url(#arrowUse)',width:'2.45',opacity:'.82'};if(n==='equivalent_to')return{color:'var(--equiv)',marker:'url(#arrowEquiv)',width:'2.5',opacity:'.86'};return{color:'var(--dep)',marker:'url(#arrowDep)',width:'2.3',opacity:'.72'};}
+function cleanEdge(v){return String(v||'').trim().replace(/^['"`]+|['"`]+$/g,'');}
+function splitTargets(v){if(Array.isArray(v))return v.map(cleanEdge).filter(Boolean);return String(v||'').split(/[,;\n]+/).map(cleanEdge).filter(Boolean);}
+function addEdge(edges,seen,ids,from,to,kind){const f=cleanEdge(from),t=cleanEdge(to),k=normalizeEdgeKind(kind);if(!f||!t||f===t||!ids.has(f)||!ids.has(t))return;const sig=`${f}|${t}|${k}`;if(seen.has(sig))return;seen.add(sig);edges.push({from:f,to:t,kind:k});}
+function normalizeEdges(knowledge,edgeData){const nodes=knowledge?.nodes||[];const ids=new Set(nodes.map(n=>n.id));const raw=Array.isArray(edgeData)?edgeData:(edgeData?.edges||[]);const edges=[];const seen=new Set();raw.forEach(e=>addEdge(edges,seen,ids,e.from??e.source,e.to??e.target,e.kind??e.type??e.label));nodes.forEach(n=>{splitTargets(n.depends_on_ids).forEach(id=>addEdge(edges,seen,ids,id,n.id,'depends_on'));splitTargets(n.implies_ids).forEach(id=>addEdge(edges,seen,ids,n.id,id,'implies'));splitTargets(n.equivalent_to_ids).forEach(id=>addEdge(edges,seen,ids,n.id,id,'equivalent_to'));});return edges;}
+function syncDecks(nodes){const decks=['All',...Array.from(new Set(nodes.map(n=>n.deck).filter(Boolean))).sort()];const ex=Array.from(els.deckFilter.options).map(o=>o.value);if(ex.join('|')===decks.join('|'))return;els.deckFilter.innerHTML='';decks.forEach(d=>{let o=document.createElement('option');o.value=d;o.textContent=d;if(d===state.filters.deck)o.selected=true;els.deckFilter.appendChild(o);});}
+function visibleGraph(){const nodes=getNodes();syncDecks(nodes);if(state.filters.dependencyTreeMode&&state.selectedId)return depTree(nodes,state.edges,state.selectedId);const q=state.filters.search.trim().toLowerCase();const vis=new Map();for(const n of nodes){const cls=kindClass(n.kind);const byType=cls==='axiom'?state.filters.showAxioms:(cls==='definition'?state.filters.showDefinitions:state.filters.showResults);const byDeck=state.filters.deck==='All'||n.deck===state.filters.deck;const blob=JSON.stringify(n).toLowerCase();vis.set(n.id,byType&&byDeck&&(!q||blob.includes(q)));}const outNodes=nodes.filter(n=>vis.get(n.id));const ids=new Set(outNodes.map(n=>n.id));const outEdges=state.edges.filter(e=>{const k=normalizeEdgeKind(e.kind);return ids.has(e.from)&&ids.has(e.to)&&((k==='depends_on'&&state.filters.showDepends)||((k==='uses'||k==='used_by')&&state.filters.showDepends)||((k==='implies'||k==='equivalent_to')&&state.filters.showImplies));});return{nodes:outNodes,edges:outEdges};}
+function depTree(nodes,edges,sel){const byId=new Map(nodes.map(n=>[n.id,n]));if(!byId.has(sel))return{nodes:[],edges:[]};const depEdges=edges.filter(e=>{const k=normalizeEdgeKind(e.kind);return k==='depends_on'||k==='prereq';});const inc=new Map(nodes.map(n=>[n.id,[]]));depEdges.forEach(e=>{if(byId.has(e.from)&&byId.has(e.to))inc.get(e.to).push(e);});const seen=new Set([sel]);const te=[];const q=[sel];while(q.length){const id=q.shift();for(const e of inc.get(id)||[]){te.push(e);if(!seen.has(e.from)){seen.add(e.from);q.push(e.from);}}}return{nodes:[...seen].map(id=>byId.get(id)).filter(Boolean),edges:te};}
+function chooseAnchor(nodes,edges){const ids=new Set(nodes.map(n=>n.id));const deg=new Map(nodes.map(n=>[n.id,0]));edges.forEach(e=>{if(!ids.has(e.from)||!ids.has(e.to))return;deg.set(e.from,(deg.get(e.from)||0)+1);deg.set(e.to,(deg.get(e.to)||0)+1);});return[...nodes].sort((a,b)=>(deg.get(b.id)||0)-(deg.get(a.id)||0))[0]?.id;}
+function layers(nodes,edges){const ids=new Set(nodes.map(n=>n.id));const out=new Map(nodes.map(n=>[n.id,[]]));const inc=new Map(nodes.map(n=>[n.id,[]]));edges.forEach(e=>{if(!ids.has(e.from)||!ids.has(e.to))return;out.get(e.from).push(e.to);inc.get(e.to).push(e.from);});const layer=new Map();const anchor=state.filters.dependencyTreeMode&&state.selectedId&&ids.has(state.selectedId)?state.selectedId:(chooseAnchor(nodes,edges)||nodes[0]?.id);const seeds=[anchor,...nodes.map(n=>n.id).filter(id=>id!==anchor)];let first=true;for(const seed of seeds){if(!seed||layer.has(seed))continue;layer.set(seed,first?0:-2);first=false;const q=[seed];while(q.length){const id=q.shift();const base=layer.get(id)||0;for(const to of out.get(id)||[])if(!layer.has(to)){layer.set(to,base+1);q.push(to);}for(const fr of inc.get(id)||[])if(!layer.has(fr)){layer.set(fr,base-1);q.push(fr);}}}return{layer,anchor};}
+function layout(nodes,edges){const{layer}=layers(nodes,edges);const groups=new Map();nodes.forEach(n=>{const l=layer.get(n.id)||0;if(!groups.has(l))groups.set(l,[]);groups.get(l).push(n);});const ls=Array.from(groups.keys()).sort((a,b)=>a-b);const xGap=430,yGap=158,startX=80;const minL=ls.length?Math.min(...ls):0;const maxL=ls.length?Math.max(...ls):0;const maxCount=ls.reduce((m,l)=>Math.max(m,groups.get(l).length),1);const centerY=Math.max(360,90+(maxCount-1)*yGap/2);const maxH=Math.max(900,centerY*2+140);ls.forEach(l=>{const arr=groups.get(l);arr.sort((a,b)=>(a.deck||'').localeCompare(b.deck||'')||(a.name||'').localeCompare(b.name||''));const top=centerY-((arr.length-1)*yGap)/2;arr.forEach((n,i)=>{const sv=state.nodePositions[n.id];n.x=sv?sv.x:startX+(l-minL)*xGap;n.y=sv?sv.y:top+i*yGap;n.w=250;n.h=86;});});return{width:startX+(maxL-minL+1)*xGap+360,height:maxH};}
+function nodeBox(n){const el=state.nodeElements?.get(n.id);return{x:n.x,y:n.y,w:el?.offsetWidth||n.w||250,h:el?.offsetHeight||n.h||86};}
+function rectPt(rect,target,inset=0){const cx=rect.x+rect.w/2,cy=rect.y+rect.h/2,dx=target.x-cx,dy=target.y-cy;if(!dx&&!dy)return{x:cx,y:cy};const hw=Math.max(1,rect.w/2-inset),hh=Math.max(1,rect.h/2-inset);const sx=dx?hw/Math.abs(dx):Infinity,sy=dy?hh/Math.abs(dy):Infinity,sc=Math.min(sx,sy);return{x:cx+dx*sc,y:cy+dy*sc};}
+function drawEdges(g=state.renderedGraph){if(!g)return;els.edgeLayer.querySelectorAll('path.edge').forEach(p=>p.remove());const nm=new Map(g.nodes.map(n=>[n.id,n]));for(const e of g.edges){const a=nm.get(e.from),b=nm.get(e.to);if(!a||!b)continue;const aB=nodeBox(a),bB=nodeBox(b);const aC={x:aB.x+aB.w/2,y:aB.y+aB.h/2},bC={x:bB.x+bB.w/2,y:bB.y+bB.h/2};const s=rectPt(aB,bC,0),en=rectPt(bB,aC,1);const dir=Math.sign(en.x-s.x)||1,bend=Math.max(80,Math.abs(en.x-s.x)*.45);const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.classList.add('edge');p.setAttribute('d',`M ${s.x} ${s.y} C ${s.x+dir*bend} ${s.y}, ${en.x-dir*bend} ${en.y}, ${en.x} ${en.y}`);p.setAttribute('fill','none');const v=edgeVisual(e.kind);p.setAttribute('stroke',v.color);p.setAttribute('stroke-width',v.width);p.setAttribute('opacity',v.opacity);p.setAttribute('marker-end',v.marker);els.edgeLayer.appendChild(p);}}
+function attachDrag(el,n){function finish(ev){const d=state.dragging;if(!d||d.id!==n.id)return;el.classList.remove('dragging');try{el.releasePointerCapture(ev.pointerId);}catch(_){}if(d.moved){state.suppressNextClick=true;setTimeout(()=>{state.suppressNextClick=false;},0);}state.dragging=null;}el.addEventListener('pointerdown',ev=>{if(ev.button!==0)return;hideTooltip();state.dragging={id:n.id,startX:ev.clientX,startY:ev.clientY,originX:n.x,originY:n.y,moved:false};el.classList.add('dragging');el.setPointerCapture(ev.pointerId);});el.addEventListener('pointermove',ev=>{const d=state.dragging;if(!d||d.id!==n.id)return;const dx=(ev.clientX-d.startX)/state.zoom,dy=(ev.clientY-d.startY)/state.zoom;if(Math.abs(dx)+Math.abs(dy)>3)d.moved=true;n.x=d.originX+dx;n.y=d.originY+dy;state.nodePositions[n.id]={x:n.x,y:n.y};el.style.left=n.x+'px';el.style.top=n.y+'px';drawEdges();ev.preventDefault();});el.addEventListener('pointerup',finish);el.addEventListener('pointercancel',finish);}
+function cardHtml(n){const st=n.statement_display||'';const fm=n.formal||n.fully_quantified_form||'';const ng=n.negation_formal||n.negation_display||'';const ngP=n.negation_predicate||'';const fl=n.failure_modes||'';const cp=n.contrapositive||'';return`<div><strong>${esc(n.name)}</strong></div><div class="tiny">${esc(n.kind)} · ${esc(n.deck)} · ${esc(n.id)}</div>${st?`<div class="block"><strong>Statement</strong><br>${texToHtml(st)}</div>`:''}${fm?`<div class="block"><strong>Formal</strong><br>${texToHtml(fm)}</div>`:''}${ng?`<div class="block danger"><strong>Negation</strong><br>${texToHtml(ng)}</div>`:''}${ngP?`<div class="block danger"><strong>Negation predicate</strong><br>${texToHtml(ngP)}</div>`:''}${fl?`<div class="block danger"><strong>Failure modes</strong><br>${texToHtml(fl)}</div>`:''}${cp?`<div class="block danger"><strong>Contrapositive</strong><br>${texToHtml(cp)}</div>`:''}`;}
+function showTooltip(ev,n){els.tooltip.innerHTML=cardHtml(n);renderMath(els.tooltip);els.tooltip.style.display='block';moveTooltip(ev);}
+function moveTooltip(ev){const pad=16,x=Math.min(window.innerWidth-els.tooltip.offsetWidth-pad,ev.clientX+18),y=Math.min(window.innerHeight-els.tooltip.offsetHeight-pad,ev.clientY+18);els.tooltip.style.left=x+'px';els.tooltip.style.top=y+'px';}
+function hideTooltip(){els.tooltip.style.display='none';}
+function renderDetails(n){els.detailEmpty.style.display='none';els.detailContent.style.display='block';const blocks=[];function add(t,v,d=false){if(!v)return;blocks.push(`<div class="card ${d?'danger':''}"><div class="label">${esc(t)}</div><div class="value">${texToHtml(v)}</div></div>`);}
+blocks.push(`<div class="card"><div class="label">Title</div><div class="value"><strong>${esc(n.name)}</strong></div><div class="tiny" style="margin-top:8px">${esc(n.kind)} · ${esc(n.deck)} · ${esc(n.id)}</div></div>`);
+const fm=n.fully_quantified_form||n.formal||'';const pred=n.formal&&n.fully_quantified_form&&n.formal!==n.fully_quantified_form?n.formal:(n.proposition||'');add('Statement',n.statement_display);add('Formal logic statement',fm);add('Predicate logic statement',pred);add('Negation',n.negation_formal||n.negation_display,true);add('Negation predicate',n.negation_predicate,true);add('Failure modes',n.failure_modes,true);add('Failure mode decomposition',n.failure_mode_decomposition,true);add('Contrapositive',n.contrapositive,true);add('Proof type',n.proof_type);add('Proof sketch',n.proof_sketch);add('Depends on',(n.depends_on_ids||[]).join(', '));add('Used by',(n.used_by_ids||[]).join(', '));add('Source',n.source);add('Proof source',n.proof_source);els.detailContent.innerHTML=blocks.join('');renderMath(els.detailContent);}
+function render(){const g=visibleGraph();const dims=layout(g.nodes,g.edges);state.renderedGraph=g;els.graphInner.style.width=dims.width+'px';els.graphInner.style.height=dims.height+'px';els.graphInner.style.transform=`scale(${state.zoom})`;els.edgeLayer.setAttribute('width',dims.width);els.edgeLayer.setAttribute('height',dims.height);els.edgeLayer.setAttribute('viewBox',`0 0 ${dims.width} ${dims.height}`);els.edgeLayer.innerHTML=`<defs><marker id="arrowDep" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#94a3b8"/></marker><marker id="arrowUse" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#a78bfa"/></marker><marker id="arrowImp" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#f59e0b"/></marker><marker id="arrowEquiv" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#22c55e"/></marker></defs>`;els.nodeLayer.innerHTML='';state.nodeElements=new Map();for(const n of g.nodes){const d=document.createElement('div');d.className=`node ${kindClass(n.kind)}`+(state.selectedId===n.id?' selected':'');d.style.left=n.x+'px';d.style.top=n.y+'px';d.dataset.nodeId=n.id;d.innerHTML=`<div class="type">${esc(n.kind)}</div><div class="title">${esc(n.name)}</div><div class="meta"><span>${esc(n.deck||'')}</span><span>${esc(n.id)}</span></div>`;d.addEventListener('mouseenter',ev=>showTooltip(ev,n));d.addEventListener('mousemove',moveTooltip);d.addEventListener('mouseleave',hideTooltip);d.addEventListener('click',()=>{if(state.suppressNextClick){state.suppressNextClick=false;return;}state.selectedId=n.id;render();renderDetails(n);});attachDrag(d,n);els.nodeLayer.appendChild(d);state.nodeElements.set(n.id,d);}renderMath(els.nodeLayer);drawEdges(g);}
+async function tryAutoLoad(){try{const[k,e]=await Promise.all([fetch('knowledge.json').then(r=>{if(!r.ok)throw new Error('knowledge.json not found');return r.json();}),fetch('graph-edges.json').then(r=>{if(!r.ok)throw new Error('graph-edges.json not found');return r.json();})]);state.knowledge=k;state.edges=normalizeEdges(state.knowledge,e);state.nodePositions={};els.status.textContent=`Loaded ${(k.nodes||[]).length} nodes, ${state.edges.length} edges.`;state.selectedId=null;render();els.detailEmpty.style.display='block';els.detailContent.style.display='none';}catch(err){els.status.textContent='Auto-load failed: '+err.message;}}
+async function loadManual(){try{const kf=els.knowledgeFile.files[0],ef=els.edgesFile.files[0];if(!kf||!ef)throw new Error('Select both files.');const[k,e]=await Promise.all([kf.text().then(JSON.parse),ef.text().then(JSON.parse)]);state.knowledge=k;state.edges=normalizeEdges(state.knowledge,e);state.nodePositions={};els.status.textContent=`Loaded ${(k.nodes||[]).length} nodes.`;state.selectedId=null;render();els.detailEmpty.style.display='block';els.detailContent.style.display='none';}catch(err){els.status.textContent='Load failed: '+err.message;}}
+els.autoBtn.onclick=tryAutoLoad;els.loadFilesBtn.onclick=loadManual;els.searchBox.oninput=e=>{state.filters.search=e.target.value;render();};els.showDefinitions.onchange=e=>{state.filters.showDefinitions=e.target.checked;render();};els.showAxioms.onchange=e=>{state.filters.showAxioms=e.target.checked;render();};els.showResults.onchange=e=>{state.filters.showResults=e.target.checked;render();};els.showDepends.onchange=e=>{state.filters.showDepends=e.target.checked;render();};els.showImplies.onchange=e=>{state.filters.showImplies=e.target.checked;render();};els.dependencyTreeMode.onchange=e=>{state.filters.dependencyTreeMode=e.target.checked;state.nodePositions={};render();};els.deckFilter.onchange=e=>{state.filters.deck=e.target.value;render();};els.zoomInBtn.onclick=()=>{state.zoom=Math.min(2.4,+(state.zoom+0.1).toFixed(2));render();};els.zoomOutBtn.onclick=()=>{state.zoom=Math.max(0.45,+(state.zoom-0.1).toFixed(2));render();};els.resetBtn.onclick=()=>{state.zoom=1;state.nodePositions={};els.graphWrap.scrollTo({left:0,top:0,behavior:'smooth'});render();};
+tryAutoLoad();
+</script>
+</body>
+</html>
