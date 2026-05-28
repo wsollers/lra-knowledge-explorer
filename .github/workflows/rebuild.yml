@@ -9,13 +9,15 @@
 # What it does:
 #   - Checks out lra-knowledge-explorer (scripts + HTML live here).
 #   - Checks out Learning-Real-Analysis (LaTeX source lives there).
-#   - Runs the extraction pipeline against the LaTeX source.
+#   - Copies scripts from lra-knowledge-explorer into the monorepo
+#     theorem-explorer/ so that lra-knowledge-explorer/scripts/ is the
+#     single source of truth for the chapter list and extraction logic.
+#   - Runs the extraction pipeline.
 #   - Commits updated knowledge.json + graph-edges.json back here.
 #   - Deploys the explorer to GitHub Pages.
 #
 # Required secret:
-#   SYNC_PAT — GitHub PAT with repo scope (for checking out mono-repo
-#               and pushing the updated JSON back).
+#   SYNC_PAT — GitHub PAT with repo scope.
 # =============================================================
 
 name: Rebuild Knowledge Explorer
@@ -23,7 +25,7 @@ name: Rebuild Knowledge Explorer
 on:
   repository_dispatch:
     types:
-      - lra-rebuild          # sent by any lra-* repo on push to main
+      - lra-rebuild
 
   push:
     branches: [main]
@@ -33,7 +35,7 @@ on:
       - 'real-analysis-explorer.html'
       - 'index.html'
 
-  workflow_dispatch:         # manual trigger
+  workflow_dispatch:
 
 jobs:
   rebuild:
@@ -58,6 +60,16 @@ jobs:
           token: ${{ secrets.SYNC_PAT }}
           path: lra
 
+      - name: Override monorepo scripts with canonical scripts from lra-knowledge-explorer
+        # lra-knowledge-explorer/scripts/ is the single source of truth for the
+        # chapter list and extraction logic. Copy them over the monorepo's copies
+        # so the pipeline always runs the authoritative version.
+        run: |
+          cp explorer/scripts/run_extraction.py             lra/theorem-explorer/run_extraction.py
+          cp explorer/scripts/extract_lra_chapter.py        lra/theorem-explorer/extract_lra_chapter.py
+          cp explorer/scripts/seed_to_knowledge_json_v3_fixed6.py \
+             lra/theorem-explorer/seed_to_knowledge_json_v3_fixed6.py
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -73,9 +85,9 @@ jobs:
 
       - name: Copy outputs to explorer repo
         run: |
-          cp lra/theorem-explorer/knowledge.json       explorer/knowledge.json
-          cp lra/theorem-explorer/graph-edges.json     explorer/graph-edges.json
-          cp lra/theorem-explorer/proof-errors.json    explorer/proof-errors.json  2>/dev/null || true
+          cp lra/theorem-explorer/knowledge.json         explorer/knowledge.json
+          cp lra/theorem-explorer/graph-edges.json       explorer/graph-edges.json
+          cp lra/theorem-explorer/proof-errors.json      explorer/proof-errors.json      2>/dev/null || true
           cp lra/theorem-explorer/graph-edge-errors.json explorer/graph-edge-errors.json 2>/dev/null || true
 
       - name: Commit updated JSON
