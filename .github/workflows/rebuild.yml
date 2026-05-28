@@ -2,30 +2,30 @@
 # rebuild.yml — lra-knowledge-explorer
 #
 # Triggers:
-#   1. repository_dispatch from any lra-* repo pushing to main.
-#   2. Manual workflow_dispatch.
-#   3. Direct push to this repo (scripts or HTML changed).
+#   1. repository_dispatch — sent by Learning-Real-Analysis when
+#      volume-ii/**, volume-iii/**, common/**, or bibliography/**
+#      changes on main.
+#   2. push to this repo — scripts/** or HTML files changed.
+#   3. workflow_dispatch — manual trigger.
 #
 # What it does:
-#   - Checks out lra-knowledge-explorer (scripts + HTML live here).
-#   - Checks out Learning-Real-Analysis (LaTeX source lives there).
-#   - Copies scripts from lra-knowledge-explorer into the monorepo
-#     theorem-explorer/ so that lra-knowledge-explorer/scripts/ is the
-#     single source of truth for the chapter list and extraction logic.
-#   - Runs the extraction pipeline.
-#   - Commits updated knowledge.json + graph-edges.json back here.
+#   - Checks out lra-knowledge-explorer (HTML lives here).
+#   - Checks out Learning-Real-Analysis (LaTeX source + pipeline scripts).
+#   - Runs the extraction pipeline from the monorepo.
+#   - Commits updated knowledge.json + graph-edges.json here.
 #   - Deploys the explorer to GitHub Pages.
 #
-# Required secret:
-#   SYNC_PAT — GitHub PAT with repo scope.
+# Chapter list is maintained in:
+#   Learning-Real-Analysis/theorem-explorer/run_extraction.py
+#
+# Required secret: SYNC_PAT (repo-scoped GitHub PAT)
 # =============================================================
 
 name: Rebuild Knowledge Explorer
 
 on:
   repository_dispatch:
-    types:
-      - lra-rebuild
+    types: [lra-rebuild]
 
   push:
     branches: [main]
@@ -53,22 +53,12 @@ jobs:
           token: ${{ secrets.SYNC_PAT }}
           path: explorer
 
-      - name: Checkout Learning-Real-Analysis (LaTeX source)
+      - name: Checkout Learning-Real-Analysis (LaTeX source + pipeline)
         uses: actions/checkout@v4
         with:
           repository: wsollers/Learning-Real-Analysis
           token: ${{ secrets.SYNC_PAT }}
           path: lra
-
-      - name: Override monorepo scripts with canonical scripts from lra-knowledge-explorer
-        # lra-knowledge-explorer/scripts/ is the single source of truth for the
-        # chapter list and extraction logic. Copy them over the monorepo's copies
-        # so the pipeline always runs the authoritative version.
-        run: |
-          cp explorer/scripts/run_extraction.py             lra/theorem-explorer/run_extraction.py
-          cp explorer/scripts/extract_lra_chapter.py        lra/theorem-explorer/extract_lra_chapter.py
-          cp explorer/scripts/seed_to_knowledge_json_v3_fixed6.py \
-             lra/theorem-explorer/seed_to_knowledge_json_v3_fixed6.py
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -77,6 +67,14 @@ jobs:
 
       - name: Install Python dependencies
         run: pip install pyyaml
+
+      - name: Show chapter list that will be extracted
+        run: |
+          echo "=== CHAPTERS in run_extraction.py ==="
+          grep -A 20 "^CHAPTERS" lra/theorem-explorer/run_extraction.py
+          echo ""
+          echo "=== volume-ii contents ==="
+          ls lra/volume-ii/
 
       - name: Run extraction pipeline
         run: |
