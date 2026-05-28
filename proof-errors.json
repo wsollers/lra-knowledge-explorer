@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-05-28T19:03:01.825120+00:00",
+  "generated_at": "2026-05-28T19:10:19.595433+00:00",
   "chapters": [
+    "peano-systems",
     "natural-numbers",
     "rationals",
     "bounding",
@@ -8,8 +9,510 @@
     "continuity",
     "differentiation"
   ],
-  "error_count": 473,
+  "error_count": 513,
   "errors": [
+    {
+      "type": "multiple_primary_statements_in_box",
+      "kind": "Definition",
+      "node_id": "def:peano-system",
+      "title": "Peano System",
+      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
+      "message": "Extracted theorem/definition box appears to contain more than one primary statement. Extraction was preserved, but the source should be split into separate boxes and re-extracted.",
+      "signals": [
+        "latex_list_with_multiple_items:5"
+      ],
+      "excerpt": "A triple $(P,S,1)$ is called a \\emph{Peano system} exactly when $P$ is a set, $1 \\in P$, $S : P \\to P$ is a function, and the following axioms hold: \\begin{enumerate} \\item[\\textbf{P1.}] $1 \\in P$. \\item[\\textbf{P2.}] For every $n \\in P$, $S(n) \\in P$. \\item[\\textbf{P3.}] For every $n \\in P$, $S(n) \\neq 1$. \\item[\\textbf{P4.}] For all $m,n \\in P$, if $S(m)=S(n)$ then $m=n$. \\item[\\textbf{P5.}] If $A \\subseteq P$,..."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:peano-system",
+      "title": "Peano System",
+      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A triple $(P,S,1)$ is called a \\emph{Peano system} exactly when $P$ is a set, $1 \\in P$, $S : P \\to P$ is a function, and the following axioms hold: \\begin{enumerate} \\item[\\textbf{P1.}] $1 \\in P$. \\item[\\textbf{P2.}] For every $n \\in P$, $S(n) \\in P$. \\item[\\textbf{P3.}] For every $n \\in P$, $S(n) \\neq 1$. \\item[\\textbf{P4.}] For all $m,n \\in P$, if $S(m)=S(n)$ then $m=n$. \\item[\\textbf{P5.}] If $A \\subseteq P$,..."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Axiom",
+      "node_id": "ax:peano-one-in-n",
+      "title": "Distinguished Element Lies in the Underlying Set",
+      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "\\[ 1 \\in P. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Axiom",
+      "node_id": "ax:peano-successor-closure",
+      "title": "Closure Under Successor",
+      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $n \\in P$, then $S(n) \\in P$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Axiom",
+      "node_id": "ax:peano-one-not-successor",
+      "title": "Distinguished Element Is Not a Successor",
+      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $n \\in P$, $S(n) \\neq 1$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Axiom",
+      "node_id": "ax:peano-successor-injective",
+      "title": "Injectivity of Successor",
+      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $m,n \\in P$ and $S(m)=S(n)$, then $m=n$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Axiom",
+      "node_id": "ax:peano-induction",
+      "title": "Induction Axiom",
+      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $A \\subseteq P$. If $1 \\in A$ and if \\[ \\forall n \\in P\\;(n \\in A \\Longrightarrow S(n) \\in A), \\] then $A=P$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Axiom",
+      "node_id": "ax:peano-system-existence",
+      "title": "Existence of a Peano System",
+      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "There exists a Peano system."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:induction-principle-for-peano-system",
+      "title": "Induction Principle for a Peano System",
+      "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $\\varphi$ be a predicate on $P$. If \\[ \\varphi(1) \\qquad\\text{and}\\qquad \\forall n \\in P\\;(\\varphi(n) \\Longrightarrow \\varphi(S(n))), \\] then \\[ \\forall n \\in P\\;\\varphi(n). \\]",
+      "proof_source": "proofs/notes/prf-induction-principle-for-peano-system.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:successor-closed-subset",
+      "title": "Successor-Closed Subset",
+      "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $A \\subseteq P$. The subset $A$ is called \\emph{successor-closed} exactly when \\[ \\forall n \\in P\\;(n \\in A \\Longrightarrow S(n) \\in A). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:inductive-subset-of-peano-system",
+      "title": "Inductive Subset of a Peano System",
+      "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $A \\subseteq P$. The subset $A$ is called \\emph{inductive} exactly when $1 \\in A$ and $A$ is successor-closed."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:predecessor-in-peano-system",
+      "title": "Predecessor in a Peano System",
+      "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $x,u \\in P$. The element $u$ is called a \\emph{predecessor} of $x$ exactly when \\[ S(u)=x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:every-element-is-one-or-a-successor",
+      "title": "Every Element Is Either $1$ or a Successor",
+      "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $x \\in P$, either $x=1$ or there exists $u \\in P$ such that $S(u)=x$.",
+      "proof_source": "proofs/notes/prf-every-element-is-one-or-a-successor.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:successor-inequality-reflection",
+      "title": "Successor Inequality Reflection",
+      "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For all $a,b \\in P$, if $a \\neq b$, then $S(a)\\neq S(b)$.",
+      "proof_source": "proofs/notes/prf-successor-inequality-reflection.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:non-one-elements-have-a-predecessor",
+      "title": "Non-One Elements Have a Predecessor",
+      "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $x \\in P$, if $x \\neq 1$, then there exists $u \\in P$ such that $S(u)=x$.",
+      "proof_source": "proofs/notes/prf-non-one-elements-have-a-predecessor.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:predecessor-exists-unique-away-from-one",
+      "title": "Predecessor Existence and Uniqueness Away from $1$",
+      "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $x \\in P$ with $x \\neq 1$. Then there exists a unique $u \\in P$ such that $S(u)=x$.",
+      "proof_source": "proofs/notes/prf-predecessor-exists-unique-away-from-one.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:unique-predecessor-characterization-away-from-one",
+      "title": "Unique Predecessor Characterization Away from $1$",
+      "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $x \\in P$, $x \\neq 1$ if and only if there exists a unique $u \\in P$ such that $S(u)=x$.",
+      "proof_source": "proofs/notes/prf-unique-predecessor-characterization-away-from-one.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:one-is-unique-non-successor",
+      "title": "The Distinguished Element Is the Unique Non-Successor",
+      "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. An element $x \\in P$ is not a successor of any element of $P$ if and only if $x=1$.",
+      "proof_source": "proofs/notes/prf-one-is-unique-non-successor.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:no-object-is-its-own-successor",
+      "title": "No Object Is Its Own Successor",
+      "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $n \\in P$, \\[ S(n) \\neq n. \\]",
+      "proof_source": "proofs/notes/prf-no-object-is-its-own-successor.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:iterator-data-on-peano-system",
+      "title": "Iterator Data",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c\\in W$, and let $g:W\\to W$ be a function. The triple $(W,c,g)$ is called \\emph{iterator data} for $(P,S,1)$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:iterator-relation",
+      "title": "Iterator Relation",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. A relation $R\\subseteq P\\times W$ is called an \\emph{iterator relation} for $(W,c,g)$ exactly when \\[ (1,c)\\in R \\] and \\[ \\forall n\\in P\\;\\forall w\\in W\\; \\bigl((n,w)\\in R\\Longrightarrow (S(n),g(w))\\in R\\bigr). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:minimal-iterator-relation",
+      "title": "Minimal Iterator Relation",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. The \\emph{minimal iterator relation} for $(W,c,g)$ is \\[ R^* = \\bigcap\\{R\\subseteq P\\times W : R \\text{ is an iterator relation for } (W,c,g)\\}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:iterator-relation-consistency",
+      "title": "Consistency of the Minimal Iterator Relation",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation for $(W,c,g)$. Then $R^*$ is an iterator relation for $(W,c,g)$.",
+      "proof_source": "proofs/notes/prf-iterator-relation-consistency.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:forced-values-are-unique",
+      "title": "Forced Values Are Unique",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. If $(n,w_0)\\in R^*$ and $(n,w_1)\\in R^*$, then $w_0=w_1$.",
+      "proof_source": "proofs/notes/prf-forced-values-are-unique.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:minimal-iterator-relation-deterministic",
+      "title": "Determinism of the Minimal Iterator Relation",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. For each $n\\in P$, there is at most one $w\\in W$ such that $(n,w)\\in R^*$.",
+      "proof_source": "proofs/notes/prf-minimal-iterator-relation-deterministic.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:minimal-iterator-relation-complete",
+      "title": "Completeness of the Minimal Iterator Relation",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. For each $n\\in P$, there exists $w\\in W$ such that $(n,w)\\in R^*$.",
+      "proof_source": "proofs/notes/prf-minimal-iterator-relation-complete.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:uniqueness-of-iterator-functions",
+      "title": "Uniqueness of Iterator Functions",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. If $f,h:P\\to W$ satisfy \\[ f(1)=c,\\qquad h(1)=c, \\] and \\[ \\forall n\\in P\\;(f(S(n))=g(f(n))) \\qquad\\text{and}\\qquad \\forall n\\in P\\;(h(S(n))=g(h(n))), \\] then $f=h$.",
+      "proof_source": "proofs/notes/prf-uniqueness-of-iterator-functions.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:existence-of-iterator-function",
+      "title": "Existence of an Iterator Function",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. Then there exists a function $f:P\\to W$ such that \\[ f(1)=c \\qquad\\text{and}\\qquad \\forall n\\in P\\;(f(S(n))=g(f(n))). \\]",
+      "proof_source": "proofs/notes/prf-existence-of-iterator-function.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:peano-iterator-theorem",
+      "title": "Peano Iterator Theorem",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. Then there exists a unique function $f:P\\to W$ such that \\[ f(1)=c \\qquad\\text{and}\\qquad \\forall n\\in P\\;(f(S(n))=g(f(n))). \\]",
+      "proof_source": "proofs/notes/prf-peano-iterator-theorem.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:iterator-generated-function",
+      "title": "Iterator-Generated Function",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. The unique function $f:P\\to W$ satisfying \\[ f(1)=c \\qquad\\text{and}\\qquad \\forall n\\in P\\;(f(S(n))=g(f(n))) \\] is called the \\emph{iterator-generated function determined by $(W,c,g)$}."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:iterator-base-value",
+      "title": "Iterator Base Clause",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $f$ be the iterator-generated function determined by $(W,c,g)$. Then \\[ f(1)=c. \\]",
+      "proof_source": "proofs/notes/prf-iterator-base-value.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:iterator-successor-step",
+      "title": "Iterator Successor Clause",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $f$ be the iterator-generated function determined by $(W,c,g)$. Then \\[ \\forall n\\in P\\;(f(S(n))=g(f(n))). \\]",
+      "proof_source": "proofs/notes/prf-iterator-successor-step.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:iteration-of-a-self-map",
+      "title": "Iteration of a Self-Map",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c\\in W$, and let $g:W\\to W$. The iterator-generated function determined by $(W,c,g)$ is called the \\emph{iteration of $g$ from $c$ along $P$}."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:uniqueness-of-binary-iterator-operations",
+      "title": "Uniqueness of Binary Iterator Operations",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $A$ be a set, let $W$ be a set, and suppose each $a\\in A$ determines iterator data $(W,c_a,g_a)$ for $(P,S,1)$. If $F,G:A\\times P\\to W$ satisfy \\[ F(a,1)=c_a,\\qquad G(a,1)=c_a \\] and \\[ F(a,S(n))=g_a(F(a,n)), \\qquad G(a,S(n))=g_a(G(a,n)) \\] for all $a\\in A$ and all $n\\in P$, then $F=G$.",
+      "proof_source": "proofs/notes/prf-uniqueness-of-binary-iterator-operations.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:stage-dependent-step-rule",
+      "title": "Stage-Dependent Step Rule",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system and let $W$ be a set. A \\emph{stage-dependent step rule} on $W$ over $P$ is a function \\[ \\Phi:P\\times W\\to W. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:general-recursive-function",
+      "title": "General Recursive Function",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c\\in W$, and let $\\Phi:P\\times W\\to W$ be a stage-dependent step rule. A function $f:P\\to W$ is called the \\emph{general recursive function determined by $(W,c,\\Phi)$} exactly when \\[ f(1)=c \\qquad\\text{and}\\qquad \\forall n\\in P\\;(f(S(n))=\\Phi(n,f(n))). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:uniqueness-of-general-recursive-functions",
+      "title": "Uniqueness of General Recursive Functions",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c\\in W$, and let $\\Phi:P\\times W\\to W$ be a stage-dependent step rule. If $f,h:P\\to W$ satisfy \\[ f(1)=c,\\qquad h(1)=c, \\] and \\[ \\forall n\\in P\\;(f(S(n))=\\Phi(n,f(n))) \\qquad\\text{and}\\qquad \\forall n\\in P\\;(h(S(n))=\\Phi(n,h(n))), \\] then $f=h$.",
+      "proof_source": "proofs/notes/prf-uniqueness-of-general-recursive-functions.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:general-recursion-by-state-encoding",
+      "title": "General Recursion by State Encoding",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c\\in W$, and let $\\Phi:P\\times W\\to W$ be a stage-dependent step rule. There exists a function $H:P\\to P\\times W$ such that \\[ H(1)=(1,c) \\] and \\[ \\forall n\\in P\\; \\bigl(H(S(n))=(S(\\pi_1(H(n))),\\Phi(\\pi_1(H(n)),\\pi_2(H(n))))\\bigr). \\]",
+      "proof_source": "proofs/notes/prf-general-recursion-by-state-encoding.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:general-recursion-theorem-for-peano-system",
+      "title": "General Recursion Theorem",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c\\in W$, and let $\\Phi:P\\times W\\to W$ be a stage-dependent step rule. Then there exists a unique function $f:P\\to W$ such that \\[ f(1)=c \\qquad\\text{and}\\qquad \\forall n\\in P\\;(f(S(n))=\\Phi(n,f(n))). \\]",
+      "proof_source": "proofs/notes/prf-general-recursion-theorem-for-peano-system.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:uniqueness-of-peano-systems-up-to-isomorphism",
+      "title": "Uniqueness of Peano Systems up to Isomorphism",
+      "source": "notes/recursion-on-peano-systems/notes-recursion-on-peano-systems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S_P,1_P)$ and $(Q,S_Q,1_Q)$ be Peano systems. Then there exists a unique bijection $\\theta:P\\to Q$ such that \\[ \\theta(1_P)=1_Q \\] and \\[ \\forall n\\in P\\;(\\theta(S_P(n))=S_Q(\\theta(n))). \\] Thus any two Peano systems are isomorphic.",
+      "proof_source": "proofs/notes/prf-uniqueness-of-peano-systems-up-to-isomorphism.tex"
+    },
     {
       "type": "missing_dependencies_block",
       "kind": "Definition",
