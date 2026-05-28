@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-run_extraction.py — canonical chapter list for lra-knowledge-explorer CI.
----------------------------------------------------------------------------
-This file is the single source of truth for which chapters get extracted.
-The rebuild.yml workflow copies this file (and the other two scripts) over
-the monorepo's theorem-explorer/ copies at run time, so the monorepo copy
-is always overridden by this one.
+run_extraction.py — chapter list for lra-knowledge-explorer CI.
+----------------------------------------------------------------
+NOTE: The rebuild workflow runs the copy of this script that lives in
+Learning-Real-Analysis/theorem-explorer/run_extraction.py — not this one.
+This file is kept in sync for reference only.
+
+To add a chapter: update Learning-Real-Analysis/theorem-explorer/run_extraction.py.
 
 Chapters extracted:
   - volume-ii/peano-systems
