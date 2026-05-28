@@ -186,6 +186,10 @@ function renderMixedMath(text){
 
 function texToHtml(s){if(!s)return'';return renderMixedMath(String(s));}
 
+// nodeDeck: returns the display/filter key for a node, falling back from
+// node.deck (old yaml-pipeline nodes) to node.chapter (new extractor nodes).
+function nodeDeck(n){return n.deck||n.chapter||'';}
+
 function kindClass(k){const s=String(k||'').toLowerCase();if(s.includes('definition'))return'definition';if(s.includes('axiom'))return'axiom';return s||'theorem';}
 function normalizeEdgeKind(k){const s=String(k||'').toLowerCase();if(s==='dependency'||s==='links_to_proof'||s==='prereq')return'depends_on';if(s==='use'||s==='uses')return'uses';if(s==='used_by')return'used_by';if(s==='implication'||s==='consequence'||s==='implies')return'implies';if(s==='equivalent'||s==='equivalence')return'equivalent_to';return s||'depends_on';}
 function edgeVisual(k){const n=normalizeEdgeKind(k);if(n==='implies')return{color:'var(--impl)',marker:'url(#arrowImp)',width:'2.8',opacity:'.92'};if(n==='uses'||n==='used_by')return{color:'var(--use)',marker:'url(#arrowUse)',width:'2.45',opacity:'.82'};if(n==='equivalent_to')return{color:'var(--equiv)',marker:'url(#arrowEquiv)',width:'2.5',opacity:'.86'};return{color:'var(--dep)',marker:'url(#arrowDep)',width:'2.3',opacity:'.72'};}
@@ -194,10 +198,11 @@ function splitTargets(v){if(Array.isArray(v))return v.map(cleanEdge).filter(Bool
 function addEdge(edges,seen,ids,from,to,kind){const f=cleanEdge(from),t=cleanEdge(to),k=normalizeEdgeKind(kind);if(!f||!t||f===t||!ids.has(f)||!ids.has(t))return;const sig=`${f}|${t}|${k}`;if(seen.has(sig))return;seen.add(sig);edges.push({from:f,to:t,kind:k});}
 function normalizeEdges(knowledge,edgeData){const nodes=knowledge?.nodes||[];const ids=new Set(nodes.map(n=>n.id));const raw=Array.isArray(edgeData)?edgeData:(edgeData?.edges||[]);const edges=[];const seen=new Set();raw.forEach(e=>addEdge(edges,seen,ids,e.from??e.source,e.to??e.target,e.kind??e.type??e.label));nodes.forEach(n=>{splitTargets(n.depends_on_ids).forEach(id=>addEdge(edges,seen,ids,id,n.id,'depends_on'));splitTargets(n.implies_ids).forEach(id=>addEdge(edges,seen,ids,n.id,id,'implies'));splitTargets(n.equivalent_to_ids).forEach(id=>addEdge(edges,seen,ids,n.id,id,'equivalent_to'));});return edges;}
 
-function syncDecks(nodes){const decks=['All',...Array.from(new Set(nodes.map(n=>n.deck).filter(Boolean))).sort()];const ex=Array.from(els.deckFilter.options).map(o=>o.value);if(ex.join('|')===decks.join('|'))return;els.deckFilter.innerHTML='';decks.forEach(d=>{let o=document.createElement('option');o.value=d;o.textContent=d;if(d===state.filters.deck)o.selected=true;els.deckFilter.appendChild(o);});}
+// syncDecks: uses nodeDeck() so both old (deck) and new (chapter) nodes populate the dropdown.
+function syncDecks(nodes){const decks=['All',...Array.from(new Set(nodes.map(n=>nodeDeck(n)).filter(Boolean))).sort()];const ex=Array.from(els.deckFilter.options).map(o=>o.value);if(ex.join('|')===decks.join('|'))return;els.deckFilter.innerHTML='';decks.forEach(d=>{let o=document.createElement('option');o.value=d;o.textContent=d;if(d===state.filters.deck)o.selected=true;els.deckFilter.appendChild(o);});}
 function getNodes(){return state.knowledge.nodes||[];}
 
-function visibleGraph(){const nodes=getNodes();syncDecks(nodes);if(state.filters.dependencyTreeMode&&state.selectedId)return depTree(nodes,state.edges,state.selectedId);const q=state.filters.search.trim().toLowerCase();const vis=new Map();for(const n of nodes){const cls=kindClass(n.kind);const byType=cls==='axiom'?state.filters.showAxioms:(cls==='definition'?state.filters.showDefinitions:state.filters.showResults);const byDeck=state.filters.deck==='All'||n.deck===state.filters.deck;const blob=JSON.stringify(n).toLowerCase();vis.set(n.id,byType&&byDeck&&(!q||blob.includes(q)));}const outNodes=nodes.filter(n=>vis.get(n.id));const ids=new Set(outNodes.map(n=>n.id));const outEdges=state.edges.filter(e=>{const k=normalizeEdgeKind(e.kind);return ids.has(e.from)&&ids.has(e.to)&&((k==='depends_on'&&state.filters.showDepends)||((k==='uses'||k==='used_by')&&state.filters.showDepends)||((k==='implies'||k==='equivalent_to')&&state.filters.showImplies));});return{nodes:outNodes,edges:outEdges};}
+function visibleGraph(){const nodes=getNodes();syncDecks(nodes);if(state.filters.dependencyTreeMode&&state.selectedId)return depTree(nodes,state.edges,state.selectedId);const q=state.filters.search.trim().toLowerCase();const vis=new Map();for(const n of nodes){const cls=kindClass(n.kind);const byType=cls==='axiom'?state.filters.showAxioms:(cls==='definition'?state.filters.showDefinitions:state.filters.showResults);const byDeck=state.filters.deck==='All'||nodeDeck(n)===state.filters.deck;const blob=JSON.stringify(n).toLowerCase();vis.set(n.id,byType&&byDeck&&(!q||blob.includes(q)));}const outNodes=nodes.filter(n=>vis.get(n.id));const ids=new Set(outNodes.map(n=>n.id));const outEdges=state.edges.filter(e=>{const k=normalizeEdgeKind(e.kind);return ids.has(e.from)&&ids.has(e.to)&&((k==='depends_on'&&state.filters.showDepends)||((k==='uses'||k==='used_by')&&state.filters.showDepends)||((k==='implies'||k==='equivalent_to')&&state.filters.showImplies));});return{nodes:outNodes,edges:outEdges};}
 
 function depTree(nodes,edges,sel){const byId=new Map(nodes.map(n=>[n.id,n]));if(!byId.has(sel))return{nodes:[],edges:[]};const depEdges=edges.filter(e=>{const k=normalizeEdgeKind(e.kind);return k==='depends_on'||k==='prereq';});const inc=new Map(nodes.map(n=>[n.id,[]]));depEdges.forEach(e=>{if(byId.has(e.from)&&byId.has(e.to))inc.get(e.to).push(e);});const seen=new Set([sel]);const te=[];const q=[sel];while(q.length){const id=q.shift();for(const e of inc.get(id)||[]){te.push(e);if(!seen.has(e.from)){seen.add(e.from);q.push(e.from);}}}return{nodes:[...seen].map(id=>byId.get(id)).filter(Boolean),edges:te};}
 
@@ -205,16 +210,12 @@ function chooseAnchor(nodes,edges){const ids=new Set(nodes.map(n=>n.id));const d
 
 function layers(nodes,edges){const ids=new Set(nodes.map(n=>n.id));const out=new Map(nodes.map(n=>[n.id,[]]));const inc=new Map(nodes.map(n=>[n.id,[]]));edges.forEach(e=>{if(!ids.has(e.from)||!ids.has(e.to))return;out.get(e.from).push(e.to);inc.get(e.to).push(e.from);});const layer=new Map();const anchor=state.filters.dependencyTreeMode&&state.selectedId&&ids.has(state.selectedId)?state.selectedId:(chooseAnchor(nodes,edges)||nodes[0]?.id);const seeds=[anchor,...nodes.map(n=>n.id).filter(id=>id!==anchor)];let first=true;for(const seed of seeds){if(!seed||layer.has(seed))continue;layer.set(seed,first?0:-2);first=false;const q=[seed];while(q.length){const id=q.shift();const base=layer.get(id)||0;for(const to of out.get(id)||[])if(!layer.has(to)){layer.set(to,base+1);q.push(to);}for(const fr of inc.get(id)||[])if(!layer.has(fr)){layer.set(fr,base-1);q.push(fr);}}}return{layer,anchor};}
 
-function layout(nodes,edges){const{layer}=layers(nodes,edges);const groups=new Map();nodes.forEach(n=>{const l=layer.get(n.id)||0;if(!groups.has(l))groups.set(l,[]);groups.get(l).push(n);});const ls=Array.from(groups.keys()).sort((a,b)=>a-b);const xGap=430,yGap=158,startX=80;const minL=ls.length?Math.min(...ls):0;const maxL=ls.length?Math.max(...ls):0;const maxCount=ls.reduce((m,l)=>Math.max(m,groups.get(l).length),1);const centerY=Math.max(360,90+(maxCount-1)*yGap/2);const maxH=Math.max(900,centerY*2+140);ls.forEach(l=>{const arr=groups.get(l);arr.sort((a,b)=>(a.deck||'').localeCompare(b.deck||'')||(a.name||'').localeCompare(b.name||''));const top=centerY-((arr.length-1)*yGap)/2;arr.forEach((n,i)=>{const sv=state.nodePositions[n.id];n.x=sv?sv.x:startX+(l-minL)*xGap;n.y=sv?sv.y:top+i*yGap;n.w=250;n.h=86;});});return{width:startX+(maxL-minL+1)*xGap+360,height:maxH};}
+function layout(nodes,edges){const{layer}=layers(nodes,edges);const groups=new Map();nodes.forEach(n=>{const l=layer.get(n.id)||0;if(!groups.has(l))groups.set(l,[]);groups.get(l).push(n);});const ls=Array.from(groups.keys()).sort((a,b)=>a-b);const xGap=430,yGap=158,startX=80;const minL=ls.length?Math.min(...ls):0;const maxL=ls.length?Math.max(...ls):0;const maxCount=ls.reduce((m,l)=>Math.max(m,groups.get(l).length),1);const centerY=Math.max(360,90+(maxCount-1)*yGap/2);const maxH=Math.max(900,centerY*2+140);ls.forEach(l=>{const arr=groups.get(l);arr.sort((a,b)=>(nodeDeck(a)).localeCompare(nodeDeck(b))||(a.name||'').localeCompare(b.name||''));const top=centerY-((arr.length-1)*yGap)/2;arr.forEach((n,i)=>{const sv=state.nodePositions[n.id];n.x=sv?sv.x:startX+(l-minL)*xGap;n.y=sv?sv.y:top+i*yGap;n.w=250;n.h=86;});});return{width:startX+(maxL-minL+1)*xGap+360,height:maxH};}
 
 function nodeBox(n){const el=state.nodeElements?.get(n.id);return{x:n.x,y:n.y,w:el?.offsetWidth||n.w||250,h:el?.offsetHeight||n.h||86};}
 function rectPt(rect,target,inset=0){const cx=rect.x+rect.w/2,cy=rect.y+rect.h/2,dx=target.x-cx,dy=target.y-cy;if(!dx&&!dy)return{x:cx,y:cy};const hw=Math.max(1,rect.w/2-inset),hh=Math.max(1,rect.h/2-inset);const sx=dx?hw/Math.abs(dx):Infinity,sy=dy?hh/Math.abs(dy):Infinity,sc=Math.min(sx,sy);return{x:cx+dx*sc,y:cy+dy*sc};}
 
 // ── Viewport centering ────────────────────────────────────────────────────────
-// Scroll graphWrap so that graph-space point (gx, gy) sits in the centre of
-// the visible area.  All node positions are in graph-space (pre-scale); the
-// CSS transform scale(zoom) is applied to graphInner, so we multiply by zoom
-// to get screen pixels.
 function scrollToGraphPoint(gx, gy) {
   const z  = state.zoom;
   const vw = els.graphWrap.clientWidth;
@@ -223,8 +224,6 @@ function scrollToGraphPoint(gx, gy) {
   els.graphWrap.scrollTop  = gy * z - vh / 2;
 }
 
-// Find node by id in the current rendered graph and centre the viewport on it.
-// Falls back to (0,0) if the node isn't present (e.g. data not loaded yet).
 function centerOnNode(id) {
   const g = state.renderedGraph;
   if (!g) return;
@@ -235,9 +234,6 @@ function centerOnNode(id) {
   scrollToGraphPoint(cx, cy);
 }
 
-// Apply initial zoom + centring after a fresh data load.
-// Two nested rAF frames: first lets the DOM paint the new nodes with their
-// real offsetWidth/Height, second lets the browser process the scroll.
 function applyInitialView() {
   state.zoom = INITIAL_ZOOM;
   els.graphInner.style.transform = `scale(${state.zoom})`;
@@ -259,7 +255,7 @@ function cardHtml(n){
   const ng=n.negation_formal||n.negation_display||'';
   const cp=n.contrapositive||'';
   return`<div><strong>${esc(n.name)}</strong></div>`
-    +`<div class="tiny">${esc(n.kind)} · ${esc(n.deck)} · ${esc(n.id)}</div>`
+    +`<div class="tiny">${esc(n.kind)} · ${esc(nodeDeck(n))} · ${esc(n.id)}</div>`
     +(st?`<div class="block"><strong>Statement</strong><br>${texToHtml(st)}</div>`:'')
     +(fm?`<div class="block"><strong>Formal</strong><br>${texToHtml(fm)}</div>`:'')
     +(ng?`<div class="block danger"><strong>Negation</strong><br>${texToHtml(ng)}</div>`:'')
@@ -279,7 +275,7 @@ function renderDetails(n){
     const cls=danger?'card danger':'card';
     blocks.push(`<div class="${cls}"><div class="label">${esc(t)}</div><div class="value">${texToHtml(v)}</div></div>`);
   }
-  blocks.push(`<div class="card"><div class="label">Title</div><div class="value"><strong>${esc(n.name)}</strong></div><div class="tiny" style="margin-top:8px">${esc(n.kind)} · ${esc(n.deck)} · ${esc(n.id)}</div></div>`);
+  blocks.push(`<div class="card"><div class="label">Title</div><div class="value"><strong>${esc(n.name)}</strong></div><div class="tiny" style="margin-top:8px">${esc(n.kind)} · ${esc(nodeDeck(n))} · ${esc(n.id)}</div></div>`);
   const fm=n.fully_quantified_form||n.formal||'';
   const pred=n.formal&&n.fully_quantified_form&&n.formal!==n.fully_quantified_form?n.formal:(n.proposition||'');
   add('Statement',n.statement_display);
@@ -299,7 +295,7 @@ function renderDetails(n){
   els.detailContent.innerHTML=blocks.join('');
 }
 
-function render(){const g=visibleGraph();const dims=layout(g.nodes,g.edges);state.renderedGraph=g;els.graphInner.style.width=dims.width+'px';els.graphInner.style.height=dims.height+'px';els.graphInner.style.transform=`scale(${state.zoom})`;els.edgeLayer.setAttribute('width',dims.width);els.edgeLayer.setAttribute('height',dims.height);els.edgeLayer.setAttribute('viewBox',`0 0 ${dims.width} ${dims.height}`);els.edgeLayer.innerHTML=`<defs><marker id="arrowDep" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#94a3b8"/></marker><marker id="arrowUse" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#a78bfa"/></marker><marker id="arrowImp" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#f59e0b"/></marker><marker id="arrowEquiv" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#22c55e"/></marker></defs>`;els.nodeLayer.innerHTML='';state.nodeElements=new Map();for(const n of g.nodes){const d=document.createElement('div');d.className=`node ${kindClass(n.kind)}`+(state.selectedId===n.id?' selected':'');d.style.left=n.x+'px';d.style.top=n.y+'px';d.dataset.nodeId=n.id;d.innerHTML=`<div class="type">${esc(n.kind)}</div><div class="title">${esc(n.name)}</div><div class="meta"><span>${esc(n.deck||'')}</span><span>${esc(n.id)}</span></div>`;d.addEventListener('mouseenter',ev=>showTooltip(ev,n));d.addEventListener('mousemove',moveTooltip);d.addEventListener('mouseleave',hideTooltip);d.addEventListener('click',()=>{if(state.suppressNextClick){state.suppressNextClick=false;return;}state.selectedId=n.id;render();renderDetails(n);});attachDrag(d,n);els.nodeLayer.appendChild(d);state.nodeElements.set(n.id,d);}drawEdges(g);}
+function render(){const g=visibleGraph();const dims=layout(g.nodes,g.edges);state.renderedGraph=g;els.graphInner.style.width=dims.width+'px';els.graphInner.style.height=dims.height+'px';els.graphInner.style.transform=`scale(${state.zoom})`;els.edgeLayer.setAttribute('width',dims.width);els.edgeLayer.setAttribute('height',dims.height);els.edgeLayer.setAttribute('viewBox',`0 0 ${dims.width} ${dims.height}`);els.edgeLayer.innerHTML=`<defs><marker id="arrowDep" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#94a3b8"/></marker><marker id="arrowUse" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#a78bfa"/></marker><marker id="arrowImp" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#f59e0b"/></marker><marker id="arrowEquiv" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#22c55e"/></marker></defs>`;els.nodeLayer.innerHTML='';state.nodeElements=new Map();for(const n of g.nodes){const d=document.createElement('div');d.className=`node ${kindClass(n.kind)}`+(state.selectedId===n.id?' selected':'');d.style.left=n.x+'px';d.style.top=n.y+'px';d.dataset.nodeId=n.id;d.innerHTML=`<div class="type">${esc(n.kind)}</div><div class="title">${esc(n.name)}</div><div class="meta"><span>${esc(nodeDeck(n))}</span><span>${esc(n.id)}</span></div>`;d.addEventListener('mouseenter',ev=>showTooltip(ev,n));d.addEventListener('mousemove',moveTooltip);d.addEventListener('mouseleave',hideTooltip);d.addEventListener('click',()=>{if(state.suppressNextClick){state.suppressNextClick=false;return;}state.selectedId=n.id;render();renderDetails(n);});attachDrag(d,n);els.nodeLayer.appendChild(d);state.nodeElements.set(n.id,d);}drawEdges(g);}
 
 async function tryAutoLoad(){
   try{
@@ -352,7 +348,6 @@ els.dependencyTreeMode.onchange=e=>{state.filters.dependencyTreeMode=e.target.ch
 els.deckFilter.onchange=e=>{state.filters.deck=e.target.value;render();};
 els.zoomInBtn.onclick=()=>{state.zoom=Math.min(2.4,+(state.zoom+0.1).toFixed(2));render();};
 els.zoomOutBtn.onclick=()=>{state.zoom=Math.max(0.45,+(state.zoom-0.1).toFixed(2));render();};
-// Reset view: back to initial zoom, re-centre on Supremum, clear dragged positions
 els.resetBtn.onclick=()=>{
   state.nodePositions={};
   render();
