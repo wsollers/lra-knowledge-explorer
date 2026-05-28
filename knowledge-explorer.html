@@ -186,9 +186,13 @@ function renderMixedMath(text){
 
 function texToHtml(s){if(!s)return'';return renderMixedMath(String(s));}
 
-// nodeDeck: returns the display/filter key for a node, falling back from
-// node.deck (old yaml-pipeline nodes) to node.chapter (new extractor nodes).
+// nodeDeck: returns the display/filter key for a node.
+// Old yaml-pipeline nodes use `deck`; new extractor nodes use `chapter`.
 function nodeDeck(n){return n.deck||n.chapter||'';}
+
+// nodeTitle: returns the display title for a node.
+// Old yaml-pipeline nodes use `name`; new extractor nodes use `title`.
+function nodeTitle(n){return n.name||n.title||'';}
 
 function kindClass(k){const s=String(k||'').toLowerCase();if(s.includes('definition'))return'definition';if(s.includes('axiom'))return'axiom';return s||'theorem';}
 function normalizeEdgeKind(k){const s=String(k||'').toLowerCase();if(s==='dependency'||s==='links_to_proof'||s==='prereq')return'depends_on';if(s==='use'||s==='uses')return'uses';if(s==='used_by')return'used_by';if(s==='implication'||s==='consequence'||s==='implies')return'implies';if(s==='equivalent'||s==='equivalence')return'equivalent_to';return s||'depends_on';}
@@ -210,7 +214,7 @@ function chooseAnchor(nodes,edges){const ids=new Set(nodes.map(n=>n.id));const d
 
 function layers(nodes,edges){const ids=new Set(nodes.map(n=>n.id));const out=new Map(nodes.map(n=>[n.id,[]]));const inc=new Map(nodes.map(n=>[n.id,[]]));edges.forEach(e=>{if(!ids.has(e.from)||!ids.has(e.to))return;out.get(e.from).push(e.to);inc.get(e.to).push(e.from);});const layer=new Map();const anchor=state.filters.dependencyTreeMode&&state.selectedId&&ids.has(state.selectedId)?state.selectedId:(chooseAnchor(nodes,edges)||nodes[0]?.id);const seeds=[anchor,...nodes.map(n=>n.id).filter(id=>id!==anchor)];let first=true;for(const seed of seeds){if(!seed||layer.has(seed))continue;layer.set(seed,first?0:-2);first=false;const q=[seed];while(q.length){const id=q.shift();const base=layer.get(id)||0;for(const to of out.get(id)||[])if(!layer.has(to)){layer.set(to,base+1);q.push(to);}for(const fr of inc.get(id)||[])if(!layer.has(fr)){layer.set(fr,base-1);q.push(fr);}}}return{layer,anchor};}
 
-function layout(nodes,edges){const{layer}=layers(nodes,edges);const groups=new Map();nodes.forEach(n=>{const l=layer.get(n.id)||0;if(!groups.has(l))groups.set(l,[]);groups.get(l).push(n);});const ls=Array.from(groups.keys()).sort((a,b)=>a-b);const xGap=430,yGap=158,startX=80;const minL=ls.length?Math.min(...ls):0;const maxL=ls.length?Math.max(...ls):0;const maxCount=ls.reduce((m,l)=>Math.max(m,groups.get(l).length),1);const centerY=Math.max(360,90+(maxCount-1)*yGap/2);const maxH=Math.max(900,centerY*2+140);ls.forEach(l=>{const arr=groups.get(l);arr.sort((a,b)=>(nodeDeck(a)).localeCompare(nodeDeck(b))||(a.name||'').localeCompare(b.name||''));const top=centerY-((arr.length-1)*yGap)/2;arr.forEach((n,i)=>{const sv=state.nodePositions[n.id];n.x=sv?sv.x:startX+(l-minL)*xGap;n.y=sv?sv.y:top+i*yGap;n.w=250;n.h=86;});});return{width:startX+(maxL-minL+1)*xGap+360,height:maxH};}
+function layout(nodes,edges){const{layer}=layers(nodes,edges);const groups=new Map();nodes.forEach(n=>{const l=layer.get(n.id)||0;if(!groups.has(l))groups.set(l,[]);groups.get(l).push(n);});const ls=Array.from(groups.keys()).sort((a,b)=>a-b);const xGap=430,yGap=158,startX=80;const minL=ls.length?Math.min(...ls):0;const maxL=ls.length?Math.max(...ls):0;const maxCount=ls.reduce((m,l)=>Math.max(m,groups.get(l).length),1);const centerY=Math.max(360,90+(maxCount-1)*yGap/2);const maxH=Math.max(900,centerY*2+140);ls.forEach(l=>{const arr=groups.get(l);arr.sort((a,b)=>(nodeDeck(a)).localeCompare(nodeDeck(b))||(nodeTitle(a)).localeCompare(nodeTitle(b)));const top=centerY-((arr.length-1)*yGap)/2;arr.forEach((n,i)=>{const sv=state.nodePositions[n.id];n.x=sv?sv.x:startX+(l-minL)*xGap;n.y=sv?sv.y:top+i*yGap;n.w=250;n.h=86;});});return{width:startX+(maxL-minL+1)*xGap+360,height:maxH};}
 
 function nodeBox(n){const el=state.nodeElements?.get(n.id);return{x:n.x,y:n.y,w:el?.offsetWidth||n.w||250,h:el?.offsetHeight||n.h||86};}
 function rectPt(rect,target,inset=0){const cx=rect.x+rect.w/2,cy=rect.y+rect.h/2,dx=target.x-cx,dy=target.y-cy;if(!dx&&!dy)return{x:cx,y:cy};const hw=Math.max(1,rect.w/2-inset),hh=Math.max(1,rect.h/2-inset);const sx=dx?hw/Math.abs(dx):Infinity,sy=dy?hh/Math.abs(dy):Infinity,sc=Math.min(sx,sy);return{x:cx+dx*sc,y:cy+dy*sc};}
@@ -254,7 +258,7 @@ function cardHtml(n){
   const fm=n.formal||n.fully_quantified_form||'';
   const ng=n.negation_formal||n.negation_display||'';
   const cp=n.contrapositive||'';
-  return`<div><strong>${esc(n.name)}</strong></div>`
+  return`<div><strong>${texToHtml(nodeTitle(n))}</strong></div>`
     +`<div class="tiny">${esc(n.kind)} · ${esc(nodeDeck(n))} · ${esc(n.id)}</div>`
     +(st?`<div class="block"><strong>Statement</strong><br>${texToHtml(st)}</div>`:'')
     +(fm?`<div class="block"><strong>Formal</strong><br>${texToHtml(fm)}</div>`:'')
@@ -275,7 +279,7 @@ function renderDetails(n){
     const cls=danger?'card danger':'card';
     blocks.push(`<div class="${cls}"><div class="label">${esc(t)}</div><div class="value">${texToHtml(v)}</div></div>`);
   }
-  blocks.push(`<div class="card"><div class="label">Title</div><div class="value"><strong>${esc(n.name)}</strong></div><div class="tiny" style="margin-top:8px">${esc(n.kind)} · ${esc(nodeDeck(n))} · ${esc(n.id)}</div></div>`);
+  blocks.push(`<div class="card"><div class="label">Title</div><div class="value"><strong>${texToHtml(nodeTitle(n))}</strong></div><div class="tiny" style="margin-top:8px">${esc(n.kind)} · ${esc(nodeDeck(n))} · ${esc(n.id)}</div></div>`);
   const fm=n.fully_quantified_form||n.formal||'';
   const pred=n.formal&&n.fully_quantified_form&&n.formal!==n.fully_quantified_form?n.formal:(n.proposition||'');
   add('Statement',n.statement_display);
@@ -295,7 +299,7 @@ function renderDetails(n){
   els.detailContent.innerHTML=blocks.join('');
 }
 
-function render(){const g=visibleGraph();const dims=layout(g.nodes,g.edges);state.renderedGraph=g;els.graphInner.style.width=dims.width+'px';els.graphInner.style.height=dims.height+'px';els.graphInner.style.transform=`scale(${state.zoom})`;els.edgeLayer.setAttribute('width',dims.width);els.edgeLayer.setAttribute('height',dims.height);els.edgeLayer.setAttribute('viewBox',`0 0 ${dims.width} ${dims.height}`);els.edgeLayer.innerHTML=`<defs><marker id="arrowDep" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#94a3b8"/></marker><marker id="arrowUse" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#a78bfa"/></marker><marker id="arrowImp" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#f59e0b"/></marker><marker id="arrowEquiv" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#22c55e"/></marker></defs>`;els.nodeLayer.innerHTML='';state.nodeElements=new Map();for(const n of g.nodes){const d=document.createElement('div');d.className=`node ${kindClass(n.kind)}`+(state.selectedId===n.id?' selected':'');d.style.left=n.x+'px';d.style.top=n.y+'px';d.dataset.nodeId=n.id;d.innerHTML=`<div class="type">${esc(n.kind)}</div><div class="title">${esc(n.name)}</div><div class="meta"><span>${esc(nodeDeck(n))}</span><span>${esc(n.id)}</span></div>`;d.addEventListener('mouseenter',ev=>showTooltip(ev,n));d.addEventListener('mousemove',moveTooltip);d.addEventListener('mouseleave',hideTooltip);d.addEventListener('click',()=>{if(state.suppressNextClick){state.suppressNextClick=false;return;}state.selectedId=n.id;render();renderDetails(n);});attachDrag(d,n);els.nodeLayer.appendChild(d);state.nodeElements.set(n.id,d);}drawEdges(g);}
+function render(){const g=visibleGraph();const dims=layout(g.nodes,g.edges);state.renderedGraph=g;els.graphInner.style.width=dims.width+'px';els.graphInner.style.height=dims.height+'px';els.graphInner.style.transform=`scale(${state.zoom})`;els.edgeLayer.setAttribute('width',dims.width);els.edgeLayer.setAttribute('height',dims.height);els.edgeLayer.setAttribute('viewBox',`0 0 ${dims.width} ${dims.height}`);els.edgeLayer.innerHTML=`<defs><marker id="arrowDep" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#94a3b8"/></marker><marker id="arrowUse" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#a78bfa"/></marker><marker id="arrowImp" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#f59e0b"/></marker><marker id="arrowEquiv" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#22c55e"/></marker></defs>`;els.nodeLayer.innerHTML='';state.nodeElements=new Map();for(const n of g.nodes){const d=document.createElement('div');d.className=`node ${kindClass(n.kind)}`+(state.selectedId===n.id?' selected':'');d.style.left=n.x+'px';d.style.top=n.y+'px';d.dataset.nodeId=n.id;d.innerHTML=`<div class="type">${esc(n.kind)}</div><div class="title">${texToHtml(nodeTitle(n))}</div><div class="meta"><span>${esc(nodeDeck(n))}</span><span>${esc(n.id)}</span></div>`;d.addEventListener('mouseenter',ev=>showTooltip(ev,n));d.addEventListener('mousemove',moveTooltip);d.addEventListener('mouseleave',hideTooltip);d.addEventListener('click',()=>{if(state.suppressNextClick){state.suppressNextClick=false;return;}state.selectedId=n.id;render();renderDetails(n);});attachDrag(d,n);els.nodeLayer.appendChild(d);state.nodeElements.set(n.id,d);}drawEdges(g);}
 
 async function tryAutoLoad(){
   try{
