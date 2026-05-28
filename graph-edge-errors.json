@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T19:44:13.919605+00:00",
+  "generated_at": "2026-05-28T19:53:02.797084+00:00",
   "chapters": [
     "peano-systems",
     "natural-numbers",
@@ -9,8 +9,320 @@
     "continuity",
     "differentiation"
   ],
-  "error_count": 104,
+  "error_count": 143,
   "errors": [
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:addition-on-peano-system",
+      "missing_target_id": "def:peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/addition-on-n/notes-addition-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:addition-on-peano-system",
+      "missing_target_id": "thm:peano-iterator-theorem",
+      "relationship_kind": "depends_on",
+      "source": "notes/addition-on-n/notes-addition-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:addition-well-defined-on-peano-system",
+      "missing_target_id": "thm:peano-iterator-theorem",
+      "relationship_kind": "depends_on",
+      "source": "notes/addition-on-n/notes-addition-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:one-plus-n",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/addition-on-n/notes-addition-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:addition-associative",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/addition-on-n/notes-addition-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:addition-commutative",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/addition-on-n/notes-addition-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:addition-left-cancellation",
+      "missing_target_id": "ax:peano-successor-injective",
+      "relationship_kind": "depends_on",
+      "source": "notes/addition-on-n/notes-addition-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:addition-left-cancellation",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/addition-on-n/notes-addition-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:no-natural-number-equals-itself-plus-a-natural-number",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/addition-on-n/notes-addition-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:no-natural-number-equals-itself-plus-a-natural-number",
+      "missing_target_id": "thm:no-object-is-its-own-successor",
+      "relationship_kind": "depends_on",
+      "source": "notes/addition-on-n/notes-addition-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:strong-induction-on-peano-system",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/induction/notes-induction.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:induction-from-arbitrary-base",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/induction/notes-induction.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:multiplication-on-peano-system",
+      "missing_target_id": "def:peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:multiplication-on-peano-system",
+      "missing_target_id": "thm:general-recursion-theorem-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:multiplication-well-defined-on-peano-system",
+      "missing_target_id": "thm:general-recursion-theorem-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:one-times-n",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:multiplication-distributes-over-addition",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:multiplication-associative",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:multiplication-commutative",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:order-antisymmetric-on-peano-system",
+      "missing_target_id": "thm:no-object-is-its-own-successor",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-on-n/notes-order-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:strict-order-successor-characterization",
+      "missing_target_id": "thm:every-element-is-one-or-a-successor",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-on-n/notes-order-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:trichotomy-on-peano-system",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-on-n/notes-order-on-n.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:exponentiation-on-peano-system",
+      "missing_target_id": "def:peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:exponentiation-on-peano-system",
+      "missing_target_id": "thm:general-recursion-theorem-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:exponentiation-well-defined-on-peano-system",
+      "missing_target_id": "thm:general-recursion-theorem-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:exponent-sum-law",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:exponent-product-law",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:exponent-power-law",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:powers-with-common-exponent-preserve-strict-order",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:powers-with-common-base-preserve-strict-order",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:n-less-than-2-to-n",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:well-ordering-principle",
+      "missing_target_id": "def:peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/well-ordering-principle/notes-well-ordering-principle.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:well-ordering-principle",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/well-ordering-principle/notes-well-ordering-principle.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:induction-well-ordering-equivalence",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/well-ordering-principle/notes-well-ordering-principle.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:dyadic-rational",
+      "missing_target_id": "def:exponentiation-on-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/linear-approximation-in-q/notes-dyadic-approximation-stubs.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:dyadic-approximation-error-bound",
+      "missing_target_id": "thm:well-ordering-principle",
+      "relationship_kind": "depends_on",
+      "source": "notes/linear-approximation-in-q/notes-dyadic-approximation-stubs.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:sb-denom-growth",
+      "missing_target_id": "thm:induction-principle-for-peano-system",
+      "relationship_kind": "depends_on",
+      "source": "notes/linear-approximation-in-q/stern-brocot.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:first-grid-point-crossing",
+      "missing_target_id": "thm:well-ordering-principle",
+      "relationship_kind": "depends_on",
+      "source": "notes/nonlinear-approximation-in-q/notes-square-bracketing-and-nonlinear-approximation.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:rational-square-approximation-from-above",
+      "missing_target_id": "thm:well-ordering-principle",
+      "relationship_kind": "depends_on",
+      "source": "notes/rational-gaps/notes-rational-gaps.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
     {
       "type": "dangling_graph_edge_reference",
       "source_node_id": "prop:uniqueness-of-the-maximum",

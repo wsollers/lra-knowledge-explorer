@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-28T19:44:13.855125+00:00",
+    "generated_at": "2026-05-28T19:53:02.733343+00:00",
     "chapters": [
       "peano-systems",
       "natural-numbers",
@@ -11,8 +11,8 @@
       "differentiation"
     ],
     "node_count": 451,
-    "edge_count": 319,
-    "error_count": 617,
+    "edge_count": 591,
+    "error_count": 695,
     "schema_version": "0.3",
     "script": "run_extraction.py"
   },
@@ -37,7 +37,21 @@
       "failure_modes": "A triple $(P,S,1)$ fails to be a Peano system if the distinguished element\ndoes not lie in the underlying set, if the successor map leaves the set, if\nthe successor hits $1$, if the successor identifies two distinct elements, or\nif there exists a proper subset of $P$ that contains $1$ and is closed under\nsuccessor.",
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\n\\neg\\,\\text{$(P,S,1)$ is a Peano system}\n\\Longrightarrow\\;&\n1 \\notin P \\\\\n&\\lor \\exists n \\in P\\;(S(n) \\notin P) \\\\\n&\\lor \\exists n \\in P\\;(S(n)=1) \\\\\n&\\lor \\exists m,n \\in P\\;(m \\neq n \\land S(m)=S(n)) \\\\\n&\\lor \\exists A \\subseteq P\\;\n\\bigl(1 \\in A \\land\n\\forall n \\in P\\;(n \\in A \\Longrightarrow S(n) \\in A)\n\\land A \\neq P\\bigr).\n\\end{aligned}\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "ax:peano-system-existence",
+        "cor:non-one-elements-have-a-predecessor",
+        "cor:predecessor-exists-unique-away-from-one",
+        "cor:unique-predecessor-characterization-away-from-one",
+        "def:inductive-subset-of-peano-system",
+        "def:iterator-data-on-peano-system",
+        "def:predecessor-in-peano-system",
+        "def:stage-dependent-step-rule",
+        "def:successor-closed-subset",
+        "thm:every-element-is-one-or-a-successor",
+        "thm:induction-principle-for-peano-system",
+        "thm:successor-inequality-reflection",
+        "thm:uniqueness-of-peano-systems-up-to-isomorphism"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -58,7 +72,21 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Existence of a Peano System",
+        "Non-One Elements Have a Predecessor",
+        "Predecessor Existence and Uniqueness Away from $1$",
+        "Unique Predecessor Characterization Away from $1$",
+        "Inductive Subset of a Peano System",
+        "Iterator Data",
+        "Predecessor in a Peano System",
+        "Stage-Dependent Step Rule",
+        "Successor-Closed Subset",
+        "Every Element Is Either $1$ or a Successor",
+        "Induction Principle for a Peano System",
+        "Successor Inequality Reflection",
+        "Uniqueness of Peano Systems up to Isomorphism"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -125,7 +153,9 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "thm:every-element-is-one-or-a-successor"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -146,7 +176,9 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Every Element Is Either $1$ or a Successor"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -198,7 +230,9 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "thm:every-element-is-one-or-a-successor"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -219,7 +253,9 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Every Element Is Either $1$ or a Successor"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -271,7 +307,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "cor:one-is-unique-non-successor",
+        "cor:unique-predecessor-characterization-away-from-one",
+        "thm:no-object-is-its-own-successor"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -292,7 +332,11 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "The Distinguished Element Is the Unique Non-Successor",
+        "Unique Predecessor Characterization Away from $1$",
+        "No Object Is Its Own Successor"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -344,7 +388,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "cor:predecessor-exists-unique-away-from-one",
+        "thm:no-object-is-its-own-successor",
+        "thm:successor-inequality-reflection"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -365,7 +413,11 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Predecessor Existence and Uniqueness Away from $1$",
+        "No Object Is Its Own Successor",
+        "Successor Inequality Reflection"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -417,7 +469,9 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "thm:induction-principle-for-peano-system"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -438,7 +492,9 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Induction Principle for a Peano System"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -491,7 +547,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -512,7 +570,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -568,8 +628,17 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\begin{aligned}\n&\\text{Let } (P,S,1) \\text{ be a Peano system and let } \\varphi\n\\text{ be a predicate on } P.\\\\\n&\\neg\\forall n \\in P\\;\\varphi(n)\n\\Longrightarrow\n\\neg\\Bigl(\\varphi(1) \\land\n\\forall n \\in P\\;(\\varphi(n) \\Longrightarrow \\varphi(S(n)))\\Bigr).\n\\end{aligned}\n\\]",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "lem:minimal-iterator-relation-complete",
+        "lem:uniqueness-of-general-recursive-functions",
+        "lem:uniqueness-of-iterator-functions",
+        "thm:every-element-is-one-or-a-successor",
+        "thm:no-object-is-its-own-successor"
+      ],
+      "used_by_ids": [
+        "ax:peano-induction",
+        "def:peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -596,8 +665,17 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Completeness of the Minimal Iterator Relation",
+        "Uniqueness of General Recursive Functions",
+        "Uniqueness of Iterator Functions",
+        "Every Element Is Either $1$ or a Successor",
+        "No Object Is Its Own Successor"
+      ],
+      "used_by_titles": [
+        "Induction Axiom",
+        "Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -693,8 +771,12 @@
       "failure_modes": "A subset fails to be successor-closed exactly when it contains some element of\n$P$ but fails to contain that element's successor.",
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\nA \\text{ is not successor-closed}\n\\Longleftrightarrow\n\\exists n \\in P\\;\\underbrace{(n \\in A \\land S(n) \\notin A)}_{\\text{closure fails at } n}.\n\\end{aligned}\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:inductive-subset-of-peano-system"
+      ],
+      "used_by_ids": [
+        "def:peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -714,8 +796,12 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Inductive Subset of a Peano System"
+      ],
+      "used_by_titles": [
+        "Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -787,7 +873,10 @@
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\nA \\text{ is not inductive}\n\\Longleftrightarrow\\;&\n\\underbrace{1 \\notin A}_{\\text{base point missing}}\\\\\n&\\lor\n\\underbrace{\\exists n \\in P\\;(n \\in A \\land S(n) \\notin A)}_{\\text{successor closure fails}}.\n\\end{aligned}\n\\]",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:peano-system",
+        "def:successor-closed-subset"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -808,7 +897,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Peano System",
+        "Successor-Closed Subset"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -880,7 +972,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -901,7 +995,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -957,8 +1053,15 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "cor:non-one-elements-have-a-predecessor"
+      ],
+      "used_by_ids": [
+        "ax:peano-one-in-n",
+        "ax:peano-successor-closure",
+        "def:peano-system",
+        "thm:induction-principle-for-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -978,8 +1081,15 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Non-One Elements Have a Predecessor"
+      ],
+      "used_by_titles": [
+        "Distinguished Element Lies in the Underlying Set",
+        "Closure Under Successor",
+        "Peano System",
+        "Induction Principle for a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -1071,7 +1181,10 @@
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\n&\\exists a,b \\in P\\;\n\\underbrace{(a\\neq b \\land S(a)=S(b))}_{\\text{distinct elements with a common successor}}.\n\\end{aligned}\n\\]",
       "contrapositive": "\\[\n\\begin{aligned}\n&\\text{Let } (P,S,1) \\text{ be a Peano system.}\\\\\n&\\forall a,b \\in P\\;(S(a)=S(b) \\Longrightarrow a=b).\n\\end{aligned}\n\\]",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "ax:peano-successor-injective",
+        "def:peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -1092,7 +1205,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Injectivity of Successor",
+        "Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -1192,8 +1308,13 @@
       "failure_modes": "The statement fails exactly when some element distinct from $1$ has no\npredecessor.",
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\n&\\exists x \\in P\\;\n\\underbrace{\\bigl(x\\neq 1 \\land\n\\forall u \\in P\\;(S(u)\\neq x)\\bigr)}_{\\text{non-initial element with no predecessor}}.\n\\end{aligned}\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "cor:predecessor-exists-unique-away-from-one"
+      ],
+      "used_by_ids": [
+        "def:peano-system",
+        "thm:every-element-is-one-or-a-successor"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -1213,8 +1334,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Predecessor Existence and Uniqueness Away from $1$"
+      ],
+      "used_by_titles": [
+        "Peano System",
+        "Every Element Is Either $1$ or a Successor"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -1314,8 +1440,15 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "cor:one-is-unique-non-successor",
+        "cor:unique-predecessor-characterization-away-from-one"
+      ],
+      "used_by_ids": [
+        "ax:peano-successor-injective",
+        "cor:non-one-elements-have-a-predecessor",
+        "def:peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -1335,8 +1468,15 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "The Distinguished Element Is the Unique Non-Successor",
+        "Unique Predecessor Characterization Away from $1$"
+      ],
+      "used_by_titles": [
+        "Injectivity of Successor",
+        "Non-One Elements Have a Predecessor",
+        "Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -1428,7 +1568,11 @@
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\n&\\exists x \\in P\\;\\Bigl(\n\\underbrace{\\bigl(x\\neq 1 \\land\n(\\forall u \\in P\\;(S(u)\\neq x)\n\\lor\n\\exists u,v \\in P\\;(S(u)=x \\land S(v)=x \\land u\\neq v))\\bigr)}_\n{\\text{non-initial element lacks a unique predecessor}}\\\\\n&\\qquad\\qquad\\lor\n\\underbrace{\\bigl(x=1 \\land \\exists u \\in P\\;(S(u)=x \\land\n\\forall v \\in P\\;(S(v)=x \\Longrightarrow v=u))\\bigr)}_\n{\\text{the first element has a unique predecessor}}\n\\Bigr).\n\\end{aligned}\n\\]",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "ax:peano-one-not-successor",
+        "cor:predecessor-exists-unique-away-from-one",
+        "def:peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -1449,7 +1593,11 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Distinguished Element Is Not a Successor",
+        "Predecessor Existence and Uniqueness Away from $1$",
+        "Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -1550,7 +1698,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "ax:peano-one-not-successor",
+        "cor:predecessor-exists-unique-away-from-one"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -1571,7 +1722,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Distinguished Element Is Not a Successor",
+        "Predecessor Existence and Uniqueness Away from $1$"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -1663,7 +1817,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "ax:peano-one-not-successor",
+        "ax:peano-successor-injective",
+        "thm:induction-principle-for-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -1684,7 +1842,11 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Distinguished Element Is Not a Successor",
+        "Injectivity of Successor",
+        "Induction Principle for a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -1775,8 +1937,13 @@
       "failure_modes": "Iterator data fails if the proposed value collection is not a set, if the\ninitial value does not lie in the value set, or if the proposed update rule is\nnot a self-map of the value set.",
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\n&(W,c,g) \\text{ is not iterator data for } (P,S,1)\\\\\n\\Longleftrightarrow\\;&\n\\underbrace{W \\text{ is not a set}}_{\\text{no value set}}\\\\\n&\\lor \\underbrace{c\\notin W}_{\\text{invalid initial value}}\\\\\n&\\lor \\underbrace{g \\text{ is not a function } W\\to W}_{\\text{invalid update rule}}.\n\\end{aligned}\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:iterator-relation",
+        "lem:uniqueness-of-iterator-functions"
+      ],
+      "used_by_ids": [
+        "def:peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -1796,8 +1963,13 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Iterator Relation",
+        "Uniqueness of Iterator Functions"
+      ],
+      "used_by_titles": [
+        "Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -1868,8 +2040,12 @@
       "failure_modes": "An iterator relation fails if it is not a relation inside $P\\times W$, if it\nomits the required base pair, or if it is not closed under the iterator step.",
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\nR \\text{ is not an iterator relation for } (W,c,g)\n\\Longleftrightarrow\\;&\n\\underbrace{R\\not\\subseteq P\\times W}_{\\text{wrong ambient relation}}\\\\\n&\\lor \\underbrace{(1,c)\\notin R}_{\\text{base pair missing}}\\\\\n&\\lor \\underbrace{\\exists n\\in P\\;\\exists w\\in W\\;\n\\bigl((n,w)\\in R\\land (S(n),g(w))\\notin R\\bigr)}_{\\text{step closure fails}}.\n\\end{aligned}\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:minimal-iterator-relation"
+      ],
+      "used_by_ids": [
+        "def:iterator-data-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -1889,8 +2065,12 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Minimal Iterator Relation"
+      ],
+      "used_by_titles": [
+        "Iterator Data"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -1961,8 +2141,12 @@
       "failure_modes": "A pair fails to belong to the minimal iterator relation exactly when some\niterator relation omits that pair. Such a pair is not forced by the base and\nsuccessor-closure clauses.",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "lem:iterator-relation-consistency"
+      ],
+      "used_by_ids": [
+        "def:iterator-relation"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -1982,8 +2166,12 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Consistency of the Minimal Iterator Relation"
+      ],
+      "used_by_titles": [
+        "Iterator Relation"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -2049,8 +2237,13 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\nR^* \\text{ is not an iterator relation for } (W,c,g)\n\\Longrightarrow\nR^* \\text{ is not the minimal iterator relation for } (W,c,g).\n\\]",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "lem:forced-values-are-unique",
+        "lem:minimal-iterator-relation-complete"
+      ],
+      "used_by_ids": [
+        "def:minimal-iterator-relation"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -2070,8 +2263,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Forced Values Are Unique",
+        "Completeness of the Minimal Iterator Relation"
+      ],
+      "used_by_titles": [
+        "Minimal Iterator Relation"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -2160,8 +2358,12 @@
       "failure_modes": "Forced value uniqueness fails exactly when one stage is assigned two distinct\nvalues by the minimal iterator relation.",
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\exists n\\in P\\;\\exists w_0,w_1\\in W\\;\n\\bigl((n,w_0)\\in R^*\\land (n,w_1)\\in R^*\\land w_0\\neq w_1\\bigr)\n\\Longrightarrow\nR^* \\text{ is not functional at every stage}.\n\\]",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "lem:minimal-iterator-relation-deterministic"
+      ],
+      "used_by_ids": [
+        "lem:iterator-relation-consistency"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -2181,8 +2383,12 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Determinism of the Minimal Iterator Relation"
+      ],
+      "used_by_titles": [
+        "Consistency of the Minimal Iterator Relation"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -2282,8 +2488,12 @@
       "failure_modes": "Determinism fails exactly when a single stage has two distinct values in the\nminimal iterator relation.",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "lem:existence-of-iterator-function"
+      ],
+      "used_by_ids": [
+        "lem:forced-values-are-unique"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -2303,8 +2513,12 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Existence of an Iterator Function"
+      ],
+      "used_by_titles": [
+        "Forced Values Are Unique"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -2388,8 +2602,13 @@
       "failure_modes": "Completeness fails exactly when some stage of $P$ receives no value in the\nminimal iterator relation.",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "lem:existence-of-iterator-function"
+      ],
+      "used_by_ids": [
+        "lem:iterator-relation-consistency",
+        "thm:induction-principle-for-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -2409,8 +2628,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Existence of an Iterator Function"
+      ],
+      "used_by_titles": [
+        "Consistency of the Minimal Iterator Relation",
+        "Induction Principle for a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -2494,8 +2718,14 @@
       "failure_modes": "Uniqueness fails exactly when two distinct functions satisfy the same base\nclause and the same successor clause.",
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\begin{aligned}\nf\\neq h\n\\Longrightarrow\\;&\nf(1)\\neq c\\lor h(1)\\neq c\\\\\n&\\lor \\exists n\\in P\\;(f(S(n))\\neq g(f(n)))\\\\\n&\\lor \\exists n\\in P\\;(h(S(n))\\neq g(h(n))).\n\\end{aligned}\n\\]",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "cor:uniqueness-of-binary-iterator-operations",
+        "thm:peano-iterator-theorem"
+      ],
+      "used_by_ids": [
+        "def:iterator-data-on-peano-system",
+        "thm:induction-principle-for-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -2515,8 +2745,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Uniqueness of Binary Iterator Operations",
+        "Peano Iterator Theorem"
+      ],
+      "used_by_titles": [
+        "Iterator Data",
+        "Induction Principle for a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -2610,8 +2846,13 @@
       "failure_modes": "Existence fails exactly when every candidate function misses the base value or\nmisses the recursive successor equation at some stage.",
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\neg\\exists f:P\\to W\\;\n\\bigl(f(1)=c\\land \\forall n\\in P\\;(f(S(n))=g(f(n)))\\bigr)\n\\Longrightarrow\nR^* \\text{ is not both deterministic and complete}.\n\\]",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:peano-iterator-theorem"
+      ],
+      "used_by_ids": [
+        "lem:minimal-iterator-relation-complete",
+        "lem:minimal-iterator-relation-deterministic"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -2631,8 +2872,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Peano Iterator Theorem"
+      ],
+      "used_by_titles": [
+        "Completeness of the Minimal Iterator Relation",
+        "Determinism of the Minimal Iterator Relation"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -2726,8 +2972,14 @@
       "failure_modes": "The iterator theorem fails only if no function satisfies the iterator clauses\nor if more than one function satisfies them.",
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\n&\\neg\\exists! f:P\\to W\\;\n\\bigl(f(1)=c\\land \\forall n\\in P\\;(f(S(n))=g(f(n)))\\bigr)\\\\\n\\Longleftrightarrow\\;&\n\\underbrace{\\neg\\exists f:P\\to W\\;\n\\bigl(f(1)=c\\land \\forall n\\in P\\;(f(S(n))=g(f(n)))\\bigr)}_{\\text{existence fails}}\\\\\n&\\lor\n\\underbrace{\\exists f,h:P\\to W\\;\n\\bigl(f\\neq h\\land f(1)=c\\land h(1)=c\n\\land \\forall n\\in P\\;(f(S(n))=g(f(n)))\n\\land \\forall n\\in P\\;(h(S(n))=g(h(n)))\\bigr)}_{\\text{uniqueness fails}}.\n\\end{aligned}\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:iterator-generated-function",
+        "thm:general-recursion-by-state-encoding"
+      ],
+      "used_by_ids": [
+        "lem:existence-of-iterator-function",
+        "lem:uniqueness-of-iterator-functions"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -2747,8 +2999,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Iterator-Generated Function",
+        "General Recursion by State Encoding"
+      ],
+      "used_by_titles": [
+        "Existence of an Iterator Function",
+        "Uniqueness of Iterator Functions"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -2847,8 +3105,14 @@
       "failure_modes": "A candidate fails to be the iterator-generated function if it is not a\nfunction from $P$ to $W$, if it has the wrong base value, or if it violates\nthe successor clause.",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:iteration-of-a-self-map",
+        "thm:iterator-base-value",
+        "thm:iterator-successor-step"
+      ],
+      "used_by_ids": [
+        "thm:peano-iterator-theorem"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -2868,8 +3132,14 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Iteration of a Self-Map",
+        "Iterator Base Clause",
+        "Iterator Successor Clause"
+      ],
+      "used_by_titles": [
+        "Peano Iterator Theorem"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -2936,7 +3206,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\nf(1)\\neq c\n\\Longrightarrow\nf \\text{ is not the iterator-generated function determined by } (W,c,g).\n\\]",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:iterator-generated-function"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -2957,7 +3229,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Iterator-Generated Function"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -3042,7 +3316,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\exists n\\in P\\;(f(S(n))\\neq g(f(n)))\n\\Longrightarrow\nf \\text{ is not the iterator-generated function determined by } (W,c,g).\n\\]",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:iterator-generated-function"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -3063,7 +3339,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Iterator-Generated Function"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -3148,7 +3426,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:iterator-generated-function"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -3169,7 +3449,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Iterator-Generated Function"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -3231,7 +3513,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "lem:uniqueness-of-iterator-functions"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -3252,7 +3536,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Uniqueness of Iterator Functions"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -3346,8 +3632,13 @@
       "failure_modes": "A stage-dependent step rule fails precisely when it is not a well-defined\nfunction from stage-value pairs back into the value set.",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:general-recursive-function",
+        "thm:general-recursion-by-state-encoding"
+      ],
+      "used_by_ids": [
+        "def:peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -3367,8 +3658,13 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "General Recursive Function",
+        "General Recursion by State Encoding"
+      ],
+      "used_by_titles": [
+        "Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -3434,8 +3730,12 @@
       "failure_modes": "A candidate fails to be the general recursive function if it has the wrong\ndomain or codomain, the wrong base value, or a failed stage-dependent\nsuccessor equation.",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "lem:uniqueness-of-general-recursive-functions"
+      ],
+      "used_by_ids": [
+        "def:stage-dependent-step-rule"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -3455,8 +3755,12 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Uniqueness of General Recursive Functions"
+      ],
+      "used_by_titles": [
+        "Stage-Dependent Step Rule"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -3522,8 +3826,13 @@
       "failure_modes": "Uniqueness of general recursive functions fails if two distinct functions\nsatisfy the same base clause and the same stage-dependent successor clause.",
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\begin{aligned}\nf\\neq h\n\\Longrightarrow\\;&\nf(1)\\neq c\\lor h(1)\\neq c\\\\\n&\\lor \\exists n\\in P\\;(f(S(n))\\neq \\Phi(n,f(n)))\\\\\n&\\lor \\exists n\\in P\\;(h(S(n))\\neq \\Phi(n,h(n))).\n\\end{aligned}\n\\]",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:general-recursion-theorem-for-peano-system"
+      ],
+      "used_by_ids": [
+        "def:general-recursive-function",
+        "thm:induction-principle-for-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -3543,8 +3852,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "General Recursion Theorem"
+      ],
+      "used_by_titles": [
+        "General Recursive Function",
+        "Induction Principle for a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -3638,8 +3952,13 @@
       "failure_modes": "State encoding fails if every candidate state function has the wrong initial\nstate or violates the encoded successor step at some stage.",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:general-recursion-theorem-for-peano-system"
+      ],
+      "used_by_ids": [
+        "def:stage-dependent-step-rule",
+        "thm:peano-iterator-theorem"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -3659,8 +3978,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "General Recursion Theorem"
+      ],
+      "used_by_titles": [
+        "Stage-Dependent Step Rule",
+        "Peano Iterator Theorem"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -3749,8 +4073,13 @@
       "failure_modes": "General recursion fails if no function satisfies the general recursive\nclauses or if two distinct functions satisfy them.",
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\n&\\neg\\exists! f:P\\to W\\;\n\\bigl(f(1)=c\\land \\forall n\\in P\\;(f(S(n))=\\Phi(n,f(n)))\\bigr)\\\\\n\\Longleftrightarrow\\;&\n\\underbrace{\\neg\\exists f:P\\to W\\;\n\\bigl(f(1)=c\\land \\forall n\\in P\\;(f(S(n))=\\Phi(n,f(n)))\\bigr)}_{\\text{existence fails}}\\\\\n&\\lor\n\\underbrace{\\exists f,h:P\\to W\\;\n\\bigl(f\\neq h\\land f(1)=c\\land h(1)=c\n\\land \\forall n\\in P\\;(f(S(n))=\\Phi(n,f(n)))\n\\land \\forall n\\in P\\;(h(S(n))=\\Phi(n,h(n)))\\bigr)}_{\\text{uniqueness fails}}.\n\\end{aligned}\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:uniqueness-of-peano-systems-up-to-isomorphism"
+      ],
+      "used_by_ids": [
+        "lem:uniqueness-of-general-recursive-functions",
+        "thm:general-recursion-by-state-encoding"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -3770,8 +4099,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Uniqueness of Peano Systems up to Isomorphism"
+      ],
+      "used_by_titles": [
+        "Uniqueness of General Recursive Functions",
+        "General Recursion by State Encoding"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -3871,7 +4205,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:peano-system",
+        "thm:general-recursion-theorem-for-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -3892,7 +4229,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Peano System",
+        "General Recursion Theorem"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -3986,7 +4326,15 @@
       "failure_modes": "The definition fails only when the designated value does not agree with the\nunique recursively generated function attached to the fixed left input $m$.\nOnce the recursive map $f_m$ is fixed, every incorrect candidate for $m+n$ is\nsimply a value of $P$ different from $f_m(n)$.",
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\n&\\text{Let } (P,S,1) \\text{ be a Peano system. For each } m \\in P,\n\\text{ let } f_m : P \\to P \\text{ satisfy}\\\\\n&f_m(1)=S(m)\n\\qquad\\text{and}\\qquad\n\\forall n \\in P\\;(f_m(S(n))=S(f_m(n))).\\\\\n&x \\neq m+n\n\\Longleftrightarrow\n\\underbrace{x \\neq f_m(n)}_{\\text{candidate value disagrees with the recursive output}}.\n\\end{aligned}\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:multiplication-on-peano-system",
+        "def:strict-less-than-on-peano-system",
+        "thm:addition-successor-on-right",
+        "thm:addition-well-defined-on-peano-system",
+        "thm:addition-with-one",
+        "thm:multiplication-successor-on-right",
+        "thm:multiplication-well-defined-on-peano-system"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -4007,7 +4355,15 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Multiplication on a Peano System",
+        "Strict Less Than on a Peano System",
+        "Addition Successor on the Right",
+        "Addition Is Well-Defined on a Peano System",
+        "Addition With $1$",
+        "Multiplication Successor on the Right",
+        "Multiplication Is Well-Defined on a Peano System"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -4075,7 +4431,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:addition-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -4096,7 +4454,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Addition on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -4182,8 +4542,17 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:addition-associative",
+        "thm:addition-commutative",
+        "thm:addition-left-cancellation",
+        "thm:no-natural-number-equals-itself-plus-a-natural-number",
+        "thm:one-plus-n",
+        "thm:strict-order-successor-characterization"
+      ],
+      "used_by_ids": [
+        "def:addition-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -4203,8 +4572,17 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Addition Is Associative",
+        "Addition Is Commutative",
+        "Left Cancellation for Addition",
+        "No Natural Number Equals Itself Plus a Natural Number",
+        "One Plus $n$",
+        "Strict Order Successor Characterization"
+      ],
+      "used_by_titles": [
+        "Addition on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -4290,8 +4668,17 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:addition-associative",
+        "thm:addition-commutative",
+        "thm:addition-left-cancellation",
+        "thm:no-natural-number-equals-itself-plus-a-natural-number",
+        "thm:one-plus-n",
+        "thm:strict-order-successor-characterization"
+      ],
+      "used_by_ids": [
+        "def:addition-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -4311,8 +4698,17 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Addition Is Associative",
+        "Addition Is Commutative",
+        "Left Cancellation for Addition",
+        "No Natural Number Equals Itself Plus a Natural Number",
+        "One Plus $n$",
+        "Strict Order Successor Characterization"
+      ],
+      "used_by_titles": [
+        "Addition on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -4398,8 +4794,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:addition-commutative",
+        "thm:addition-left-cancellation"
+      ],
+      "used_by_ids": [
+        "thm:addition-successor-on-right",
+        "thm:addition-with-one"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -4419,8 +4821,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Addition Is Commutative",
+        "Left Cancellation for Addition"
+      ],
+      "used_by_titles": [
+        "Addition Successor on the Right",
+        "Addition With $1$"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -4506,8 +4914,20 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:addition-commutative",
+        "thm:addition-left-cancellation",
+        "thm:addition-preserves-order-on-right",
+        "thm:multiplication-distributes-over-addition",
+        "thm:n-additive-structure",
+        "thm:order-antisymmetric-on-peano-system",
+        "thm:order-transitive-on-peano-system",
+        "thm:strict-order-successor-characterization"
+      ],
+      "used_by_ids": [
+        "thm:addition-successor-on-right",
+        "thm:addition-with-one"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -4527,8 +4947,20 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Addition Is Commutative",
+        "Left Cancellation for Addition",
+        "Addition Preserves Order on the Right",
+        "Multiplication Distributes Over Addition",
+        "$ $ Is Closed, Associative, and Commutative Under Addition",
+        "Order Is Antisymmetric on a Peano System",
+        "Order Is Transitive on a Peano System",
+        "Strict Order Successor Characterization"
+      ],
+      "used_by_titles": [
+        "Addition Successor on the Right",
+        "Addition With $1$"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -4614,8 +5046,22 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:addition-left-cancellation",
+        "thm:addition-preserves-order-on-left",
+        "thm:addition-right-cancellation",
+        "thm:left-distributivity-of-multiplication-over-addition",
+        "thm:multiplication-commutative",
+        "thm:multiplication-distributes-over-addition",
+        "thm:n-additive-structure",
+        "thm:strict-order-successor-characterization"
+      ],
+      "used_by_ids": [
+        "thm:addition-associative",
+        "thm:addition-successor-on-right",
+        "thm:addition-with-one",
+        "thm:one-plus-n"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -4635,8 +5081,22 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Left Cancellation for Addition",
+        "Addition Preserves Order on the Left",
+        "Right Cancellation for Addition",
+        "Left Distributivity of Multiplication Over Addition",
+        "Multiplication Is Commutative",
+        "Multiplication Distributes Over Addition",
+        "$ $ Is Closed, Associative, and Commutative Under Addition",
+        "Strict Order Successor Characterization"
+      ],
+      "used_by_titles": [
+        "Addition Is Associative",
+        "Addition Successor on the Right",
+        "Addition With $1$",
+        "One Plus $n$"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -4722,8 +5182,19 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\begin{aligned}\n&\\text{Let } (P,S,1) \\text{ be a Peano system.}\\\\\n&\\forall a,b,c \\in P\\;\\bigl(b \\neq c \\Longrightarrow a+b \\neq a+c\\bigr).\n\\end{aligned}\n\\]",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:addition-right-cancellation",
+        "thm:multiplication-preserves-and-reflects-strict-order",
+        "thm:n-additive-structure",
+        "thm:order-antisymmetric-on-peano-system"
+      ],
+      "used_by_ids": [
+        "thm:addition-associative",
+        "thm:addition-commutative",
+        "thm:addition-successor-on-right",
+        "thm:addition-with-one",
+        "thm:one-plus-n"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -4743,8 +5214,19 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Right Cancellation for Addition",
+        "Multiplication Preserves and Reflects Strict Order",
+        "$ $ Is Closed, Associative, and Commutative Under Addition",
+        "Order Is Antisymmetric on a Peano System"
+      ],
+      "used_by_titles": [
+        "Addition Is Associative",
+        "Addition Is Commutative",
+        "Addition Successor on the Right",
+        "Addition With $1$",
+        "One Plus $n$"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -4835,8 +5317,13 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\begin{aligned}\n&\\text{Let } (P,S,1) \\text{ be a Peano system.}\\\\\n&\\forall a,b,c \\in P\\;\\bigl(b \\neq c \\Longrightarrow b+a \\neq c+a\\bigr).\n\\end{aligned}\n\\]",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:n-additive-structure"
+      ],
+      "used_by_ids": [
+        "thm:addition-commutative",
+        "thm:addition-left-cancellation"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -4856,8 +5343,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "$ $ Is Closed, Associative, and Commutative Under Addition"
+      ],
+      "used_by_titles": [
+        "Addition Is Commutative",
+        "Left Cancellation for Addition"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -4949,7 +5441,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:addition-successor-on-right",
+        "thm:addition-with-one"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -4970,7 +5465,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Addition Successor on the Right",
+        "Addition With $1$"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -5061,8 +5559,15 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:n-is-semiring"
+      ],
+      "used_by_ids": [
+        "thm:addition-associative",
+        "thm:addition-commutative",
+        "thm:addition-left-cancellation",
+        "thm:addition-right-cancellation"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -5082,8 +5587,15 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "$ $ Is a Semiring"
+      ],
+      "used_by_titles": [
+        "Addition Is Associative",
+        "Addition Is Commutative",
+        "Left Cancellation for Addition",
+        "Right Cancellation for Addition"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -5169,8 +5681,15 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:n-is-semiring"
+      ],
+      "used_by_ids": [
+        "thm:multiplication-associative",
+        "thm:multiplication-commutative",
+        "thm:multiplication-with-one",
+        "thm:one-times-n"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -5190,8 +5709,15 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "$ $ Is a Semiring"
+      ],
+      "used_by_titles": [
+        "Multiplication Is Associative",
+        "Multiplication Is Commutative",
+        "Multiplication With $1$",
+        "One Times $n$"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -5278,7 +5804,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:multiplication-distributes-over-addition",
+        "thm:n-additive-structure",
+        "thm:n-multiplicative-monoid"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -5299,7 +5829,11 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Multiplication Distributes Over Addition",
+        "$ $ Is Closed, Associative, and Commutative Under Addition",
+        "$ $ Is a Commutative Monoid Under Multiplication"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -6688,7 +7222,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\begin{aligned}\n&\\text{Let } (P,S,1) \\text{ be a Peano system and let } \\varphi \\text{ be a predicate on } P.\\\\\n&\\exists n \\in P\\;\\neg\\varphi(n)\n\\Longrightarrow\n\\exists n \\in P\\;\n\\Bigl(\\bigl(\\forall k \\in P\\;(k < n \\Longrightarrow \\varphi(k))\\bigr)\n\\land \\neg\\varphi(n)\\Bigr).\n\\end{aligned}\n\\]",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:strict-less-than-on-peano-system",
+        "thm:trichotomy-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -6709,7 +7246,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Strict Less Than on a Peano System",
+        "Trichotomy on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -6801,7 +7341,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:less-than-or-equal-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -6822,7 +7364,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Less Than or Equal on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -6908,8 +7452,17 @@
       "failure_modes": "The definition fails only when a proposed value for $m \\cdot n$ does not agree\nwith the recursively generated function attached to the fixed left factor $m$.\nOnce $g_m$ is determined, every incorrect candidate product is simply a value\ndifferent from $g_m(n)$.",
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\n&\\text{Let } (P,S,1) \\text{ be a Peano system. For each } m \\in P,\n\\text{ let } g_m : P \\to P \\text{ satisfy}\\\\\n&g_m(1)=m\n\\qquad\\text{and}\\qquad\n\\forall n \\in P\\;(g_m(S(n))=g_m(n)+m).\\\\\n&x \\neq m \\cdot n\n\\Longleftrightarrow\n\\underbrace{x \\neq g_m(n)}_{\\text{candidate value disagrees with the recursive output}}.\n\\end{aligned}\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:exponentiation-on-peano-system",
+        "thm:exponentiation-well-defined-on-peano-system",
+        "thm:multiplication-preserves-and-reflects-strict-order",
+        "thm:multiplication-successor-on-right",
+        "thm:multiplication-well-defined-on-peano-system",
+        "thm:multiplication-with-one"
+      ],
+      "used_by_ids": [
+        "def:addition-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -6929,8 +7482,17 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Exponentiation on a Peano System",
+        "Exponentiation Is Well-Defined on a Peano System",
+        "Multiplication Preserves and Reflects Strict Order",
+        "Multiplication Successor on the Right",
+        "Multiplication Is Well-Defined on a Peano System",
+        "Multiplication With $1$"
+      ],
+      "used_by_titles": [
+        "Addition on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -6997,7 +7559,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:addition-on-peano-system",
+        "def:multiplication-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -7018,7 +7583,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Addition on a Peano System",
+        "Multiplication on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -7104,8 +7672,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:multiplication-associative",
+        "thm:n-multiplicative-monoid",
+        "thm:one-times-n"
+      ],
+      "used_by_ids": [
+        "def:multiplication-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -7125,8 +7699,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Multiplication Is Associative",
+        "$ $ Is a Commutative Monoid Under Multiplication",
+        "One Times $n$"
+      ],
+      "used_by_titles": [
+        "Multiplication on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -7212,8 +7792,17 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:exponent-power-law",
+        "thm:multiplication-associative",
+        "thm:multiplication-commutative",
+        "thm:multiplication-distributes-over-addition",
+        "thm:one-times-n"
+      ],
+      "used_by_ids": [
+        "def:addition-on-peano-system",
+        "def:multiplication-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -7233,8 +7822,17 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Exponent Power Law",
+        "Multiplication Is Associative",
+        "Multiplication Is Commutative",
+        "Multiplication Distributes Over Addition",
+        "One Times $n$"
+      ],
+      "used_by_titles": [
+        "Addition on a Peano System",
+        "Multiplication on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -7320,8 +7918,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:multiplication-commutative",
+        "thm:n-multiplicative-monoid"
+      ],
+      "used_by_ids": [
+        "thm:multiplication-successor-on-right",
+        "thm:multiplication-with-one"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -7341,8 +7945,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Multiplication Is Commutative",
+        "$ $ Is a Commutative Monoid Under Multiplication"
+      ],
+      "used_by_titles": [
+        "Multiplication Successor on the Right",
+        "Multiplication With $1$"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -7428,8 +8038,19 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:left-distributivity-of-multiplication-over-addition",
+        "thm:multiplication-associative",
+        "thm:multiplication-commutative",
+        "thm:multiplication-preserves-and-reflects-strict-order",
+        "thm:n-is-semiring",
+        "thm:n-less-than-2-to-n"
+      ],
+      "used_by_ids": [
+        "thm:addition-associative",
+        "thm:addition-commutative",
+        "thm:multiplication-successor-on-right"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -7449,8 +8070,19 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Left Distributivity of Multiplication Over Addition",
+        "Multiplication Is Associative",
+        "Multiplication Is Commutative",
+        "Multiplication Preserves and Reflects Strict Order",
+        "$ $ Is a Semiring",
+        "$n < 2^n$ for All $n $"
+      ],
+      "used_by_titles": [
+        "Addition Is Associative",
+        "Addition Is Commutative",
+        "Multiplication Successor on the Right"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -7537,7 +8169,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:addition-commutative",
+        "thm:multiplication-commutative",
+        "thm:multiplication-distributes-over-addition"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -7558,7 +8194,11 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Addition Is Commutative",
+        "Multiplication Is Commutative",
+        "Multiplication Distributes Over Addition"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -7649,8 +8289,16 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:exponent-product-law",
+        "thm:exponent-sum-law",
+        "thm:n-multiplicative-monoid"
+      ],
+      "used_by_ids": [
+        "thm:multiplication-distributes-over-addition",
+        "thm:multiplication-successor-on-right",
+        "thm:multiplication-with-one"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -7670,8 +8318,16 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Exponent Product Law",
+        "Exponent Sum Law",
+        "$ $ Is a Commutative Monoid Under Multiplication"
+      ],
+      "used_by_titles": [
+        "Multiplication Distributes Over Addition",
+        "Multiplication Successor on the Right",
+        "Multiplication With $1$"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -7757,8 +8413,18 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:exponent-product-law",
+        "thm:left-distributivity-of-multiplication-over-addition",
+        "thm:multiplication-preserves-and-reflects-strict-order",
+        "thm:n-multiplicative-monoid"
+      ],
+      "used_by_ids": [
+        "thm:addition-commutative",
+        "thm:multiplication-distributes-over-addition",
+        "thm:multiplication-successor-on-right",
+        "thm:one-times-n"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -7778,8 +8444,18 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Exponent Product Law",
+        "Left Distributivity of Multiplication Over Addition",
+        "Multiplication Preserves and Reflects Strict Order",
+        "$ $ Is a Commutative Monoid Under Multiplication"
+      ],
+      "used_by_titles": [
+        "Addition Is Commutative",
+        "Multiplication Distributes Over Addition",
+        "Multiplication Successor on the Right",
+        "One Times $n$"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -7865,8 +8541,20 @@
       "failure_modes": "Strict inequality fails exactly when no additive witness in $P$ carries $a$ to\n$b$. In that case, every nontrivial additive step from $a$ misses $b$.",
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\n&\\text{Let } (P,S,1) \\text{ be a Peano system and let } a,b \\in P.\\\\\n&a \\not< b\n\\Longleftrightarrow\n\\underbrace{\\forall c \\in P\\;(b \\neq a+c)}_{\\text{every proposed additive witness fails}}.\n\\end{aligned}\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:less-than-or-equal-on-peano-system",
+        "thm:addition-preserves-order-on-right",
+        "thm:multiplication-preserves-and-reflects-strict-order",
+        "thm:n-less-than-2-to-n",
+        "thm:order-antisymmetric-on-peano-system",
+        "thm:order-transitive-on-peano-system",
+        "thm:strict-order-successor-characterization",
+        "thm:strong-induction-on-peano-system",
+        "thm:trichotomy-on-peano-system"
+      ],
+      "used_by_ids": [
+        "def:addition-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -7886,8 +8574,20 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Less Than or Equal on a Peano System",
+        "Addition Preserves Order on the Right",
+        "Multiplication Preserves and Reflects Strict Order",
+        "$n < 2^n$ for All $n $",
+        "Order Is Antisymmetric on a Peano System",
+        "Order Is Transitive on a Peano System",
+        "Strict Order Successor Characterization",
+        "Strong Induction on a Peano System",
+        "Trichotomy on a Peano System"
+      ],
+      "used_by_titles": [
+        "Addition on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -7953,8 +8653,19 @@
       "failure_modes": "The non-strict order fails in exactly two simultaneous ways: $a$ is not\nstrictly below $b$, and $a$ is not equal to $b$. Thus $b$ neither lies ahead\nof $a$ nor coincides with it.",
       "failure_mode_decomposition": "\\[\n\\begin{aligned}\n&\\text{Let } (P,S,1) \\text{ be a Peano system and let } a,b \\in P.\\\\\n&a \\not\\le b\n\\Longleftrightarrow\n\\underbrace{a \\not< b}_{\\text{no strict additive witness}}\n\\land\n\\underbrace{a \\neq b}_{\\text{equality also fails}}.\n\\end{aligned}\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:addition-preserves-order-on-right",
+        "thm:induction-from-arbitrary-base",
+        "thm:order-antisymmetric-on-peano-system",
+        "thm:order-reflexive-on-peano-system",
+        "thm:order-transitive-on-peano-system",
+        "thm:strict-order-successor-characterization",
+        "thm:trichotomy-on-peano-system",
+        "thm:well-ordering-principle"
+      ],
+      "used_by_ids": [
+        "def:strict-less-than-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -7974,8 +8685,19 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Addition Preserves Order on the Right",
+        "Induction from an Arbitrary Base",
+        "Order Is Antisymmetric on a Peano System",
+        "Order Is Reflexive on a Peano System",
+        "Order Is Transitive on a Peano System",
+        "Strict Order Successor Characterization",
+        "Trichotomy on a Peano System",
+        "Well-Ordering Principle"
+      ],
+      "used_by_titles": [
+        "Strict Less Than on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8041,8 +8763,12 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:trichotomy-on-peano-system"
+      ],
+      "used_by_ids": [
+        "def:less-than-or-equal-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8062,8 +8788,12 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Trichotomy on a Peano System"
+      ],
+      "used_by_titles": [
+        "Less Than or Equal on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8149,8 +8879,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:trichotomy-on-peano-system"
+      ],
+      "used_by_ids": [
+        "def:less-than-or-equal-on-peano-system",
+        "def:strict-less-than-on-peano-system",
+        "thm:addition-associative"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8170,8 +8906,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Trichotomy on a Peano System"
+      ],
+      "used_by_titles": [
+        "Less Than or Equal on a Peano System",
+        "Strict Less Than on a Peano System",
+        "Addition Is Associative"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8257,8 +8999,15 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\begin{aligned}\n&\\text{Let } (P,S,1) \\text{ be a Peano system.}\\\\\n&\\forall a,b \\in P\\;\n\\bigl(a \\neq b \\Longrightarrow \\neg(a \\le b \\land b \\le a)\\bigr).\n\\end{aligned}\n\\]",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:trichotomy-on-peano-system"
+      ],
+      "used_by_ids": [
+        "def:less-than-or-equal-on-peano-system",
+        "def:strict-less-than-on-peano-system",
+        "thm:addition-associative",
+        "thm:addition-left-cancellation"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8278,8 +9027,15 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Trichotomy on a Peano System"
+      ],
+      "used_by_titles": [
+        "Less Than or Equal on a Peano System",
+        "Strict Less Than on a Peano System",
+        "Addition Is Associative",
+        "Left Cancellation for Addition"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8370,8 +9126,16 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:addition-preserves-order-on-left",
+        "thm:multiplication-preserves-and-reflects-strict-order",
+        "thm:n-less-than-2-to-n"
+      ],
+      "used_by_ids": [
+        "def:less-than-or-equal-on-peano-system",
+        "def:strict-less-than-on-peano-system",
+        "thm:addition-associative"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8391,8 +9155,16 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Addition Preserves Order on the Left",
+        "Multiplication Preserves and Reflects Strict Order",
+        "$n < 2^n$ for All $n $"
+      ],
+      "used_by_titles": [
+        "Less Than or Equal on a Peano System",
+        "Strict Less Than on a Peano System",
+        "Addition Is Associative"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8479,7 +9251,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:addition-commutative",
+        "thm:addition-preserves-order-on-right"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8500,7 +9275,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Addition Is Commutative",
+        "Addition Preserves Order on the Right"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8586,8 +9364,18 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:powers-with-common-base-preserve-strict-order",
+        "thm:powers-with-common-exponent-preserve-strict-order"
+      ],
+      "used_by_ids": [
+        "def:multiplication-on-peano-system",
+        "def:strict-less-than-on-peano-system",
+        "thm:addition-left-cancellation",
+        "thm:addition-preserves-order-on-right",
+        "thm:multiplication-commutative",
+        "thm:multiplication-distributes-over-addition"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8607,8 +9395,18 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Powers with Common Base Preserve Strict Order",
+        "Powers with Common Exponent Preserve Strict Order"
+      ],
+      "used_by_titles": [
+        "Multiplication on a Peano System",
+        "Strict Less Than on a Peano System",
+        "Left Cancellation for Addition",
+        "Addition Preserves Order on the Right",
+        "Multiplication Is Commutative",
+        "Multiplication Distributes Over Addition"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8699,8 +9497,17 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:trichotomy-on-peano-system"
+      ],
+      "used_by_ids": [
+        "def:less-than-or-equal-on-peano-system",
+        "def:strict-less-than-on-peano-system",
+        "thm:addition-associative",
+        "thm:addition-commutative",
+        "thm:addition-successor-on-right",
+        "thm:addition-with-one"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8720,8 +9527,17 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Trichotomy on a Peano System"
+      ],
+      "used_by_titles": [
+        "Less Than or Equal on a Peano System",
+        "Strict Less Than on a Peano System",
+        "Addition Is Associative",
+        "Addition Is Commutative",
+        "Addition Successor on the Right",
+        "Addition With $1$"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8807,8 +9623,18 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:strong-induction-on-peano-system",
+        "thm:well-ordering-principle"
+      ],
+      "used_by_ids": [
+        "def:less-than-or-equal-on-peano-system",
+        "def:strict-less-than-on-peano-system",
+        "thm:order-antisymmetric-on-peano-system",
+        "thm:order-reflexive-on-peano-system",
+        "thm:order-transitive-on-peano-system",
+        "thm:strict-order-successor-characterization"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8828,8 +9654,18 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Strong Induction on a Peano System",
+        "Well-Ordering Principle"
+      ],
+      "used_by_titles": [
+        "Less Than or Equal on a Peano System",
+        "Strict Less Than on a Peano System",
+        "Order Is Antisymmetric on a Peano System",
+        "Order Is Reflexive on a Peano System",
+        "Order Is Transitive on a Peano System",
+        "Strict Order Successor Characterization"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8915,8 +9751,17 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:exponent-power-law",
+        "thm:exponent-product-law",
+        "thm:exponent-sum-law",
+        "thm:n-less-than-2-to-n",
+        "thm:powers-with-common-base-preserve-strict-order",
+        "thm:powers-with-common-exponent-preserve-strict-order"
+      ],
+      "used_by_ids": [
+        "def:multiplication-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8936,8 +9781,17 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Exponent Power Law",
+        "Exponent Product Law",
+        "Exponent Sum Law",
+        "$n < 2^n$ for All $n $",
+        "Powers with Common Base Preserve Strict Order",
+        "Powers with Common Exponent Preserve Strict Order"
+      ],
+      "used_by_titles": [
+        "Multiplication on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8994,7 +9848,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:multiplication-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9015,7 +9871,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Multiplication on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -9106,8 +9964,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:exponent-power-law",
+        "thm:powers-with-common-base-preserve-strict-order"
+      ],
+      "used_by_ids": [
+        "def:exponentiation-on-peano-system",
+        "thm:multiplication-associative"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9127,8 +9991,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Exponent Power Law",
+        "Powers with Common Base Preserve Strict Order"
+      ],
+      "used_by_titles": [
+        "Exponentiation on a Peano System",
+        "Multiplication Is Associative"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -9215,7 +10085,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:exponentiation-on-peano-system",
+        "thm:multiplication-associative",
+        "thm:multiplication-commutative"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9236,7 +10110,11 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Exponentiation on a Peano System",
+        "Multiplication Is Associative",
+        "Multiplication Is Commutative"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -9323,7 +10201,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:exponentiation-on-peano-system",
+        "thm:exponent-sum-law",
+        "thm:multiplication-successor-on-right"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9344,7 +10226,11 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Exponentiation on a Peano System",
+        "Exponent Sum Law",
+        "Multiplication Successor on the Right"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -9431,7 +10317,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:exponentiation-on-peano-system",
+        "thm:multiplication-preserves-and-reflects-strict-order"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9452,7 +10341,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Exponentiation on a Peano System",
+        "Multiplication Preserves and Reflects Strict Order"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -9544,7 +10436,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:exponentiation-on-peano-system",
+        "thm:exponent-sum-law",
+        "thm:multiplication-preserves-and-reflects-strict-order"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9565,7 +10461,11 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Exponentiation on a Peano System",
+        "Exponent Sum Law",
+        "Multiplication Preserves and Reflects Strict Order"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -9657,7 +10557,12 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:exponentiation-on-peano-system",
+        "def:strict-less-than-on-peano-system",
+        "thm:addition-preserves-order-on-right",
+        "thm:multiplication-distributes-over-addition"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9678,7 +10583,12 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Exponentiation on a Peano System",
+        "Strict Less Than on a Peano System",
+        "Addition Preserves Order on the Right",
+        "Multiplication Distributes Over Addition"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -9764,8 +10674,13 @@
       "failure_modes": "The well-ordering principle would fail if some nonempty subset of $P$ had no\nleast element. That means for every candidate minimum, a strictly smaller\nelement of the subset exists, producing an infinite strictly descending chain\nin $P$. Induction rules this out.",
       "failure_mode_decomposition": "\\[\n\\neg\\operatorname{WellOrderingPrinciple}\n\\Longleftrightarrow\n\\exists A \\subseteq P\\;\n\\Bigl(\\underbrace{A \\neq \\varnothing}_{\\text{nonempty}}\n\\land\n\\underbrace{\\forall m \\in A\\;\\exists a \\in A\\;(a < m)}_{\\text{no least element}}\n\\Bigr).\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:induction-well-ordering-equivalence"
+      ],
+      "used_by_ids": [
+        "def:less-than-or-equal-on-peano-system",
+        "thm:trichotomy-on-peano-system"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9785,8 +10700,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Induction and Well-Ordering Are Equivalent"
+      ],
+      "used_by_titles": [
+        "Less Than or Equal on a Peano System",
+        "Trichotomy on a Peano System"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -9893,7 +10813,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:well-ordering-principle"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9914,7 +10836,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Well-Ordering Principle"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -10600,7 +11524,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:farey-sequence",
+        "thm:sqrt2-irrational"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -10626,7 +11553,10 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Farey sequence",
+        "No Rational Number Has Square $2$"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -10706,7 +11636,13 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:dyadic-rational",
+        "def:farey-sequence",
+        "def:rational-sequence",
+        "thm:dyadic-rationals-are-rational",
+        "thm:sqrt2-irrational"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -10727,7 +11663,13 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Dyadic rational",
+        "Farey sequence",
+        "Sequence of rational numbers",
+        "Dyadic Rationals Are Rational",
+        "No Rational Number Has Square $2$"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -10830,7 +11772,9 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "thm:q-is-ordered-field"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -10851,7 +11795,9 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "$ $ Is an Ordered Field"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -10954,7 +11900,18 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "cor:n-positive",
+        "thm:fraction-order-comparison-general",
+        "thm:inverse-positive",
+        "thm:multiply-negative",
+        "thm:multiply-positive",
+        "thm:one-positive",
+        "thm:ordered-fields-are-densely-ordered",
+        "thm:positive-fraction-iff-positive-product",
+        "thm:q-is-ordered-field",
+        "thm:squares-nonnegative"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -10975,7 +11932,18 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Natural Numbers Are Positive",
+        "General Fraction Comparison in an Ordered Field",
+        "Positive Elements Have Positive Inverses",
+        "Multiplication by a Negative Element Reverses Order",
+        "Multiplication by a Positive Element Preserves Order",
+        "$1$ Is Positive",
+        "Ordered Fields Are Densely Ordered",
+        "Positivity of a Quotient via the Product $ab$",
+        "$ $ Is an Ordered Field",
+        "Squares Are Nonnegative"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -11078,7 +12046,9 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "thm:ordered-fields-are-densely-ordered"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -11099,7 +12069,9 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Ordered Fields Are Densely Ordered"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -11560,7 +12532,8 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "def:rational-operations"
+        "def:rational-operations",
+        "thm:q-is-ordered-field"
       ],
       "used_by_ids": [
         "def:rational-operations"
@@ -11591,7 +12564,8 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Addition and multiplication"
+        "Addition and multiplication",
+        "$ $ Is an Ordered Field"
       ],
       "used_by_titles": [
         "Addition and multiplication"
@@ -12919,8 +13893,18 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:convergent-rational-sequence",
+        "lem:sb-length-zero",
+        "thm:dyadic-approximation-error-bound",
+        "thm:rational-chain-with-small-steps",
+        "thm:rational-square-approximation-from-above",
+        "thm:rational-square-bracketing"
+      ],
+      "used_by_ids": [
+        "cor:n-positive",
+        "thm:q-is-ordered-field"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -12945,8 +13929,18 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Convergence of a rational sequence",
+        "Stern--Brocot interval lengths shrink to zero",
+        "Dyadic Approximation Error Bound",
+        "Rational Chain with Uniformly Small Steps",
+        "Rational Square Approximation from Above",
+        "Rational Square Bracketing"
+      ],
+      "used_by_titles": [
+        "Natural Numbers Are Positive",
+        "$ $ Is an Ordered Field"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -13032,8 +14026,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:dyadic-approximation-error-bound",
+        "thm:dyadic-midpoint-closure",
+        "thm:dyadic-rationals-are-rational"
+      ],
+      "used_by_ids": [
+        "def:rational-numbers"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -13053,8 +14053,14 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Dyadic Approximation Error Bound",
+        "Dyadic Midpoint Closure",
+        "Dyadic Rationals Are Rational"
+      ],
+      "used_by_titles": [
+        "Rational numbers"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -13110,8 +14116,13 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:dyadic-midpoint-closure"
+      ],
+      "used_by_ids": [
+        "def:dyadic-rational",
+        "def:rational-numbers"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -13131,8 +14142,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Dyadic Midpoint Closure"
+      ],
+      "used_by_titles": [
+        "Dyadic rational",
+        "Rational numbers"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -13213,7 +14229,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:dyadic-rational",
+        "thm:dyadic-rationals-are-rational"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -13234,7 +14253,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Dyadic rational",
+        "Dyadic Rationals Are Rational"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -13315,7 +14337,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:dyadic-rational",
+        "thm:archimedean-q"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -13336,7 +14361,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Dyadic rational",
+        "Archimedean property of $ $"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -13416,8 +14444,15 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:farey-sequence",
+        "thm:farey-neighbor-theorem",
+        "thm:mediant-inequality",
+        "thm:stern-brocot-enumeration"
+      ],
+      "used_by_ids": [
+        "def:rational-operations"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -13437,8 +14472,15 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Farey sequence",
+        "Farey Neighbor Theorem",
+        "Mediant inequality",
+        "Stern--Brocot enumeration"
+      ],
+      "used_by_titles": [
+        "Addition and multiplication"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -13489,8 +14531,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "lem:mediant-gap",
+        "thm:farey-mediant-property"
+      ],
+      "used_by_ids": [
+        "def:mediant",
+        "thm:q-is-ordered-field"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -13510,8 +14558,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Mediant Gap Lemma",
+        "Mediant property of Farey neighbors"
+      ],
+      "used_by_titles": [
+        "Mediant",
+        "$ $ Is an Ordered Field"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -13591,8 +14645,15 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:farey-mediant-property",
+        "thm:farey-neighbor-theorem"
+      ],
+      "used_by_ids": [
+        "def:mediant",
+        "def:rational-numbers",
+        "thm:fraction-pair-equivalence"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -13612,8 +14673,15 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Mediant property of Farey neighbors",
+        "Farey Neighbor Theorem"
+      ],
+      "used_by_titles": [
+        "Mediant",
+        "Rational numbers",
+        "The Fraction-Pair Relation Is an Equivalence Relation"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -13664,8 +14732,16 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "cor:sb-limit-irrational",
+        "lem:sb-denom-growth",
+        "thm:farey-gap",
+        "thm:stern-brocot-enumeration"
+      ],
+      "used_by_ids": [
+        "def:farey-sequence",
+        "def:mediant"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -13685,8 +14761,16 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Infinite Stern--Brocot paths converge to irrationals",
+        "Denominator growth on infinite Stern--Brocot paths",
+        "Gap between Farey neighbors",
+        "Stern--Brocot enumeration"
+      ],
+      "used_by_titles": [
+        "Farey sequence",
+        "Mediant"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -13777,8 +14861,12 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "lem:sb-length-zero"
+      ],
+      "used_by_ids": [
+        "thm:farey-neighbor-theorem"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -13798,8 +14886,12 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Stern--Brocot interval lengths shrink to zero"
+      ],
+      "used_by_titles": [
+        "Farey Neighbor Theorem"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -13886,7 +14978,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:farey-sequence",
+        "thm:mediant-inequality"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -13907,7 +15002,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Farey sequence",
+        "Mediant inequality"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -13993,8 +15091,12 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:stern-brocot-enumeration"
+      ],
+      "used_by_ids": [
+        "thm:mediant-inequality"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -14014,8 +15116,12 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Stern--Brocot enumeration"
+      ],
+      "used_by_titles": [
+        "Mediant inequality"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -14102,7 +15208,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:mediant",
+        "lem:mediant-gap",
+        "thm:farey-neighbor-theorem"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -14123,7 +15233,11 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Mediant",
+        "Mediant Gap Lemma",
+        "Farey Neighbor Theorem"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -14209,8 +15323,13 @@
       "failure_modes": "The theorem could fail only if some pair of distinct rationals had no room for\nanother rational between them. The midpoint construction shows this never\nhappens in $\\mathbb{Q}$.",
       "failure_mode_decomposition": "\\[\nr<s\n\\Longrightarrow\nr<\\frac{r+s}{2}<s,\n\\qquad\n\\frac{r+s}{2}\\in\\mathbb{Q}.\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "cor:q-dense-in-itself",
+        "cor:q-has-no-adjacent-points"
+      ],
+      "used_by_ids": [
+        "thm:q-is-ordered-field"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -14230,8 +15349,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "$ $ Is Dense in Itself",
+        "The Rational Numbers Have No Adjacent Points"
+      ],
+      "used_by_titles": [
+        "$ $ Is an Ordered Field"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -14337,7 +15461,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:between-any-two-rationals-is-a-rational"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -14358,7 +15484,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Between Any Two Rational Numbers Lies Another Rational"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -14454,7 +15582,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:between-any-two-rationals-is-a-rational"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -14475,7 +15605,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Between Any Two Rational Numbers Lies Another Rational"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -14565,8 +15697,12 @@
       "failure_modes": "This would fail only if some positive rational were the smallest positive\nrational. Halving it produces a strictly smaller positive rational, so no such\nminimum can exist.",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "lem:rational-upper-lower-perturbation"
+      ],
+      "used_by_ids": [
+        "thm:q-is-ordered-field"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -14586,8 +15722,12 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Upper/Lower Perturbation Lemma, Rational Version"
+      ],
+      "used_by_titles": [
+        "$ $ Is an Ordered Field"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -14682,8 +15822,12 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "lem:rational-perturbation-lemma"
+      ],
+      "used_by_ids": [
+        "thm:q-has-no-minimum-positive-element"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -14703,8 +15847,12 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Rational Perturbation Lemma"
+      ],
+      "used_by_titles": [
+        "$ $ Has No Minimum Positive Element"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -14790,7 +15938,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "lem:rational-upper-lower-perturbation"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -14811,7 +15961,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Upper/Lower Perturbation Lemma, Rational Version"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -14897,7 +16049,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:archimedean-q"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -14918,7 +16072,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Archimedean property of $ $"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -14998,8 +16154,13 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "cor:sb-limit-irrational",
+        "lem:sb-length-zero"
+      ],
+      "used_by_ids": [
+        "thm:farey-neighbor-theorem"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -15019,8 +16180,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Infinite Stern--Brocot paths converge to irrationals",
+        "Stern--Brocot interval lengths shrink to zero"
+      ],
+      "used_by_titles": [
+        "Farey Neighbor Theorem"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -15106,8 +16272,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "prop:sb-unique-point"
+      ],
+      "used_by_ids": [
+        "lem:sb-denom-growth",
+        "thm:archimedean-q",
+        "thm:farey-gap"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -15127,8 +16299,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Nested Stern--Brocot intervals contain a unique limit point"
+      ],
+      "used_by_titles": [
+        "Denominator growth on infinite Stern--Brocot paths",
+        "Archimedean property of $ $",
+        "Gap between Farey neighbors"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -15214,8 +16392,12 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "cor:sb-path-limit"
+      ],
+      "used_by_ids": [
+        "lem:sb-length-zero"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -15235,8 +16417,12 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Every infinite Stern--Brocot path converges to its target"
+      ],
+      "used_by_titles": [
+        "Stern--Brocot interval lengths shrink to zero"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -15323,7 +16509,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "prop:sb-unique-point"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -15344,7 +16532,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Nested Stern--Brocot intervals contain a unique limit point"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -15431,7 +16621,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "lem:sb-denom-growth",
+        "thm:farey-neighbor-theorem",
+        "thm:sqrt2-irrational"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -15452,7 +16646,11 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Denominator growth on infinite Stern--Brocot paths",
+        "Farey Neighbor Theorem",
+        "No Rational Number Has Square $2$"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -15538,8 +16736,17 @@
       "failure_modes": "A sequence fails to converge to $a$ in one of two ways:\n\\begin{enumerate}\n  \\item \\textbf{Oscillation:} terms return repeatedly to both sides of $a$\n        with spacing bounded away from zero. Example: $((-1)^n)$.\n  \\item \\textbf{Unbounded drift:} terms recede without bound and approach\n        no rational number at all. Example: $(n)$.\n\\end{enumerate}",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:cauchy-equivalence",
+        "thm:convergent-bounded-q",
+        "thm:convergent-implies-cauchy-q",
+        "thm:limit-unique-q",
+        "thm:subsequence-convergence-q"
+      ],
+      "used_by_ids": [
+        "def:rational-sequence",
+        "thm:archimedean-q"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -15559,8 +16766,17 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Equivalence of Cauchy sequences in $ $",
+        "Convergent sequences are bounded",
+        "Every Convergent Rational Sequence Is Cauchy",
+        "Limits of rational sequences are unique",
+        "Subsequences of convergent sequences converge to the same limit"
+      ],
+      "used_by_titles": [
+        "Sequence of rational numbers",
+        "Archimedean property of $ $"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -15622,7 +16838,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:convergent-rational-sequence",
+        "thm:q-is-ordered-field"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -15643,7 +16862,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Convergence of a rational sequence",
+        "$ $ Is an Ordered Field"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -15729,8 +16951,12 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:subsequence-convergence-q"
+      ],
+      "used_by_ids": [
+        "def:rational-sequence"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -15750,8 +16976,12 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Subsequences of convergent sequences converge to the same limit"
+      ],
+      "used_by_titles": [
+        "Sequence of rational numbers"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -15803,7 +17033,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\exists (k_n) \\text{ strictly increasing},\\;\n\\neg\\operatorname{ConvergesTo}(x_{k_n}, a)\n\\;\\Longrightarrow\\;\n\\neg\\operatorname{ConvergesTo}(x_n, a).\n\\]",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:convergent-rational-sequence",
+        "def:subsequence-q"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -15824,7 +17057,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Convergence of a rational sequence",
+        "Subsequence of a rational sequence"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -15915,8 +17151,13 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:cauchy-bounded-q",
+        "thm:convergent-bounded-q"
+      ],
+      "used_by_ids": [
+        "def:rational-sequence"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -15936,8 +17177,13 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Cauchy sequences are bounded",
+        "Convergent sequences are bounded"
+      ],
+      "used_by_titles": [
+        "Sequence of rational numbers"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -15994,7 +17240,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:bounded-sequence-q",
+        "def:convergent-rational-sequence"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -16015,7 +17264,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Bounded sequence of rational numbers",
+        "Convergence of a rational sequence"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -16101,8 +17353,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:cauchy-closed-operations-q",
+        "thm:cauchy-equiv-preserved-operations"
+      ],
+      "used_by_ids": [
+        "def:bounded-sequence-q",
+        "def:cauchy-rational"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -16122,8 +17380,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Cauchy sequences are closed under addition and multiplication",
+        "Cauchy equivalence is preserved under addition and multiplication"
+      ],
+      "used_by_titles": [
+        "Bounded sequence of rational numbers",
+        "Cauchy sequence in $ $"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -16209,8 +17473,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:cauchy-equiv-preserved-operations",
+        "thm:cauchy-equivalence-is-equivalence"
+      ],
+      "used_by_ids": [
+        "def:cauchy-rational",
+        "thm:cauchy-bounded-q"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -16230,8 +17500,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Cauchy equivalence is preserved under addition and multiplication",
+        "The relation $ $ is an equivalence relation on $ ^c$"
+      ],
+      "used_by_titles": [
+        "Cauchy sequence in $ $",
+        "Cauchy sequences are bounded"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -16317,8 +17593,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:cauchy-equiv-preserved-operations",
+        "thm:cauchy-equivalence-is-equivalence"
+      ],
+      "used_by_ids": [
+        "def:cauchy-rational",
+        "def:convergent-rational-sequence"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -16338,8 +17620,14 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Cauchy equivalence is preserved under addition and multiplication",
+        "The relation $ $ is an equivalence relation on $ ^c$"
+      ],
+      "used_by_titles": [
+        "Cauchy sequence in $ $",
+        "Convergence of a rational sequence"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -16396,7 +17684,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:cauchy-equivalence",
+        "thm:cauchy-closed-operations-q"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -16417,7 +17708,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Equivalence of Cauchy sequences in $ $",
+        "Cauchy sequences are closed under addition and multiplication"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -16504,7 +17798,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:cauchy-equivalence",
+        "thm:cauchy-bounded-q",
+        "thm:cauchy-closed-operations-q"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -16525,7 +17823,11 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Equivalence of Cauchy sequences in $ $",
+        "Cauchy sequences are bounded",
+        "Cauchy sequences are closed under addition and multiplication"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -16611,8 +17913,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "lem:first-grid-point-crossing",
+        "thm:rational-square-approximation-from-above"
+      ],
+      "used_by_ids": [
+        "thm:archimedean-q",
+        "thm:q-is-ordered-field"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -16632,8 +17940,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "First Grid Point Crossing",
+        "Rational Square Approximation from Above"
+      ],
+      "used_by_titles": [
+        "Archimedean property of $ $",
+        "$ $ Is an Ordered Field"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -16718,8 +18032,12 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:rational-square-approximation-from-above"
+      ],
+      "used_by_ids": [
+        "thm:rational-square-bracketing"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -16739,8 +18057,12 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Rational Square Approximation from Above"
+      ],
+      "used_by_titles": [
+        "Rational Square Bracketing"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -16923,7 +18245,9 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:rational-square-approximation-from-above"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -16944,7 +18268,9 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Rational Square Approximation from Above"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -17024,8 +18350,22 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:cauchy-rational",
+        "lem:rational-square-bracketing",
+        "thm:archimedean-q",
+        "thm:between-any-two-rationals-is-a-rational",
+        "thm:limit-unique-q",
+        "thm:mediant-inequality",
+        "thm:q-has-no-minimum-positive-element",
+        "thm:rational-square-bracketing",
+        "thm:squares-nonnegative"
+      ],
+      "used_by_ids": [
+        "def:ordered-field",
+        "def:positive-cone",
+        "thm:q-is-field"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -17045,8 +18385,22 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Cauchy sequence in $ $",
+        "Rational Square Bracketing",
+        "Archimedean property of $ $",
+        "Between Any Two Rational Numbers Lies Another Rational",
+        "Limits of rational sequences are unique",
+        "Mediant inequality",
+        "$ $ Has No Minimum Positive Element",
+        "Rational Square Bracketing",
+        "Squares Are Nonnegative"
+      ],
+      "used_by_titles": [
+        "Ordered field",
+        "Positive cone",
+        "$ $ Is a Field"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -17126,8 +18480,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\forall a\\in F,\\quad a^2 < 0 \\Longrightarrow \\bot.\n\\]",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:inverse-positive",
+        "thm:one-positive"
+      ],
+      "used_by_ids": [
+        "def:ordered-field",
+        "thm:q-is-ordered-field"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -17147,8 +18507,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Positive Elements Have Positive Inverses",
+        "$1$ Is Positive"
+      ],
+      "used_by_titles": [
+        "Ordered field",
+        "$ $ Is an Ordered Field"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -17233,8 +18599,15 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\forall a\\in F,\\quad a^{-1}\\le 0 \\Longrightarrow a\\le 0.\n\\]",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:positive-fraction-iff-positive-product",
+        "thm:reciprocal-order-for-positive-elements"
+      ],
+      "used_by_ids": [
+        "def:ordered-field",
+        "thm:one-positive",
+        "thm:squares-nonnegative"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -17254,8 +18627,15 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Positivity of a Quotient via the Product $ab$",
+        "Reciprocal Order for Positive Elements"
+      ],
+      "used_by_titles": [
+        "Ordered field",
+        "$1$ Is Positive",
+        "Squares Are Nonnegative"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -17340,8 +18720,16 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:fraction-order-comparison-general",
+        "thm:fraction-order-comparison-positive-denominator-product",
+        "thm:multiply-negative",
+        "thm:ordered-fields-are-densely-ordered",
+        "thm:reciprocal-order-for-positive-elements"
+      ],
+      "used_by_ids": [
+        "def:ordered-field"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -17361,8 +18749,16 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "General Fraction Comparison in an Ordered Field",
+        "Fraction Comparison When the Denominator Product Is Positive",
+        "Multiplication by a Negative Element Reverses Order",
+        "Ordered Fields Are Densely Ordered",
+        "Reciprocal Order for Positive Elements"
+      ],
+      "used_by_titles": [
+        "Ordered field"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -17442,8 +18838,13 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:fraction-order-comparison-general"
+      ],
+      "used_by_ids": [
+        "def:ordered-field",
+        "thm:multiply-positive"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -17463,8 +18864,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "General Fraction Comparison in an Ordered Field"
+      ],
+      "used_by_titles": [
+        "Ordered field",
+        "Multiplication by a Positive Element Preserves Order"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -17544,8 +18950,15 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "cor:n-positive",
+        "thm:inverse-positive",
+        "thm:ordered-fields-are-densely-ordered"
+      ],
+      "used_by_ids": [
+        "def:ordered-field",
+        "thm:squares-nonnegative"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -17565,8 +18978,15 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Natural Numbers Are Positive",
+        "Positive Elements Have Positive Inverses",
+        "Ordered Fields Are Densely Ordered"
+      ],
+      "used_by_titles": [
+        "Ordered field",
+        "Squares Are Nonnegative"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -17646,8 +19066,13 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:archimedean-q"
+      ],
+      "used_by_ids": [
+        "def:ordered-field",
+        "thm:one-positive"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -17667,8 +19092,13 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Archimedean property of $ $"
+      ],
+      "used_by_titles": [
+        "Ordered field",
+        "$1$ Is Positive"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -17749,7 +19179,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:ordered-field",
+        "thm:inverse-positive"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -17770,7 +19203,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Ordered field",
+        "Positive Elements Have Positive Inverses"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -17850,8 +19286,14 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:fraction-order-comparison-positive-denominator-product"
+      ],
+      "used_by_ids": [
+        "def:ordered-field",
+        "thm:multiply-negative",
+        "thm:multiply-positive"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -17871,8 +19313,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Fraction Comparison When the Denominator Product Is Positive"
+      ],
+      "used_by_titles": [
+        "Ordered field",
+        "Multiplication by a Negative Element Reverses Order",
+        "Multiplication by a Positive Element Preserves Order"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -17953,7 +19401,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:fraction-order-comparison-general",
+        "thm:multiply-positive"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -17974,7 +19425,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "General Fraction Comparison in an Ordered Field",
+        "Multiplication by a Positive Element Preserves Order"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -18055,7 +19509,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:inverse-positive",
+        "thm:multiply-positive"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -18076,7 +19533,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Positive Elements Have Positive Inverses",
+        "Multiplication by a Positive Element Preserves Order"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -18157,7 +19617,12 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:densely-ordered-system",
+        "def:ordered-field",
+        "thm:multiply-positive",
+        "thm:one-positive"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -18178,7 +19643,12 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Densely ordered system",
+        "Ordered field",
+        "Multiplication by a Positive Element Preserves Order",
+        "$1$ Is Positive"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -18259,6 +19729,7 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
+        "def:mediant",
         "thm:q-is-field",
         "thm:q-is-integral-domain"
       ],
@@ -18286,6 +19757,7 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
+        "Mediant",
         "$ $ Is a Field",
         "$ $ Is an Integral Domain"
       ],
@@ -20256,8 +21728,14 @@
       "failure_modes": "The theorem would fail exactly if some rational number were an exact square\nroot of $2$. Writing it in lowest terms as $p/q$ with $\\gcd(p,q)=1$ leads to\n$p^2=2q^2$, forcing $p$ even and then $q$ even --- contradicting $\\gcd(p,q)=1$.",
       "failure_mode_decomposition": "\\[\n\\neg\\bigl(\\forall r\\in\\mathbb{Q}\\;\\neg(r^2=2)\\bigr)\n\\Longleftrightarrow\n\\exists r\\in\\mathbb{Q}\\;(r^2=2).\n\\]",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "cor:sb-limit-irrational",
+        "thm:cauchy-not-convergent-q"
+      ],
+      "used_by_ids": [
+        "def:rational-numbers",
+        "thm:fraction-pair-equivalence"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -20277,8 +21755,14 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Infinite Stern--Brocot paths converge to irrationals",
+        "There Exist Cauchy Sequences in $ $ That Do Not Converge to a Rational Number"
+      ],
+      "used_by_titles": [
+        "Rational numbers",
+        "The Fraction-Pair Relation Is an Equivalence Relation"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -20378,8 +21862,12 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:rational-square-approximation-from-above"
+      ],
+      "used_by_ids": [
+        "thm:q-is-ordered-field"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -20399,8 +21887,12 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Rational Square Approximation from Above"
+      ],
+      "used_by_titles": [
+        "$ $ Is an Ordered Field"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -20480,8 +21972,15 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "thm:rational-square-approximation-from-below"
+      ],
+      "used_by_ids": [
+        "lem:first-grid-point-crossing",
+        "lem:rational-square-bracketing",
+        "thm:archimedean-q",
+        "thm:rational-square-bracketing"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -20501,8 +22000,15 @@
       "has_proof_file": true,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Rational Square Approximation from Below"
+      ],
+      "used_by_titles": [
+        "First Grid Point Crossing",
+        "Rational Square Bracketing",
+        "Archimedean property of $ $",
+        "Rational Square Bracketing"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -20582,8 +22088,15 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:bounded-sequence-q",
+        "def:cauchy-rational",
+        "def:convergent-rational-sequence",
+        "def:subsequence-q"
+      ],
+      "used_by_ids": [
+        "def:rational-numbers"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -20603,8 +22116,15 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Bounded sequence of rational numbers",
+        "Cauchy sequence in $ $",
+        "Convergence of a rational sequence",
+        "Subsequence of a rational sequence"
+      ],
+      "used_by_titles": [
+        "Rational numbers"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -20655,8 +22175,17 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:cauchy-equivalence",
+        "thm:cauchy-bounded-q",
+        "thm:cauchy-closed-operations-q",
+        "thm:cauchy-not-convergent-q",
+        "thm:convergent-implies-cauchy-q"
+      ],
+      "used_by_ids": [
+        "def:rational-sequence",
+        "thm:q-is-ordered-field"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -20676,8 +22205,17 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Equivalence of Cauchy sequences in $ $",
+        "Cauchy sequences are bounded",
+        "Cauchy sequences are closed under addition and multiplication",
+        "There Exist Cauchy Sequences in $ $ That Do Not Converge to a Rational Number",
+        "Every Convergent Rational Sequence Is Cauchy"
+      ],
+      "used_by_titles": [
+        "Sequence of rational numbers",
+        "$ $ Is an Ordered Field"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -20734,7 +22272,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\neg\\operatorname{CauchySequence}(x_n)\n\\;\\Longrightarrow\\;\n\\forall a\\in\\mathbb{Q}\\;\\neg\\operatorname{ConvergesTo}(x_n, a).\n\\]",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:cauchy-rational",
+        "def:convergent-rational-sequence"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -20755,7 +22296,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Cauchy sequence in $ $",
+        "Convergence of a rational sequence"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -20841,7 +22385,10 @@
       "failure_mode_decomposition": "\\[\n1,\\;1.4,\\;1.41,\\;1.414,\\;1.4142,\\dots\n\\]\nis Cauchy in $\\mathbb{Q}$, but its limit in $\\mathbb{R}$ is $\\sqrt{2}$, and\n\\hyperref[thm:sqrt2-irrational]{the irrationality theorem} gives\n$\\sqrt{2}\\notin\\mathbb{Q}$.",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:cauchy-rational",
+        "thm:sqrt2-irrational"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -20862,7 +22409,10 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Cauchy sequence in $ $",
+        "No Rational Number Has Square $2$"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -48158,6 +49708,931 @@
   ],
   "edges": [
     {
+      "from": "ax:peano-system-existence",
+      "to": "def:peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:non-one-elements-have-a-predecessor",
+      "to": "def:peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:non-one-elements-have-a-predecessor",
+      "to": "thm:every-element-is-one-or-a-successor",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:one-is-unique-non-successor",
+      "to": "ax:peano-one-not-successor",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:one-is-unique-non-successor",
+      "to": "cor:predecessor-exists-unique-away-from-one",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:predecessor-exists-unique-away-from-one",
+      "to": "ax:peano-successor-injective",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:predecessor-exists-unique-away-from-one",
+      "to": "cor:non-one-elements-have-a-predecessor",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:predecessor-exists-unique-away-from-one",
+      "to": "def:peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:unique-predecessor-characterization-away-from-one",
+      "to": "ax:peano-one-not-successor",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:unique-predecessor-characterization-away-from-one",
+      "to": "cor:predecessor-exists-unique-away-from-one",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:unique-predecessor-characterization-away-from-one",
+      "to": "def:peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:uniqueness-of-binary-iterator-operations",
+      "to": "lem:uniqueness-of-iterator-functions",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:general-recursive-function",
+      "to": "def:stage-dependent-step-rule",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:inductive-subset-of-peano-system",
+      "to": "def:peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:inductive-subset-of-peano-system",
+      "to": "def:successor-closed-subset",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:iteration-of-a-self-map",
+      "to": "def:iterator-generated-function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:iterator-data-on-peano-system",
+      "to": "def:peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:iterator-generated-function",
+      "to": "thm:peano-iterator-theorem",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:iterator-relation",
+      "to": "def:iterator-data-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:minimal-iterator-relation",
+      "to": "def:iterator-relation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:predecessor-in-peano-system",
+      "to": "def:peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:stage-dependent-step-rule",
+      "to": "def:peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:successor-closed-subset",
+      "to": "def:peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:existence-of-iterator-function",
+      "to": "lem:minimal-iterator-relation-complete",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:existence-of-iterator-function",
+      "to": "lem:minimal-iterator-relation-deterministic",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:forced-values-are-unique",
+      "to": "lem:iterator-relation-consistency",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:iterator-relation-consistency",
+      "to": "def:minimal-iterator-relation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:minimal-iterator-relation-complete",
+      "to": "lem:iterator-relation-consistency",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:minimal-iterator-relation-complete",
+      "to": "thm:induction-principle-for-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:minimal-iterator-relation-deterministic",
+      "to": "lem:forced-values-are-unique",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:uniqueness-of-general-recursive-functions",
+      "to": "def:general-recursive-function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:uniqueness-of-general-recursive-functions",
+      "to": "thm:induction-principle-for-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:uniqueness-of-iterator-functions",
+      "to": "def:iterator-data-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:uniqueness-of-iterator-functions",
+      "to": "thm:induction-principle-for-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:every-element-is-one-or-a-successor",
+      "to": "ax:peano-one-in-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:every-element-is-one-or-a-successor",
+      "to": "ax:peano-successor-closure",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:every-element-is-one-or-a-successor",
+      "to": "def:peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:every-element-is-one-or-a-successor",
+      "to": "thm:induction-principle-for-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:general-recursion-by-state-encoding",
+      "to": "def:stage-dependent-step-rule",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:general-recursion-by-state-encoding",
+      "to": "thm:peano-iterator-theorem",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:general-recursion-theorem-for-peano-system",
+      "to": "lem:uniqueness-of-general-recursive-functions",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:general-recursion-theorem-for-peano-system",
+      "to": "thm:general-recursion-by-state-encoding",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:induction-principle-for-peano-system",
+      "to": "ax:peano-induction",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:induction-principle-for-peano-system",
+      "to": "def:peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:iterator-base-value",
+      "to": "def:iterator-generated-function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:iterator-successor-step",
+      "to": "def:iterator-generated-function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:no-object-is-its-own-successor",
+      "to": "ax:peano-one-not-successor",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:no-object-is-its-own-successor",
+      "to": "ax:peano-successor-injective",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:no-object-is-its-own-successor",
+      "to": "thm:induction-principle-for-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:peano-iterator-theorem",
+      "to": "lem:existence-of-iterator-function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:peano-iterator-theorem",
+      "to": "lem:uniqueness-of-iterator-functions",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:successor-inequality-reflection",
+      "to": "ax:peano-successor-injective",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:successor-inequality-reflection",
+      "to": "def:peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:uniqueness-of-peano-systems-up-to-isomorphism",
+      "to": "def:peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:uniqueness-of-peano-systems-up-to-isomorphism",
+      "to": "thm:general-recursion-theorem-for-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:exponentiation-on-peano-system",
+      "to": "def:multiplication-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:less-than-or-equal-on-peano-system",
+      "to": "def:strict-less-than-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:multiplication-on-peano-system",
+      "to": "def:addition-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:strict-less-than-on-peano-system",
+      "to": "def:addition-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-associative",
+      "to": "thm:addition-successor-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-associative",
+      "to": "thm:addition-with-one",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-commutative",
+      "to": "thm:addition-associative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-commutative",
+      "to": "thm:addition-successor-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-commutative",
+      "to": "thm:addition-with-one",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-commutative",
+      "to": "thm:one-plus-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-left-cancellation",
+      "to": "thm:addition-associative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-left-cancellation",
+      "to": "thm:addition-commutative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-left-cancellation",
+      "to": "thm:addition-successor-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-left-cancellation",
+      "to": "thm:addition-with-one",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-left-cancellation",
+      "to": "thm:one-plus-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-preserves-order-on-left",
+      "to": "thm:addition-commutative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-preserves-order-on-left",
+      "to": "thm:addition-preserves-order-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-preserves-order-on-right",
+      "to": "def:less-than-or-equal-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-preserves-order-on-right",
+      "to": "def:strict-less-than-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-preserves-order-on-right",
+      "to": "thm:addition-associative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-right-cancellation",
+      "to": "thm:addition-commutative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-right-cancellation",
+      "to": "thm:addition-left-cancellation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-successor-on-right",
+      "to": "def:addition-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-well-defined-on-peano-system",
+      "to": "def:addition-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-with-one",
+      "to": "def:addition-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:exponent-power-law",
+      "to": "def:exponentiation-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:exponent-power-law",
+      "to": "thm:exponent-sum-law",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:exponent-power-law",
+      "to": "thm:multiplication-successor-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:exponent-product-law",
+      "to": "def:exponentiation-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:exponent-product-law",
+      "to": "thm:multiplication-associative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:exponent-product-law",
+      "to": "thm:multiplication-commutative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:exponent-sum-law",
+      "to": "def:exponentiation-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:exponent-sum-law",
+      "to": "thm:multiplication-associative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:exponentiation-well-defined-on-peano-system",
+      "to": "def:multiplication-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:induction-from-arbitrary-base",
+      "to": "def:less-than-or-equal-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:induction-well-ordering-equivalence",
+      "to": "thm:well-ordering-principle",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:left-distributivity-of-multiplication-over-addition",
+      "to": "thm:addition-commutative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:left-distributivity-of-multiplication-over-addition",
+      "to": "thm:multiplication-commutative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:left-distributivity-of-multiplication-over-addition",
+      "to": "thm:multiplication-distributes-over-addition",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-associative",
+      "to": "thm:multiplication-distributes-over-addition",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-associative",
+      "to": "thm:multiplication-successor-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-associative",
+      "to": "thm:multiplication-with-one",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-commutative",
+      "to": "thm:addition-commutative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-commutative",
+      "to": "thm:multiplication-distributes-over-addition",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-commutative",
+      "to": "thm:multiplication-successor-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-commutative",
+      "to": "thm:one-times-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-distributes-over-addition",
+      "to": "thm:addition-associative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-distributes-over-addition",
+      "to": "thm:addition-commutative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-distributes-over-addition",
+      "to": "thm:multiplication-successor-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-preserves-and-reflects-strict-order",
+      "to": "def:multiplication-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-preserves-and-reflects-strict-order",
+      "to": "def:strict-less-than-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-preserves-and-reflects-strict-order",
+      "to": "thm:addition-left-cancellation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-preserves-and-reflects-strict-order",
+      "to": "thm:addition-preserves-order-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-preserves-and-reflects-strict-order",
+      "to": "thm:multiplication-commutative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-preserves-and-reflects-strict-order",
+      "to": "thm:multiplication-distributes-over-addition",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-successor-on-right",
+      "to": "def:addition-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-successor-on-right",
+      "to": "def:multiplication-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-well-defined-on-peano-system",
+      "to": "def:addition-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-well-defined-on-peano-system",
+      "to": "def:multiplication-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-with-one",
+      "to": "def:multiplication-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-additive-structure",
+      "to": "thm:addition-associative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-additive-structure",
+      "to": "thm:addition-commutative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-additive-structure",
+      "to": "thm:addition-left-cancellation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-additive-structure",
+      "to": "thm:addition-right-cancellation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-is-semiring",
+      "to": "thm:multiplication-distributes-over-addition",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-is-semiring",
+      "to": "thm:n-additive-structure",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-is-semiring",
+      "to": "thm:n-multiplicative-monoid",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-less-than-2-to-n",
+      "to": "def:exponentiation-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-less-than-2-to-n",
+      "to": "def:strict-less-than-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-less-than-2-to-n",
+      "to": "thm:addition-preserves-order-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-less-than-2-to-n",
+      "to": "thm:multiplication-distributes-over-addition",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-multiplicative-monoid",
+      "to": "thm:multiplication-associative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-multiplicative-monoid",
+      "to": "thm:multiplication-commutative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-multiplicative-monoid",
+      "to": "thm:multiplication-with-one",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:n-multiplicative-monoid",
+      "to": "thm:one-times-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:no-natural-number-equals-itself-plus-a-natural-number",
+      "to": "thm:addition-successor-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:no-natural-number-equals-itself-plus-a-natural-number",
+      "to": "thm:addition-with-one",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:one-plus-n",
+      "to": "thm:addition-successor-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:one-plus-n",
+      "to": "thm:addition-with-one",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:one-times-n",
+      "to": "thm:multiplication-successor-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:one-times-n",
+      "to": "thm:multiplication-with-one",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:order-antisymmetric-on-peano-system",
+      "to": "def:less-than-or-equal-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:order-antisymmetric-on-peano-system",
+      "to": "def:strict-less-than-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:order-antisymmetric-on-peano-system",
+      "to": "thm:addition-associative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:order-antisymmetric-on-peano-system",
+      "to": "thm:addition-left-cancellation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:order-reflexive-on-peano-system",
+      "to": "def:less-than-or-equal-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:order-transitive-on-peano-system",
+      "to": "def:less-than-or-equal-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:order-transitive-on-peano-system",
+      "to": "def:strict-less-than-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:order-transitive-on-peano-system",
+      "to": "thm:addition-associative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:powers-with-common-base-preserve-strict-order",
+      "to": "def:exponentiation-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:powers-with-common-base-preserve-strict-order",
+      "to": "thm:exponent-sum-law",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:powers-with-common-base-preserve-strict-order",
+      "to": "thm:multiplication-preserves-and-reflects-strict-order",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:powers-with-common-exponent-preserve-strict-order",
+      "to": "def:exponentiation-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:powers-with-common-exponent-preserve-strict-order",
+      "to": "thm:multiplication-preserves-and-reflects-strict-order",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:strict-order-successor-characterization",
+      "to": "def:less-than-or-equal-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:strict-order-successor-characterization",
+      "to": "def:strict-less-than-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:strict-order-successor-characterization",
+      "to": "thm:addition-associative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:strict-order-successor-characterization",
+      "to": "thm:addition-commutative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:strict-order-successor-characterization",
+      "to": "thm:addition-successor-on-right",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:strict-order-successor-characterization",
+      "to": "thm:addition-with-one",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:strong-induction-on-peano-system",
+      "to": "def:strict-less-than-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:strong-induction-on-peano-system",
+      "to": "thm:trichotomy-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trichotomy-on-peano-system",
+      "to": "def:less-than-or-equal-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trichotomy-on-peano-system",
+      "to": "def:strict-less-than-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trichotomy-on-peano-system",
+      "to": "thm:order-antisymmetric-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trichotomy-on-peano-system",
+      "to": "thm:order-reflexive-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trichotomy-on-peano-system",
+      "to": "thm:order-transitive-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trichotomy-on-peano-system",
+      "to": "thm:strict-order-successor-characterization",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:well-ordering-principle",
+      "to": "def:less-than-or-equal-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:well-ordering-principle",
+      "to": "thm:trichotomy-on-peano-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:n-positive",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:n-positive",
+      "to": "thm:one-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:q-dense-in-itself",
+      "to": "thm:between-any-two-rationals-is-a-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:q-has-no-adjacent-points",
+      "to": "thm:between-any-two-rationals-is-a-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:sb-limit-irrational",
+      "to": "lem:sb-denom-growth",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:sb-limit-irrational",
+      "to": "thm:farey-neighbor-theorem",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:sb-limit-irrational",
+      "to": "thm:sqrt2-irrational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:sb-path-limit",
+      "to": "prop:sb-unique-point",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:bounded-sequence-q",
+      "to": "def:rational-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:cauchy-equivalence",
+      "to": "def:cauchy-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:cauchy-equivalence",
+      "to": "def:convergent-rational-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:cauchy-rational",
+      "to": "def:rational-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:cauchy-rational",
+      "to": "thm:q-is-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:convergent-rational-sequence",
+      "to": "def:rational-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:convergent-rational-sequence",
+      "to": "thm:archimedean-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:dyadic-rational",
+      "to": "def:rational-numbers",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:farey-sequence",
+      "to": "def:mediant",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:farey-sequence",
+      "to": "def:rational-numbers",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:farey-sequence",
+      "to": "thm:fraction-pair-equivalence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:mediant",
+      "to": "def:rational-operations",
+      "kind": "depends_on"
+    },
+    {
       "from": "def:rational-operations",
       "to": "thm:q-is-field",
       "kind": "depends_on"
@@ -48168,6 +50643,331 @@
       "kind": "depends_on"
     },
     {
+      "from": "def:rational-sequence",
+      "to": "def:rational-numbers",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:subsequence-q",
+      "to": "def:rational-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:first-grid-point-crossing",
+      "to": "thm:rational-square-bracketing",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:mediant-gap",
+      "to": "thm:mediant-inequality",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:rational-perturbation-lemma",
+      "to": "lem:rational-upper-lower-perturbation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:rational-square-bracketing",
+      "to": "thm:q-is-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:rational-upper-lower-perturbation",
+      "to": "thm:q-has-no-minimum-positive-element",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:sb-denom-growth",
+      "to": "thm:farey-neighbor-theorem",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:sb-length-zero",
+      "to": "lem:sb-denom-growth",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:sb-length-zero",
+      "to": "thm:archimedean-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:sb-length-zero",
+      "to": "thm:farey-gap",
+      "kind": "depends_on"
+    },
+    {
+      "from": "prop:sb-unique-point",
+      "to": "lem:sb-length-zero",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:archimedean-q",
+      "to": "cor:n-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:archimedean-q",
+      "to": "thm:q-is-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:between-any-two-rationals-is-a-rational",
+      "to": "thm:q-is-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-bounded-q",
+      "to": "def:bounded-sequence-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-bounded-q",
+      "to": "def:cauchy-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-closed-operations-q",
+      "to": "def:cauchy-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-closed-operations-q",
+      "to": "thm:cauchy-bounded-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-equiv-preserved-operations",
+      "to": "def:cauchy-equivalence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-equiv-preserved-operations",
+      "to": "thm:cauchy-bounded-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-equiv-preserved-operations",
+      "to": "thm:cauchy-closed-operations-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-equivalence-is-equivalence",
+      "to": "def:cauchy-equivalence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-equivalence-is-equivalence",
+      "to": "thm:cauchy-closed-operations-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-not-convergent-q",
+      "to": "def:cauchy-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-not-convergent-q",
+      "to": "thm:sqrt2-irrational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:convergent-bounded-q",
+      "to": "def:bounded-sequence-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:convergent-bounded-q",
+      "to": "def:convergent-rational-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:convergent-implies-cauchy-q",
+      "to": "def:cauchy-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:convergent-implies-cauchy-q",
+      "to": "def:convergent-rational-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:dyadic-approximation-error-bound",
+      "to": "def:dyadic-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:dyadic-approximation-error-bound",
+      "to": "thm:archimedean-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:dyadic-midpoint-closure",
+      "to": "def:dyadic-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:dyadic-midpoint-closure",
+      "to": "thm:dyadic-rationals-are-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:dyadic-rationals-are-rational",
+      "to": "def:dyadic-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:dyadic-rationals-are-rational",
+      "to": "def:rational-numbers",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:farey-gap",
+      "to": "thm:farey-neighbor-theorem",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:farey-mediant-property",
+      "to": "def:farey-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:farey-mediant-property",
+      "to": "thm:mediant-inequality",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:farey-neighbor-theorem",
+      "to": "def:farey-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:farey-neighbor-theorem",
+      "to": "def:mediant",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:fraction-order-comparison-general",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:fraction-order-comparison-general",
+      "to": "thm:multiply-negative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:fraction-order-comparison-general",
+      "to": "thm:multiply-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:fraction-order-comparison-positive-denominator-product",
+      "to": "thm:fraction-order-comparison-general",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:fraction-order-comparison-positive-denominator-product",
+      "to": "thm:multiply-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:inverse-positive",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:inverse-positive",
+      "to": "thm:one-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:inverse-positive",
+      "to": "thm:squares-nonnegative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:limit-unique-q",
+      "to": "def:convergent-rational-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:limit-unique-q",
+      "to": "thm:q-is-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:mediant-inequality",
+      "to": "def:mediant",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:mediant-inequality",
+      "to": "thm:q-is-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiply-negative",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiply-negative",
+      "to": "thm:multiply-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiply-positive",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:one-positive",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:one-positive",
+      "to": "thm:squares-nonnegative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:ordered-fields-are-densely-ordered",
+      "to": "def:densely-ordered-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:ordered-fields-are-densely-ordered",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:ordered-fields-are-densely-ordered",
+      "to": "thm:multiply-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:ordered-fields-are-densely-ordered",
+      "to": "thm:one-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:positive-fraction-iff-positive-product",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:positive-fraction-iff-positive-product",
+      "to": "thm:inverse-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:q-has-no-minimum-positive-element",
+      "to": "thm:q-is-ordered-field",
+      "kind": "depends_on"
+    },
+    {
       "from": "thm:q-is-field",
       "to": "def:rational-operations",
       "kind": "depends_on"
@@ -48175,6 +50975,116 @@
     {
       "from": "thm:q-is-integral-domain",
       "to": "def:rational-operations",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:q-is-ordered-field",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:q-is-ordered-field",
+      "to": "def:positive-cone",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:q-is-ordered-field",
+      "to": "thm:q-is-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:rational-chain-with-small-steps",
+      "to": "thm:archimedean-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:rational-square-approximation-from-above",
+      "to": "lem:first-grid-point-crossing",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:rational-square-approximation-from-above",
+      "to": "lem:rational-square-bracketing",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:rational-square-approximation-from-above",
+      "to": "thm:archimedean-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:rational-square-approximation-from-above",
+      "to": "thm:rational-square-bracketing",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:rational-square-approximation-from-below",
+      "to": "thm:rational-square-approximation-from-above",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:rational-square-bracketing",
+      "to": "thm:archimedean-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:rational-square-bracketing",
+      "to": "thm:q-is-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:reciprocal-order-for-positive-elements",
+      "to": "thm:inverse-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:reciprocal-order-for-positive-elements",
+      "to": "thm:multiply-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:sqrt2-irrational",
+      "to": "def:rational-numbers",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:sqrt2-irrational",
+      "to": "thm:fraction-pair-equivalence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:squares-nonnegative",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:squares-nonnegative",
+      "to": "thm:q-is-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:stern-brocot-enumeration",
+      "to": "def:mediant",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:stern-brocot-enumeration",
+      "to": "lem:mediant-gap",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:stern-brocot-enumeration",
+      "to": "thm:farey-neighbor-theorem",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:subsequence-convergence-q",
+      "to": "def:convergent-rational-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:subsequence-convergence-q",
+      "to": "def:subsequence-q",
       "kind": "depends_on"
     },
     {
