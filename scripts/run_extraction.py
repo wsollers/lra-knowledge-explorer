@@ -1,22 +1,14 @@
 #!/usr/bin/env python3
 """
-run_extraction.py
------------------
-One-command extraction runner for the Learning Real Analysis theorem explorer.
-
-Usage (from the repo root):
-    python theorem-explorer/run_extraction.py
-
-This script:
-  1. Runs extract_lra_chapter.py (pass 1) for each specified chapter.
-  2. Runs seed_to_knowledge_json_v3_fixed6.py (pass 2) for each chapter.
-  3. Merges both chapters' knowledge.json and graph-edges.json into a combined
-     file at theorem-explorer/knowledge.json and theorem-explorer/graph-edges.json
-     that the HTML explorer already expects.
-  4. Prints a summary of node counts, edge counts, and any errors found.
+run_extraction.py — canonical chapter list for lra-knowledge-explorer CI.
+---------------------------------------------------------------------------
+This file is the single source of truth for which chapters get extracted.
+The rebuild.yml workflow copies this file (and the other two scripts) over
+the monorepo's theorem-explorer/ copies at run time, so the monorepo copy
+is always overridden by this one.
 
 Chapters extracted:
-  - volume-ii/peano-systems    (added 2026-05-28; re-run after monorepo sync)
+  - volume-ii/peano-systems
   - volume-ii/natural-numbers
   - volume-ii/rationals
   - volume-iii/analysis/bounding
