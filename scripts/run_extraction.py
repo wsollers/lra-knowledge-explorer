@@ -16,9 +16,13 @@ This script:
   4. Prints a summary of node counts, edge counts, and any errors found.
 
 Chapters extracted:
+  - volume-ii/peano-systems
   - volume-ii/natural-numbers
   - volume-ii/rationals
   - volume-iii/analysis/bounding
+  - volume-iii/analysis/functions
+  - volume-iii/analysis/continuity
+  - volume-iii/analysis/differentiation
 """
 
 from __future__ import annotations
@@ -36,6 +40,7 @@ PASS1_SCRIPT = EXPLORER_DIR / "extract_lra_chapter.py"
 PASS2_SCRIPT = EXPLORER_DIR / "seed_to_knowledge_json_v3_fixed6.py"
 
 CHAPTERS = [
+    REPO_ROOT / "volume-ii" / "peano-systems",
     REPO_ROOT / "volume-ii" / "natural-numbers",
     REPO_ROOT / "volume-ii" / "rationals",
     REPO_ROOT / "volume-iii" / "analysis" / "bounding",
