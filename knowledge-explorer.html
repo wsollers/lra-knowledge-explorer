@@ -148,6 +148,30 @@ function normalizeLatex(t){let o=Array.isArray(t)?t.join('\n'):String(t??'');o=o
 function renderMixedMath(text){const listHtml=renderList(text);if(listHtml)return listHtml;const src=normalizeLatex(text);const re=/(\\\[[\s\S]*?\\\]|\$\$[\s\S]*?\$\$|\$(?:[^$\\]|\\.)*\$)/g;let out='',pos=0,m;while((m=re.exec(src))!==null){const plain=src.slice(pos,m.index);if(plain)out+=plain.replace(/\n/g,'<br>').replace(/&(?![a-z#0-9]+;)/g,'&amp;');const tk=m[0];if(tk.startsWith('\\[')){out+=renderLatex(tk.slice(2,-2),true);}else if(tk.startsWith('$$')){out+=renderLatex(tk.slice(2,-2),true);}else{out+=renderLatex(tk.slice(1,-1),false);}pos=re.lastIndex;}const tail=src.slice(pos);if(tail)out+=tail.replace(/\n/g,'<br>').replace(/&(?![a-z#0-9]+;)/g,'&amp;');return out;}
 function texToHtml(s){if(!s)return'';return renderMixedMath(String(s));}
 
+// cleanProofText: strip structural LaTeX boilerplate from proof sketch / proof step text
+// before passing to texToHtml. Handles:
+//   - \hyperref[label]{Display Text}  → Display Text
+//   - Proof heading lines: \textbf{Professional Standard Proof.}~\\ etc.
+//   - ~\\ and \\ line break artifacts
+//   - \label{...}, \phantomsection, \noindent, \medskip, \smallskip, \bigskip
+//   - Leading/trailing whitespace
+function cleanProofText(s){
+  if(!s)return'';
+  let t=String(s);
+  // Strip proof heading boilerplate lines (Professional Standard Proof, Detailed Learning Proof, etc.)
+  t=t.replace(/\\textbf\s*\{[^{}]*?(?:Proof|proof)[^{}]*?\}\.?\s*~?\\\\?\s*/g,'');
+  t=t.replace(/(?:Professional Standard|Detailed Learning|Standard)\s+Proof\.?\s*~?\\\\?\s*/gi,'');
+  // \hyperref[label]{Display Text} → Display Text
+  t=t.replace(/\\hyperref\[[^\]]*\]\{([^{}]*)\}/g,'$1');
+  // ~\\ and \\ line breaks → newline
+  t=t.replace(/~?\\\\\s*/g,'\n');
+  // Strip common spacing/layout commands
+  t=t.replace(/\\(?:label|phantomsection|noindent|medskip|smallskip|bigskip|hfill|vspace\*?)\s*(?:\{[^{}]*\})?\s*/g,' ');
+  // Collapse multiple blank lines
+  t=t.replace(/\n{3,}/g,'\n\n');
+  return t.trim();
+}
+
 // nodeDeck: old yaml nodes use `deck`, new extractor nodes use `chapter`.
 function nodeDeck(n){return n.deck||n.chapter||'';}
 // nodeTitle: old yaml nodes use `name`, new extractor nodes use `title`.
@@ -192,48 +216,28 @@ function depTree(nodes,edges,sel){
   const byId=new Map(nodes.map(n=>[n.id,n]));
   if(!byId.has(sel))return{nodes:[],edges:[]};
   const depEdges=edges.filter(e=>{const k=normalizeEdgeKind(e.kind);return k==='depends_on'||k==='prereq';});
-  // Index by `from` so we can walk outward toward prerequisites.
   const out=new Map(nodes.map(n=>[n.id,[]]));
   depEdges.forEach(e=>{if(byId.has(e.from)&&byId.has(e.to))out.get(e.from).push(e);});
-  const seen=new Set([sel]);
-  const te=[];
-  const q=[sel];
-  while(q.length){
-    const id=q.shift();
-    for(const e of out.get(id)||[]){
-      te.push(e);
-      if(!seen.has(e.to)){seen.add(e.to);q.push(e.to);}
-    }
-  }
+  const seen=new Set([sel]);const te=[];const q=[sel];
+  while(q.length){const id=q.shift();for(const e of out.get(id)||[]){te.push(e);if(!seen.has(e.to)){seen.add(e.to);q.push(e.to);}}}
   return{nodes:[...seen].map(id=>byId.get(id)).filter(Boolean),edges:te};
 }
 
 // usedByTree: walks BACKWARD along depends_on edges (from=dependent → to=prereq).
-// Starting from `sel` as a prereq, follows incoming edges to reach all transitive dependents.
+// Starting from `sel` as a prereq, collects all transitive dependents.
 function usedByTree(nodes,edges,sel){
   const byId=new Map(nodes.map(n=>[n.id,n]));
   if(!byId.has(sel))return{nodes:[],edges:[]};
   const depEdges=edges.filter(e=>{const k=normalizeEdgeKind(e.kind);return k==='depends_on'||k==='prereq'||k==='used_by';});
-  // Index by `to` so we can walk backward toward dependents.
   const inc=new Map(nodes.map(n=>[n.id,[]]));
   depEdges.forEach(e=>{if(byId.has(e.from)&&byId.has(e.to))inc.get(e.to).push(e);});
-  const seen=new Set([sel]);
-  const te=[];
-  const q=[sel];
-  while(q.length){
-    const id=q.shift();
-    for(const e of inc.get(id)||[]){
-      te.push(e);
-      if(!seen.has(e.from)){seen.add(e.from);q.push(e.from);}
-    }
-  }
+  const seen=new Set([sel]);const te=[];const q=[sel];
+  while(q.length){const id=q.shift();for(const e of inc.get(id)||[]){te.push(e);if(!seen.has(e.from)){seen.add(e.from);q.push(e.from);}}}
   return{nodes:[...seen].map(id=>byId.get(id)).filter(Boolean),edges:te};
 }
 
 function chooseAnchor(nodes,edges){const ids=new Set(nodes.map(n=>n.id));const deg=new Map(nodes.map(n=>[n.id,0]));edges.forEach(e=>{if(!ids.has(e.from)||!ids.has(e.to))return;deg.set(e.from,(deg.get(e.from)||0)+1);deg.set(e.to,(deg.get(e.to)||0)+1);});return[...nodes].sort((a,b)=>(deg.get(b.id)||0)-(deg.get(a.id)||0))[0]?.id;}
-
 function layers(nodes,edges){const ids=new Set(nodes.map(n=>n.id));const out=new Map(nodes.map(n=>[n.id,[]]));const inc=new Map(nodes.map(n=>[n.id,[]]));edges.forEach(e=>{if(!ids.has(e.from)||!ids.has(e.to))return;out.get(e.from).push(e.to);inc.get(e.to).push(e.from);});const layer=new Map();const tm=state.filters.treeMode;const anchor=(tm!=='off'&&state.selectedId&&ids.has(state.selectedId))?state.selectedId:(chooseAnchor(nodes,edges)||nodes[0]?.id);const seeds=[anchor,...nodes.map(n=>n.id).filter(id=>id!==anchor)];let first=true;for(const seed of seeds){if(!seed||layer.has(seed))continue;layer.set(seed,first?0:-2);first=false;const q=[seed];while(q.length){const id=q.shift();const base=layer.get(id)||0;for(const to of out.get(id)||[])if(!layer.has(to)){layer.set(to,base+1);q.push(to);}for(const fr of inc.get(id)||[])if(!layer.has(fr)){layer.set(fr,base-1);q.push(fr);}}}return{layer,anchor};}
-
 function layout(nodes,edges){const{layer}=layers(nodes,edges);const groups=new Map();nodes.forEach(n=>{const l=layer.get(n.id)||0;if(!groups.has(l))groups.set(l,[]);groups.get(l).push(n);});const ls=Array.from(groups.keys()).sort((a,b)=>a-b);const xGap=430,yGap=158,startX=80;const minL=ls.length?Math.min(...ls):0;const maxL=ls.length?Math.max(...ls):0;const maxCount=ls.reduce((m,l)=>Math.max(m,groups.get(l).length),1);const centerY=Math.max(360,90+(maxCount-1)*yGap/2);const maxH=Math.max(900,centerY*2+140);ls.forEach(l=>{const arr=groups.get(l);arr.sort((a,b)=>(nodeDeck(a)).localeCompare(nodeDeck(b))||(nodeTitle(a)).localeCompare(nodeTitle(b)));const top=centerY-((arr.length-1)*yGap)/2;arr.forEach((n,i)=>{const sv=state.nodePositions[n.id];n.x=sv?sv.x:startX+(l-minL)*xGap;n.y=sv?sv.y:top+i*yGap;n.w=250;n.h=86;});});return{width:startX+(maxL-minL+1)*xGap+360,height:maxH};}
 
 function nodeBox(n){const el=state.nodeElements?.get(n.id);return{x:n.x,y:n.y,w:el?.offsetWidth||n.w||250,h:el?.offsetHeight||n.h||86};}
@@ -265,26 +269,25 @@ function showTooltip(ev,n){els.tooltip.innerHTML=cardHtml(n);els.tooltip.style.d
 function moveTooltip(ev){const pad=16,x=Math.min(window.innerWidth-els.tooltip.offsetWidth-pad,ev.clientX+18),y=Math.min(window.innerHeight-els.tooltip.offsetHeight-pad,ev.clientY+18);els.tooltip.style.left=x+'px';els.tooltip.style.top=y+'px';}
 function hideTooltip(){els.tooltip.style.display='none';}
 
-// Navigate to a node: select it, switch to the appropriate tree mode, re-render, centre.
-function navigateToNode(id, treeMode){
+// Navigate to a node: select it, switch tree mode, re-render, centre.
+function navigateToNode(id,treeMode){
   state.selectedId=id;
   if(treeMode){state.filters.treeMode=treeMode;els.treeMode.value=treeMode;}
   state.nodePositions={};
   render();
   const byId=new Map((state.knowledge.nodes||[]).map(n=>[n.id,n]));
   const target=byId.get(id);
-  if(target) renderDetails(target);
+  if(target)renderDetails(target);
   requestAnimationFrame(()=>requestAnimationFrame(()=>centerOnNode(id)));
 }
 
-// Build a list of clickable node-id chips.
-function chipList(ids, treeMode){
+// Build clickable node-id chips.
+function chipList(ids,treeMode){
   if(!ids||!ids.length)return'';
   const byId=new Map((state.knowledge.nodes||[]).map(n=>[n.id,n]));
   return ids.map(id=>{
     const label=byId.has(id)?nodeTitle(byId.get(id))||id:id;
-    const tip=esc(id);
-    return `<span class="node-chip" data-node-id="${esc(id)}" data-tree="${esc(treeMode||'')}" title="${tip}">${esc(label)}</span>`;
+    return`<span class="node-chip" data-node-id="${esc(id)}" data-tree="${esc(treeMode||'')}" title="${esc(id)}">${esc(label)}</span>`;
   }).join('');
 }
 
@@ -297,7 +300,13 @@ function renderDetails(n){
     const cls=danger?'card danger':'card';
     blocks.push(`<div class="${cls}"><div class="label">${esc(t)}</div><div class="value">${texToHtml(String(v))}</div></div>`);
   }
-  function addChips(label, ids, treeMode){
+  // addProof: like add but runs cleanProofText first to strip structural LaTeX boilerplate.
+  function addProof(t,v){
+    const cleaned=cleanProofText(v);
+    if(!cleaned)return;
+    blocks.push(`<div class="card"><div class="label">${esc(t)}</div><div class="value">${texToHtml(cleaned)}</div></div>`);
+  }
+  function addChips(label,ids,treeMode){
     if(!ids||!ids.length)return;
     const html=chipList(ids,treeMode);
     if(!html)return;
@@ -315,20 +324,15 @@ function renderDetails(n){
   add('Failure mode decomposition',n.failure_mode_decomposition,true);
   add('Contrapositive',n.contrapositive,true);
   add('Proof type',n.proof_type);
-  add('Proof sketch',n.proof_sketch);
-  // Clickable depends-on chips → activate dependency tree on click
-  addChips('Depends on', n.depends_on_ids||n.dependency_refs, 'dep');
-  // Clickable used-by chips → activate used-by tree on click
-  addChips('Used by', n.used_by_ids, 'use');
+  addProof('Proof sketch',n.proof_sketch);  // cleaned before texToHtml
+  addChips('Depends on',n.depends_on_ids||n.dependency_refs,'dep');
+  addChips('Used by',n.used_by_ids,'use');
   add('Source',n.source||n.source_path);
   add('Proof source',n.proof_source||n.proof_source_path);
   els.detailContent.innerHTML=blocks.join('');
-  // Attach click handlers to chips after innerHTML is set
   els.detailContent.querySelectorAll('.node-chip').forEach(chip=>{
     chip.addEventListener('click',()=>{
-      const id=chip.dataset.nodeId;
-      const tm=chip.dataset.tree||'';
-      navigateToNode(id,tm||undefined);
+      navigateToNode(chip.dataset.nodeId,chip.dataset.tree||undefined);
     });
   });
 }
