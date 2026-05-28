@@ -208,7 +208,38 @@ function getNodes(){return state.knowledge.nodes||[];}
 
 function visibleGraph(){const nodes=getNodes();syncDecks(nodes);if(state.filters.dependencyTreeMode&&state.selectedId)return depTree(nodes,state.edges,state.selectedId);const q=state.filters.search.trim().toLowerCase();const vis=new Map();for(const n of nodes){const cls=kindClass(n.kind);const byType=cls==='axiom'?state.filters.showAxioms:(cls==='definition'?state.filters.showDefinitions:state.filters.showResults);const byDeck=state.filters.deck==='All'||nodeDeck(n)===state.filters.deck;const blob=JSON.stringify(n).toLowerCase();vis.set(n.id,byType&&byDeck&&(!q||blob.includes(q)));}const outNodes=nodes.filter(n=>vis.get(n.id));const ids=new Set(outNodes.map(n=>n.id));const outEdges=state.edges.filter(e=>{const k=normalizeEdgeKind(e.kind);return ids.has(e.from)&&ids.has(e.to)&&((k==='depends_on'&&state.filters.showDepends)||((k==='uses'||k==='used_by')&&state.filters.showDepends)||((k==='implies'||k==='equivalent_to')&&state.filters.showImplies));});return{nodes:outNodes,edges:outEdges};}
 
-function depTree(nodes,edges,sel){const byId=new Map(nodes.map(n=>[n.id,n]));if(!byId.has(sel))return{nodes:[],edges:[]};const depEdges=edges.filter(e=>{const k=normalizeEdgeKind(e.kind);return k==='depends_on'||k==='prereq';});const inc=new Map(nodes.map(n=>[n.id,[]]));depEdges.forEach(e=>{if(byId.has(e.from)&&byId.has(e.to))inc.get(e.to).push(e);});const seen=new Set([sel]);const te=[];const q=[sel];while(q.length){const id=q.shift();for(const e of inc.get(id)||[]){te.push(e);if(!seen.has(e.from)){seen.add(e.from);q.push(e.from);}}}return{nodes:[...seen].map(id=>byId.get(id)).filter(Boolean),edges:te};}
+// depTree: walks BACKWARD along depends_on edges from the selected node.
+// A depends_on edge is {from: dependent, to: prerequisite}.
+// We want everything the selected node transitively depends on, so we
+// follow edges where the current node is the `from` side (outgoing),
+// collecting the `to` side (the prerequisite) at each step.
+function depTree(nodes,edges,sel){
+  const byId=new Map(nodes.map(n=>[n.id,n]));
+  if(!byId.has(sel))return{nodes:[],edges:[]};
+  // Only traverse depends_on / prereq edges.
+  const depEdges=edges.filter(e=>{
+    const k=normalizeEdgeKind(e.kind);
+    return k==='depends_on'||k==='prereq';
+  });
+  // Index edges by their `from` node so we can follow prerequisites outward.
+  const out=new Map(nodes.map(n=>[n.id,[]]));
+  depEdges.forEach(e=>{
+    if(byId.has(e.from)&&byId.has(e.to))out.get(e.from).push(e);
+  });
+  // BFS: start at the selected node, follow each outgoing depends_on edge
+  // to its prerequisite, then follow that prerequisite's outgoing edges, etc.
+  const seen=new Set([sel]);
+  const te=[];
+  const q=[sel];
+  while(q.length){
+    const id=q.shift();
+    for(const e of out.get(id)||[]){
+      te.push(e);
+      if(!seen.has(e.to)){seen.add(e.to);q.push(e.to);}
+    }
+  }
+  return{nodes:[...seen].map(id=>byId.get(id)).filter(Boolean),edges:te};
+}
 
 function chooseAnchor(nodes,edges){const ids=new Set(nodes.map(n=>n.id));const deg=new Map(nodes.map(n=>[n.id,0]));edges.forEach(e=>{if(!ids.has(e.from)||!ids.has(e.to))return;deg.set(e.from,(deg.get(e.from)||0)+1);deg.set(e.to,(deg.get(e.to)||0)+1);});return[...nodes].sort((a,b)=>(deg.get(b.id)||0)-(deg.get(a.id)||0))[0]?.id;}
 
