@@ -16,7 +16,7 @@ This script:
   4. Prints a summary of node counts, edge counts, and any errors found.
 
 Chapters extracted:
-  - volume-ii/peano-systems
+  - volume-ii/peano-systems    (added 2026-05-28; re-run after monorepo sync)
   - volume-ii/natural-numbers
   - volume-ii/rationals
   - volume-iii/analysis/bounding
