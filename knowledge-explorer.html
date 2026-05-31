@@ -305,6 +305,9 @@ function renderDetails(n){
   add('Failure mode decomposition',n.failure_mode_decomposition,true);
   add('Contrapositive',n.contrapositive,true);
   add('Proof type',n.proof_type);
+  if(n.proof_vault_url){
+    blocks.push(`<div class="card"><div class="label">Proof vault</div><div class="value"><a href="${esc(n.proof_vault_url)}" target="_blank" rel="noopener noreferrer">Handwritten proof record</a></div></div>`);
+  }
   addProof('Proof sketch',n.proof_sketch);
   addChips('Depends on',n.depends_on_ids||n.dependency_refs,'dep');
   addChips('Used by',n.used_by_ids,'use');

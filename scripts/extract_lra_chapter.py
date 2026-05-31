@@ -11,6 +11,7 @@ What it does
     * \\hyperref[prf:...] links inside note blocks
     * \\label{prf:...} inside proof files
     * \\hyperref[thm:...] / return links inside proof files
+- Captures \\ProofVaultURL{...} backlinks inside proof files.
 - Stores raw LaTeX in base64 in the output JSON.
 - Emits a seed knowledge file and a minimal edge file.
 
@@ -56,6 +57,7 @@ SECTIONING_ENVS = {
 BEGIN_END_RE = re.compile(r"\\(begin|end)\{([A-Za-z*]+)\}")
 LABEL_RE = re.compile(r"\\label\{([^{}]+)\}")
 HYPERREF_RE = re.compile(r"\\hyperref\[([^\]]+)\]")
+PROOF_VAULT_URL_RE = re.compile(r"\\ProofVaultURL\s*\{([^{}]+)\}")
 INPUT_RE = re.compile(r"\\(?:input|include)\{([^{}]+)\}")
 SECTION_RE = re.compile(r"\\(?:section|subsection|subsubsection)\{([^{}]+)\}")
 STRIP_CMD_RE = re.compile(r"\\[A-Za-z@]+\*?(?:\[[^\]]*\])?(?:\{[^{}]*\})?")
@@ -103,6 +105,7 @@ class ExtractedItem:
     proof_source_path: str | None = None
     proof_labels: list[str] = field(default_factory=list)
     proof_return_targets: list[str] = field(default_factory=list)
+    proof_vault_url: str = ""
     proof_raw_latex_b64: str | None = None
     proof_file_blocks: list[dict[str, Any]] = field(default_factory=list)
     text_preview: str = ""
@@ -321,6 +324,7 @@ def collect_proof_catalog(chapter_root: Path) -> tuple[dict[str, dict[str, Any]]
     for path in gather_tex_files(proof_root):
         text = read_file(path)
         labels = LABEL_RE.findall(text)
+        proof_vault_urls = PROOF_VAULT_URL_RE.findall(text)
         envs = parse_env_tree(text)
         return_theorem_targets: list[str] = []
         file_blocks: list[dict[str, Any]] = []
@@ -348,6 +352,7 @@ def collect_proof_catalog(chapter_root: Path) -> tuple[dict[str, dict[str, Any]]
             "proof_source_path": relative_posix(path, chapter_root),
             "proof_labels": labels,
             "proof_return_targets": return_theorem_targets,
+            "proof_vault_url": proof_vault_urls[0].strip() if proof_vault_urls else "",
             "proof_raw_latex_b64": b64(text),
             "proof_file_blocks": file_blocks,
         }
@@ -472,6 +477,7 @@ def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
                 item.proof_source_path = matched_proof["proof_source_path"]
                 item.proof_labels = matched_proof["proof_labels"]
                 item.proof_return_targets = matched_proof["proof_return_targets"]
+                item.proof_vault_url = matched_proof["proof_vault_url"]
                 item.proof_raw_latex_b64 = matched_proof["proof_raw_latex_b64"]
                 item.proof_file_blocks = matched_proof["proof_file_blocks"]
 
@@ -518,6 +524,7 @@ def item_to_json(item: ExtractedItem) -> dict[str, Any]:
         "proof_refs": item.proof_refs,
         "theorem_refs": item.theorem_refs,
         "proof_return_targets": item.proof_return_targets,
+        "proof_vault_url": item.proof_vault_url,
         "raw_latex_b64": item.raw_latex_b64,
         "body_latex_b64": item.body_latex_b64,
         "title_latex_b64": item.title_latex_b64,
