@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-06-01T16:02:08.270782+00:00",
+    "generated_at": "2026-06-01T17:22:01.496823+00:00",
     "chapters": [
       "peano-systems",
       "natural-numbers",
@@ -37587,7 +37587,7 @@
       "proof_type": "",
       "method": "",
       "uses_text": "",
-      "source_text": "Refinement formalizes the idea of subdividing an interval more finely without losing any previously chosen partition points. The condition P \\subseteq Q guarantees that every subinterval defined by P is still represented when one passes to Q, allowing comparisons of sums or integrals computed on different meshes. Failure means that Q discards at least one point of P, so information tied to that breakpoint would be lost when transitioning between partitions.",
+      "source_text": "Refinement formalizes the idea of subdividing an interval more finely without losing any previously chosen partition points. The condition $P \\subseteq Q$ guarantees that every subinterval defined by $P$ is still represented when one passes to $Q$, allowing comparisons of sums or integrals computed on different meshes. Failure means that $Q$ discards at least one point of $P$, so information tied to that breakpoint would be lost when transitioning between partitions.",
       "section": "gauge",
       "has_proof_file": false,
       "ignored": false,
@@ -37640,7 +37640,7 @@
         {
           "title": "Interpretation",
           "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0ludGVycHJldGF0aW9uXQpSZWZpbmVtZW50IGZvcm1hbGl6ZXMgdGhlIGlkZWEgb2Ygc3ViZGl2aWRpbmcgYW4gaW50ZXJ2YWwgbW9yZSBmaW5lbHkgd2l0aG91dCBsb3NpbmcgYW55IHByZXZpb3VzbHkgY2hvc2VuIHBhcnRpdGlvbiBwb2ludHMuIFRoZSBjb25kaXRpb24gUCBcc3Vic2V0ZXEgUSBndWFyYW50ZWVzIHRoYXQgZXZlcnkgc3ViaW50ZXJ2YWwgZGVmaW5lZCBieSBQIGlzIHN0aWxsIHJlcHJlc2VudGVkIHdoZW4gb25lIHBhc3NlcyB0byBRLCBhbGxvd2luZyBjb21wYXJpc29ucyBvZiBzdW1zIG9yIGludGVncmFscyBjb21wdXRlZCBvbiBkaWZmZXJlbnQgbWVzaGVzLiBGYWlsdXJlIG1lYW5zIHRoYXQgUSBkaXNjYXJkcyBhdCBsZWFzdCBvbmUgcG9pbnQgb2YgUCwgc28gaW5mb3JtYXRpb24gdGllZCB0byB0aGF0IGJyZWFrcG9pbnQgd291bGQgYmUgbG9zdCB3aGVuIHRyYW5zaXRpb25pbmcgYmV0d2VlbiBwYXJ0aXRpb25zLgpcZW5ke3JlbWFyayp9"
+          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0ludGVycHJldGF0aW9uXQpSZWZpbmVtZW50IGZvcm1hbGl6ZXMgdGhlIGlkZWEgb2Ygc3ViZGl2aWRpbmcgYW4gaW50ZXJ2YWwgbW9yZSBmaW5lbHkgd2l0aG91dCBsb3NpbmcgYW55IHByZXZpb3VzbHkgY2hvc2VuIHBhcnRpdGlvbiBwb2ludHMuIFRoZSBjb25kaXRpb24gJFAgXHN1YnNldGVxIFEkIGd1YXJhbnRlZXMgdGhhdCBldmVyeSBzdWJpbnRlcnZhbCBkZWZpbmVkIGJ5ICRQJCBpcyBzdGlsbCByZXByZXNlbnRlZCB3aGVuIG9uZSBwYXNzZXMgdG8gJFEkLCBhbGxvd2luZyBjb21wYXJpc29ucyBvZiBzdW1zIG9yIGludGVncmFscyBjb21wdXRlZCBvbiBkaWZmZXJlbnQgbWVzaGVzLiBGYWlsdXJlIG1lYW5zIHRoYXQgJFEkIGRpc2NhcmRzIGF0IGxlYXN0IG9uZSBwb2ludCBvZiAkUCQsIHNvIGluZm9ybWF0aW9uIHRpZWQgdG8gdGhhdCBicmVha3BvaW50IHdvdWxkIGJlIGxvc3Qgd2hlbiB0cmFuc2l0aW9uaW5nIGJldHdlZW4gcGFydGl0aW9ucy4KXGVuZHtyZW1hcmsqfQ=="
         },
         {
           "title": "Dependencies",
@@ -37667,8 +37667,8 @@
       "source": "notes/gauge/notes-tagged-partitions.tex",
       "proof_source": "",
       "question": "State the definition: Common Refinement.",
-      "statement_display": "Let a<b and let P and Q be partitions of [a,b]. Their common refinement is the partition R obtained by taking the union of their node sets, so R = P \\cup Q as sets of points in [a,b].",
-      "statement_tex": "Let a<b and let P and Q be partitions of [a,b]. Their common refinement is the partition R obtained by taking the union of their node sets, so R = P \\cup Q as sets of points in [a,b].",
+      "statement_display": "Let $a<b$ and let $P$ and $Q$ be partitions of $[a,b]$. Their common refinement is the partition $R$ obtained by taking the union of their node sets, so $R = P \\cup Q$ as sets of points in $[a,b]$.",
+      "statement_tex": "Let $a<b$ and let $P$ and $Q$ be partitions of $[a,b]$. Their common refinement is the partition $R$ obtained by taking the union of their node sets, so $R = P \\cup Q$ as sets of points in $[a,b]$.",
       "hint": "",
       "proposition": "\\[\n\\operatorname{CommonRefinement}(R,P,Q) \\coloneqq (R = P \\cup Q).\n\\]",
       "formal": "\\[\n\\begin{aligned}\n&\\text{Let } a<b \\text{ in } \\mathbb{R}, \\text{ and let } P,Q \\text{ be partitions of } [a,b].\\\\\n&\\forall R \\text{ partition of } [a,b]:\\;\nR \\text{ is the common refinement of } P \\text{ and } Q\n\\Longleftrightarrow\nR = P \\cup Q.\n\\end{aligned}\n\\]",
@@ -37676,7 +37676,7 @@
       "negation_display": "\\[\n\\begin{aligned}\n&a<b\\land P,Q\\subseteq [a,b]\\land R\\subseteq [a,b]\\\\\n&\\Longrightarrow\n\\neg\\bigl(\\forall x\\in\\mathbb{R}\\;(x\\in R\\Longleftrightarrow x\\in P\\cup Q)\\bigr)\\\\\n&\\Longleftrightarrow\n\\bigl(\\exists x\\in R\\;(x\\notin P\\cup Q)\\bigr)\n\\lor\n\\bigl(\\exists x\\in P\\cup Q\\;(x\\notin R)\\bigr).\n\\end{aligned}\n\\]",
       "negation_formal": "\\[\n\\begin{aligned}\n&a<b\\land P,Q\\subseteq [a,b]\\land R\\subseteq [a,b]\\\\\n&\\Longrightarrow\n\\neg\\bigl(\\forall x\\in\\mathbb{R}\\;(x\\in R\\Longleftrightarrow x\\in P\\cup Q)\\bigr)\\\\\n&\\Longleftrightarrow\n\\bigl(\\exists x\\in R\\;(x\\notin P\\cup Q)\\bigr)\n\\lor\n\\bigl(\\exists x\\in P\\cup Q\\;(x\\notin R)\\bigr).\n\\end{aligned}\n\\]",
       "negation_predicate": "\\[\n\\neg \\operatorname{CommonRefinement}(R,P,Q) \\Longleftrightarrow R \\ne P \\cup Q.\n\\]",
-      "failure_modes": "The claim that a partition R is the common refinement of P and Q fails exactly when R either contains a node not present in P \\cup Q or omits a node that P \\cup Q contributes. These are the only two structural ways in which R can differ from P \\cup Q.",
+      "failure_modes": "The claim that a partition $R$ is the common refinement of $P$ and $Q$ fails exactly when $R$ either contains a node not present in $P \\cup Q$ or omits a node that $P \\cup Q$ contributes. These are the only two structural ways in which $R$ can differ from $P \\cup Q$.",
       "failure_mode_decomposition": "\\[\nR \\ne P \\cup Q\n\\Longleftrightarrow\n\\underbrace{\\exists x \\in R \\setminus (P \\cup Q)}_{\\text{extra node}}\n\\;\\lor\\;\n\\underbrace{\\exists x \\in (P \\cup Q) \\setminus R}_{\\text{missing node}}.\n\\]",
       "contrapositive": "",
       "depends_on_ids": [
@@ -37712,8 +37712,8 @@
       "dependencies": [
         "def:partition"
       ],
-      "raw_latex_b64": "XGJlZ2lue2RlZmluaXRpb259W0NvbW1vbiBSZWZpbmVtZW50XQpcbGFiZWx7ZGVmOmNvbW1vbi1yZWZpbmVtZW50fQpMZXQgYTxiIGFuZCBsZXQgUCBhbmQgUSBiZSBwYXJ0aXRpb25zIG9mIFthLGJdLiBUaGVpciBjb21tb24gcmVmaW5lbWVudCBpcyB0aGUgcGFydGl0aW9uIFIgb2J0YWluZWQgYnkgdGFraW5nIHRoZSB1bmlvbiBvZiB0aGVpciBub2RlIHNldHMsIHNvIFIgPSBQIFxjdXAgUSBhcyBzZXRzIG9mIHBvaW50cyBpbiBbYSxiXS4KXGVuZHtkZWZpbml0aW9ufQ==",
-      "body_latex_b64": "ClxsYWJlbHtkZWY6Y29tbW9uLXJlZmluZW1lbnR9CkxldCBhPGIgYW5kIGxldCBQIGFuZCBRIGJlIHBhcnRpdGlvbnMgb2YgW2EsYl0uIFRoZWlyIGNvbW1vbiByZWZpbmVtZW50IGlzIHRoZSBwYXJ0aXRpb24gUiBvYnRhaW5lZCBieSB0YWtpbmcgdGhlIHVuaW9uIG9mIHRoZWlyIG5vZGUgc2V0cywgc28gUiA9IFAgXGN1cCBRIGFzIHNldHMgb2YgcG9pbnRzIGluIFthLGJdLgo=",
+      "raw_latex_b64": "XGJlZ2lue2RlZmluaXRpb259W0NvbW1vbiBSZWZpbmVtZW50XQpcbGFiZWx7ZGVmOmNvbW1vbi1yZWZpbmVtZW50fQpMZXQgJGE8YiQgYW5kIGxldCAkUCQgYW5kICRRJCBiZSBwYXJ0aXRpb25zIG9mICRbYSxiXSQuIFRoZWlyIGNvbW1vbiByZWZpbmVtZW50IGlzIHRoZSBwYXJ0aXRpb24gJFIkIG9idGFpbmVkIGJ5IHRha2luZyB0aGUgdW5pb24gb2YgdGhlaXIgbm9kZSBzZXRzLCBzbyAkUiA9IFAgXGN1cCBRJCBhcyBzZXRzIG9mIHBvaW50cyBpbiAkW2EsYl0kLgpcZW5ke2RlZmluaXRpb259",
+      "body_latex_b64": "ClxsYWJlbHtkZWY6Y29tbW9uLXJlZmluZW1lbnR9CkxldCAkYTxiJCBhbmQgbGV0ICRQJCBhbmQgJFEkIGJlIHBhcnRpdGlvbnMgb2YgJFthLGJdJC4gVGhlaXIgY29tbW9uIHJlZmluZW1lbnQgaXMgdGhlIHBhcnRpdGlvbiAkUiQgb2J0YWluZWQgYnkgdGFraW5nIHRoZSB1bmlvbiBvZiB0aGVpciBub2RlIHNldHMsIHNvICRSID0gUCBcY3VwIFEkIGFzIHNldHMgb2YgcG9pbnRzIGluICRbYSxiXSQuCg==",
       "title_latex_b64": "Q29tbW9uIFJlZmluZW1lbnQ=",
       "proof_raw_latex_b64": null,
       "remark_blocks": [
@@ -37740,7 +37740,7 @@
         {
           "title": "Failure modes",
           "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0ZhaWx1cmUgbW9kZXNdClRoZSBjbGFpbSB0aGF0IGEgcGFydGl0aW9uIFIgaXMgdGhlIGNvbW1vbiByZWZpbmVtZW50IG9mIFAgYW5kIFEgZmFpbHMgZXhhY3RseSB3aGVuIFIgZWl0aGVyIGNvbnRhaW5zIGEgbm9kZSBub3QgcHJlc2VudCBpbiBQIFxjdXAgUSBvciBvbWl0cyBhIG5vZGUgdGhhdCBQIFxjdXAgUSBjb250cmlidXRlcy4gVGhlc2UgYXJlIHRoZSBvbmx5IHR3byBzdHJ1Y3R1cmFsIHdheXMgaW4gd2hpY2ggUiBjYW4gZGlmZmVyIGZyb20gUCBcY3VwIFEuClxlbmR7cmVtYXJrKn0="
+          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0ZhaWx1cmUgbW9kZXNdClRoZSBjbGFpbSB0aGF0IGEgcGFydGl0aW9uICRSJCBpcyB0aGUgY29tbW9uIHJlZmluZW1lbnQgb2YgJFAkIGFuZCAkUSQgZmFpbHMgZXhhY3RseSB3aGVuICRSJCBlaXRoZXIgY29udGFpbnMgYSBub2RlIG5vdCBwcmVzZW50IGluICRQIFxjdXAgUSQgb3Igb21pdHMgYSBub2RlIHRoYXQgJFAgXGN1cCBRJCBjb250cmlidXRlcy4gVGhlc2UgYXJlIHRoZSBvbmx5IHR3byBzdHJ1Y3R1cmFsIHdheXMgaW4gd2hpY2ggJFIkIGNhbiBkaWZmZXIgZnJvbSAkUCBcY3VwIFEkLgpcZW5ke3JlbWFyayp9"
         },
         {
           "title": "Failure mode decomposition",
@@ -37766,7 +37766,7 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "definition",
-      "text_preview": "[Common Refinement] Let a<b and let P and Q be partitions of [a,b]. Their common refinement is the partition R obtained by taking the union of their node sets, so R = P Q as sets of points in [a,b]."
+      "text_preview": "[Common Refinement] Let $a<b$ and let $P$ and $Q$ be partitions of $[a,b]$. Their common refinement is the partition $R$ obtained by taking the union of their node sets, so $R = P Q$ as sets of points in $[a,b]$."
     },
     {
       "id": "def:bounded-on-a-set",
