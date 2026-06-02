@@ -7,6 +7,8 @@ What it does
 - Recurses through a chapter's notes/ and proofs/ trees.
 - Extracts theorem-like environments from note files, even when nested inside tcolorbox.
 - Captures immediate trailing remark* blocks attached to each theorem-like item.
+- Promotes definition-attached Examples and Non-Examples remark blocks into
+  metadata fields without creating graph nodes.
 - Maps proof files to theorem-like items via:
     * \\hyperref[prf:...] links inside note blocks
     * \\label{prf:...} inside proof files
@@ -102,6 +104,8 @@ class ExtractedItem:
     proof_refs: list[str]
     theorem_refs: list[str]
     remark_blocks: list[dict[str, Any]]
+    examples: list[dict[str, Any]] = field(default_factory=list)
+    non_examples: list[dict[str, Any]] = field(default_factory=list)
     proof_source_path: str | None = None
     proof_labels: list[str] = field(default_factory=list)
     proof_return_targets: list[str] = field(default_factory=list)
@@ -412,6 +416,14 @@ def make_fallback_id(kind: str, path: Path, ordinal: int) -> str:
     return f"{kind.lower()}:{stem}:{ordinal:03d}"
 
 
+def definition_boundary_metadata(kind: str, remarks: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    if kind != "definition":
+        return [], []
+    examples = [r for r in remarks if r.get("title", "").strip() == "Examples"]
+    non_examples = [r for r in remarks if r.get("title", "").strip() == "Non-Examples"]
+    return examples, non_examples
+
+
 def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
     notes_root = chapter_root / "notes"
     chapter_name = chapter_root.name
@@ -440,6 +452,7 @@ def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
             proof_refs = sorted({h for h in HYPERREF_RE.findall(raw) if h.startswith("prf:")})
             theorem_refs = sorted({h for h in HYPERREF_RE.findall(raw) if h.startswith(("def:", "thm:", "lem:", "prop:", "cor:", "ax:"))})
             remarks = collect_trailing_remarks(text, envs, idx)
+            examples, non_examples = definition_boundary_metadata(kind, remarks)
 
             item = ExtractedItem(
                 id=item_id,
@@ -458,6 +471,8 @@ def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
                 proof_refs=proof_refs,
                 theorem_refs=theorem_refs,
                 remark_blocks=remarks,
+                examples=examples,
+                non_examples=non_examples,
                 text_preview=clean_preview(raw),
             )
 
@@ -530,6 +545,8 @@ def item_to_json(item: ExtractedItem) -> dict[str, Any]:
         "title_latex_b64": item.title_latex_b64,
         "proof_raw_latex_b64": item.proof_raw_latex_b64,
         "remark_blocks": item.remark_blocks,
+        "examples": item.examples,
+        "non_examples": item.non_examples,
         "proof_file_blocks": item.proof_file_blocks,
         "text_preview": item.text_preview,
     }
