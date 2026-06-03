@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T15:35:42.524435+00:00",
+  "generated_at": "2026-06-03T15:47:44.297667+00:00",
   "chapters": [
     "peano-systems",
     "natural-numbers",
@@ -9,7 +9,7 @@
     "continuity",
     "differentiation"
   ],
-  "error_count": 551,
+  "error_count": 548,
   "errors": [
     {
       "type": "multiple_primary_statements_in_box",
@@ -4976,7 +4976,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $f\\colon[a,b]\\to\\mathbb{R}$ be continuous and let $\\varepsilon>0$. Then there exists a continuous piecewise linear function $\\ell_\\varepsilon\\colon[a,b]\\to\\mathbb{R}$ such that $\\sup_{x\\in[a,b]}|f(x)-\\ell_\\varepsilon(x)|<\\varepsilon$. \\hyperref[prf:piecewise-linear-approximation]{Go to proof.}"
+      "excerpt": "Let $f\\colon[a,b]\\to\\mathbb{R}$ be continuous and let $\\varepsilon>0$. Then there exists a continuous piecewise linear function $\\ell_\\varepsilon\\colon[a,b]\\to\\mathbb{R}$ such that $\\sup_{x\\in[a,b]}|f(x)-\\ell_\\varepsilon(x)|<\\varepsilon$. \\hyperref[prf:piecewise-linear-approximation]{Go to proof.}",
+      "proof_source": "proofs/notes/prf-piecewise-linear-approximation.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -5122,7 +5123,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $I\\subseteq\\mathbb{R}$ be an interval and let $f:I\\to\\mathbb{R}$ be strictly monotone and continuous on $I$. Then the inverse function $f^{-1}:f(I)\\to I$ exists, is strictly monotone, and is continuous on $f(I)$."
+      "excerpt": "Let $I\\subseteq\\mathbb{R}$ be an interval and let $f:I\\to\\mathbb{R}$ be strictly monotone and continuous on $I$. Then the inverse function $f^{-1}:f(I)\\to I$ exists, is strictly monotone, and is continuous on $f(I)$.",
+      "proof_source": "proofs/notes/prf-continuous-inverse-theorem.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -5207,7 +5209,8 @@
       "signals": [
         "latex_list_with_multiple_items:2"
       ],
-      "excerpt": "\\begin{enumerate}[label=(\\alph*)] \\item For every set $A \\subseteq \\mathbb{R}$, every pair of functions $f,g : A \\to \\mathbb{R}$ that are uniformly continuous on $A$, and every scalar $c \\in \\mathbb{R}$, the functions $f+g$, $f-g$, and $cf$ are uniformly continuous on $A$. \\item There exist a set $A \\subseteq \\mathbb{R}$ and uniformly continuous functions $f,g : A \\to \\mathbb{R}$ such that the product $fg$ is not..."
+      "excerpt": "\\begin{enumerate}[label=(\\alph*)] \\item For every set $A \\subseteq \\mathbb{R}$, every pair of functions $f,g : A \\to \\mathbb{R}$ that are uniformly continuous on $A$, and every scalar $c \\in \\mathbb{R}$, the functions $f+g$, $f-g$, and $cf$ are uniformly continuous on $A$. \\item There exist a set $A \\subseteq \\mathbb{R}$ and uniformly continuous functions $f,g : A \\to \\mathbb{R}$ such that the product $fg$ is not...",
+      "proof_source": "proofs/notes/prf-algebra-of-uniform-continuity-general.tex"
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -5219,7 +5222,8 @@
       "signals": [
         "latex_list_with_multiple_items:2"
       ],
-      "excerpt": "Let $A \\subseteq \\mathbb{R}$ be bounded, and let $f,g:A \\to \\mathbb{R}$ be uniformly continuous on $A$. \\begin{enumerate}[label=(\\alph*)] \\item The product $x \\mapsto f(x)g(x)$ is uniformly continuous on $A$. \\item If there exists $k>0$ such that $|g(x)| \\ge k$ for all $x \\in A$, then the quotient $x \\mapsto f(x)/g(x)$ is uniformly continuous on $A$. \\end{enumerate}"
+      "excerpt": "Let $A \\subseteq \\mathbb{R}$ be bounded, and let $f,g:A \\to \\mathbb{R}$ be uniformly continuous on $A$. \\begin{enumerate}[label=(\\alph*)] \\item The product $x \\mapsto f(x)g(x)$ is uniformly continuous on $A$. \\item If there exists $k>0$ such that $|g(x)| \\ge k$ for all $x \\in A$, then the quotient $x \\mapsto f(x)/g(x)$ is uniformly continuous on $A$. \\end{enumerate}",
+      "proof_source": "proofs/notes/prf-algebra-of-uniform-continuity-bounded.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -5438,14 +5442,6 @@
       "type": "dangling_graph_edge_reference",
       "source_node_id": "cor:monotone-continuity-criterion",
       "missing_target_id": "thm:two-sided-limit-iff-matching-one-sided-limits",
-      "relationship_kind": "depends_on",
-      "source": "notes/monotone-functions/notes-monotone-functions.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "cor:monotone-continuity-criterion",
-      "missing_target_id": "thm:squeeze-function-limits",
       "relationship_kind": "depends_on",
       "source": "notes/monotone-functions/notes-monotone-functions.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
@@ -5837,7 +5833,8 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\forall x \\in I\\;\\operatorname{DifferentiableAt}(f,x) \\;\\Rightarrow\\; \\forall x \\in I\\;\\operatorname{DerivativeAt}(\\alpha f,\\,x,\\,\\alpha f'(x)). \\]"
+      "excerpt": "\\[ \\forall x \\in I\\;\\operatorname{DifferentiableAt}(f,x) \\;\\Rightarrow\\; \\forall x \\in I\\;\\operatorname{DerivativeAt}(\\alpha f,\\,x,\\,\\alpha f'(x)). \\]",
+      "proof_source": "proofs/notes/prf-constant-multiple-rule-interval.tex"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -5866,7 +5863,8 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\forall x \\in I\\;\\bigl(\\operatorname{DifferentiableAt}(f,x) \\land \\operatorname{DifferentiableAt}(g,x)\\bigr) \\;\\Rightarrow\\; \\forall x \\in I\\;\\operatorname{DerivativeAt}(f+g,\\,x,\\,f'(x)+g'(x)). \\]"
+      "excerpt": "\\[ \\forall x \\in I\\;\\bigl(\\operatorname{DifferentiableAt}(f,x) \\land \\operatorname{DifferentiableAt}(g,x)\\bigr) \\;\\Rightarrow\\; \\forall x \\in I\\;\\operatorname{DerivativeAt}(f+g,\\,x,\\,f'(x)+g'(x)). \\]",
+      "proof_source": "proofs/notes/prf-sum-rule-interval.tex"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -5895,7 +5893,8 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\forall x \\in I\\;\\bigl(\\operatorname{DifferentiableAt}(f,x)\\land\\operatorname{DifferentiableAt}(g,x)\\bigr) \\;\\Rightarrow\\; \\forall x \\in I\\;\\operatorname{DerivativeAt}(fg,\\,x,\\,f'(x)g(x)+f(x)g'(x)). \\]"
+      "excerpt": "\\[ \\forall x \\in I\\;\\bigl(\\operatorname{DifferentiableAt}(f,x)\\land\\operatorname{DifferentiableAt}(g,x)\\bigr) \\;\\Rightarrow\\; \\forall x \\in I\\;\\operatorname{DerivativeAt}(fg,\\,x,\\,f'(x)g(x)+f(x)g'(x)). \\]",
+      "proof_source": "proofs/notes/prf-product-rule-interval.tex"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -5924,7 +5923,8 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\forall x \\in I\\;\\bigl(\\operatorname{DifferentiableAt}(f,x)\\land\\operatorname{DifferentiableAt}(g,x)\\land g(x)\\neq 0\\bigr) \\;\\Rightarrow\\; \\forall x \\in I\\;\\operatorname{DerivativeAt}\\!\\left(\\tfrac{f}{g},\\,x,\\,\\tfrac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}\\right). \\]"
+      "excerpt": "\\[ \\forall x \\in I\\;\\bigl(\\operatorname{DifferentiableAt}(f,x)\\land\\operatorname{DifferentiableAt}(g,x)\\land g(x)\\neq 0\\bigr) \\;\\Rightarrow\\; \\forall x \\in I\\;\\operatorname{DerivativeAt}\\!\\left(\\tfrac{f}{g},\\,x,\\,\\tfrac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}\\right). \\]",
+      "proof_source": "proofs/notes/prf-quotient-rule-interval.tex"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -5953,7 +5953,8 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\forall i\\;\\forall x\\in I\\;\\operatorname{DifferentiableAt}(f_i,x) \\;\\Rightarrow\\; \\forall x\\in I\\;\\operatorname{DerivativeAt}\\!\\left(\\textstyle\\sum_i\\alpha_i f_i,\\,x,\\,\\textstyle\\sum_i\\alpha_i f_i'(x)\\right). \\]"
+      "excerpt": "\\[ \\forall i\\;\\forall x\\in I\\;\\operatorname{DifferentiableAt}(f_i,x) \\;\\Rightarrow\\; \\forall x\\in I\\;\\operatorname{DerivativeAt}\\!\\left(\\textstyle\\sum_i\\alpha_i f_i,\\,x,\\,\\textstyle\\sum_i\\alpha_i f_i'(x)\\right). \\]",
+      "proof_source": "proofs/notes/prf-finite-sum-rule-interval.tex"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -5982,7 +5983,8 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\forall i\\;\\forall x\\in I\\;\\operatorname{DifferentiableAt}(f_i,x) \\;\\Rightarrow\\; \\forall x\\in I\\;\\operatorname{DerivativeAt}\\!\\left(\\textstyle\\prod_i f_i,\\;x,\\;\\textstyle\\sum_k f_k'(x)\\prod_{i\\neq k} f_i(x)\\right). \\]"
+      "excerpt": "\\[ \\forall i\\;\\forall x\\in I\\;\\operatorname{DifferentiableAt}(f_i,x) \\;\\Rightarrow\\; \\forall x\\in I\\;\\operatorname{DerivativeAt}\\!\\left(\\textstyle\\prod_i f_i,\\;x,\\;\\textstyle\\sum_k f_k'(x)\\prod_{i\\neq k} f_i(x)\\right). \\]",
+      "proof_source": "proofs/notes/prf-extended-product-rule-interval.tex"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -6011,7 +6013,8 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\forall x\\in I\\;\\operatorname{DifferentiableAt}(f,x) \\;\\land\\; n\\in\\mathbb{N} \\;\\Rightarrow\\; \\forall x\\in I\\;\\operatorname{DerivativeAt}(f^n,\\,x,\\,n(f(x))^{n-1}f'(x)). \\]"
+      "excerpt": "\\[ \\forall x\\in I\\;\\operatorname{DifferentiableAt}(f,x) \\;\\land\\; n\\in\\mathbb{N} \\;\\Rightarrow\\; \\forall x\\in I\\;\\operatorname{DerivativeAt}(f^n,\\,x,\\,n(f(x))^{n-1}f'(x)). \\]",
+      "proof_source": "proofs/notes/prf-power-rule-special-case-interval.tex"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -6081,7 +6084,7 @@
         "latex_list_with_multiple_items:2"
       ],
       "excerpt": "Let $I \\subseteq \\mathbb{R}$ be an interval, let $f : I \\to \\mathbb{R}$, and let $c \\in I$. The following are equivalent: \\begin{enumerate}[label=(\\roman*)] \\item $f$ is differentiable at $c$. \\item There exists a function $\\phi : I \\to \\mathbb{R}$, continuous at $c$, such that \\[ f(x) = f(c) + (x-c)\\,\\phi(x) \\qquad \\text{for all } x \\in I. \\] \\end{enumerate} In this case, $\\phi(c) = f'(c)$.",
-      "proof_source": "proofs/notes/prf-caratheodory-theorem.tex"
+      "proof_source": "proofs/notes/prf-caratheodory-characterization-of-differentiability.tex"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -6111,7 +6114,7 @@
         }
       ],
       "excerpt": "\\begin{align*} \\operatorname{DifferentiableAt}(f,c) \\;&\\iff\\; \\exists\\phi:I\\to\\mathbb{R}\\; \\bigl(\\operatorname{ContinuousAt}(\\phi,c)\\\\ &\\quad\\land\\;\\forall x \\in I\\;[f(x)=f(c)+(x-c)\\phi(x)]\\bigr). \\end{align*} In this case $\\phi(c) = f'(c)$.",
-      "proof_source": "proofs/notes/prf-caratheodory-theorem.tex"
+      "proof_source": "proofs/notes/prf-caratheodory-characterization-of-differentiability.tex"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -7013,22 +7016,6 @@
       "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:caratheodory-characterization-of-differentiability",
       "missing_target_id": "def:continuous-at",
-      "relationship_kind": "depends_on",
-      "source": "notes/chain-rule/notes-caratheodory.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:caratheodory-characterization-of-differentiability",
-      "missing_target_id": "def:differentiability-at-point",
-      "relationship_kind": "depends_on",
-      "source": "notes/chain-rule/notes-caratheodory.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:caratheodory-characterization-of-differentiability",
-      "missing_target_id": "def:continuity-at-point",
       "relationship_kind": "depends_on",
       "source": "notes/chain-rule/notes-caratheodory.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T15:35:42.530076+00:00",
+  "generated_at": "2026-06-03T15:47:44.303319+00:00",
   "chapters": [
     "peano-systems",
     "natural-numbers",
@@ -9,7 +9,7 @@
     "continuity",
     "differentiation"
   ],
-  "error_count": 143,
+  "error_count": 140,
   "errors": [
     {
       "type": "dangling_graph_edge_reference",
@@ -693,14 +693,6 @@
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "cor:monotone-continuity-criterion",
-      "missing_target_id": "thm:squeeze-function-limits",
-      "relationship_kind": "depends_on",
-      "source": "notes/monotone-functions/notes-monotone-functions.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:monotone-discontinuities-countable",
       "missing_target_id": "thm:density-of-rationals",
       "relationship_kind": "depends_on",
@@ -967,22 +959,6 @@
       "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:caratheodory-characterization-of-differentiability",
       "missing_target_id": "def:continuous-at",
-      "relationship_kind": "depends_on",
-      "source": "notes/chain-rule/notes-caratheodory.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:caratheodory-characterization-of-differentiability",
-      "missing_target_id": "def:differentiability-at-point",
-      "relationship_kind": "depends_on",
-      "source": "notes/chain-rule/notes-caratheodory.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:caratheodory-characterization-of-differentiability",
-      "missing_target_id": "def:continuity-at-point",
       "relationship_kind": "depends_on",
       "source": "notes/chain-rule/notes-caratheodory.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
