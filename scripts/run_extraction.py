@@ -124,7 +124,7 @@ def merge_knowledge(chapter_roots: list[Path]) -> None:
             "node_count": len(all_nodes),
             "edge_count": len(deduped_edges),
             "error_count": len(all_errors) + len(all_edge_errors),
-            "schema_version": "0.3",
+            "schema_version": "0.4",
             "script": "run_extraction.py",
         },
         "nodes": all_nodes,

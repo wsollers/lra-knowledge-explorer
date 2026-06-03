@@ -131,6 +131,7 @@ const state={knowledge:{metadata:{},nodes:[]},edges:[],zoom:1,selectedId:null,no
 const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),treeMode:document.getElementById('treeMode'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn')};
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function decodeB64(s){if(!s)return'';try{return decodeURIComponent(escape(atob(s)));}catch(e){try{return atob(s);}catch(_){return'';}}}
 const KATEX_OPTS={throwOnError:false,strict:false,macros:{'\\colonequiv':'\\equiv','\\coloniff':'\\Longleftrightarrow','\\coloneqq':':='}};
 function renderLatex(src,display){const s=src.trim();if(!s)return'';try{return katex.renderToString(s,{...KATEX_OPTS,displayMode:!!display});}catch(e){return'<span style="color:#f87171">'+esc(s)+'</span>';}}
 function renderList(src){const t=src.trim();const m=t.match(/^\\begin\{(itemize|enumerate)\}([\s\S]*?)\\end\{\1\}$/);if(!m)return null;const tag=m[1]==='enumerate'?'ol':'ul';const items=m[2].split(/\\item(?:\[[^\]]*\])?\s*/).map(x=>x.trim()).filter(Boolean);if(!items.length)return null;return`<${tag} class="math-list">${items.map(i=>`<li>${renderMixedMath(i)}</li>`).join('')}</${tag}>`;}
@@ -304,6 +305,12 @@ function renderDetails(n){
   add('Failure modes',n.failure_modes,true);
   add('Failure mode decomposition',n.failure_mode_decomposition,true);
   add('Contrapositive',n.contrapositive,true);
+  if(Array.isArray(n.expositions)){
+    n.expositions.forEach((exp,i)=>{
+      const body=decodeB64(exp.body_latex_b64)||exp.body_preview||'';
+      if(body)blocks.push(`<div class="card"><div class="label">${esc(exp.heading||'Exposition')}</div><div class="value">${texToHtml(body)}</div><div class="tiny" style="margin-top:8px">${esc(exp.source_file||'')}${exp.source_line_start?`:${esc(exp.source_line_start)}`:''}</div></div>`);
+    });
+  }
   add('Proof type',n.proof_type);
   if(n.proof_vault_url){
     blocks.push(`<div class="card"><div class="label">Proof vault</div><div class="value"><a href="${esc(n.proof_vault_url)}" target="_blank" rel="noopener noreferrer">Handwritten proof record</a></div></div>`);

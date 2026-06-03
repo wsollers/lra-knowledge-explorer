@@ -7,8 +7,9 @@ What it does
 - Recurses through a chapter's notes/ and proofs/ trees.
 - Extracts theorem-like environments from note files, even when nested inside tcolorbox.
 - Captures immediate trailing remark* blocks attached to each theorem-like item.
-- Promotes definition-attached Examples and Non-Examples remark blocks into
-  metadata fields without creating graph nodes.
+- Promotes definition-attached Examples and Non-Examples remark blocks, and
+  item-attached Exposition remark blocks, into metadata fields without creating
+  graph nodes.
 - Maps proof files to theorem-like items via:
     * \\hyperref[prf:...] links inside note blocks
     * \\label{prf:...} inside proof files
@@ -106,6 +107,7 @@ class ExtractedItem:
     remark_blocks: list[dict[str, Any]]
     examples: list[dict[str, Any]] = field(default_factory=list)
     non_examples: list[dict[str, Any]] = field(default_factory=list)
+    expositions: list[dict[str, Any]] = field(default_factory=list)
     proof_source_path: str | None = None
     proof_labels: list[str] = field(default_factory=list)
     proof_return_targets: list[str] = field(default_factory=list)
@@ -293,6 +295,15 @@ def clean_preview(latex: str, limit: int = 220) -> str:
     return s[:limit]
 
 
+def line_number(text: str, pos: int) -> int:
+    return text.count("\n", 0, pos) + 1
+
+
+def slugify(value: str) -> str:
+    slug = re.sub(r"[^A-Za-z0-9]+", "-", value).strip("-").lower()
+    return slug or "item"
+
+
 def relative_posix(path: Path, root: Path) -> str:
     return path.relative_to(root).as_posix()
 
@@ -404,6 +415,10 @@ def collect_trailing_remarks(text: str, envs: list[EnvBlock], idx: int) -> list[
                 "title": title.strip(),
                 "env_name": nxt.name,
                 "raw_latex_b64": b64(raw),
+                "body_latex_b64": b64(nxt.content(text).strip()),
+                "body_preview": clean_preview(nxt.content(text)),
+                "source_line_start": line_number(text, nxt.begin_start),
+                "source_line_end": line_number(text, nxt.end_end),
             }
         )
         current_end = nxt.end_end
@@ -422,6 +437,36 @@ def definition_boundary_metadata(kind: str, remarks: list[dict[str, Any]]) -> tu
     examples = [r for r in remarks if r.get("title", "").strip() == "Examples"]
     non_examples = [r for r in remarks if r.get("title", "").strip() == "Non-Examples"]
     return examples, non_examples
+
+
+def exposition_metadata(
+    remarks: list[dict[str, Any]],
+    item_id: str,
+    kind: str,
+    label: str,
+    section_slug: str,
+    source_path: str,
+) -> list[dict[str, Any]]:
+    expositions: list[dict[str, Any]] = []
+    for index, remark in enumerate(remarks, start=1):
+        if remark.get("title", "").strip() != "Exposition":
+            continue
+        expositions.append(
+            {
+                "id": f"exposition:{slugify(item_id)}:{index:02d}",
+                "attached_to": item_id,
+                "attached_to_kind": kind,
+                "source_label": label,
+                "section": section_slug,
+                "heading": "Exposition",
+                "source_file": source_path,
+                "source_line_start": remark.get("source_line_start"),
+                "source_line_end": remark.get("source_line_end"),
+                "body_latex_b64": remark.get("body_latex_b64", ""),
+                "body_preview": remark.get("body_preview", ""),
+            }
+        )
+    return expositions
 
 
 def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
@@ -453,6 +498,9 @@ def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
             theorem_refs = sorted({h for h in HYPERREF_RE.findall(raw) if h.startswith(("def:", "thm:", "lem:", "prop:", "cor:", "ax:"))})
             remarks = collect_trailing_remarks(text, envs, idx)
             examples, non_examples = definition_boundary_metadata(kind, remarks)
+            source_path = relative_posix(path, chapter_root)
+            section_slug = find_section_slug(path, chapter_root)
+            expositions = exposition_metadata(remarks, item_id, kind, label, section_slug, source_path)
 
             item = ExtractedItem(
                 id=item_id,
@@ -460,9 +508,9 @@ def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
                 env_name=env.name,
                 title=cleaned_title,
                 label=label,
-                source_path=relative_posix(path, chapter_root),
+                source_path=source_path,
                 chapter=chapter_name,
-                section_slug=find_section_slug(path, chapter_root),
+                section_slug=section_slug,
                 note_dir=path.parent.name,
                 raw_latex_b64=b64(raw),
                 body_latex_b64=b64(body),
@@ -473,6 +521,7 @@ def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
                 remark_blocks=remarks,
                 examples=examples,
                 non_examples=non_examples,
+                expositions=expositions,
                 text_preview=clean_preview(raw),
             )
 
@@ -547,6 +596,7 @@ def item_to_json(item: ExtractedItem) -> dict[str, Any]:
         "remark_blocks": item.remark_blocks,
         "examples": item.examples,
         "non_examples": item.non_examples,
+        "expositions": item.expositions,
         "proof_file_blocks": item.proof_file_blocks,
         "text_preview": item.text_preview,
     }
