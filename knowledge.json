@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-06-03T20:20:02.059176+00:00",
+    "generated_at": "2026-06-03T20:58:44.200830+00:00",
     "chapters": [
       "peano-systems",
       "natural-numbers",
@@ -2518,7 +2518,7 @@
       "proof_type": "",
       "method": "",
       "uses_text": "",
-      "source_text": "The minimal iterator relation consists exactly of the stage-value pairs forced\nby the base pair and the successor closure rule. This is the $R^*$ construction\nused in the classical proof strategy\n\\citep{feferman1964numbersystems,hrbacek_jech1999,chi_recursion_wustl}.",
+      "source_text": "The minimal iterator relation consists exactly of the stage-value pairs forced\nby the base pair and the successor closure rule. This is the $R^*$ construction\nused in the classical proof strategy\n\\citep{FefermanNumberSystems1964,hrbacek_jech1999,chi_recursion_wustl}.",
       "section": "recursion-on-peano-systems",
       "has_proof_file": false,
       "ignored": false,
@@ -2577,8 +2577,8 @@
         {
           "title": "Interpretation",
           "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0ludGVycHJldGF0aW9uXQpUaGUgbWluaW1hbCBpdGVyYXRvciByZWxhdGlvbiBjb25zaXN0cyBleGFjdGx5IG9mIHRoZSBzdGFnZS12YWx1ZSBwYWlycyBmb3JjZWQKYnkgdGhlIGJhc2UgcGFpciBhbmQgdGhlIHN1Y2Nlc3NvciBjbG9zdXJlIHJ1bGUuIFRoaXMgaXMgdGhlICRSXiokIGNvbnN0cnVjdGlvbgp1c2VkIGluIHRoZSBjbGFzc2ljYWwgcHJvb2Ygc3RyYXRlZ3kKXGNpdGVwe2ZlZmVybWFuMTk2NG51bWJlcnN5c3RlbXMsaHJiYWNla19qZWNoMTk5OSxjaGlfcmVjdXJzaW9uX3d1c3RsfS4KXGVuZHtyZW1hcmsqfQ==",
-          "body_latex_b64": "VGhlIG1pbmltYWwgaXRlcmF0b3IgcmVsYXRpb24gY29uc2lzdHMgZXhhY3RseSBvZiB0aGUgc3RhZ2UtdmFsdWUgcGFpcnMgZm9yY2VkCmJ5IHRoZSBiYXNlIHBhaXIgYW5kIHRoZSBzdWNjZXNzb3IgY2xvc3VyZSBydWxlLiBUaGlzIGlzIHRoZSAkUl4qJCBjb25zdHJ1Y3Rpb24KdXNlZCBpbiB0aGUgY2xhc3NpY2FsIHByb29mIHN0cmF0ZWd5ClxjaXRlcHtmZWZlcm1hbjE5NjRudW1iZXJzeXN0ZW1zLGhyYmFjZWtfamVjaDE5OTksY2hpX3JlY3Vyc2lvbl93dXN0bH0u",
+          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0ludGVycHJldGF0aW9uXQpUaGUgbWluaW1hbCBpdGVyYXRvciByZWxhdGlvbiBjb25zaXN0cyBleGFjdGx5IG9mIHRoZSBzdGFnZS12YWx1ZSBwYWlycyBmb3JjZWQKYnkgdGhlIGJhc2UgcGFpciBhbmQgdGhlIHN1Y2Nlc3NvciBjbG9zdXJlIHJ1bGUuIFRoaXMgaXMgdGhlICRSXiokIGNvbnN0cnVjdGlvbgp1c2VkIGluIHRoZSBjbGFzc2ljYWwgcHJvb2Ygc3RyYXRlZ3kKXGNpdGVwe0ZlZmVybWFuTnVtYmVyU3lzdGVtczE5NjQsaHJiYWNla19qZWNoMTk5OSxjaGlfcmVjdXJzaW9uX3d1c3RsfS4KXGVuZHtyZW1hcmsqfQ==",
+          "body_latex_b64": "VGhlIG1pbmltYWwgaXRlcmF0b3IgcmVsYXRpb24gY29uc2lzdHMgZXhhY3RseSBvZiB0aGUgc3RhZ2UtdmFsdWUgcGFpcnMgZm9yY2VkCmJ5IHRoZSBiYXNlIHBhaXIgYW5kIHRoZSBzdWNjZXNzb3IgY2xvc3VyZSBydWxlLiBUaGlzIGlzIHRoZSAkUl4qJCBjb25zdHJ1Y3Rpb24KdXNlZCBpbiB0aGUgY2xhc3NpY2FsIHByb29mIHN0cmF0ZWd5ClxjaXRlcHtGZWZlcm1hbk51bWJlclN5c3RlbXMxOTY0LGhyYmFjZWtfamVjaDE5OTksY2hpX3JlY3Vyc2lvbl93dXN0bH0u",
           "body_preview": "The minimal iterator relation consists exactly of the stage-value pairs forced by the base pair and the successor closure rule. This is the $R^*$ construction used in the classical proof strategy .",
           "source_line_start": 374,
           "source_line_end": 379
@@ -3636,8 +3636,8 @@
         {
           "title": "Historical note",
           "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0hpc3RvcmljYWwgbm90ZV0KVGhpcyBpcyB0aGUgb25lLWJhc2VkIFBlYW5vLXN5c3RlbSB2ZXJzaW9uIG9mIHRoZSBpdGVyYXRvciB0aGVvcmVtIGluClxjaXRldHtmZWZlcm1hbjE5NjRudW1iZXJzeXN0ZW1zLG1lbmRlbHNvbjE5NzNudW1iZXJzeXN0ZW1zLHNpbXBzb24yMDExcGVhbm9zeXN0ZW1zfS4KSXQgaXMgYWxzbyB0aGUgc2V0LXRoZW9yZXRpYyBpbnN0YW5jZSBvZiB0aGUgbmF0dXJhbCBudW1iZXJzIG9iamVjdCB1bml2ZXJzYWwKcHJvcGVydHkgXGNpdGVwe2xhd3ZlcmUxOTY5YWRqb2ludG5lc3N9OyBEZWRla2luZCdzIHJlY3Vyc2lvbiB0aGVvcmVtIGlzIHRoZQpjbGFzc2ljYWwgYW5jZXN0b3IgXGNpdGVwe2RlZGVraW5kMTkwMWVzc2F5c30uClxlbmR7cmVtYXJrKn0=",
-          "body_latex_b64": "VGhpcyBpcyB0aGUgb25lLWJhc2VkIFBlYW5vLXN5c3RlbSB2ZXJzaW9uIG9mIHRoZSBpdGVyYXRvciB0aGVvcmVtIGluClxjaXRldHtmZWZlcm1hbjE5NjRudW1iZXJzeXN0ZW1zLG1lbmRlbHNvbjE5NzNudW1iZXJzeXN0ZW1zLHNpbXBzb24yMDExcGVhbm9zeXN0ZW1zfS4KSXQgaXMgYWxzbyB0aGUgc2V0LXRoZW9yZXRpYyBpbnN0YW5jZSBvZiB0aGUgbmF0dXJhbCBudW1iZXJzIG9iamVjdCB1bml2ZXJzYWwKcHJvcGVydHkgXGNpdGVwe2xhd3ZlcmUxOTY5YWRqb2ludG5lc3N9OyBEZWRla2luZCdzIHJlY3Vyc2lvbiB0aGVvcmVtIGlzIHRoZQpjbGFzc2ljYWwgYW5jZXN0b3IgXGNpdGVwe2RlZGVraW5kMTkwMWVzc2F5c30u",
+          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0hpc3RvcmljYWwgbm90ZV0KVGhpcyBpcyB0aGUgb25lLWJhc2VkIFBlYW5vLXN5c3RlbSB2ZXJzaW9uIG9mIHRoZSBpdGVyYXRvciB0aGVvcmVtIGluClxjaXRldHtGZWZlcm1hbk51bWJlclN5c3RlbXMxOTY0LE1lbmRlbHNvbk51bWJlclN5c3RlbXNGb3VuZGF0aW9uc0FuYWx5c2lzLHNpbXBzb24yMDExcGVhbm9zeXN0ZW1zfS4KSXQgaXMgYWxzbyB0aGUgc2V0LXRoZW9yZXRpYyBpbnN0YW5jZSBvZiB0aGUgbmF0dXJhbCBudW1iZXJzIG9iamVjdCB1bml2ZXJzYWwKcHJvcGVydHkgXGNpdGVwe2xhd3ZlcmUxOTY5YWRqb2ludG5lc3N9OyBEZWRla2luZCdzIHJlY3Vyc2lvbiB0aGVvcmVtIGlzIHRoZQpjbGFzc2ljYWwgYW5jZXN0b3IgXGNpdGVwe2RlZGVraW5kMTkwMWVzc2F5c30uClxlbmR7cmVtYXJrKn0=",
+          "body_latex_b64": "VGhpcyBpcyB0aGUgb25lLWJhc2VkIFBlYW5vLXN5c3RlbSB2ZXJzaW9uIG9mIHRoZSBpdGVyYXRvciB0aGVvcmVtIGluClxjaXRldHtGZWZlcm1hbk51bWJlclN5c3RlbXMxOTY0LE1lbmRlbHNvbk51bWJlclN5c3RlbXNGb3VuZGF0aW9uc0FuYWx5c2lzLHNpbXBzb24yMDExcGVhbm9zeXN0ZW1zfS4KSXQgaXMgYWxzbyB0aGUgc2V0LXRoZW9yZXRpYyBpbnN0YW5jZSBvZiB0aGUgbmF0dXJhbCBudW1iZXJzIG9iamVjdCB1bml2ZXJzYWwKcHJvcGVydHkgXGNpdGVwe2xhd3ZlcmUxOTY5YWRqb2ludG5lc3N9OyBEZWRla2luZCdzIHJlY3Vyc2lvbiB0aGVvcmVtIGlzIHRoZQpjbGFzc2ljYWwgYW5jZXN0b3IgXGNpdGVwe2RlZGVraW5kMTkwMWVzc2F5c30u",
           "body_preview": "This is the one-based Peano-system version of the iterator theorem in . It is also the set-theoretic instance of the natural numbers object universal property ; Dedekind's recursion theorem is the classical ancestor .",
           "source_line_start": 803,
           "source_line_end": 809
@@ -4995,8 +4995,8 @@
         {
           "title": "Historical note",
           "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0hpc3RvcmljYWwgbm90ZV0KVGhpcyBpcyB0aGUgc3RhZ2UtZGVwZW5kZW50IGZvcm0gY29ycmVzcG9uZGluZyB0byBGZWZlcm1hbidzIFRoZW9yZW0gMy40JwpcY2l0ZXB7ZmVmZXJtYW4xOTY0bnVtYmVyc3lzdGVtc30uIEl0IGlzIHRoZSBmb3JtIHVzZWQgbGF0ZXIgZm9yIGFyaXRobWV0aWMKZGVmaW5pdGlvbnM7IHRob3NlIGRlZmluaXRpb25zIGFyZSBkZWZlcnJlZCB0byB0aGVpciBvd24gc2VjdGlvbnMKXGNpdGVwe2ZlZmVybWFuMTk2NG51bWJlcnN5c3RlbXMsbWVuZGVsc29uMTk3M251bWJlcnN5c3RlbXN9LgpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "VGhpcyBpcyB0aGUgc3RhZ2UtZGVwZW5kZW50IGZvcm0gY29ycmVzcG9uZGluZyB0byBGZWZlcm1hbidzIFRoZW9yZW0gMy40JwpcY2l0ZXB7ZmVmZXJtYW4xOTY0bnVtYmVyc3lzdGVtc30uIEl0IGlzIHRoZSBmb3JtIHVzZWQgbGF0ZXIgZm9yIGFyaXRobWV0aWMKZGVmaW5pdGlvbnM7IHRob3NlIGRlZmluaXRpb25zIGFyZSBkZWZlcnJlZCB0byB0aGVpciBvd24gc2VjdGlvbnMKXGNpdGVwe2ZlZmVybWFuMTk2NG51bWJlcnN5c3RlbXMsbWVuZGVsc29uMTk3M251bWJlcnN5c3RlbXN9Lg==",
+          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0hpc3RvcmljYWwgbm90ZV0KVGhpcyBpcyB0aGUgc3RhZ2UtZGVwZW5kZW50IGZvcm0gY29ycmVzcG9uZGluZyB0byBGZWZlcm1hbidzIFRoZW9yZW0gMy40JwpcY2l0ZXB7RmVmZXJtYW5OdW1iZXJTeXN0ZW1zMTk2NH0uIEl0IGlzIHRoZSBmb3JtIHVzZWQgbGF0ZXIgZm9yIGFyaXRobWV0aWMKZGVmaW5pdGlvbnM7IHRob3NlIGRlZmluaXRpb25zIGFyZSBkZWZlcnJlZCB0byB0aGVpciBvd24gc2VjdGlvbnMKXGNpdGVwe0ZlZmVybWFuTnVtYmVyU3lzdGVtczE5NjQsTWVuZGVsc29uTnVtYmVyU3lzdGVtc0ZvdW5kYXRpb25zQW5hbHlzaXN9LgpcZW5ke3JlbWFyayp9",
+          "body_latex_b64": "VGhpcyBpcyB0aGUgc3RhZ2UtZGVwZW5kZW50IGZvcm0gY29ycmVzcG9uZGluZyB0byBGZWZlcm1hbidzIFRoZW9yZW0gMy40JwpcY2l0ZXB7RmVmZXJtYW5OdW1iZXJTeXN0ZW1zMTk2NH0uIEl0IGlzIHRoZSBmb3JtIHVzZWQgbGF0ZXIgZm9yIGFyaXRobWV0aWMKZGVmaW5pdGlvbnM7IHRob3NlIGRlZmluaXRpb25zIGFyZSBkZWZlcnJlZCB0byB0aGVpciBvd24gc2VjdGlvbnMKXGNpdGVwe0ZlZmVybWFuTnVtYmVyU3lzdGVtczE5NjQsTWVuZGVsc29uTnVtYmVyU3lzdGVtc0ZvdW5kYXRpb25zQW5hbHlzaXN9Lg==",
           "body_preview": "This is the stage-dependent form corresponding to Feferman's Theorem 3.4' . It is the form used later for arithmetic definitions; those definitions are deferred to their own sections .",
           "source_line_start": 1461,
           "source_line_end": 1466
@@ -5149,8 +5149,8 @@
         {
           "title": "Historical note",
           "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0hpc3RvcmljYWwgbm90ZV0KVGhpcyBpcyB0aGUgY2F0ZWdvcmljaXR5IHRoZW9yZW0gZm9yIFBlYW5vIHN5c3RlbXMsIGZvbGxvd2luZyBGZWZlcm1hbidzClRoZW9yZW0gMy41IGFuZCBTaW1wc29uJ3MgUGVhbm8tc3lzdGVtIHByZXNlbnRhdGlvbgpcY2l0ZXB7ZmVmZXJtYW4xOTY0bnVtYmVyc3lzdGVtcyxzaW1wc29uMjAxMXBlYW5vc3lzdGVtc30uClxlbmR7cmVtYXJrKn0=",
-          "body_latex_b64": "VGhpcyBpcyB0aGUgY2F0ZWdvcmljaXR5IHRoZW9yZW0gZm9yIFBlYW5vIHN5c3RlbXMsIGZvbGxvd2luZyBGZWZlcm1hbidzClRoZW9yZW0gMy41IGFuZCBTaW1wc29uJ3MgUGVhbm8tc3lzdGVtIHByZXNlbnRhdGlvbgpcY2l0ZXB7ZmVmZXJtYW4xOTY0bnVtYmVyc3lzdGVtcyxzaW1wc29uMjAxMXBlYW5vc3lzdGVtc30u",
+          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0hpc3RvcmljYWwgbm90ZV0KVGhpcyBpcyB0aGUgY2F0ZWdvcmljaXR5IHRoZW9yZW0gZm9yIFBlYW5vIHN5c3RlbXMsIGZvbGxvd2luZyBGZWZlcm1hbidzClRoZW9yZW0gMy41IGFuZCBTaW1wc29uJ3MgUGVhbm8tc3lzdGVtIHByZXNlbnRhdGlvbgpcY2l0ZXB7RmVmZXJtYW5OdW1iZXJTeXN0ZW1zMTk2NCxzaW1wc29uMjAxMXBlYW5vc3lzdGVtc30uClxlbmR7cmVtYXJrKn0=",
+          "body_latex_b64": "VGhpcyBpcyB0aGUgY2F0ZWdvcmljaXR5IHRoZW9yZW0gZm9yIFBlYW5vIHN5c3RlbXMsIGZvbGxvd2luZyBGZWZlcm1hbidzClRoZW9yZW0gMy41IGFuZCBTaW1wc29uJ3MgUGVhbm8tc3lzdGVtIHByZXNlbnRhdGlvbgpcY2l0ZXB7RmVmZXJtYW5OdW1iZXJTeXN0ZW1zMTk2NCxzaW1wc29uMjAxMXBlYW5vc3lzdGVtc30u",
           "body_preview": "This is the categoricity theorem for Peano systems, following Feferman's Theorem 3.5 and Simpson's Peano-system presentation .",
           "source_line_start": 1540,
           "source_line_end": 1544
