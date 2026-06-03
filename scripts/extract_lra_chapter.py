@@ -57,7 +57,7 @@ SECTIONING_ENVS = {
     "subparagraph",
 }
 
-BEGIN_END_RE = re.compile(r"\\(begin|end)\{([A-Za-z*]+)\}")
+BEGIN_END_RE = re.compile(r"\\(begin|end)\{([A-Za-z0-9*:-]+)\}")
 LABEL_RE = re.compile(r"\\label\{([^{}]+)\}")
 HYPERREF_RE = re.compile(r"\\hyperref\[([^\]]+)\]")
 PROOF_VAULT_URL_RE = re.compile(r"\\ProofVaultURL\s*\{([^{}]+)\}")
@@ -105,6 +105,9 @@ class ExtractedItem:
     proof_refs: list[str]
     theorem_refs: list[str]
     remark_blocks: list[dict[str, Any]]
+    dependency_blocks: list[dict[str, Any]]
+    dependency_refs: list[str]
+    no_local_dependencies: bool = False
     examples: list[dict[str, Any]] = field(default_factory=list)
     non_examples: list[dict[str, Any]] = field(default_factory=list)
     expositions: list[dict[str, Any]] = field(default_factory=list)
@@ -426,6 +429,70 @@ def collect_trailing_remarks(text: str, envs: list[EnvBlock], idx: int) -> list[
     return out
 
 
+def dependency_block_metadata(text: str, env: EnvBlock, hidden: bool) -> dict[str, Any]:
+    body = env.content(text).strip()
+    refs = sorted(
+        {
+            ref
+            for ref in HYPERREF_RE.findall(body)
+            if ref.startswith(("def:", "thm:", "lem:", "prop:", "cor:", "ax:"))
+        }
+    )
+    return {
+        "env_name": env.name,
+        "hidden": hidden,
+        "raw_latex_b64": b64(env.raw(text)),
+        "body_latex_b64": b64(body),
+        "body_preview": clean_preview(body),
+        "dependency_refs": refs,
+        "source_line_start": line_number(text, env.begin_start),
+        "source_line_end": line_number(text, env.end_end),
+    }
+
+
+def collect_trailing_dependencies(text: str, envs: list[EnvBlock], idx: int) -> tuple[list[dict[str, Any]], bool]:
+    current = envs[idx]
+    current_end = current.end_end
+    wrapper_end = enclosing_tcolorbox_end(envs, current)
+    blocks: list[dict[str, Any]] = []
+    no_local_dependencies = False
+    j = idx + 1
+    while j < len(envs):
+        nxt = envs[j]
+        if nxt.begin_start < current_end:
+            j += 1
+            continue
+        between_start = current_end
+        if wrapper_end is not None and between_start < wrapper_end <= nxt.begin_start:
+            between_start = wrapper_end
+        between = text[between_start : nxt.begin_start]
+        if "\\NoLocalDependencies" in between:
+            no_local_dependencies = True
+            current_end = nxt.begin_start
+        elif between.strip():
+            break
+
+        if nxt.name == "dependencies":
+            blocks.append(dependency_block_metadata(text, nxt, hidden=False))
+            current_end = nxt.end_end
+            j += 1
+            continue
+
+        if nxt.name == "lra-not-visible":
+            if "\\NoLocalDependencies" in nxt.content(text):
+                no_local_dependencies = True
+            for child_idx in nxt.children:
+                child = envs[child_idx]
+                if child.name == "dependencies":
+                    blocks.append(dependency_block_metadata(text, child, hidden=True))
+            current_end = nxt.end_end
+            j += 1
+            continue
+
+        break
+    return blocks, no_local_dependencies
+
+
 def make_fallback_id(kind: str, path: Path, ordinal: int) -> str:
     stem = re.sub(r"[^A-Za-z0-9]+", "-", path.stem).strip("-").lower()
     return f"{kind.lower()}:{stem}:{ordinal:03d}"
@@ -497,6 +564,8 @@ def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
             proof_refs = sorted({h for h in HYPERREF_RE.findall(raw) if h.startswith("prf:")})
             theorem_refs = sorted({h for h in HYPERREF_RE.findall(raw) if h.startswith(("def:", "thm:", "lem:", "prop:", "cor:", "ax:"))})
             remarks = collect_trailing_remarks(text, envs, idx)
+            dependency_blocks, no_local_dependencies = collect_trailing_dependencies(text, envs, idx)
+            dependency_refs = sorted({ref for block in dependency_blocks for ref in block.get("dependency_refs", [])})
             examples, non_examples = definition_boundary_metadata(kind, remarks)
             source_path = relative_posix(path, chapter_root)
             section_slug = find_section_slug(path, chapter_root)
@@ -519,6 +588,9 @@ def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
                 proof_refs=proof_refs,
                 theorem_refs=theorem_refs,
                 remark_blocks=remarks,
+                dependency_blocks=dependency_blocks,
+                dependency_refs=dependency_refs,
+                no_local_dependencies=no_local_dependencies,
                 examples=examples,
                 non_examples=non_examples,
                 expositions=expositions,
@@ -568,6 +640,11 @@ def build_edges(items: Iterable[ExtractedItem]) -> list[dict[str, str]]:
             if edge not in seen:
                 seen.add(edge)
                 edges.append({"from": edge[0], "to": edge[1], "kind": edge[2]})
+        for ref in item.dependency_refs:
+            edge = (ref, item.id, "depends_on")
+            if edge not in seen:
+                seen.add(edge)
+                edges.append({"from": edge[0], "to": edge[1], "kind": edge[2]})
     return edges
 
 
@@ -587,6 +664,10 @@ def item_to_json(item: ExtractedItem) -> dict[str, Any]:
         "proof_labels": item.proof_labels,
         "proof_refs": item.proof_refs,
         "theorem_refs": item.theorem_refs,
+        "dependency_refs": item.dependency_refs,
+        "depends_on_ids": item.dependency_refs,
+        "dependency_blocks": item.dependency_blocks,
+        "no_local_dependencies": item.no_local_dependencies,
         "proof_return_targets": item.proof_return_targets,
         "proof_vault_url": item.proof_vault_url,
         "raw_latex_b64": item.raw_latex_b64,

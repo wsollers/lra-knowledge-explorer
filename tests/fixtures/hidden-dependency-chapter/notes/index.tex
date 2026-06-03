@@ -1,0 +1,23 @@
+\section{Hidden Dependency Fixture}
+
+\begin{definition}[Hidden point]
+\label{def:hidden-point}
+A hidden point is a test point.
+\end{definition}
+
+\begin{lra-not-visible}
+\NoLocalDependencies
+\end{lra-not-visible}
+
+\begin{definition}[Hidden line]
+\label{def:hidden-line}
+A hidden line is a test line built from points.
+\end{definition}
+
+\begin{lra-not-visible}
+\begin{dependencies}
+\begin{itemize}
+  \item \hyperref[def:hidden-point]{Hidden point}
+\end{itemize}
+\end{dependencies}
+\end{lra-not-visible}
