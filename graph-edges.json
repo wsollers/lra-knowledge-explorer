@@ -946,7 +946,7 @@
   },
   {
     "from": "lem:first-grid-point-crossing",
-    "to": "thm:rational-square-bracketing",
+    "to": "thm:rational-square-bracketing-grid",
     "kind": "depends_on"
   },
   {
@@ -1291,11 +1291,6 @@
   },
   {
     "from": "thm:rational-square-approximation-from-above",
-    "to": "lem:first-grid-point-crossing",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:rational-square-approximation-from-above",
     "to": "lem:rational-square-bracketing",
     "kind": "depends_on"
   },
@@ -1305,22 +1300,32 @@
     "kind": "depends_on"
   },
   {
-    "from": "thm:rational-square-approximation-from-above",
-    "to": "thm:rational-square-bracketing",
+    "from": "thm:rational-square-approximation-from-above-grid",
+    "to": "lem:first-grid-point-crossing",
     "kind": "depends_on"
   },
   {
-    "from": "thm:rational-square-approximation-from-below",
-    "to": "thm:rational-square-approximation-from-above",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:rational-square-bracketing",
+    "from": "thm:rational-square-approximation-from-above-grid",
     "to": "thm:archimedean-q",
     "kind": "depends_on"
   },
   {
-    "from": "thm:rational-square-bracketing",
+    "from": "thm:rational-square-approximation-from-above-grid",
+    "to": "thm:rational-square-bracketing-grid",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rational-square-approximation-from-below",
+    "to": "thm:rational-square-approximation-from-above-grid",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rational-square-bracketing-grid",
+    "to": "thm:archimedean-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rational-square-bracketing-grid",
     "to": "thm:q-is-ordered-field",
     "kind": "depends_on"
   },

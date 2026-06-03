@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T15:49:52.660229+00:00",
+  "generated_at": "2026-06-03T15:35:42.524435+00:00",
   "chapters": [
     "peano-systems",
     "natural-numbers",
@@ -9,7 +9,7 @@
     "continuity",
     "differentiation"
   ],
-  "error_count": 552,
+  "error_count": 551,
   "errors": [
     {
       "type": "multiple_primary_statements_in_box",
@@ -742,7 +742,8 @@
       "signals": [
         "latex_list_with_multiple_items:6"
       ],
-      "excerpt": "Let $a, b, c \\in \\mathbb{N}$. \\begin{enumerate} \\item[(a)] \\textbf{Reflexive.} $a \\geq a$. \\item[(b)] \\textbf{Transitive.} If $a \\geq b$ and $b \\geq c$, then $a \\geq c$. \\item[(c)] \\textbf{Anti-symmetric.} If $a \\geq b$ and $b \\geq a$, then $a = b$. \\item[(d)] \\textbf{Addition preserves order.} $a \\geq b \\iff a + c \\geq b + c$. \\item[(e)] $a < b \\iff a\\pp \\leq b$. \\item[(f)] $a < b \\iff b = a + d$ for some positiv..."
+      "excerpt": "Let $a, b, c \\in \\mathbb{N}$. \\begin{enumerate} \\item[(a)] \\textbf{Reflexive.} $a \\geq a$. \\item[(b)] \\textbf{Transitive.} If $a \\geq b$ and $b \\geq c$, then $a \\geq c$. \\item[(c)] \\textbf{Anti-symmetric.} If $a \\geq b$ and $b \\geq a$, then $a = b$. \\item[(d)] \\textbf{Addition preserves order.} $a \\geq b \\iff a + c \\geq b + c$. \\item[(e)] $a < b \\iff a\\pp \\leq b$. \\item[(f)] $a < b \\iff b = a + d$ for some positiv...",
+      "proof_source": "proofs/notes/prf-order-basic.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -754,7 +755,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $a, b, c \\in \\mathbb{N}$. \\begin{enumerate} \\item[(a)] \\textbf{Reflexive.} $a \\geq a$. \\item[(b)] \\textbf{Transitive.} If $a \\geq b$ and $b \\geq c$, then $a \\geq c$. \\item[(c)] \\textbf{Anti-symmetric.} If $a \\geq b$ and $b \\geq a$, then $a = b$. \\item[(d)] \\textbf{Addition preserves order.} $a \\geq b \\iff a + c \\geq b + c$. \\item[(e)] $a < b \\iff a\\pp \\leq b$. \\item[(f)] $a < b \\iff b = a + d$ for some positiv..."
+      "excerpt": "Let $a, b, c \\in \\mathbb{N}$. \\begin{enumerate} \\item[(a)] \\textbf{Reflexive.} $a \\geq a$. \\item[(b)] \\textbf{Transitive.} If $a \\geq b$ and $b \\geq c$, then $a \\geq c$. \\item[(c)] \\textbf{Anti-symmetric.} If $a \\geq b$ and $b \\geq a$, then $a = b$. \\item[(d)] \\textbf{Addition preserves order.} $a \\geq b \\iff a + c \\geq b + c$. \\item[(e)] $a < b \\iff a\\pp \\leq b$. \\item[(f)] $a < b \\iff b = a + d$ for some positiv...",
+      "proof_source": "proofs/notes/prf-order-basic.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -766,7 +768,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $a, b \\in \\mathbb{N}$, exactly one of the following holds: \\[ a < b, \\qquad a = b, \\qquad a > b. \\]"
+      "excerpt": "For all $a, b \\in \\mathbb{N}$, exactly one of the following holds: \\[ a < b, \\qquad a = b, \\qquad a > b. \\]",
+      "proof_source": "proofs/notes/prf-trichotomy.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -778,7 +781,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $n \\in \\mathbb{N}$,\\quad $n + 0 = n$."
+      "excerpt": "For all $n \\in \\mathbb{N}$,\\quad $n + 0 = n$.",
+      "proof_source": "proofs/notes/prf-add-zero-right.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -790,7 +794,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $n, m \\in \\mathbb{N}$,\\quad $n + (m\\pp) = (n+m)\\pp$."
+      "excerpt": "For all $n, m \\in \\mathbb{N}$,\\quad $n + (m\\pp) = (n+m)\\pp$.",
+      "proof_source": "proofs/notes/prf-add-succ-right.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -802,7 +807,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $n \\in \\mathbb{N}$,\\quad $n\\pp = n + 1$."
+      "excerpt": "For all $n \\in \\mathbb{N}$,\\quad $n\\pp = n + 1$.",
+      "proof_source": "proofs/notes/prf-succ-is-add-one.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -814,7 +820,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $n, m \\in \\mathbb{N}$,\\quad $n + m = m + n$."
+      "excerpt": "For all $n, m \\in \\mathbb{N}$,\\quad $n + m = m + n$.",
+      "proof_source": "proofs/notes/prf-add-comm.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -826,7 +833,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $a, b, c \\in \\mathbb{N}$,\\quad $(a+b)+c = a+(b+c)$."
+      "excerpt": "For all $a, b, c \\in \\mathbb{N}$,\\quad $(a+b)+c = a+(b+c)$.",
+      "proof_source": "proofs/notes/prf-add-assoc.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -838,7 +846,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $a, b, c \\in \\mathbb{N}$ with $a + b = a + c$. Then $b = c$."
+      "excerpt": "Let $a, b, c \\in \\mathbb{N}$ with $a + b = a + c$. Then $b = c$.",
+      "proof_source": "proofs/notes/prf-add-cancel.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -862,7 +871,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "If $a$ is positive and $b \\in \\mathbb{N}$, then $a + b$ is positive (and hence $b + a$ is positive by commutativity)."
+      "excerpt": "If $a$ is positive and $b \\in \\mathbb{N}$, then $a + b$ is positive (and hence $b + a$ is positive by commutativity).",
+      "proof_source": "proofs/notes/prf-pos-add-pos.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -874,7 +884,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "If $a, b \\in \\mathbb{N}$ and $a + b = 0$, then $a = 0$ and $b = 0$."
+      "excerpt": "If $a, b \\in \\mathbb{N}$ and $a + b = 0$, then $a = 0$ and $b = 0$.",
+      "proof_source": "proofs/notes/prf-sum-zero.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -886,7 +897,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $a$ be a positive natural number. Then there exists exactly one $b \\in \\mathbb{N}$ such that $b\\pp = a$."
+      "excerpt": "Let $a$ be a positive natural number. Then there exists exactly one $b \\in \\mathbb{N}$ such that $b\\pp = a$.",
+      "proof_source": "proofs/notes/prf-predecessor.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -910,7 +922,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $n, m \\in \\mathbb{N}$,\\quad $n \\times m = m \\times n$."
+      "excerpt": "For all $n, m \\in \\mathbb{N}$,\\quad $n \\times m = m \\times n$.",
+      "proof_source": "proofs/notes/prf-mult-comm.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -922,7 +935,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $n, m \\in \\mathbb{N}$,\\quad $n \\times m = 0$ if and only if $n = 0$ or $m = 0$. In particular, if $n$ and $m$ are both positive, then $nm$ is positive."
+      "excerpt": "For all $n, m \\in \\mathbb{N}$,\\quad $n \\times m = 0$ if and only if $n = 0$ or $m = 0$. In particular, if $n$ and $m$ are both positive, then $nm$ is positive.",
+      "proof_source": "proofs/notes/prf-no-zero-div.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -934,7 +948,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $a, b, c \\in \\mathbb{N}$: \\[ a(b+c) = ab + ac \\qquad \\text{and} \\qquad (b+c)a = ba + ca. \\]"
+      "excerpt": "For all $a, b, c \\in \\mathbb{N}$: \\[ a(b+c) = ab + ac \\qquad \\text{and} \\qquad (b+c)a = ba + ca. \\]",
+      "proof_source": "proofs/notes/prf-distrib.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -946,7 +961,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $a, b, c \\in \\mathbb{N}$,\\quad $(a \\times b) \\times c = a \\times (b \\times c)$."
+      "excerpt": "For all $a, b, c \\in \\mathbb{N}$,\\quad $(a \\times b) \\times c = a \\times (b \\times c)$.",
+      "proof_source": "proofs/notes/prf-mult-assoc.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -958,7 +974,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "If $a < b$ and $c$ is positive, then $ac < bc$."
+      "excerpt": "If $a < b$ and $c$ is positive, then $ac < bc$.",
+      "proof_source": "proofs/notes/prf-mult-order.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -970,7 +987,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $a, b, c \\in \\mathbb{N}$ with $ac = bc$ and $c \\neq 0$. Then $a = b$."
+      "excerpt": "Let $a, b, c \\in \\mathbb{N}$ with $ac = bc$ and $c \\neq 0$. Then $a = b$.",
+      "proof_source": "proofs/notes/prf-mult-cancel.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -982,7 +1000,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $n \\in \\mathbb{N}$ and let $q$ be positive. Then there exist $m, r \\in \\mathbb{N}$ such that: \\[ 0 \\leq r < q \\qquad \\text{and} \\qquad n = mq + r. \\]"
+      "excerpt": "Let $n \\in \\mathbb{N}$ and let $q$ be positive. Then there exist $m, r \\in \\mathbb{N}$ such that: \\[ 0 \\leq r < q \\qquad \\text{and} \\qquad n = mq + r. \\]",
+      "proof_source": "proofs/notes/prf-euclid.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -1706,7 +1725,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ x+y=y+x. \\]"
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ x+y=y+x. \\]",
+      "proof_source": "proofs/notes/prf-rational-addition-commutative.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -1718,7 +1738,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ (x+y)+z=x+(y+z). \\]"
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ (x+y)+z=x+(y+z). \\]",
+      "proof_source": "proofs/notes/prf-rational-addition-associative.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -1730,7 +1751,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ x+0=x=0+x. \\]"
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ x+0=x=0+x. \\]",
+      "proof_source": "proofs/notes/prf-rational-additive-identity.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -1742,7 +1764,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ xy=yx. \\]"
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ xy=yx. \\]",
+      "proof_source": "proofs/notes/prf-rational-multiplication-commutative.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -1754,7 +1777,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ (xy)z=x(yz). \\]"
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ (xy)z=x(yz). \\]",
+      "proof_source": "proofs/notes/prf-rational-multiplication-associative.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -1766,7 +1790,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ x\\cdot 1=x=1\\cdot x. \\]"
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ x\\cdot 1=x=1\\cdot x. \\]",
+      "proof_source": "proofs/notes/prf-rational-multiplicative-identity.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -1778,7 +1803,8 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x(y+z)=xy+xz. \\]"
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x(y+z)=xy+xz. \\]",
+      "proof_source": "proofs/notes/prf-rational-distributivity.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -3250,7 +3276,7 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:rational-square-bracketing",
+      "node_id": "thm:rational-square-bracketing-grid",
       "title": "Rational Square Bracketing",
       "source": "notes/nonlinear-approximation-in-q/notes-square-bracketing-and-nonlinear-approximation.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
@@ -3258,13 +3284,7 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "For every $r\\in\\mathbb{Q}$ with $r>0$, there exist $a,b\\in\\mathbb{Q}$ with $a>0$ and $b>0$ such that \\[ a^2<r<b^2. \\]",
-      "proof_source": "proofs/notes/prf-rational-square-bracketing.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:rational-square-bracketing",
-      "proof_source": "proofs/notes/prf-rational-square-bracketing.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "proof_source": "proofs/notes/prf-rational-square-bracketing-grid.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -3282,7 +3302,7 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:rational-square-approximation-from-above",
+      "node_id": "thm:rational-square-approximation-from-above-grid",
       "title": "Rational Square Approximation from Above",
       "source": "notes/nonlinear-approximation-in-q/notes-square-bracketing-and-nonlinear-approximation.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
@@ -3290,7 +3310,7 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "Let $r\\in\\mathbb{Q}$ with $r>0$, and let $n\\in\\mathbb{N}$ with $n\\ge 1$. Then there exists $s\\in\\mathbb{Q}$ with $s>0$ such that \\[ r<s^2<r+\\frac1n. \\]",
-      "proof_source": "proofs/notes/prf-rational-square-approximation-from-above.tex"
+      "proof_source": "proofs/notes/prf-rational-square-approximation-from-above-grid.tex"
     },
     {
       "type": "missing_dependencies_block",
