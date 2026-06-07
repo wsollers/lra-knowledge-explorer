@@ -57,6 +57,23 @@ code{background:#111827;padding:1px 5px;border-radius:6px}
 .proof-panel{border-color:rgba(96,165,250,.28);background:rgba(96,165,250,.08)}
 .node-chip{display:inline-block;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:6px;padding:2px 8px;margin:2px 3px 2px 0;font-size:.78rem;color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s}
 .node-chip:hover{background:rgba(245,158,11,.18);border-color:rgba(245,158,11,.6);color:#fde68a}
+a{color:#93c5fd}
+.link-button{width:auto;display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border-radius:8px;border:1px solid rgba(147,197,253,.4);background:rgba(96,165,250,.1);color:#bfdbfe;font-weight:700}
+.link-button:hover{background:rgba(96,165,250,.18)}
+.proof-modal-backdrop{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(2,6,23,.72);z-index:100}
+.proof-modal{width:min(920px,calc(100vw - 34px));max-height:min(780px,calc(100vh - 34px));display:flex;flex-direction:column;background:#0b1220;border:1px solid #334155;border-radius:8px;box-shadow:0 24px 70px rgba(0,0,0,.55);overflow:hidden}
+.proof-modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:14px 16px;border-bottom:1px solid #243041;background:#111827}
+.proof-modal-title{font-weight:800;line-height:1.25}
+.proof-modal-close{width:34px;height:34px;flex:0 0 34px;padding:0;border-radius:8px;font-size:1.25rem;line-height:1}
+.proof-tabs{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid #243041;background:#0f172a}
+.proof-tab{width:auto;padding:8px 11px;border-radius:8px;font-size:.9rem;color:#cbd5e1}
+.proof-tab.active{background:rgba(245,158,11,.18);border-color:rgba(245,158,11,.65);color:#fde68a}
+.proof-body{padding:16px;overflow:auto;line-height:1.62}
+.proof-body .katex-display{max-width:100%;overflow-x:auto;overflow-y:visible;padding:.3rem 0;margin:.5rem 0}
+.proof-empty{color:var(--muted);font-style:italic}
+.proof-pre{white-space:pre-wrap;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:12px;overflow:auto}
+.proof-attempt{margin-bottom:16px}
+.proof-attempt h3{font-size:.95rem;margin:0 0 8px;color:#e2e8f0}
 </style>
 </head>
 <body>
@@ -122,13 +139,30 @@ code{background:#111827;padding:1px 5px;border-radius:6px}
     <div id="detailContent" style="display:none"></div>
   </div>
 </aside>
+<div class="proof-modal-backdrop" id="proofModal" role="dialog" aria-modal="true" aria-labelledby="proofModalTitle">
+  <div class="proof-modal">
+    <div class="proof-modal-head">
+      <div>
+        <div class="label">Proofs</div>
+        <div class="proof-modal-title" id="proofModalTitle">Proofs</div>
+      </div>
+      <button class="proof-modal-close" id="proofModalClose" aria-label="Close proofs">&times;</button>
+    </div>
+    <div class="proof-tabs">
+      <button class="proof-tab active" data-proof-tab="standard">Standard</button>
+      <button class="proof-tab" data-proof-tab="detailed">Detailed</button>
+      <button class="proof-tab" data-proof-tab="mine">Mine</button>
+    </div>
+    <div class="proof-body" id="proofModalBody"></div>
+  </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
 <script>
 const INITIAL_ZOOM      = 0.45;
 const INITIAL_ANCHOR_ID = 'def:supremum';
 
-const state={knowledge:{metadata:{},nodes:[]},edges:[],zoom:1,selectedId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showDepends:true,showImplies:true,chapter:'All',deck:'All',treeMode:'off'}};
-const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),treeMode:document.getElementById('treeMode'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn')};
+const state={knowledge:{metadata:{},nodes:[]},edges:[],proofVault:{records:{}},activeProofNode:null,activeProofTab:'standard',zoom:1,selectedId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showDepends:true,showImplies:true,chapter:'All',deck:'All',treeMode:'off'}};
+const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),treeMode:document.getElementById('treeMode'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose')};
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function decodeB64(s){if(!s)return'';try{return decodeURIComponent(escape(atob(s)));}catch(e){try{return atob(s);}catch(_){return'';}}}
@@ -150,6 +184,80 @@ function cleanProofText(s){
   t=t.replace(/\n{3,}/g,'\n\n');
   return t.trim();
 }
+function stripTexWrappers(s){
+  let t=String(s||'');
+  t=t.replace(/\\begin\{remark\*\}\[Return\][\s\S]*?\\end\{remark\*\}/g,'');
+  t=t.replace(/\\begin\{theorem\*\}(?:\[[^\]]*\])?[\s\S]*?\\end\{theorem\*\}/g,'');
+  t=t.replace(/\\begin\{dependencies\}[\s\S]*?\\end\{dependencies\}/g,'');
+  t=t.replace(/\\begin\{remark\*\}\[Proof structure\][\s\S]*?\\end\{remark\*\}/g,'');
+  t=t.replace(/%[^\n]*(?:\n|$)/g,'\n');
+  return t.trim();
+}
+function extractProofEnv(s){
+  const m=String(s||'').match(/\\begin\{proof\}(?:\[[^\]]*\])?([\s\S]*?)\\end\{proof\}/);
+  return m?m[1].trim():String(s||'').trim();
+}
+function proofSection(raw,kind){
+  if(!raw)return'';
+  const detailed=/\\textbf\s*\{Detailed Learning Proof\.\}\s*~?\\\\?/i;
+  const standard=/\\textbf\s*\{Professional Standard Proof\.\}\s*~?\\\\?/i;
+  const structure=/\\begin\{remark\*\}\[Proof structure\]/i;
+  const s=String(raw);
+  if(kind==='standard'){
+    const m=s.match(standard);if(!m)return'';
+    const start=m.index+m[0].length;
+    const dm=s.slice(start).search(detailed);
+    return cleanProofText(extractProofEnv(stripTexWrappers(s.slice(start,dm>=0?start+dm:undefined))));
+  }
+  if(kind==='detailed'){
+    const m=s.match(detailed);if(!m)return'';
+    const start=m.index+m[0].length;
+    const sm=s.slice(start).search(structure);
+    return cleanProofText(extractProofEnv(stripTexWrappers(s.slice(start,sm>=0?start+sm:undefined))));
+  }
+  return'';
+}
+function proofVaultRecords(n){
+  const records=state.proofVault?.records||{};
+  const ids=[n.id,n.label,...(n.labels||[])].filter(Boolean);
+  const seen=new Set(),out=[];
+  ids.forEach(id=>(records[id]||[]).forEach(r=>{const key=r.path||r.title||JSON.stringify(r);if(!seen.has(key)){seen.add(key);out.push(r);}}));
+  return out;
+}
+function proofBundle(n){
+  const raw=decodeB64(n.proof_raw_latex_b64);
+  const standard=proofSection(raw,'standard')||cleanProofText(n.proof_sketch||'');
+  const detailed=proofSection(raw,'detailed');
+  return{standard,detailed,mine:proofVaultRecords(n)};
+}
+function hasAnyProof(n){const b=proofBundle(n);return!!(b.standard||b.detailed||b.mine.length);}
+function renderMine(records){
+  if(!records.length)return'<div class="proof-empty">No proof-vault attempt is indexed for this theorem yet.</div>';
+  return records.map((r,i)=>{
+    const title=r.title||`Attempt ${i+1}`;
+    const status=r.review_status?`<div class="tiny">Status: ${esc(r.review_status)}</div>`:'';
+    const path=r.path?`<div class="tiny">Vault path: ${esc(r.path)}</div>`:'';
+    const images=(r.images||[]).map(img=>`<div><a href="${esc(img)}" target="_blank" rel="noopener noreferrer">${esc(img.split('/').pop())}</a></div>`).join('');
+    const body=r.body?`<pre class="proof-pre">${esc(r.body)}</pre>`:'<div class="proof-empty">This attempt has no transcription yet.</div>';
+    return`<div class="proof-attempt"><h3>${esc(title)}</h3>${status}${path}${images?`<div style="margin:8px 0">${images}</div>`:''}${body}</div>`;
+  }).join('');
+}
+function renderProofTab(){
+  const n=state.activeProofNode;if(!n)return;
+  const b=proofBundle(n);
+  els.proofModal.querySelectorAll('.proof-tab').forEach(btn=>btn.classList.toggle('active',btn.dataset.proofTab===state.activeProofTab));
+  if(state.activeProofTab==='mine'){els.proofModalBody.innerHTML=renderMine(b.mine);return;}
+  const text=state.activeProofTab==='detailed'?b.detailed:b.standard;
+  els.proofModalBody.innerHTML=text?texToHtml(text):`<div class="proof-empty">No ${state.activeProofTab} proof is available for this theorem yet.</div>`;
+}
+function openProofModal(id,tab='standard'){
+  const n=(state.knowledge.nodes||[]).find(x=>x.id===id);if(!n)return;
+  state.activeProofNode=n;state.activeProofTab=tab;
+  els.proofModalTitle.innerHTML=texToHtml(nodeTitle(n)||n.id);
+  renderProofTab();
+  els.proofModal.style.display='flex';
+}
+function closeProofModal(){els.proofModal.style.display='none';state.activeProofNode=null;}
 
 // nodeDeck: section-level label. Old yaml nodes: `deck`. New extractor nodes: humanized section from pass-2.
 function nodeDeck(n){return n.deck||'';}
@@ -312,8 +420,9 @@ function renderDetails(n){
     });
   }
   add('Proof type',n.proof_type);
-  if(n.proof_vault_url){
-    blocks.push(`<div class="card"><div class="label">Proof vault</div><div class="value"><a href="${esc(n.proof_vault_url)}" target="_blank" rel="noopener noreferrer">Handwritten proof record</a></div></div>`);
+  if(hasAnyProof(n)){
+    const mineCount=proofVaultRecords(n).length;
+    blocks.push(`<div class="card proof-panel"><div class="label">Proofs</div><div class="value"><button class="link-button" data-open-proofs="${esc(n.id)}">Open proofs</button>${mineCount?` <span class="tiny">${mineCount} vault attempt${mineCount===1?'':'s'}</span>`:''}</div></div>`);
   }
   addProof('Proof sketch',n.proof_sketch);
   addChips('Depends on',n.depends_on_ids||n.dependency_refs,'dep');
@@ -324,13 +433,21 @@ function renderDetails(n){
   els.detailContent.querySelectorAll('.node-chip').forEach(chip=>{
     chip.addEventListener('click',()=>navigateToNode(chip.dataset.nodeId,chip.dataset.tree||undefined));
   });
+  els.detailContent.querySelectorAll('[data-open-proofs]').forEach(btn=>{
+    btn.addEventListener('click',()=>openProofModal(btn.dataset.openProofs));
+  });
 }
 
 function render(){const g=visibleGraph();const dims=layout(g.nodes,g.edges);state.renderedGraph=g;els.graphInner.style.width=dims.width+'px';els.graphInner.style.height=dims.height+'px';els.graphInner.style.transform=`scale(${state.zoom})`;els.edgeLayer.setAttribute('width',dims.width);els.edgeLayer.setAttribute('height',dims.height);els.edgeLayer.setAttribute('viewBox',`0 0 ${dims.width} ${dims.height}`);els.edgeLayer.innerHTML=`<defs><marker id="arrowDep" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#94a3b8"/></marker><marker id="arrowUse" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#a78bfa"/></marker><marker id="arrowImp" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#f59e0b"/></marker><marker id="arrowEquiv" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#22c55e"/></marker></defs>`;els.nodeLayer.innerHTML='';state.nodeElements=new Map();for(const n of g.nodes){const d=document.createElement('div');d.className=`node ${kindClass(n.kind)}`+(state.selectedId===n.id?' selected':'');d.style.left=n.x+'px';d.style.top=n.y+'px';d.dataset.nodeId=n.id;d.innerHTML=`<div class="type">${esc(n.kind)}</div><div class="title">${texToHtml(nodeTitle(n))}</div><div class="meta"><span>${esc(nodeDeck(n)||nodeChapter(n))}</span><span>${esc(n.id)}</span></div>`;d.addEventListener('mouseenter',ev=>showTooltip(ev,n));d.addEventListener('mousemove',moveTooltip);d.addEventListener('mouseleave',hideTooltip);d.addEventListener('click',()=>{if(state.suppressNextClick){state.suppressNextClick=false;return;}state.selectedId=n.id;render();renderDetails(n);});attachDrag(d,n);els.nodeLayer.appendChild(d);state.nodeElements.set(n.id,d);}drawEdges(g);}
 
 async function tryAutoLoad(){
   try{
-    const[k,e]=await Promise.all([fetch('knowledge.json').then(r=>{if(!r.ok)throw new Error('knowledge.json not found');return r.json();}),fetch('graph-edges.json').then(r=>{if(!r.ok)throw new Error('graph-edges.json not found');return r.json();})]);
+    const[k,e,pv]=await Promise.all([
+      fetch('knowledge.json').then(r=>{if(!r.ok)throw new Error('knowledge.json not found');return r.json();}),
+      fetch('graph-edges.json').then(r=>{if(!r.ok)throw new Error('graph-edges.json not found');return r.json();}),
+      fetch('proof-vault-index.json').then(r=>r.ok?r.json():{records:{}}).catch(()=>({records:{}}))
+    ]);
+    state.proofVault=pv||{records:{}};
     state.knowledge=k;state.edges=normalizeEdges(state.knowledge,e);state.nodePositions={};
     els.status.textContent=`Loaded ${(k.nodes||[]).length} nodes, ${state.edges.length} edges.`;
     state.selectedId=null;render();applyInitialView();
@@ -364,6 +481,10 @@ els.deckFilter.onchange=e=>{state.filters.deck=e.target.value;render();};
 els.zoomInBtn.onclick=()=>{state.zoom=Math.min(2.4,+(state.zoom+0.1).toFixed(2));render();};
 els.zoomOutBtn.onclick=()=>{state.zoom=Math.max(0.45,+(state.zoom-0.1).toFixed(2));render();};
 els.resetBtn.onclick=()=>{state.nodePositions={};render();applyInitialView();};
+els.proofModalClose.onclick=closeProofModal;
+els.proofModal.addEventListener('click',e=>{if(e.target===els.proofModal)closeProofModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&els.proofModal.style.display==='flex')closeProofModal();});
+els.proofModal.querySelectorAll('.proof-tab').forEach(btn=>btn.addEventListener('click',()=>{state.activeProofTab=btn.dataset.proofTab;renderProofTab();}));
 tryAutoLoad();
 </script>
 </body>

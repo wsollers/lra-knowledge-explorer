@@ -1,0 +1,384 @@
+{
+  "schema": "lra.proof_vault_index",
+  "schema_version": 1,
+  "generated_at": "2026-06-07T07:21:26.247262+00:00",
+  "source": "lra-proof-vault",
+  "record_count": 31,
+  "records": {
+    "lem:iterator-relation-consistency": [
+      {
+        "title": "Consistency of the Minimal Iterator Relation",
+        "path": "volume-ii/peano-systems/lem-iterator-relation-consistency/proof-2026-05-31-001.md",
+        "vault_record": "volume-ii/peano-systems/lem-iterator-relation-consistency",
+        "review_status": "",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-ii/peano-systems/lem-iterator-relation-consistency/proof-2026-05-31-001.jpg"
+        ],
+        "body": "Let `(P,S,1)` be a Peano system, let `(W,c,g)` be iterator data for it, and\nlet `R^*` be the minimal iterator relation for `(W,c,g)`. Then `R^*` is an\niterator relation for `(W,c,g)`.\n\nDefine\n\n```text\nI = { R subset P x W : R is an iterator relation for (W,c,g) }.\n```\n\nDefine\n\n```text\nR^* = intersection over R in I of R.\n```\n\nSince every `R` in `I` is an iterator relation, each contains `(1,c)`, so\n`(1,c)` belongs to `R^*`.\n\nLet `(n,w)` be arbitrary in `R^*`. Since `(n,w)` belongs to every `R` in `I`,\nand every `R` in `I` is an iterator relation, `(S(n),g(w))` belongs to every\n`R` in `I`. Hence `(S(n),g(w))` belongs to `R^*`.\n\nTherefore the minimal iterator relation is an iterator relation for `(W,c,g)`."
+      }
+    ],
+    "thm:no-object-is-its-own-successor": [
+      {
+        "title": "No Object Is Its Own Successor",
+        "path": "volume-ii/peano-systems/thm-no-object-is-its-own-successor/proof-2026-05-31-001.md",
+        "vault_record": "volume-ii/peano-systems/thm-no-object-is-its-own-successor",
+        "review_status": "",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-ii/peano-systems/thm-no-object-is-its-own-successor/proof-2026-05-31-001.jpg"
+        ],
+        "body": "Let `(P,S,1)` be a Peano system. For every `n in P`, `S(n) != n`.\n\nDefine\n\n```text\nD = { x in P : S(x) != x }.\n```\n\nProceed by induction.\n\nBase case: `1 in D`, because `1 in P` and `S(1) != 1`; otherwise `1` would\nbe a successor, contrary to the Peano axiom that the distinguished element is\nnot a successor.\n\nInductive step: assume `S(n) != n`. By the contrapositive of successor\ninjectivity, equality `S(S(n)) = S(n)` would imply `S(n) = n`, so\n`S(S(n)) != S(n)`. Hence `S(n) in D`.\n\nTherefore `D` contains `1` and is closed under successor. By induction,\n`D = P`. Hence for every `n in P`, `S(n) != n`."
+      }
+    ],
+    "prop:bounds-sum-set": [
+      {
+        "title": "Bounds for Suprema and Infima Under Set Addition",
+        "path": "volume-iii/bounding/prop-bounds-sum-set/proof-2026-03-08-001.md",
+        "vault_record": "volume-iii/bounding/prop-bounds-sum-set",
+        "review_status": "reviewed-partial",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/prop-bounds-sum-set/proof-2026-03-08-001.jpg"
+        ],
+        "body": "Let\n\n```text\nA + B := {a + b : a in A, b in B}.\n```\n\nLet `u` be an upper bound of `A + B`. Let\n\n```text\ns_a = sup A\ns_b = sup B.\n```\n\nFor every `a in A` and `b in B`, `a <= s_a` and `b <= s_b`; therefore\n\n```text\na + b <= s_a + s_b.\n```\n\nHence `s_a + s_b` is an upper bound of `A + B`. Therefore\n\n```text\nsup(A + B) <= sup A + sup B.\n```"
+      }
+    ],
+    "prop:maximum-implies-supremum": [
+      {
+        "title": "Maximum Implies Supremum",
+        "path": "volume-iii/bounding/prop-maximum-implies-supremum/proof-2026-03-08-001.md",
+        "vault_record": "volume-iii/bounding/prop-maximum-implies-supremum",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/prop-maximum-implies-supremum/proof-2026-03-08-001.jpg"
+        ],
+        "body": "Assume `A` is nonempty and bounded above. Suppose\n\n```text\nb in A\n```\n\nand `b` is an upper bound of `A`.\n\nLet `B` be the set of upper bounds of `A`. For every `a in A`, `a <= b`.\n\nLet `b' in B` be arbitrary. Since `b'` is an upper bound of `A` and `b in A`,\nwe have\n\n```text\nb <= b'.\n```\n\nThus `b` is an upper bound of `A`, and `b` is less than or equal to every\nupper bound of `A`. Therefore `b` is the least upper bound of `A`, so `b` is\nthe supremum of `A`."
+      }
+    ],
+    "prop:uniqueness-of-the-supremum": [
+      {
+        "title": "Uniqueness of the Supremum",
+        "path": "volume-iii/bounding/prop-uniqueness-of-the-supremum/proof-2026-03-08-001.md",
+        "vault_record": "volume-iii/bounding/prop-uniqueness-of-the-supremum",
+        "review_status": "extracted",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/prop-uniqueness-of-the-supremum/proof-2026-03-08-001.jpg"
+        ],
+        "body": "Assume `s_0` is the supremum of `S`, and assume `s_1` is another supremum of\n`S`.\n\nThen `s_0` and `s_1` are both upper bounds of `S`.\n\nSince `s_0` is the least upper bound and `s_1` is an upper bound, `s_0 <= s_1`.\n\nSince `s_1` is the least upper bound and `s_0` is an upper bound, `s_1 <= s_0`.\n\nTherefore\n\n```text\ns_0 <= s_1 <= s_0.\n```\n\nHence `s_0 = s_1`."
+      }
+    ],
+    "thm:scalar-mult-positive": [
+      {
+        "title": "Scalar Multiplication by a Positive Scalar",
+        "path": "volume-iii/bounding/thm-scalar-mult-positive/proof-2026-03-11-001.md",
+        "vault_record": "volume-iii/bounding/thm-scalar-mult-positive",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/thm-scalar-mult-positive/proof-2026-03-11-001.jpg"
+        ],
+        "body": "Let `c > 0` be constant. Let\n\n```text\ncA = {ca : a in A}.\n```\n\nLet `s_a = sup A`. For every `a in A`,\n\n```text\na <= s_a.\n```\n\nMultiplying by `c > 0` gives\n\n```text\nca <= c s_a.\n```\n\nTherefore `c s_a` is an upper bound of `cA`.\n\nLet `epsilon > 0` be arbitrary. By the epsilon characterization of the\nsupremum, there exists `a in A` such that\n\n```text\ns_a - epsilon/c < a.\n```\n\nMultiplying by `c` gives\n\n```text\nc s_a - epsilon < ca.\n```\n\nSince `ca in cA`, every number below `c s_a` fails to be an upper bound of\n`cA`. Therefore `c s_a` is the least upper bound of `cA`.\n\nHence\n\n```text\nsup(cA) = c sup A.\n```"
+      }
+    ],
+    "thm:supremum-is-monotone-under-inclusion": [
+      {
+        "title": "Supremum Is Monotone Under Inclusion",
+        "path": "volume-iii/bounding/thm-supremum-is-monotone-under-inclusion/proof-2026-03-10-001.md",
+        "vault_record": "volume-iii/bounding/thm-supremum-is-monotone-under-inclusion",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/thm-supremum-is-monotone-under-inclusion/proof-2026-03-10-001.jpg"
+        ],
+        "body": "Assume `A subset B` and both sets are bounded.\n\nLet\n\n```text\ns_b = sup B.\n```\n\nSince `s_b` is an upper bound of `B`,\n\n```text\nb <= s_b    for every b in B.\n```\n\nBecause `A subset B`, every `a in A` is also in `B`. Hence\n\n```text\na <= s_b    for every a in A.\n```\n\nThus `s_b` is an upper bound of `A`. Since `s_a = sup A` is the least upper\nbound of `A`, we get\n\n```text\ns_a <= s_b.\n```\n\nTherefore `sup A <= sup B`."
+      }
+    ],
+    "thm:supremum-sum-set": [
+      {
+        "title": "Supremum of a Sum Set",
+        "path": "volume-iii/bounding/thm-supremum-sum-set/proof-2026-03-10-001.md",
+        "vault_record": "volume-iii/bounding/thm-supremum-sum-set",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/thm-supremum-sum-set/proof-2026-03-10-001.jpg"
+        ],
+        "body": "Let `A` and `B` be nonempty subsets of `R` that are bounded above. Define\n\n```text\nA + B = {a + b : a in A, b in B}.\n```\n\nLet\n\n```text\ns_a = sup A\ns_b = sup B\ns_ab = sup(A + B).\n```\n\nFor every `a in A` and `b in B`,\n\n```text\na <= s_a\nb <= s_b.\n```\n\nAdding gives\n\n```text\na + b <= s_a + s_b.\n```\n\nTherefore `s_a + s_b` is an upper bound of `A + B`, so\n\n```text\ns_ab <= s_a + s_b.\n```\n\nLet `epsilon > 0` be arbitrary. There exist `a in A` and `b in B` such that\n\n```text\ns_a - epsilon/2 < a\ns_b - epsilon/2 < b.\n```\n\nAdding gives\n\n```text\ns_a + s_b - epsilon < a + b <= s_ab.\n```\n\nHence `s_a + s_b <= s_ab`. Combining both inequalities,\n\n```text\ns_ab = s_a + s_b.\n```\n\nTherefore `sup(A+B)=sup A+sup B`."
+      }
+    ],
+    "thm:translation-invariance-supremum": [
+      {
+        "title": "Translation Invariance of the Supremum",
+        "path": "volume-iii/bounding/thm-translation-invariance-supremum/proof-2026-03-09-001.md",
+        "vault_record": "volume-iii/bounding/thm-translation-invariance-supremum",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/thm-translation-invariance-supremum/proof-2026-03-09-001.jpg"
+        ],
+        "body": "Let `c in R`. Prove that\n\n```text\nsup(A + c) = sup A + c.\n```\n\nLet `s_a = sup A`. Then for every `a in A`,\n\n```text\na <= s_a.\n```\n\nAdding `c` gives\n\n```text\na + c <= s_a + c.\n```\n\nThus `s_a + c` is an upper bound of `A + c`.\n\nLet `s_c = sup(A + c)`. Since `s_a + c` is an upper bound of `A + c`,\n\n```text\ns_c <= s_a + c.\n```\n\nConversely, for every `a in A`, `a + c <= s_c`. Subtracting `c` gives\n\n```text\na <= s_c - c.\n```\n\nThus `s_c - c` is an upper bound of `A`. Since `s_a = sup A`,\n\n```text\ns_a <= s_c - c.\n```\n\nTherefore\n\n```text\ns_a + c <= s_c.\n```\n\nCombining the two inequalities gives `s_c = s_a + c`, so\n`sup(A + c) = sup A + c`."
+      }
+    ],
+    "prop:convergent-bounded": [
+      {
+        "title": "Convergent Sequences Are Bounded",
+        "path": "volume-iii/real-analysis/prop-convergent-bounded/proof-2026-02-15-001.md",
+        "vault_record": "volume-iii/real-analysis/prop-convergent-bounded",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/real-analysis/prop-convergent-bounded/proof-2026-02-15-001.jpg",
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/real-analysis/prop-convergent-bounded/proof-2026-02-15-002.jpg"
+        ],
+        "body": "Let `(a_n)` be a sequence and suppose `a_n -> L`.\n\nBy convergence, for every `epsilon > 0` there exists `N in N` such that for\nall `n >= N`, `|a_n - L| < epsilon`.\n\nChoose `epsilon = 1`. Then there exists `N in N` such that for all `n >= N`,\n`|a_n - L| < 1`.\n\nFor `n >= N`,\n\n```text\n|a_n| = |(a_n - L) + L|\n      <= |a_n - L| + |L|\n      < 1 + |L|.\n```\n\nThus the tail is bounded by `1 + |L|`.\n\nFor the finitely many initial terms, define\n\n```text\nM_0 = max{|a_1|, |a_2|, ..., |a_{N-1}|}\n```\n\nif `N > 1`; if `N = 1`, take `M_0 = 0`.\n\nChoose\n\n```text\nM = max{M_0, 1 + |L|}.\n```\n\nThen `M > 0`, and for every `n in N`, `|a_n| <= M`. If `n < N`, this follows\nfrom the definition of `M_0`; if `n >= N`, this follows from the tail bound.\nTherefore `(a_n)` is bounded."
+      },
+      {
+        "title": "Convergent Sequences Are Bounded: Contrapositive Proof",
+        "path": "volume-iii/real-analysis/prop-convergent-bounded/proof-2026-02-15-002.md",
+        "vault_record": "volume-iii/real-analysis/prop-convergent-bounded",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/real-analysis/prop-convergent-bounded/proof-2026-02-15-001.jpg",
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/real-analysis/prop-convergent-bounded/proof-2026-02-15-002.jpg"
+        ],
+        "body": "Assume `(a_n)` is unbounded. By unboundedness,\n\n```text\nfor every M > 0, there exists n such that |a_n| > M.\n```\n\nLet `L in R` be arbitrary. Choose `M = |L| + 1`. Then there exists `n` such\nthat\n\n```text\n|a_n| > |L| + 1.\n```\n\nBy the reverse triangle inequality,\n\n```text\n|a_n - L| >= ||a_n| - |L||.\n```\n\nThe chosen `n` gives `|a_n| - |L| > 1`, so `|a_n - L| > 1`.\n\nNow let `epsilon_0 = 1`. For every threshold `N`, unboundedness gives some\n`n >= N` with `|a_n| > |L| + 1`, hence `|a_n - L| > epsilon_0`.\n\nThus for every `L in R`, convergence to `L` fails. Since `L` was arbitrary,\nthe sequence does not converge."
+      }
+    ],
+    "prop:eps-char-sup": [
+      {
+        "title": "Epsilon Characterisation of Supremum",
+        "path": "volume-iii/real-analysis/prop-eps-char-sup/proof-2026-03-08-001.md",
+        "vault_record": "volume-iii/real-analysis/prop-eps-char-sup",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/real-analysis/prop-eps-char-sup/proof-2026-03-08-001.jpg"
+        ],
+        "body": "Show that if `s = sup A`, then for every `epsilon > 0` there exists `a in A`\nwith\n\n```text\ns - epsilon < a <= s.\n```\n\nAssume `s = sup A`.\n\nBy the definition of supremum, `s` is an upper bound for `A`.\n\nHence\n\n```text\na <= s    for all a in A.\n```\n\nLet `epsilon > 0` be arbitrary. Since `s` is the least upper bound of `A`,\n`s - epsilon` is not an upper bound of `A`.\n\nTherefore there exists `a in A` such that\n\n```text\ns - epsilon < a.\n```\n\nSince `s` is an upper bound, `a <= s`. Hence\n\n```text\ns - epsilon < a <= s.\n```\n\nThus the claim holds."
+      }
+    ],
+    "thm:bolzano-weierstrass-sequences": [
+      {
+        "title": "Bolzano-Weierstrass Theorem for Sequences",
+        "path": "volume-iii/sequences/thm-bolzano-weierstrass-sequences/proof-2026-03-15-001.md",
+        "vault_record": "volume-iii/sequences/thm-bolzano-weierstrass-sequences",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-bolzano-weierstrass-sequences/proof-2026-03-15-001.jpg"
+        ],
+        "body": "# Bolzano-Weierstrass Theorem for Sequences\n\nSource: one handwritten proof photo preserved as a sanitized image.\n\nCanonical theorem label: `thm:bolzano-weierstrass-sequences`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/subsequences/notes-subsequences.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof combines the monotone subsequence theorem with boundedness. A\nbounded real sequence has a monotone subsequence, and that subsequence remains\nbounded. The monotone convergence theorem then gives convergence of the\nselected subsequence.\n\n## Attachment Note\n\nThe canonical theorem has a statement label, but no matching canonical proof\nfile exists yet, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:boundedness-passes-to-subsequences": [
+      {
+        "title": "Boundedness Passes to Subsequences",
+        "path": "volume-iii/sequences/thm-boundedness-passes-to-subsequences/proof-2026-03-15-001.md",
+        "vault_record": "volume-iii/sequences/thm-boundedness-passes-to-subsequences",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-boundedness-passes-to-subsequences/proof-2026-03-15-001.jpg"
+        ],
+        "body": "# Boundedness Passes to Subsequences\n\nSource: one handwritten proof photo preserved as a sanitized image.\n\nCanonical theorem label: `thm:boundedness-passes-to-subsequences`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/subsequences/notes-subsequences.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof uses the same uniform bound for the original sequence and its\nsubsequence. If `|x_n| <= M` for all `n`, then every subsequence term\n`x_{n_k}` is one of the original sequence terms, so `|x_{n_k}| <= M` for all\n`k`. Hence the subsequence is bounded.\n\n## Attachment Note\n\nThe canonical theorem has a statement label, but no matching canonical proof\nfile exists yet, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:cauchy-criterion-real-sequences": [
+      {
+        "title": "Cauchy Criterion for Real Sequences",
+        "path": "volume-iii/sequences/thm-cauchy-criterion-real-sequences/proof-2026-03-16-001.md",
+        "vault_record": "volume-iii/sequences/thm-cauchy-criterion-real-sequences",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-cauchy-criterion-real-sequences/proof-2026-03-16-001.jpg"
+        ],
+        "body": "# Cauchy Criterion for Real Sequences\n\nSource: one handwritten proof photo preserved as a sanitized image.\n\nCanonical theorem label: `thm:cauchy-criterion-real-sequences`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/cauchy/notes-cauchy.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof uses completeness through Bolzano-Weierstrass. A Cauchy sequence is\nbounded, so it has a convergent subsequence. The Cauchy condition then keeps\nthe full tail close to that convergent subsequence, which forces the whole\nsequence to converge to the same limit.\n\n## Attachment Note\n\nThe canonical theorem has a statement label, but no matching canonical proof\nfile exists yet, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:cauchy-sequences-are-bounded": [
+      {
+        "title": "Cauchy Sequences Are Bounded",
+        "path": "volume-iii/sequences/thm-cauchy-sequences-are-bounded/proof-2026-03-16-001.md",
+        "vault_record": "volume-iii/sequences/thm-cauchy-sequences-are-bounded",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-cauchy-sequences-are-bounded/proof-2026-03-16-001.jpg"
+        ],
+        "body": "# Cauchy Sequences Are Bounded\n\nSource: one handwritten proof photo preserved as a sanitized image.\n\nCanonical theorem label: `thm:cauchy-sequences-are-bounded`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/cauchy/notes-cauchy.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof fixes the Cauchy tolerance `1`, so all sufficiently late terms are\nwithin `1` of a chosen tail term. Taking the maximum of the finitely many\ninitial absolute values together with the resulting tail bound gives a single\nfinite bound for the entire sequence.\n\n## Attachment Note\n\nThe canonical theorem has a statement label, but no matching canonical proof\nfile exists yet, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:constant-comparison-for-sequence-limits": [
+      {
+        "title": "Constant Comparison for Sequence Limits",
+        "path": "volume-iii/sequences/thm-constant-comparison-for-sequence-limits/proof-2026-03-14-001.md",
+        "vault_record": "volume-iii/sequences/thm-constant-comparison-for-sequence-limits",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-constant-comparison-for-sequence-limits/proof-2026-03-14-001.jpg"
+        ],
+        "body": "# Constant Comparison for Sequence Limits\n\nSource: one handwritten proof photo.\n\nCanonical theorem label: `thm:constant-comparison-for-sequence-limits`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/convergence/notes-limits.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof specializes eventual order preservation to a constant comparison: if\n`x_n <= b` for all sufficiently large `n` and `x_n -> x`, then the constant\nsequence `b_n=b` converges to `b`, so the order-limit theorem gives `x <= b`.\n\n## Attachment Note\n\nThe canonical theorem has a proof hyperlink target, but the corresponding\nproof file is currently missing, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:convergence-of-tail": [
+      {
+        "title": "Convergence of a Tail",
+        "path": "volume-iii/sequences/thm-convergence-of-tail/proof-2026-03-13-001.md",
+        "vault_record": "volume-iii/sequences/thm-convergence-of-tail",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-convergence-of-tail/proof-2026-03-13-001.jpg",
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-convergence-of-tail/proof-2026-03-13-002.jpg"
+        ],
+        "body": "# Convergence of a Tail\n\nSource: two handwritten proof photos preserved as separate sanitized images.\n\nCanonical theorem label: `thm:convergence-of-tail`\n\nCanonical proof file:\n`volume-iii/analysis/sequences/proofs/notes/prf-convergence-of-tail.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof covers both directions. First, if `x_n -> L`, then for any fixed\ntail offset `k`, the tail sequence `y_n = x_{n+k}` also satisfies the same\nepsilon threshold after shifting indices. Conversely, if a tail sequence\nconverges to `L`, then choosing `n` beyond the fixed tail offset and the tail's\nepsilon threshold gives `|x_n-L| < epsilon` for all sufficiently large `n`, so\nthe full sequence converges to the same limit.\n\n## Attachment Note\n\nThe canonical proof file exists and currently contains a TODO proof body, so\nthe proof-vault backlink was attached directly after the Return remark."
+      }
+    ],
+    "thm:convergent-sequences-are-cauchy": [
+      {
+        "title": "Convergent Sequences Are Cauchy",
+        "path": "volume-iii/sequences/thm-convergent-sequences-are-cauchy/proof-2026-02-22-001.md",
+        "vault_record": "volume-iii/sequences/thm-convergent-sequences-are-cauchy",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-convergent-sequences-are-cauchy/proof-2026-02-22-001.jpg"
+        ],
+        "body": "Let `(x_n)` be a convergent sequence, and suppose `x_n -> L`.\n\nLet `epsilon > 0`. By convergence, there exists `N in N` such that for all\n`n >= N`,\n\n```text\n|x_n - L| < epsilon / 2.\n```\n\nIf `m, n >= N`, then\n\n```text\n|x_m - L| < epsilon / 2\n|x_n - L| < epsilon / 2.\n```\n\nBy the triangle inequality,\n\n```text\n|x_m - x_n|\n  <= |x_m - L| + |x_n - L|\n  < epsilon / 2 + epsilon / 2\n  = epsilon.\n```\n\nTherefore `(x_n)` is Cauchy."
+      }
+    ],
+    "thm:limit-of-a-product": [
+      {
+        "title": "Limit of a Product",
+        "path": "volume-iii/sequences/thm-limit-of-a-product/proof-2026-03-12-001.md",
+        "vault_record": "volume-iii/sequences/thm-limit-of-a-product",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-limit-of-a-product/proof-2026-03-12-001.jpg"
+        ],
+        "body": "# Limit of a Product\n\nSource: one handwritten proof photo, with nearby duplicate/supporting photos\nnoted in metadata.\n\nCanonical theorem label: `thm:limit-of-a-product`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/convergence/notes-algebra.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof uses the standard decomposition\n`a_n b_n - ab = a_n(b_n-b) + b(a_n-a)`, together with eventual boundedness of\none convergent factor, to make both terms small.\n\n## Attachment Note\n\nThe canonical theorem has a proof hyperlink target, but the corresponding\nproof file is currently missing, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:limit-of-a-quotient": [
+      {
+        "title": "Limit of a Quotient",
+        "path": "volume-iii/sequences/thm-limit-of-a-quotient/proof-2026-03-12-001.md",
+        "vault_record": "volume-iii/sequences/thm-limit-of-a-quotient",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-limit-of-a-quotient/proof-2026-03-12-001.jpg"
+        ],
+        "body": "# Limit of a Quotient\n\nSource: one handwritten proof photo.\n\nCanonical theorem label: `thm:limit-of-a-quotient`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/convergence/notes-algebra.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof reduces the quotient law to the product law and reciprocal law: if\n`a_n -> a` and `b_n -> b != 0`, then `1/b_n -> 1/b`, so\n`a_n(1/b_n) -> a(1/b)`.\n\n## Attachment Note\n\nThe canonical theorem has a proof hyperlink target, but the corresponding\nproof file is currently missing, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:limit-of-a-reciprocal": [
+      {
+        "title": "Limit of a Reciprocal",
+        "path": "volume-iii/sequences/thm-limit-of-a-reciprocal/proof-2026-03-12-001.md",
+        "vault_record": "volume-iii/sequences/thm-limit-of-a-reciprocal",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-limit-of-a-reciprocal/proof-2026-03-12-001.jpg"
+        ],
+        "body": "# Limit of a Reciprocal\n\nSource: one handwritten proof photo, with an earlier supporting view noted in\nmetadata.\n\nCanonical theorem label: `thm:limit-of-a-reciprocal`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/convergence/notes-algebra.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof fixes a positive lower bound for `|b_n|` from `b_n -> b != 0`, then\nestimates\n`|1/b_n - 1/b| = |b-b_n|/(|b_n||b|)` and chooses the convergence threshold for\n`b_n -> b` small enough to force the quotient below `epsilon`.\n\n## Attachment Note\n\nThe canonical theorem has a proof hyperlink target, but the corresponding\nproof file is currently missing, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:limit-of-a-sum": [
+      {
+        "title": "Limit of a Sum",
+        "path": "volume-iii/sequences/thm-limit-of-a-sum/proof-2026-03-11-001.md",
+        "vault_record": "volume-iii/sequences/thm-limit-of-a-sum",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-limit-of-a-sum/proof-2026-03-11-001.jpg",
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-limit-of-a-sum/proof-2026-03-12-001.jpg"
+        ],
+        "body": "# Limit of a Sum\n\nSource: two handwritten proof photos preserved as separate sanitized images.\n\nCanonical theorem label: `thm:limit-of-a-sum`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/convergence/notes-algebra.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof uses the standard `epsilon/2` split. If `a_n -> a` and `b_n -> b`,\nthen for sufficiently large `n`, both `|a_n-a|` and `|b_n-b|` are less than\n`epsilon/2`; the triangle inequality then gives convergence of `a_n+b_n` to\n`a+b`.\n\n## Attachment Note\n\nThe canonical theorem has a proof hyperlink target, but the corresponding\nproof file is currently missing, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:limit-of-an-absolute-value": [
+      {
+        "title": "Limit of an Absolute Value",
+        "path": "volume-iii/sequences/thm-limit-of-an-absolute-value/proof-2026-03-15-001.md",
+        "vault_record": "volume-iii/sequences/thm-limit-of-an-absolute-value",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-limit-of-an-absolute-value/proof-2026-03-15-001.jpg"
+        ],
+        "body": "# Limit of an Absolute Value\n\nSource: one handwritten proof photo preserved as a sanitized image.\n\nCanonical theorem label: `thm:limit-of-an-absolute-value`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/convergence/notes-algebra.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof uses the reverse triangle inequality. If `x_n -> x`, then\n`||x_n|-|x|| <= |x_n-x|`, so the same eventual epsilon bound proving\nconvergence of `x_n` to `x` proves convergence of `|x_n|` to `|x|`.\n\n## Attachment Note\n\nThe canonical theorem has a statement label, but no matching canonical proof\nfile exists yet, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:limit-preserves-eventual-order": [
+      {
+        "title": "Limit Preserves Eventual Order",
+        "path": "volume-iii/sequences/thm-limit-preserves-eventual-order/proof-2026-03-14-001.md",
+        "vault_record": "volume-iii/sequences/thm-limit-preserves-eventual-order",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-limit-preserves-eventual-order/proof-2026-03-14-001.jpg"
+        ],
+        "body": "# Limit Preserves Eventual Order\n\nSource: one handwritten proof photo, with earlier duplicate/supporting views\nnoted in metadata.\n\nCanonical theorem label: `thm:limit-preserves-eventual-order`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/convergence/notes-limits.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof argues by contradiction. If `x_n <= y_n`, `x_n -> x`, and\n`y_n -> y`, but `y < x`, choose `epsilon = (x-y)/2`. For sufficiently large\n`n`, `x_n` is within `epsilon` of `x` and `y_n` is within `epsilon` of `y`,\nforcing `y_n < x_n`, contradicting the eventual order.\n\n## Attachment Note\n\nThe canonical theorem has a proof hyperlink target, but the corresponding\nproof file is currently missing, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:monotone-convergence-theorem": [
+      {
+        "title": "Monotone Convergence Theorem",
+        "path": "volume-iii/sequences/thm-monotone-convergence-theorem/proof-2026-02-15-001.md",
+        "vault_record": "volume-iii/sequences/thm-monotone-convergence-theorem",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-monotone-convergence-theorem/proof-2026-02-15-001.jpg"
+        ],
+        "body": "Let `(a_n)` be an increasing real sequence bounded above.\n\nDefine\n\n```text\nA = { a_n : n in N }.\n```\n\nSince `(a_n)` is bounded above, `A` is bounded above. By completeness, let\n\n```text\nL = sup A.\n```\n\nFor every `n`, `a_n <= L`.\n\nLet `epsilon > 0`. By the supremum approximation property, there exists\n`N in N` such that\n\n```text\na_N > L - epsilon.\n```\n\nIf `n >= N`, then monotonicity gives\n\n```text\na_N <= a_n <= L.\n```\n\nCombining the inequalities,\n\n```text\nL - epsilon < a_n <= L.\n```\n\nTherefore\n\n```text\n|a_n - L| < epsilon\n```\n\nfor all `n >= N`. Hence `a_n -> L`, and `L = sup {a_n : n in N}`."
+      }
+    ],
+    "thm:monotone-subsequence-theorem": [
+      {
+        "title": "Monotone Subsequence Theorem",
+        "path": "volume-iii/sequences/thm-monotone-subsequence-theorem/proof-2026-03-15-001.md",
+        "vault_record": "volume-iii/sequences/thm-monotone-subsequence-theorem",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-monotone-subsequence-theorem/proof-2026-03-15-001.jpg"
+        ],
+        "body": "# Monotone Subsequence Theorem\n\nSource: one handwritten proof photo preserved as a sanitized image.\n\nCanonical theorem label: `thm:monotone-subsequence-theorem`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/subsequences/notes-subsequences.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof uses the standard peak dichotomy. If the sequence has infinitely\nmany peaks, selecting peak indices in increasing order gives a decreasing\nsubsequence. If there are only finitely many peaks, then after the last peak\none can recursively choose later indices with nondecreasing values, producing\nan increasing subsequence. Hence every real sequence has a monotone\nsubsequence.\n\n## Attachment Note\n\nThe canonical theorem has a statement label, but no matching canonical proof\nfile exists yet, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:polynomial-sequence-limit": [
+      {
+        "title": "Polynomial Sequence Limit",
+        "path": "volume-iii/sequences/thm-polynomial-sequence-limit/proof-2026-03-16-001.md",
+        "vault_record": "volume-iii/sequences/thm-polynomial-sequence-limit",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-polynomial-sequence-limit/proof-2026-03-16-001.jpg"
+        ],
+        "body": "# Polynomial Sequence Limit\n\nSource: one handwritten proof photo preserved as a sanitized image.\n\nCanonical theorem label: `thm:polynomial-sequence-limit`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/convergence/notes-algebra.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof reduces a polynomial expression to the algebra of limits. Constants\nare constant sequences, powers are repeated products, and the polynomial is a\nfinite sum of scalar multiples of powers. The sum, product, and scalar\nmultiple laws therefore imply `p(x_n) -> p(L)` whenever `x_n -> L`.\n\n## Attachment Note\n\nThe canonical theorem has a statement label, but no matching canonical proof\nfile exists yet, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:subsequences-preserve-limits": [
+      {
+        "title": "Subsequences Preserve Limits",
+        "path": "volume-iii/sequences/thm-subsequences-preserve-limits/proof-2026-03-15-001.md",
+        "vault_record": "volume-iii/sequences/thm-subsequences-preserve-limits",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-subsequences-preserve-limits/proof-2026-03-15-001.jpg"
+        ],
+        "body": "# Subsequences Preserve Limits\n\nSource: one handwritten proof photo preserved as a sanitized image.\n\nCanonical theorem label: `thm:subsequences-preserve-limits`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/subsequences/notes-subsequences.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof argues directly from the definition of convergence. Given\n`a_n -> L` and a subsequence `a_{n_k}`, choose `N` so that `|a_n-L| < epsilon`\nfor all `n >= N`. Since subsequence indices eventually dominate the identity,\n`n_k >= N` for all sufficiently large `k`, and therefore\n`|a_{n_k}-L| < epsilon`.\n\n## Attachment Note\n\nThe canonical theorem has a statement label, but no matching canonical proof\nfile exists yet, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:unbounded-monotone-divergence": [
+      {
+        "title": "Unbounded Monotone Divergence",
+        "path": "volume-iii/sequences/thm-unbounded-monotone-divergence/proof-2026-03-16-001.md",
+        "vault_record": "volume-iii/sequences/thm-unbounded-monotone-divergence",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-unbounded-monotone-divergence/proof-2026-03-16-001.jpg"
+        ],
+        "body": "# Unbounded Monotone Divergence\n\nSource: one handwritten proof photo preserved as a sanitized image.\n\nCanonical theorem label: `thm:unbounded-monotone-divergence`\n\nCanonical statement file:\n`volume-iii/analysis/sequences/notes/monotonicity/notes-monotonicity.tex`\n\n## Review\n\nStatus: `reviewed-correct`\n\nThe proof treats the increasing case by using unboundedness above: for every\nthreshold `M`, some term exceeds `M`, and monotonicity keeps all later terms\nabove `M`. Hence the sequence diverges to `+infty`. The decreasing case is\nthe analogous argument for divergence to `-infty`.\n\n## Attachment Note\n\nThe canonical theorem has a statement label, but no matching canonical proof\nfile exists yet, so the proof-vault backlink is deferred."
+      }
+    ],
+    "thm:uniqueness-of-limits": [
+      {
+        "title": "Uniqueness of Limits",
+        "path": "volume-iii/sequences/thm-uniqueness-of-limits/proof-2026-03-11-001.md",
+        "vault_record": "volume-iii/sequences/thm-uniqueness-of-limits",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-uniqueness-of-limits/proof-2026-03-11-001.jpg",
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/sequences/thm-uniqueness-of-limits/proof-2026-03-11-002.jpg"
+        ],
+        "body": "Let `(a_n)` be a convergent sequence with limits `L_1` and `L_2`.\nAssume, for contradiction, that `L_1 != L_2`.\n\nLet\n\n```text\nepsilon_0 = |L_1 - L_2| / 2 > 0.\n```\n\nSince `a_n -> L_1`, there exists `N_1 in N` such that for all `n >= N_1`,\n\n```text\n|a_n - L_1| < epsilon_0.\n```\n\nSince `a_n -> L_2`, there exists `N_2 in N` such that for all `n >= N_2`,\n\n```text\n|a_n - L_2| < epsilon_0.\n```\n\nChoose `n >= max(N_1,N_2)`. Then both inequalities hold. By the triangle\ninequality,\n\n```text\n|L_1 - L_2|\n  = |L_1 - a_n + a_n - L_2|\n  <= |L_1 - a_n| + |a_n - L_2|\n  < epsilon_0 + epsilon_0\n  = 2 epsilon_0.\n```\n\nBut `2 epsilon_0 = |L_1-L_2|`, a contradiction. Therefore `L_1 = L_2`, so the\nlimit of the sequence is unique."
+      }
+    ]
+  }
+}
