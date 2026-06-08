@@ -153,7 +153,18 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "definition",
-      "text_preview": "[Peano System] A triple $(P,S,1)$ is called a exactly when $P$ is a set, $1 P$, $S : P P$ is a function, and the following axioms hold: $1 P$. For every $n P$, $S(n) P$. For every $n P$, $S(n) 1$. For all $m,n P$, if $S("
+      "text_preview": "[Peano System] A triple $(P,S,1)$ is called a exactly when $P$ is a set, $1 P$, $S : P P$ is a function, and the following axioms hold: $1 P$. For every $n P$, $S(n) P$. For every $n P$, $S(n) 1$. For all $m,n P$, if $S(",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "def:peano-system",
+        "cross_ref_label": "def:peano-system",
+        "module": "LRA.VolumeII.PeanoSystems.PeanoSystem",
+        "declaration": "PeanoSystem",
+        "source_path": "LRA/VolumeII/PeanoSystems/PeanoSystem.lean",
+        "kind": "structure",
+        "code_b64": "c3RydWN0dXJlIFBlYW5vU3lzdGVtIHdoZXJlCiAgY2FycmllciA6IFR5cGUKICBvbmUgOiBjYXJyaWVyCiAgc3VjY2Vzc29yIDogY2FycmllciDihpIgY2FycmllcgogIG9uZV9ub3Rfc3VjY2Vzc29yIDoKICAgIOKIgCBlbGVtZW50IDogY2FycmllciwKICAgICAgc3VjY2Vzc29yIGVsZW1lbnQg4omgIG9uZQogIHN1Y2Nlc3Nvcl9pbmplY3RpdmUgOgogICAg4oiAIGZpcnN0X2VsZW1lbnQgc2Vjb25kX2VsZW1lbnQgOiBjYXJyaWVyLAogICAgICBzdWNjZXNzb3IgZmlyc3RfZWxlbWVudCA9IHN1Y2Nlc3NvciBzZWNvbmRfZWxlbWVudCDihpIKICAgICAgZmlyc3RfZWxlbWVudCA9IHNlY29uZF9lbGVtZW50CiAgaW5kdWN0aW9uIDoKICAgIOKIgCBwcmVkaWNhdGUgOiBjYXJyaWVyIOKGkiBQcm9wLAogICAgICBwcmVkaWNhdGUgb25lIOKGkgogICAgICAo4oiAIGVsZW1lbnQgOiBjYXJyaWVyLAogICAgICAgIHByZWRpY2F0ZSBlbGVtZW50IOKGkgogICAgICAgIHByZWRpY2F0ZSAoc3VjY2Vzc29yIGVsZW1lbnQpKSDihpIKICAgICAg4oiAIGVsZW1lbnQgOiBjYXJyaWVyLAogICAgICAgIHByZWRpY2F0ZSBlbGVtZW50"
+      }
     },
     {
       "id": "ax:peano-one-in-n",
@@ -692,7 +703,18 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "axiom",
-      "text_preview": "[Existence of a Peano System] There exists a Peano system."
+      "text_preview": "[Existence of a Peano System] There exists a Peano system.",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "ax:peano-system-existence",
+        "cross_ref_label": "ax:peano-system-existence",
+        "module": "LRA.VolumeII.NaturalNumbers.PeanoN",
+        "declaration": "PN_is_peano_system",
+        "source_path": "LRA/VolumeII/NaturalNumbers/PeanoN.lean",
+        "kind": "def",
+        "code_b64": "ZGVmIFBOX2lzX3BlYW5vX3N5c3RlbSA6IFBlYW5vU3lzdGVtIHdoZXJlCiAgY2FycmllciAgICAgICAgICAgICA6PSBQTgogIG9uZSAgICAgICAgICAgICAgICAgOj0gUE4ub25lCiAgc3VjY2Vzc29yICAgICAgICAgICA6PSBQTi5zdWNjCiAgb25lX25vdF9zdWNjZXNzb3IgICA6PSBieQogICAgaW50cm8gZWxlbWVudAogICAgZXhhY3QgUE4ubm9Db25mdXNpb24KICBzdWNjZXNzb3JfaW5qZWN0aXZlIDo9IGJ5CiAgICBpbnRybyBmaXJzdF9lbGVtZW50IHNlY29uZF9lbGVtZW50IGgKICAgIGV4YWN0IFBOLnN1Y2MuaW5qIGgKICBpbmR1Y3Rpb24gICAgICAgICAgIDo9IGJ5CiAgICBpbnRybyBwcmVkaWNhdGUgYmFzZV9jYXNlIHN1Y2Nlc3Nvcl9zdGVwIGVsZW1lbnQKICAgIGluZHVjdGlvbiBlbGVtZW50IHdpdGgKICAgIHwgb25lICAgICAgID0+IGV4YWN0IGJhc2VfY2FzZQogICAgfCBzdWNjIG4gaWggPT4gZXhhY3Qgc3VjY2Vzc29yX3N0ZXAgbiBpaA=="
+      }
     },
     {
       "id": "thm:induction-principle-for-peano-system",
@@ -980,7 +1002,18 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "definition",
-      "text_preview": "[Successor-Closed Subset] Let $(P,S,1)$ be a Peano system, and let $A P$. The subset $A$ is called exactly when \\[ n P\\;(n A S(n) A). \\]"
+      "text_preview": "[Successor-Closed Subset] Let $(P,S,1)$ be a Peano system, and let $A P$. The subset $A$ is called exactly when \\[ n P\\;(n A S(n) A). \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "def:successor-closed-subset",
+        "cross_ref_label": "def:successor-closed-subset-of-a-peano-system",
+        "module": "LRA.VolumeII.PeanoSystems.PeanoSystem",
+        "declaration": "successor_closed_subset",
+        "source_path": "LRA/VolumeII/PeanoSystems/PeanoSystem.lean",
+        "kind": "def",
+        "code_b64": "ZGVmIHN1Y2Nlc3Nvcl9jbG9zZWRfc3Vic2V0CiAgICAocHMgOiBQZWFub1N5c3RlbSkKICAgIChzdWJzZXQgOiBwcy5jYXJyaWVyIOKGkiBQcm9wKSA6IFByb3AgOj0KICDiiIAgZWxlbWVudCA6IHBzLmNhcnJpZXIsCiAgICBzdWJzZXQgZWxlbWVudCDihpIKICAgIHN1YnNldCAocHMuc3VjY2Vzc29yIGVsZW1lbnQp"
+      }
     },
     {
       "id": "def:inductive-subset-of-peano-system",
@@ -1105,7 +1138,18 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "definition",
-      "text_preview": "[Inductive Subset of a Peano System] Let $(P,S,1)$ be a Peano system, and let $A P$. The subset $A$ is called exactly when $1 A$ and $A$ is successor-closed."
+      "text_preview": "[Inductive Subset of a Peano System] Let $(P,S,1)$ be a Peano system, and let $A P$. The subset $A$ is called exactly when $1 A$ and $A$ is successor-closed.",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "def:inductive-subset-of-peano-system",
+        "cross_ref_label": "def:inductive-subset-of-a-peano-system",
+        "module": "LRA.VolumeII.PeanoSystems.PeanoSystem",
+        "declaration": "inductive_subset",
+        "source_path": "LRA/VolumeII/PeanoSystems/PeanoSystem.lean",
+        "kind": "def",
+        "code_b64": "ZGVmIGluZHVjdGl2ZV9zdWJzZXQKICAgIChwcyA6IFBlYW5vU3lzdGVtKQogICAgKHN1YnNldCA6IHBzLmNhcnJpZXIg4oaSIFByb3ApIDogUHJvcCA6PQogIHN1YnNldCBwcy5vbmUg4oinCiAgICBzdWNjZXNzb3JfY2xvc2VkX3N1YnNldCBwcyBzdWJzZXQ="
+      }
     },
     {
       "id": "def:predecessor-in-peano-system",
@@ -1201,7 +1245,18 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "definition",
-      "text_preview": "[Predecessor in a Peano System] Let $(P,S,1)$ be a Peano system, and let $x,u P$. The element $u$ is called a of $x$ exactly when \\[ S(u)=x. \\]"
+      "text_preview": "[Predecessor in a Peano System] Let $(P,S,1)$ be a Peano system, and let $x,u P$. The element $u$ is called a of $x$ exactly when \\[ S(u)=x. \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "def:predecessor-in-peano-system",
+        "cross_ref_label": "def:predecessor-in-a-peano-system",
+        "module": "LRA.VolumeII.PeanoSystems.PeanoSystem",
+        "declaration": "is_predecessor",
+        "source_path": "LRA/VolumeII/PeanoSystems/PeanoSystem.lean",
+        "kind": "def",
+        "code_b64": "ZGVmIGlzX3ByZWRlY2Vzc29yCiAgICAocHMgOiBQZWFub1N5c3RlbSkKICAgIChwcmVkZWNlc3NvciBlbGVtZW50IDogcHMuY2FycmllcikgOiBQcm9wIDo9CiAgcHMuc3VjY2Vzc29yIHByZWRlY2Vzc29yID0gZWxlbWVudAoKZW5kIFBlYW5vCi0tID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQ=="
+      }
     },
     {
       "id": "thm:every-element-is-one-or-a-successor",
@@ -1342,7 +1397,18 @@
         "thm:every-element-is-one-or-a-successor"
       ],
       "env_name": "theorem",
-      "text_preview": "[Every Element Is Either $1$ or a Successor] Let $(P,S,1)$ be a Peano system. For every $x P$, either $x=1$ or there exists $u P$ such that $S(u)=x$."
+      "text_preview": "[Every Element Is Either $1$ or a Successor] Let $(P,S,1)$ be a Peano system. For every $x P$, either $x=1$ or there exists $u P$ such that $S(u)=x$.",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "thm:every-element-is-one-or-a-successor",
+        "cross_ref_label": "thm:every-element-is-either-one-or-a-successor",
+        "module": "LRA.VolumeII.PeanoSystems.BasicTheorems",
+        "declaration": "every_element_is_one_or_successor",
+        "source_path": "LRA/VolumeII/PeanoSystems/BasicTheorems.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBldmVyeV9lbGVtZW50X2lzX29uZV9vcl9zdWNjZXNzb3IKICAgIChwcyA6IFBlYW5vU3lzdGVtKSA6CiAgICDiiIAgZWxlbWVudCA6IHBzLmNhcnJpZXIsCiAgICAgIGVsZW1lbnQgPSBwcy5vbmUg4oioCiAgICAgICAg4oiDIHByZWRlY2Vzc29yIDogcHMuY2FycmllciwKICAgICAgICAgIHBzLnN1Y2Nlc3NvciBwcmVkZWNlc3NvciA9IGVsZW1lbnQgOj0gYnkKCiAgLS0gRGVmaW5lIHRoZSBzdWJzZXQgRCBvZiBlbGVtZW50cyB0aGF0IGFscmVhZHkgaGF2ZSB0aGUgZGVzaXJlZCBmb3JtOgogIC0tIEQgPSB7eCDiiIggUCA6IHggPSAxIG9yIOKIg3Ug4oiIIFAsIFModSkgPSB4fS4KICBsZXQgRCA6IHBzLmNhcnJpZXIg4oaSIFByb3AgOj0KICAgIGZ1biBjYW5kaWRhdGVfZWxlbWVudCA9PgogICAgICBjYW5kaWRhdGVfZWxlbWVudCA9IHBzLm9uZSDiiKgKICAgICAgICDiiIMgcHJlZGVjZXNzb3IgOiBwcy5jYXJyaWVyLAogICAgICAgICAgcHMuc3VjY2Vzc29yIHByZWRlY2Vzc29yID0gY2FuZGlkYXRlX2VsZW1lbnQKCiAgLS0gSXQgaXMgZW5vdWdoIHRvIHByb3ZlIGV2ZXJ5IGVsZW1lbnQgYmVsb25ncyB0byBELgogIGFwcGx5IGluZHVjdGlvbl9wcmluY2lwbGUgcHMgRAoKICDCtyAtLSBCYXNlIGNhc2U6CiAgICAtLSBTaG93IHRoYXQgdGhlIGRpc3Rpbmd1aXNoZWQgZWxlbWVudCBiZWxvbmdzIHRvIEQuCiAgICAtLSBJbiBvcmRpbmFyeSBub3RhdGlvbjogcHJvdmUgMSDiiIggRC4KICAgIGV4YWN0IE9yLmlubCByZmwKCiAgwrcgLS0gU3VjY2Vzc29yIHN0ZXA6CiAgICAtLSBBc3N1bWUgYW4gYXJiaXRyYXJ5IGVsZW1lbnQgYmVsb25ncyB0byBELgogICAgLS0gU2hvdyB0aGF0IGl0cyBzdWNjZXNzb3IgYWxzbyBiZWxvbmdzIHRvIEQuCiAgICBpbnRybyBlbGVtZW50IGluZHVjdGlvbl9oeXBvdGhlc2lzCgogICAgLS0gR29hbDoKICAgIC0tICAgRCAocHMuc3VjY2Vzc29yIGVsZW1lbnQpCiAgICAtLQogICAgLS0gU2luY2UgcHMuc3VjY2Vzc29yIGVsZW1lbnQgaXMgbGl0ZXJhbGx5IGEgc3VjY2Vzc29yLAogICAgLS0gY2hvb3NlIGBlbGVtZW50YCBpdHNlbGYgYXMgdGhlIHByZWRlY2Vzc29yIHdpdG5lc3MuCiAgICBleGFjdCBPci5pbnIg4p+oZWxlbWVudCwgcmZs4p+p"
+      }
     },
     {
       "id": "thm:successor-inequality-reflection",
@@ -1496,7 +1562,18 @@
         "thm:successor-inequality-reflection"
       ],
       "env_name": "theorem",
-      "text_preview": "[Successor Inequality Reflection] Let $(P,S,1)$ be a Peano system. For all $a,b P$, if $a b$, then $S(a) S(b)$."
+      "text_preview": "[Successor Inequality Reflection] Let $(P,S,1)$ be a Peano system. For all $a,b P$, if $a b$, then $S(a) S(b)$.",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "thm:successor-inequality-reflection",
+        "cross_ref_label": "thm:successor-preserves-inequality",
+        "module": "LRA.VolumeII.PeanoSystems.BasicTheorems",
+        "declaration": "successor_preserves_inequality",
+        "source_path": "LRA/VolumeII/PeanoSystems/BasicTheorems.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBzdWNjZXNzb3JfcHJlc2VydmVzX2luZXF1YWxpdHkKICAgIChwcyA6IFBlYW5vU3lzdGVtKQogICAgKGZpcnN0X2VsZW1lbnQgc2Vjb25kX2VsZW1lbnQgOiBwcy5jYXJyaWVyKQogICAgKGVsZW1lbnRzX25vdF9lcXVhbCA6IGZpcnN0X2VsZW1lbnQg4omgIHNlY29uZF9lbGVtZW50KSA6CiAgICBwcy5zdWNjZXNzb3IgZmlyc3RfZWxlbWVudCDiiaAgcHMuc3VjY2Vzc29yIHNlY29uZF9lbGVtZW50IDo9IGJ5CiAgaW50cm8gc3VjY2Vzc29yc19lcXVhbAogIGV4YWN0CiAgICBlbGVtZW50c19ub3RfZXF1YWwKICAgICAgKHBzLnN1Y2Nlc3Nvcl9pbmplY3RpdmUKICAgICAgICBmaXJzdF9lbGVtZW50CiAgICAgICAgc2Vjb25kX2VsZW1lbnQKICAgICAgICBzdWNjZXNzb3JzX2VxdWFsKQ=="
+      }
     },
     {
       "id": "cor:non-one-elements-have-a-predecessor",
@@ -2219,7 +2296,18 @@
         "thm:no-object-is-its-own-successor"
       ],
       "env_name": "theorem",
-      "text_preview": "[No Object Is Its Own Successor] Let $(P,S,1)$ be a Peano system. For every $n P$, \\[ S(n) n. \\]"
+      "text_preview": "[No Object Is Its Own Successor] Let $(P,S,1)$ be a Peano system. For every $n P$, \\[ S(n) n. \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "thm:no-object-is-its-own-successor",
+        "cross_ref_label": "thm:successor-is-not-self",
+        "module": "LRA.VolumeII.PeanoSystems.BasicTheorems",
+        "declaration": "successor_not_self",
+        "source_path": "LRA/VolumeII/PeanoSystems/BasicTheorems.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBzdWNjZXNzb3Jfbm90X3NlbGYKICAgIChwcyA6IFBlYW5vU3lzdGVtKSA6CiAgICDiiIAgZWxlbWVudCA6IHBzLmNhcnJpZXIsCiAgICAgIHBzLnN1Y2Nlc3NvciBlbGVtZW50IOKJoCBlbGVtZW50IDo9IGJ5CiAgYXBwbHkgaW5kdWN0aW9uX3ByaW5jaXBsZSBwcwoKICDCtyBleGFjdCBwcy5vbmVfbm90X3N1Y2Nlc3NvciBwcy5vbmUKCiAgwrcgaW50cm8gZWxlbWVudCBpbmR1Y3Rpb25faHlwb3RoZXNpcwogICAgZXhhY3QKICAgICAgc3VjY2Vzc29yX3ByZXNlcnZlc19pbmVxdWFsaXR5CiAgICAgICAgcHMKICAgICAgICAocHMuc3VjY2Vzc29yIGVsZW1lbnQpCiAgICAgICAgZWxlbWVudAogICAgICAgIGluZHVjdGlvbl9oeXBvdGhlc2lz"
+      }
     },
     {
       "id": "def:iterator-data-on-peano-system",
@@ -2348,7 +2436,18 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "definition",
-      "text_preview": "[Iterator Data] Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c W$, and let $g:W W$ be a function. The triple $(W,c,g)$ is called for $(P,S,1)$."
+      "text_preview": "[Iterator Data] Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c W$, and let $g:W W$ be a function. The triple $(W,c,g)$ is called for $(P,S,1)$.",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "def:iterator-data-on-peano-system",
+        "cross_ref_label": "def:iterator-data",
+        "module": "LRA.VolumeII.PeanoSystems.Recursion",
+        "declaration": "IteratorData",
+        "source_path": "LRA/VolumeII/PeanoSystems/Recursion.lean",
+        "kind": "structure",
+        "code_b64": "c3RydWN0dXJlIEl0ZXJhdG9yRGF0YSAocHMgOiBQZWFub1N5c3RlbSkgd2hlcmUKICB0YXJnZXQgOiBUeXBlCiAgaW5pdGlhbF92YWx1ZSA6IHRhcmdldAogIHN0ZXBfcnVsZSA6IHRhcmdldCDihpIgdGFyZ2V0"
+      }
     },
     {
       "id": "def:iterator-relation",
@@ -2475,7 +2574,18 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "definition",
-      "text_preview": "[Iterator Relation] Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. A relation $R P W$ is called an for $(W,c,g)$ exactly when \\[ (1,c) R \\] and \\[ n P\\; w W\\; ((n,w) R (S(n),g(w)) R ). \\]"
+      "text_preview": "[Iterator Relation] Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. A relation $R P W$ is called an for $(W,c,g)$ exactly when \\[ (1,c) R \\] and \\[ n P\\; w W\\; ((n,w) R (S(n),g(w)) R ). \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "def:iterator-relation",
+        "cross_ref_label": "def:iterator-relation",
+        "module": "LRA.VolumeII.PeanoSystems.Recursion",
+        "declaration": "iterator_relation",
+        "source_path": "LRA/VolumeII/PeanoSystems/Recursion.lean",
+        "kind": "def",
+        "code_b64": "ZGVmIGl0ZXJhdG9yX3JlbGF0aW9uCiAgICAocHMgOiBQZWFub1N5c3RlbSkKICAgIChkYXRhIDogSXRlcmF0b3JEYXRhIHBzKQogICAgKHJlbGF0aW9uIDogcHMuY2FycmllciDihpIgZGF0YS50YXJnZXQg4oaSIFByb3ApIDogUHJvcCA6PQogIHJlbGF0aW9uIHBzLm9uZSBkYXRhLmluaXRpYWxfdmFsdWUg4oinCiAgICDiiIAgZWxlbWVudCA6IHBzLmNhcnJpZXIsCiAgICAgIOKIgCB2YWx1ZSA6IGRhdGEudGFyZ2V0LAogICAgICAgIHJlbGF0aW9uIGVsZW1lbnQgdmFsdWUg4oaSCiAgICAgICAgcmVsYXRpb24gKHBzLnN1Y2Nlc3NvciBlbGVtZW50KSAoZGF0YS5zdGVwX3J1bGUgdmFsdWUp"
+      }
     },
     {
       "id": "def:minimal-iterator-relation",
@@ -2593,7 +2703,18 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "definition",
-      "text_preview": "[Minimal Iterator Relation] Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. The for $(W,c,g)$ is \\[ R^* = \\ R P W : R (W,c,g)\\ . \\]"
+      "text_preview": "[Minimal Iterator Relation] Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. The for $(W,c,g)$ is \\[ R^* = \\ R P W : R (W,c,g)\\ . \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "def:minimal-iterator-relation",
+        "cross_ref_label": "def:minimal-iterator-relation",
+        "module": "LRA.VolumeII.PeanoSystems.Recursion",
+        "declaration": "minimal_iterator_relation",
+        "source_path": "LRA/VolumeII/PeanoSystems/Recursion.lean",
+        "kind": "def",
+        "code_b64": "ZGVmIG1pbmltYWxfaXRlcmF0b3JfcmVsYXRpb24KICAgIChwcyA6IFBlYW5vU3lzdGVtKQogICAgKGRhdGEgOiBJdGVyYXRvckRhdGEgcHMpCiAgICAoZWxlbWVudCA6IHBzLmNhcnJpZXIpCiAgICAodmFsdWUgOiBkYXRhLnRhcmdldCkgOiBQcm9wIDo9CiAg4oiAIHJlbGF0aW9uIDogcHMuY2FycmllciDihpIgZGF0YS50YXJnZXQg4oaSIFByb3AsCiAgICBpdGVyYXRvcl9yZWxhdGlvbiBwcyBkYXRhIHJlbGF0aW9uIOKGkgogICAgcmVsYXRpb24gZWxlbWVudCB2YWx1ZQ=="
+      }
     },
     {
       "id": "lem:iterator-relation-consistency",
@@ -2916,7 +3037,18 @@
         "lem:forced-values-are-unique"
       ],
       "env_name": "lemma",
-      "text_preview": "[Forced Values Are Unique] Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. If $(n,w_0) R^*$ and $(n,w_1) R^*$, then $w_0=w_1$."
+      "text_preview": "[Forced Values Are Unique] Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. If $(n,w_0) R^*$ and $(n,w_1) R^*$, then $w_0=w_1$.",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "lem:forced-values-are-unique",
+        "cross_ref_label": "thm:forced-successor-values-are-unique",
+        "module": "LRA.VolumeII.PeanoSystems.Recursion",
+        "declaration": "forced_successor_values_are_unique",
+        "source_path": "LRA/VolumeII/PeanoSystems/Recursion.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBmb3JjZWRfc3VjY2Vzc29yX3ZhbHVlc19hcmVfdW5pcXVlCiAgICAocHMgOiBQZWFub1N5c3RlbSkKICAgIChkYXRhIDogSXRlcmF0b3JEYXRhIHBzKQogICAgKGVsZW1lbnQgOiBwcy5jYXJyaWVyKQogICAgKGN1cnJlbnRfdmFsdWUgc3VjY2Vzc29yX3ZhbHVlIDogZGF0YS50YXJnZXQpCiAgICAocHJpb3Jfc3RhZ2VfaXNfZGV0ZXJtaW5pc3RpYyA6CiAgICAgIOKIgCBmaXJzdF92YWx1ZSBzZWNvbmRfdmFsdWUgOiBkYXRhLnRhcmdldCwKICAgICAgICBtaW5pbWFsX2l0ZXJhdG9yX3JlbGF0aW9uIHBzIGRhdGEgZWxlbWVudCBmaXJzdF92YWx1ZSDihpIKICAgICAgICBtaW5pbWFsX2l0ZXJhdG9yX3JlbGF0aW9uIHBzIGRhdGEgZWxlbWVudCBzZWNvbmRfdmFsdWUg4oaSCiAgICAgICAgZmlyc3RfdmFsdWUgPSBzZWNvbmRfdmFsdWUpCiAgICAoY3VycmVudF92YWx1ZV9pc19mb3JjZWQgOgogICAgICBtaW5pbWFsX2l0ZXJhdG9yX3JlbGF0aW9uIHBzIGRhdGEgZWxlbWVudCBjdXJyZW50X3ZhbHVlKQogICAgKHN1Y2Nlc3Nvcl92YWx1ZV9pc19mb3JjZWQgOgogICAgICBtaW5pbWFsX2l0ZXJhdG9yX3JlbGF0aW9uIHBzIGRhdGEgKHBzLnN1Y2Nlc3NvciBlbGVtZW50KSBzdWNjZXNzb3JfdmFsdWUpIDoKICAgIHN1Y2Nlc3Nvcl92YWx1ZSA9IGRhdGEuc3RlcF9ydWxlIGN1cnJlbnRfdmFsdWUgOj0gYnkKCiAgbGV0IHN1Y2Nlc3Nvcl92YWx1ZV9yZWxhdGlvbiA6CiAgICAgIHBzLmNhcnJpZXIg4oaSIGRhdGEudGFyZ2V0IOKGkiBQcm9wIDo9CiAgICBmdW4gY2FuZGlkYXRlX2VsZW1lbnQgY2FuZGlkYXRlX3ZhbHVlID0+CiAgICAgIG1pbmltYWxfaXRlcmF0b3JfcmVsYXRpb24gcHMgZGF0YSBjYW5kaWRhdGVfZWxlbWVudCBjYW5kaWRhdGVfdmFsdWUg4oinCiAgICAgICAgKGNhbmRpZGF0ZV9lbGVtZW50ID0gcHMuc3VjY2Vzc29yIGVsZW1lbnQg4oaSCiAgICAgICAgICBjYW5kaWRhdGVfdmFsdWUgPSBkYXRhLnN0ZXBfcnVsZSBjdXJyZW50X3ZhbHVlKQoKICBoYXZlIHN1Y2Nlc3Nvcl92YWx1ZV9yZWxhdGlvbl9pc19pdGVyYXRvciA6CiAgICAgIGl0ZXJhdG9yX3JlbGF0aW9uIHBzIGRhdGEgc3VjY2Vzc29yX3ZhbHVlX3JlbGF0aW9uIDo9IGJ5CiAgICBjb25zdHJ1Y3RvcgoKICAgIMK3IGNvbnN0cnVjdG9yCgogICAgICDCtyBleGFjdAogICAgICAgICAgKG1pbmltYWxfaXRlcmF0b3JfcmVsYXRpb25faXNfaXRlcmF0b3JfcmVsYXRpb24gcHMgZGF0YSkubGVmdAoKICAgICAgwrcgaW50cm8gb25lX2VxX3N1Y2Nlc3Nvcl9lbGVtZW50CiAgICAgICAgZXhhY3QKICAgICAgICAgIEZhbHNlLmVsaW0KICAgICAgICAgICAgKChwcy5vbmVfbm90X3N1Y2Nlc3NvciBlbGVtZW50KQogICAgICAgICAgICAgIG9uZV9lcV9zdWNjZXNzb3JfZWxlbWVudC5zeW1tKQoKICAgIMK3IGludHJvIGNhbmRpZGF0ZV9lbGVtZW50IGNhbmRpZGF0ZV92YWx1ZSByZWxhdGlvbl9ob2xkcwogICAgICBjb25zdHJ1Y3RvcgoKICAgICAgwrcgZXhhY3QKICAgICAgICAgIChtaW5pbWFsX2l0ZXJhdG9yX3JlbGF0aW9uX2lzX2l0ZXJhdG9yX3JlbGF0aW9uIHBzIGRhdGEpLnJpZ2h0CiAgICAgICAgICAgIGNhbmRpZGF0ZV9lbGVtZW50CiAgICAgICAgICAgIGNhbmRpZGF0ZV92YWx1ZQogICAgICAgICAgICByZWxhdGlvbl9ob2xkcy5sZWZ0CgogICAgICDCtyBpbnRybyBzdWNjZXNzb3JfY2FuZGlkYXRlX2VxX3N1Y2Nlc3Nvcl9lbGVtZW50CgogICAgICAgIGhhdmUgY2FuZGlkYXRlX2VxX2VsZW1lbnQgOgogICAgICAgICAgICBjYW5kaWRhdGVfZWxlbWVudCA9IGVsZW1lbnQgOj0KICAgICAgICAgIHBzLnN1Y2Nlc3Nvcl9pbmplY3RpdmUKICAgICAgICAgICAgY2FuZGlkYXRlX2VsZW1lbnQKICAgICAgICAgICAgZWxlbWVudAogICAgICAgICAgICBzdWNjZXNzb3JfY2FuZGlkYXRlX2VxX3N1Y2Nlc3Nvcl9lbGVtZW50CgogICAgICAgIGhhdmUgY2FuZGlkYXRlX3ZhbHVlX2lzX2ZvcmNlZF9hdF9lbGVtZW50IDoKICAgICAgICAgICAgbWluaW1hbF9pdGVyYXRvcl9yZWxhdGlvbiBwcyBkYXRhIGVsZW1lbnQgY2FuZGlkYXRlX3ZhbHVlIDo9IGJ5CiAgICAgICAgICBjYXNlcyBjYW5kaWRhdGVfZXFfZWxlbWVudAogICAgICAgICAgZXhhY3QgcmVsYXRpb25faG9sZHMubGVmdAoKICAgICAgICBoYXZlIGNhbmRpZGF0ZV92YWx1ZV9lcV9jdXJyZW50X3ZhbHVlIDoKICAgICAgICAgICAgY2FuZGlkYXRlX3ZhbHVlID0gY3VycmVudF92YWx1ZSA6PQogICAgICAgICAgcHJpb3Jfc3RhZ2VfaXNfZGV0ZXJtaW5pc3RpYwogICAgICAgICAgICBjYW5kaWRhdGVfdmFsdWUKICAgICAgICAgICAgY3VycmVudF92YWx1ZQogICAgICAgICAgICBjYW5kaWRhdGVfdmFsdWVfaXNfZm9yY2VkX2F0X2VsZW1lbnQKICAgICAgICAgICAgY3VycmVudF92YWx1ZV9pc19mb3JjZWQKCiAgICAgICAgcncgW2NhbmRpZGF0ZV92YWx1ZV9lcV9jdXJyZW50X3ZhbHVlXQoKICBoYXZlIHN1Y2Nlc3Nvcl92YWx1ZV9zYXRpc2ZpZXNfcmVsYXRpb24gOgogICAgICBzdWNjZXNzb3JfdmFsdWVfcmVsYXRpb24gKHBzLnN1Y2Nlc3NvciBlbGVtZW50KSBzdWNjZXNzb3JfdmFsdWUgOj0KICAgIHN1Y2Nlc3Nvcl92YWx1ZV9pc19mb3JjZWQKICAgICAgc3VjY2Vzc29yX3ZhbHVlX3JlbGF0aW9uCiAgICAgIHN1Y2Nlc3Nvcl92YWx1ZV9yZWxhdGlvbl9pc19pdGVyYXRvcgoKICBleGFjdCBzdWNjZXNzb3JfdmFsdWVfc2F0aXNmaWVzX3JlbGF0aW9uLnJpZ2h0IHJmbA=="
+      }
     },
     {
       "id": "lem:minimal-iterator-relation-deterministic",
@@ -3054,7 +3186,18 @@
         "lem:minimal-iterator-relation-deterministic"
       ],
       "env_name": "lemma",
-      "text_preview": "[Determinism of the Minimal Iterator Relation] Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. For each $n P$, there is at most one $w W$ such that "
+      "text_preview": "[Determinism of the Minimal Iterator Relation] Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. For each $n P$, there is at most one $w W$ such that ",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "lem:minimal-iterator-relation-deterministic",
+        "cross_ref_label": "thm:determinism-of-the-minimal-iterator-relation",
+        "module": "LRA.VolumeII.PeanoSystems.Recursion",
+        "declaration": "minimal_iterator_relation_deterministic",
+        "source_path": "LRA/VolumeII/PeanoSystems/Recursion.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBtaW5pbWFsX2l0ZXJhdG9yX3JlbGF0aW9uX2RldGVybWluaXN0aWMKICAgIChwcyA6IFBlYW5vU3lzdGVtKQogICAgKGRhdGEgOiBJdGVyYXRvckRhdGEgcHMpIDoKICAgIOKIgCBlbGVtZW50IDogcHMuY2FycmllciwKICAgICAg4oiAIGZpcnN0X3ZhbHVlIHNlY29uZF92YWx1ZSA6IGRhdGEudGFyZ2V0LAogICAgICAgIG1pbmltYWxfaXRlcmF0b3JfcmVsYXRpb24gcHMgZGF0YSBlbGVtZW50IGZpcnN0X3ZhbHVlIOKGkgogICAgICAgIG1pbmltYWxfaXRlcmF0b3JfcmVsYXRpb24gcHMgZGF0YSBlbGVtZW50IHNlY29uZF92YWx1ZSDihpIKICAgICAgICBmaXJzdF92YWx1ZSA9IHNlY29uZF92YWx1ZSA6PSBieQogIGFwcGx5IGluZHVjdGlvbl9wcmluY2lwbGUgcHMKCiAgwrcgaW50cm8gZmlyc3RfdmFsdWUgc2Vjb25kX3ZhbHVlIGZpcnN0X3ZhbHVlX2lzX2ZvcmNlZCBzZWNvbmRfdmFsdWVfaXNfZm9yY2VkCgogICAgaGF2ZSBmaXJzdF92YWx1ZV9pc19pbml0aWFsIDoKICAgICAgICBmaXJzdF92YWx1ZSA9IGRhdGEuaW5pdGlhbF92YWx1ZSA6PQogICAgICBtaW5pbWFsX2l0ZXJhdG9yX3JlbGF0aW9uX2Jhc2VfdW5pcXVlCiAgICAgICAgcHMKICAgICAgICBkYXRhCiAgICAgICAgZmlyc3RfdmFsdWUKICAgICAgICBmaXJzdF92YWx1ZV9pc19mb3JjZWQKCiAgICBoYXZlIHNlY29uZF92YWx1ZV9pc19pbml0aWFsIDoKICAgICAgICBzZWNvbmRfdmFsdWUgPSBkYXRhLmluaXRpYWxfdmFsdWUgOj0KICAgICAgbWluaW1hbF9pdGVyYXRvcl9yZWxhdGlvbl9iYXNlX3VuaXF1ZQogICAgICAgIHBzCiAgICAgICAgZGF0YQogICAgICAgIHNlY29uZF92YWx1ZQogICAgICAgIHNlY29uZF92YWx1ZV9pc19mb3JjZWQKCiAgICBleGFjdCBFcS50cmFucyBmaXJzdF92YWx1ZV9pc19pbml0aWFsIHNlY29uZF92YWx1ZV9pc19pbml0aWFsLnN5bW0KCiAgwrcgaW50cm8gZWxlbWVudCBpbmR1Y3Rpb25faHlwb3RoZXNpcwogICAgaW50cm8gZmlyc3Rfc3VjY2Vzc29yX3ZhbHVlIHNlY29uZF9zdWNjZXNzb3JfdmFsdWUKICAgIGludHJvIGZpcnN0X3N1Y2Nlc3Nvcl92YWx1ZV9pc19mb3JjZWQgc2Vjb25kX3N1Y2Nlc3Nvcl92YWx1ZV9pc19mb3JjZWQKCiAgICBjYXNlcyBtaW5pbWFsX2l0ZXJhdG9yX3JlbGF0aW9uX2NvbXBsZXRlIHBzIGRhdGEgZWxlbWVudCB3aXRoCiAgICB8IGludHJvIGN1cnJlbnRfdmFsdWUgY3VycmVudF92YWx1ZV9pc19mb3JjZWQgPT4KCiAgICAgICAgaGF2ZSBmaXJzdF9zdWNjZXNzb3JfdmFsdWVfaXNfc3RlcCA6CiAgICAgICAgICAgIGZpcnN0X3N1Y2Nlc3Nvcl92YWx1ZSA9IGRhdGEuc3RlcF9ydWxlIGN1cnJlbnRfdmFsdWUgOj0KICAgICAgICAgIGZvcmNlZF9zdWNjZXNzb3JfdmFsdWVzX2FyZV91bmlxdWUKICAgICAgICAgICAgcHMKICAgICAgICAgICAgZGF0YQogICAgICAgICAgICBlbGVtZW50CiAgICAgICAgICAgIGN1cnJlbnRfdmFsdWUKICAgICAgICAgICAgZmlyc3Rfc3VjY2Vzc29yX3ZhbHVlCiAgICAgICAgICAgIGluZHVjdGlvbl9oeXBvdGhlc2lzCiAgICAgICAgICAgIGN1cnJlbnRfdmFsdWVfaXNfZm9yY2VkCiAgICAgICAgICAgIGZpcnN0X3N1Y2Nlc3Nvcl92YWx1ZV9pc19mb3JjZWQKCiAgICAgICAgaGF2ZSBzZWNvbmRfc3VjY2Vzc29yX3ZhbHVlX2lzX3N0ZXAgOgogICAgICAgICAgICBzZWNvbmRfc3VjY2Vzc29yX3ZhbHVlID0gZGF0YS5zdGVwX3J1bGUgY3VycmVudF92YWx1ZSA6PQogICAgICAgICAgZm9yY2VkX3N1Y2Nlc3Nvcl92YWx1ZXNfYXJlX3VuaXF1ZQogICAgICAgICAgICBwcwogICAgICAgICAgICBkYXRhCiAgICAgICAgICAgIGVsZW1lbnQKICAgICAgICAgICAgY3VycmVudF92YWx1ZQogICAgICAgICAgICBzZWNvbmRfc3VjY2Vzc29yX3ZhbHVlCiAgICAgICAgICAgIGluZHVjdGlvbl9oeXBvdGhlc2lzCiAgICAgICAgICAgIGN1cnJlbnRfdmFsdWVfaXNfZm9yY2VkCiAgICAgICAgICAgIHNlY29uZF9zdWNjZXNzb3JfdmFsdWVfaXNfZm9yY2VkCgogICAgICAgIGV4YWN0CiAgICAgICAgICBFcS50cmFucwogICAgICAgICAgICBmaXJzdF9zdWNjZXNzb3JfdmFsdWVfaXNfc3RlcAogICAgICAgICAgICBzZWNvbmRfc3VjY2Vzc29yX3ZhbHVlX2lzX3N0ZXAuc3ltbQ=="
+      }
     },
     {
       "id": "lem:minimal-iterator-relation-complete",
@@ -3194,7 +3337,18 @@
         "lem:minimal-iterator-relation-complete"
       ],
       "env_name": "lemma",
-      "text_preview": "[Completeness of the Minimal Iterator Relation] Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. For each $n P$, there exists $w W$ such that $(n,w) "
+      "text_preview": "[Completeness of the Minimal Iterator Relation] Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. For each $n P$, there exists $w W$ such that $(n,w) ",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "lem:minimal-iterator-relation-complete",
+        "cross_ref_label": "thm:completeness-of-the-minimal-iterator-relation",
+        "module": "LRA.VolumeII.PeanoSystems.Recursion",
+        "declaration": "minimal_iterator_relation_complete",
+        "source_path": "LRA/VolumeII/PeanoSystems/Recursion.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBtaW5pbWFsX2l0ZXJhdG9yX3JlbGF0aW9uX2NvbXBsZXRlCiAgICAocHMgOiBQZWFub1N5c3RlbSkKICAgIChkYXRhIDogSXRlcmF0b3JEYXRhIHBzKSA6CiAgICDiiIAgZWxlbWVudCA6IHBzLmNhcnJpZXIsCiAgICAgIOKIgyB2YWx1ZSA6IGRhdGEudGFyZ2V0LAogICAgICAgIG1pbmltYWxfaXRlcmF0b3JfcmVsYXRpb24gcHMgZGF0YSBlbGVtZW50IHZhbHVlIDo9IGJ5CiAgYXBwbHkgaW5kdWN0aW9uX3ByaW5jaXBsZSBwcwoKICDCtyBleGFjdAogICAgICDin6hkYXRhLmluaXRpYWxfdmFsdWUsCiAgICAgICAgKG1pbmltYWxfaXRlcmF0b3JfcmVsYXRpb25faXNfaXRlcmF0b3JfcmVsYXRpb24gcHMgZGF0YSkubGVmdOKfqQoKICDCtyBpbnRybyBlbGVtZW50IGluZHVjdGlvbl9oeXBvdGhlc2lzCiAgICBjYXNlcyBpbmR1Y3Rpb25faHlwb3RoZXNpcyB3aXRoCiAgICB8IGludHJvIHZhbHVlIHZhbHVlX2lzX2ZvcmNlZCA9PgogICAgICAgIGV4YWN0CiAgICAgICAgICDin6hkYXRhLnN0ZXBfcnVsZSB2YWx1ZSwKICAgICAgICAgICAgKG1pbmltYWxfaXRlcmF0b3JfcmVsYXRpb25faXNfaXRlcmF0b3JfcmVsYXRpb24gcHMgZGF0YSkucmlnaHQKICAgICAgICAgICAgICBlbGVtZW50CiAgICAgICAgICAgICAgdmFsdWUKICAgICAgICAgICAgICB2YWx1ZV9pc19mb3JjZWTin6k="
+      }
     },
     {
       "id": "lem:uniqueness-of-iterator-functions",
@@ -3681,7 +3835,18 @@
         "thm:peano-iterator-theorem"
       ],
       "env_name": "theorem",
-      "text_preview": "[Peano Iterator Theorem] Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. Then there exists a unique function $f:P W$ such that \\[ f(1)=c n P\\;(f(S(n))=g(f(n))). \\]"
+      "text_preview": "[Peano Iterator Theorem] Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. Then there exists a unique function $f:P W$ such that \\[ f(1)=c n P\\;(f(S(n))=g(f(n))). \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "thm:peano-iterator-theorem",
+        "cross_ref_label": "thm:peano-iterator-theorem",
+        "module": "LRA.VolumeII.PeanoSystems.Recursion",
+        "declaration": "peano_iterator_theorem",
+        "source_path": "LRA/VolumeII/PeanoSystems/Recursion.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBwZWFub19pdGVyYXRvcl90aGVvcmVtCiAgICAocHMgOiBQZWFub1N5c3RlbSkKICAgICh0YXJnZXQgOiBUeXBlKQogICAgKGluaXRpYWxfdmFsdWUgOiB0YXJnZXQpCiAgICAoc3RlcF9ydWxlIDogdGFyZ2V0IOKGkiB0YXJnZXQpIDoKICAgIOKIgyBpdGVyYXRvcl9mdW5jdGlvbiA6IHBzLmNhcnJpZXIg4oaSIHRhcmdldCwKICAgICAgc2F0aXNmaWVzX2l0ZXJhdG9yX2NsYXVzZXMKICAgICAgICBwcwogICAgICAgIHRhcmdldAogICAgICAgIGluaXRpYWxfdmFsdWUKICAgICAgICBzdGVwX3J1bGUKICAgICAgICBpdGVyYXRvcl9mdW5jdGlvbiDiiKcKICAgICAg4oiAIG90aGVyX2l0ZXJhdG9yIDogcHMuY2FycmllciDihpIgdGFyZ2V0LAogICAgICAgIHNhdGlzZmllc19pdGVyYXRvcl9jbGF1c2VzCiAgICAgICAgICBwcwogICAgICAgICAgdGFyZ2V0CiAgICAgICAgICBpbml0aWFsX3ZhbHVlCiAgICAgICAgICBzdGVwX3J1bGUKICAgICAgICAgIG90aGVyX2l0ZXJhdG9yIOKGkgogICAgICAgIOKIgCBlbGVtZW50IDogcHMuY2FycmllciwKICAgICAgICAgIG90aGVyX2l0ZXJhdG9yIGVsZW1lbnQgPSBpdGVyYXRvcl9mdW5jdGlvbiBlbGVtZW50IDo9IGJ5CiAgcmVmaW5lCiAgICDin6hpdGVyIHBzIHRhcmdldCBpbml0aWFsX3ZhbHVlIHN0ZXBfcnVsZSwKICAgICAgaXRlcl9zYXRpc2ZpZXNfaXRlcmF0b3JfY2xhdXNlcyBwcyB0YXJnZXQgaW5pdGlhbF92YWx1ZSBzdGVwX3J1bGUsCiAgICAgID9f4p+pCiAgaW50cm8gb3RoZXJfaXRlcmF0b3Igb3RoZXJfaXRlcmF0b3Jfc2F0aXNmaWVzX2NsYXVzZXMgZWxlbWVudAogIGV4YWN0CiAgICBFcS5zeW1tCiAgICAgIChpdGVyYXRvcl9mdW5jdGlvbl91bmlxdWUKICAgICAgICBwcwogICAgICAgIHRhcmdldAogICAgICAgIGluaXRpYWxfdmFsdWUKICAgICAgICBzdGVwX3J1bGUKICAgICAgICAoaXRlciBwcyB0YXJnZXQgaW5pdGlhbF92YWx1ZSBzdGVwX3J1bGUpCiAgICAgICAgb3RoZXJfaXRlcmF0b3IKICAgICAgICAoaXRlcl9zYXRpc2ZpZXNfaXRlcmF0b3JfY2xhdXNlcwogICAgICAgICAgcHMKICAgICAgICAgIHRhcmdldAogICAgICAgICAgaW5pdGlhbF92YWx1ZQogICAgICAgICAgc3RlcF9ydWxlKQogICAgICAgIG90aGVyX2l0ZXJhdG9yX3NhdGlzZmllc19jbGF1c2VzCiAgICAgICAgZWxlbWVudCkKCmVuZCBQZWFubw=="
+      }
     },
     {
       "id": "def:iterator-generated-function",
@@ -3803,7 +3968,18 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "definition",
-      "text_preview": "[Iterator-Generated Function] Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. The unique function $f:P W$ satisfying \\[ f(1)=c n P\\;(f(S(n))=g(f(n))) \\] is called the ."
+      "text_preview": "[Iterator-Generated Function] Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. The unique function $f:P W$ satisfying \\[ f(1)=c n P\\;(f(S(n))=g(f(n))) \\] is called the .",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "def:iterator-generated-function",
+        "cross_ref_label": "def:iterator-generated-function",
+        "module": "LRA.VolumeII.PeanoSystems.Recursion",
+        "declaration": "iter",
+        "source_path": "LRA/VolumeII/PeanoSystems/Recursion.lean",
+        "kind": "def",
+        "code_b64": "bm9uY29tcHV0YWJsZSBkZWYgaXRlcgogICAgKHBzIDogUGVhbm9TeXN0ZW0pCiAgICAodGFyZ2V0IDogVHlwZSkKICAgIChpbml0aWFsX3ZhbHVlIDogdGFyZ2V0KQogICAgKHN0ZXBfcnVsZSA6IHRhcmdldCDihpIgdGFyZ2V0KSA6CiAgICBwcy5jYXJyaWVyIOKGkiB0YXJnZXQgOj0KICBDbGFzc2ljYWwuY2hvb3NlCiAgICAoaXRlcmF0b3JfZnVuY3Rpb25fZXhpc3RzCiAgICAgIHBzCiAgICAgIHRhcmdldAogICAgICBpbml0aWFsX3ZhbHVlCiAgICAgIHN0ZXBfcnVsZSk="
+      }
     },
     {
       "id": "thm:iterator-base-value",
@@ -3937,7 +4113,18 @@
         "thm:iterator-base-value"
       ],
       "env_name": "theorem",
-      "text_preview": "[Iterator Base Clause] Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $f$ be the iterator-generated function determined by $(W,c,g)$. Then \\[ f(1)=c. \\]"
+      "text_preview": "[Iterator Base Clause] Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $f$ be the iterator-generated function determined by $(W,c,g)$. Then \\[ f(1)=c. \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "thm:iterator-base-value",
+        "cross_ref_label": "thm:iterator-base-clause",
+        "module": "LRA.VolumeII.PeanoSystems.Recursion",
+        "declaration": "iter_base",
+        "source_path": "LRA/VolumeII/PeanoSystems/Recursion.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBpdGVyX2Jhc2UKICAgIChwcyA6IFBlYW5vU3lzdGVtKQogICAgKHRhcmdldCA6IFR5cGUpCiAgICAoaW5pdGlhbF92YWx1ZSA6IHRhcmdldCkKICAgIChzdGVwX3J1bGUgOiB0YXJnZXQg4oaSIHRhcmdldCkgOgogICAgaXRlciBwcyB0YXJnZXQgaW5pdGlhbF92YWx1ZSBzdGVwX3J1bGUgcHMub25lID0gaW5pdGlhbF92YWx1ZSA6PQogIChpdGVyX3NhdGlzZmllc19pdGVyYXRvcl9jbGF1c2VzCiAgICBwcwogICAgdGFyZ2V0CiAgICBpbml0aWFsX3ZhbHVlCiAgICBzdGVwX3J1bGUpLmxlZnQ="
+      }
     },
     {
       "id": "thm:iterator-successor-step",
@@ -4071,7 +4258,18 @@
         "thm:iterator-successor-step"
       ],
       "env_name": "theorem",
-      "text_preview": "[Iterator Successor Clause] Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $f$ be the iterator-generated function determined by $(W,c,g)$. Then \\[ n P\\;(f(S(n))=g(f(n))). \\]"
+      "text_preview": "[Iterator Successor Clause] Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $f$ be the iterator-generated function determined by $(W,c,g)$. Then \\[ n P\\;(f(S(n))=g(f(n))). \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "thm:iterator-successor-step",
+        "cross_ref_label": "thm:iterator-successor-clause",
+        "module": "LRA.VolumeII.PeanoSystems.Recursion",
+        "declaration": "iter_step",
+        "source_path": "LRA/VolumeII/PeanoSystems/Recursion.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBpdGVyX3N0ZXAKICAgIChwcyA6IFBlYW5vU3lzdGVtKQogICAgKHRhcmdldCA6IFR5cGUpCiAgICAoaW5pdGlhbF92YWx1ZSA6IHRhcmdldCkKICAgIChzdGVwX3J1bGUgOiB0YXJnZXQg4oaSIHRhcmdldCkKICAgIChlbGVtZW50IDogcHMuY2FycmllcikgOgogICAgaXRlciBwcyB0YXJnZXQgaW5pdGlhbF92YWx1ZSBzdGVwX3J1bGUgKHBzLnN1Y2Nlc3NvciBlbGVtZW50KSA9CiAgICAgIHN0ZXBfcnVsZSAoaXRlciBwcyB0YXJnZXQgaW5pdGlhbF92YWx1ZSBzdGVwX3J1bGUgZWxlbWVudCkgOj0KICAoaXRlcl9zYXRpc2ZpZXNfaXRlcmF0b3JfY2xhdXNlcwogICAgcHMKICAgIHRhcmdldAogICAgaW5pdGlhbF92YWx1ZQogICAgc3RlcF9ydWxlKS5yaWdodCBlbGVtZW50"
+      }
     },
     {
       "id": "def:iteration-of-a-self-map",
@@ -5194,7 +5392,18 @@
         "thm:uniqueness-of-peano-systems-up-to-isomorphism"
       ],
       "env_name": "theorem",
-      "text_preview": "[Uniqueness of Peano Systems up to Isomorphism] Let $(P,S_P,1_P)$ and $(Q,S_Q,1_Q)$ be Peano systems. Then there exists a unique bijection $ :P Q$ such that \\[ (1_P)=1_Q \\] and \\[ n P\\;( (S_P(n))=S_Q( (n))). \\] Thus any "
+      "text_preview": "[Uniqueness of Peano Systems up to Isomorphism] Let $(P,S_P,1_P)$ and $(Q,S_Q,1_Q)$ be Peano systems. Then there exists a unique bijection $ :P Q$ such that \\[ (1_P)=1_Q \\] and \\[ n P\\;( (S_P(n))=S_Q( (n))). \\] Thus any ",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "thm:uniqueness-of-peano-systems-up-to-isomorphism",
+        "cross_ref_label": "thm:uniqueness-of-peano-systems-up-to-isomorphism",
+        "module": "LRA.VolumeII.NaturalNumbers.PeanoN",
+        "declaration": "pn_iso_any_peano_system",
+        "source_path": "LRA/VolumeII/NaturalNumbers/PeanoN.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBwbl9pc29fYW55X3BlYW5vX3N5c3RlbQogICAgKHBzIDogUGVhbm9TeXN0ZW0pIDoKICAgIOKIgyBmIDogUE4g4oaSIHBzLmNhcnJpZXIsCiAgICAgIGYgUE4ub25lID0gcHMub25lIOKIpwogICAgICAo4oiAIG4gOiBQTiwgZiAoUE4uc3VjYyBuKSA9IHBzLnN1Y2Nlc3NvciAoZiBuKSkg4oinCiAgICAgICjiiIAgZyA6IFBOIOKGkiBwcy5jYXJyaWVyLAogICAgICAgIGcgUE4ub25lID0gcHMub25lIOKGkgogICAgICAgICjiiIAgbiA6IFBOLCBnIChQTi5zdWNjIG4pID0gcHMuc3VjY2Vzc29yIChnIG4pKSDihpIKICAgICAgICDiiIAgbiA6IFBOLCBnIG4gPSBmIG4pIDo9IGJ5CiAgbGV0IGYgOiBQTiDihpIgcHMuY2FycmllciA6PQogICAgaXRlciBQTl9pc19wZWFub19zeXN0ZW0gcHMuY2FycmllciBwcy5vbmUgcHMuc3VjY2Vzc29yCiAgcmVmaW5lIOKfqGYsID9fLCA/XywgP1/in6kKICDCtyBleGFjdCBpdGVyX2Jhc2UgUE5faXNfcGVhbm9fc3lzdGVtIHBzLmNhcnJpZXIgcHMub25lIHBzLnN1Y2Nlc3NvcgogIMK3IGludHJvIG4KICAgIGV4YWN0IGl0ZXJfc3RlcCBQTl9pc19wZWFub19zeXN0ZW0gcHMuY2FycmllciBwcy5vbmUgcHMuc3VjY2Vzc29yIG4KICDCtyBpbnRybyBnIGdfYmFzZSBnX3N0ZXAKICAgIGV4YWN0CiAgICAgIGl0ZXJhdG9yX2Z1bmN0aW9uX3VuaXF1ZQogICAgICAgIFBOX2lzX3BlYW5vX3N5c3RlbQogICAgICAgIHBzLmNhcnJpZXIgcHMub25lIHBzLnN1Y2Nlc3NvcgogICAgICAgIGcgZgogICAgICAgIOKfqGdfYmFzZSwgZ19zdGVw4p+pCiAgICAgICAg4p+oaXRlcl9iYXNlIFBOX2lzX3BlYW5vX3N5c3RlbSBwcy5jYXJyaWVyIHBzLm9uZSBwcy5zdWNjZXNzb3IsCiAgICAgICAgIGl0ZXJfc3RlcCBQTl9pc19wZWFub19zeXN0ZW0gcHMuY2FycmllciBwcy5vbmUgcHMuc3VjY2Vzc29y4p+pCgplbmQgUGVhbm8="
+      }
     },
     {
       "id": "def:addition-on-peano-system",
@@ -5320,7 +5529,18 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "definition",
-      "text_preview": "[Addition on a Peano System] Let $(P,S,1)$ be a Peano system. For each $m P$, define the function \\[ f_m : P P \\] to be the unique function satisfying \\[ f_m(1)=S(m) n P\\;(f_m(S(n))=S(f_m(n))). \\] For $m,n P$, define \\[ "
+      "text_preview": "[Addition on a Peano System] Let $(P,S,1)$ be a Peano system. For each $m P$, define the function \\[ f_m : P P \\] to be the unique function satisfying \\[ f_m(1)=S(m) n P\\;(f_m(S(n))=S(f_m(n))). \\] For $m,n P$, define \\[ ",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "def:addition-on-peano-system",
+        "cross_ref_label": "def:addition-on-a-peano-system",
+        "module": "LRA.VolumeII.NaturalNumbers.Addition",
+        "declaration": "plus",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Addition.lean",
+        "kind": "def",
+        "code_b64": "bm9uY29tcHV0YWJsZSBkZWYgcGx1cwogICAgKHBzIDogUGVhbm9TeXN0ZW0pCiAgICAobGVmdF9pbnB1dCByaWdodF9pbnB1dCA6IHBzLmNhcnJpZXIpIDoKICAgIHBzLmNhcnJpZXIgOj0KICBpdGVyCiAgICBwcwogICAgcHMuY2FycmllcgogICAgKHBzLnN1Y2Nlc3NvciBsZWZ0X2lucHV0KQogICAgcHMuc3VjY2Vzc29yCiAgICByaWdodF9pbnB1dA=="
+      }
     },
     {
       "id": "thm:addition-well-defined-on-peano-system",
@@ -5585,7 +5805,18 @@
         "thm:addition-with-one"
       ],
       "env_name": "theorem",
-      "text_preview": "[Addition With $1$] Let $(P,S,1)$ be a Peano system. For every $m P$, \\[ m+1=S(m). \\]"
+      "text_preview": "[Addition With $1$] Let $(P,S,1)$ be a Peano system. For every $m P$, \\[ m+1=S(m). \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "thm:addition-with-one",
+        "cross_ref_label": "thm:addition-base-clause",
+        "module": "LRA.VolumeII.NaturalNumbers.Addition",
+        "declaration": "plus_base",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Addition.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBwbHVzX2Jhc2UKICAgIChwcyA6IFBlYW5vU3lzdGVtKQogICAgKGxlZnRfaW5wdXQgOiBwcy5jYXJyaWVyKSA6CiAgICBwbHVzIHBzIGxlZnRfaW5wdXQgcHMub25lID0KICAgICAgcHMuc3VjY2Vzc29yIGxlZnRfaW5wdXQgOj0KICBpdGVyX2Jhc2UKICAgIHBzCiAgICBwcy5jYXJyaWVyCiAgICAocHMuc3VjY2Vzc29yIGxlZnRfaW5wdXQpCiAgICBwcy5zdWNjZXNzb3I="
+      }
     },
     {
       "id": "thm:addition-successor-on-right",
@@ -5721,7 +5952,18 @@
         "thm:addition-successor-on-right"
       ],
       "env_name": "theorem",
-      "text_preview": "[Addition Successor on the Right] Let $(P,S,1)$ be a Peano system. For every $m,n P$, \\[ m+S(n)=S(m+n). \\]"
+      "text_preview": "[Addition Successor on the Right] Let $(P,S,1)$ be a Peano system. For every $m,n P$, \\[ m+S(n)=S(m+n). \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "thm:addition-successor-on-right",
+        "cross_ref_label": "thm:addition-successor-clause",
+        "module": "LRA.VolumeII.NaturalNumbers.Addition",
+        "declaration": "plus_step",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Addition.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBwbHVzX3N0ZXAKICAgIChwcyA6IFBlYW5vU3lzdGVtKQogICAgKGxlZnRfaW5wdXQgcmlnaHRfaW5wdXQgOiBwcy5jYXJyaWVyKSA6CiAgICBwbHVzIHBzIGxlZnRfaW5wdXQgKHBzLnN1Y2Nlc3NvciByaWdodF9pbnB1dCkgPQogICAgICBwcy5zdWNjZXNzb3IgKHBsdXMgcHMgbGVmdF9pbnB1dCByaWdodF9pbnB1dCkgOj0KICBpdGVyX3N0ZXAKICAgIHBzCiAgICBwcy5jYXJyaWVyCiAgICAocHMuc3VjY2Vzc29yIGxlZnRfaW5wdXQpCiAgICBwcy5zdWNjZXNzb3IKICAgIHJpZ2h0X2lucHV0"
+      }
     },
     {
       "id": "thm:one-plus-n",
@@ -5993,7 +6235,18 @@
         "thm:addition-associative"
       ],
       "env_name": "theorem",
-      "text_preview": "[Addition Is Associative] Let $(P,S,1)$ be a Peano system. For every $a,b,c P$, \\[ (a+b)+c=a+(b+c). \\]"
+      "text_preview": "[Addition Is Associative] Let $(P,S,1)$ be a Peano system. For every $a,b,c P$, \\[ (a+b)+c=a+(b+c). \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "thm:addition-associative",
+        "cross_ref_label": "thm:addition-is-associative",
+        "module": "LRA.VolumeII.NaturalNumbers.Addition",
+        "declaration": "addition_is_associative",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Addition.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBhZGRpdGlvbl9pc19hc3NvY2lhdGl2ZQogICAgKHBzIDogUGVhbm9TeXN0ZW0pCiAgICAobGVmdF9pbnB1dCBtaWRkbGVfaW5wdXQgcmlnaHRfaW5wdXQgOiBwcy5jYXJyaWVyKSA6CiAgICBwbHVzIHBzIChwbHVzIHBzIGxlZnRfaW5wdXQgbWlkZGxlX2lucHV0KSByaWdodF9pbnB1dCA9CiAgICAgIHBsdXMgcHMgbGVmdF9pbnB1dCAocGx1cyBwcyBtaWRkbGVfaW5wdXQgcmlnaHRfaW5wdXQpIDo9IGJ5CgogIC0tIExhbmRhdSBmaXhlcyB0aGUgZmlyc3QgdHdvIGlucHV0cyBhbmQgaW5kdWN0cyBvbiB0aGUgcmlnaHQgaW5wdXQuCiAgLS0gVGhlIHByZWRpY2F0ZSBtdXN0IGJlIHN1cHBsaWVkIGV4cGxpY2l0bHkuICBJZiBgYXBwbHlgIGlzIHVzZWQKICAtLSBiYXJlLCBMZWFuIGNhbiBpbmZlciB0aGUgd3JvbmcgcHJlZGljYXRlIGZyb20gdGhlIGVxdWFsaXR5IHRhcmdldC4KICBleGFjdAogICAgaW5kdWN0aW9uX3ByaW5jaXBsZQogICAgICBwcwogICAgICAoZnVuIGN1cnJlbnRfcmlnaHRfaW5wdXQgOiBwcy5jYXJyaWVyID0+CiAgICAgICAgcGx1cyBwcyAocGx1cyBwcyBsZWZ0X2lucHV0IG1pZGRsZV9pbnB1dCkgY3VycmVudF9yaWdodF9pbnB1dCA9CiAgICAgICAgICBwbHVzIHBzIGxlZnRfaW5wdXQgKHBsdXMgcHMgbWlkZGxlX2lucHV0IGN1cnJlbnRfcmlnaHRfaW5wdXQpKQogICAgICAoYnkKICAgICAgICBjaGFuZ2UKICAgICAgICAgIHBsdXMgcHMgKHBsdXMgcHMgbGVmdF9pbnB1dCBtaWRkbGVfaW5wdXQpIHBzLm9uZSA9CiAgICAgICAgICAgIHBsdXMgcHMgbGVmdF9pbnB1dCAocGx1cyBwcyBtaWRkbGVfaW5wdXQgcHMub25lKQogICAgICAgIHJ3IFsKICAgICAgICAgIHBsdXNfYmFzZSBwcyAocGx1cyBwcyBsZWZ0X2lucHV0IG1pZGRsZV9pbnB1dCksCiAgICAgICAgICBwbHVzX2Jhc2UgcHMgbWlkZGxlX2lucHV0LAogICAgICAgICAgcGx1c19zdGVwIHBzIGxlZnRfaW5wdXQgbWlkZGxlX2lucHV0CiAgICAgICAgXSkKICAgICAgKGJ5CiAgICAgICAgaW50cm8gY3VycmVudF9yaWdodF9pbnB1dCBpbmR1Y3Rpb25faHlwb3RoZXNpcwogICAgICAgIGNoYW5nZQogICAgICAgICAgcGx1cyBwcyAocGx1cyBwcyBsZWZ0X2lucHV0IG1pZGRsZV9pbnB1dCkgKHBzLnN1Y2Nlc3NvciBjdXJyZW50X3JpZ2h0X2lucHV0KSA9CiAgICAgICAgICAgIHBsdXMgcHMgbGVmdF9pbnB1dAogICAgICAgICAgICAgIChwbHVzIHBzIG1pZGRsZV9pbnB1dCAocHMuc3VjY2Vzc29yIGN1cnJlbnRfcmlnaHRfaW5wdXQpKQogICAgICAgIHJ3IFsKICAgICAgICAgIHBsdXNfc3RlcCBwcyAocGx1cyBwcyBsZWZ0X2lucHV0IG1pZGRsZV9pbnB1dCkgY3VycmVudF9yaWdodF9pbnB1dCwKICAgICAgICAgIHBsdXNfc3RlcCBwcyBtaWRkbGVfaW5wdXQgY3VycmVudF9yaWdodF9pbnB1dCwKICAgICAgICAgIHBsdXNfc3RlcCBwcyBsZWZ0X2lucHV0IChwbHVzIHBzIG1pZGRsZV9pbnB1dCBjdXJyZW50X3JpZ2h0X2lucHV0KSwKICAgICAgICAgIGluZHVjdGlvbl9oeXBvdGhlc2lzCiAgICAgICAgXSkKICAgICAgcmlnaHRfaW5wdXQKCgplbmQgUGVhbm8="
+      }
     },
     {
       "id": "thm:addition-commutative",
@@ -9053,7 +9306,18 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "definition",
-      "text_preview": "[Multiplication on a Peano System] Let $(P,S,1)$ be a Peano system. For each $m P$, define the function \\[ g_m : P P \\] to be the unique function satisfying \\[ g_m(1)=m n P\\;(g_m(S(n))=g_m(n)+m). \\] For $m,n P$, define \\"
+      "text_preview": "[Multiplication on a Peano System] Let $(P,S,1)$ be a Peano system. For each $m P$, define the function \\[ g_m : P P \\] to be the unique function satisfying \\[ g_m(1)=m n P\\;(g_m(S(n))=g_m(n)+m). \\] For $m,n P$, define \\",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "def:multiplication-on-peano-system",
+        "cross_ref_label": "def:multiplication-on-a-peano-system",
+        "module": "LRA.VolumeII.NaturalNumbers.Multiplication",
+        "declaration": "mul",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Multiplication.lean",
+        "kind": "def",
+        "code_b64": "bm9uY29tcHV0YWJsZSBkZWYgbXVsCiAgICAocHMgOiBQZWFub1N5c3RlbSkKICAgIChsZWZ0X2lucHV0IHJpZ2h0X2lucHV0IDogcHMuY2FycmllcikgOiBwcy5jYXJyaWVyIDo9CiAgaXRlcgogICAgcHMgcHMuY2FycmllcgogICAgbGVmdF9pbnB1dAogICAgKGZ1biBwcmV2ID0+IHBsdXMgcHMgcHJldiBsZWZ0X2lucHV0KQogICAgcmlnaHRfaW5wdXQ="
+      }
     },
     {
       "id": "thm:multiplication-well-defined-on-peano-system",
@@ -9307,7 +9571,18 @@
         "thm:multiplication-with-one"
       ],
       "env_name": "theorem",
-      "text_preview": "[Multiplication With $1$] Let $(P,S,1)$ be a Peano system. For every $m P$, \\[ m 1 = m. \\]"
+      "text_preview": "[Multiplication With $1$] Let $(P,S,1)$ be a Peano system. For every $m P$, \\[ m 1 = m. \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "thm:multiplication-with-one",
+        "cross_ref_label": "thm:multiplication-base-clause",
+        "module": "LRA.VolumeII.NaturalNumbers.Multiplication",
+        "declaration": "mul_base",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Multiplication.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBtdWxfYmFzZQogICAgKHBzIDogUGVhbm9TeXN0ZW0pCiAgICAobGVmdF9pbnB1dCA6IHBzLmNhcnJpZXIpIDoKICAgIG11bCBwcyBsZWZ0X2lucHV0IHBzLm9uZSA9IGxlZnRfaW5wdXQgOj0KICBpdGVyX2Jhc2UgcHMgcHMuY2FycmllciBsZWZ0X2lucHV0CiAgICAoZnVuIHByZXYgPT4gcGx1cyBwcyBwcmV2IGxlZnRfaW5wdXQp"
+      }
     },
     {
       "id": "thm:multiplication-successor-on-right",
@@ -9443,7 +9718,18 @@
         "thm:multiplication-successor-on-right"
       ],
       "env_name": "theorem",
-      "text_preview": "[Multiplication Successor on the Right] Let $(P,S,1)$ be a Peano system. For every $m,n P$, \\[ m S(n) = (m n) + m. \\]"
+      "text_preview": "[Multiplication Successor on the Right] Let $(P,S,1)$ be a Peano system. For every $m,n P$, \\[ m S(n) = (m n) + m. \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "thm:multiplication-successor-on-right",
+        "cross_ref_label": "thm:multiplication-successor-clause",
+        "module": "LRA.VolumeII.NaturalNumbers.Multiplication",
+        "declaration": "mul_step",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Multiplication.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBtdWxfc3RlcAogICAgKHBzIDogUGVhbm9TeXN0ZW0pCiAgICAobGVmdF9pbnB1dCByaWdodF9pbnB1dCA6IHBzLmNhcnJpZXIpIDoKICAgIG11bCBwcyBsZWZ0X2lucHV0IChwcy5zdWNjZXNzb3IgcmlnaHRfaW5wdXQpID0KICAgICAgcGx1cyBwcyAobXVsIHBzIGxlZnRfaW5wdXQgcmlnaHRfaW5wdXQpIGxlZnRfaW5wdXQgOj0KICBpdGVyX3N0ZXAgcHMgcHMuY2FycmllciBsZWZ0X2lucHV0CiAgICAoZnVuIHByZXYgPT4gcGx1cyBwcyBwcmV2IGxlZnRfaW5wdXQpCiAgICByaWdodF9pbnB1dA=="
+      }
     },
     {
       "id": "thm:one-times-n",
@@ -9573,7 +9859,18 @@
         "thm:one-times-n"
       ],
       "env_name": "theorem",
-      "text_preview": "[One Times $n$] Let $(P,S,1)$ be a Peano system. For every $n P$, \\[ 1 n = n. \\]"
+      "text_preview": "[One Times $n$] Let $(P,S,1)$ be a Peano system. For every $n P$, \\[ 1 n = n. \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "statement",
+        "label": "thm:one-times-n",
+        "cross_ref_label": "thm:mul-one-left",
+        "module": "LRA.VolumeII.NaturalNumbers.Multiplication",
+        "declaration": "mul_one_left",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Multiplication.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBtdWxfb25lX2xlZnQKICAgIChwcyA6IFBlYW5vU3lzdGVtKSAocmlnaHRfaW5wdXQgOiBwcy5jYXJyaWVyKSA6CiAgICBtdWwgcHMgcHMub25lIHJpZ2h0X2lucHV0ID0gcmlnaHRfaW5wdXQgOj0gYnkKICBzb3JyeQ=="
+      }
     },
     {
       "id": "thm:multiplication-distributes-over-addition",
@@ -9713,7 +10010,18 @@
         "thm:multiplication-distributes-over-addition"
       ],
       "env_name": "theorem",
-      "text_preview": "[Multiplication Distributes Over Addition] Let $(P,S,1)$ be a Peano system. For every $a,b,c P$, \\[ a (b+c) = (a b) + (a c). \\]"
+      "text_preview": "[Multiplication Distributes Over Addition] Let $(P,S,1)$ be a Peano system. For every $a,b,c P$, \\[ a (b+c) = (a b) + (a c). \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "statement",
+        "label": "thm:multiplication-distributes-over-addition",
+        "cross_ref_label": "thm:mul-distrib-add",
+        "module": "LRA.VolumeII.NaturalNumbers.Multiplication",
+        "declaration": "mul_distrib_add",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Multiplication.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBtdWxfZGlzdHJpYl9hZGQKICAgIChwcyA6IFBlYW5vU3lzdGVtKSAoeCB5IHogOiBwcy5jYXJyaWVyKSA6CiAgICBtdWwgcHMgeCAocGx1cyBwcyB5IHopID0KICAgICAgcGx1cyBwcyAobXVsIHBzIHggeSkgKG11bCBwcyB4IHopIDo9IGJ5CiAgc29ycnk="
+      }
     },
     {
       "id": "thm:left-distributivity-of-multiplication-over-addition",
@@ -9982,7 +10290,18 @@
         "thm:multiplication-associative"
       ],
       "env_name": "theorem",
-      "text_preview": "[Multiplication Is Associative] Let $(P,S,1)$ be a Peano system. For every $a,b,c P$, \\[ (a b) c = a (b c). \\]"
+      "text_preview": "[Multiplication Is Associative] Let $(P,S,1)$ be a Peano system. For every $a,b,c P$, \\[ (a b) c = a (b c). \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "statement",
+        "label": "thm:multiplication-associative",
+        "cross_ref_label": "thm:multiplication-is-associative",
+        "module": "LRA.VolumeII.NaturalNumbers.Multiplication",
+        "declaration": "mul_associative",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Multiplication.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBtdWxfYXNzb2NpYXRpdmUKICAgIChwcyA6IFBlYW5vU3lzdGVtKSAoeCB5IHogOiBwcy5jYXJyaWVyKSA6CiAgICBtdWwgcHMgKG11bCBwcyB4IHkpIHogPSBtdWwgcHMgeCAobXVsIHBzIHkgeikgOj0gYnkKICBzb3JyeQ=="
+      }
     },
     {
       "id": "thm:multiplication-commutative",
@@ -10120,7 +10439,18 @@
         "thm:multiplication-commutative"
       ],
       "env_name": "theorem",
-      "text_preview": "[Multiplication Is Commutative] Let $(P,S,1)$ be a Peano system. For every $a,b P$, \\[ a b = b a. \\]"
+      "text_preview": "[Multiplication Is Commutative] Let $(P,S,1)$ be a Peano system. For every $a,b P$, \\[ a b = b a. \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "statement",
+        "label": "thm:multiplication-commutative",
+        "cross_ref_label": "thm:multiplication-is-commutative",
+        "module": "LRA.VolumeII.NaturalNumbers.Multiplication",
+        "declaration": "mul_commutative",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Multiplication.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSBtdWxfY29tbXV0YXRpdmUKICAgIChwcyA6IFBlYW5vU3lzdGVtKSAoeCB5IDogcHMuY2FycmllcikgOgogICAgbXVsIHBzIHggeSA9IG11bCBwcyB5IHggOj0gYnkKICBzb3JyeQoKZW5kIFBlYW5v"
+      }
     },
     {
       "id": "def:strict-less-than-on-peano-system",
@@ -10254,7 +10584,18 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "definition",
-      "text_preview": "[Strict Less Than on a Peano System] Let $(P,S,1)$ be a Peano system, and let $a,b P$. One writes \\[ a<b \\] exactly when there exists $c P$ such that \\[ b=a+c. \\]"
+      "text_preview": "[Strict Less Than on a Peano System] Let $(P,S,1)$ be a Peano system, and let $a,b P$. One writes \\[ a<b \\] exactly when there exists $c P$ such that \\[ b=a+c. \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "def:strict-less-than-on-peano-system",
+        "cross_ref_label": "def:lt-on-a-peano-system",
+        "module": "LRA.VolumeII.NaturalNumbers.Order",
+        "declaration": "lt",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Order.lean",
+        "kind": "def",
+        "code_b64": "ZGVmIGx0CiAgICAocHMgOiBQZWFub1N5c3RlbSkKICAgICh4IHkgOiBwcy5jYXJyaWVyKSA6IFByb3AgOj0KICDiiIMgayA6IHBzLmNhcnJpZXIsIHkgPSBwbHVzIHBzIHggaw=="
+      }
     },
     {
       "id": "def:less-than-or-equal-on-peano-system",
@@ -10386,7 +10727,18 @@
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "definition",
-      "text_preview": "[Less Than or Equal on a Peano System] Let $(P,S,1)$ be a Peano system, and let $a,b P$. One writes \\[ a b \\] exactly when \\[ a<b a=b. \\]"
+      "text_preview": "[Less Than or Equal on a Peano System] Let $(P,S,1)$ be a Peano system, and let $a,b P$. One writes \\[ a b \\] exactly when \\[ a<b a=b. \\]",
+      "verification": {
+        "system": "Lean 4",
+        "status": "checked",
+        "label": "def:less-than-or-equal-on-peano-system",
+        "cross_ref_label": "def:le-on-a-peano-system",
+        "module": "LRA.VolumeII.NaturalNumbers.Order",
+        "declaration": "le",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Order.lean",
+        "kind": "def",
+        "code_b64": "ZGVmIGxlCiAgICAocHMgOiBQZWFub1N5c3RlbSkKICAgICh4IHkgOiBwcy5jYXJyaWVyKSA6IFByb3AgOj0KICBsdCBwcyB4IHkg4oioIHggPSB5"
+      }
     },
     {
       "id": "thm:order-reflexive-on-peano-system",
@@ -12645,7 +12997,18 @@
         "thm:well-ordering-principle"
       ],
       "env_name": "theorem",
-      "text_preview": "[Well-Ordering Principle] Let $(P,S,1)$ be a Peano system. Every nonempty subset of $P$ has a least element with respect to the order $ $ on $P$."
+      "text_preview": "[Well-Ordering Principle] Let $(P,S,1)$ be a Peano system. Every nonempty subset of $P$ has a least element with respect to the order $ $ on $P$.",
+      "verification": {
+        "system": "Lean 4",
+        "status": "statement",
+        "label": "thm:well-ordering-principle",
+        "cross_ref_label": "thm:well-ordering-principle",
+        "module": "LRA.VolumeII.NaturalNumbers.Order",
+        "declaration": "well_ordering",
+        "source_path": "LRA/VolumeII/NaturalNumbers/Order.lean",
+        "kind": "theorem",
+        "code_b64": "dGhlb3JlbSB3ZWxsX29yZGVyaW5nCiAgICAocHMgOiBQZWFub1N5c3RlbSkKICAgIChQIDogcHMuY2FycmllciDihpIgUHJvcCkKICAgIChQX25vbmVtcHR5IDog4oiDIGVsZW1lbnQgOiBwcy5jYXJyaWVyLCBQIGVsZW1lbnQpIDoKICAgIOKIgyBtaW5pbXVtIDogcHMuY2FycmllciwgaXNfbWluaW11bSBwcyBQIG1pbmltdW0gOj0gYnkKICBzb3JyeQoKZW5kIFBlYW5v"
+      }
     },
     {
       "id": "thm:induction-well-ordering-equivalence",
