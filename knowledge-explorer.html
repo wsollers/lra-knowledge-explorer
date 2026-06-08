@@ -72,6 +72,12 @@ a{color:#93c5fd}
 .proof-body .katex-display{max-width:100%;overflow-x:auto;overflow-y:visible;padding:.3rem 0;margin:.5rem 0}
 .proof-empty{color:var(--muted);font-style:italic}
 .proof-pre{white-space:pre-wrap;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:12px;overflow:auto}
+.verification-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:12px}
+.verification-field{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:9px 10px}
+.verification-status{display:inline-flex;width:auto;border-radius:999px;padding:3px 9px;border:1px solid rgba(148,163,184,.4);background:rgba(148,163,184,.12);color:#cbd5e1;font-size:.78rem;font-weight:800;text-transform:uppercase}
+.verification-status.checked{border-color:rgba(34,197,94,.55);background:rgba(34,197,94,.14);color:#bbf7d0}
+.verification-status.statement,.verification-status.incomplete{border-color:rgba(245,158,11,.55);background:rgba(245,158,11,.14);color:#fde68a}
+.verification-status.pending,.verification-status.not_started{border-color:rgba(148,163,184,.45);background:rgba(148,163,184,.12);color:#cbd5e1}
 .proof-attempt{margin-bottom:16px}
 .proof-attempt h3{font-size:.95rem;margin:0 0 8px;color:#e2e8f0}
 </style>
@@ -152,6 +158,7 @@ a{color:#93c5fd}
       <button class="proof-tab active" data-proof-tab="standard">Standard</button>
       <button class="proof-tab" data-proof-tab="detailed">Detailed</button>
       <button class="proof-tab" data-proof-tab="mine">Mine</button>
+      <button class="proof-tab" data-proof-tab="verification">Verification</button>
     </div>
     <div class="proof-body" id="proofModalBody"></div>
   </div>
@@ -230,7 +237,25 @@ function proofBundle(n){
   const detailed=proofSection(raw,'detailed');
   return{standard,detailed,mine:proofVaultRecords(n)};
 }
-function hasAnyProof(n){const b=proofBundle(n);return!!(b.standard||b.detailed||b.mine.length);}
+function verificationBundle(n){
+  const v=n.verification||{};
+  const code=decodeB64(v.lean_code_b64||v.code_b64||n.lean_code_b64||n.verification_code_b64)
+    ||v.lean_code||v.code||n.lean_code||n.verification_code||'';
+  return{
+    system:v.system||n.verification_system||'Lean 4',
+    status:v.status||n.verification_status||'pending',
+    module:v.module||n.lean_module||n.verification_module||'',
+    declaration:v.declaration||v.decl||n.lean_decl||n.verification_decl||'',
+    source:v.source_path||v.source||n.lean_source||n.verification_source||'',
+    label:v.label||n.verification_label||n.label||n.id||'',
+    code
+  };
+}
+function hasVerification(n){
+  const v=n.verification||{};
+  return!!(v.status||v.module||v.declaration||v.decl||v.source_path||v.source||v.code_b64||v.lean_code_b64||v.lean_code||v.code||n.verification_status||n.lean_module||n.verification_module||n.lean_decl||n.verification_decl||n.lean_source||n.verification_source||n.lean_code_b64||n.verification_code_b64||n.lean_code||n.verification_code);
+}
+function hasAnyProof(n){const b=proofBundle(n);return!!(b.standard||b.detailed||b.mine.length||hasVerification(n));}
 function renderMine(records){
   if(!records.length)return'<div class="proof-empty">No proof-vault attempt is indexed for this theorem yet.</div>';
   return records.map((r,i)=>{
@@ -242,10 +267,27 @@ function renderMine(records){
     return`<div class="proof-attempt"><h3>${esc(title)}</h3>${status}${path}${images?`<div style="margin:8px 0">${images}</div>`:''}${body}</div>`;
   }).join('');
 }
+function renderVerification(n){
+  const v=verificationBundle(n);
+  if(!hasVerification(n))return'<div class="proof-empty">No formal verification target is recorded for this item yet.</div>';
+  const statusClass=String(v.status||'pending').toLowerCase().replace(/[^a-z0-9_-]+/g,'_');
+  const fields=[
+    ['System',esc(v.system)],
+    ['Status',`<span class="verification-status ${esc(statusClass)}">${esc(v.status||'pending')}</span>`],
+    ['Module',esc(v.module)],
+    ['Declaration',esc(v.declaration)],
+    ['Source',esc(v.source)],
+    ['Label',esc(v.label)]
+  ].filter(([,value])=>value);
+  const meta=`<div class="verification-meta">${fields.map(([label,value])=>`<div class="verification-field"><div class="label">${esc(label)}</div><div class="value">${value}</div></div>`).join('')}</div>`;
+  const code=v.code?`<pre class="proof-pre"><code>${esc(v.code)}</code></pre>`:'<div class="proof-empty">No formal code is available in the explorer record yet.</div>';
+  return meta+code;
+}
 function renderProofTab(){
   const n=state.activeProofNode;if(!n)return;
   const b=proofBundle(n);
   els.proofModal.querySelectorAll('.proof-tab').forEach(btn=>btn.classList.toggle('active',btn.dataset.proofTab===state.activeProofTab));
+  if(state.activeProofTab==='verification'){els.proofModalBody.innerHTML=renderVerification(n);return;}
   if(state.activeProofTab==='mine'){els.proofModalBody.innerHTML=renderMine(b.mine);return;}
   const text=state.activeProofTab==='detailed'?b.detailed:b.standard;
   els.proofModalBody.innerHTML=text?texToHtml(text):`<div class="proof-empty">No ${state.activeProofTab} proof is available for this theorem yet.</div>`;
@@ -422,7 +464,9 @@ function renderDetails(n){
   add('Proof type',n.proof_type);
   if(hasAnyProof(n)){
     const mineCount=proofVaultRecords(n).length;
-    blocks.push(`<div class="card proof-panel"><div class="label">Proofs</div><div class="value"><button class="link-button" data-open-proofs="${esc(n.id)}">Open proofs</button>${mineCount?` <span class="tiny">${mineCount} vault attempt${mineCount===1?'':'s'}</span>`:''}</div></div>`);
+    const label=hasVerification(n)?'Proofs and Verification':'Proofs';
+    const buttonText=hasVerification(n)?'Open proofs and verification':'Open proofs';
+    blocks.push(`<div class="card proof-panel"><div class="label">${label}</div><div class="value"><button class="link-button" data-open-proofs="${esc(n.id)}">${buttonText}</button>${mineCount?` <span class="tiny">${mineCount} vault attempt${mineCount===1?'':'s'}</span>`:''}</div></div>`);
   }
   addProof('Proof sketch',n.proof_sketch);
   addChips('Depends on',n.depends_on_ids||n.dependency_refs,'dep');

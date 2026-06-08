@@ -32,3 +32,20 @@ python run_extraction.py --repo-dir /path/to/Learning-Real-Analysis
 The extraction scripts expect the LaTeX volumes to live in `Learning-Real-Analysis`. Point `--repo-dir` at your local clone of the monorepo.
 
 The HTML viewers are self-contained and load `knowledge.json` and `graph-edges.json` from the same directory.
+
+## Verification Fields
+
+Explorer nodes may include formal verification metadata. The UI accepts either
+a nested `verification` object or the equivalent flat fields:
+
+- `verification.system` or `verification_system`
+- `verification.status` or `verification_status`
+- `verification.module`, `lean_module`, or `verification_module`
+- `verification.declaration`, `lean_decl`, or `verification_decl`
+- `verification.source_path`, `lean_source`, or `verification_source`
+- `verification.lean_code_b64`, `verification.code_b64`, `lean_code_b64`,
+  or `verification_code_b64`
+
+The proof modal renders these records in the `Verification` tab. Use `checked`
+only for declarations that are accepted by the formal build without
+placeholders for that declaration; use `statement` or `pending` otherwise.
