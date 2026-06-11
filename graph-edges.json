@@ -1,927 +1,107 @@
 [
   {
-    "from": "ax:peano-system-existence",
-    "to": "def:peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:non-one-elements-have-a-predecessor",
-    "to": "def:peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:non-one-elements-have-a-predecessor",
-    "to": "thm:every-element-is-one-or-a-successor",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:one-is-unique-non-successor",
-    "to": "ax:peano-one-not-successor",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:one-is-unique-non-successor",
-    "to": "cor:predecessor-exists-unique-away-from-one",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:predecessor-exists-unique-away-from-one",
-    "to": "ax:peano-successor-injective",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:predecessor-exists-unique-away-from-one",
-    "to": "cor:non-one-elements-have-a-predecessor",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:predecessor-exists-unique-away-from-one",
-    "to": "def:peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:unique-predecessor-characterization-away-from-one",
-    "to": "ax:peano-one-not-successor",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:unique-predecessor-characterization-away-from-one",
-    "to": "cor:predecessor-exists-unique-away-from-one",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:unique-predecessor-characterization-away-from-one",
-    "to": "def:peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:uniqueness-of-binary-iterator-operations",
-    "to": "lem:uniqueness-of-iterator-functions",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:general-recursive-function",
-    "to": "def:stage-dependent-step-rule",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:inductive-subset-of-peano-system",
-    "to": "def:peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:inductive-subset-of-peano-system",
-    "to": "def:successor-closed-subset",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:iteration-of-a-self-map",
-    "to": "def:iterator-generated-function",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:iterator-data-on-peano-system",
-    "to": "def:peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:iterator-generated-function",
-    "to": "thm:peano-iterator-theorem",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:iterator-relation",
-    "to": "def:iterator-data-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:minimal-iterator-relation",
-    "to": "def:iterator-relation",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:predecessor-in-peano-system",
-    "to": "def:peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:stage-dependent-step-rule",
-    "to": "def:peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:successor-closed-subset",
-    "to": "def:peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:existence-of-iterator-function",
-    "to": "lem:minimal-iterator-relation-complete",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:existence-of-iterator-function",
-    "to": "lem:minimal-iterator-relation-deterministic",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:forced-values-are-unique",
-    "to": "lem:iterator-relation-consistency",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:iterator-relation-consistency",
-    "to": "def:minimal-iterator-relation",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:minimal-iterator-relation-complete",
-    "to": "lem:iterator-relation-consistency",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:minimal-iterator-relation-complete",
-    "to": "thm:induction-principle-for-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:minimal-iterator-relation-deterministic",
-    "to": "lem:forced-values-are-unique",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:uniqueness-of-general-recursive-functions",
-    "to": "def:general-recursive-function",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:uniqueness-of-general-recursive-functions",
-    "to": "thm:induction-principle-for-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:uniqueness-of-iterator-functions",
-    "to": "def:iterator-data-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:uniqueness-of-iterator-functions",
-    "to": "thm:induction-principle-for-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:every-element-is-one-or-a-successor",
-    "to": "ax:peano-one-in-n",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:every-element-is-one-or-a-successor",
-    "to": "ax:peano-successor-closure",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:every-element-is-one-or-a-successor",
-    "to": "def:peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:every-element-is-one-or-a-successor",
-    "to": "thm:induction-principle-for-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:general-recursion-by-state-encoding",
-    "to": "def:stage-dependent-step-rule",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:general-recursion-by-state-encoding",
-    "to": "thm:peano-iterator-theorem",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:general-recursion-theorem-for-peano-system",
-    "to": "lem:uniqueness-of-general-recursive-functions",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:general-recursion-theorem-for-peano-system",
-    "to": "thm:general-recursion-by-state-encoding",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:induction-principle-for-peano-system",
-    "to": "ax:peano-induction",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:induction-principle-for-peano-system",
-    "to": "def:peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:iterator-base-value",
-    "to": "def:iterator-generated-function",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:iterator-successor-step",
-    "to": "def:iterator-generated-function",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:no-object-is-its-own-successor",
-    "to": "ax:peano-one-not-successor",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:no-object-is-its-own-successor",
-    "to": "ax:peano-successor-injective",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:no-object-is-its-own-successor",
-    "to": "thm:induction-principle-for-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:peano-iterator-theorem",
-    "to": "lem:existence-of-iterator-function",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:peano-iterator-theorem",
-    "to": "lem:uniqueness-of-iterator-functions",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:successor-inequality-reflection",
-    "to": "ax:peano-successor-injective",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:successor-inequality-reflection",
-    "to": "def:peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:uniqueness-of-peano-systems-up-to-isomorphism",
-    "to": "def:peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:uniqueness-of-peano-systems-up-to-isomorphism",
-    "to": "thm:general-recursion-theorem-for-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:exponentiation-on-peano-system",
-    "to": "def:multiplication-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:less-than-or-equal-on-peano-system",
-    "to": "def:strict-less-than-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:multiplication-on-peano-system",
-    "to": "def:addition-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:strict-less-than-on-peano-system",
-    "to": "def:addition-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-associative",
-    "to": "thm:addition-successor-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-associative",
-    "to": "thm:addition-with-one",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-commutative",
-    "to": "thm:addition-associative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-commutative",
-    "to": "thm:addition-successor-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-commutative",
-    "to": "thm:addition-with-one",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-commutative",
-    "to": "thm:one-plus-n",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-left-cancellation",
-    "to": "thm:addition-associative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-left-cancellation",
-    "to": "thm:addition-commutative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-left-cancellation",
-    "to": "thm:addition-successor-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-left-cancellation",
-    "to": "thm:addition-with-one",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-left-cancellation",
-    "to": "thm:one-plus-n",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-preserves-order-on-left",
-    "to": "thm:addition-commutative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-preserves-order-on-left",
-    "to": "thm:addition-preserves-order-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-preserves-order-on-right",
-    "to": "def:less-than-or-equal-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-preserves-order-on-right",
-    "to": "def:strict-less-than-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-preserves-order-on-right",
-    "to": "thm:addition-associative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-right-cancellation",
-    "to": "thm:addition-commutative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-right-cancellation",
-    "to": "thm:addition-left-cancellation",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-successor-on-right",
-    "to": "def:addition-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-well-defined-on-peano-system",
-    "to": "def:addition-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:addition-with-one",
-    "to": "def:addition-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:exponent-power-law",
-    "to": "def:exponentiation-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:exponent-power-law",
-    "to": "thm:exponent-sum-law",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:exponent-power-law",
-    "to": "thm:multiplication-successor-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:exponent-product-law",
-    "to": "def:exponentiation-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:exponent-product-law",
-    "to": "thm:multiplication-associative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:exponent-product-law",
-    "to": "thm:multiplication-commutative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:exponent-sum-law",
-    "to": "def:exponentiation-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:exponent-sum-law",
-    "to": "thm:multiplication-associative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:exponentiation-well-defined-on-peano-system",
-    "to": "def:multiplication-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:induction-from-arbitrary-base",
-    "to": "def:less-than-or-equal-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:induction-well-ordering-equivalence",
-    "to": "thm:well-ordering-principle",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:left-distributivity-of-multiplication-over-addition",
-    "to": "thm:addition-commutative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:left-distributivity-of-multiplication-over-addition",
-    "to": "thm:multiplication-commutative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:left-distributivity-of-multiplication-over-addition",
-    "to": "thm:multiplication-distributes-over-addition",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-associative",
-    "to": "thm:multiplication-distributes-over-addition",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-associative",
-    "to": "thm:multiplication-successor-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-associative",
-    "to": "thm:multiplication-with-one",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-commutative",
-    "to": "thm:addition-commutative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-commutative",
-    "to": "thm:multiplication-distributes-over-addition",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-commutative",
-    "to": "thm:multiplication-successor-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-commutative",
-    "to": "thm:one-times-n",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-distributes-over-addition",
-    "to": "thm:addition-associative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-distributes-over-addition",
-    "to": "thm:addition-commutative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-distributes-over-addition",
-    "to": "thm:multiplication-successor-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-preserves-and-reflects-strict-order",
-    "to": "def:multiplication-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-preserves-and-reflects-strict-order",
-    "to": "def:strict-less-than-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-preserves-and-reflects-strict-order",
-    "to": "thm:addition-left-cancellation",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-preserves-and-reflects-strict-order",
-    "to": "thm:addition-preserves-order-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-preserves-and-reflects-strict-order",
-    "to": "thm:multiplication-commutative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-preserves-and-reflects-strict-order",
-    "to": "thm:multiplication-distributes-over-addition",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-successor-on-right",
-    "to": "def:addition-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-successor-on-right",
-    "to": "def:multiplication-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-well-defined-on-peano-system",
-    "to": "def:addition-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-well-defined-on-peano-system",
-    "to": "def:multiplication-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiplication-with-one",
-    "to": "def:multiplication-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-additive-structure",
-    "to": "thm:addition-associative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-additive-structure",
-    "to": "thm:addition-commutative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-additive-structure",
-    "to": "thm:addition-left-cancellation",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-additive-structure",
-    "to": "thm:addition-right-cancellation",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-is-semiring",
-    "to": "thm:multiplication-distributes-over-addition",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-is-semiring",
-    "to": "thm:n-additive-structure",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-is-semiring",
-    "to": "thm:n-multiplicative-monoid",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-less-than-2-to-n",
-    "to": "def:exponentiation-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-less-than-2-to-n",
-    "to": "def:strict-less-than-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-less-than-2-to-n",
-    "to": "thm:addition-preserves-order-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-less-than-2-to-n",
-    "to": "thm:multiplication-distributes-over-addition",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-multiplicative-monoid",
-    "to": "thm:multiplication-associative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-multiplicative-monoid",
-    "to": "thm:multiplication-commutative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-multiplicative-monoid",
-    "to": "thm:multiplication-with-one",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:n-multiplicative-monoid",
-    "to": "thm:one-times-n",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:no-natural-number-equals-itself-plus-a-natural-number",
-    "to": "thm:addition-successor-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:no-natural-number-equals-itself-plus-a-natural-number",
-    "to": "thm:addition-with-one",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:one-plus-n",
-    "to": "thm:addition-successor-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:one-plus-n",
-    "to": "thm:addition-with-one",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:one-times-n",
-    "to": "thm:multiplication-successor-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:one-times-n",
-    "to": "thm:multiplication-with-one",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:order-antisymmetric-on-peano-system",
-    "to": "def:less-than-or-equal-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:order-antisymmetric-on-peano-system",
-    "to": "def:strict-less-than-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:order-antisymmetric-on-peano-system",
-    "to": "thm:addition-associative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:order-antisymmetric-on-peano-system",
-    "to": "thm:addition-left-cancellation",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:order-reflexive-on-peano-system",
-    "to": "def:less-than-or-equal-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:order-transitive-on-peano-system",
-    "to": "def:less-than-or-equal-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:order-transitive-on-peano-system",
-    "to": "def:strict-less-than-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:order-transitive-on-peano-system",
-    "to": "thm:addition-associative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:powers-with-common-base-preserve-strict-order",
-    "to": "def:exponentiation-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:powers-with-common-base-preserve-strict-order",
-    "to": "thm:exponent-sum-law",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:powers-with-common-base-preserve-strict-order",
-    "to": "thm:multiplication-preserves-and-reflects-strict-order",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:powers-with-common-exponent-preserve-strict-order",
-    "to": "def:exponentiation-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:powers-with-common-exponent-preserve-strict-order",
-    "to": "thm:multiplication-preserves-and-reflects-strict-order",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:strict-order-successor-characterization",
-    "to": "def:less-than-or-equal-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:strict-order-successor-characterization",
-    "to": "def:strict-less-than-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:strict-order-successor-characterization",
-    "to": "thm:addition-associative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:strict-order-successor-characterization",
-    "to": "thm:addition-commutative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:strict-order-successor-characterization",
-    "to": "thm:addition-successor-on-right",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:strict-order-successor-characterization",
-    "to": "thm:addition-with-one",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:strong-induction-on-peano-system",
-    "to": "def:strict-less-than-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:strong-induction-on-peano-system",
-    "to": "thm:trichotomy-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:trichotomy-on-peano-system",
-    "to": "def:less-than-or-equal-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:trichotomy-on-peano-system",
-    "to": "def:strict-less-than-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:trichotomy-on-peano-system",
-    "to": "thm:order-antisymmetric-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:trichotomy-on-peano-system",
-    "to": "thm:order-reflexive-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:trichotomy-on-peano-system",
-    "to": "thm:order-transitive-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:trichotomy-on-peano-system",
-    "to": "thm:strict-order-successor-characterization",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:well-ordering-principle",
-    "to": "def:less-than-or-equal-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:well-ordering-principle",
-    "to": "thm:trichotomy-on-peano-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:n-positive",
-    "to": "def:ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:n-positive",
-    "to": "thm:one-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:q-dense-in-itself",
-    "to": "thm:between-any-two-rationals-is-a-rational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:q-has-no-adjacent-points",
-    "to": "thm:between-any-two-rationals-is-a-rational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:sb-limit-irrational",
-    "to": "lem:sb-denom-growth",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:sb-limit-irrational",
-    "to": "thm:farey-neighbor-theorem",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:sb-limit-irrational",
-    "to": "thm:sqrt2-irrational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:sb-path-limit",
-    "to": "prop:sb-unique-point",
+    "from": "def:bounded-sequence-q",
+    "to": "thm:cauchy-bounded-q",
     "kind": "depends_on"
   },
   {
     "from": "def:bounded-sequence-q",
-    "to": "def:rational-sequence",
+    "to": "thm:convergent-bounded-q",
     "kind": "depends_on"
   },
   {
     "from": "def:cauchy-equivalence",
-    "to": "def:cauchy-rational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:cauchy-equivalence",
-    "to": "def:convergent-rational-sequence",
+    "to": "thm:cauchy-equiv-preserved-operations",
     "kind": "depends_on"
   },
   {
     "from": "def:cauchy-rational",
-    "to": "def:rational-sequence",
+    "to": "thm:cauchy-bounded-q",
     "kind": "depends_on"
   },
   {
     "from": "def:cauchy-rational",
-    "to": "thm:q-is-ordered-field",
+    "to": "thm:cauchy-closed-operations-q",
     "kind": "depends_on"
   },
   {
     "from": "def:convergent-rational-sequence",
-    "to": "def:rational-sequence",
+    "to": "thm:convergent-bounded-q",
     "kind": "depends_on"
   },
   {
     "from": "def:convergent-rational-sequence",
-    "to": "thm:archimedean-q",
+    "to": "thm:limit-unique-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:convergent-rational-sequence",
+    "to": "thm:subsequence-convergence-q",
     "kind": "depends_on"
   },
   {
     "from": "def:dyadic-rational",
-    "to": "def:rational-numbers",
+    "to": "thm:dyadic-midpoint-closure",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:dyadic-rational",
+    "to": "thm:dyadic-rationals-are-rational",
     "kind": "depends_on"
   },
   {
     "from": "def:farey-sequence",
-    "to": "def:mediant",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:farey-sequence",
-    "to": "def:rational-numbers",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:farey-sequence",
-    "to": "thm:fraction-pair-equivalence",
+    "to": "thm:farey-mediant-property",
     "kind": "depends_on"
   },
   {
     "from": "def:mediant",
-    "to": "def:rational-operations",
+    "to": "thm:mediant-inequality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:mediant",
+    "to": "thm:stern-brocot-enumeration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:ordered-field",
+    "to": "cor:n-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:ordered-field",
+    "to": "thm:fraction-order-comparison-general",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:ordered-field",
+    "to": "thm:inverse-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:ordered-field",
+    "to": "thm:multiply-negative",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:ordered-field",
+    "to": "thm:multiply-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:ordered-field",
+    "to": "thm:positive-fraction-iff-positive-product",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:ordered-field",
+    "to": "thm:squares-nonnegative",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rational-numbers",
+    "to": "thm:dyadic-rationals-are-rational",
     "kind": "depends_on"
   },
   {
@@ -936,327 +116,172 @@
   },
   {
     "from": "def:rational-sequence",
-    "to": "def:rational-numbers",
+    "to": "def:bounded-sequence-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rational-sequence",
+    "to": "def:subsequence-q",
     "kind": "depends_on"
   },
   {
     "from": "def:subsequence-q",
-    "to": "def:rational-sequence",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:first-grid-point-crossing",
-    "to": "thm:rational-square-bracketing-grid",
+    "to": "thm:subsequence-convergence-q",
     "kind": "depends_on"
   },
   {
     "from": "lem:mediant-gap",
-    "to": "thm:mediant-inequality",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:rational-perturbation-lemma",
-    "to": "lem:rational-upper-lower-perturbation",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:rational-square-bracketing",
-    "to": "thm:q-is-ordered-field",
+    "to": "thm:stern-brocot-enumeration",
     "kind": "depends_on"
   },
   {
     "from": "lem:rational-upper-lower-perturbation",
-    "to": "thm:q-has-no-minimum-positive-element",
+    "to": "lem:rational-perturbation-lemma",
     "kind": "depends_on"
   },
   {
     "from": "lem:sb-denom-growth",
-    "to": "thm:farey-neighbor-theorem",
+    "to": "cor:sb-limit-irrational",
     "kind": "depends_on"
   },
   {
-    "from": "lem:sb-length-zero",
-    "to": "lem:sb-denom-growth",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:sb-length-zero",
-    "to": "thm:archimedean-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:sb-length-zero",
-    "to": "thm:farey-gap",
-    "kind": "depends_on"
-  },
-  {
-    "from": "prop:sb-unique-point",
+    "from": "lem:sb-denom-growth",
     "to": "lem:sb-length-zero",
     "kind": "depends_on"
   },
   {
-    "from": "thm:archimedean-q",
-    "to": "cor:n-positive",
+    "from": "lem:sb-length-zero",
+    "to": "prop:sb-unique-point",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:sb-unique-point",
+    "to": "cor:sb-path-limit",
     "kind": "depends_on"
   },
   {
     "from": "thm:archimedean-q",
-    "to": "thm:q-is-ordered-field",
+    "to": "lem:sb-length-zero",
     "kind": "depends_on"
   },
   {
     "from": "thm:between-any-two-rationals-is-a-rational",
-    "to": "thm:q-is-ordered-field",
+    "to": "cor:q-dense-in-itself",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:between-any-two-rationals-is-a-rational",
+    "to": "cor:q-has-no-adjacent-points",
     "kind": "depends_on"
   },
   {
     "from": "thm:cauchy-bounded-q",
-    "to": "def:bounded-sequence-q",
+    "to": "thm:cauchy-closed-operations-q",
     "kind": "depends_on"
   },
   {
     "from": "thm:cauchy-bounded-q",
-    "to": "def:cauchy-rational",
+    "to": "thm:cauchy-equiv-preserved-operations",
     "kind": "depends_on"
   },
   {
     "from": "thm:cauchy-closed-operations-q",
-    "to": "def:cauchy-rational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:cauchy-closed-operations-q",
-    "to": "thm:cauchy-bounded-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:cauchy-equiv-preserved-operations",
-    "to": "def:cauchy-equivalence",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:cauchy-equiv-preserved-operations",
-    "to": "thm:cauchy-bounded-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:cauchy-equiv-preserved-operations",
-    "to": "thm:cauchy-closed-operations-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:cauchy-equivalence-is-equivalence",
-    "to": "def:cauchy-equivalence",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:cauchy-equivalence-is-equivalence",
-    "to": "thm:cauchy-closed-operations-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:cauchy-not-convergent-q",
-    "to": "def:cauchy-rational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:cauchy-not-convergent-q",
-    "to": "thm:sqrt2-irrational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:convergent-bounded-q",
-    "to": "def:bounded-sequence-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:convergent-bounded-q",
-    "to": "def:convergent-rational-sequence",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:convergent-implies-cauchy-q",
-    "to": "def:cauchy-rational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:convergent-implies-cauchy-q",
-    "to": "def:convergent-rational-sequence",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:dyadic-approximation-error-bound",
-    "to": "def:dyadic-rational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:dyadic-approximation-error-bound",
-    "to": "thm:archimedean-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:dyadic-midpoint-closure",
-    "to": "def:dyadic-rational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:dyadic-midpoint-closure",
-    "to": "thm:dyadic-rationals-are-rational",
+    "to": "thm:cauchy-equiv-preserved-operations",
     "kind": "depends_on"
   },
   {
     "from": "thm:dyadic-rationals-are-rational",
-    "to": "def:dyadic-rational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:dyadic-rationals-are-rational",
-    "to": "def:rational-numbers",
+    "to": "thm:dyadic-midpoint-closure",
     "kind": "depends_on"
   },
   {
     "from": "thm:farey-gap",
-    "to": "thm:farey-neighbor-theorem",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:farey-mediant-property",
-    "to": "def:farey-sequence",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:farey-mediant-property",
-    "to": "thm:mediant-inequality",
+    "to": "lem:sb-length-zero",
     "kind": "depends_on"
   },
   {
     "from": "thm:farey-neighbor-theorem",
-    "to": "def:farey-sequence",
+    "to": "cor:sb-limit-irrational",
     "kind": "depends_on"
   },
   {
     "from": "thm:farey-neighbor-theorem",
-    "to": "def:mediant",
+    "to": "lem:sb-denom-growth",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:farey-neighbor-theorem",
+    "to": "thm:farey-gap",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:farey-neighbor-theorem",
+    "to": "thm:stern-brocot-enumeration",
     "kind": "depends_on"
   },
   {
     "from": "thm:fraction-order-comparison-general",
-    "to": "def:ordered-field",
+    "to": "thm:fraction-order-comparison-positive-denominator-product",
     "kind": "depends_on"
   },
   {
-    "from": "thm:fraction-order-comparison-general",
-    "to": "thm:multiply-negative",
+    "from": "thm:inverse-positive",
+    "to": "thm:positive-fraction-iff-positive-product",
     "kind": "depends_on"
   },
   {
-    "from": "thm:fraction-order-comparison-general",
-    "to": "thm:multiply-positive",
+    "from": "thm:inverse-positive",
+    "to": "thm:reciprocal-order-for-positive-elements",
     "kind": "depends_on"
   },
   {
-    "from": "thm:fraction-order-comparison-positive-denominator-product",
+    "from": "thm:mediant-inequality",
+    "to": "lem:mediant-gap",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:mediant-inequality",
+    "to": "thm:farey-mediant-property",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiply-negative",
     "to": "thm:fraction-order-comparison-general",
     "kind": "depends_on"
   },
   {
-    "from": "thm:fraction-order-comparison-positive-denominator-product",
-    "to": "thm:multiply-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:inverse-positive",
-    "to": "def:ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:inverse-positive",
-    "to": "thm:one-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:inverse-positive",
-    "to": "thm:squares-nonnegative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:limit-unique-q",
-    "to": "def:convergent-rational-sequence",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:limit-unique-q",
-    "to": "thm:q-is-ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:mediant-inequality",
-    "to": "def:mediant",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:mediant-inequality",
-    "to": "thm:q-is-ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiply-negative",
-    "to": "def:ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiply-negative",
-    "to": "thm:multiply-positive",
+    "from": "thm:multiply-positive",
+    "to": "thm:fraction-order-comparison-general",
     "kind": "depends_on"
   },
   {
     "from": "thm:multiply-positive",
-    "to": "def:ordered-field",
+    "to": "thm:fraction-order-comparison-positive-denominator-product",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiply-positive",
+    "to": "thm:multiply-negative",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiply-positive",
+    "to": "thm:reciprocal-order-for-positive-elements",
     "kind": "depends_on"
   },
   {
     "from": "thm:one-positive",
-    "to": "def:ordered-field",
+    "to": "cor:n-positive",
     "kind": "depends_on"
   },
   {
     "from": "thm:one-positive",
-    "to": "thm:squares-nonnegative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-fields-are-densely-ordered",
-    "to": "def:densely-ordered-system",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-fields-are-densely-ordered",
-    "to": "def:ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-fields-are-densely-ordered",
-    "to": "thm:multiply-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-fields-are-densely-ordered",
-    "to": "thm:one-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:positive-fraction-iff-positive-product",
-    "to": "def:ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:positive-fraction-iff-positive-product",
     "to": "thm:inverse-positive",
     "kind": "depends_on"
   },
   {
     "from": "thm:q-has-no-minimum-positive-element",
-    "to": "thm:q-is-ordered-field",
+    "to": "lem:rational-upper-lower-perturbation",
     "kind": "depends_on"
   },
   {
@@ -1271,117 +296,32 @@
   },
   {
     "from": "thm:q-is-ordered-field",
-    "to": "def:ordered-field",
+    "to": "thm:limit-unique-q",
     "kind": "depends_on"
   },
   {
     "from": "thm:q-is-ordered-field",
-    "to": "def:positive-cone",
+    "to": "thm:mediant-inequality",
     "kind": "depends_on"
   },
   {
     "from": "thm:q-is-ordered-field",
-    "to": "thm:q-is-field",
+    "to": "thm:squares-nonnegative",
     "kind": "depends_on"
   },
   {
-    "from": "thm:rational-chain-with-small-steps",
-    "to": "thm:archimedean-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:rational-square-approximation-from-above",
-    "to": "lem:rational-square-bracketing",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:rational-square-approximation-from-above",
-    "to": "thm:archimedean-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:rational-square-approximation-from-above-grid",
+    "from": "thm:rational-square-bracketing",
     "to": "lem:first-grid-point-crossing",
     "kind": "depends_on"
   },
   {
-    "from": "thm:rational-square-approximation-from-above-grid",
-    "to": "thm:archimedean-q",
+    "from": "thm:sqrt2-irrational",
+    "to": "cor:sb-limit-irrational",
     "kind": "depends_on"
   },
   {
-    "from": "thm:rational-square-approximation-from-above-grid",
-    "to": "thm:rational-square-bracketing-grid",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:rational-square-approximation-from-below",
-    "to": "thm:rational-square-approximation-from-above-grid",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:rational-square-bracketing-grid",
-    "to": "thm:archimedean-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:rational-square-bracketing-grid",
-    "to": "thm:q-is-ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:reciprocal-order-for-positive-elements",
+    "from": "thm:squares-nonnegative",
     "to": "thm:inverse-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:reciprocal-order-for-positive-elements",
-    "to": "thm:multiply-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:sqrt2-irrational",
-    "to": "def:rational-numbers",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:sqrt2-irrational",
-    "to": "thm:fraction-pair-equivalence",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:squares-nonnegative",
-    "to": "def:ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:squares-nonnegative",
-    "to": "thm:q-is-ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:stern-brocot-enumeration",
-    "to": "def:mediant",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:stern-brocot-enumeration",
-    "to": "lem:mediant-gap",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:stern-brocot-enumeration",
-    "to": "thm:farey-neighbor-theorem",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:subsequence-convergence-q",
-    "to": "def:convergent-rational-sequence",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:subsequence-convergence-q",
-    "to": "def:subsequence-q",
     "kind": "depends_on"
   },
   {

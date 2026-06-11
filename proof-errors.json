@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T06:59:10.761190+00:00",
+  "generated_at": "2026-06-11T20:50:45.529989+00:00",
   "chapters": [
     "peano-systems",
     "natural-numbers",
@@ -9,7 +9,7 @@
     "continuity",
     "differentiation"
   ],
-  "error_count": 548,
+  "error_count": 397,
   "errors": [
     {
       "type": "multiple_primary_statements_in_box",
@@ -117,8 +117,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $\\varphi$ be a predicate on $P$. If \\[ \\varphi(1) \\qquad\\text{and}\\qquad \\forall n \\in P\\;(\\varphi(n) \\Longrightarrow \\varphi(S(n))), \\] then \\[ \\forall n \\in P\\;\\varphi(n). \\]",
-      "proof_source": "proofs/notes/prf-induction-principle-for-peano-system.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $\\varphi$ be a predicate on $P$. If \\[ \\varphi(1) \\qquad\\text{and}\\qquad \\forall n \\in P\\;(\\varphi(n) \\Longrightarrow \\varphi(S(n))), \\] then \\[ \\forall n \\in P\\;\\varphi(n). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -166,8 +165,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $x \\in P$, either $x=1$ or there exists $u \\in P$ such that $S(u)=x$.",
-      "proof_source": "proofs/notes/prf-every-element-is-one-or-a-successor.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $x \\in P$, either $x=1$ or there exists $u \\in P$ such that $S(u)=x$."
     },
     {
       "type": "missing_dependencies_block",
@@ -179,8 +177,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For all $a,b \\in P$, if $a \\neq b$, then $S(a)\\neq S(b)$.",
-      "proof_source": "proofs/notes/prf-successor-inequality-reflection.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For all $a,b \\in P$, if $a \\neq b$, then $S(a)\\neq S(b)$."
     },
     {
       "type": "missing_dependencies_block",
@@ -192,8 +189,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $x \\in P$, if $x \\neq 1$, then there exists $u \\in P$ such that $S(u)=x$.",
-      "proof_source": "proofs/notes/prf-non-one-elements-have-a-predecessor.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $x \\in P$, if $x \\neq 1$, then there exists $u \\in P$ such that $S(u)=x$."
     },
     {
       "type": "missing_dependencies_block",
@@ -205,8 +201,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $x \\in P$ with $x \\neq 1$. Then there exists a unique $u \\in P$ such that $S(u)=x$.",
-      "proof_source": "proofs/notes/prf-predecessor-exists-unique-away-from-one.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $x \\in P$ with $x \\neq 1$. Then there exists a unique $u \\in P$ such that $S(u)=x$."
     },
     {
       "type": "missing_dependencies_block",
@@ -218,8 +213,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $x \\in P$, $x \\neq 1$ if and only if there exists a unique $u \\in P$ such that $S(u)=x$.",
-      "proof_source": "proofs/notes/prf-unique-predecessor-characterization-away-from-one.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $x \\in P$, $x \\neq 1$ if and only if there exists a unique $u \\in P$ such that $S(u)=x$."
     },
     {
       "type": "missing_dependencies_block",
@@ -231,8 +225,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. An element $x \\in P$ is not a successor of any element of $P$ if and only if $x=1$.",
-      "proof_source": "proofs/notes/prf-one-is-unique-non-successor.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. An element $x \\in P$ is not a successor of any element of $P$ if and only if $x=1$."
     },
     {
       "type": "missing_dependencies_block",
@@ -244,8 +237,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $n \\in P$, \\[ S(n) \\neq n. \\]",
-      "proof_source": "proofs/notes/prf-no-object-is-its-own-successor.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $n \\in P$, \\[ S(n) \\neq n. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -293,8 +285,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation for $(W,c,g)$. Then $R^*$ is an iterator relation for $(W,c,g)$.",
-      "proof_source": "proofs/notes/prf-iterator-relation-consistency.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation for $(W,c,g)$. Then $R^*$ is an iterator relation for $(W,c,g)$."
     },
     {
       "type": "missing_dependencies_block",
@@ -306,8 +297,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. If $(n,w_0)\\in R^*$ and $(n,w_1)\\in R^*$, then $w_0=w_1$.",
-      "proof_source": "proofs/notes/prf-forced-values-are-unique.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. If $(n,w_0)\\in R^*$ and $(n,w_1)\\in R^*$, then $w_0=w_1$."
     },
     {
       "type": "missing_dependencies_block",
@@ -319,8 +309,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. For each $n\\in P$, there is at most one $w\\in W$ such that $(n,w)\\in R^*$.",
-      "proof_source": "proofs/notes/prf-minimal-iterator-relation-deterministic.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. For each $n\\in P$, there is at most one $w\\in W$ such that $(n,w)\\in R^*$."
     },
     {
       "type": "missing_dependencies_block",
@@ -332,8 +321,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. For each $n\\in P$, there exists $w\\in W$ such that $(n,w)\\in R^*$.",
-      "proof_source": "proofs/notes/prf-minimal-iterator-relation-complete.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $R^*$ be the minimal iterator relation. For each $n\\in P$, there exists $w\\in W$ such that $(n,w)\\in R^*$."
     },
     {
       "type": "missing_dependencies_block",
@@ -345,8 +333,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. If $f,h:P\\to W$ satisfy \\[ f(1)=c,\\qquad h(1)=c, \\] and \\[ \\forall n\\in P\\;(f(S(n))=g(f(n))) \\qquad\\text{and}\\qquad \\forall n\\in P\\;(h(S(n))=g(h(n))), \\] then $f=h$.",
-      "proof_source": "proofs/notes/prf-uniqueness-of-iterator-functions.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. If $f,h:P\\to W$ satisfy \\[ f(1)=c,\\qquad h(1)=c, \\] and \\[ \\forall n\\in P\\;(f(S(n))=g(f(n))) \\qquad\\text{and}\\qquad \\forall n\\in P\\;(h(S(n))=g(h(n))), \\] then $f=h$."
     },
     {
       "type": "missing_dependencies_block",
@@ -358,8 +345,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. Then there exists a function $f:P\\to W$ such that \\[ f(1)=c \\qquad\\text{and}\\qquad \\forall n\\in P\\;(f(S(n))=g(f(n))). \\]",
-      "proof_source": "proofs/notes/prf-existence-of-iterator-function.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. Then there exists a function $f:P\\to W$ such that \\[ f(1)=c \\qquad\\text{and}\\qquad \\forall n\\in P\\;(f(S(n))=g(f(n))). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -371,8 +357,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. Then there exists a unique function $f:P\\to W$ such that \\[ f(1)=c \\qquad\\text{and}\\qquad \\forall n\\in P\\;(f(S(n))=g(f(n))). \\]",
-      "proof_source": "proofs/notes/prf-peano-iterator-theorem.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $(W,c,g)$ be iterator data for it. Then there exists a unique function $f:P\\to W$ such that \\[ f(1)=c \\qquad\\text{and}\\qquad \\forall n\\in P\\;(f(S(n))=g(f(n))). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -396,8 +381,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $f$ be the iterator-generated function determined by $(W,c,g)$. Then \\[ f(1)=c. \\]",
-      "proof_source": "proofs/notes/prf-iterator-base-value.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $f$ be the iterator-generated function determined by $(W,c,g)$. Then \\[ f(1)=c. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -409,8 +393,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $f$ be the iterator-generated function determined by $(W,c,g)$. Then \\[ \\forall n\\in P\\;(f(S(n))=g(f(n))). \\]",
-      "proof_source": "proofs/notes/prf-iterator-successor-step.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $(W,c,g)$ be iterator data for it, and let $f$ be the iterator-generated function determined by $(W,c,g)$. Then \\[ \\forall n\\in P\\;(f(S(n))=g(f(n))). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -434,8 +417,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, let $A$ be a set, let $W$ be a set, and suppose each $a\\in A$ determines iterator data $(W,c_a,g_a)$ for $(P,S,1)$. If $F,G:A\\times P\\to W$ satisfy \\[ F(a,1)=c_a,\\qquad G(a,1)=c_a \\] and \\[ F(a,S(n))=g_a(F(a,n)), \\qquad G(a,S(n))=g_a(G(a,n)) \\] for all $a\\in A$ and all $n\\in P$, then $F=G$.",
-      "proof_source": "proofs/notes/prf-uniqueness-of-binary-iterator-operations.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $A$ be a set, let $W$ be a set, and suppose each $a\\in A$ determines iterator data $(W,c_a,g_a)$ for $(P,S,1)$. If $F,G:A\\times P\\to W$ satisfy \\[ F(a,1)=c_a,\\qquad G(a,1)=c_a \\] and \\[ F(a,S(n))=g_a(F(a,n)), \\qquad G(a,S(n))=g_a(G(a,n)) \\] for all $a\\in A$ and all $n\\in P$, then $F=G$."
     },
     {
       "type": "missing_dependencies_block",
@@ -471,8 +453,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c\\in W$, and let $\\Phi:P\\times W\\to W$ be a stage-dependent step rule. If $f,h:P\\to W$ satisfy \\[ f(1)=c,\\qquad h(1)=c, \\] and \\[ \\forall n\\in P\\;(f(S(n))=\\Phi(n,f(n))) \\qquad\\text{and}\\qquad \\forall n\\in P\\;(h(S(n))=\\Phi(n,h(n))), \\] then $f=h$.",
-      "proof_source": "proofs/notes/prf-uniqueness-of-general-recursive-functions.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c\\in W$, and let $\\Phi:P\\times W\\to W$ be a stage-dependent step rule. If $f,h:P\\to W$ satisfy \\[ f(1)=c,\\qquad h(1)=c, \\] and \\[ \\forall n\\in P\\;(f(S(n))=\\Phi(n,f(n))) \\qquad\\text{and}\\qquad \\forall n\\in P\\;(h(S(n))=\\Phi(n,h(n))), \\] then $f=h$."
     },
     {
       "type": "missing_dependencies_block",
@@ -484,8 +465,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c\\in W$, and let $\\Phi:P\\times W\\to W$ be a stage-dependent step rule. There exists a function $H:P\\to P\\times W$ such that \\[ H(1)=(1,c) \\] and \\[ \\forall n\\in P\\; \\bigl(H(S(n))=(S(\\pi_1(H(n))),\\Phi(\\pi_1(H(n)),\\pi_2(H(n))))\\bigr). \\]",
-      "proof_source": "proofs/notes/prf-general-recursion-by-state-encoding.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c\\in W$, and let $\\Phi:P\\times W\\to W$ be a stage-dependent step rule. There exists a function $H:P\\to P\\times W$ such that \\[ H(1)=(1,c) \\] and \\[ \\forall n\\in P\\; \\bigl(H(S(n))=(S(\\pi_1(H(n))),\\Phi(\\pi_1(H(n)),\\pi_2(H(n))))\\bigr). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -497,8 +477,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c\\in W$, and let $\\Phi:P\\times W\\to W$ be a stage-dependent step rule. Then there exists a unique function $f:P\\to W$ such that \\[ f(1)=c \\qquad\\text{and}\\qquad \\forall n\\in P\\;(f(S(n))=\\Phi(n,f(n))). \\]",
-      "proof_source": "proofs/notes/prf-general-recursion-theorem-for-peano-system.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $W$ be a set, let $c\\in W$, and let $\\Phi:P\\times W\\to W$ be a stage-dependent step rule. Then there exists a unique function $f:P\\to W$ such that \\[ f(1)=c \\qquad\\text{and}\\qquad \\forall n\\in P\\;(f(S(n))=\\Phi(n,f(n))). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -510,8 +489,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S_P,1_P)$ and $(Q,S_Q,1_Q)$ be Peano systems. Then there exists a unique bijection $\\theta:P\\to Q$ such that \\[ \\theta(1_P)=1_Q \\] and \\[ \\forall n\\in P\\;(\\theta(S_P(n))=S_Q(\\theta(n))). \\] Thus any two Peano systems are isomorphic.",
-      "proof_source": "proofs/notes/prf-uniqueness-of-peano-systems-up-to-isomorphism.tex"
+      "excerpt": "Let $(P,S_P,1_P)$ and $(Q,S_Q,1_Q)$ be Peano systems. Then there exists a unique bijection $\\theta:P\\to Q$ such that \\[ \\theta(1_P)=1_Q \\] and \\[ \\forall n\\in P\\;(\\theta(S_P(n))=S_Q(\\theta(n))). \\] Thus any two Peano systems are isomorphic."
     },
     {
       "type": "missing_dependencies_block",
@@ -535,8 +513,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m \\in P$, there exists a unique function \\[ f_m : P \\to P \\] such that \\[ f_m(1)=S(m) \\qquad\\text{and}\\qquad \\forall n \\in P\\;(f_m(S(n))=S(f_m(n))). \\] Consequently the rule \\[ (m,n) \\longmapsto m+n \\coloneqq f_m(n) \\] defines a unique binary operation on $P$.",
-      "proof_source": "proofs/notes/prf-addition-well-defined-on-peano-system.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m \\in P$, there exists a unique function \\[ f_m : P \\to P \\] such that \\[ f_m(1)=S(m) \\qquad\\text{and}\\qquad \\forall n \\in P\\;(f_m(S(n))=S(f_m(n))). \\] Consequently the rule \\[ (m,n) \\longmapsto m+n \\coloneqq f_m(n) \\] defines a unique binary operation on $P$."
     },
     {
       "type": "missing_dependencies_block",
@@ -548,8 +525,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m \\in P$, \\[ m+1=S(m). \\]",
-      "proof_source": "proofs/notes/prf-addition-with-one.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m \\in P$, \\[ m+1=S(m). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -561,8 +537,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m,n \\in P$, \\[ m+S(n)=S(m+n). \\]",
-      "proof_source": "proofs/notes/prf-addition-successor-on-right.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m,n \\in P$, \\[ m+S(n)=S(m+n). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -574,8 +549,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $n \\in P$, \\[ 1+n=S(n). \\]",
-      "proof_source": "proofs/notes/prf-one-plus-n.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $n \\in P$, \\[ 1+n=S(n). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -587,8 +561,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ (a+b)+c=a+(b+c). \\]",
-      "proof_source": "proofs/notes/prf-addition-associative.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ (a+b)+c=a+(b+c). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -600,8 +573,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b \\in P$, \\[ a+b=b+a. \\]",
-      "proof_source": "proofs/notes/prf-addition-commutative.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b \\in P$, \\[ a+b=b+a. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -613,8 +585,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ a+b=a+c \\Longrightarrow b=c. \\]",
-      "proof_source": "proofs/notes/prf-addition-left-cancellation.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ a+b=a+c \\Longrightarrow b=c. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -626,8 +597,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ b+a=c+a \\Longrightarrow b=c. \\]",
-      "proof_source": "proofs/notes/prf-addition-right-cancellation.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ b+a=c+a \\Longrightarrow b=c. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -639,8 +609,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m,n \\in P$, \\[ n \\neq m+n. \\]",
-      "proof_source": "proofs/notes/prf-no-natural-number-equals-itself-plus-a-natural-number.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m,n \\in P$, \\[ n \\neq m+n. \\]"
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -652,8 +621,7 @@
       "signals": [
         "latex_list_with_multiple_items:5"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. The binary operation $+$ on $P$ satisfies: \\begin{enumerate} \\item \\textbf{Closure.} For all $a,b \\in P$, $a+b \\in P$. \\item \\textbf{Associativity.} For all $a,b,c \\in P$, $(a+b)+c = a+(b+c)$. \\item \\textbf{Commutativity.} For all $a,b \\in P$, $a+b = b+a$. \\item \\textbf{Left cancellation.} For all $a,b,c \\in P$, if $a+b = a+c$ then $b=c$. \\item \\textbf{Right cancellation.} For all...",
-      "proof_source": "proofs/notes/prf-n-additive-structure.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. The binary operation $+$ on $P$ satisfies: \\begin{enumerate} \\item \\textbf{Closure.} For all $a,b \\in P$, $a+b \\in P$. \\item \\textbf{Associativity.} For all $a,b,c \\in P$, $(a+b)+c = a+(b+c)$. \\item \\textbf{Commutativity.} For all $a,b \\in P$, $a+b = b+a$. \\item \\textbf{Left cancellation.} For all $a,b,c \\in P$, if $a+b = a+c$ then $b=c$. \\item \\textbf{Right cancellation.} For all..."
     },
     {
       "type": "missing_dependencies_block",
@@ -665,8 +633,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. The binary operation $+$ on $P$ satisfies: \\begin{enumerate} \\item \\textbf{Closure.} For all $a,b \\in P$, $a+b \\in P$. \\item \\textbf{Associativity.} For all $a,b,c \\in P$, $(a+b)+c = a+(b+c)$. \\item \\textbf{Commutativity.} For all $a,b \\in P$, $a+b = b+a$. \\item \\textbf{Left cancellation.} For all $a,b,c \\in P$, if $a+b = a+c$ then $b=c$. \\item \\textbf{Right cancellation.} For all...",
-      "proof_source": "proofs/notes/prf-n-additive-structure.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. The binary operation $+$ on $P$ satisfies: \\begin{enumerate} \\item \\textbf{Closure.} For all $a,b \\in P$, $a+b \\in P$. \\item \\textbf{Associativity.} For all $a,b,c \\in P$, $(a+b)+c = a+(b+c)$. \\item \\textbf{Commutativity.} For all $a,b \\in P$, $a+b = b+a$. \\item \\textbf{Left cancellation.} For all $a,b,c \\in P$, if $a+b = a+c$ then $b=c$. \\item \\textbf{Right cancellation.} For all..."
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -678,8 +645,7 @@
       "signals": [
         "latex_list_with_multiple_items:4"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. The binary operation $\\cdot$ on $P$ satisfies: \\begin{enumerate} \\item \\textbf{Closure.} For all $a,b \\in P$, $a \\cdot b \\in P$. \\item \\textbf{Associativity.} For all $a,b,c \\in P$, $(a \\cdot b) \\cdot c = a \\cdot (b \\cdot c)$. \\item \\textbf{Commutativity.} For all $a,b \\in P$, $a \\cdot b = b \\cdot a$. \\item \\textbf{Identity.} For all $a \\in P$, $1 \\cdot a = a = a \\cdot 1$. \\end{enu...",
-      "proof_source": "proofs/notes/prf-n-multiplicative-monoid.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. The binary operation $\\cdot$ on $P$ satisfies: \\begin{enumerate} \\item \\textbf{Closure.} For all $a,b \\in P$, $a \\cdot b \\in P$. \\item \\textbf{Associativity.} For all $a,b,c \\in P$, $(a \\cdot b) \\cdot c = a \\cdot (b \\cdot c)$. \\item \\textbf{Commutativity.} For all $a,b \\in P$, $a \\cdot b = b \\cdot a$. \\item \\textbf{Identity.} For all $a \\in P$, $1 \\cdot a = a = a \\cdot 1$. \\end{enu..."
     },
     {
       "type": "missing_dependencies_block",
@@ -691,8 +657,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. The binary operation $\\cdot$ on $P$ satisfies: \\begin{enumerate} \\item \\textbf{Closure.} For all $a,b \\in P$, $a \\cdot b \\in P$. \\item \\textbf{Associativity.} For all $a,b,c \\in P$, $(a \\cdot b) \\cdot c = a \\cdot (b \\cdot c)$. \\item \\textbf{Commutativity.} For all $a,b \\in P$, $a \\cdot b = b \\cdot a$. \\item \\textbf{Identity.} For all $a \\in P$, $1 \\cdot a = a = a \\cdot 1$. \\end{enu...",
-      "proof_source": "proofs/notes/prf-n-multiplicative-monoid.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. The binary operation $\\cdot$ on $P$ satisfies: \\begin{enumerate} \\item \\textbf{Closure.} For all $a,b \\in P$, $a \\cdot b \\in P$. \\item \\textbf{Associativity.} For all $a,b,c \\in P$, $(a \\cdot b) \\cdot c = a \\cdot (b \\cdot c)$. \\item \\textbf{Commutativity.} For all $a,b \\in P$, $a \\cdot b = b \\cdot a$. \\item \\textbf{Identity.} For all $a \\in P$, $1 \\cdot a = a = a \\cdot 1$. \\end{enu..."
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -704,8 +669,7 @@
       "signals": [
         "latex_list_with_multiple_items:3"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. Then $(P,+,\\cdot)$ satisfies: \\begin{enumerate} \\item $(P,+)$ is a commutative semigroup. \\item $(P,\\cdot,1)$ is a commutative monoid. \\item Multiplication distributes over addition: for all $a,b,c \\in P$, \\[ a \\cdot (b+c) = (a \\cdot b) + (a \\cdot c). \\] \\end{enumerate}",
-      "proof_source": "proofs/notes/prf-n-is-semiring.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. Then $(P,+,\\cdot)$ satisfies: \\begin{enumerate} \\item $(P,+)$ is a commutative semigroup. \\item $(P,\\cdot,1)$ is a commutative monoid. \\item Multiplication distributes over addition: for all $a,b,c \\in P$, \\[ a \\cdot (b+c) = (a \\cdot b) + (a \\cdot c). \\] \\end{enumerate}"
     },
     {
       "type": "missing_dependencies_block",
@@ -717,291 +681,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. Then $(P,+,\\cdot)$ satisfies: \\begin{enumerate} \\item $(P,+)$ is a commutative semigroup. \\item $(P,\\cdot,1)$ is a commutative monoid. \\item Multiplication distributes over addition: for all $a,b,c \\in P$, \\[ a \\cdot (b+c) = (a \\cdot b) + (a \\cdot c). \\] \\end{enumerate}",
-      "proof_source": "proofs/notes/prf-n-is-semiring.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:order",
-      "title": "Tao 2.2.11 — Order on $ $",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-order.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $n, m \\in \\mathbb{N}$. \\[ n \\geq m \\quad (\\text{equivalently } m \\leq n) \\quad \\iff \\quad \\exists\\, a \\in \\mathbb{N},\\; n = m + a. \\] \\[ n > m \\quad (\\text{equivalently } m < n) \\quad \\iff \\quad n \\geq m \\text{ and } n \\neq m. \\]"
-    },
-    {
-      "type": "multiple_primary_statements_in_box",
-      "kind": "Proposition",
-      "node_id": "prop:order-basic",
-      "title": "Tao 2.2.12 — Basic properties of order",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-order.tex",
-      "message": "Extracted theorem/definition box appears to contain more than one primary statement. Extraction was preserved, but the source should be split into separate boxes and re-extracted.",
-      "signals": [
-        "latex_list_with_multiple_items:6"
-      ],
-      "excerpt": "Let $a, b, c \\in \\mathbb{N}$. \\begin{enumerate} \\item[(a)] \\textbf{Reflexive.} $a \\geq a$. \\item[(b)] \\textbf{Transitive.} If $a \\geq b$ and $b \\geq c$, then $a \\geq c$. \\item[(c)] \\textbf{Anti-symmetric.} If $a \\geq b$ and $b \\geq a$, then $a = b$. \\item[(d)] \\textbf{Addition preserves order.} $a \\geq b \\iff a + c \\geq b + c$. \\item[(e)] $a < b \\iff a\\pp \\leq b$. \\item[(f)] $a < b \\iff b = a + d$ for some positiv...",
-      "proof_source": "proofs/notes/prf-order-basic.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Proposition",
-      "node_id": "prop:order-basic",
-      "title": "Tao 2.2.12 — Basic properties of order",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-order.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $a, b, c \\in \\mathbb{N}$. \\begin{enumerate} \\item[(a)] \\textbf{Reflexive.} $a \\geq a$. \\item[(b)] \\textbf{Transitive.} If $a \\geq b$ and $b \\geq c$, then $a \\geq c$. \\item[(c)] \\textbf{Anti-symmetric.} If $a \\geq b$ and $b \\geq a$, then $a = b$. \\item[(d)] \\textbf{Addition preserves order.} $a \\geq b \\iff a + c \\geq b + c$. \\item[(e)] $a < b \\iff a\\pp \\leq b$. \\item[(f)] $a < b \\iff b = a + d$ for some positiv...",
-      "proof_source": "proofs/notes/prf-order-basic.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Proposition",
-      "node_id": "prop:trichotomy",
-      "title": "Tao 2.2.13 — Trichotomy",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-order.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For all $a, b \\in \\mathbb{N}$, exactly one of the following holds: \\[ a < b, \\qquad a = b, \\qquad a > b. \\]",
-      "proof_source": "proofs/notes/prf-trichotomy.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:add-zero-right",
-      "title": "Tao 2.2.2",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For all $n \\in \\mathbb{N}$,\\quad $n + 0 = n$.",
-      "proof_source": "proofs/notes/prf-add-zero-right.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:add-succ-right",
-      "title": "Tao 2.2.3",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For all $n, m \\in \\mathbb{N}$,\\quad $n + (m\\pp) = (n+m)\\pp$.",
-      "proof_source": "proofs/notes/prf-add-succ-right.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Corollary",
-      "node_id": "cor:succ-is-add-one",
-      "title": "Successor as Addition of One",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For all $n \\in \\mathbb{N}$,\\quad $n\\pp = n + 1$.",
-      "proof_source": "proofs/notes/prf-succ-is-add-one.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Proposition",
-      "node_id": "prop:add-comm",
-      "title": "Tao 2.2.4 — Commutativity",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For all $n, m \\in \\mathbb{N}$,\\quad $n + m = m + n$.",
-      "proof_source": "proofs/notes/prf-add-comm.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Proposition",
-      "node_id": "prop:add-assoc",
-      "title": "Tao 2.2.5 — Associativity",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For all $a, b, c \\in \\mathbb{N}$,\\quad $(a+b)+c = a+(b+c)$.",
-      "proof_source": "proofs/notes/prf-add-assoc.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Proposition",
-      "node_id": "prop:add-cancel",
-      "title": "Tao 2.2.6 — Cancellation",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $a, b, c \\in \\mathbb{N}$ with $a + b = a + c$. Then $b = c$.",
-      "proof_source": "proofs/notes/prf-add-cancel.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:positive",
-      "title": "Tao 2.2.7 — Positive natural numbers",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A natural number $n$ is \\emph{positive} if and only if $n \\neq 0$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Proposition",
-      "node_id": "prop:pos-add-pos",
-      "title": "Tao 2.2.8",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $a$ is positive and $b \\in \\mathbb{N}$, then $a + b$ is positive (and hence $b + a$ is positive by commutativity).",
-      "proof_source": "proofs/notes/prf-pos-add-pos.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Corollary",
-      "node_id": "cor:sum-zero",
-      "title": "Tao 2.2.9",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $a, b \\in \\mathbb{N}$ and $a + b = 0$, then $a = 0$ and $b = 0$.",
-      "proof_source": "proofs/notes/prf-sum-zero.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:predecessor",
-      "title": "Tao 2.2.10 — Predecessor",
-      "source": "notes/archive-current-live/arithmetic/addition/notes-add-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $a$ be a positive natural number. Then there exists exactly one $b \\in \\mathbb{N}$ such that $b\\pp = a$.",
-      "proof_source": "proofs/notes/prf-predecessor.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:exp",
-      "title": "Exponentiation — Tao 2.3.11",
-      "source": "notes/archive-current-live/arithmetic/multiplication/notes-mult-definition.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $m \\in \\mathbb{N}$. Exponentiation is defined recursively: \\[ m^0 := 1, \\qquad m^{n\\pp} := m^n \\times m. \\] In particular, $0^0 := 1$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:mult-comm",
-      "title": "Tao 2.3.2 — Commutativity",
-      "source": "notes/archive-current-live/arithmetic/multiplication/notes-mult-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For all $n, m \\in \\mathbb{N}$,\\quad $n \\times m = m \\times n$.",
-      "proof_source": "proofs/notes/prf-mult-comm.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:no-zero-div",
-      "title": "Tao 2.3.3 — No zero divisors",
-      "source": "notes/archive-current-live/arithmetic/multiplication/notes-mult-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For all $n, m \\in \\mathbb{N}$,\\quad $n \\times m = 0$ if and only if $n = 0$ or $m = 0$. In particular, if $n$ and $m$ are both positive, then $nm$ is positive.",
-      "proof_source": "proofs/notes/prf-no-zero-div.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Proposition",
-      "node_id": "prop:distrib",
-      "title": "Tao 2.3.4 — Distributive law",
-      "source": "notes/archive-current-live/arithmetic/multiplication/notes-mult-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For all $a, b, c \\in \\mathbb{N}$: \\[ a(b+c) = ab + ac \\qquad \\text{and} \\qquad (b+c)a = ba + ca. \\]",
-      "proof_source": "proofs/notes/prf-distrib.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Proposition",
-      "node_id": "prop:mult-assoc",
-      "title": "Tao 2.3.5 — Associativity",
-      "source": "notes/archive-current-live/arithmetic/multiplication/notes-mult-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For all $a, b, c \\in \\mathbb{N}$,\\quad $(a \\times b) \\times c = a \\times (b \\times c)$.",
-      "proof_source": "proofs/notes/prf-mult-assoc.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Proposition",
-      "node_id": "prop:mult-order",
-      "title": "Tao 2.3.6 — Multiplication preserves order",
-      "source": "notes/archive-current-live/arithmetic/multiplication/notes-mult-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $a < b$ and $c$ is positive, then $ac < bc$.",
-      "proof_source": "proofs/notes/prf-mult-order.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Corollary",
-      "node_id": "cor:mult-cancel",
-      "title": "Tao 2.3.7 — Cancellation for multiplication",
-      "source": "notes/archive-current-live/arithmetic/multiplication/notes-mult-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $a, b, c \\in \\mathbb{N}$ with $ac = bc$ and $c \\neq 0$. Then $a = b$.",
-      "proof_source": "proofs/notes/prf-mult-cancel.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Proposition",
-      "node_id": "prop:euclid",
-      "title": "Tao 2.3.9 — Euclidean algorithm",
-      "source": "notes/archive-current-live/arithmetic/multiplication/notes-mult-toolkit.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $n \\in \\mathbb{N}$ and let $q$ be positive. Then there exist $m, r \\in \\mathbb{N}$ such that: \\[ 0 \\leq r < q \\qquad \\text{and} \\qquad n = mq + r. \\]",
-      "proof_source": "proofs/notes/prf-euclid.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. Then $(P,+,\\cdot)$ satisfies: \\begin{enumerate} \\item $(P,+)$ is a commutative semigroup. \\item $(P,\\cdot,1)$ is a commutative monoid. \\item Multiplication distributes over addition: for all $a,b,c \\in P$, \\[ a \\cdot (b+c) = (a \\cdot b) + (a \\cdot c). \\] \\end{enumerate}"
     },
     {
       "type": "missing_dependencies_block",
@@ -1013,8 +693,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $\\varphi$ be a predicate on $P$. If \\[ \\forall n \\in P\\; \\bigl(\\forall k \\in P\\;(k < n \\Longrightarrow \\varphi(k))\\bigr) \\Longrightarrow \\varphi(n), \\] then \\[ \\forall n \\in P\\;\\varphi(n). \\]",
-      "proof_source": "proofs/notes/prf-strong-induction-on-peano-system.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $\\varphi$ be a predicate on $P$. If \\[ \\forall n \\in P\\; \\bigl(\\forall k \\in P\\;(k < n \\Longrightarrow \\varphi(k))\\bigr) \\Longrightarrow \\varphi(n), \\] then \\[ \\forall n \\in P\\;\\varphi(n). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1026,8 +705,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, let $m \\in P$, and let $\\varphi$ be a predicate on $P$. If \\[ \\varphi(m) \\qquad\\text{and}\\qquad \\forall n \\in P\\;\\bigl(n \\ge m \\land \\varphi(n) \\Longrightarrow \\varphi(S(n))\\bigr), \\] then \\[ \\forall n \\in P\\;\\bigl(n \\ge m \\Longrightarrow \\varphi(n)\\bigr). \\]",
-      "proof_source": "proofs/notes/prf-induction-from-arbitrary-base.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, let $m \\in P$, and let $\\varphi$ be a predicate on $P$. If \\[ \\varphi(m) \\qquad\\text{and}\\qquad \\forall n \\in P\\;\\bigl(n \\ge m \\land \\varphi(n) \\Longrightarrow \\varphi(S(n))\\bigr), \\] then \\[ \\forall n \\in P\\;\\bigl(n \\ge m \\Longrightarrow \\varphi(n)\\bigr). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1051,8 +729,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m \\in P$, there exists a unique function \\[ g_m : P \\to P \\] such that \\[ g_m(1)=m \\qquad\\text{and}\\qquad \\forall n \\in P\\;(g_m(S(n))=g_m(n)+m). \\] Consequently the rule \\[ (m,n) \\longmapsto m \\cdot n \\coloneqq g_m(n) \\] defines a unique binary operation on $P$.",
-      "proof_source": "proofs/notes/prf-multiplication-well-defined-on-peano-system.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m \\in P$, there exists a unique function \\[ g_m : P \\to P \\] such that \\[ g_m(1)=m \\qquad\\text{and}\\qquad \\forall n \\in P\\;(g_m(S(n))=g_m(n)+m). \\] Consequently the rule \\[ (m,n) \\longmapsto m \\cdot n \\coloneqq g_m(n) \\] defines a unique binary operation on $P$."
     },
     {
       "type": "missing_dependencies_block",
@@ -1064,8 +741,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m \\in P$, \\[ m \\cdot 1 = m. \\]",
-      "proof_source": "proofs/notes/prf-multiplication-with-one.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m \\in P$, \\[ m \\cdot 1 = m. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1077,8 +753,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m,n \\in P$, \\[ m \\cdot S(n) = (m \\cdot n) + m. \\]",
-      "proof_source": "proofs/notes/prf-multiplication-successor-on-right.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $m,n \\in P$, \\[ m \\cdot S(n) = (m \\cdot n) + m. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1090,8 +765,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $n \\in P$, \\[ 1 \\cdot n = n. \\]",
-      "proof_source": "proofs/notes/prf-one-times-n.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $n \\in P$, \\[ 1 \\cdot n = n. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1103,8 +777,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ a \\cdot (b+c) = (a \\cdot b) + (a \\cdot c). \\]",
-      "proof_source": "proofs/notes/prf-multiplication-distributes-over-addition.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ a \\cdot (b+c) = (a \\cdot b) + (a \\cdot c). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1116,8 +789,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ (a+b)\\cdot c=(a\\cdot c)+(b\\cdot c). \\]",
-      "proof_source": "proofs/notes/prf-left-distributivity-of-multiplication-over-addition.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ (a+b)\\cdot c=(a\\cdot c)+(b\\cdot c). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1129,8 +801,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ (a \\cdot b) \\cdot c = a \\cdot (b \\cdot c). \\]",
-      "proof_source": "proofs/notes/prf-multiplication-associative.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ (a \\cdot b) \\cdot c = a \\cdot (b \\cdot c). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1142,8 +813,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b \\in P$, \\[ a \\cdot b = b \\cdot a. \\]",
-      "proof_source": "proofs/notes/prf-multiplication-commutative.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b \\in P$, \\[ a \\cdot b = b \\cdot a. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1179,8 +849,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a \\in P$, \\[ a \\le a. \\]",
-      "proof_source": "proofs/notes/prf-order-reflexive-on-peano-system.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a \\in P$, \\[ a \\le a. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1192,8 +861,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ \\bigl(a \\le b \\land b \\le c\\bigr) \\Longrightarrow a \\le c. \\]",
-      "proof_source": "proofs/notes/prf-order-transitive-on-peano-system.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ \\bigl(a \\le b \\land b \\le c\\bigr) \\Longrightarrow a \\le c. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1205,8 +873,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b \\in P$, \\[ \\bigl(a \\le b \\land b \\le a\\bigr) \\Longrightarrow a=b. \\]",
-      "proof_source": "proofs/notes/prf-order-antisymmetric-on-peano-system.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b \\in P$, \\[ \\bigl(a \\le b \\land b \\le a\\bigr) \\Longrightarrow a=b. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1218,8 +885,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ a \\le b \\Longrightarrow a+c \\le b+c. \\]",
-      "proof_source": "proofs/notes/prf-addition-preserves-order-on-right.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ a \\le b \\Longrightarrow a+c \\le b+c. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1231,8 +897,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ a \\le b \\Longrightarrow c+a \\le c+b. \\]",
-      "proof_source": "proofs/notes/prf-addition-preserves-order-on-left.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ a \\le b \\Longrightarrow c+a \\le c+b. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1244,8 +909,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $k,m,n \\in P$, \\[ m<n \\Longleftrightarrow k\\cdot m<k\\cdot n. \\]",
-      "proof_source": "proofs/notes/prf-multiplication-preserves-and-reflects-strict-order.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $k,m,n \\in P$, \\[ m<n \\Longleftrightarrow k\\cdot m<k\\cdot n. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1257,8 +921,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b \\in P$, \\[ a<b \\Longleftrightarrow S(a) \\le b. \\]",
-      "proof_source": "proofs/notes/prf-strict-order-successor-characterization.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b \\in P$, \\[ a<b \\Longleftrightarrow S(a) \\le b. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1270,8 +933,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b \\in P$, exactly one of the following holds: \\[ a<b,\\qquad a=b,\\qquad b<a. \\]",
-      "proof_source": "proofs/notes/prf-trichotomy-on-peano-system.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b \\in P$, exactly one of the following holds: \\[ a<b,\\qquad a=b,\\qquad b<a. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1295,8 +957,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a \\in P$, there exists a unique function \\[ h_a:P\\to P \\] such that \\[ h_a(1)=a \\qquad\\text{and}\\qquad \\forall n \\in P\\;(h_a(S(n))=h_a(n)\\cdot a). \\] Consequently the rule \\[ (a,n)\\longmapsto a^n\\coloneqq h_a(n) \\] defines a unique binary operation on $P$.",
-      "proof_source": "proofs/notes/prf-exponentiation-well-defined-on-peano-system.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a \\in P$, there exists a unique function \\[ h_a:P\\to P \\] such that \\[ h_a(1)=a \\qquad\\text{and}\\qquad \\forall n \\in P\\;(h_a(S(n))=h_a(n)\\cdot a). \\] Consequently the rule \\[ (a,n)\\longmapsto a^n\\coloneqq h_a(n) \\] defines a unique binary operation on $P$."
     },
     {
       "type": "missing_dependencies_block",
@@ -1308,8 +969,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For all $a,m,n \\in P$, \\[ a^{m+n} = a^m \\cdot a^n. \\]",
-      "proof_source": "proofs/notes/prf-exponent-sum-law.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For all $a,m,n \\in P$, \\[ a^{m+n} = a^m \\cdot a^n. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1321,8 +981,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For all $a,b,n \\in P$, \\[ (a \\cdot b)^n = a^n \\cdot b^n. \\]",
-      "proof_source": "proofs/notes/prf-exponent-product-law.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For all $a,b,n \\in P$, \\[ (a \\cdot b)^n = a^n \\cdot b^n. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1334,8 +993,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For all $a,m,n \\in P$, \\[ (a^m)^n = a^{m \\cdot n}. \\]",
-      "proof_source": "proofs/notes/prf-exponent-power-law.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For all $a,m,n \\in P$, \\[ (a^m)^n = a^{m \\cdot n}. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1347,8 +1005,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,n \\in P$, \\[ a<b \\Longleftrightarrow a^n<b^n. \\]",
-      "proof_source": "proofs/notes/prf-powers-with-common-exponent-preserve-strict-order.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,n \\in P$, \\[ a<b \\Longleftrightarrow a^n<b^n. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1360,8 +1017,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,m,n \\in P$, \\[ a^m<a^n \\Longleftrightarrow 1<a \\land m<n. \\]",
-      "proof_source": "proofs/notes/prf-powers-with-common-base-preserve-strict-order.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,m,n \\in P$, \\[ a^m<a^n \\Longleftrightarrow 1<a \\land m<n. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1373,8 +1029,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $2 \\coloneqq S(1)$. For every $n \\in P$, \\[ n < 2^n. \\]",
-      "proof_source": "proofs/notes/prf-n-less-than-2-to-n.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $2 \\coloneqq S(1)$. For every $n \\in P$, \\[ n < 2^n. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1386,8 +1041,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system. Every nonempty subset of $P$ has a least element with respect to the order $\\le$ on $P$.",
-      "proof_source": "proofs/notes/prf-well-ordering-principle.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system. Every nonempty subset of $P$ has a least element with respect to the order $\\le$ on $P$."
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -1399,8 +1053,7 @@
       "signals": [
         "latex_list_with_multiple_items:2"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system equipped with the order $\\le$. The following are equivalent: \\begin{enumerate} \\item The induction principle: for every predicate $\\varphi$ on $P$, if $\\varphi(1)$ holds and the successor step holds, then $\\varphi(n)$ holds for all $n \\in P$. \\item The well-ordering principle: every nonempty subset of $P$ has a least element with respect to $\\le$. \\end{enumerate}",
-      "proof_source": "proofs/notes/prf-induction-well-ordering-equivalence.tex"
+      "excerpt": "Let $(P,S,1)$ be a Peano system equipped with the order $\\le$. The following are equivalent: \\begin{enumerate} \\item The induction principle: for every predicate $\\varphi$ on $P$, if $\\varphi(1)$ holds and the successor step holds, then $\\varphi(n)$ holds for all $n \\in P$. \\item The well-ordering principle: every nonempty subset of $P$ has a least element with respect to $\\le$. \\end{enumerate}"
     },
     {
       "type": "missing_dependencies_block",
@@ -1412,308 +1065,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system equipped with the order $\\le$. The following are equivalent: \\begin{enumerate} \\item The induction principle: for every predicate $\\varphi$ on $P$, if $\\varphi(1)$ holds and the successor step holds, then $\\varphi(n)$ holds for all $n \\in P$. \\item The well-ordering principle: every nonempty subset of $P$ has a least element with respect to $\\le$. \\end{enumerate}",
-      "proof_source": "proofs/notes/prf-induction-well-ordering-equivalence.tex"
-    },
-    {
-      "type": "predicate_notation_in_standard_field",
-      "kind": "Theorem",
-      "node_id": "thm:induction-well-ordering-equivalence",
-      "title": "Induction and Well-Ordering Are Equivalent",
-      "source": "notes/well-ordering-principle/notes-well-ordering-principle.tex",
-      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
-      "signals": [
-        "formal:WellOrderingPrinciple",
-        "fully_quantified_form:WellOrderingPrinciple"
-      ],
-      "fields": [
-        {
-          "field": "formal",
-          "predicate_names": [
-            "WellOrderingPrinciple"
-          ]
-        },
-        {
-          "field": "fully_quantified_form",
-          "predicate_names": [
-            "WellOrderingPrinciple"
-          ]
-        }
-      ],
-      "excerpt": "\\[ \\begin{aligned} &\\text{Let } (P,S,1) \\text{ be a Peano system.}\\\\ &\\operatorname{WellOrderingPrinciple} \\Longleftrightarrow \\Bigl(\\forall \\varphi\\; \\bigl(\\varphi(1) \\land \\forall n \\in P\\;(\\varphi(n) \\Longrightarrow \\varphi(S(n))) \\Longrightarrow \\forall n \\in P\\;\\varphi(n)\\bigr)\\Bigr). \\end{aligned} \\]",
-      "proof_source": "proofs/notes/prf-induction-well-ordering-equivalence.tex"
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:addition-on-peano-system",
-      "missing_target_id": "def:peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/addition-on-n/notes-addition-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:addition-on-peano-system",
-      "missing_target_id": "thm:peano-iterator-theorem",
-      "relationship_kind": "depends_on",
-      "source": "notes/addition-on-n/notes-addition-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:addition-well-defined-on-peano-system",
-      "missing_target_id": "thm:peano-iterator-theorem",
-      "relationship_kind": "depends_on",
-      "source": "notes/addition-on-n/notes-addition-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:one-plus-n",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/addition-on-n/notes-addition-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:addition-associative",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/addition-on-n/notes-addition-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:addition-commutative",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/addition-on-n/notes-addition-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:addition-left-cancellation",
-      "missing_target_id": "ax:peano-successor-injective",
-      "relationship_kind": "depends_on",
-      "source": "notes/addition-on-n/notes-addition-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:addition-left-cancellation",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/addition-on-n/notes-addition-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:no-natural-number-equals-itself-plus-a-natural-number",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/addition-on-n/notes-addition-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:no-natural-number-equals-itself-plus-a-natural-number",
-      "missing_target_id": "thm:no-object-is-its-own-successor",
-      "relationship_kind": "depends_on",
-      "source": "notes/addition-on-n/notes-addition-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:strong-induction-on-peano-system",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/induction/notes-induction.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:induction-from-arbitrary-base",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/induction/notes-induction.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:multiplication-on-peano-system",
-      "missing_target_id": "def:peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:multiplication-on-peano-system",
-      "missing_target_id": "thm:general-recursion-theorem-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:multiplication-well-defined-on-peano-system",
-      "missing_target_id": "thm:general-recursion-theorem-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:one-times-n",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:multiplication-distributes-over-addition",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:multiplication-associative",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:multiplication-commutative",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:order-antisymmetric-on-peano-system",
-      "missing_target_id": "thm:no-object-is-its-own-successor",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-on-n/notes-order-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:strict-order-successor-characterization",
-      "missing_target_id": "thm:every-element-is-one-or-a-successor",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-on-n/notes-order-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:trichotomy-on-peano-system",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-on-n/notes-order-on-n.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:exponentiation-on-peano-system",
-      "missing_target_id": "def:peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:exponentiation-on-peano-system",
-      "missing_target_id": "thm:general-recursion-theorem-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:exponentiation-well-defined-on-peano-system",
-      "missing_target_id": "thm:general-recursion-theorem-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:exponent-sum-law",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:exponent-product-law",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:exponent-power-law",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:powers-with-common-exponent-preserve-strict-order",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:powers-with-common-base-preserve-strict-order",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:n-less-than-2-to-n",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/powers-and-growth/notes-powers-and-growth.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:well-ordering-principle",
-      "missing_target_id": "def:peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/well-ordering-principle/notes-well-ordering-principle.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:well-ordering-principle",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/well-ordering-principle/notes-well-ordering-principle.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:induction-well-ordering-equivalence",
-      "missing_target_id": "thm:induction-principle-for-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/well-ordering-principle/notes-well-ordering-principle.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+      "excerpt": "Let $(P,S,1)$ be a Peano system equipped with the order $\\le$. The following are equivalent: \\begin{enumerate} \\item The induction principle: for every predicate $\\varphi$ on $P$, if $\\varphi(1)$ holds and the successor step holds, then $\\varphi(n)$ holds for all $n \\in P$. \\item The well-ordering principle: every nonempty subset of $P$ has a least element with respect to $\\le$. \\end{enumerate}"
     },
     {
       "type": "missing_dependencies_block",
@@ -1725,8 +1077,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ x+y=y+x. \\]",
-      "proof_source": "proofs/notes/prf-rational-addition-commutative.tex"
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ x+y=y+x. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1738,8 +1089,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ (x+y)+z=x+(y+z). \\]",
-      "proof_source": "proofs/notes/prf-rational-addition-associative.tex"
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ (x+y)+z=x+(y+z). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1751,8 +1101,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ x+0=x=0+x. \\]",
-      "proof_source": "proofs/notes/prf-rational-additive-identity.tex"
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ x+0=x=0+x. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1764,8 +1113,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ xy=yx. \\]",
-      "proof_source": "proofs/notes/prf-rational-multiplication-commutative.tex"
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ xy=yx. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1777,8 +1125,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ (xy)z=x(yz). \\]",
-      "proof_source": "proofs/notes/prf-rational-multiplication-associative.tex"
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ (xy)z=x(yz). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1790,8 +1137,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ x\\cdot 1=x=1\\cdot x. \\]",
-      "proof_source": "proofs/notes/prf-rational-multiplicative-identity.tex"
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ x\\cdot 1=x=1\\cdot x. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1803,8 +1149,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x(y+z)=xy+xz. \\]",
-      "proof_source": "proofs/notes/prf-rational-distributivity.tex"
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x(y+z)=xy+xz. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -1840,8 +1185,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "The relation $\\sim$ is an equivalence relation on $W$.",
-      "proof_source": "proofs/notes/prf-fraction-pair-equivalence.tex"
+      "excerpt": "The relation $\\sim$ is an equivalence relation on $W$."
     },
     {
       "type": "missing_dependencies_block",
@@ -2026,7 +1370,7 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Definition",
-      "node_id": "definition:notes-field-structure-of-q:005",
+      "node_id": "def:negative-integer-exponents-field",
       "title": "Negative integer exponents in a field",
       "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
@@ -2045,8 +1389,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "With the operations of \\hyperref[def:rational-operations]{Definition~\\ref*{def:rational-operations}}, the system \\[ (\\mathbb{Q},+,\\cdot,0,1) \\] is an integral domain.",
-      "proof_source": "proofs/notes/prf-q-is-integral-domain.tex"
+      "excerpt": "With the operations of \\hyperref[def:rational-operations]{Definition~\\ref*{def:rational-operations}}, the system \\[ (\\mathbb{Q},+,\\cdot,0,1) \\] is an integral domain."
     },
     {
       "type": "missing_dependencies_block",
@@ -2058,8 +1401,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "With the operations of \\hyperref[def:rational-operations]{Definition~\\ref*{def:rational-operations}}, the system \\[ (\\mathbb{Q},+,\\cdot,0,1) \\] is a field.",
-      "proof_source": "proofs/notes/prf-q-is-field.tex"
+      "excerpt": "With the operations of \\hyperref[def:rational-operations]{Definition~\\ref*{def:rational-operations}}, the system \\[ (\\mathbb{Q},+,\\cdot,0,1) \\] is a field."
     },
     {
       "type": "missing_dependencies_block",
@@ -2071,8 +1413,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field, let $x\\in F$ with $x\\neq 0$, and let $m,n\\in\\mathbb{Z}$. Then \\[ x^{-m}=(x^{-1})^m=(x^m)^{-1}. \\] Moreover, the usual laws of exponents continue to hold for integer exponents.",
-      "proof_source": "proofs/notes/prf-negative-exponents-agree-with-inverse-power.tex"
+      "excerpt": "Let $F$ be a field, let $x\\in F$ with $x\\neq 0$, and let $m,n\\in\\mathbb{Z}$. Then \\[ x^{-m}=(x^{-1})^m=(x^m)^{-1}. \\] Moreover, the usual laws of exponents continue to hold for integer exponents."
     },
     {
       "type": "missing_dependencies_block",
@@ -2084,8 +1425,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(F,+,\\cdot,0,1)$ be a field. Let $q,r\\in F\\setminus\\{0\\}$ and let $a\\in\\mathbb{Z}$. Then \\[ (qr)^a=q^a r^a. \\]",
-      "proof_source": "proofs/notes/prf-power-of-product-in-field.tex"
+      "excerpt": "Let $(F,+,\\cdot,0,1)$ be a field. Let $q,r\\in F\\setminus\\{0\\}$ and let $a\\in\\mathbb{Z}$. Then \\[ (qr)^a=q^a r^a. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2097,8 +1437,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(F,+,\\cdot,0,1)$ be a field, let $q\\in F\\setminus\\{0\\}$, and let $a,b\\in\\mathbb{Z}$. Then \\[ q^a q^b=q^{a+b}. \\]",
-      "proof_source": "proofs/notes/prf-integer-exponent-addition-law.tex"
+      "excerpt": "Let $(F,+,\\cdot,0,1)$ be a field, let $q\\in F\\setminus\\{0\\}$, and let $a,b\\in\\mathbb{Z}$. Then \\[ q^a q^b=q^{a+b}. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2110,14 +1449,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(F,+,\\cdot,0,1)$ be a field, let $q\\in F\\setminus\\{0\\}$, and let $a,b\\in\\mathbb{Z}$. Then \\[ (q^a)^b=q^{ab}. \\]",
-      "proof_source": "proofs/notes/prf-power-of-a-power-in-field.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:power-of-a-power-in-field",
-      "proof_source": "proofs/notes/prf-power-of-a-power-in-field.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "Let $(F,+,\\cdot,0,1)$ be a field, let $q\\in F\\setminus\\{0\\}$, and let $a,b\\in\\mathbb{Z}$. Then \\[ (q^a)^b=q^{ab}. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2129,8 +1461,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field and let $a\\in F$. Then \\[ a\\cdot 0 = 0. \\]",
-      "proof_source": "proofs/notes/prf-zero-product.tex"
+      "excerpt": "Let $F$ be a field and let $a\\in F$. Then \\[ a\\cdot 0 = 0. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2142,8 +1473,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field and let $a\\in F$. Then \\[ -(-a) = a. \\]",
-      "proof_source": "proofs/notes/prf-double-negation.tex"
+      "excerpt": "Let $F$ be a field and let $a\\in F$. Then \\[ -(-a) = a. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2155,8 +1485,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field and let $a,b\\in F$. Then \\[ -(a\\cdot b) = (-a)\\cdot b = a\\cdot(-b). \\]",
-      "proof_source": "proofs/notes/prf-negation-of-product.tex"
+      "excerpt": "Let $F$ be a field and let $a,b\\in F$. Then \\[ -(a\\cdot b) = (-a)\\cdot b = a\\cdot(-b). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2168,8 +1497,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field and let $a,b\\in F$. Then \\[ (-a)\\cdot(-b) = a\\cdot b. \\]",
-      "proof_source": "proofs/notes/prf-product-of-negatives.tex"
+      "excerpt": "Let $F$ be a field and let $a,b\\in F$. Then \\[ (-a)\\cdot(-b) = a\\cdot b. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2181,8 +1509,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field and let $a,b,c\\in F$. If \\[ a + c = b + c, \\] then $a = b$.",
-      "proof_source": "proofs/notes/prf-additive-cancellation.tex"
+      "excerpt": "Let $F$ be a field and let $a,b,c\\in F$. If \\[ a + c = b + c, \\] then $a = b$."
     },
     {
       "type": "missing_dependencies_block",
@@ -2194,14 +1521,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field and let $a,b,c\\in F$ with $c\\neq 0$. If \\[ a\\cdot c = b\\cdot c, \\] then $a = b$.",
-      "proof_source": "proofs/notes/prf-multiplicative-cancellation.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:multiplicative-cancellation",
-      "proof_source": "proofs/notes/prf-multiplicative-cancellation.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "Let $F$ be a field and let $a,b,c\\in F$ with $c\\neq 0$. If \\[ a\\cdot c = b\\cdot c, \\] then $a = b$."
     },
     {
       "type": "missing_dependencies_block",
@@ -2213,14 +1533,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field and let $a\\in F$ with $a\\neq 0$. If $b\\in F$ satisfies $a\\cdot b = 1$, then $b = a^{-1}$.",
-      "proof_source": "proofs/notes/prf-uniqueness-of-multiplicative-inverse.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:uniqueness-of-multiplicative-inverse",
-      "proof_source": "proofs/notes/prf-uniqueness-of-multiplicative-inverse.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "Let $F$ be a field and let $a\\in F$ with $a\\neq 0$. If $b\\in F$ satisfies $a\\cdot b = 1$, then $b = a^{-1}$."
     },
     {
       "type": "missing_dependencies_block",
@@ -2232,8 +1545,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "In any field, \\[ 1^{-1}=1. \\]",
-      "proof_source": "proofs/notes/prf-one-inverse-is-one.tex"
+      "excerpt": "In any field, \\[ 1^{-1}=1. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2245,8 +1557,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $x\\in\\mathbb{Q}$ there exists $n\\in\\mathbb{N}$ such that \\[ n>x. \\] Equivalently, for every $x>0$ there exists $n\\in\\mathbb{N}$ such that \\[ \\frac{1}{n}<x. \\]",
-      "proof_source": "proofs/notes/prf-archimedean-q.tex"
+      "excerpt": "For every $x\\in\\mathbb{Q}$ there exists $n\\in\\mathbb{N}$ such that \\[ n>x. \\] Equivalently, for every $x>0$ there exists $n\\in\\mathbb{N}$ such that \\[ \\frac{1}{n}<x. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2262,60 +1573,6 @@
     },
     {
       "type": "predicate_notation_in_standard_field",
-      "kind": "Definition",
-      "node_id": "def:dyadic-rational",
-      "title": "Dyadic rational",
-      "source": "notes/linear-approximation-in-q/notes-dyadic-approximation-stubs.tex",
-      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
-      "signals": [
-        "formal:Dyadic",
-        "fully_quantified_form:Dyadic",
-        "negation_display:Dyadic",
-        "negation_formal:Dyadic"
-      ],
-      "fields": [
-        {
-          "field": "formal",
-          "predicate_names": [
-            "Dyadic"
-          ]
-        },
-        {
-          "field": "fully_quantified_form",
-          "predicate_names": [
-            "Dyadic"
-          ]
-        },
-        {
-          "field": "negation_display",
-          "predicate_names": [
-            "Dyadic"
-          ]
-        },
-        {
-          "field": "negation_formal",
-          "predicate_names": [
-            "Dyadic"
-          ]
-        }
-      ],
-      "excerpt": "\\[ \\operatorname{Dyadic}(d) \\;\\coloneqq\\; \\exists m\\in\\mathbb{Z}\\;\\exists n\\in\\mathbb{N}\\;\\bigl(d=m/2^n\\bigr). \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:dyadic-rationals-are-rational",
-      "title": "Dyadic Rationals Are Rational",
-      "source": "notes/linear-approximation-in-q/notes-dyadic-approximation-stubs.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Every dyadic rational is an element of $\\mathbb{Q}$.",
-      "proof_source": "proofs/notes/prf-dyadic-rationals-are-rational.tex"
-    },
-    {
-      "type": "predicate_notation_in_standard_field",
       "kind": "Theorem",
       "node_id": "thm:dyadic-rationals-are-rational",
       "title": "Dyadic Rationals Are Rational",
@@ -2339,21 +1596,7 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\forall d,\\quad \\operatorname{Dyadic}(d) \\Longrightarrow d\\in\\mathbb{Q}. \\]",
-      "proof_source": "proofs/notes/prf-dyadic-rationals-are-rational.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:dyadic-midpoint-closure",
-      "title": "Dyadic Midpoint Closure",
-      "source": "notes/linear-approximation-in-q/notes-dyadic-approximation-stubs.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $a$ and $b$ are dyadic rationals, then $(a+b)/2$ is dyadic.",
-      "proof_source": "proofs/notes/prf-dyadic-midpoint-closure.tex"
+      "excerpt": "\\[ \\forall d,\\quad \\operatorname{Dyadic}(d) \\Longrightarrow d\\in\\mathbb{Q}. \\]"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -2380,8 +1623,7 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\forall a,b,\\quad \\operatorname{Dyadic}(a)\\land\\operatorname{Dyadic}(b) \\Longrightarrow \\operatorname{Dyadic}\\!\\Bigl(\\frac{a+b}{2}\\Bigr). \\]",
-      "proof_source": "proofs/notes/prf-dyadic-midpoint-closure.tex"
+      "excerpt": "\\[ \\forall a,b,\\quad \\operatorname{Dyadic}(a)\\land\\operatorname{Dyadic}(b) \\Longrightarrow \\operatorname{Dyadic}\\!\\Bigl(\\frac{a+b}{2}\\Bigr). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2393,8 +1635,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $x\\in\\mathbb{Q}$ and every $n\\in\\mathbb{N}$, there exists $m\\in\\mathbb{Z}$ such that \\[ \\frac{m}{2^n}\\le x<\\frac{m+1}{2^n}. \\] Consequently, \\[ 0\\le x-\\frac{m}{2^n}<\\frac{1}{2^n}. \\]",
-      "proof_source": "proofs/notes/prf-dyadic-approximation-error-bound.tex"
+      "excerpt": "For every $x\\in\\mathbb{Q}$ and every $n\\in\\mathbb{N}$, there exists $m\\in\\mathbb{Z}$ such that \\[ \\frac{m}{2^n}\\le x<\\frac{m+1}{2^n}. \\] Consequently, \\[ 0\\le x-\\frac{m}{2^n}<\\frac{1}{2^n}. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2407,52 +1648,6 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "Let $a/b, c/d \\in \\mathbb{Q}$ with $b, d > 0$. The \\emph{mediant} of these two fractions is \\[ \\frac{a+c}{b+d}. \\]"
-    },
-    {
-      "type": "predicate_notation_in_standard_field",
-      "kind": "Definition",
-      "node_id": "def:mediant",
-      "title": "Mediant",
-      "source": "notes/linear-approximation-in-q/notes-mediant.tex",
-      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
-      "signals": [
-        "formal:Mediant",
-        "fully_quantified_form:Mediant"
-      ],
-      "fields": [
-        {
-          "field": "formal",
-          "predicate_names": [
-            "Mediant"
-          ]
-        },
-        {
-          "field": "fully_quantified_form",
-          "predicate_names": [
-            "Mediant"
-          ]
-        }
-      ],
-      "excerpt": "\\[ \\forall a,c \\in \\mathbb{Z},\\; \\forall b,d \\in \\mathbb{Z}_{>0},\\quad \\operatorname{Mediant}\\!\\left(\\tfrac{a}{b},\\tfrac{c}{d}\\right) = \\frac{a+c}{b+d}. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:mediant-inequality",
-      "title": "Mediant inequality",
-      "source": "notes/linear-approximation-in-q/notes-mediant.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $a/b < c/d$ with $b, d > 0$, then \\[ \\frac{a}{b} < \\frac{a+c}{b+d} < \\frac{c}{d}. \\]",
-      "proof_source": "proofs/notes/prf-mediant-inequality.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:mediant-inequality",
-      "proof_source": "proofs/notes/prf-mediant-inequality.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
     },
     {
       "type": "missing_dependencies_block",
@@ -2476,90 +1671,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $a/b < c/d$ be two consecutive fractions in the Farey sequence $F_n$, with $\\gcd(a,b) = \\gcd(c,d) = 1$ and $b,d > 0$. Then \\[ bc - ad = 1. \\]",
-      "proof_source": "proofs/notes/prf-farey-neighbor-theorem.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:farey-neighbor-theorem",
-      "proof_source": "proofs/notes/prf-farey-neighbor-theorem.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:farey-gap",
-      "title": "Gap between Farey neighbors",
-      "source": "notes/linear-approximation-in-q/notes-mediant.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $a/b < c/d$ be consecutive fractions in a Farey sequence. Then \\[ \\frac{c}{d} - \\frac{a}{b} = \\frac{1}{bd}. \\]",
-      "proof_source": "proofs/notes/prf-farey-gap.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:farey-gap",
-      "proof_source": "proofs/notes/prf-farey-gap.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:farey-mediant-property",
-      "title": "Mediant property of Farey neighbors",
-      "source": "notes/linear-approximation-in-q/notes-mediant.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $a/b$ and $c/d$ are consecutive fractions in a Farey sequence, then their mediant $(a+c)/(b+d)$ lies strictly between them: \\[ \\frac{a}{b} < \\frac{a+c}{b+d} < \\frac{c}{d}. \\]",
-      "proof_source": "proofs/notes/prf-farey-mediant-property.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:farey-mediant-property",
-      "proof_source": "proofs/notes/prf-farey-mediant-property.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:mediant-gap",
-      "title": "Mediant Gap Lemma",
-      "source": "notes/linear-approximation-in-q/notes-mediant.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $a/b < c/d$ with $b, d > 0$, then the mediant $(a+c)/(b+d)$ lies strictly between them, and the two subgaps satisfy \\[ \\frac{a+c}{b+d} - \\frac{a}{b} = \\frac{1}{b(b+d)}, \\qquad \\frac{c}{d} - \\frac{a+c}{b+d} = \\frac{1}{d(b+d)}. \\]",
-      "proof_source": "proofs/notes/prf-mediant-gap.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "lem:mediant-gap",
-      "proof_source": "proofs/notes/prf-mediant-gap.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:stern-brocot-enumeration",
-      "title": "Stern--Brocot enumeration",
-      "source": "notes/linear-approximation-in-q/notes-mediant.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Every positive rational number appears exactly once in reduced form in the Stern--Brocot tree.",
-      "proof_source": "proofs/notes/prf-stern-brocot-enumeration.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:stern-brocot-enumeration",
-      "proof_source": "proofs/notes/prf-stern-brocot-enumeration.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "Let $a/b < c/d$ be two consecutive fractions in the Farey sequence $F_n$, with $\\gcd(a,b) = \\gcd(c,d) = 1$ and $b,d > 0$. Then \\[ bc - ad = 1. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2571,52 +1683,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "If $r,s\\in\\mathbb{Q}$ and $r<s$, then there exists $t\\in\\mathbb{Q}$ such that \\[ r<t<s. \\]",
-      "proof_source": "proofs/notes/prf-between-any-two-rationals-is-a-rational.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:between-any-two-rationals-is-a-rational",
-      "proof_source": "proofs/notes/prf-between-any-two-rationals-is-a-rational.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Corollary",
-      "node_id": "cor:q-dense-in-itself",
-      "title": "$ $ Is Dense in Itself",
-      "source": "notes/linear-approximation-in-q/notes-rational-density-and-order.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "The subset $\\mathbb{Q}$ is order dense in itself.",
-      "proof_source": "proofs/notes/prf-q-dense-in-itself.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "cor:q-dense-in-itself",
-      "proof_source": "proofs/notes/prf-q-dense-in-itself.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Corollary",
-      "node_id": "cor:q-has-no-adjacent-points",
-      "title": "The Rational Numbers Have No Adjacent Points",
-      "source": "notes/linear-approximation-in-q/notes-rational-density-and-order.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "There do not exist rational numbers $r<s$ such that no rational number lies strictly between them.",
-      "proof_source": "proofs/notes/prf-q-has-no-adjacent-points.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "cor:q-has-no-adjacent-points",
-      "proof_source": "proofs/notes/prf-q-has-no-adjacent-points.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "If $r,s\\in\\mathbb{Q}$ and $r<s$, then there exists $t\\in\\mathbb{Q}$ such that \\[ r<t<s. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2628,52 +1695,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $q\\in\\mathbb{Q}$ with $q>0$, there exists $r\\in\\mathbb{Q}$ such that \\[ 0<r<q. \\]",
-      "proof_source": "proofs/notes/prf-q-has-no-minimum-positive-element.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:q-has-no-minimum-positive-element",
-      "proof_source": "proofs/notes/prf-q-has-no-minimum-positive-element.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:rational-upper-lower-perturbation",
-      "title": "Upper/Lower Perturbation Lemma, Rational Version",
-      "source": "notes/linear-approximation-in-q/notes-rational-density-and-order.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $q\\in\\mathbb{Q}$ and $\\varepsilon\\in\\mathbb{Q}$ with $\\varepsilon>0$, then there exist $r,s\\in\\mathbb{Q}$ such that \\[ q-\\varepsilon < r < q < s < q+\\varepsilon. \\]",
-      "proof_source": "proofs/notes/prf-rational-upper-lower-perturbation.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "lem:rational-upper-lower-perturbation",
-      "proof_source": "proofs/notes/prf-rational-upper-lower-perturbation.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:rational-perturbation-lemma",
-      "title": "Rational Perturbation Lemma",
-      "source": "notes/linear-approximation-in-q/notes-rational-density-and-order.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $q\\in\\mathbb{Q}$ and $\\varepsilon>0$, then there exists $r\\in\\mathbb{Q}$ such that \\[ 0<|r-q|<\\varepsilon. \\]",
-      "proof_source": "proofs/notes/prf-rational-perturbation-lemma.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "lem:rational-perturbation-lemma",
-      "proof_source": "proofs/notes/prf-rational-perturbation-lemma.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "For every $q\\in\\mathbb{Q}$ with $q>0$, there exists $r\\in\\mathbb{Q}$ such that \\[ 0<r<q. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2685,103 +1707,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $r,s\\in\\mathbb{Q}$ with $r<s$, and let $p\\in\\mathbb{Q}$ with $p>0$. Then there exist $m\\in\\mathbb{N}$ and rational numbers $q_1,q_2,\\dots,q_m$ such that \\[ q_1=r,\\qquad q_m=s, \\] and \\[ 0<q_k-q_{k-1}<p \\qquad\\text{for every }k=2,\\dots,m. \\]",
-      "proof_source": "proofs/notes/prf-rational-chain-with-small-steps.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:sb-denom-growth",
-      "title": "Denominator growth on infinite Stern--Brocot paths",
-      "source": "notes/linear-approximation-in-q/stern-brocot.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $a_0/b_0, a_1/b_1, a_2/b_2, \\ldots$ be the sequence of endpoint fractions encountered along any infinite path in the Stern--Brocot tree. Then the denominators are strictly increasing: \\[ b_0 < b_1 < b_2 < \\cdots, \\] and in particular $b_n \\to \\infty$.",
-      "proof_source": "proofs/notes/prf-sb-denom-growth.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "lem:sb-denom-growth",
-      "proof_source": "proofs/notes/prf-sb-denom-growth.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:sb-length-zero",
-      "title": "Stern--Brocot interval lengths shrink to zero",
-      "source": "notes/linear-approximation-in-q/stern-brocot.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $(I_n)_{n \\geq 0}$ be the nested rational intervals generated by the Stern--Brocot refinement process targeting a real number $x > 0$, where $I_n = [a_n/b_n,\\; c_n/d_n]$. Then the interval lengths $\\ell_n = c_n/d_n - a_n/b_n$ satisfy \\[ \\lim_{n \\to \\infty} \\ell_n = 0. \\]",
-      "proof_source": "proofs/notes/prf-sb-length-zero.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "lem:sb-length-zero",
-      "proof_source": "proofs/notes/prf-sb-length-zero.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Proposition",
-      "node_id": "prop:sb-unique-point",
-      "title": "Nested Stern--Brocot intervals contain a unique limit point",
-      "source": "notes/linear-approximation-in-q/stern-brocot.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $(I_n)_{n \\geq 0}$ be the nested sequence of closed rational intervals generated by the Stern--Brocot refinement process targeting $x > 0$, with $I_n = [a_n/b_n,\\; c_n/d_n]$. Then there exists a unique real number $\\xi \\in \\bigcap_{n=0}^{\\infty} I_n$.",
-      "proof_source": "proofs/notes/prf-sb-unique-point.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "prop:sb-unique-point",
-      "proof_source": "proofs/notes/prf-sb-unique-point.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Corollary",
-      "node_id": "cor:sb-path-limit",
-      "title": "Every infinite Stern--Brocot path converges to its target",
-      "source": "notes/linear-approximation-in-q/stern-brocot.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $x > 0$ be a real number and let $(I_n)$ be the Stern--Brocot refinement sequence targeting $x$. The sequences of left and right endpoints both converge to $x$: \\[ \\lim_{n \\to \\infty} \\frac{a_n}{b_n} = \\lim_{n \\to \\infty} \\frac{c_n}{d_n} = x. \\]",
-      "proof_source": "proofs/notes/prf-sb-path-limit.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "cor:sb-path-limit",
-      "proof_source": "proofs/notes/prf-sb-path-limit.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Corollary",
-      "node_id": "cor:sb-limit-irrational",
-      "title": "Infinite Stern--Brocot paths converge to irrationals",
-      "source": "notes/linear-approximation-in-q/stern-brocot.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A positive real number $x$ corresponds to a \\emph{finite} path in the Stern--Brocot tree if and only if $x$ is rational. Equivalently, $x$ corresponds to an \\emph{infinite} path if and only if $x$ is irrational.",
-      "proof_source": "proofs/notes/prf-sb-limit-irrational.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "cor:sb-limit-irrational",
-      "proof_source": "proofs/notes/prf-sb-limit-irrational.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "Let $r,s\\in\\mathbb{Q}$ with $r<s$, and let $p\\in\\mathbb{Q}$ with $p>0$. Then there exist $m\\in\\mathbb{N}$ and rational numbers $q_1,q_2,\\dots,q_m$ such that \\[ q_1=r,\\qquad q_m=s, \\] and \\[ 0<q_k-q_{k-1}<p \\qquad\\text{for every }k=2,\\dots,m. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2794,60 +1720,6 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "Let $(x_n)$ be a sequence of rational numbers and let $a \\in \\mathbb{Q}$. The sequence $(x_n)$ \\emph{converges to $a$} if \\[ \\forall \\varepsilon \\in \\mathbb{Q},\\; \\varepsilon > 0 \\;\\; \\exists N \\in \\mathbb{N} \\;\\; \\forall n \\geq N, \\quad |x_n - a| < \\varepsilon. \\] We write $\\lim_{n \\to \\infty} x_n = a$, or $x_n \\to a$ as $n \\to \\infty$. The rational number $a$ is called the \\emph{limit} of $(x_n)$. A sequence tha..."
-    },
-    {
-      "type": "predicate_notation_in_standard_field",
-      "kind": "Definition",
-      "node_id": "def:convergent-rational-sequence",
-      "title": "Convergence of a rational sequence",
-      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
-      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
-      "signals": [
-        "formal:ConvergesTo",
-        "fully_quantified_form:ConvergesTo",
-        "negation_display:ConvergesTo",
-        "negation_formal:ConvergesTo"
-      ],
-      "fields": [
-        {
-          "field": "formal",
-          "predicate_names": [
-            "ConvergesTo"
-          ]
-        },
-        {
-          "field": "fully_quantified_form",
-          "predicate_names": [
-            "ConvergesTo"
-          ]
-        },
-        {
-          "field": "negation_display",
-          "predicate_names": [
-            "ConvergesTo"
-          ]
-        },
-        {
-          "field": "negation_formal",
-          "predicate_names": [
-            "ConvergesTo"
-          ]
-        }
-      ],
-      "excerpt": "\\[ \\operatorname{ConvergesTo}(x_n, a) \\;\\coloneqq\\; \\forall \\varepsilon > 0 \\;\\; \\exists N \\in \\mathbb{N} \\;\\; \\forall n \\geq N, \\quad |x_n - a| < \\varepsilon. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:limit-unique-q",
-      "title": "Limits of rational sequences are unique",
-      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If a sequence of rational numbers converges, then its limit is unique.",
-      "proof_source": "proofs/notes/prf-limit-unique-q.tex"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -2874,39 +1746,7 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\forall (x_n) \\subseteq \\mathbb{Q},\\; \\bigl( \\operatorname{ConvergesTo}(x_n, a) \\land \\operatorname{ConvergesTo}(x_n, b) \\bigr) \\Longrightarrow a = b. \\]",
-      "proof_source": "proofs/notes/prf-limit-unique-q.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:limit-unique-q",
-      "proof_source": "proofs/notes/prf-limit-unique-q.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:subsequence-q",
-      "title": "Subsequence of a rational sequence",
-      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $(x_n)$ be a sequence of rational numbers and let $(k_n)$ be a strictly increasing sequence of natural numbers: $k_1 < k_2 < k_3 < \\cdots$. The sequence $(x_{k_n})$ is called a \\emph{subsequence} of $(x_n)$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:subsequence-convergence-q",
-      "title": "Subsequences of convergent sequences converge to the same limit",
-      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $(x_n)$ be a sequence of rational numbers with $x_n \\to a$. Then every subsequence $(x_{k_n})$ of $(x_n)$ also converges to $a$.",
-      "proof_source": "proofs/notes/prf-subsequence-convergence-q.tex"
+      "excerpt": "\\[ \\forall (x_n) \\subseteq \\mathbb{Q},\\; \\bigl( \\operatorname{ConvergesTo}(x_n, a) \\land \\operatorname{ConvergesTo}(x_n, b) \\bigr) \\Longrightarrow a = b. \\]"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -2940,14 +1780,7 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\operatorname{ConvergesTo}(x_n, a) \\;\\Longrightarrow\\; \\forall (k_n) \\text{ strictly increasing},\\; \\operatorname{ConvergesTo}(x_{k_n}, a). \\]",
-      "proof_source": "proofs/notes/prf-subsequence-convergence-q.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:subsequence-convergence-q",
-      "proof_source": "proofs/notes/prf-subsequence-convergence-q.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "\\[ \\operatorname{ConvergesTo}(x_n, a) \\;\\Longrightarrow\\; \\forall (k_n) \\text{ strictly increasing},\\; \\operatorname{ConvergesTo}(x_{k_n}, a). \\]"
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -2958,18 +1791,6 @@
       "message": "Extracted theorem/definition box appears to contain more than one primary statement. Extraction was preserved, but the source should be split into separate boxes and re-extracted.",
       "signals": [
         "latex_list_with_multiple_items:3"
-      ],
-      "excerpt": "A sequence $(x_n)$ of rational numbers is: \\begin{itemize} \\item \\emph{bounded above} if $\\exists \\Lambda \\in \\mathbb{Q}\\; \\forall n \\in \\mathbb{N},\\; x_n \\leq \\Lambda$; \\item \\emph{bounded below} if $\\exists \\lambda \\in \\mathbb{Q}\\; \\forall n \\in \\mathbb{N},\\; x_n \\geq \\lambda$; \\item \\emph{bounded} if $\\exists \\Gamma \\in \\mathbb{Q},\\;\\Gamma>0\\;\\; \\forall n \\in \\mathbb{N},\\; |x_n| \\leq \\Gamma$. \\end{itemize}"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:bounded-sequence-q",
-      "title": "Bounded sequence of rational numbers",
-      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
       ],
       "excerpt": "A sequence $(x_n)$ of rational numbers is: \\begin{itemize} \\item \\emph{bounded above} if $\\exists \\Lambda \\in \\mathbb{Q}\\; \\forall n \\in \\mathbb{N},\\; x_n \\leq \\Lambda$; \\item \\emph{bounded below} if $\\exists \\lambda \\in \\mathbb{Q}\\; \\forall n \\in \\mathbb{N},\\; x_n \\geq \\lambda$; \\item \\emph{bounded} if $\\exists \\Gamma \\in \\mathbb{Q},\\;\\Gamma>0\\;\\; \\forall n \\in \\mathbb{N},\\; |x_n| \\leq \\Gamma$. \\end{itemize}"
     },
@@ -3015,19 +1836,6 @@
       "excerpt": "\\[ \\operatorname{Bounded}(x_n) \\;\\coloneqq\\; \\exists \\Gamma \\in \\mathbb{Q},\\; \\Gamma > 0,\\;\\; \\forall n \\in \\mathbb{N},\\;\\; |x_n| \\leq \\Gamma. \\]"
     },
     {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:convergent-bounded-q",
-      "title": "Convergent sequences are bounded",
-      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Every convergent sequence of rational numbers is bounded.",
-      "proof_source": "proofs/notes/prf-convergent-bounded-q.tex"
-    },
-    {
       "type": "predicate_notation_in_standard_field",
       "kind": "Theorem",
       "node_id": "thm:convergent-bounded-q",
@@ -3054,27 +1862,7 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\operatorname{ConvergesTo}(x_n, a) \\;\\Longrightarrow\\; \\operatorname{Bounded}(x_n). \\]",
-      "proof_source": "proofs/notes/prf-convergent-bounded-q.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:convergent-bounded-q",
-      "proof_source": "proofs/notes/prf-convergent-bounded-q.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:cauchy-bounded-q",
-      "title": "Cauchy sequences are bounded",
-      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Every Cauchy sequence of rational numbers is bounded.",
-      "proof_source": "proofs/notes/prf-cauchy-bounded-q.tex"
+      "excerpt": "\\[ \\operatorname{ConvergesTo}(x_n, a) \\;\\Longrightarrow\\; \\operatorname{Bounded}(x_n). \\]"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -3103,27 +1891,7 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\operatorname{CauchySequence}(x_n) \\;\\Longrightarrow\\; \\operatorname{Bounded}(x_n). \\]",
-      "proof_source": "proofs/notes/prf-cauchy-bounded-q.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:cauchy-bounded-q",
-      "proof_source": "proofs/notes/prf-cauchy-bounded-q.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:cauchy-closed-operations-q",
-      "title": "Cauchy sequences are closed under addition and multiplication",
-      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $(x_n)$ and $(y_n)$ are Cauchy sequences of rational numbers, then so are $(x_n + y_n)$ and $(x_n y_n)$.",
-      "proof_source": "proofs/notes/prf-cauchy-closed-operations-q.tex"
+      "excerpt": "\\[ \\operatorname{CauchySequence}(x_n) \\;\\Longrightarrow\\; \\operatorname{Bounded}(x_n). \\]"
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -3150,14 +1918,7 @@
           ]
         }
       ],
-      "excerpt": "\\[ \\operatorname{CauchySequence}(x_n) \\land \\operatorname{CauchySequence}(y_n) \\;\\Longrightarrow\\; \\operatorname{CauchySequence}(x_n + y_n) \\;\\land\\; \\operatorname{CauchySequence}(x_n y_n). \\]",
-      "proof_source": "proofs/notes/prf-cauchy-closed-operations-q.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:cauchy-closed-operations-q",
-      "proof_source": "proofs/notes/prf-cauchy-closed-operations-q.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "\\[ \\operatorname{CauchySequence}(x_n) \\land \\operatorname{CauchySequence}(y_n) \\;\\Longrightarrow\\; \\operatorname{CauchySequence}(x_n + y_n) \\;\\land\\; \\operatorname{CauchySequence}(x_n y_n). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3172,49 +1933,6 @@
       "excerpt": "Let $\\mathbb{Q}^c$ denote the set of all Cauchy sequences of rational numbers. Two sequences $(x_n), (y_n) \\in \\mathbb{Q}^c$ are \\emph{equivalent}, written $(x_n) \\sim (y_n)$, if \\[ \\forall \\varepsilon > 0 \\;\\; \\exists N \\in \\mathbb{N} \\;\\; \\forall n \\geq N, \\quad |x_n - y_n| < \\varepsilon. \\] Equivalently, $(x_n) \\sim (y_n)$ if and only if $(x_n - y_n)$ converges to $0$."
     },
     {
-      "type": "predicate_notation_in_standard_field",
-      "kind": "Definition",
-      "node_id": "def:cauchy-equivalence",
-      "title": "Equivalence of Cauchy sequences in $ $",
-      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
-      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
-      "signals": [
-        "formal:CauchyEquiv, ConvergesTo",
-        "fully_quantified_form:CauchyEquiv, ConvergesTo",
-        "negation_display:CauchyEquiv",
-        "negation_formal:CauchyEquiv"
-      ],
-      "fields": [
-        {
-          "field": "formal",
-          "predicate_names": [
-            "CauchyEquiv",
-            "ConvergesTo"
-          ]
-        },
-        {
-          "field": "fully_quantified_form",
-          "predicate_names": [
-            "CauchyEquiv",
-            "ConvergesTo"
-          ]
-        },
-        {
-          "field": "negation_display",
-          "predicate_names": [
-            "CauchyEquiv"
-          ]
-        },
-        {
-          "field": "negation_formal",
-          "predicate_names": [
-            "CauchyEquiv"
-          ]
-        }
-      ],
-      "excerpt": "\\[ \\operatorname{CauchyEquiv}(x_n, y_n) \\;\\coloneqq\\; \\operatorname{ConvergesTo}(x_n - y_n,\\, 0). \\]"
-    },
-    {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "thm:cauchy-equivalence-is-equivalence",
@@ -3224,8 +1942,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "The relation $\\sim$ defined on $\\mathbb{Q}^c$ by $(x_n) \\sim (y_n) \\Longleftrightarrow \\operatorname{ConvergesTo}(x_n - y_n, 0)$ is an equivalence relation.",
-      "proof_source": "proofs/notes/prf-cauchy-equivalence-is-equivalence.tex"
+      "excerpt": "The relation $\\sim$ defined on $\\mathbb{Q}^c$ by $(x_n) \\sim (y_n) \\Longleftrightarrow \\operatorname{ConvergesTo}(x_n - y_n, 0)$ is an equivalence relation."
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -3245,72 +1962,31 @@
           ]
         }
       ],
-      "excerpt": "The relation $\\sim$ on $\\mathbb{Q}^c$ satisfies: \\begin{align*} &\\forall (x_n) \\in \\mathbb{Q}^c,\\quad (x_n) \\sim (x_n); \\\\ &\\forall (x_n),(y_n) \\in \\mathbb{Q}^c,\\quad (x_n) \\sim (y_n) \\Longrightarrow (y_n) \\sim (x_n); \\\\ &\\forall (x_n),(y_n),(z_n) \\in \\mathbb{Q}^c,\\quad (x_n) \\sim (y_n) \\land (y_n) \\sim (z_n) \\Longrightarrow (x_n) \\sim (z_n). \\end{align*}",
-      "proof_source": "proofs/notes/prf-cauchy-equivalence-is-equivalence.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:cauchy-equivalence-is-equivalence",
-      "proof_source": "proofs/notes/prf-cauchy-equivalence-is-equivalence.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "The relation $\\sim$ defined on $\\mathbb{Q}^c$ by $(x_n) \\sim (y_n) \\Longleftrightarrow \\operatorname{ConvergesTo}(x_n - y_n, 0)$ is an equivalence relation."
     },
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:cauchy-equiv-preserved-operations",
-      "title": "Cauchy equivalence is preserved under addition and multiplication",
-      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $(x_n),(y_n),(u_n),(v_n) \\in \\mathbb{Q}^c$. Suppose $(x_n) \\sim (u_n)$ and $(y_n) \\sim (v_n)$. Then: \\[ (x_n + y_n) \\sim (u_n + v_n) \\qquad\\text{and}\\qquad (x_n y_n) \\sim (u_n v_n). \\]",
-      "proof_source": "proofs/notes/prf-cauchy-equiv-preserved-operations.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:cauchy-equiv-preserved-operations",
-      "proof_source": "proofs/notes/prf-cauchy-equiv-preserved-operations.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:rational-square-bracketing-grid",
+      "node_id": "thm:rational-square-bracketing",
       "title": "Rational Square Bracketing",
       "source": "notes/nonlinear-approximation-in-q/notes-square-bracketing-and-nonlinear-approximation.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $r\\in\\mathbb{Q}$ with $r>0$, there exist $a,b\\in\\mathbb{Q}$ with $a>0$ and $b>0$ such that \\[ a^2<r<b^2. \\]",
-      "proof_source": "proofs/notes/prf-rational-square-bracketing-grid.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:first-grid-point-crossing",
-      "title": "First Grid Point Crossing",
-      "source": "notes/nonlinear-approximation-in-q/notes-square-bracketing-and-nonlinear-approximation.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $r\\in\\mathbb{Q}$ with $r>0$ and let $q\\in\\mathbb{N}$ with $q\\ge 1$. If $K\\in\\mathbb{N}$ satisfies $K^2>r$, then the set \\[ A=\\{m\\in\\mathbb{N}:m^2>rq^2\\} \\] is nonempty and therefore has a least element.",
-      "proof_source": "proofs/notes/prf-first-grid-point-crossing.tex"
+      "excerpt": "For every $r\\in\\mathbb{Q}$ with $r>0$, there exist $a,b\\in\\mathbb{Q}$ with $a>0$ and $b>0$ such that \\[ a^2<r<b^2. \\]"
     },
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:rational-square-approximation-from-above-grid",
+      "node_id": "thm:rational-square-approximation-from-above",
       "title": "Rational Square Approximation from Above",
       "source": "notes/nonlinear-approximation-in-q/notes-square-bracketing-and-nonlinear-approximation.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $r\\in\\mathbb{Q}$ with $r>0$, and let $n\\in\\mathbb{N}$ with $n\\ge 1$. Then there exists $s\\in\\mathbb{Q}$ with $s>0$ such that \\[ r<s^2<r+\\frac1n. \\]",
-      "proof_source": "proofs/notes/prf-rational-square-approximation-from-above-grid.tex"
+      "excerpt": "Let $r\\in\\mathbb{Q}$ with $r>0$, and let $n\\in\\mathbb{N}$ with $n\\ge 1$. Then there exists $s\\in\\mathbb{Q}$ with $s>0$ such that \\[ r<s^2<r+\\frac1n. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3322,8 +1998,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $r\\in\\mathbb{Q}$ with $r>0$, and let $n\\in\\mathbb{N}$ with $n\\ge 1$. If $r-1/n>0$, then there exists $s\\in\\mathbb{Q}$ with $s>0$ such that \\[ r-\\frac1n<s^2<r. \\]",
-      "proof_source": "proofs/notes/prf-rational-square-approximation-from-below.tex"
+      "excerpt": "Let $r\\in\\mathbb{Q}$ with $r>0$, and let $n\\in\\mathbb{N}$ with $n\\ge 1$. If $r-1/n>0$, then there exists $s\\in\\mathbb{Q}$ with $s>0$ such that \\[ r-\\frac1n<s^2<r. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3335,84 +2010,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "With its usual order, the system \\[ (\\mathbb{Q},+,\\cdot,0,1,<) \\] is an ordered field.",
-      "proof_source": "proofs/notes/prf-q-is-ordered-field.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:squares-nonnegative",
-      "title": "Squares Are Nonnegative",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "In any ordered field $F$, for every $a\\in F$, \\[ a^2\\ge 0. \\]",
-      "proof_source": "proofs/notes/prf-squares-nonnegative.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:squares-nonnegative",
-      "proof_source": "proofs/notes/prf-squares-nonnegative.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:inverse-positive",
-      "title": "Positive Elements Have Positive Inverses",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "In any ordered field, if $a>0$, then $a^{-1}>0$.",
-      "proof_source": "proofs/notes/prf-inverse-positive.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:inverse-positive",
-      "proof_source": "proofs/notes/prf-inverse-positive.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:multiply-positive",
-      "title": "Multiplication by a Positive Element Preserves Order",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "In any ordered field, if $a<b$ and $c>0$, then \\[ ac<bc. \\]",
-      "proof_source": "proofs/notes/prf-multiply-positive.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:multiply-positive",
-      "proof_source": "proofs/notes/prf-multiply-positive.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:multiply-negative",
-      "title": "Multiplication by a Negative Element Reverses Order",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "In any ordered field, if $a<b$ and $c<0$, then \\[ ac>bc. \\]",
-      "proof_source": "proofs/notes/prf-multiply-negative.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:multiply-negative",
-      "proof_source": "proofs/notes/prf-multiply-negative.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "With its usual order, the system \\[ (\\mathbb{Q},+,\\cdot,0,1,<) \\] is an ordered field."
     },
     {
       "type": "missing_dependencies_block",
@@ -3424,109 +2022,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "In any ordered field, \\[ 1>0. \\]",
-      "proof_source": "proofs/notes/prf-one-positive.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:one-positive",
-      "proof_source": "proofs/notes/prf-one-positive.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Corollary",
-      "node_id": "cor:n-positive",
-      "title": "Natural Numbers Are Positive",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "In any ordered field, for every natural number $n$, \\[ n>0. \\]",
-      "proof_source": "proofs/notes/prf-n-positive.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "cor:n-positive",
-      "proof_source": "proofs/notes/prf-n-positive.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:positive-fraction-iff-positive-product",
-      "title": "Positivity of a Quotient via the Product $ab$",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For any $a,b\\in F$ with $b\\neq 0$, \\[ 0<\\frac{a}{b} \\quad\\Longleftrightarrow\\quad 0<a\\cdot b. \\]",
-      "proof_source": "proofs/notes/prf-positive-fraction-iff-positive-product.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:positive-fraction-iff-positive-product",
-      "proof_source": "proofs/notes/prf-positive-fraction-iff-positive-product.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:fraction-order-comparison-general",
-      "title": "General Fraction Comparison in an Ordered Field",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For any $a,b,c,d\\in F$ with $b\\neq 0$ and $d\\neq 0$, \\[ \\frac{a}{b}<\\frac{c}{d} \\quad\\Longleftrightarrow\\quad (a\\cdot d)\\cdot(b\\cdot d)<(b\\cdot c)\\cdot(b\\cdot d). \\]",
-      "proof_source": "proofs/notes/prf-fraction-order-comparison-general.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:fraction-order-comparison-general",
-      "proof_source": "proofs/notes/prf-fraction-order-comparison-general.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:fraction-order-comparison-positive-denominator-product",
-      "title": "Fraction Comparison When the Denominator Product Is Positive",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For any $a,b,c,d\\in F$, if $b\\neq 0$, $d\\neq 0$, and $0<b\\cdot d$, then \\[ \\frac{a}{b}<\\frac{c}{d} \\quad\\Longleftrightarrow\\quad a\\cdot d<b\\cdot c. \\]",
-      "proof_source": "proofs/notes/prf-fraction-order-comparison-positive-denominator-product.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:fraction-order-comparison-positive-denominator-product",
-      "proof_source": "proofs/notes/prf-fraction-order-comparison-positive-denominator-product.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:reciprocal-order-for-positive-elements",
-      "title": "Reciprocal Order for Positive Elements",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "In any ordered field, if $0<d<b$, then \\[ 0<\\frac{1}{b}<\\frac{1}{d}. \\] Conversely, if $0<1/b<1/d$, then $0<d<b$.",
-      "proof_source": "proofs/notes/prf-reciprocal-order-for-positive-elements.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:reciprocal-order-for-positive-elements",
-      "proof_source": "proofs/notes/prf-reciprocal-order-for-positive-elements.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "In any ordered field, \\[ 1>0. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3538,14 +2034,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Every ordered field is densely ordered by its order relation.",
-      "proof_source": "proofs/notes/prf-ordered-fields-are-densely-ordered.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:ordered-fields-are-densely-ordered",
-      "proof_source": "proofs/notes/prf-ordered-fields-are-densely-ordered.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "Every ordered field is densely ordered by its order relation."
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -3581,8 +2070,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $a,b,c,d,e,f,g,h\\in\\mathbb{Z}$ with $bdfh\\neq 0$. If \\[ (a,b)\\sim(e,f) \\qquad\\text{and}\\qquad (c,d)\\sim(g,h), \\] then \\[ (ad+bc,bd)\\sim(eh+fg,fh). \\]",
-      "proof_source": "proofs/notes/prf-rational-addition-well-defined.tex"
+      "excerpt": "Let $a,b,c,d,e,f,g,h\\in\\mathbb{Z}$ with $bdfh\\neq 0$. If \\[ (a,b)\\sim(e,f) \\qquad\\text{and}\\qquad (c,d)\\sim(g,h), \\] then \\[ (ad+bc,bd)\\sim(eh+fg,fh). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3594,8 +2082,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $a,b,c,d,e,f,g,h\\in\\mathbb{Z}$ with $bdfh\\neq 0$. If \\[ (a,b)\\sim(e,f) \\qquad\\text{and}\\qquad (c,d)\\sim(g,h), \\] then \\[ (ac,bd)\\sim(eg,fh). \\]",
-      "proof_source": "proofs/notes/prf-rational-multiplication-well-defined.tex"
+      "excerpt": "Let $a,b,c,d,e,f,g,h\\in\\mathbb{Z}$ with $bdfh\\neq 0$. If \\[ (a,b)\\sim(e,f) \\qquad\\text{and}\\qquad (c,d)\\sim(g,h), \\] then \\[ (ac,bd)\\sim(eg,fh). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3607,8 +2094,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $m,n\\in\\mathbb{Z}$, \\[ [(m,1)] + [(n,1)] = [(m+n,\\,1)]. \\]",
-      "proof_source": "proofs/notes/prf-ec-integer-embedding-add.tex"
+      "excerpt": "For all $m,n\\in\\mathbb{Z}$, \\[ [(m,1)] + [(n,1)] = [(m+n,\\,1)]. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3620,8 +2106,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $m,n\\in\\mathbb{Z}$, \\[ [(m,1)] \\cdot [(n,1)] = [(mn,\\,1)]. \\]",
-      "proof_source": "proofs/notes/prf-ec-integer-embedding-mul.tex"
+      "excerpt": "For all $m,n\\in\\mathbb{Z}$, \\[ [(m,1)] \\cdot [(n,1)] = [(mn,\\,1)]. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3633,8 +2118,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $[(a,b)]\\in\\mathbb{Q}$, \\[ [(a,b)] = [(0,1)] \\quad\\Longleftrightarrow\\quad a = 0. \\]",
-      "proof_source": "proofs/notes/prf-ec-zero-numerator.tex"
+      "excerpt": "For every $[(a,b)]\\in\\mathbb{Q}$, \\[ [(a,b)] = [(0,1)] \\quad\\Longleftrightarrow\\quad a = 0. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3646,8 +2130,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $[(a,b)]\\in\\mathbb{Q}$ and every nonzero integer $e\\neq 0$, \\[ [(a,b)] = [(ae,be)]. \\]",
-      "proof_source": "proofs/notes/prf-ec-scaling.tex"
+      "excerpt": "For every $[(a,b)]\\in\\mathbb{Q}$ and every nonzero integer $e\\neq 0$, \\[ [(a,b)] = [(ae,be)]. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3659,8 +2142,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $[(a,b)]\\in\\mathbb{Q}$, \\[ -[(a,b)] = [(-a,b)] = [(a,-b)]. \\]",
-      "proof_source": "proofs/notes/prf-ec-negation.tex"
+      "excerpt": "For every $[(a,b)]\\in\\mathbb{Q}$, \\[ -[(a,b)] = [(-a,b)] = [(a,-b)]. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3672,8 +2154,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $[(a,b)],[(c,d)]\\in\\mathbb{Q}$, \\[ [(a,b)] - [(c,d)] = [(ad-bc,\\,bd)]. \\]",
-      "proof_source": "proofs/notes/prf-ec-subtraction.tex"
+      "excerpt": "For every $[(a,b)],[(c,d)]\\in\\mathbb{Q}$, \\[ [(a,b)] - [(c,d)] = [(ad-bc,\\,bd)]. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3685,8 +2166,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $[(a,b)]\\in\\mathbb{Q}$ with $a\\neq 0$, \\[ [(a,b)]^{-1} = [(b,a)]. \\]",
-      "proof_source": "proofs/notes/prf-ec-reciprocal.tex"
+      "excerpt": "For every $[(a,b)]\\in\\mathbb{Q}$ with $a\\neq 0$, \\[ [(a,b)]^{-1} = [(b,a)]. \\]"
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -3722,8 +2202,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $a\\in\\mathbb{Q}$, \\[ \\frac{a}{1}=a. \\]",
-      "proof_source": "proofs/notes/prf-rational-division-by-one.tex"
+      "excerpt": "For every $a\\in\\mathbb{Q}$, \\[ \\frac{a}{1}=a. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3735,8 +2214,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $a,b\\in\\mathbb{Q}$ with $b\\neq 0$, \\[ \\frac{a}{b}=0 \\quad\\Longleftrightarrow\\quad a=0. \\]",
-      "proof_source": "proofs/notes/prf-rational-quotient-zero-iff-numerator-zero.tex"
+      "excerpt": "For every $a,b\\in\\mathbb{Q}$ with $b\\neq 0$, \\[ \\frac{a}{b}=0 \\quad\\Longleftrightarrow\\quad a=0. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3748,8 +2226,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $a,b,c,d\\in\\mathbb{Q}$ with $b\\neq 0$ and $d\\neq 0$, \\[ \\frac{a}{b}=\\frac{c}{d} \\quad\\Longleftrightarrow\\quad a\\cdot d=b\\cdot c. \\]",
-      "proof_source": "proofs/notes/prf-rational-cross-multiplication.tex"
+      "excerpt": "For every $a,b,c,d\\in\\mathbb{Q}$ with $b\\neq 0$ and $d\\neq 0$, \\[ \\frac{a}{b}=\\frac{c}{d} \\quad\\Longleftrightarrow\\quad a\\cdot d=b\\cdot c. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3761,8 +2238,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $a,b,e\\in\\mathbb{Q}$ with $b\\neq 0$ and $e\\neq 0$, \\[ \\frac{a}{b}=\\frac{a\\cdot e}{b\\cdot e}. \\]",
-      "proof_source": "proofs/notes/prf-rational-fraction-scaling.tex"
+      "excerpt": "For every $a,b,e\\in\\mathbb{Q}$ with $b\\neq 0$ and $e\\neq 0$, \\[ \\frac{a}{b}=\\frac{a\\cdot e}{b\\cdot e}. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3774,14 +2250,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $a,b,c,d\\in\\mathbb{Q}$ with $b\\neq 0$ and $d\\neq 0$, \\[ \\frac{a}{b}+\\frac{c}{d} = \\frac{a\\cdot d+b\\cdot c}{b\\cdot d}. \\]",
-      "proof_source": "proofs/notes/prf-rational-fraction-addition.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:rational-fraction-addition",
-      "proof_source": "proofs/notes/prf-rational-fraction-addition.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "For every $a,b,c,d\\in\\mathbb{Q}$ with $b\\neq 0$ and $d\\neq 0$, \\[ \\frac{a}{b}+\\frac{c}{d} = \\frac{a\\cdot d+b\\cdot c}{b\\cdot d}. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3793,14 +2262,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $a,b,c,d\\in\\mathbb{Q}$ with $b\\neq 0$ and $d\\neq 0$, \\[ \\frac{a}{b}-\\frac{c}{d} = \\frac{a\\cdot d-b\\cdot c}{b\\cdot d}. \\]",
-      "proof_source": "proofs/notes/prf-rational-fraction-subtraction.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:rational-fraction-subtraction",
-      "proof_source": "proofs/notes/prf-rational-fraction-subtraction.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "For every $a,b,c,d\\in\\mathbb{Q}$ with $b\\neq 0$ and $d\\neq 0$, \\[ \\frac{a}{b}-\\frac{c}{d} = \\frac{a\\cdot d-b\\cdot c}{b\\cdot d}. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3812,14 +2274,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $a,b,c,d\\in\\mathbb{Q}$ with $b\\neq 0$ and $d\\neq 0$, \\[ \\frac{a}{b}\\cdot \\frac{c}{d} = \\frac{a\\cdot c}{b\\cdot d}. \\]",
-      "proof_source": "proofs/notes/prf-rational-fraction-multiplication.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:rational-fraction-multiplication",
-      "proof_source": "proofs/notes/prf-rational-fraction-multiplication.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "For every $a,b,c,d\\in\\mathbb{Q}$ with $b\\neq 0$ and $d\\neq 0$, \\[ \\frac{a}{b}\\cdot \\frac{c}{d} = \\frac{a\\cdot c}{b\\cdot d}. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3831,14 +2286,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $a,b\\in\\mathbb{Q}$ with $b\\neq 0$, \\[ -\\left(\\frac{a}{b}\\right) = \\frac{-a}{b} = \\frac{a}{-b}. \\]",
-      "proof_source": "proofs/notes/prf-rational-fraction-negation.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:rational-fraction-negation",
-      "proof_source": "proofs/notes/prf-rational-fraction-negation.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "For every $a,b\\in\\mathbb{Q}$ with $b\\neq 0$, \\[ -\\left(\\frac{a}{b}\\right) = \\frac{-a}{b} = \\frac{a}{-b}. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3850,14 +2298,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $a,b\\in\\mathbb{Q}$ with $a\\neq 0$ and $b\\neq 0$, \\[ \\left(\\frac{a}{b}\\right)^{-1}=\\frac{b}{a}. \\]",
-      "proof_source": "proofs/notes/prf-rational-fraction-reciprocal.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:rational-fraction-reciprocal",
-      "proof_source": "proofs/notes/prf-rational-fraction-reciprocal.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "For every $a,b\\in\\mathbb{Q}$ with $a\\neq 0$ and $b\\neq 0$, \\[ \\left(\\frac{a}{b}\\right)^{-1}=\\frac{b}{a}. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -3869,46 +2310,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "There is no rational number whose square is $2$.",
-      "proof_source": "proofs/notes/prf-sqrt2-irrational.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:sqrt2-irrational",
-      "proof_source": "proofs/notes/prf-sqrt2-irrational.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:rational-square-bracketing",
-      "title": "Rational Square Bracketing",
-      "source": "notes/rational-gaps/notes-rational-gaps.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $r$ be a positive rational number. Then there exist positive rational numbers $a$ and $b$ such that \\[ a^2<r<b^2. \\]",
-      "proof_source": "proofs/notes/prf-rational-square-bracketing.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "lem:rational-square-bracketing",
-      "proof_source": "proofs/notes/prf-rational-square-bracketing.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:rational-square-approximation-from-above",
-      "title": "Rational Square Approximation from Above",
-      "source": "notes/rational-gaps/notes-rational-gaps.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $r$ be a positive rational number and let $n\\in\\mathbb{N}$. Then there exists a positive rational number $s$ such that \\[ r<s^2<r+\\frac{1}{n}. \\]",
-      "proof_source": "proofs/notes/prf-rational-square-approximation-from-above.tex"
+      "excerpt": "There is no rational number whose square is $2$."
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -3935,33 +2337,6 @@
       "excerpt": "A \\emph{sequence of rational numbers} is a function \\[ x:\\mathbb{N}\\to\\mathbb{Q}. \\] It is usually written $(x_n)_{n\\in\\mathbb{N}}$ or simply $x_1,x_2,x_3,\\dots$."
     },
     {
-      "type": "predicate_notation_in_standard_field",
-      "kind": "Definition",
-      "node_id": "def:rational-sequence",
-      "title": "Sequence of rational numbers",
-      "source": "notes/sequential-approximation-in-q/notes-rational-cauchy.tex",
-      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
-      "signals": [
-        "formal:RationalSequence",
-        "fully_quantified_form:RationalSequence"
-      ],
-      "fields": [
-        {
-          "field": "formal",
-          "predicate_names": [
-            "RationalSequence"
-          ]
-        },
-        {
-          "field": "fully_quantified_form",
-          "predicate_names": [
-            "RationalSequence"
-          ]
-        }
-      ],
-      "excerpt": "\\[ \\operatorname{RationalSequence}(x) \\;\\coloneqq\\; x:\\mathbb{N}\\to\\mathbb{Q}. \\]"
-    },
-    {
       "type": "missing_dependencies_block",
       "kind": "Definition",
       "node_id": "def:cauchy-rational",
@@ -3974,47 +2349,6 @@
       "excerpt": "A sequence $(x_n)$ of rational numbers is called a \\emph{Cauchy sequence} if \\[ \\forall \\varepsilon>0\\;\\; \\exists N\\in\\mathbb{N}\\;\\; \\forall m,n\\ge N, \\qquad |x_m-x_n|<\\varepsilon. \\]"
     },
     {
-      "type": "predicate_notation_in_standard_field",
-      "kind": "Definition",
-      "node_id": "def:cauchy-rational",
-      "title": "Cauchy sequence in $ $",
-      "source": "notes/sequential-approximation-in-q/notes-rational-cauchy.tex",
-      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
-      "signals": [
-        "formal:CauchySequence",
-        "fully_quantified_form:CauchySequence",
-        "negation_display:CauchySequence",
-        "negation_formal:CauchySequence"
-      ],
-      "fields": [
-        {
-          "field": "formal",
-          "predicate_names": [
-            "CauchySequence"
-          ]
-        },
-        {
-          "field": "fully_quantified_form",
-          "predicate_names": [
-            "CauchySequence"
-          ]
-        },
-        {
-          "field": "negation_display",
-          "predicate_names": [
-            "CauchySequence"
-          ]
-        },
-        {
-          "field": "negation_formal",
-          "predicate_names": [
-            "CauchySequence"
-          ]
-        }
-      ],
-      "excerpt": "\\[ \\operatorname{CauchySequence}(x_n) \\;\\coloneqq\\; \\forall \\varepsilon>0\\;\\;\\exists N\\in\\mathbb{N}\\;\\;\\forall m,n\\ge N,\\quad |x_m-x_n|<\\varepsilon. \\]"
-    },
-    {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "thm:convergent-implies-cauchy-q",
@@ -4024,46 +2358,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Every convergent sequence in $\\mathbb{Q}$ is a Cauchy sequence.",
-      "proof_source": "proofs/notes/prf-convergent-implies-cauchy-q.tex"
-    },
-    {
-      "type": "predicate_notation_in_standard_field",
-      "kind": "Theorem",
-      "node_id": "thm:convergent-implies-cauchy-q",
-      "title": "Every Convergent Rational Sequence Is Cauchy",
-      "source": "notes/sequential-approximation-in-q/notes-rational-cauchy.tex",
-      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
-      "signals": [
-        "formal:ConvergesTo, CauchySequence",
-        "fully_quantified_form:ConvergesTo, CauchySequence",
-        "contrapositive:CauchySequence, ConvergesTo"
-      ],
-      "fields": [
-        {
-          "field": "formal",
-          "predicate_names": [
-            "ConvergesTo",
-            "CauchySequence"
-          ]
-        },
-        {
-          "field": "fully_quantified_form",
-          "predicate_names": [
-            "ConvergesTo",
-            "CauchySequence"
-          ]
-        },
-        {
-          "field": "contrapositive",
-          "predicate_names": [
-            "CauchySequence",
-            "ConvergesTo"
-          ]
-        }
-      ],
-      "excerpt": "\\[ \\operatorname{ConvergesTo}(x_n, a) \\;\\Longrightarrow\\; \\operatorname{CauchySequence}(x_n). \\]",
-      "proof_source": "proofs/notes/prf-convergent-implies-cauchy-q.tex"
+      "excerpt": "Every convergent sequence in $\\mathbb{Q}$ is a Cauchy sequence."
     },
     {
       "type": "missing_dependencies_block",
@@ -4075,54 +2370,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "There exist Cauchy sequences in $\\mathbb{Q}$ that do not converge to a rational number.",
-      "proof_source": "proofs/notes/prf-cauchy-not-convergent-q.tex"
-    },
-    {
-      "type": "predicate_notation_in_standard_field",
-      "kind": "Theorem",
-      "node_id": "thm:cauchy-not-convergent-q",
-      "title": "There Exist Cauchy Sequences in $ $ That Do Not Converge to a Rational Number",
-      "source": "notes/sequential-approximation-in-q/notes-rational-cauchy.tex",
-      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
-      "signals": [
-        "formal:CauchySequence, ConvergesTo",
-        "fully_quantified_form:CauchySequence, ConvergesTo",
-        "negation_display:CauchySequence, ConvergesTo",
-        "negation_formal:CauchySequence, ConvergesTo"
-      ],
-      "fields": [
-        {
-          "field": "formal",
-          "predicate_names": [
-            "CauchySequence",
-            "ConvergesTo"
-          ]
-        },
-        {
-          "field": "fully_quantified_form",
-          "predicate_names": [
-            "CauchySequence",
-            "ConvergesTo"
-          ]
-        },
-        {
-          "field": "negation_display",
-          "predicate_names": [
-            "CauchySequence",
-            "ConvergesTo"
-          ]
-        },
-        {
-          "field": "negation_formal",
-          "predicate_names": [
-            "CauchySequence",
-            "ConvergesTo"
-          ]
-        }
-      ],
-      "excerpt": "\\[ \\exists (x_n)\\subseteq \\mathbb{Q}\\; \\Bigl( \\operatorname{CauchySequence}(x_n) \\land \\forall q\\in\\mathbb{Q}\\;\\neg\\operatorname{ConvergesTo}(x_n,q) \\Bigr). \\]",
-      "proof_source": "proofs/notes/prf-cauchy-not-convergent-q.tex"
+      "excerpt": "There exist Cauchy sequences in $\\mathbb{Q}$ that do not converge to a rational number."
     },
     {
       "type": "missing_dependencies_block",
@@ -4134,14 +2382,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $x>0$ be a real number. Suppose one begins with two rational numbers \\[ \\frac{a}{b} < x < \\frac{c}{d}, \\qquad b,d>0, \\] and repeatedly inserts the mediant \\[ \\frac{a+c}{b+d}. \\] At each step, replace one endpoint by the mediant so that the new interval still contains $x$. Then this process generates a nested sequence of rational intervals containing $x$.",
-      "proof_source": "proofs/notes/prf-stern-brocot-refinement.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:stern-brocot-refinement",
-      "proof_source": "proofs/notes/prf-stern-brocot-refinement.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
+      "excerpt": "Let $x>0$ be a real number. Suppose one begins with two rational numbers \\[ \\frac{a}{b} < x < \\frac{c}{d}, \\qquad b,d>0, \\] and repeatedly inserts the mediant \\[ \\frac{a+c}{b+d}. \\] At each step, replace one endpoint by the mediant so that the new interval still contains $x$. Then this process generates a nested sequence of rational intervals containing $x$."
     },
     {
       "type": "missing_dependencies_block",
@@ -4153,30 +2394,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Every irrational number $x>0$ determines a unique infinite path in the Stern--Brocot tree. The sequence of rational numbers encountered along this path converges to $x$. Conversely, every infinite path in the Stern--Brocot tree determines a unique positive irrational number as its limit.",
-      "proof_source": "proofs/notes/prf-stern-brocot-limit.tex"
-    },
-    {
-      "type": "missing_detailed_learning_proof",
-      "node_id": "thm:stern-brocot-limit",
-      "proof_source": "proofs/notes/prf-stern-brocot-limit.tex",
-      "message": "Proof file has proof content but no Detailed Learning Proof block."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:dyadic-rational",
-      "missing_target_id": "def:exponentiation-on-peano-system",
-      "relationship_kind": "depends_on",
-      "source": "notes/linear-approximation-in-q/notes-dyadic-approximation-stubs.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:dyadic-approximation-error-bound",
-      "missing_target_id": "thm:well-ordering-principle",
-      "relationship_kind": "depends_on",
-      "source": "notes/linear-approximation-in-q/notes-dyadic-approximation-stubs.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+      "excerpt": "Every irrational number $x>0$ determines a unique infinite path in the Stern--Brocot tree. The sequence of rational numbers encountered along this path converges to $x$. Conversely, every infinite path in the Stern--Brocot tree determines a unique positive irrational number as its limit."
     },
     {
       "type": "dangling_graph_edge_reference",
@@ -4192,14 +2410,6 @@
       "missing_target_id": "thm:well-ordering-principle",
       "relationship_kind": "depends_on",
       "source": "notes/nonlinear-approximation-in-q/notes-square-bracketing-and-nonlinear-approximation.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:rational-square-approximation-from-above",
-      "missing_target_id": "thm:well-ordering-principle",
-      "relationship_kind": "depends_on",
-      "source": "notes/rational-gaps/notes-rational-gaps.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
