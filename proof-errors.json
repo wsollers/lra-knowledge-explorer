@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T18:08:38.421368+00:00",
+  "generated_at": "2026-06-13T02:42:35.983442+00:00",
   "chapters": [
     "peano-systems",
     "natural-numbers",
@@ -9,7 +9,7 @@
     "continuity",
     "differentiation"
   ],
-  "error_count": 397,
+  "error_count": 431,
   "errors": [
     {
       "type": "multiple_primary_statements_in_box",
@@ -1572,6 +1572,18 @@
       "excerpt": "A rational number $d$ is called \\emph{dyadic} if there exist $m\\in\\mathbb{Z}$ and $n\\in\\mathbb{N}$ such that \\[ d=\\frac{m}{2^n}. \\]"
     },
     {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:dyadic-rationals-are-rational",
+      "title": "Dyadic Rationals Are Rational",
+      "source": "notes/linear-approximation-in-q/notes-dyadic-approximation-stubs.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Every dyadic rational is an element of $\\mathbb{Q}$."
+    },
+    {
       "type": "predicate_notation_in_standard_field",
       "kind": "Theorem",
       "node_id": "thm:dyadic-rationals-are-rational",
@@ -1597,6 +1609,18 @@
         }
       ],
       "excerpt": "\\[ \\forall d,\\quad \\operatorname{Dyadic}(d) \\Longrightarrow d\\in\\mathbb{Q}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:dyadic-midpoint-closure",
+      "title": "Dyadic Midpoint Closure",
+      "source": "notes/linear-approximation-in-q/notes-dyadic-approximation-stubs.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $a$ and $b$ are dyadic rationals, then $(a+b)/2$ is dyadic."
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -1651,6 +1675,18 @@
     },
     {
       "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:mediant-inequality",
+      "title": "Mediant inequality",
+      "source": "notes/linear-approximation-in-q/notes-mediant.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $a/b < c/d$ with $b, d > 0$, then \\[ \\frac{a}{b} < \\frac{a+c}{b+d} < \\frac{c}{d}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
       "kind": "Definition",
       "node_id": "def:farey-sequence",
       "title": "Farey sequence",
@@ -1676,6 +1712,54 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
+      "node_id": "thm:farey-gap",
+      "title": "Gap between Farey neighbors",
+      "source": "notes/linear-approximation-in-q/notes-mediant.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $a/b < c/d$ be consecutive fractions in a Farey sequence. Then \\[ \\frac{c}{d} - \\frac{a}{b} = \\frac{1}{bd}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:farey-mediant-property",
+      "title": "Mediant property of Farey neighbors",
+      "source": "notes/linear-approximation-in-q/notes-mediant.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $a/b$ and $c/d$ are consecutive fractions in a Farey sequence, then their mediant $(a+c)/(b+d)$ lies strictly between them: \\[ \\frac{a}{b} < \\frac{a+c}{b+d} < \\frac{c}{d}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:mediant-gap",
+      "title": "Mediant Gap Lemma",
+      "source": "notes/linear-approximation-in-q/notes-mediant.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $a/b < c/d$ with $b, d > 0$, then the mediant $(a+c)/(b+d)$ lies strictly between them, and the two subgaps satisfy \\[ \\frac{a+c}{b+d} - \\frac{a}{b} = \\frac{1}{b(b+d)}, \\qquad \\frac{c}{d} - \\frac{a+c}{b+d} = \\frac{1}{d(b+d)}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:stern-brocot-enumeration",
+      "title": "Stern--Brocot enumeration",
+      "source": "notes/linear-approximation-in-q/notes-mediant.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Every positive rational number appears exactly once in reduced form in the Stern--Brocot tree."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
       "node_id": "thm:between-any-two-rationals-is-a-rational",
       "title": "Between Any Two Rational Numbers Lies Another Rational",
       "source": "notes/linear-approximation-in-q/notes-rational-density-and-order.tex",
@@ -1684,6 +1768,30 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "If $r,s\\in\\mathbb{Q}$ and $r<s$, then there exists $t\\in\\mathbb{Q}$ such that \\[ r<t<s. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:q-dense-in-itself",
+      "title": "$ $ Is Dense in Itself",
+      "source": "notes/linear-approximation-in-q/notes-rational-density-and-order.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The subset $\\mathbb{Q}$ is order dense in itself."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:q-has-no-adjacent-points",
+      "title": "The Rational Numbers Have No Adjacent Points",
+      "source": "notes/linear-approximation-in-q/notes-rational-density-and-order.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "There do not exist rational numbers $r<s$ such that no rational number lies strictly between them."
     },
     {
       "type": "missing_dependencies_block",
@@ -1699,6 +1807,30 @@
     },
     {
       "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:rational-upper-lower-perturbation",
+      "title": "Upper/Lower Perturbation Lemma, Rational Version",
+      "source": "notes/linear-approximation-in-q/notes-rational-density-and-order.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $q\\in\\mathbb{Q}$ and $\\varepsilon\\in\\mathbb{Q}$ with $\\varepsilon>0$, then there exist $r,s\\in\\mathbb{Q}$ such that \\[ q-\\varepsilon < r < q < s < q+\\varepsilon. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:rational-perturbation-lemma",
+      "title": "Rational Perturbation Lemma",
+      "source": "notes/linear-approximation-in-q/notes-rational-density-and-order.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $q\\in\\mathbb{Q}$ and $\\varepsilon>0$, then there exists $r\\in\\mathbb{Q}$ such that \\[ 0<|r-q|<\\varepsilon. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "thm:rational-chain-with-small-steps",
       "title": "Rational Chain with Uniformly Small Steps",
@@ -1711,6 +1843,66 @@
     },
     {
       "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:sb-denom-growth",
+      "title": "Denominator growth on infinite Stern--Brocot paths",
+      "source": "notes/linear-approximation-in-q/stern-brocot.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $a_0/b_0, a_1/b_1, a_2/b_2, \\ldots$ be the sequence of endpoint fractions encountered along any infinite path in the Stern--Brocot tree. Then the denominators are strictly increasing: \\[ b_0 < b_1 < b_2 < \\cdots, \\] and in particular $b_n \\to \\infty$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:sb-length-zero",
+      "title": "Stern--Brocot interval lengths shrink to zero",
+      "source": "notes/linear-approximation-in-q/stern-brocot.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(I_n)_{n \\geq 0}$ be the nested rational intervals generated by the Stern--Brocot refinement process targeting a real number $x > 0$, where $I_n = [a_n/b_n,\\; c_n/d_n]$. Then the interval lengths $\\ell_n = c_n/d_n - a_n/b_n$ satisfy \\[ \\lim_{n \\to \\infty} \\ell_n = 0. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Proposition",
+      "node_id": "prop:sb-unique-point",
+      "title": "Nested Stern--Brocot intervals contain a unique limit point",
+      "source": "notes/linear-approximation-in-q/stern-brocot.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(I_n)_{n \\geq 0}$ be the nested sequence of closed rational intervals generated by the Stern--Brocot refinement process targeting $x > 0$, with $I_n = [a_n/b_n,\\; c_n/d_n]$. Then there exists a unique real number $\\xi \\in \\bigcap_{n=0}^{\\infty} I_n$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:sb-path-limit",
+      "title": "Every infinite Stern--Brocot path converges to its target",
+      "source": "notes/linear-approximation-in-q/stern-brocot.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $x > 0$ be a real number and let $(I_n)$ be the Stern--Brocot refinement sequence targeting $x$. The sequences of left and right endpoints both converge to $x$: \\[ \\lim_{n \\to \\infty} \\frac{a_n}{b_n} = \\lim_{n \\to \\infty} \\frac{c_n}{d_n} = x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:sb-limit-irrational",
+      "title": "Infinite Stern--Brocot paths converge to irrationals",
+      "source": "notes/linear-approximation-in-q/stern-brocot.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A positive real number $x$ corresponds to a \\emph{finite} path in the Stern--Brocot tree if and only if $x$ is rational. Equivalently, $x$ corresponds to an \\emph{infinite} path if and only if $x$ is irrational."
+    },
+    {
+      "type": "missing_dependencies_block",
       "kind": "Definition",
       "node_id": "def:convergent-rational-sequence",
       "title": "Convergence of a rational sequence",
@@ -1720,6 +1912,18 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "Let $(x_n)$ be a sequence of rational numbers and let $a \\in \\mathbb{Q}$. The sequence $(x_n)$ \\emph{converges to $a$} if \\[ \\forall \\varepsilon \\in \\mathbb{Q},\\; \\varepsilon > 0 \\;\\; \\exists N \\in \\mathbb{N} \\;\\; \\forall n \\geq N, \\quad |x_n - a| < \\varepsilon. \\] We write $\\lim_{n \\to \\infty} x_n = a$, or $x_n \\to a$ as $n \\to \\infty$. The rational number $a$ is called the \\emph{limit} of $(x_n)$. A sequence tha..."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:limit-unique-q",
+      "title": "Limits of rational sequences are unique",
+      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If a sequence of rational numbers converges, then its limit is unique."
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -1747,6 +1951,30 @@
         }
       ],
       "excerpt": "\\[ \\forall (x_n) \\subseteq \\mathbb{Q},\\; \\bigl( \\operatorname{ConvergesTo}(x_n, a) \\land \\operatorname{ConvergesTo}(x_n, b) \\bigr) \\Longrightarrow a = b. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:subsequence-q",
+      "title": "Subsequence of a rational sequence",
+      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(x_n)$ be a sequence of rational numbers and let $(k_n)$ be a strictly increasing sequence of natural numbers: $k_1 < k_2 < k_3 < \\cdots$. The sequence $(x_{k_n})$ is called a \\emph{subsequence} of $(x_n)$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:subsequence-convergence-q",
+      "title": "Subsequences of convergent sequences converge to the same limit",
+      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(x_n)$ be a sequence of rational numbers with $x_n \\to a$. Then every subsequence $(x_{k_n})$ of $(x_n)$ also converges to $a$."
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -1795,6 +2023,18 @@
       "excerpt": "A sequence $(x_n)$ of rational numbers is: \\begin{itemize} \\item \\emph{bounded above} if $\\exists \\Lambda \\in \\mathbb{Q}\\; \\forall n \\in \\mathbb{N},\\; x_n \\leq \\Lambda$; \\item \\emph{bounded below} if $\\exists \\lambda \\in \\mathbb{Q}\\; \\forall n \\in \\mathbb{N},\\; x_n \\geq \\lambda$; \\item \\emph{bounded} if $\\exists \\Gamma \\in \\mathbb{Q},\\;\\Gamma>0\\;\\; \\forall n \\in \\mathbb{N},\\; |x_n| \\leq \\Gamma$. \\end{itemize}"
     },
     {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:bounded-sequence-q",
+      "title": "Bounded sequence of rational numbers",
+      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A sequence $(x_n)$ of rational numbers is: \\begin{itemize} \\item \\emph{bounded above} if $\\exists \\Lambda \\in \\mathbb{Q}\\; \\forall n \\in \\mathbb{N},\\; x_n \\leq \\Lambda$; \\item \\emph{bounded below} if $\\exists \\lambda \\in \\mathbb{Q}\\; \\forall n \\in \\mathbb{N},\\; x_n \\geq \\lambda$; \\item \\emph{bounded} if $\\exists \\Gamma \\in \\mathbb{Q},\\;\\Gamma>0\\;\\; \\forall n \\in \\mathbb{N},\\; |x_n| \\leq \\Gamma$. \\end{itemize}"
+    },
+    {
       "type": "predicate_notation_in_standard_field",
       "kind": "Definition",
       "node_id": "def:bounded-sequence-q",
@@ -1836,6 +2076,18 @@
       "excerpt": "\\[ \\operatorname{Bounded}(x_n) \\;\\coloneqq\\; \\exists \\Gamma \\in \\mathbb{Q},\\; \\Gamma > 0,\\;\\; \\forall n \\in \\mathbb{N},\\;\\; |x_n| \\leq \\Gamma. \\]"
     },
     {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:convergent-bounded-q",
+      "title": "Convergent sequences are bounded",
+      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Every convergent sequence of rational numbers is bounded."
+    },
+    {
       "type": "predicate_notation_in_standard_field",
       "kind": "Theorem",
       "node_id": "thm:convergent-bounded-q",
@@ -1865,6 +2117,18 @@
       "excerpt": "\\[ \\operatorname{ConvergesTo}(x_n, a) \\;\\Longrightarrow\\; \\operatorname{Bounded}(x_n). \\]"
     },
     {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:cauchy-bounded-q",
+      "title": "Cauchy sequences are bounded",
+      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Every Cauchy sequence of rational numbers is bounded."
+    },
+    {
       "type": "predicate_notation_in_standard_field",
       "kind": "Theorem",
       "node_id": "thm:cauchy-bounded-q",
@@ -1892,6 +2156,18 @@
         }
       ],
       "excerpt": "\\[ \\operatorname{CauchySequence}(x_n) \\;\\Longrightarrow\\; \\operatorname{Bounded}(x_n). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:cauchy-closed-operations-q",
+      "title": "Cauchy sequences are closed under addition and multiplication",
+      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $(x_n)$ and $(y_n)$ are Cauchy sequences of rational numbers, then so are $(x_n + y_n)$ and $(x_n y_n)$."
     },
     {
       "type": "predicate_notation_in_standard_field",
@@ -1967,6 +2243,18 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
+      "node_id": "thm:cauchy-equiv-preserved-operations",
+      "title": "Cauchy equivalence is preserved under addition and multiplication",
+      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(x_n),(y_n),(u_n),(v_n) \\in \\mathbb{Q}^c$. Suppose $(x_n) \\sim (u_n)$ and $(y_n) \\sim (v_n)$. Then: \\[ (x_n + y_n) \\sim (u_n + v_n) \\qquad\\text{and}\\qquad (x_n y_n) \\sim (u_n v_n). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
       "node_id": "thm:rational-square-bracketing",
       "title": "Rational Square Bracketing",
       "source": "notes/nonlinear-approximation-in-q/notes-square-bracketing-and-nonlinear-approximation.tex",
@@ -1975,6 +2263,18 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "For every $r\\in\\mathbb{Q}$ with $r>0$, there exist $a,b\\in\\mathbb{Q}$ with $a>0$ and $b>0$ such that \\[ a^2<r<b^2. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:first-grid-point-crossing",
+      "title": "First Grid Point Crossing",
+      "source": "notes/nonlinear-approximation-in-q/notes-square-bracketing-and-nonlinear-approximation.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $r\\in\\mathbb{Q}$ with $r>0$ and let $q\\in\\mathbb{N}$ with $q\\ge 1$. If $K\\in\\mathbb{N}$ satisfies $K^2>r$, then the set \\[ A=\\{m\\in\\mathbb{N}:m^2>rq^2\\} \\] is nonempty and therefore has a least element."
     },
     {
       "type": "missing_dependencies_block",
@@ -2015,6 +2315,54 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
+      "node_id": "thm:squares-nonnegative",
+      "title": "Squares Are Nonnegative",
+      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "In any ordered field $F$, for every $a\\in F$, \\[ a^2\\ge 0. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:inverse-positive",
+      "title": "Positive Elements Have Positive Inverses",
+      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "In any ordered field, if $a>0$, then $a^{-1}>0$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:multiply-positive",
+      "title": "Multiplication by a Positive Element Preserves Order",
+      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "In any ordered field, if $a<b$ and $c>0$, then \\[ ac<bc. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:multiply-negative",
+      "title": "Multiplication by a Negative Element Reverses Order",
+      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "In any ordered field, if $a<b$ and $c<0$, then \\[ ac>bc. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
       "node_id": "thm:one-positive",
       "title": "$1$ Is Positive",
       "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
@@ -2023,6 +2371,66 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "In any ordered field, \\[ 1>0. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:n-positive",
+      "title": "Natural Numbers Are Positive",
+      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "In any ordered field, for every natural number $n$, \\[ n>0. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:positive-fraction-iff-positive-product",
+      "title": "Positivity of a Quotient via the Product $ab$",
+      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For any $a,b\\in F$ with $b\\neq 0$, \\[ 0<\\frac{a}{b} \\quad\\Longleftrightarrow\\quad 0<a\\cdot b. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:fraction-order-comparison-general",
+      "title": "General Fraction Comparison in an Ordered Field",
+      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For any $a,b,c,d\\in F$ with $b\\neq 0$ and $d\\neq 0$, \\[ \\frac{a}{b}<\\frac{c}{d} \\quad\\Longleftrightarrow\\quad (a\\cdot d)\\cdot(b\\cdot d)<(b\\cdot c)\\cdot(b\\cdot d). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:fraction-order-comparison-positive-denominator-product",
+      "title": "Fraction Comparison When the Denominator Product Is Positive",
+      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For any $a,b,c,d\\in F$, if $b\\neq 0$, $d\\neq 0$, and $0<b\\cdot d$, then \\[ \\frac{a}{b}<\\frac{c}{d} \\quad\\Longleftrightarrow\\quad a\\cdot d<b\\cdot c. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:reciprocal-order-for-positive-elements",
+      "title": "Reciprocal Order for Positive Elements",
+      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "In any ordered field, if $0<d<b$, then \\[ 0<\\frac{1}{b}<\\frac{1}{d}. \\] Conversely, if $0<1/b<1/d$, then $0<d<b$."
     },
     {
       "type": "missing_dependencies_block",

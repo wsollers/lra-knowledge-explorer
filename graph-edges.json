@@ -1,107 +1,47 @@
 [
   {
-    "from": "def:bounded-sequence-q",
-    "to": "thm:cauchy-bounded-q",
+    "from": "cor:n-positive",
+    "to": "def:ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:n-positive",
+    "to": "thm:one-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:q-dense-in-itself",
+    "to": "thm:between-any-two-rationals-is-a-rational",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:q-has-no-adjacent-points",
+    "to": "thm:between-any-two-rationals-is-a-rational",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:sb-limit-irrational",
+    "to": "lem:sb-denom-growth",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:sb-limit-irrational",
+    "to": "thm:farey-neighbor-theorem",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:sb-limit-irrational",
+    "to": "thm:sqrt2-irrational",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:sb-path-limit",
+    "to": "prop:sb-unique-point",
     "kind": "depends_on"
   },
   {
     "from": "def:bounded-sequence-q",
-    "to": "thm:convergent-bounded-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:cauchy-equivalence",
-    "to": "thm:cauchy-equiv-preserved-operations",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:cauchy-rational",
-    "to": "thm:cauchy-bounded-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:cauchy-rational",
-    "to": "thm:cauchy-closed-operations-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:convergent-rational-sequence",
-    "to": "thm:convergent-bounded-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:convergent-rational-sequence",
-    "to": "thm:limit-unique-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:convergent-rational-sequence",
-    "to": "thm:subsequence-convergence-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:dyadic-rational",
-    "to": "thm:dyadic-midpoint-closure",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:dyadic-rational",
-    "to": "thm:dyadic-rationals-are-rational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:farey-sequence",
-    "to": "thm:farey-mediant-property",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:mediant",
-    "to": "thm:mediant-inequality",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:mediant",
-    "to": "thm:stern-brocot-enumeration",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:ordered-field",
-    "to": "cor:n-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:ordered-field",
-    "to": "thm:fraction-order-comparison-general",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:ordered-field",
-    "to": "thm:inverse-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:ordered-field",
-    "to": "thm:multiply-negative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:ordered-field",
-    "to": "thm:multiply-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:ordered-field",
-    "to": "thm:positive-fraction-iff-positive-product",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:ordered-field",
-    "to": "thm:squares-nonnegative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:rational-numbers",
-    "to": "thm:dyadic-rationals-are-rational",
+    "to": "def:rational-sequence",
     "kind": "depends_on"
   },
   {
@@ -115,173 +55,218 @@
     "kind": "depends_on"
   },
   {
-    "from": "def:rational-sequence",
-    "to": "def:bounded-sequence-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:rational-sequence",
-    "to": "def:subsequence-q",
-    "kind": "depends_on"
-  },
-  {
     "from": "def:subsequence-q",
-    "to": "thm:subsequence-convergence-q",
+    "to": "def:rational-sequence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:first-grid-point-crossing",
+    "to": "thm:rational-square-bracketing",
     "kind": "depends_on"
   },
   {
     "from": "lem:mediant-gap",
-    "to": "thm:stern-brocot-enumeration",
+    "to": "thm:mediant-inequality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:rational-perturbation-lemma",
+    "to": "lem:rational-upper-lower-perturbation",
     "kind": "depends_on"
   },
   {
     "from": "lem:rational-upper-lower-perturbation",
-    "to": "lem:rational-perturbation-lemma",
+    "to": "thm:q-has-no-minimum-positive-element",
     "kind": "depends_on"
   },
   {
     "from": "lem:sb-denom-growth",
-    "to": "cor:sb-limit-irrational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:sb-denom-growth",
-    "to": "lem:sb-length-zero",
+    "to": "thm:farey-neighbor-theorem",
     "kind": "depends_on"
   },
   {
     "from": "lem:sb-length-zero",
-    "to": "prop:sb-unique-point",
-    "kind": "depends_on"
-  },
-  {
-    "from": "prop:sb-unique-point",
-    "to": "cor:sb-path-limit",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:archimedean-q",
-    "to": "lem:sb-length-zero",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:between-any-two-rationals-is-a-rational",
-    "to": "cor:q-dense-in-itself",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:between-any-two-rationals-is-a-rational",
-    "to": "cor:q-has-no-adjacent-points",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:cauchy-bounded-q",
-    "to": "thm:cauchy-closed-operations-q",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:cauchy-bounded-q",
-    "to": "thm:cauchy-equiv-preserved-operations",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:cauchy-closed-operations-q",
-    "to": "thm:cauchy-equiv-preserved-operations",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:dyadic-rationals-are-rational",
-    "to": "thm:dyadic-midpoint-closure",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:farey-gap",
-    "to": "lem:sb-length-zero",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:farey-neighbor-theorem",
-    "to": "cor:sb-limit-irrational",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:farey-neighbor-theorem",
     "to": "lem:sb-denom-growth",
     "kind": "depends_on"
   },
   {
-    "from": "thm:farey-neighbor-theorem",
+    "from": "lem:sb-length-zero",
+    "to": "thm:archimedean-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:sb-length-zero",
     "to": "thm:farey-gap",
     "kind": "depends_on"
   },
   {
-    "from": "thm:farey-neighbor-theorem",
-    "to": "thm:stern-brocot-enumeration",
+    "from": "prop:sb-unique-point",
+    "to": "lem:sb-length-zero",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-bounded-q",
+    "to": "def:bounded-sequence-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-bounded-q",
+    "to": "def:cauchy-rational",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-closed-operations-q",
+    "to": "def:cauchy-rational",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-closed-operations-q",
+    "to": "thm:cauchy-bounded-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-equiv-preserved-operations",
+    "to": "def:cauchy-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-equiv-preserved-operations",
+    "to": "thm:cauchy-bounded-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-equiv-preserved-operations",
+    "to": "thm:cauchy-closed-operations-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:convergent-bounded-q",
+    "to": "def:bounded-sequence-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:convergent-bounded-q",
+    "to": "def:convergent-rational-sequence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:dyadic-midpoint-closure",
+    "to": "def:dyadic-rational",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:dyadic-midpoint-closure",
+    "to": "thm:dyadic-rationals-are-rational",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:dyadic-rationals-are-rational",
+    "to": "def:dyadic-rational",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:dyadic-rationals-are-rational",
+    "to": "def:rational-numbers",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:farey-gap",
+    "to": "thm:farey-neighbor-theorem",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:farey-mediant-property",
+    "to": "def:farey-sequence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:farey-mediant-property",
+    "to": "thm:mediant-inequality",
     "kind": "depends_on"
   },
   {
     "from": "thm:fraction-order-comparison-general",
-    "to": "thm:fraction-order-comparison-positive-denominator-product",
+    "to": "def:ordered-field",
     "kind": "depends_on"
   },
   {
-    "from": "thm:inverse-positive",
-    "to": "thm:positive-fraction-iff-positive-product",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:inverse-positive",
-    "to": "thm:reciprocal-order-for-positive-elements",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:mediant-inequality",
-    "to": "lem:mediant-gap",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:mediant-inequality",
-    "to": "thm:farey-mediant-property",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiply-negative",
-    "to": "thm:fraction-order-comparison-general",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiply-positive",
-    "to": "thm:fraction-order-comparison-general",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiply-positive",
-    "to": "thm:fraction-order-comparison-positive-denominator-product",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiply-positive",
+    "from": "thm:fraction-order-comparison-general",
     "to": "thm:multiply-negative",
     "kind": "depends_on"
   },
   {
+    "from": "thm:fraction-order-comparison-general",
+    "to": "thm:multiply-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:fraction-order-comparison-positive-denominator-product",
+    "to": "thm:fraction-order-comparison-general",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:fraction-order-comparison-positive-denominator-product",
+    "to": "thm:multiply-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-positive",
+    "to": "def:ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-positive",
+    "to": "thm:one-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-positive",
+    "to": "thm:squares-nonnegative",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:limit-unique-q",
+    "to": "def:convergent-rational-sequence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:limit-unique-q",
+    "to": "thm:q-is-ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:mediant-inequality",
+    "to": "def:mediant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:mediant-inequality",
+    "to": "thm:q-is-ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiply-negative",
+    "to": "def:ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiply-negative",
+    "to": "thm:multiply-positive",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:multiply-positive",
-    "to": "thm:reciprocal-order-for-positive-elements",
+    "to": "def:ordered-field",
     "kind": "depends_on"
   },
   {
-    "from": "thm:one-positive",
-    "to": "cor:n-positive",
+    "from": "thm:positive-fraction-iff-positive-product",
+    "to": "def:ordered-field",
     "kind": "depends_on"
   },
   {
-    "from": "thm:one-positive",
+    "from": "thm:positive-fraction-iff-positive-product",
     "to": "thm:inverse-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:q-has-no-minimum-positive-element",
-    "to": "lem:rational-upper-lower-perturbation",
     "kind": "depends_on"
   },
   {
@@ -295,33 +280,48 @@
     "kind": "depends_on"
   },
   {
-    "from": "thm:q-is-ordered-field",
-    "to": "thm:limit-unique-q",
+    "from": "thm:reciprocal-order-for-positive-elements",
+    "to": "thm:inverse-positive",
     "kind": "depends_on"
   },
   {
-    "from": "thm:q-is-ordered-field",
-    "to": "thm:mediant-inequality",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:q-is-ordered-field",
-    "to": "thm:squares-nonnegative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:rational-square-bracketing",
-    "to": "lem:first-grid-point-crossing",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:sqrt2-irrational",
-    "to": "cor:sb-limit-irrational",
+    "from": "thm:reciprocal-order-for-positive-elements",
+    "to": "thm:multiply-positive",
     "kind": "depends_on"
   },
   {
     "from": "thm:squares-nonnegative",
-    "to": "thm:inverse-positive",
+    "to": "def:ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:squares-nonnegative",
+    "to": "thm:q-is-ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:stern-brocot-enumeration",
+    "to": "def:mediant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:stern-brocot-enumeration",
+    "to": "lem:mediant-gap",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:stern-brocot-enumeration",
+    "to": "thm:farey-neighbor-theorem",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:subsequence-convergence-q",
+    "to": "def:convergent-rational-sequence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:subsequence-convergence-q",
+    "to": "def:subsequence-q",
     "kind": "depends_on"
   },
   {

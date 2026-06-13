@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-06-12T18:08:38.361669+00:00",
+    "generated_at": "2026-06-13T02:42:35.928039+00:00",
     "chapters": [
       "peano-systems",
       "natural-numbers",
@@ -12,7 +12,7 @@
     ],
     "node_count": 428,
     "edge_count": 380,
-    "error_count": 500,
+    "error_count": 534,
     "schema_version": "0.4",
     "script": "run_extraction.py"
   },
@@ -6174,10 +6174,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "thm:dyadic-rationals-are-rational"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -6197,10 +6197,10 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Dyadic Rationals Are Rational"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -6454,8 +6454,7 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "cor:n-positive",
         "thm:fraction-order-comparison-general",
         "thm:inverse-positive",
@@ -6464,6 +6463,7 @@
         "thm:positive-fraction-iff-positive-product",
         "thm:squares-nonnegative"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -6483,8 +6483,7 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Natural Numbers Are Positive",
         "General Fraction Comparison in an Ordered Field",
         "Positive Elements Have Positive Inverses",
@@ -6493,6 +6492,7 @@
         "Positivity of a Quotient via the Product $ab$",
         "Squares Are Nonnegative"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8102,10 +8102,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "lem:sb-length-zero"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8125,10 +8125,10 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Stern--Brocot interval lengths shrink to zero"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8172,11 +8172,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "thm:dyadic-midpoint-closure",
         "thm:dyadic-rationals-are-rational"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8196,11 +8196,11 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Dyadic Midpoint Closure",
         "Dyadic Rationals Are Rational"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8243,11 +8243,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "def:dyadic-rational",
-        "def:rational-numbers"
+        "thm:dyadic-midpoint-closure"
       ],
       "used_by_ids": [
-        "thm:dyadic-midpoint-closure"
+        "def:dyadic-rational",
+        "def:rational-numbers"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -8269,19 +8269,16 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Dyadic rational",
-        "Rational numbers"
+        "Dyadic Midpoint Closure"
       ],
       "used_by_titles": [
-        "Dyadic Midpoint Closure"
+        "Dyadic rational",
+        "Rational numbers"
       ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:dyadic-rational",
-        "def:rational-numbers"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W0R5YWRpYyBSYXRpb25hbHMgQXJlIFJhdGlvbmFsXQpcbGFiZWx7dGhtOmR5YWRpYy1yYXRpb25hbHMtYXJlLXJhdGlvbmFsfQpFdmVyeSBkeWFkaWMgcmF0aW9uYWwgaXMgYW4gZWxlbWVudCBvZiAkXG1hdGhiYntRfSQuClxoeXBlcnJlZltwcmY6ZHlhZGljLXJhdGlvbmFscy1hcmUtcmF0aW9uYWxde0dvIHRvIHByb29mLn0KXGVuZHt0aGVvcmVtfQ==",
       "body_latex_b64": "ClxsYWJlbHt0aG06ZHlhZGljLXJhdGlvbmFscy1hcmUtcmF0aW9uYWx9CkV2ZXJ5IGR5YWRpYyByYXRpb25hbCBpcyBhbiBlbGVtZW50IG9mICRcbWF0aGJie1F9JC4KXGh5cGVycmVmW3ByZjpkeWFkaWMtcmF0aW9uYWxzLWFyZS1yYXRpb25hbF17R28gdG8gcHJvb2YufQo=",
       "title_latex_b64": "RHlhZGljIFJhdGlvbmFscyBBcmUgUmF0aW9uYWw=",
@@ -8304,15 +8301,6 @@
           "body_preview": "This is immediate from the definition: $m/2^n$ is a ratio of integers with nonzero denominator, hence rational. The theorem isolates the fact for explicit citation.",
           "source_line_start": 66,
           "source_line_end": 70
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpkeWFkaWMtcmF0aW9uYWxde0R5YWRpYyBSYXRpb25hbH0KICBcaXRlbSBcaHlwZXJyZWZbZGVmOnJhdGlvbmFsLW51bWJlcnNde1JhdGlvbmFsIE51bWJlcnN9ClxlbmR7aXRlbWl6ZX0KXGVuZHtyZW1hcmsqfQ==",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpkeWFkaWMtcmF0aW9uYWxde0R5YWRpYyBSYXRpb25hbH0KICBcaXRlbSBcaHlwZXJyZWZbZGVmOnJhdGlvbmFsLW51bWJlcnNde1JhdGlvbmFsIE51bWJlcnN9ClxlbmR7aXRlbWl6ZX0=",
-          "body_preview": "",
-          "source_line_start": 72,
-          "source_line_end": 77
         }
       ],
       "expositions": [],
@@ -8349,11 +8337,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "def:dyadic-rational",
         "thm:dyadic-rationals-are-rational"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8373,18 +8361,15 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Dyadic rational",
         "Dyadic Rationals Are Rational"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:dyadic-rational",
-        "thm:dyadic-rationals-are-rational"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W0R5YWRpYyBNaWRwb2ludCBDbG9zdXJlXQpcbGFiZWx7dGhtOmR5YWRpYy1taWRwb2ludC1jbG9zdXJlfQpJZiAkYSQgYW5kICRiJCBhcmUgZHlhZGljIHJhdGlvbmFscywgdGhlbiAkKGErYikvMiQgaXMgZHlhZGljLgpcaHlwZXJyZWZbcHJmOmR5YWRpYy1taWRwb2ludC1jbG9zdXJlXXtHbyB0byBwcm9vZi59ClxlbmR7dGhlb3JlbX0=",
       "body_latex_b64": "ClxsYWJlbHt0aG06ZHlhZGljLW1pZHBvaW50LWNsb3N1cmV9CklmICRhJCBhbmQgJGIkIGFyZSBkeWFkaWMgcmF0aW9uYWxzLCB0aGVuICQoYStiKS8yJCBpcyBkeWFkaWMuClxoeXBlcnJlZltwcmY6ZHlhZGljLW1pZHBvaW50LWNsb3N1cmVde0dvIHRvIHByb29mLn0K",
       "title_latex_b64": "RHlhZGljIE1pZHBvaW50IENsb3N1cmU=",
@@ -8407,15 +8392,6 @@
           "body_preview": "The dyadic grid is closed under midpoint formation. This makes dyadic rationals the natural substrate for bisection algorithms.",
           "source_line_start": 92,
           "source_line_end": 95
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpkeWFkaWMtcmF0aW9uYWxde0R5YWRpYyBSYXRpb25hbH0KICBcaXRlbSBcaHlwZXJyZWZbdGhtOmR5YWRpYy1yYXRpb25hbHMtYXJlLXJhdGlvbmFsXXtEeWFkaWMgUmF0aW9uYWxzIEFyZSBSYXRpb25hbH0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpkeWFkaWMtcmF0aW9uYWxde0R5YWRpYyBSYXRpb25hbH0KICBcaXRlbSBcaHlwZXJyZWZbdGhtOmR5YWRpYy1yYXRpb25hbHMtYXJlLXJhdGlvbmFsXXtEeWFkaWMgUmF0aW9uYWxzIEFyZSBSYXRpb25hbH0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "",
-          "source_line_start": 97,
-          "source_line_end": 102
         }
       ],
       "expositions": [],
@@ -8518,11 +8494,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "thm:mediant-inequality",
         "thm:stern-brocot-enumeration"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8542,11 +8518,11 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Mediant inequality",
         "Stern--Brocot enumeration"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8589,12 +8565,12 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "def:mediant",
-        "thm:q-is-ordered-field"
-      ],
-      "used_by_ids": [
         "lem:mediant-gap",
         "thm:farey-mediant-property"
+      ],
+      "used_by_ids": [
+        "def:mediant",
+        "thm:q-is-ordered-field"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -8616,20 +8592,17 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Mediant",
-        "$ $ Is an Ordered Field"
-      ],
-      "used_by_titles": [
         "Mediant Gap Lemma",
         "Mediant property of Farey neighbors"
+      ],
+      "used_by_titles": [
+        "Mediant",
+        "$ $ Is an Ordered Field"
       ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:mediant",
-        "thm:q-is-ordered-field"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W01lZGlhbnQgaW5lcXVhbGl0eV0KXGxhYmVse3RobTptZWRpYW50LWluZXF1YWxpdHl9CklmICRhL2IgPCBjL2QkIHdpdGggJGIsIGQgPiAwJCwgdGhlbgpcWwpcZnJhY3thfXtifSA8IFxmcmFje2ErY317YitkfSA8IFxmcmFje2N9e2R9LgpcXQpcaHlwZXJyZWZbcHJmOm1lZGlhbnQtaW5lcXVhbGl0eV17R28gdG8gcHJvb2YufQpcZW5ke3RoZW9yZW19",
       "body_latex_b64": "ClxsYWJlbHt0aG06bWVkaWFudC1pbmVxdWFsaXR5fQpJZiAkYS9iIDwgYy9kJCB3aXRoICRiLCBkID4gMCQsIHRoZW4KXFsKXGZyYWN7YX17Yn0gPCBcZnJhY3thK2N9e2IrZH0gPCBcZnJhY3tjfXtkfS4KXF0KXGh5cGVycmVmW3ByZjptZWRpYW50LWluZXF1YWxpdHlde0dvIHRvIHByb29mLn0K",
       "title_latex_b64": "TWVkaWFudCBpbmVxdWFsaXR5",
@@ -8652,24 +8625,6 @@
           "body_preview": "The mediant always lands strictly inside the interval. This makes it a concrete construction proof of density: given any two rationals, produce a third one between them without appeal to existence arguments.",
           "source_line_start": 63,
           "source_line_end": 67
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjptZWRpYW50XXtNZWRpYW50fQogIFxpdGVtIFxoeXBlcnJlZlt0aG06cS1pcy1vcmRlcmVkLWZpZWxkXXskXG1hdGhiYntRfSQgSXMgYW4gT3JkZXJlZCBGaWVsZH0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjptZWRpYW50XXtNZWRpYW50fQogIFxpdGVtIFxoeXBlcnJlZlt0aG06cS1pcy1vcmRlcmVkLWZpZWxkXXskXG1hdGhiYntRfSQgSXMgYW4gT3JkZXJlZCBGaWVsZH0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "$ $ Is an Ordered Field",
-          "source_line_start": 69,
-          "source_line_end": 74
-        },
-        {
-          "title": "Local versus global density",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0xvY2FsIHZlcnN1cyBnbG9iYWwgZGVuc2l0eV0KXGxhYmVse3JlbTptZWRpYW50LXZzLWFyY2h9ClRoZSBtZWRpYW50IHByb3BlcnR5IGlzIFxlbXBoe2xvY2FsfTogaXQgcmVmaW5lcyBhIGdpdmVuIGludGVydmFsIGJ5Cmluc2VydGluZyBhIHNwZWNpZmljIHJhdGlvbmFsIGJldHdlZW4gdHdvIGdpdmVuIHJhdGlvbmFscy4KVGhlIEFyY2hpbWVkZWFuIHByb3BlcnR5IGlzIFxlbXBoe2dsb2JhbH06IGl0IHNheXMgdGhlIG5hdHVyYWwgbnVtYmVycwpldmVudHVhbGx5IGV4Y2VlZCBhbnkgZml4ZWQgcmF0aW9uYWwuClRvZ2V0aGVyIHRoZXkgZGVzY3JpYmUgYm90aCB0aGUgZmluZSBzdHJ1Y3R1cmUgYW5kIHRoZSB1bmJvdW5kZWRuZXNzIG9mCiRcbWF0aGJie1F9JC4KXGVuZHtyZW1hcmsqfQ==",
-          "body_latex_b64": "XGxhYmVse3JlbTptZWRpYW50LXZzLWFyY2h9ClRoZSBtZWRpYW50IHByb3BlcnR5IGlzIFxlbXBoe2xvY2FsfTogaXQgcmVmaW5lcyBhIGdpdmVuIGludGVydmFsIGJ5Cmluc2VydGluZyBhIHNwZWNpZmljIHJhdGlvbmFsIGJldHdlZW4gdHdvIGdpdmVuIHJhdGlvbmFscy4KVGhlIEFyY2hpbWVkZWFuIHByb3BlcnR5IGlzIFxlbXBoe2dsb2JhbH06IGl0IHNheXMgdGhlIG5hdHVyYWwgbnVtYmVycwpldmVudHVhbGx5IGV4Y2VlZCBhbnkgZml4ZWQgcmF0aW9uYWwuClRvZ2V0aGVyIHRoZXkgZGVzY3JpYmUgYm90aCB0aGUgZmluZSBzdHJ1Y3R1cmUgYW5kIHRoZSB1bmJvdW5kZWRuZXNzIG9mCiRcbWF0aGJie1F9JC4=",
-          "body_preview": "The mediant property is : it refines a given interval by inserting a specific rational between two given rationals. The Archimedean property is : it says the natural numbers eventually exceed any fixed rational. Together",
-          "source_line_start": 76,
-          "source_line_end": 84
         }
       ],
       "expositions": [],
@@ -8706,10 +8661,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "thm:farey-mediant-property"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8729,10 +8684,10 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Mediant property of Farey neighbors"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8774,13 +8729,13 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "cor:sb-limit-irrational",
         "lem:sb-denom-growth",
         "thm:farey-gap",
         "thm:stern-brocot-enumeration"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8800,13 +8755,13 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Infinite Stern--Brocot paths converge to irrationals",
         "Denominator growth on infinite Stern--Brocot paths",
         "Gap between Farey neighbors",
         "Stern--Brocot enumeration"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -8851,10 +8806,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "thm:farey-neighbor-theorem"
+        "lem:sb-length-zero"
       ],
       "used_by_ids": [
-        "lem:sb-length-zero"
+        "thm:farey-neighbor-theorem"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -8876,17 +8831,15 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Farey Neighbor Theorem"
+        "Stern--Brocot interval lengths shrink to zero"
       ],
       "used_by_titles": [
-        "Stern--Brocot interval lengths shrink to zero"
+        "Farey Neighbor Theorem"
       ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "thm:farey-neighbor-theorem"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W0dhcCBiZXR3ZWVuIEZhcmV5IG5laWdoYm9yc10KXGxhYmVse3RobTpmYXJleS1nYXB9CkxldCAkYS9iIDwgYy9kJCBiZSBjb25zZWN1dGl2ZSBmcmFjdGlvbnMgaW4gYSBGYXJleSBzZXF1ZW5jZS4gIFRoZW4KXFsKXGZyYWN7Y317ZH0gLSBcZnJhY3thfXtifSA9IFxmcmFjezF9e2JkfS4KXF0KXGh5cGVycmVmW3ByZjpmYXJleS1nYXBde0dvIHRvIHByb29mLn0KXGVuZHt0aGVvcmVtfQ==",
       "body_latex_b64": "ClxsYWJlbHt0aG06ZmFyZXktZ2FwfQpMZXQgJGEvYiA8IGMvZCQgYmUgY29uc2VjdXRpdmUgZnJhY3Rpb25zIGluIGEgRmFyZXkgc2VxdWVuY2UuICBUaGVuClxbClxmcmFje2N9e2R9IC0gXGZyYWN7YX17Yn0gPSBcZnJhY3sxfXtiZH0uClxdClxoeXBlcnJlZltwcmY6ZmFyZXktZ2FwXXtHbyB0byBwcm9vZi59Cg==",
       "title_latex_b64": "R2FwIGJldHdlZW4gRmFyZXkgbmVpZ2hib3Jz",
@@ -8909,15 +8862,6 @@
           "body_preview": "The gap between consecutive Farey neighbors is determined entirely by their denominators. Since $bd$ grows as $n$ increases, the gaps shrink — this is the arithmetic explanation of why $ $ becomes arbitrarily dense. The ",
           "source_line_start": 198,
           "source_line_end": 205
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpmYXJleS1uZWlnaGJvci10aGVvcmVtXXtGYXJleSBOZWlnaGJvciBUaGVvcmVtfQpcZW5ke2l0ZW1pemV9ClxlbmR7cmVtYXJrKn0=",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpmYXJleS1uZWlnaGJvci10aGVvcmVtXXtGYXJleSBOZWlnaGJvciBUaGVvcmVtfQpcZW5ke2l0ZW1pemV9",
-          "body_preview": "",
-          "source_line_start": 207,
-          "source_line_end": 211
         }
       ],
       "expositions": [],
@@ -8954,11 +8898,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "def:farey-sequence",
         "thm:mediant-inequality"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -8978,18 +8922,15 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Farey sequence",
         "Mediant inequality"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "thm:mediant-inequality",
-        "def:farey-sequence"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W01lZGlhbnQgcHJvcGVydHkgb2YgRmFyZXkgbmVpZ2hib3JzXQpcbGFiZWx7dGhtOmZhcmV5LW1lZGlhbnQtcHJvcGVydHl9CklmICRhL2IkIGFuZCAkYy9kJCBhcmUgY29uc2VjdXRpdmUgZnJhY3Rpb25zIGluIGEgRmFyZXkgc2VxdWVuY2UsIHRoZW4KdGhlaXIgbWVkaWFudCAkKGErYykvKGIrZCkkIGxpZXMgc3RyaWN0bHkgYmV0d2VlbiB0aGVtOgpcWwpcZnJhY3thfXtifSA8IFxmcmFje2ErY317YitkfSA8IFxmcmFje2N9e2R9LgpcXQpcaHlwZXJyZWZbcHJmOmZhcmV5LW1lZGlhbnQtcHJvcGVydHlde0dvIHRvIHByb29mLn0KXGVuZHt0aGVvcmVtfQ==",
       "body_latex_b64": "ClxsYWJlbHt0aG06ZmFyZXktbWVkaWFudC1wcm9wZXJ0eX0KSWYgJGEvYiQgYW5kICRjL2QkIGFyZSBjb25zZWN1dGl2ZSBmcmFjdGlvbnMgaW4gYSBGYXJleSBzZXF1ZW5jZSwgdGhlbgp0aGVpciBtZWRpYW50ICQoYStjKS8oYitkKSQgbGllcyBzdHJpY3RseSBiZXR3ZWVuIHRoZW06ClxbClxmcmFje2F9e2J9IDwgXGZyYWN7YStjfXtiK2R9IDwgXGZyYWN7Y317ZH0uClxdClxoeXBlcnJlZltwcmY6ZmFyZXktbWVkaWFudC1wcm9wZXJ0eV17R28gdG8gcHJvb2YufQo=",
       "title_latex_b64": "TWVkaWFudCBwcm9wZXJ0eSBvZiBGYXJleSBuZWlnaGJvcnM=",
@@ -9012,15 +8953,6 @@
           "body_preview": "This is the Mediant Inequality applied in the Farey context. It guarantees that the mediant insertion operation always produces a fraction that fits strictly between consecutive neighbors, which is the mechanism by which",
           "source_line_start": 231,
           "source_line_end": 236
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTptZWRpYW50LWluZXF1YWxpdHlde01lZGlhbnQgSW5lcXVhbGl0eX0KICBcaXRlbSBcaHlwZXJyZWZbZGVmOmZhcmV5LXNlcXVlbmNlXXtGYXJleSBTZXF1ZW5jZX0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTptZWRpYW50LWluZXF1YWxpdHlde01lZGlhbnQgSW5lcXVhbGl0eX0KICBcaXRlbSBcaHlwZXJyZWZbZGVmOmZhcmV5LXNlcXVlbmNlXXtGYXJleSBTZXF1ZW5jZX0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "",
-          "source_line_start": 238,
-          "source_line_end": 243
         }
       ],
       "expositions": [],
@@ -9058,10 +8990,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "thm:mediant-inequality"
+        "thm:stern-brocot-enumeration"
       ],
       "used_by_ids": [
-        "thm:stern-brocot-enumeration"
+        "thm:mediant-inequality"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -9083,17 +9015,15 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Mediant inequality"
+        "Stern--Brocot enumeration"
       ],
       "used_by_titles": [
-        "Stern--Brocot enumeration"
+        "Mediant inequality"
       ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "thm:mediant-inequality"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue2xlbW1hfVtNZWRpYW50IEdhcCBMZW1tYV0KXGxhYmVse2xlbTptZWRpYW50LWdhcH0KSWYgJGEvYiA8IGMvZCQgd2l0aCAkYiwgZCA+IDAkLCB0aGVuIHRoZSBtZWRpYW50ICQoYStjKS8oYitkKSQgbGllcwpzdHJpY3RseSBiZXR3ZWVuIHRoZW0sIGFuZCB0aGUgdHdvIHN1YmdhcHMgc2F0aXNmeQpcWwpcZnJhY3thK2N9e2IrZH0gLSBcZnJhY3thfXtifSA9IFxmcmFjezF9e2IoYitkKX0sClxxcXVhZApcZnJhY3tjfXtkfSAtIFxmcmFje2ErY317YitkfSA9IFxmcmFjezF9e2QoYitkKX0uClxdClxoeXBlcnJlZltwcmY6bWVkaWFudC1nYXBde0dvIHRvIHByb29mLn0KXGVuZHtsZW1tYX0=",
       "body_latex_b64": "ClxsYWJlbHtsZW06bWVkaWFudC1nYXB9CklmICRhL2IgPCBjL2QkIHdpdGggJGIsIGQgPiAwJCwgdGhlbiB0aGUgbWVkaWFudCAkKGErYykvKGIrZCkkIGxpZXMKc3RyaWN0bHkgYmV0d2VlbiB0aGVtLCBhbmQgdGhlIHR3byBzdWJnYXBzIHNhdGlzZnkKXFsKXGZyYWN7YStjfXtiK2R9IC0gXGZyYWN7YX17Yn0gPSBcZnJhY3sxfXtiKGIrZCl9LApccXF1YWQKXGZyYWN7Y317ZH0gLSBcZnJhY3thK2N9e2IrZH0gPSBcZnJhY3sxfXtkKGIrZCl9LgpcXQpcaHlwZXJyZWZbcHJmOm1lZGlhbnQtZ2FwXXtHbyB0byBwcm9vZi59Cg==",
       "title_latex_b64": "TWVkaWFudCBHYXAgTGVtbWE=",
@@ -9116,15 +9046,6 @@
           "body_preview": "Inserting the mediant divides the interval $[a/b, c/d]$ into two subintervals of lengths $1/(b(b+d))$ and $1/(d(b+d))$. Both are strictly smaller than the original gap $1/(bd)$ (since $b+d > b$ and $b+d > d$). This exact",
           "source_line_start": 269,
           "source_line_end": 277
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTptZWRpYW50LWluZXF1YWxpdHlde01lZGlhbnQgSW5lcXVhbGl0eX0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTptZWRpYW50LWluZXF1YWxpdHlde01lZGlhbnQgSW5lcXVhbGl0eX0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "",
-          "source_line_start": 279,
-          "source_line_end": 283
         }
       ],
       "expositions": [],
@@ -9161,12 +9082,12 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "def:mediant",
         "lem:mediant-gap",
         "thm:farey-neighbor-theorem"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9186,20 +9107,16 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Mediant",
         "Mediant Gap Lemma",
         "Farey Neighbor Theorem"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:mediant",
-        "thm:farey-neighbor-theorem",
-        "lem:mediant-gap"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W1N0ZXJuLS1Ccm9jb3QgZW51bWVyYXRpb25dClxsYWJlbHt0aG06c3Rlcm4tYnJvY290LWVudW1lcmF0aW9ufQpFdmVyeSBwb3NpdGl2ZSByYXRpb25hbCBudW1iZXIgYXBwZWFycyBleGFjdGx5IG9uY2UgaW4gcmVkdWNlZCBmb3JtIGluCnRoZSBTdGVybi0tQnJvY290IHRyZWUuClxoeXBlcnJlZltwcmY6c3Rlcm4tYnJvY290LWVudW1lcmF0aW9uXXtHbyB0byBwcm9vZi59ClxlbmR7dGhlb3JlbX0=",
       "body_latex_b64": "ClxsYWJlbHt0aG06c3Rlcm4tYnJvY290LWVudW1lcmF0aW9ufQpFdmVyeSBwb3NpdGl2ZSByYXRpb25hbCBudW1iZXIgYXBwZWFycyBleGFjdGx5IG9uY2UgaW4gcmVkdWNlZCBmb3JtIGluCnRoZSBTdGVybi0tQnJvY290IHRyZWUuClxoeXBlcnJlZltwcmY6c3Rlcm4tYnJvY290LWVudW1lcmF0aW9uXXtHbyB0byBwcm9vZi59Cg==",
       "title_latex_b64": "U3Rlcm4tLUJyb2NvdCBlbnVtZXJhdGlvbg==",
@@ -9222,24 +9139,6 @@
           "body_preview": "The Stern--Brocot tree is a complete, duplication-free enumeration of all positive rationals. Every positive rational is reachable by following a unique finite left-right path from the root: go left if the target is less",
           "source_line_start": 303,
           "source_line_end": 312
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjptZWRpYW50XXtNZWRpYW50fQogIFxpdGVtIFxoeXBlcnJlZlt0aG06ZmFyZXktbmVpZ2hib3ItdGhlb3JlbV17RmFyZXkgTmVpZ2hib3IgVGhlb3JlbX0KICBcaXRlbSBcaHlwZXJyZWZbbGVtOm1lZGlhbnQtZ2FwXXtNZWRpYW50IEdhcCBMZW1tYX0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjptZWRpYW50XXtNZWRpYW50fQogIFxpdGVtIFxoeXBlcnJlZlt0aG06ZmFyZXktbmVpZ2hib3ItdGhlb3JlbV17RmFyZXkgTmVpZ2hib3IgVGhlb3JlbX0KICBcaXRlbSBcaHlwZXJyZWZbbGVtOm1lZGlhbnQtZ2FwXXtNZWRpYW50IEdhcCBMZW1tYX0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "",
-          "source_line_start": 314,
-          "source_line_end": 320
-        },
-        {
-          "title": "The Farey--Stern--Brocot connection",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W1RoZSBGYXJleS0tU3Rlcm4tLUJyb2NvdCBjb25uZWN0aW9uXQpUaGUgZGV0ZXJtaW5hbnQgY29uZGl0aW9uICRiYyAtIGFkID0gMSQgaXMgdGhlIGFyaXRobWV0aWMgc2hhZG93IG9mIHRoZQpTdGVybi0tQnJvY290IHRyZWUuICBBZGphY2VudCBmcmFjdGlvbnMgaW4gdGhlIHRyZWUgYWx3YXlzIHNhdGlzZnkgdGhpcwpjb25kaXRpb24sIGFuZCB0aGUgbWVkaWFudCBpbnNlcnRzIHRoZSB1bmlxdWUgbmV4dCBmcmFjdGlvbiBiZXR3ZWVuIHRoZW0uClRoaXMgaXMgd2h5IHRoZSBGYXJleSBnYXAgZm9ybXVsYSAkYy9kIC0gYS9iID0gMS8oYmQpJCBhbmQgdGhlIE1lZGlhbnQKR2FwIExlbW1hIGNvbnRyb2wgYXBwcm94aW1hdGlvbiBlcnJvcnMgc28gcHJlY2lzZWx5OiB0aGUgZW50aXJlIGFyaXRobWV0aWMKc3RydWN0dXJlIG9mIHRoZSB0cmVlIGlzIGVuY29kZWQgaW4gYSBzaW5nbGUgZGV0ZXJtaW5hbnQgaWRlbnRpdHkuClxlbmR7cmVtYXJrKn0=",
-          "body_latex_b64": "VGhlIGRldGVybWluYW50IGNvbmRpdGlvbiAkYmMgLSBhZCA9IDEkIGlzIHRoZSBhcml0aG1ldGljIHNoYWRvdyBvZiB0aGUKU3Rlcm4tLUJyb2NvdCB0cmVlLiAgQWRqYWNlbnQgZnJhY3Rpb25zIGluIHRoZSB0cmVlIGFsd2F5cyBzYXRpc2Z5IHRoaXMKY29uZGl0aW9uLCBhbmQgdGhlIG1lZGlhbnQgaW5zZXJ0cyB0aGUgdW5pcXVlIG5leHQgZnJhY3Rpb24gYmV0d2VlbiB0aGVtLgpUaGlzIGlzIHdoeSB0aGUgRmFyZXkgZ2FwIGZvcm11bGEgJGMvZCAtIGEvYiA9IDEvKGJkKSQgYW5kIHRoZSBNZWRpYW50CkdhcCBMZW1tYSBjb250cm9sIGFwcHJveGltYXRpb24gZXJyb3JzIHNvIHByZWNpc2VseTogdGhlIGVudGlyZSBhcml0aG1ldGljCnN0cnVjdHVyZSBvZiB0aGUgdHJlZSBpcyBlbmNvZGVkIGluIGEgc2luZ2xlIGRldGVybWluYW50IGlkZW50aXR5Lg==",
-          "body_preview": "The determinant condition $bc - ad = 1$ is the arithmetic shadow of the Stern--Brocot tree. Adjacent fractions in the tree always satisfy this condition, and the mediant inserts the unique next fraction between them. Thi",
-          "source_line_start": 322,
-          "source_line_end": 329
         }
       ],
       "expositions": [],
@@ -9276,11 +9175,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "cor:q-dense-in-itself",
         "cor:q-has-no-adjacent-points"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9300,11 +9199,11 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "$ $ Is Dense in Itself",
         "The Rational Numbers Have No Adjacent Points"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -9348,10 +9247,10 @@
       "failure_modes": "This could fail only if $\\mathbb{Q}$ contained a genuine gap when viewed as an\nordered set in its own right. The previous theorem rules that out.",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "thm:between-any-two-rationals-is-a-rational"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9371,16 +9270,14 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Between Any Two Rational Numbers Lies Another Rational"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "thm:between-any-two-rationals-is-a-rational"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue2Nvcm9sbGFyeX1bJFxtYXRoYmJ7UX0kIElzIERlbnNlIGluIEl0c2VsZl0KXGxhYmVse2NvcjpxLWRlbnNlLWluLWl0c2VsZn0KVGhlIHN1YnNldCAkXG1hdGhiYntRfSQgaXMgb3JkZXIgZGVuc2UgaW4gaXRzZWxmLgpcaHlwZXJyZWZbcHJmOnEtZGVuc2UtaW4taXRzZWxmXXtHbyB0byBwcm9vZi59ClxlbmR7Y29yb2xsYXJ5fQ==",
       "body_latex_b64": "ClxsYWJlbHtjb3I6cS1kZW5zZS1pbi1pdHNlbGZ9ClRoZSBzdWJzZXQgJFxtYXRoYmJ7UX0kIGlzIG9yZGVyIGRlbnNlIGluIGl0c2VsZi4KXGh5cGVycmVmW3ByZjpxLWRlbnNlLWluLWl0c2VsZl17R28gdG8gcHJvb2YufQo=",
       "title_latex_b64": "JFxtYXRoYmJ7UX0kIElzIERlbnNlIGluIEl0c2VsZg==",
@@ -9430,15 +9327,6 @@
           "body_preview": "This could fail only if $ $ contained a genuine gap when viewed as an ordered set in its own right. The previous theorem rules that out.",
           "source_line_start": 120,
           "source_line_end": 123
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpiZXR3ZWVuLWFueS10d28tcmF0aW9uYWxzLWlzLWEtcmF0aW9uYWxde0JldHdlZW4gQW55IFR3byBSYXRpb25hbCBOdW1iZXJzIExpZXMgQW5vdGhlciBSYXRpb25hbH0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpiZXR3ZWVuLWFueS10d28tcmF0aW9uYWxzLWlzLWEtcmF0aW9uYWxde0JldHdlZW4gQW55IFR3byBSYXRpb25hbCBOdW1iZXJzIExpZXMgQW5vdGhlciBSYXRpb25hbH0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "",
-          "source_line_start": 125,
-          "source_line_end": 129
         }
       ],
       "expositions": [],
@@ -9475,10 +9363,10 @@
       "failure_modes": "Adjacent points would mean that some rational interval had no internal rational\npoint. The midpoint argument prevents that.",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "thm:between-any-two-rationals-is-a-rational"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9498,16 +9386,14 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Between Any Two Rational Numbers Lies Another Rational"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "thm:between-any-two-rationals-is-a-rational"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue2Nvcm9sbGFyeX1bVGhlIFJhdGlvbmFsIE51bWJlcnMgSGF2ZSBObyBBZGphY2VudCBQb2ludHNdClxsYWJlbHtjb3I6cS1oYXMtbm8tYWRqYWNlbnQtcG9pbnRzfQpUaGVyZSBkbyBub3QgZXhpc3QgcmF0aW9uYWwgbnVtYmVycyAkcjxzJCBzdWNoIHRoYXQgbm8gcmF0aW9uYWwgbnVtYmVyIGxpZXMKc3RyaWN0bHkgYmV0d2VlbiB0aGVtLgpcaHlwZXJyZWZbcHJmOnEtaGFzLW5vLWFkamFjZW50LXBvaW50c117R28gdG8gcHJvb2YufQpcZW5ke2Nvcm9sbGFyeX0=",
       "body_latex_b64": "ClxsYWJlbHtjb3I6cS1oYXMtbm8tYWRqYWNlbnQtcG9pbnRzfQpUaGVyZSBkbyBub3QgZXhpc3QgcmF0aW9uYWwgbnVtYmVycyAkcjxzJCBzdWNoIHRoYXQgbm8gcmF0aW9uYWwgbnVtYmVyIGxpZXMKc3RyaWN0bHkgYmV0d2VlbiB0aGVtLgpcaHlwZXJyZWZbcHJmOnEtaGFzLW5vLWFkamFjZW50LXBvaW50c117R28gdG8gcHJvb2YufQo=",
       "title_latex_b64": "VGhlIFJhdGlvbmFsIE51bWJlcnMgSGF2ZSBObyBBZGphY2VudCBQb2ludHM=",
@@ -9548,15 +9434,6 @@
           "body_preview": "Adjacent points would mean that some rational interval had no internal rational point. The midpoint argument prevents that.",
           "source_line_start": 162,
           "source_line_end": 165
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpiZXR3ZWVuLWFueS10d28tcmF0aW9uYWxzLWlzLWEtcmF0aW9uYWxde0JldHdlZW4gQW55IFR3byBSYXRpb25hbCBOdW1iZXJzIExpZXMgQW5vdGhlciBSYXRpb25hbH0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpiZXR3ZWVuLWFueS10d28tcmF0aW9uYWxzLWlzLWEtcmF0aW9uYWxde0JldHdlZW4gQW55IFR3byBSYXRpb25hbCBOdW1iZXJzIExpZXMgQW5vdGhlciBSYXRpb25hbH0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "",
-          "source_line_start": 167,
-          "source_line_end": 171
         }
       ],
       "expositions": [],
@@ -9593,10 +9470,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "lem:rational-upper-lower-perturbation"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9616,10 +9493,10 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Upper/Lower Perturbation Lemma, Rational Version"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -9664,10 +9541,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "thm:q-has-no-minimum-positive-element"
+        "lem:rational-perturbation-lemma"
       ],
       "used_by_ids": [
-        "lem:rational-perturbation-lemma"
+        "thm:q-has-no-minimum-positive-element"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -9689,17 +9566,15 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "$ $ Has No Minimum Positive Element"
+        "Rational Perturbation Lemma"
       ],
       "used_by_titles": [
-        "Rational Perturbation Lemma"
+        "$ $ Has No Minimum Positive Element"
       ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "thm:q-has-no-minimum-positive-element"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue2xlbW1hfVtVcHBlci9Mb3dlciBQZXJ0dXJiYXRpb24gTGVtbWEsIFJhdGlvbmFsIFZlcnNpb25dClxsYWJlbHtsZW06cmF0aW9uYWwtdXBwZXItbG93ZXItcGVydHVyYmF0aW9ufQpJZiAkcVxpblxtYXRoYmJ7UX0kIGFuZCAkXHZhcmVwc2lsb25caW5cbWF0aGJie1F9JCB3aXRoICRcdmFyZXBzaWxvbj4wJCwKdGhlbiB0aGVyZSBleGlzdCAkcixzXGluXG1hdGhiYntRfSQgc3VjaCB0aGF0ClxbCnEtXHZhcmVwc2lsb24gPCByIDwgcSA8IHMgPCBxK1x2YXJlcHNpbG9uLgpcXQpcaHlwZXJyZWZbcHJmOnJhdGlvbmFsLXVwcGVyLWxvd2VyLXBlcnR1cmJhdGlvbl17R28gdG8gcHJvb2YufQpcZW5ke2xlbW1hfQ==",
       "body_latex_b64": "ClxsYWJlbHtsZW06cmF0aW9uYWwtdXBwZXItbG93ZXItcGVydHVyYmF0aW9ufQpJZiAkcVxpblxtYXRoYmJ7UX0kIGFuZCAkXHZhcmVwc2lsb25caW5cbWF0aGJie1F9JCB3aXRoICRcdmFyZXBzaWxvbj4wJCwKdGhlbiB0aGVyZSBleGlzdCAkcixzXGluXG1hdGhiYntRfSQgc3VjaCB0aGF0ClxbCnEtXHZhcmVwc2lsb24gPCByIDwgcSA8IHMgPCBxK1x2YXJlcHNpbG9uLgpcXQpcaHlwZXJyZWZbcHJmOnJhdGlvbmFsLXVwcGVyLWxvd2VyLXBlcnR1cmJhdGlvbl17R28gdG8gcHJvb2YufQo=",
       "title_latex_b64": "VXBwZXIvTG93ZXIgUGVydHVyYmF0aW9uIExlbW1hLCBSYXRpb25hbCBWZXJzaW9u",
@@ -9731,15 +9606,6 @@
           "body_preview": "Every rational point has rational points strictly on both sides within any prescribed positive distance. This is the working tool for punctured-ball arguments in $ $.",
           "source_line_start": 255,
           "source_line_end": 259
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpxLWhhcy1uby1taW5pbXVtLXBvc2l0aXZlLWVsZW1lbnRdeyRcbWF0aGJie1F9JCBIYXMgTm8gTWluaW11bSBQb3NpdGl2ZSBFbGVtZW50fQpcZW5ke2l0ZW1pemV9ClxlbmR7cmVtYXJrKn0=",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpxLWhhcy1uby1taW5pbXVtLXBvc2l0aXZlLWVsZW1lbnRdeyRcbWF0aGJie1F9JCBIYXMgTm8gTWluaW11bSBQb3NpdGl2ZSBFbGVtZW50fQpcZW5ke2l0ZW1pemV9",
-          "body_preview": "$ $ Has No Minimum Positive Element",
-          "source_line_start": 261,
-          "source_line_end": 265
         }
       ],
       "expositions": [],
@@ -9776,10 +9642,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "lem:rational-upper-lower-perturbation"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -9799,16 +9665,14 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Upper/Lower Perturbation Lemma, Rational Version"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "lem:rational-upper-lower-perturbation"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue2xlbW1hfVtSYXRpb25hbCBQZXJ0dXJiYXRpb24gTGVtbWFdClxsYWJlbHtsZW06cmF0aW9uYWwtcGVydHVyYmF0aW9uLWxlbW1hfQpJZiAkcVxpblxtYXRoYmJ7UX0kIGFuZCAkXHZhcmVwc2lsb24+MCQsIHRoZW4gdGhlcmUgZXhpc3RzICRyXGluXG1hdGhiYntRfSQKc3VjaCB0aGF0ClxbCjA8fHItcXw8XHZhcmVwc2lsb24uClxdClxoeXBlcnJlZltwcmY6cmF0aW9uYWwtcGVydHVyYmF0aW9uLWxlbW1hXXtHbyB0byBwcm9vZi59ClxlbmR7bGVtbWF9",
       "body_latex_b64": "ClxsYWJlbHtsZW06cmF0aW9uYWwtcGVydHVyYmF0aW9uLWxlbW1hfQpJZiAkcVxpblxtYXRoYmJ7UX0kIGFuZCAkXHZhcmVwc2lsb24+MCQsIHRoZW4gdGhlcmUgZXhpc3RzICRyXGluXG1hdGhiYntRfSQKc3VjaCB0aGF0ClxbCjA8fHItcXw8XHZhcmVwc2lsb24uClxdClxoeXBlcnJlZltwcmY6cmF0aW9uYWwtcGVydHVyYmF0aW9uLWxlbW1hXXtHbyB0byBwcm9vZi59Cg==",
       "title_latex_b64": "UmF0aW9uYWwgUGVydHVyYmF0aW9uIExlbW1h",
@@ -9840,15 +9704,6 @@
           "body_preview": "Every rational point is a limit point of $ $: it can be approached arbitrarily closely by other rational numbers.",
           "source_line_start": 296,
           "source_line_end": 299
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2xlbTpyYXRpb25hbC11cHBlci1sb3dlci1wZXJ0dXJiYXRpb25de1VwcGVyL0xvd2VyIFBlcnR1cmJhdGlvbiBMZW1tYX0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2xlbTpyYXRpb25hbC11cHBlci1sb3dlci1wZXJ0dXJiYXRpb25de1VwcGVyL0xvd2VyIFBlcnR1cmJhdGlvbiBMZW1tYX0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "",
-          "source_line_start": 301,
-          "source_line_end": 305
         }
       ],
       "expositions": [],
@@ -9952,11 +9807,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "thm:farey-neighbor-theorem"
-      ],
-      "used_by_ids": [
         "cor:sb-limit-irrational",
         "lem:sb-length-zero"
+      ],
+      "used_by_ids": [
+        "thm:farey-neighbor-theorem"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -9978,19 +9833,16 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Farey Neighbor Theorem"
-      ],
-      "used_by_titles": [
         "Infinite Stern--Brocot paths converge to irrationals",
         "Stern--Brocot interval lengths shrink to zero"
+      ],
+      "used_by_titles": [
+        "Farey Neighbor Theorem"
       ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "thm:farey-neighbor-theorem",
-        "thm:induction-principle-for-peano-system"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue2xlbW1hfVtEZW5vbWluYXRvciBncm93dGggb24gaW5maW5pdGUgU3Rlcm4tLUJyb2NvdCBwYXRoc10KXGxhYmVse2xlbTpzYi1kZW5vbS1ncm93dGh9CkxldCAkYV8wL2JfMCwgYV8xL2JfMSwgYV8yL2JfMiwgXGxkb3RzJCBiZSB0aGUgc2VxdWVuY2Ugb2YgZW5kcG9pbnQKZnJhY3Rpb25zIGVuY291bnRlcmVkIGFsb25nIGFueSBpbmZpbml0ZSBwYXRoIGluIHRoZSBTdGVybi0tQnJvY290IHRyZWUuClRoZW4gdGhlIGRlbm9taW5hdG9ycyBhcmUgc3RyaWN0bHkgaW5jcmVhc2luZzoKXFsKYl8wIDwgYl8xIDwgYl8yIDwgXGNkb3RzLApcXQphbmQgaW4gcGFydGljdWxhciAkYl9uIFx0byBcaW5mdHkkLgpcaHlwZXJyZWZbcHJmOnNiLWRlbm9tLWdyb3d0aF17R28gdG8gcHJvb2YufQpcZW5ke2xlbW1hfQ==",
       "body_latex_b64": "ClxsYWJlbHtsZW06c2ItZGVub20tZ3Jvd3RofQpMZXQgJGFfMC9iXzAsIGFfMS9iXzEsIGFfMi9iXzIsIFxsZG90cyQgYmUgdGhlIHNlcXVlbmNlIG9mIGVuZHBvaW50CmZyYWN0aW9ucyBlbmNvdW50ZXJlZCBhbG9uZyBhbnkgaW5maW5pdGUgcGF0aCBpbiB0aGUgU3Rlcm4tLUJyb2NvdCB0cmVlLgpUaGVuIHRoZSBkZW5vbWluYXRvcnMgYXJlIHN0cmljdGx5IGluY3JlYXNpbmc6ClxbCmJfMCA8IGJfMSA8IGJfMiA8IFxjZG90cywKXF0KYW5kIGluIHBhcnRpY3VsYXIgJGJfbiBcdG8gXGluZnR5JC4KXGh5cGVycmVmW3ByZjpzYi1kZW5vbS1ncm93dGhde0dvIHRvIHByb29mLn0K",
       "title_latex_b64": "RGVub21pbmF0b3IgZ3Jvd3RoIG9uIGluZmluaXRlIFN0ZXJuLS1Ccm9jb3QgcGF0aHM=",
@@ -10013,15 +9865,6 @@
           "body_preview": "At each step in the tree the new fraction produced by the mediant has denominator equal to the sum of the two parent denominators, which strictly exceeds each of them. A path that turns left or right at every level there",
           "source_line_start": 36,
           "source_line_end": 44
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpmYXJleS1uZWlnaGJvci10aGVvcmVtXXtGYXJleSBOZWlnaGJvciBUaGVvcmVtfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06aW5kdWN0aW9uLXByaW5jaXBsZS1mb3ItcGVhbm8tc3lzdGVtXXtJbmR1Y3Rpb24gUHJpbmNpcGxlIGZvciBhIFBlYW5vIFN5c3RlbX0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpmYXJleS1uZWlnaGJvci10aGVvcmVtXXtGYXJleSBOZWlnaGJvciBUaGVvcmVtfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06aW5kdWN0aW9uLXByaW5jaXBsZS1mb3ItcGVhbm8tc3lzdGVtXXtJbmR1Y3Rpb24gUHJpbmNpcGxlIGZvciBhIFBlYW5vIFN5c3RlbX0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "",
-          "source_line_start": 46,
-          "source_line_end": 51
         }
       ],
       "expositions": [],
@@ -10059,12 +9902,12 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
+        "prop:sb-unique-point"
+      ],
+      "used_by_ids": [
         "lem:sb-denom-growth",
         "thm:archimedean-q",
         "thm:farey-gap"
-      ],
-      "used_by_ids": [
-        "prop:sb-unique-point"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -10086,21 +9929,17 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
+        "Nested Stern--Brocot intervals contain a unique limit point"
+      ],
+      "used_by_titles": [
         "Denominator growth on infinite Stern--Brocot paths",
         "Archimedean property of $ $",
         "Gap between Farey neighbors"
       ],
-      "used_by_titles": [
-        "Nested Stern--Brocot intervals contain a unique limit point"
-      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "thm:farey-gap",
-        "lem:sb-denom-growth",
-        "thm:archimedean-q"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue2xlbW1hfVtTdGVybi0tQnJvY290IGludGVydmFsIGxlbmd0aHMgc2hyaW5rIHRvIHplcm9dClxsYWJlbHtsZW06c2ItbGVuZ3RoLXplcm99CkxldCAkKElfbilfe24gXGdlcSAwfSQgYmUgdGhlIG5lc3RlZCByYXRpb25hbCBpbnRlcnZhbHMgZ2VuZXJhdGVkIGJ5CnRoZSBTdGVybi0tQnJvY290IHJlZmluZW1lbnQgcHJvY2VzcyB0YXJnZXRpbmcgYSByZWFsIG51bWJlciAkeCA+IDAkLAp3aGVyZSAkSV9uID0gW2Ffbi9iX24sXDsgY19uL2Rfbl0kLiAgVGhlbiB0aGUgaW50ZXJ2YWwgbGVuZ3RocwokXGVsbF9uID0gY19uL2RfbiAtIGFfbi9iX24kIHNhdGlzZnkKXFsKXGxpbV97biBcdG8gXGluZnR5fSBcZWxsX24gPSAwLgpcXQpcaHlwZXJyZWZbcHJmOnNiLWxlbmd0aC16ZXJvXXtHbyB0byBwcm9vZi59ClxlbmR7bGVtbWF9",
       "body_latex_b64": "ClxsYWJlbHtsZW06c2ItbGVuZ3RoLXplcm99CkxldCAkKElfbilfe24gXGdlcSAwfSQgYmUgdGhlIG5lc3RlZCByYXRpb25hbCBpbnRlcnZhbHMgZ2VuZXJhdGVkIGJ5CnRoZSBTdGVybi0tQnJvY290IHJlZmluZW1lbnQgcHJvY2VzcyB0YXJnZXRpbmcgYSByZWFsIG51bWJlciAkeCA+IDAkLAp3aGVyZSAkSV9uID0gW2Ffbi9iX24sXDsgY19uL2Rfbl0kLiAgVGhlbiB0aGUgaW50ZXJ2YWwgbGVuZ3RocwokXGVsbF9uID0gY19uL2RfbiAtIGFfbi9iX24kIHNhdGlzZnkKXFsKXGxpbV97biBcdG8gXGluZnR5fSBcZWxsX24gPSAwLgpcXQpcaHlwZXJyZWZbcHJmOnNiLWxlbmd0aC16ZXJvXXtHbyB0byBwcm9vZi59Cg==",
       "title_latex_b64": "U3Rlcm4tLUJyb2NvdCBpbnRlcnZhbCBsZW5ndGhzIHNocmluayB0byB6ZXJv",
@@ -10123,15 +9962,6 @@
           "body_preview": "By the Farey gap formula, $ _n = 1/(b_n d_n)$. By the Denominator Growth Lemma, both $b_n$ and $d_n$ tend to infinity. Therefore $1/(b_n d_n) 0$. The Archimedean property of $ $ converts this into an explicit $N$: given ",
           "source_line_start": 75,
           "source_line_end": 81
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpmYXJleS1nYXBde0dhcCBiZXR3ZWVuIEZhcmV5IE5laWdoYm9yc30KICBcaXRlbSBcaHlwZXJyZWZbbGVtOnNiLWRlbm9tLWdyb3d0aF17RGVub21pbmF0b3IgR3Jvd3RoIG9uIEluZmluaXRlIFNCIFBhdGhzfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06YXJjaGltZWRlYW4tcV17QXJjaGltZWRlYW4gUHJvcGVydHkgb2YgJFxtYXRoYmJ7UX0kfQpcZW5ke2l0ZW1pemV9ClxlbmR7cmVtYXJrKn0=",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpmYXJleS1nYXBde0dhcCBiZXR3ZWVuIEZhcmV5IE5laWdoYm9yc30KICBcaXRlbSBcaHlwZXJyZWZbbGVtOnNiLWRlbm9tLWdyb3d0aF17RGVub21pbmF0b3IgR3Jvd3RoIG9uIEluZmluaXRlIFNCIFBhdGhzfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06YXJjaGltZWRlYW4tcV17QXJjaGltZWRlYW4gUHJvcGVydHkgb2YgJFxtYXRoYmJ7UX0kfQpcZW5ke2l0ZW1pemV9",
-          "body_preview": "Archimedean Property of $ $",
-          "source_line_start": 83,
-          "source_line_end": 89
         }
       ],
       "expositions": [],
@@ -10169,10 +9999,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "lem:sb-length-zero"
+        "cor:sb-path-limit"
       ],
       "used_by_ids": [
-        "cor:sb-path-limit"
+        "lem:sb-length-zero"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -10194,17 +10024,15 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Stern--Brocot interval lengths shrink to zero"
+        "Every infinite Stern--Brocot path converges to its target"
       ],
       "used_by_titles": [
-        "Every infinite Stern--Brocot path converges to its target"
+        "Stern--Brocot interval lengths shrink to zero"
       ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "lem:sb-length-zero"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3Byb3Bvc2l0aW9ufVtOZXN0ZWQgU3Rlcm4tLUJyb2NvdCBpbnRlcnZhbHMgY29udGFpbiBhIHVuaXF1ZSBsaW1pdCBwb2ludF0KXGxhYmVse3Byb3A6c2ItdW5pcXVlLXBvaW50fQpMZXQgJChJX24pX3tuIFxnZXEgMH0kIGJlIHRoZSBuZXN0ZWQgc2VxdWVuY2Ugb2YgY2xvc2VkIHJhdGlvbmFsIGludGVydmFscwpnZW5lcmF0ZWQgYnkgdGhlIFN0ZXJuLS1Ccm9jb3QgcmVmaW5lbWVudCBwcm9jZXNzIHRhcmdldGluZyAkeCA+IDAkLAp3aXRoICRJX24gPSBbYV9uL2JfbixcOyBjX24vZF9uXSQuICBUaGVuIHRoZXJlIGV4aXN0cyBhIHVuaXF1ZSByZWFsCm51bWJlciAkXHhpIFxpbiBcYmlnY2FwX3tuPTB9XntcaW5mdHl9IElfbiQuClxoeXBlcnJlZltwcmY6c2ItdW5pcXVlLXBvaW50XXtHbyB0byBwcm9vZi59ClxlbmR7cHJvcG9zaXRpb259",
       "body_latex_b64": "ClxsYWJlbHtwcm9wOnNiLXVuaXF1ZS1wb2ludH0KTGV0ICQoSV9uKV97biBcZ2VxIDB9JCBiZSB0aGUgbmVzdGVkIHNlcXVlbmNlIG9mIGNsb3NlZCByYXRpb25hbCBpbnRlcnZhbHMKZ2VuZXJhdGVkIGJ5IHRoZSBTdGVybi0tQnJvY290IHJlZmluZW1lbnQgcHJvY2VzcyB0YXJnZXRpbmcgJHggPiAwJCwKd2l0aCAkSV9uID0gW2Ffbi9iX24sXDsgY19uL2Rfbl0kLiAgVGhlbiB0aGVyZSBleGlzdHMgYSB1bmlxdWUgcmVhbApudW1iZXIgJFx4aSBcaW4gXGJpZ2NhcF97bj0wfV57XGluZnR5fSBJX24kLgpcaHlwZXJyZWZbcHJmOnNiLXVuaXF1ZS1wb2ludF17R28gdG8gcHJvb2YufQo=",
       "title_latex_b64": "TmVzdGVkIFN0ZXJuLS1Ccm9jb3QgaW50ZXJ2YWxzIGNvbnRhaW4gYSB1bmlxdWUgbGltaXQgcG9pbnQ=",
@@ -10227,15 +10055,6 @@
           "body_preview": "The left endpoints $(a_n/b_n)$ form a monotone increasing sequence bounded above; the right endpoints $(c_n/d_n)$ form a monotone decreasing sequence bounded below. Both converge in $ $ by the Monotone Convergence Theore",
           "source_line_start": 109,
           "source_line_end": 120
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2xlbTpzYi1sZW5ndGgtemVyb117U3Rlcm4tLUJyb2NvdCBJbnRlcnZhbCBMZW5ndGhzIFNocmluayB0byBaZXJvfQpcZW5ke2l0ZW1pemV9ClxlbmR7cmVtYXJrKn0=",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2xlbTpzYi1sZW5ndGgtemVyb117U3Rlcm4tLUJyb2NvdCBJbnRlcnZhbCBMZW5ndGhzIFNocmluayB0byBaZXJvfQpcZW5ke2l0ZW1pemV9",
-          "body_preview": "",
-          "source_line_start": 122,
-          "source_line_end": 126
         }
       ],
       "expositions": [],
@@ -10272,10 +10091,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "prop:sb-unique-point"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -10295,16 +10114,14 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Nested Stern--Brocot intervals contain a unique limit point"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "prop:sb-unique-point"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue2Nvcm9sbGFyeX1bRXZlcnkgaW5maW5pdGUgU3Rlcm4tLUJyb2NvdCBwYXRoIGNvbnZlcmdlcyB0byBpdHMgdGFyZ2V0XQpcbGFiZWx7Y29yOnNiLXBhdGgtbGltaXR9CkxldCAkeCA+IDAkIGJlIGEgcmVhbCBudW1iZXIgYW5kIGxldCAkKElfbikkIGJlIHRoZSBTdGVybi0tQnJvY290CnJlZmluZW1lbnQgc2VxdWVuY2UgdGFyZ2V0aW5nICR4JC4gIFRoZSBzZXF1ZW5jZXMgb2YgbGVmdCBhbmQgcmlnaHQKZW5kcG9pbnRzIGJvdGggY29udmVyZ2UgdG8gJHgkOgpcWwpcbGltX3tuIFx0byBcaW5mdHl9IFxmcmFje2Ffbn17Yl9ufQo9IFxsaW1fe24gXHRvIFxpbmZ0eX0gXGZyYWN7Y19ufXtkX259Cj0geC4KXF0KXGh5cGVycmVmW3ByZjpzYi1wYXRoLWxpbWl0XXtHbyB0byBwcm9vZi59ClxlbmR7Y29yb2xsYXJ5fQ==",
       "body_latex_b64": "ClxsYWJlbHtjb3I6c2ItcGF0aC1saW1pdH0KTGV0ICR4ID4gMCQgYmUgYSByZWFsIG51bWJlciBhbmQgbGV0ICQoSV9uKSQgYmUgdGhlIFN0ZXJuLS1Ccm9jb3QKcmVmaW5lbWVudCBzZXF1ZW5jZSB0YXJnZXRpbmcgJHgkLiAgVGhlIHNlcXVlbmNlcyBvZiBsZWZ0IGFuZCByaWdodAplbmRwb2ludHMgYm90aCBjb252ZXJnZSB0byAkeCQ6ClxbClxsaW1fe24gXHRvIFxpbmZ0eX0gXGZyYWN7YV9ufXtiX259Cj0gXGxpbV97biBcdG8gXGluZnR5fSBcZnJhY3tjX259e2Rfbn0KPSB4LgpcXQpcaHlwZXJyZWZbcHJmOnNiLXBhdGgtbGltaXRde0dvIHRvIHByb29mLn0K",
       "title_latex_b64": "RXZlcnkgaW5maW5pdGUgU3Rlcm4tLUJyb2NvdCBwYXRoIGNvbnZlcmdlcyB0byBpdHMgdGFyZ2V0",
@@ -10327,15 +10144,6 @@
           "body_preview": "By construction, $x I_n$ for every $n$: the refinement rule always replaces the endpoint that would push $x$ outside the interval, so $x$ is retained in $ I_n$. But the proposition says this intersection contains exactly",
           "source_line_start": 153,
           "source_line_end": 159
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3Byb3A6c2ItdW5pcXVlLXBvaW50XXtOZXN0ZWQgU0IgSW50ZXJ2YWxzIENvbnRhaW4gYSBVbmlxdWUgUG9pbnR9ClxlbmR7aXRlbWl6ZX0KXGVuZHtyZW1hcmsqfQ==",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3Byb3A6c2ItdW5pcXVlLXBvaW50XXtOZXN0ZWQgU0IgSW50ZXJ2YWxzIENvbnRhaW4gYSBVbmlxdWUgUG9pbnR9ClxlbmR7aXRlbWl6ZX0=",
-          "body_preview": "",
-          "source_line_start": 161,
-          "source_line_end": 165
         }
       ],
       "expositions": [],
@@ -10372,12 +10180,12 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "lem:sb-denom-growth",
         "thm:farey-neighbor-theorem",
         "thm:sqrt2-irrational"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -10397,20 +10205,16 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Denominator growth on infinite Stern--Brocot paths",
         "Farey Neighbor Theorem",
         "No Rational Number Has Square $2$"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "thm:farey-neighbor-theorem",
-        "lem:sb-denom-growth",
-        "thm:sqrt2-irrational"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue2Nvcm9sbGFyeX1bSW5maW5pdGUgU3Rlcm4tLUJyb2NvdCBwYXRocyBjb252ZXJnZSB0byBpcnJhdGlvbmFsc10KXGxhYmVse2NvcjpzYi1saW1pdC1pcnJhdGlvbmFsfQpBIHBvc2l0aXZlIHJlYWwgbnVtYmVyICR4JCBjb3JyZXNwb25kcyB0byBhIFxlbXBoe2Zpbml0ZX0gcGF0aCBpbiB0aGUKU3Rlcm4tLUJyb2NvdCB0cmVlIGlmIGFuZCBvbmx5IGlmICR4JCBpcyByYXRpb25hbC4gIEVxdWl2YWxlbnRseSwgJHgkCmNvcnJlc3BvbmRzIHRvIGFuIFxlbXBoe2luZmluaXRlfSBwYXRoIGlmIGFuZCBvbmx5IGlmICR4JCBpcyBpcnJhdGlvbmFsLgpcaHlwZXJyZWZbcHJmOnNiLWxpbWl0LWlycmF0aW9uYWxde0dvIHRvIHByb29mLn0KXGVuZHtjb3JvbGxhcnl9",
       "body_latex_b64": "ClxsYWJlbHtjb3I6c2ItbGltaXQtaXJyYXRpb25hbH0KQSBwb3NpdGl2ZSByZWFsIG51bWJlciAkeCQgY29ycmVzcG9uZHMgdG8gYSBcZW1waHtmaW5pdGV9IHBhdGggaW4gdGhlClN0ZXJuLS1Ccm9jb3QgdHJlZSBpZiBhbmQgb25seSBpZiAkeCQgaXMgcmF0aW9uYWwuICBFcXVpdmFsZW50bHksICR4JApjb3JyZXNwb25kcyB0byBhbiBcZW1waHtpbmZpbml0ZX0gcGF0aCBpZiBhbmQgb25seSBpZiAkeCQgaXMgaXJyYXRpb25hbC4KXGh5cGVycmVmW3ByZjpzYi1saW1pdC1pcnJhdGlvbmFsXXtHbyB0byBwcm9vZi59Cg==",
       "title_latex_b64": "SW5maW5pdGUgU3Rlcm4tLUJyb2NvdCBwYXRocyBjb252ZXJnZSB0byBpcnJhdGlvbmFscw==",
@@ -10433,15 +10237,6 @@
           "body_preview": "The refinement process terminates at the first step where $x$ equals the mediant. Since every mediant is rational, termination forces $x $. Conversely, if $x = p/q$ is rational, the Denominator Growth Lemma forces the de",
           "source_line_start": 184,
           "source_line_end": 193
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpmYXJleS1uZWlnaGJvci10aGVvcmVtXXtGYXJleSBOZWlnaGJvciBUaGVvcmVtfQogIFxpdGVtIFxoeXBlcnJlZltsZW06c2ItZGVub20tZ3Jvd3RoXXtEZW5vbWluYXRvciBHcm93dGggb24gSW5maW5pdGUgU0IgUGF0aHN9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpzcXJ0Mi1pcnJhdGlvbmFsXXtObyBSYXRpb25hbCBOdW1iZXIgSGFzIFNxdWFyZSAkMiR9ClxlbmR7aXRlbWl6ZX0KXGVuZHtyZW1hcmsqfQ==",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpmYXJleS1uZWlnaGJvci10aGVvcmVtXXtGYXJleSBOZWlnaGJvciBUaGVvcmVtfQogIFxpdGVtIFxoeXBlcnJlZltsZW06c2ItZGVub20tZ3Jvd3RoXXtEZW5vbWluYXRvciBHcm93dGggb24gSW5maW5pdGUgU0IgUGF0aHN9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpzcXJ0Mi1pcnJhdGlvbmFsXXtObyBSYXRpb25hbCBOdW1iZXIgSGFzIFNxdWFyZSAkMiR9ClxlbmR7aXRlbWl6ZX0=",
-          "body_preview": "",
-          "source_line_start": 195,
-          "source_line_end": 201
         }
       ],
       "expositions": [],
@@ -10478,12 +10273,12 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "thm:convergent-bounded-q",
         "thm:limit-unique-q",
         "thm:subsequence-convergence-q"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -10503,12 +10298,12 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Convergent sequences are bounded",
         "Limits of rational sequences are unique",
         "Subsequences of convergent sequences converge to the same limit"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -10550,11 +10345,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "def:convergent-rational-sequence",
         "thm:q-is-ordered-field"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -10574,18 +10369,15 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Convergence of a rational sequence",
         "$ $ Is an Ordered Field"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:convergent-rational-sequence",
-        "thm:q-is-ordered-field"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W0xpbWl0cyBvZiByYXRpb25hbCBzZXF1ZW5jZXMgYXJlIHVuaXF1ZV0KXGxhYmVse3RobTpsaW1pdC11bmlxdWUtcX0KSWYgYSBzZXF1ZW5jZSBvZiByYXRpb25hbCBudW1iZXJzIGNvbnZlcmdlcywgdGhlbiBpdHMgbGltaXQgaXMgdW5pcXVlLgpcaHlwZXJyZWZbcHJmOmxpbWl0LXVuaXF1ZS1xXXtHbyB0byBwcm9vZi59ClxlbmR7dGhlb3JlbX0=",
       "body_latex_b64": "ClxsYWJlbHt0aG06bGltaXQtdW5pcXVlLXF9CklmIGEgc2VxdWVuY2Ugb2YgcmF0aW9uYWwgbnVtYmVycyBjb252ZXJnZXMsIHRoZW4gaXRzIGxpbWl0IGlzIHVuaXF1ZS4KXGh5cGVycmVmW3ByZjpsaW1pdC11bmlxdWUtcV17R28gdG8gcHJvb2YufQo=",
       "title_latex_b64": "TGltaXRzIG9mIHJhdGlvbmFsIHNlcXVlbmNlcyBhcmUgdW5pcXVl",
@@ -10608,15 +10400,6 @@
           "body_preview": "A sequence cannot approach two distinct rational numbers simultaneously. If it did, the two alleged limits would need to be both arbitrarily close to the same terms, forcing them to be arbitrarily close to each other ---",
           "source_line_start": 92,
           "source_line_end": 97
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpjb252ZXJnZW50LXJhdGlvbmFsLXNlcXVlbmNlXXtDb252ZXJnZW5jZSBvZiBhIFJhdGlvbmFsIFNlcXVlbmNlfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06cS1pcy1vcmRlcmVkLWZpZWxkXXskXG1hdGhiYntRfSQgSXMgYW4gT3JkZXJlZCBGaWVsZH0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpjb252ZXJnZW50LXJhdGlvbmFsLXNlcXVlbmNlXXtDb252ZXJnZW5jZSBvZiBhIFJhdGlvbmFsIFNlcXVlbmNlfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06cS1pcy1vcmRlcmVkLWZpZWxkXXskXG1hdGhiYntRfSQgSXMgYW4gT3JkZXJlZCBGaWVsZH0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "$ $ Is an Ordered Field",
-          "source_line_start": 99,
-          "source_line_end": 104
         }
       ],
       "expositions": [],
@@ -10654,10 +10437,10 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "def:rational-sequence"
+        "thm:subsequence-convergence-q"
       ],
       "used_by_ids": [
-        "thm:subsequence-convergence-q"
+        "def:rational-sequence"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -10679,17 +10462,15 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Sequence of rational numbers"
+        "Subsequences of convergent sequences converge to the same limit"
       ],
       "used_by_titles": [
-        "Subsequences of convergent sequences converge to the same limit"
+        "Sequence of rational numbers"
       ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:rational-sequence"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue2RlZmluaXRpb259W1N1YnNlcXVlbmNlIG9mIGEgcmF0aW9uYWwgc2VxdWVuY2VdClxsYWJlbHtkZWY6c3Vic2VxdWVuY2UtcX0KTGV0ICQoeF9uKSQgYmUgYSBzZXF1ZW5jZSBvZiByYXRpb25hbCBudW1iZXJzIGFuZCBsZXQgJChrX24pJCBiZSBhIHN0cmljdGx5CmluY3JlYXNpbmcgc2VxdWVuY2Ugb2YgbmF0dXJhbCBudW1iZXJzOgoka18xIDwga18yIDwga18zIDwgXGNkb3RzJC4KVGhlIHNlcXVlbmNlICQoeF97a19ufSkkIGlzIGNhbGxlZCBhIFxlbXBoe3N1YnNlcXVlbmNlfSBvZiAkKHhfbikkLgpcZW5ke2RlZmluaXRpb259",
       "body_latex_b64": "ClxsYWJlbHtkZWY6c3Vic2VxdWVuY2UtcX0KTGV0ICQoeF9uKSQgYmUgYSBzZXF1ZW5jZSBvZiByYXRpb25hbCBudW1iZXJzIGFuZCBsZXQgJChrX24pJCBiZSBhIHN0cmljdGx5CmluY3JlYXNpbmcgc2VxdWVuY2Ugb2YgbmF0dXJhbCBudW1iZXJzOgoka18xIDwga18yIDwga18zIDwgXGNkb3RzJC4KVGhlIHNlcXVlbmNlICQoeF97a19ufSkkIGlzIGNhbGxlZCBhIFxlbXBoe3N1YnNlcXVlbmNlfSBvZiAkKHhfbikkLgo=",
       "title_latex_b64": "U3Vic2VxdWVuY2Ugb2YgYSByYXRpb25hbCBzZXF1ZW5jZQ==",
@@ -10712,15 +10493,6 @@
           "body_preview": "A subsequence selects an infinite subcollection of terms in their original order. The key elementary fact is that $k_n n$ for all $n$, so subsequence indices grow at least as fast as $n$ itself.",
           "source_line_start": 123,
           "source_line_end": 127
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpyYXRpb25hbC1zZXF1ZW5jZV17U2VxdWVuY2Ugb2YgUmF0aW9uYWwgTnVtYmVyc30KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpyYXRpb25hbC1zZXF1ZW5jZV17U2VxdWVuY2Ugb2YgUmF0aW9uYWwgTnVtYmVyc30KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "",
-          "source_line_start": 129,
-          "source_line_end": 133
         }
       ],
       "expositions": [],
@@ -10755,11 +10527,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\exists (k_n) \\text{ strictly increasing},\\;\n\\neg\\operatorname{ConvergesTo}(x_{k_n}, a)\n\\;\\Longrightarrow\\;\n\\neg\\operatorname{ConvergesTo}(x_n, a).\n\\]",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "def:convergent-rational-sequence",
         "def:subsequence-q"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -10779,18 +10551,15 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Convergence of a rational sequence",
         "Subsequence of a rational sequence"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:convergent-rational-sequence",
-        "def:subsequence-q"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W1N1YnNlcXVlbmNlcyBvZiBjb252ZXJnZW50IHNlcXVlbmNlcyBjb252ZXJnZSB0byB0aGUgc2FtZSBsaW1pdF0KXGxhYmVse3RobTpzdWJzZXF1ZW5jZS1jb252ZXJnZW5jZS1xfQpMZXQgJCh4X24pJCBiZSBhIHNlcXVlbmNlIG9mIHJhdGlvbmFsIG51bWJlcnMgd2l0aCAkeF9uIFx0byBhJC4KVGhlbiBldmVyeSBzdWJzZXF1ZW5jZSAkKHhfe2tfbn0pJCBvZiAkKHhfbikkIGFsc28gY29udmVyZ2VzIHRvICRhJC4KXGh5cGVycmVmW3ByZjpzdWJzZXF1ZW5jZS1jb252ZXJnZW5jZS1xXXtHbyB0byBwcm9vZi59ClxlbmR7dGhlb3JlbX0=",
       "body_latex_b64": "ClxsYWJlbHt0aG06c3Vic2VxdWVuY2UtY29udmVyZ2VuY2UtcX0KTGV0ICQoeF9uKSQgYmUgYSBzZXF1ZW5jZSBvZiByYXRpb25hbCBudW1iZXJzIHdpdGggJHhfbiBcdG8gYSQuClRoZW4gZXZlcnkgc3Vic2VxdWVuY2UgJCh4X3trX259KSQgb2YgJCh4X24pJCBhbHNvIGNvbnZlcmdlcyB0byAkYSQuClxoeXBlcnJlZltwcmY6c3Vic2VxdWVuY2UtY29udmVyZ2VuY2UtcV17R28gdG8gcHJvb2YufQo=",
       "title_latex_b64": "U3Vic2VxdWVuY2VzIG9mIGNvbnZlcmdlbnQgc2VxdWVuY2VzIGNvbnZlcmdlIHRvIHRoZSBzYW1lIGxpbWl0",
@@ -10822,15 +10591,6 @@
           "body_preview": "The contrapositive is the working tool: to prove $(x_n)$ diverges it suffices to find two subsequences converging to distinct limits, or one subsequence that diverges.",
           "source_line_start": 161,
           "source_line_end": 165
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpjb252ZXJnZW50LXJhdGlvbmFsLXNlcXVlbmNlXXtDb252ZXJnZW5jZSBvZiBhIFJhdGlvbmFsIFNlcXVlbmNlfQogIFxpdGVtIFxoeXBlcnJlZltkZWY6c3Vic2VxdWVuY2UtcV17U3Vic2VxdWVuY2Ugb2YgYSBSYXRpb25hbCBTZXF1ZW5jZX0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpjb252ZXJnZW50LXJhdGlvbmFsLXNlcXVlbmNlXXtDb252ZXJnZW5jZSBvZiBhIFJhdGlvbmFsIFNlcXVlbmNlfQogIFxpdGVtIFxoeXBlcnJlZltkZWY6c3Vic2VxdWVuY2UtcV17U3Vic2VxdWVuY2Ugb2YgYSBSYXRpb25hbCBTZXF1ZW5jZX0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "",
-          "source_line_start": 167,
-          "source_line_end": 172
         }
       ],
       "expositions": [],
@@ -10868,11 +10628,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "def:rational-sequence"
-      ],
-      "used_by_ids": [
         "thm:cauchy-bounded-q",
         "thm:convergent-bounded-q"
+      ],
+      "used_by_ids": [
+        "def:rational-sequence"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -10894,18 +10654,16 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Sequence of rational numbers"
-      ],
-      "used_by_titles": [
         "Cauchy sequences are bounded",
         "Convergent sequences are bounded"
+      ],
+      "used_by_titles": [
+        "Sequence of rational numbers"
       ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:rational-sequence"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue2RlZmluaXRpb259W0JvdW5kZWQgc2VxdWVuY2Ugb2YgcmF0aW9uYWwgbnVtYmVyc10KXGxhYmVse2RlZjpib3VuZGVkLXNlcXVlbmNlLXF9CkEgc2VxdWVuY2UgJCh4X24pJCBvZiByYXRpb25hbCBudW1iZXJzIGlzOgpcYmVnaW57aXRlbWl6ZX0KICBcaXRlbSBcZW1waHtib3VuZGVkIGFib3ZlfSBpZiAkXGV4aXN0cyBcTGFtYmRhIFxpbiBcbWF0aGJie1F9XDsgXGZvcmFsbCBuIFxpbiBcbWF0aGJie059LFw7CiAgICAgICAgeF9uIFxsZXEgXExhbWJkYSQ7CiAgXGl0ZW0gXGVtcGh7Ym91bmRlZCBiZWxvd30gaWYgJFxleGlzdHMgXGxhbWJkYSBcaW4gXG1hdGhiYntRfVw7IFxmb3JhbGwgbiBcaW4gXG1hdGhiYntOfSxcOwogICAgICAgIHhfbiBcZ2VxIFxsYW1iZGEkOwogIFxpdGVtIFxlbXBoe2JvdW5kZWR9IGlmICRcZXhpc3RzIFxHYW1tYSBcaW4gXG1hdGhiYntRfSxcO1xHYW1tYT4wXDtcOwogICAgICAgIFxmb3JhbGwgbiBcaW4gXG1hdGhiYntOfSxcOyB8eF9ufCBcbGVxIFxHYW1tYSQuClxlbmR7aXRlbWl6ZX0KXGVuZHtkZWZpbml0aW9ufQ==",
       "body_latex_b64": "ClxsYWJlbHtkZWY6Ym91bmRlZC1zZXF1ZW5jZS1xfQpBIHNlcXVlbmNlICQoeF9uKSQgb2YgcmF0aW9uYWwgbnVtYmVycyBpczoKXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGVtcGh7Ym91bmRlZCBhYm92ZX0gaWYgJFxleGlzdHMgXExhbWJkYSBcaW4gXG1hdGhiYntRfVw7IFxmb3JhbGwgbiBcaW4gXG1hdGhiYntOfSxcOwogICAgICAgIHhfbiBcbGVxIFxMYW1iZGEkOwogIFxpdGVtIFxlbXBoe2JvdW5kZWQgYmVsb3d9IGlmICRcZXhpc3RzIFxsYW1iZGEgXGluIFxtYXRoYmJ7UX1cOyBcZm9yYWxsIG4gXGluIFxtYXRoYmJ7Tn0sXDsKICAgICAgICB4X24gXGdlcSBcbGFtYmRhJDsKICBcaXRlbSBcZW1waHtib3VuZGVkfSBpZiAkXGV4aXN0cyBcR2FtbWEgXGluIFxtYXRoYmJ7UX0sXDtcR2FtbWE+MFw7XDsKICAgICAgICBcZm9yYWxsIG4gXGluIFxtYXRoYmJ7Tn0sXDsgfHhfbnwgXGxlcSBcR2FtbWEkLgpcZW5ke2l0ZW1pemV9Cg==",
       "title_latex_b64": "Qm91bmRlZCBzZXF1ZW5jZSBvZiByYXRpb25hbCBudW1iZXJz",
@@ -10937,15 +10695,6 @@
           "body_preview": "Boundedness is a global envelope condition: one single rational bound must contain every term.",
           "source_line_start": 205,
           "source_line_end": 208
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpyYXRpb25hbC1zZXF1ZW5jZV17U2VxdWVuY2Ugb2YgUmF0aW9uYWwgTnVtYmVyc30KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpyYXRpb25hbC1zZXF1ZW5jZV17U2VxdWVuY2Ugb2YgUmF0aW9uYWwgTnVtYmVyc30KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "",
-          "source_line_start": 210,
-          "source_line_end": 214
         }
       ],
       "expositions": [],
@@ -10980,11 +10729,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "def:bounded-sequence-q",
         "def:convergent-rational-sequence"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -11004,18 +10753,15 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Bounded sequence of rational numbers",
         "Convergence of a rational sequence"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:convergent-rational-sequence",
-        "def:bounded-sequence-q"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W0NvbnZlcmdlbnQgc2VxdWVuY2VzIGFyZSBib3VuZGVkXQpcbGFiZWx7dGhtOmNvbnZlcmdlbnQtYm91bmRlZC1xfQpFdmVyeSBjb252ZXJnZW50IHNlcXVlbmNlIG9mIHJhdGlvbmFsIG51bWJlcnMgaXMgYm91bmRlZC4KXGh5cGVycmVmW3ByZjpjb252ZXJnZW50LWJvdW5kZWQtcV17R28gdG8gcHJvb2YufQpcZW5ke3RoZW9yZW19",
       "body_latex_b64": "ClxsYWJlbHt0aG06Y29udmVyZ2VudC1ib3VuZGVkLXF9CkV2ZXJ5IGNvbnZlcmdlbnQgc2VxdWVuY2Ugb2YgcmF0aW9uYWwgbnVtYmVycyBpcyBib3VuZGVkLgpcaHlwZXJyZWZbcHJmOmNvbnZlcmdlbnQtYm91bmRlZC1xXXtHbyB0byBwcm9vZi59Cg==",
       "title_latex_b64": "Q29udmVyZ2VudCBzZXF1ZW5jZXMgYXJlIGJvdW5kZWQ=",
@@ -11038,15 +10784,6 @@
           "body_preview": "Convergence forces the tail of the sequence into a bounded neighborhood of the limit; the finite initial segment is bounded by the maximum of finitely many terms. The converse fails: $((-1)^n)$ is bounded but does not co",
           "source_line_start": 231,
           "source_line_end": 235
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpjb252ZXJnZW50LXJhdGlvbmFsLXNlcXVlbmNlXXtDb252ZXJnZW5jZSBvZiBhIFJhdGlvbmFsIFNlcXVlbmNlfQogIFxpdGVtIFxoeXBlcnJlZltkZWY6Ym91bmRlZC1zZXF1ZW5jZS1xXXtCb3VuZGVkIFNlcXVlbmNlIG9mIFJhdGlvbmFsIE51bWJlcnN9ClxlbmR7aXRlbWl6ZX0KXGVuZHtyZW1hcmsqfQ==",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpjb252ZXJnZW50LXJhdGlvbmFsLXNlcXVlbmNlXXtDb252ZXJnZW5jZSBvZiBhIFJhdGlvbmFsIFNlcXVlbmNlfQogIFxpdGVtIFxoeXBlcnJlZltkZWY6Ym91bmRlZC1zZXF1ZW5jZS1xXXtCb3VuZGVkIFNlcXVlbmNlIG9mIFJhdGlvbmFsIE51bWJlcnN9ClxlbmR7aXRlbWl6ZX0=",
-          "body_preview": "",
-          "source_line_start": 237,
-          "source_line_end": 242
         }
       ],
       "expositions": [],
@@ -11084,12 +10821,12 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "def:bounded-sequence-q",
-        "def:cauchy-rational"
-      ],
-      "used_by_ids": [
         "thm:cauchy-closed-operations-q",
         "thm:cauchy-equiv-preserved-operations"
+      ],
+      "used_by_ids": [
+        "def:bounded-sequence-q",
+        "def:cauchy-rational"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -11111,20 +10848,17 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Bounded sequence of rational numbers",
-        "Cauchy sequence in $ $"
-      ],
-      "used_by_titles": [
         "Cauchy sequences are closed under addition and multiplication",
         "Cauchy equivalence is preserved under addition and multiplication"
+      ],
+      "used_by_titles": [
+        "Bounded sequence of rational numbers",
+        "Cauchy sequence in $ $"
       ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:cauchy-rational",
-        "def:bounded-sequence-q"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W0NhdWNoeSBzZXF1ZW5jZXMgYXJlIGJvdW5kZWRdClxsYWJlbHt0aG06Y2F1Y2h5LWJvdW5kZWQtcX0KRXZlcnkgQ2F1Y2h5IHNlcXVlbmNlIG9mIHJhdGlvbmFsIG51bWJlcnMgaXMgYm91bmRlZC4KXGh5cGVycmVmW3ByZjpjYXVjaHktYm91bmRlZC1xXXtHbyB0byBwcm9vZi59ClxlbmR7dGhlb3JlbX0=",
       "body_latex_b64": "ClxsYWJlbHt0aG06Y2F1Y2h5LWJvdW5kZWQtcX0KRXZlcnkgQ2F1Y2h5IHNlcXVlbmNlIG9mIHJhdGlvbmFsIG51bWJlcnMgaXMgYm91bmRlZC4KXGh5cGVycmVmW3ByZjpjYXVjaHktYm91bmRlZC1xXXtHbyB0byBwcm9vZi59Cg==",
       "title_latex_b64": "Q2F1Y2h5IHNlcXVlbmNlcyBhcmUgYm91bmRlZA==",
@@ -11147,15 +10881,6 @@
           "body_preview": "The Cauchy condition forces the tail --- all terms beyond index $N$ --- to lie within distance $1$ of $x_ N+1 $. The finite initial segment contributes finitely many terms bounded by their maximum absolute value.",
           "source_line_start": 259,
           "source_line_end": 263
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpjYXVjaHktcmF0aW9uYWxde0NhdWNoeSBTZXF1ZW5jZSBpbiAkXG1hdGhiYntRfSR9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpib3VuZGVkLXNlcXVlbmNlLXFde0JvdW5kZWQgU2VxdWVuY2Ugb2YgUmF0aW9uYWwgTnVtYmVyc30KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpjYXVjaHktcmF0aW9uYWxde0NhdWNoeSBTZXF1ZW5jZSBpbiAkXG1hdGhiYntRfSR9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpib3VuZGVkLXNlcXVlbmNlLXFde0JvdW5kZWQgU2VxdWVuY2Ugb2YgUmF0aW9uYWwgTnVtYmVyc30KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "Cauchy Sequence in $ $",
-          "source_line_start": 265,
-          "source_line_end": 270
         }
       ],
       "expositions": [],
@@ -11193,11 +10918,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "def:cauchy-rational",
-        "thm:cauchy-bounded-q"
+        "thm:cauchy-equiv-preserved-operations"
       ],
       "used_by_ids": [
-        "thm:cauchy-equiv-preserved-operations"
+        "def:cauchy-rational",
+        "thm:cauchy-bounded-q"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -11219,19 +10944,16 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Cauchy sequence in $ $",
-        "Cauchy sequences are bounded"
+        "Cauchy equivalence is preserved under addition and multiplication"
       ],
       "used_by_titles": [
-        "Cauchy equivalence is preserved under addition and multiplication"
+        "Cauchy sequence in $ $",
+        "Cauchy sequences are bounded"
       ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:cauchy-rational",
-        "thm:cauchy-bounded-q"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W0NhdWNoeSBzZXF1ZW5jZXMgYXJlIGNsb3NlZCB1bmRlciBhZGRpdGlvbiBhbmQgbXVsdGlwbGljYXRpb25dClxsYWJlbHt0aG06Y2F1Y2h5LWNsb3NlZC1vcGVyYXRpb25zLXF9CklmICQoeF9uKSQgYW5kICQoeV9uKSQgYXJlIENhdWNoeSBzZXF1ZW5jZXMgb2YgcmF0aW9uYWwgbnVtYmVycywgdGhlbiBzbwphcmUgJCh4X24gKyB5X24pJCBhbmQgJCh4X24geV9uKSQuClxoeXBlcnJlZltwcmY6Y2F1Y2h5LWNsb3NlZC1vcGVyYXRpb25zLXFde0dvIHRvIHByb29mLn0KXGVuZHt0aGVvcmVtfQ==",
       "body_latex_b64": "ClxsYWJlbHt0aG06Y2F1Y2h5LWNsb3NlZC1vcGVyYXRpb25zLXF9CklmICQoeF9uKSQgYW5kICQoeV9uKSQgYXJlIENhdWNoeSBzZXF1ZW5jZXMgb2YgcmF0aW9uYWwgbnVtYmVycywgdGhlbiBzbwphcmUgJCh4X24gKyB5X24pJCBhbmQgJCh4X24geV9uKSQuClxoeXBlcnJlZltwcmY6Y2F1Y2h5LWNsb3NlZC1vcGVyYXRpb25zLXFde0dvIHRvIHByb29mLn0K",
       "title_latex_b64": "Q2F1Y2h5IHNlcXVlbmNlcyBhcmUgY2xvc2VkIHVuZGVyIGFkZGl0aW9uIGFuZCBtdWx0aXBsaWNhdGlvbg==",
@@ -11254,15 +10976,6 @@
           "body_preview": "For addition: an $ /2$ split suffices. For multiplication: Cauchy sequences are bounded, so cross-terms $|y_n||x_n - x_m|$ and $|x_m||y_n - y_m|$ are controlled by a common bound $ $, and $ /(2 )$ serves as the input tol",
           "source_line_start": 290,
           "source_line_end": 295
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpjYXVjaHktcmF0aW9uYWxde0NhdWNoeSBTZXF1ZW5jZSBpbiAkXG1hdGhiYntRfSR9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpjYXVjaHktYm91bmRlZC1xXXtDYXVjaHkgU2VxdWVuY2VzIEFyZSBCb3VuZGVkfQpcZW5ke2l0ZW1pemV9ClxlbmR7cmVtYXJrKn0=",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpjYXVjaHktcmF0aW9uYWxde0NhdWNoeSBTZXF1ZW5jZSBpbiAkXG1hdGhiYntRfSR9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpjYXVjaHktYm91bmRlZC1xXXtDYXVjaHkgU2VxdWVuY2VzIEFyZSBCb3VuZGVkfQpcZW5ke2l0ZW1pemV9",
-          "body_preview": "Cauchy Sequence in $ $",
-          "source_line_start": 297,
-          "source_line_end": 302
         }
       ],
       "expositions": [],
@@ -11299,10 +11012,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "thm:cauchy-equiv-preserved-operations"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -11322,10 +11035,10 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Cauchy equivalence is preserved under addition and multiplication"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -11433,12 +11146,12 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "def:cauchy-equivalence",
         "thm:cauchy-bounded-q",
         "thm:cauchy-closed-operations-q"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -11458,20 +11171,16 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Equivalence of Cauchy sequences in $ $",
         "Cauchy sequences are bounded",
         "Cauchy sequences are closed under addition and multiplication"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:cauchy-equivalence",
-        "thm:cauchy-closed-operations-q",
-        "thm:cauchy-bounded-q"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W0NhdWNoeSBlcXVpdmFsZW5jZSBpcyBwcmVzZXJ2ZWQgdW5kZXIgYWRkaXRpb24gYW5kIG11bHRpcGxpY2F0aW9uXQpcbGFiZWx7dGhtOmNhdWNoeS1lcXVpdi1wcmVzZXJ2ZWQtb3BlcmF0aW9uc30KTGV0ICQoeF9uKSwoeV9uKSwodV9uKSwodl9uKSBcaW4gXG1hdGhiYntRfV5jJC4KU3VwcG9zZSAkKHhfbikgXHNpbSAodV9uKSQgYW5kICQoeV9uKSBcc2ltICh2X24pJC4gIFRoZW46ClxbCih4X24gKyB5X24pIFxzaW0gKHVfbiArIHZfbikKXHFxdWFkXHRleHR7YW5kfVxxcXVhZAooeF9uIHlfbikgXHNpbSAodV9uIHZfbikuClxdClxoeXBlcnJlZltwcmY6Y2F1Y2h5LWVxdWl2LXByZXNlcnZlZC1vcGVyYXRpb25zXXtHbyB0byBwcm9vZi59ClxlbmR7dGhlb3JlbX0=",
       "body_latex_b64": "ClxsYWJlbHt0aG06Y2F1Y2h5LWVxdWl2LXByZXNlcnZlZC1vcGVyYXRpb25zfQpMZXQgJCh4X24pLCh5X24pLCh1X24pLCh2X24pIFxpbiBcbWF0aGJie1F9XmMkLgpTdXBwb3NlICQoeF9uKSBcc2ltICh1X24pJCBhbmQgJCh5X24pIFxzaW0gKHZfbikkLiAgVGhlbjoKXFsKKHhfbiArIHlfbikgXHNpbSAodV9uICsgdl9uKQpccXF1YWRcdGV4dHthbmR9XHFxdWFkCih4X24geV9uKSBcc2ltICh1X24gdl9uKS4KXF0KXGh5cGVycmVmW3ByZjpjYXVjaHktZXF1aXYtcHJlc2VydmVkLW9wZXJhdGlvbnNde0dvIHRvIHByb29mLn0K",
       "title_latex_b64": "Q2F1Y2h5IGVxdWl2YWxlbmNlIGlzIHByZXNlcnZlZCB1bmRlciBhZGRpdGlvbiBhbmQgbXVsdGlwbGljYXRpb24=",
@@ -11494,24 +11203,6 @@
           "body_preview": "This is the well-definedness result for arithmetic on equivalence classes. Without it, adding or multiplying representatives from two classes could land in different classes, making the operations on $ = ^c/\\! $ ill-defi",
           "source_line_start": 408,
           "source_line_end": 414
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpjYXVjaHktZXF1aXZhbGVuY2Vde0VxdWl2YWxlbmNlIG9mIENhdWNoeSBTZXF1ZW5jZXMgaW4gJFxtYXRoYmJ7UX0kfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06Y2F1Y2h5LWNsb3NlZC1vcGVyYXRpb25zLXFde0NhdWNoeSBTZXF1ZW5jZXMgQXJlIENsb3NlZCBVbmRlciBPcGVyYXRpb25zfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06Y2F1Y2h5LWJvdW5kZWQtcV17Q2F1Y2h5IFNlcXVlbmNlcyBBcmUgQm91bmRlZH0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpjYXVjaHktZXF1aXZhbGVuY2Vde0VxdWl2YWxlbmNlIG9mIENhdWNoeSBTZXF1ZW5jZXMgaW4gJFxtYXRoYmJ7UX0kfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06Y2F1Y2h5LWNsb3NlZC1vcGVyYXRpb25zLXFde0NhdWNoeSBTZXF1ZW5jZXMgQXJlIENsb3NlZCBVbmRlciBPcGVyYXRpb25zfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06Y2F1Y2h5LWJvdW5kZWQtcV17Q2F1Y2h5IFNlcXVlbmNlcyBBcmUgQm91bmRlZH0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "Equivalence of Cauchy Sequences in $ $",
-          "source_line_start": 416,
-          "source_line_end": 422
-        },
-        {
-          "title": "Diagram of implications in $\\mathbb{Q}$",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RpYWdyYW0gb2YgaW1wbGljYXRpb25zIGluICRcbWF0aGJie1F9JF0KXFsKXHRleHR7Y29udmVyZ2VudCBpbiB9IFxtYXRoYmJ7UX0KXDtcTG9uZ3JpZ2h0YXJyb3dcOwpcdGV4dHtDYXVjaHkgaW4gfSBcbWF0aGJie1F9Clw7XExvbmdyaWdodGFycm93XDsKXHRleHR7Ym91bmRlZCBpbiB9IFxtYXRoYmJ7UX0sClxdClxbClx0ZXh0e2JvdW5kZWR9Clw7XG5vdFxMb25ncmlnaHRhcnJvd1w7Clx0ZXh0e0NhdWNoeX0sClxxcXVhZApcdGV4dHtDYXVjaHl9Clw7XG5vdFxMb25ncmlnaHRhcnJvd1w7Clx0ZXh0e2NvbnZlcmdlbnQgaW4gfSBcbWF0aGJie1F9LgpcXQpFYWNoIGZhaWx1cmUgaXMgd2l0bmVzc2VkIGJ5IGFuIGV4cGxpY2l0IGNvdW50ZXJleGFtcGxlLiBUaGUgbGFzdCBpbXBsaWNhdGlvbgpob2xkcyBpbiAkXG1hdGhiYntSfSQgYnV0IG5vdCBpbiAkXG1hdGhiYntRfSQ6IHRoYXQgaXMgZXhhY3RseSB0aGUgY29tcGxldGVuZXNzCmF4aW9tLgpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XFsKXHRleHR7Y29udmVyZ2VudCBpbiB9IFxtYXRoYmJ7UX0KXDtcTG9uZ3JpZ2h0YXJyb3dcOwpcdGV4dHtDYXVjaHkgaW4gfSBcbWF0aGJie1F9Clw7XExvbmdyaWdodGFycm93XDsKXHRleHR7Ym91bmRlZCBpbiB9IFxtYXRoYmJ7UX0sClxdClxbClx0ZXh0e2JvdW5kZWR9Clw7XG5vdFxMb25ncmlnaHRhcnJvd1w7Clx0ZXh0e0NhdWNoeX0sClxxcXVhZApcdGV4dHtDYXVjaHl9Clw7XG5vdFxMb25ncmlnaHRhcnJvd1w7Clx0ZXh0e2NvbnZlcmdlbnQgaW4gfSBcbWF0aGJie1F9LgpcXQpFYWNoIGZhaWx1cmUgaXMgd2l0bmVzc2VkIGJ5IGFuIGV4cGxpY2l0IGNvdW50ZXJleGFtcGxlLiBUaGUgbGFzdCBpbXBsaWNhdGlvbgpob2xkcyBpbiAkXG1hdGhiYntSfSQgYnV0IG5vdCBpbiAkXG1hdGhiYntRfSQ6IHRoYXQgaXMgZXhhY3RseSB0aGUgY29tcGxldGVuZXNzCmF4aW9tLg==",
-          "body_preview": "\\[ \\; \\; \\; \\; , \\] \\[ \\; \\; , \\; \\; . \\] Each failure is witnessed by an explicit counterexample. The last implication holds in $ $ but not in $ $: that is exactly the completeness axiom.",
-          "source_line_start": 424,
-          "source_line_end": 444
         }
       ],
       "expositions": [],
@@ -11548,10 +11239,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "lem:first-grid-point-crossing"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -11571,10 +11262,10 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "First Grid Point Crossing"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -11618,10 +11309,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "thm:rational-square-bracketing"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -11641,17 +11332,14 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Rational Square Bracketing"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "thm:well-ordering-principle",
-        "thm:rational-square-bracketing"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue2xlbW1hfVtGaXJzdCBHcmlkIFBvaW50IENyb3NzaW5nXQpcbGFiZWx7bGVtOmZpcnN0LWdyaWQtcG9pbnQtY3Jvc3Npbmd9CkxldCAkclxpblxtYXRoYmJ7UX0kIHdpdGggJHI+MCQgYW5kIGxldCAkcVxpblxtYXRoYmJ7Tn0kIHdpdGggJHFcZ2UgMSQuCklmICRLXGluXG1hdGhiYntOfSQgc2F0aXNmaWVzICRLXjI+ciQsIHRoZW4gdGhlIHNldApcWwpBPVx7bVxpblxtYXRoYmJ7Tn06bV4yPnJxXjJcfQpcXQppcyBub25lbXB0eSBhbmQgdGhlcmVmb3JlIGhhcyBhIGxlYXN0IGVsZW1lbnQuClxoeXBlcnJlZltwcmY6Zmlyc3QtZ3JpZC1wb2ludC1jcm9zc2luZ117R28gdG8gcHJvb2YufQpcZW5ke2xlbW1hfQ==",
       "body_latex_b64": "ClxsYWJlbHtsZW06Zmlyc3QtZ3JpZC1wb2ludC1jcm9zc2luZ30KTGV0ICRyXGluXG1hdGhiYntRfSQgd2l0aCAkcj4wJCBhbmQgbGV0ICRxXGluXG1hdGhiYntOfSQgd2l0aCAkcVxnZSAxJC4KSWYgJEtcaW5cbWF0aGJie059JCBzYXRpc2ZpZXMgJEteMj5yJCwgdGhlbiB0aGUgc2V0ClxbCkE9XHttXGluXG1hdGhiYntOfTptXjI+cnFeMlx9ClxdCmlzIG5vbmVtcHR5IGFuZCB0aGVyZWZvcmUgaGFzIGEgbGVhc3QgZWxlbWVudC4KXGh5cGVycmVmW3ByZjpmaXJzdC1ncmlkLXBvaW50LWNyb3NzaW5nXXtHbyB0byBwcm9vZi59Cg==",
       "title_latex_b64": "Rmlyc3QgR3JpZCBQb2ludCBDcm9zc2luZw==",
@@ -11674,15 +11362,6 @@
           "body_preview": "The set $A$ is nonempty because $Kq A$. By the Well-Ordering Principle, every nonempty subset of $ $ has a least element. That least element $p$ is the first grid point $p/q$ whose square exceeds $r$.",
           "source_line_start": 95,
           "source_line_end": 99
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTp3ZWxsLW9yZGVyaW5nLXByaW5jaXBsZV17V2VsbC1PcmRlcmluZyBQcmluY2lwbGV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpyYXRpb25hbC1zcXVhcmUtYnJhY2tldGluZ117UmF0aW9uYWwgU3F1YXJlIEJyYWNrZXRpbmd9ClxlbmR7aXRlbWl6ZX0KXGVuZHtyZW1hcmsqfQ==",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTp3ZWxsLW9yZGVyaW5nLXByaW5jaXBsZV17V2VsbC1PcmRlcmluZyBQcmluY2lwbGV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpyYXRpb25hbC1zcXVhcmUtYnJhY2tldGluZ117UmF0aW9uYWwgU3F1YXJlIEJyYWNrZXRpbmd9ClxlbmR7aXRlbWl6ZX0=",
-          "body_preview": "",
-          "source_line_start": 101,
-          "source_line_end": 106
         }
       ],
       "expositions": [],
@@ -11851,12 +11530,12 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "thm:limit-unique-q",
         "thm:mediant-inequality",
         "thm:squares-nonnegative"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -11876,12 +11555,12 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Limits of rational sequences are unique",
         "Mediant inequality",
         "Squares Are Nonnegative"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -11926,11 +11605,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\forall a\\in F,\\quad a^2 < 0 \\Longrightarrow \\bot.\n\\]",
       "depends_on_ids": [
-        "def:ordered-field",
-        "thm:q-is-ordered-field"
+        "thm:inverse-positive"
       ],
       "used_by_ids": [
-        "thm:inverse-positive"
+        "def:ordered-field",
+        "thm:q-is-ordered-field"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -11952,19 +11631,16 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Ordered field",
-        "$ $ Is an Ordered Field"
+        "Positive Elements Have Positive Inverses"
       ],
       "used_by_titles": [
-        "Positive Elements Have Positive Inverses"
+        "Ordered field",
+        "$ $ Is an Ordered Field"
       ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:ordered-field",
-        "thm:q-is-ordered-field"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W1NxdWFyZXMgQXJlIE5vbm5lZ2F0aXZlXQpcbGFiZWx7dGhtOnNxdWFyZXMtbm9ubmVnYXRpdmV9CkluIGFueSBvcmRlcmVkIGZpZWxkICRGJCwgZm9yIGV2ZXJ5ICRhXGluIEYkLApcWwphXjJcZ2UgMC4KXF0KXGh5cGVycmVmW3ByZjpzcXVhcmVzLW5vbm5lZ2F0aXZlXXtHbyB0byBwcm9vZi59ClxlbmR7dGhlb3JlbX0=",
       "body_latex_b64": "ClxsYWJlbHt0aG06c3F1YXJlcy1ub25uZWdhdGl2ZX0KSW4gYW55IG9yZGVyZWQgZmllbGQgJEYkLCBmb3IgZXZlcnkgJGFcaW4gRiQsClxbCmFeMlxnZSAwLgpcXQpcaHlwZXJyZWZbcHJmOnNxdWFyZXMtbm9ubmVnYXRpdmVde0dvIHRvIHByb29mLn0K",
       "title_latex_b64": "U3F1YXJlcyBBcmUgTm9ubmVnYXRpdmU=",
@@ -11996,15 +11672,6 @@
           "body_preview": "No element of an ordered field has a negative square. This immediately rules out the existence of $ $ inside any ordered field and explains why complex numbers require abandoning the order structure.",
           "source_line_start": 85,
           "source_line_end": 89
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpvcmRlcmVkLWZpZWxkXXtPcmRlcmVkIEZpZWxkfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06cS1pcy1vcmRlcmVkLWZpZWxkXXskXG1hdGhiYntRfSQgSXMgYW4gT3JkZXJlZCBGaWVsZH0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpvcmRlcmVkLWZpZWxkXXtPcmRlcmVkIEZpZWxkfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06cS1pcy1vcmRlcmVkLWZpZWxkXXskXG1hdGhiYntRfSQgSXMgYW4gT3JkZXJlZCBGaWVsZH0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "$ $ Is an Ordered Field",
-          "source_line_start": 91,
-          "source_line_end": 96
         }
       ],
       "expositions": [],
@@ -12042,13 +11709,13 @@
       "failure_mode_decomposition": "",
       "contrapositive": "\\[\n\\forall a\\in F,\\quad a^{-1}\\le 0 \\Longrightarrow a\\le 0.\n\\]",
       "depends_on_ids": [
+        "thm:positive-fraction-iff-positive-product",
+        "thm:reciprocal-order-for-positive-elements"
+      ],
+      "used_by_ids": [
         "def:ordered-field",
         "thm:one-positive",
         "thm:squares-nonnegative"
-      ],
-      "used_by_ids": [
-        "thm:positive-fraction-iff-positive-product",
-        "thm:reciprocal-order-for-positive-elements"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -12070,22 +11737,18 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
+        "Positivity of a Quotient via the Product $ab$",
+        "Reciprocal Order for Positive Elements"
+      ],
+      "used_by_titles": [
         "Ordered field",
         "$1$ Is Positive",
         "Squares Are Nonnegative"
       ],
-      "used_by_titles": [
-        "Positivity of a Quotient via the Product $ab$",
-        "Reciprocal Order for Positive Elements"
-      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:ordered-field",
-        "thm:squares-nonnegative",
-        "thm:one-positive"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W1Bvc2l0aXZlIEVsZW1lbnRzIEhhdmUgUG9zaXRpdmUgSW52ZXJzZXNdClxsYWJlbHt0aG06aW52ZXJzZS1wb3NpdGl2ZX0KSW4gYW55IG9yZGVyZWQgZmllbGQsIGlmICRhPjAkLCB0aGVuICRhXnstMX0+MCQuClxoeXBlcnJlZltwcmY6aW52ZXJzZS1wb3NpdGl2ZV17R28gdG8gcHJvb2YufQpcZW5ke3RoZW9yZW19",
       "body_latex_b64": "ClxsYWJlbHt0aG06aW52ZXJzZS1wb3NpdGl2ZX0KSW4gYW55IG9yZGVyZWQgZmllbGQsIGlmICRhPjAkLCB0aGVuICRhXnstMX0+MCQuClxoeXBlcnJlZltwcmY6aW52ZXJzZS1wb3NpdGl2ZV17R28gdG8gcHJvb2YufQo=",
       "title_latex_b64": "UG9zaXRpdmUgRWxlbWVudHMgSGF2ZSBQb3NpdGl2ZSBJbnZlcnNlcw==",
@@ -12117,15 +11780,6 @@
           "body_preview": "Dividing by a positive number cannot change the direction of an inequality. This is the formal basis for the rule that multiplying both sides of an inequality by a positive denominator preserves the direction.",
           "source_line_start": 116,
           "source_line_end": 120
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpvcmRlcmVkLWZpZWxkXXtPcmRlcmVkIEZpZWxkfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06c3F1YXJlcy1ub25uZWdhdGl2ZV17U3F1YXJlcyBBcmUgTm9ubmVnYXRpdmV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpvbmUtcG9zaXRpdmVdeyQxJCBJcyBQb3NpdGl2ZX0KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpvcmRlcmVkLWZpZWxkXXtPcmRlcmVkIEZpZWxkfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06c3F1YXJlcy1ub25uZWdhdGl2ZV17U3F1YXJlcyBBcmUgTm9ubmVnYXRpdmV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpvbmUtcG9zaXRpdmVdeyQxJCBJcyBQb3NpdGl2ZX0KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "",
-          "source_line_start": 122,
-          "source_line_end": 128
         }
       ],
       "expositions": [],
@@ -12163,13 +11817,13 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "def:ordered-field"
-      ],
-      "used_by_ids": [
         "thm:fraction-order-comparison-general",
         "thm:fraction-order-comparison-positive-denominator-product",
         "thm:multiply-negative",
         "thm:reciprocal-order-for-positive-elements"
+      ],
+      "used_by_ids": [
+        "def:ordered-field"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -12191,20 +11845,18 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Ordered field"
-      ],
-      "used_by_titles": [
         "General Fraction Comparison in an Ordered Field",
         "Fraction Comparison When the Denominator Product Is Positive",
         "Multiplication by a Negative Element Reverses Order",
         "Reciprocal Order for Positive Elements"
       ],
+      "used_by_titles": [
+        "Ordered field"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:ordered-field"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W011bHRpcGxpY2F0aW9uIGJ5IGEgUG9zaXRpdmUgRWxlbWVudCBQcmVzZXJ2ZXMgT3JkZXJdClxsYWJlbHt0aG06bXVsdGlwbHktcG9zaXRpdmV9CkluIGFueSBvcmRlcmVkIGZpZWxkLCBpZiAkYTxiJCBhbmQgJGM+MCQsIHRoZW4KXFsKYWM8YmMuClxdClxoeXBlcnJlZltwcmY6bXVsdGlwbHktcG9zaXRpdmVde0dvIHRvIHByb29mLn0KXGVuZHt0aGVvcmVtfQ==",
       "body_latex_b64": "ClxsYWJlbHt0aG06bXVsdGlwbHktcG9zaXRpdmV9CkluIGFueSBvcmRlcmVkIGZpZWxkLCBpZiAkYTxiJCBhbmQgJGM+MCQsIHRoZW4KXFsKYWM8YmMuClxdClxoeXBlcnJlZltwcmY6bXVsdGlwbHktcG9zaXRpdmVde0dvIHRvIHByb29mLn0K",
       "title_latex_b64": "TXVsdGlwbGljYXRpb24gYnkgYSBQb3NpdGl2ZSBFbGVtZW50IFByZXNlcnZlcyBPcmRlcg==",
@@ -12227,15 +11879,6 @@
           "body_preview": "Multiplying both sides of an inequality by a positive element leaves the direction unchanged. This is the order-field axiom itself, stated as an independent theorem for citation.",
           "source_line_start": 145,
           "source_line_end": 149
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpvcmRlcmVkLWZpZWxkXXtPcmRlcmVkIEZpZWxkfQpcZW5ke2l0ZW1pemV9ClxlbmR7cmVtYXJrKn0=",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpvcmRlcmVkLWZpZWxkXXtPcmRlcmVkIEZpZWxkfQpcZW5ke2l0ZW1pemV9",
-          "body_preview": "",
-          "source_line_start": 151,
-          "source_line_end": 155
         }
       ],
       "expositions": [],
@@ -12273,11 +11916,11 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
-        "def:ordered-field",
-        "thm:multiply-positive"
+        "thm:fraction-order-comparison-general"
       ],
       "used_by_ids": [
-        "thm:fraction-order-comparison-general"
+        "def:ordered-field",
+        "thm:multiply-positive"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -12299,19 +11942,16 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
-        "Ordered field",
-        "Multiplication by a Positive Element Preserves Order"
+        "General Fraction Comparison in an Ordered Field"
       ],
       "used_by_titles": [
-        "General Fraction Comparison in an Ordered Field"
+        "Ordered field",
+        "Multiplication by a Positive Element Preserves Order"
       ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:ordered-field",
-        "thm:multiply-positive"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W011bHRpcGxpY2F0aW9uIGJ5IGEgTmVnYXRpdmUgRWxlbWVudCBSZXZlcnNlcyBPcmRlcl0KXGxhYmVse3RobTptdWx0aXBseS1uZWdhdGl2ZX0KSW4gYW55IG9yZGVyZWQgZmllbGQsIGlmICRhPGIkIGFuZCAkYzwwJCwgdGhlbgpcWwphYz5iYy4KXF0KXGh5cGVycmVmW3ByZjptdWx0aXBseS1uZWdhdGl2ZV17R28gdG8gcHJvb2YufQpcZW5ke3RoZW9yZW19",
       "body_latex_b64": "ClxsYWJlbHt0aG06bXVsdGlwbHktbmVnYXRpdmV9CkluIGFueSBvcmRlcmVkIGZpZWxkLCBpZiAkYTxiJCBhbmQgJGM8MCQsIHRoZW4KXFsKYWM+YmMuClxdClxoeXBlcnJlZltwcmY6bXVsdGlwbHktbmVnYXRpdmVde0dvIHRvIHByb29mLn0K",
       "title_latex_b64": "TXVsdGlwbGljYXRpb24gYnkgYSBOZWdhdGl2ZSBFbGVtZW50IFJldmVyc2VzIE9yZGVy",
@@ -12334,15 +11974,6 @@
           "body_preview": "Multiplying both sides of an inequality by a negative element reverses the direction. This is the formal explanation of the familiar rule that one ``flips the inequality sign'' when multiplying by a negative number.",
           "source_line_start": 172,
           "source_line_end": 176
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpvcmRlcmVkLWZpZWxkXXtPcmRlcmVkIEZpZWxkfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06bXVsdGlwbHktcG9zaXRpdmVde011bHRpcGxpY2F0aW9uIGJ5IGEgUG9zaXRpdmUgRWxlbWVudCBQcmVzZXJ2ZXMgT3JkZXJ9ClxlbmR7aXRlbWl6ZX0KXGVuZHtyZW1hcmsqfQ==",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpvcmRlcmVkLWZpZWxkXXtPcmRlcmVkIEZpZWxkfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06bXVsdGlwbHktcG9zaXRpdmVde011bHRpcGxpY2F0aW9uIGJ5IGEgUG9zaXRpdmUgRWxlbWVudCBQcmVzZXJ2ZXMgT3JkZXJ9ClxlbmR7aXRlbWl6ZX0=",
-          "body_preview": "",
-          "source_line_start": 178,
-          "source_line_end": 183
         }
       ],
       "expositions": [],
@@ -12379,11 +12010,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "cor:n-positive",
         "thm:inverse-positive"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -12403,11 +12034,11 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Natural Numbers Are Positive",
         "Positive Elements Have Positive Inverses"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -12451,11 +12082,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "def:ordered-field",
         "thm:one-positive"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -12475,18 +12106,15 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Ordered field",
         "$1$ Is Positive"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "thm:one-positive",
-        "def:ordered-field"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue2Nvcm9sbGFyeX1bTmF0dXJhbCBOdW1iZXJzIEFyZSBQb3NpdGl2ZV0KXGxhYmVse2NvcjpuLXBvc2l0aXZlfQpJbiBhbnkgb3JkZXJlZCBmaWVsZCwgZm9yIGV2ZXJ5IG5hdHVyYWwgbnVtYmVyICRuJCwKXFsKbj4wLgpcXQpcaHlwZXJyZWZbcHJmOm4tcG9zaXRpdmVde0dvIHRvIHByb29mLn0KXGVuZHtjb3JvbGxhcnl9",
       "body_latex_b64": "ClxsYWJlbHtjb3I6bi1wb3NpdGl2ZX0KSW4gYW55IG9yZGVyZWQgZmllbGQsIGZvciBldmVyeSBuYXR1cmFsIG51bWJlciAkbiQsClxbCm4+MC4KXF0KXGh5cGVycmVmW3ByZjpuLXBvc2l0aXZlXXtHbyB0byBwcm9vZi59Cg==",
       "title_latex_b64": "TmF0dXJhbCBOdW1iZXJzIEFyZSBQb3NpdGl2ZQ==",
@@ -12509,15 +12137,6 @@
           "body_preview": "Every natural number, when embedded in an ordered field by repeated addition of the identity $1$, is a positive element of the field. This is the foundational fact behind the Archimedean property.",
           "source_line_start": 238,
           "source_line_end": 242
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpvbmUtcG9zaXRpdmVdeyQxJCBJcyBQb3NpdGl2ZX0KICBcaXRlbSBcaHlwZXJyZWZbZGVmOm9yZGVyZWQtZmllbGRde09yZGVyZWQgRmllbGR9ClxlbmR7aXRlbWl6ZX0KXGVuZHtyZW1hcmsqfQ==",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpvbmUtcG9zaXRpdmVdeyQxJCBJcyBQb3NpdGl2ZX0KICBcaXRlbSBcaHlwZXJyZWZbZGVmOm9yZGVyZWQtZmllbGRde09yZGVyZWQgRmllbGR9ClxlbmR7aXRlbWl6ZX0=",
-          "body_preview": "",
-          "source_line_start": 244,
-          "source_line_end": 249
         }
       ],
       "expositions": [],
@@ -12554,11 +12173,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "def:ordered-field",
         "thm:inverse-positive"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -12578,18 +12197,15 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Ordered field",
         "Positive Elements Have Positive Inverses"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:ordered-field",
-        "thm:inverse-positive"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W1Bvc2l0aXZpdHkgb2YgYSBRdW90aWVudCB2aWEgdGhlIFByb2R1Y3QgJGFiJF0KXGxhYmVse3RobTpwb3NpdGl2ZS1mcmFjdGlvbi1pZmYtcG9zaXRpdmUtcHJvZHVjdH0KRm9yIGFueSAkYSxiXGluIEYkIHdpdGggJGJcbmVxIDAkLApcWwowPFxmcmFje2F9e2J9ClxxdWFkXExvbmdsZWZ0cmlnaHRhcnJvd1xxdWFkCjA8YVxjZG90IGIuClxdClxoeXBlcnJlZltwcmY6cG9zaXRpdmUtZnJhY3Rpb24taWZmLXBvc2l0aXZlLXByb2R1Y3Rde0dvIHRvIHByb29mLn0KXGVuZHt0aGVvcmVtfQ==",
       "body_latex_b64": "ClxsYWJlbHt0aG06cG9zaXRpdmUtZnJhY3Rpb24taWZmLXBvc2l0aXZlLXByb2R1Y3R9CkZvciBhbnkgJGEsYlxpbiBGJCB3aXRoICRiXG5lcSAwJCwKXFsKMDxcZnJhY3thfXtifQpccXVhZFxMb25nbGVmdHJpZ2h0YXJyb3dccXVhZAowPGFcY2RvdCBiLgpcXQpcaHlwZXJyZWZbcHJmOnBvc2l0aXZlLWZyYWN0aW9uLWlmZi1wb3NpdGl2ZS1wcm9kdWN0XXtHbyB0byBwcm9vZi59Cg==",
       "title_latex_b64": "UG9zaXRpdml0eSBvZiBhIFF1b3RpZW50IHZpYSB0aGUgUHJvZHVjdCAkYWIk",
@@ -12612,15 +12228,6 @@
           "body_preview": "A fraction is positive exactly when numerator and denominator have the same sign — equivalently, when their product is positive. This reduces sign-testing of fractions to sign-testing of products.",
           "source_line_start": 278,
           "source_line_end": 282
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpvcmRlcmVkLWZpZWxkXXtPcmRlcmVkIEZpZWxkfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06aW52ZXJzZS1wb3NpdGl2ZV17UG9zaXRpdmUgRWxlbWVudHMgSGF2ZSBQb3NpdGl2ZSBJbnZlcnNlc30KXGVuZHtpdGVtaXplfQpcZW5ke3JlbWFyayp9",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpvcmRlcmVkLWZpZWxkXXtPcmRlcmVkIEZpZWxkfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06aW52ZXJzZS1wb3NpdGl2ZV17UG9zaXRpdmUgRWxlbWVudHMgSGF2ZSBQb3NpdGl2ZSBJbnZlcnNlc30KXGVuZHtpdGVtaXplfQ==",
-          "body_preview": "",
-          "source_line_start": 284,
-          "source_line_end": 289
         }
       ],
       "expositions": [],
@@ -12658,12 +12265,12 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [
+        "thm:fraction-order-comparison-positive-denominator-product"
+      ],
+      "used_by_ids": [
         "def:ordered-field",
         "thm:multiply-negative",
         "thm:multiply-positive"
-      ],
-      "used_by_ids": [
-        "thm:fraction-order-comparison-positive-denominator-product"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -12685,21 +12292,17 @@
       "ignored": false,
       "is_theorem_like": true,
       "depends_on_titles": [
+        "Fraction Comparison When the Denominator Product Is Positive"
+      ],
+      "used_by_titles": [
         "Ordered field",
         "Multiplication by a Negative Element Reverses Order",
         "Multiplication by a Positive Element Preserves Order"
       ],
-      "used_by_titles": [
-        "Fraction Comparison When the Denominator Product Is Positive"
-      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "def:ordered-field",
-        "thm:multiply-positive",
-        "thm:multiply-negative"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W0dlbmVyYWwgRnJhY3Rpb24gQ29tcGFyaXNvbiBpbiBhbiBPcmRlcmVkIEZpZWxkXQpcbGFiZWx7dGhtOmZyYWN0aW9uLW9yZGVyLWNvbXBhcmlzb24tZ2VuZXJhbH0KRm9yIGFueSAkYSxiLGMsZFxpbiBGJCB3aXRoICRiXG5lcSAwJCBhbmQgJGRcbmVxIDAkLApcWwpcZnJhY3thfXtifTxcZnJhY3tjfXtkfQpccXVhZFxMb25nbGVmdHJpZ2h0YXJyb3dccXVhZAooYVxjZG90IGQpXGNkb3QoYlxjZG90IGQpPChiXGNkb3QgYylcY2RvdChiXGNkb3QgZCkuClxdClxoeXBlcnJlZltwcmY6ZnJhY3Rpb24tb3JkZXItY29tcGFyaXNvbi1nZW5lcmFsXXtHbyB0byBwcm9vZi59ClxlbmR7dGhlb3JlbX0=",
       "body_latex_b64": "ClxsYWJlbHt0aG06ZnJhY3Rpb24tb3JkZXItY29tcGFyaXNvbi1nZW5lcmFsfQpGb3IgYW55ICRhLGIsYyxkXGluIEYkIHdpdGggJGJcbmVxIDAkIGFuZCAkZFxuZXEgMCQsClxbClxmcmFje2F9e2J9PFxmcmFje2N9e2R9ClxxdWFkXExvbmdsZWZ0cmlnaHRhcnJvd1xxdWFkCihhXGNkb3QgZClcY2RvdChiXGNkb3QgZCk8KGJcY2RvdCBjKVxjZG90KGJcY2RvdCBkKS4KXF0KXGh5cGVycmVmW3ByZjpmcmFjdGlvbi1vcmRlci1jb21wYXJpc29uLWdlbmVyYWxde0dvIHRvIHByb29mLn0K",
       "title_latex_b64": "R2VuZXJhbCBGcmFjdGlvbiBDb21wYXJpc29uIGluIGFuIE9yZGVyZWQgRmllbGQ=",
@@ -12722,15 +12325,6 @@
           "body_preview": "This cross-multiplication criterion for fraction comparison is valid for arbitrary nonzero denominators, regardless of sign. It reduces fraction order to the order of products, which is controlled by the sign-arithmetic ",
           "source_line_start": 311,
           "source_line_end": 315
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpvcmRlcmVkLWZpZWxkXXtPcmRlcmVkIEZpZWxkfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06bXVsdGlwbHktcG9zaXRpdmVde011bHRpcGxpY2F0aW9uIGJ5IGEgUG9zaXRpdmUgRWxlbWVudCBQcmVzZXJ2ZXMgT3JkZXJ9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTptdWx0aXBseS1uZWdhdGl2ZV17TXVsdGlwbGljYXRpb24gYnkgYSBOZWdhdGl2ZSBFbGVtZW50IFJldmVyc2VzIE9yZGVyfQpcZW5ke2l0ZW1pemV9ClxlbmR7cmVtYXJrKn0=",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW2RlZjpvcmRlcmVkLWZpZWxkXXtPcmRlcmVkIEZpZWxkfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06bXVsdGlwbHktcG9zaXRpdmVde011bHRpcGxpY2F0aW9uIGJ5IGEgUG9zaXRpdmUgRWxlbWVudCBQcmVzZXJ2ZXMgT3JkZXJ9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTptdWx0aXBseS1uZWdhdGl2ZV17TXVsdGlwbGljYXRpb24gYnkgYSBOZWdhdGl2ZSBFbGVtZW50IFJldmVyc2VzIE9yZGVyfQpcZW5ke2l0ZW1pemV9",
-          "body_preview": "",
-          "source_line_start": 317,
-          "source_line_end": 323
         }
       ],
       "expositions": [],
@@ -12767,11 +12361,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "thm:fraction-order-comparison-general",
         "thm:multiply-positive"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -12791,18 +12385,15 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "General Fraction Comparison in an Ordered Field",
         "Multiplication by a Positive Element Preserves Order"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "thm:fraction-order-comparison-general",
-        "thm:multiply-positive"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W0ZyYWN0aW9uIENvbXBhcmlzb24gV2hlbiB0aGUgRGVub21pbmF0b3IgUHJvZHVjdCBJcyBQb3NpdGl2ZV0KXGxhYmVse3RobTpmcmFjdGlvbi1vcmRlci1jb21wYXJpc29uLXBvc2l0aXZlLWRlbm9taW5hdG9yLXByb2R1Y3R9CkZvciBhbnkgJGEsYixjLGRcaW4gRiQsIGlmICRiXG5lcSAwJCwgJGRcbmVxIDAkLCBhbmQgJDA8YlxjZG90IGQkLCB0aGVuClxbClxmcmFje2F9e2J9PFxmcmFje2N9e2R9ClxxdWFkXExvbmdsZWZ0cmlnaHRhcnJvd1xxdWFkCmFcY2RvdCBkPGJcY2RvdCBjLgpcXQpcaHlwZXJyZWZbcHJmOmZyYWN0aW9uLW9yZGVyLWNvbXBhcmlzb24tcG9zaXRpdmUtZGVub21pbmF0b3ItcHJvZHVjdF17R28gdG8gcHJvb2YufQpcZW5ke3RoZW9yZW19",
       "body_latex_b64": "ClxsYWJlbHt0aG06ZnJhY3Rpb24tb3JkZXItY29tcGFyaXNvbi1wb3NpdGl2ZS1kZW5vbWluYXRvci1wcm9kdWN0fQpGb3IgYW55ICRhLGIsYyxkXGluIEYkLCBpZiAkYlxuZXEgMCQsICRkXG5lcSAwJCwgYW5kICQwPGJcY2RvdCBkJCwgdGhlbgpcWwpcZnJhY3thfXtifTxcZnJhY3tjfXtkfQpccXVhZFxMb25nbGVmdHJpZ2h0YXJyb3dccXVhZAphXGNkb3QgZDxiXGNkb3QgYy4KXF0KXGh5cGVycmVmW3ByZjpmcmFjdGlvbi1vcmRlci1jb21wYXJpc29uLXBvc2l0aXZlLWRlbm9taW5hdG9yLXByb2R1Y3Rde0dvIHRvIHByb29mLn0K",
       "title_latex_b64": "RnJhY3Rpb24gQ29tcGFyaXNvbiBXaGVuIHRoZSBEZW5vbWluYXRvciBQcm9kdWN0IElzIFBvc2l0aXZl",
@@ -12825,15 +12416,6 @@
           "body_preview": "When the denominator product is positive — in particular when both denominators are positive — fraction comparison reduces to the familiar cross-multiplication rule: $a/b < c/d$ iff $ad < bc$.",
           "source_line_start": 344,
           "source_line_end": 348
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpmcmFjdGlvbi1vcmRlci1jb21wYXJpc29uLWdlbmVyYWxde0dlbmVyYWwgRnJhY3Rpb24gQ29tcGFyaXNvbiBpbiBhbiBPcmRlcmVkIEZpZWxkfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06bXVsdGlwbHktcG9zaXRpdmVde011bHRpcGxpY2F0aW9uIGJ5IGEgUG9zaXRpdmUgRWxlbWVudCBQcmVzZXJ2ZXMgT3JkZXJ9ClxlbmR7aXRlbWl6ZX0KXGVuZHtyZW1hcmsqfQ==",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTpmcmFjdGlvbi1vcmRlci1jb21wYXJpc29uLWdlbmVyYWxde0dlbmVyYWwgRnJhY3Rpb24gQ29tcGFyaXNvbiBpbiBhbiBPcmRlcmVkIEZpZWxkfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06bXVsdGlwbHktcG9zaXRpdmVde011bHRpcGxpY2F0aW9uIGJ5IGEgUG9zaXRpdmUgRWxlbWVudCBQcmVzZXJ2ZXMgT3JkZXJ9ClxlbmR7aXRlbWl6ZX0=",
-          "body_preview": "",
-          "source_line_start": 350,
-          "source_line_end": 355
         }
       ],
       "expositions": [],
@@ -12870,11 +12452,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [
+      "depends_on_ids": [],
+      "used_by_ids": [
         "thm:inverse-positive",
         "thm:multiply-positive"
       ],
-      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -12894,18 +12476,15 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [
+      "depends_on_titles": [],
+      "used_by_titles": [
         "Positive Elements Have Positive Inverses",
         "Multiplication by a Positive Element Preserves Order"
       ],
-      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
-      "dependencies": [
-        "thm:inverse-positive",
-        "thm:multiply-positive"
-      ],
+      "dependencies": [],
       "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W1JlY2lwcm9jYWwgT3JkZXIgZm9yIFBvc2l0aXZlIEVsZW1lbnRzXQpcbGFiZWx7dGhtOnJlY2lwcm9jYWwtb3JkZXItZm9yLXBvc2l0aXZlLWVsZW1lbnRzfQpJbiBhbnkgb3JkZXJlZCBmaWVsZCwgaWYgJDA8ZDxiJCwgdGhlbgpcWwowPFxmcmFjezF9e2J9PFxmcmFjezF9e2R9LgpcXQpDb252ZXJzZWx5LCBpZiAkMDwxL2I8MS9kJCwgdGhlbiAkMDxkPGIkLgpcaHlwZXJyZWZbcHJmOnJlY2lwcm9jYWwtb3JkZXItZm9yLXBvc2l0aXZlLWVsZW1lbnRzXXtHbyB0byBwcm9vZi59ClxlbmR7dGhlb3JlbX0=",
       "body_latex_b64": "ClxsYWJlbHt0aG06cmVjaXByb2NhbC1vcmRlci1mb3ItcG9zaXRpdmUtZWxlbWVudHN9CkluIGFueSBvcmRlcmVkIGZpZWxkLCBpZiAkMDxkPGIkLCB0aGVuClxbCjA8XGZyYWN7MX17Yn08XGZyYWN7MX17ZH0uClxdCkNvbnZlcnNlbHksIGlmICQwPDEvYjwxL2QkLCB0aGVuICQwPGQ8YiQuClxoeXBlcnJlZltwcmY6cmVjaXByb2NhbC1vcmRlci1mb3ItcG9zaXRpdmUtZWxlbWVudHNde0dvIHRvIHByb29mLn0K",
       "title_latex_b64": "UmVjaXByb2NhbCBPcmRlciBmb3IgUG9zaXRpdmUgRWxlbWVudHM=",
@@ -12928,15 +12507,6 @@
           "body_preview": "Taking reciprocals reverses the strict order among positive elements. Larger positive denominators produce smaller positive reciprocals. This is the formal basis for the rule that $1/n$ decreases as $n$ increases.",
           "source_line_start": 374,
           "source_line_end": 378
-        },
-        {
-          "title": "Dependencies",
-          "env_name": "remark*",
-          "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W0RlcGVuZGVuY2llc10KXGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTppbnZlcnNlLXBvc2l0aXZlXXtQb3NpdGl2ZSBFbGVtZW50cyBIYXZlIFBvc2l0aXZlIEludmVyc2VzfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06bXVsdGlwbHktcG9zaXRpdmVde011bHRpcGxpY2F0aW9uIGJ5IGEgUG9zaXRpdmUgRWxlbWVudCBQcmVzZXJ2ZXMgT3JkZXJ9ClxlbmR7aXRlbWl6ZX0KXGVuZHtyZW1hcmsqfQ==",
-          "body_latex_b64": "XGJlZ2lue2l0ZW1pemV9CiAgXGl0ZW0gXGh5cGVycmVmW3RobTppbnZlcnNlLXBvc2l0aXZlXXtQb3NpdGl2ZSBFbGVtZW50cyBIYXZlIFBvc2l0aXZlIEludmVyc2VzfQogIFxpdGVtIFxoeXBlcnJlZlt0aG06bXVsdGlwbHktcG9zaXRpdmVde011bHRpcGxpY2F0aW9uIGJ5IGEgUG9zaXRpdmUgRWxlbWVudCBQcmVzZXJ2ZXMgT3JkZXJ9ClxlbmR7aXRlbWl6ZX0=",
-          "body_preview": "",
-          "source_line_start": 380,
-          "source_line_end": 385
         }
       ],
       "expositions": [],
@@ -14575,10 +14145,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "cor:sb-limit-irrational"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -14598,10 +14168,10 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Infinite Stern--Brocot paths converge to irrationals"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -14645,11 +14215,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "def:bounded-sequence-q",
         "def:subsequence-q"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -14669,11 +14239,11 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Bounded sequence of rational numbers",
         "Subsequence of a rational sequence"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -14715,11 +14285,11 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
-      "used_by_ids": [
+      "depends_on_ids": [
         "thm:cauchy-bounded-q",
         "thm:cauchy-closed-operations-q"
       ],
+      "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -14739,11 +14309,11 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "depends_on_titles": [],
-      "used_by_titles": [
+      "depends_on_titles": [
         "Cauchy sequences are bounded",
         "Cauchy sequences are closed under addition and multiplication"
       ],
+      "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -48189,108 +47759,48 @@
   ],
   "edges": [
     {
-      "from": "def:bounded-sequence-q",
-      "to": "thm:cauchy-bounded-q",
+      "from": "cor:n-positive",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:n-positive",
+      "to": "thm:one-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:q-dense-in-itself",
+      "to": "thm:between-any-two-rationals-is-a-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:q-has-no-adjacent-points",
+      "to": "thm:between-any-two-rationals-is-a-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:sb-limit-irrational",
+      "to": "lem:sb-denom-growth",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:sb-limit-irrational",
+      "to": "thm:farey-neighbor-theorem",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:sb-limit-irrational",
+      "to": "thm:sqrt2-irrational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:sb-path-limit",
+      "to": "prop:sb-unique-point",
       "kind": "depends_on"
     },
     {
       "from": "def:bounded-sequence-q",
-      "to": "thm:convergent-bounded-q",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:cauchy-equivalence",
-      "to": "thm:cauchy-equiv-preserved-operations",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:cauchy-rational",
-      "to": "thm:cauchy-bounded-q",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:cauchy-rational",
-      "to": "thm:cauchy-closed-operations-q",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:convergent-rational-sequence",
-      "to": "thm:convergent-bounded-q",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:convergent-rational-sequence",
-      "to": "thm:limit-unique-q",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:convergent-rational-sequence",
-      "to": "thm:subsequence-convergence-q",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:dyadic-rational",
-      "to": "thm:dyadic-midpoint-closure",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:dyadic-rational",
-      "to": "thm:dyadic-rationals-are-rational",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:farey-sequence",
-      "to": "thm:farey-mediant-property",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:mediant",
-      "to": "thm:mediant-inequality",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:mediant",
-      "to": "thm:stern-brocot-enumeration",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:ordered-field",
-      "to": "cor:n-positive",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:ordered-field",
-      "to": "thm:fraction-order-comparison-general",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:ordered-field",
-      "to": "thm:inverse-positive",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:ordered-field",
-      "to": "thm:multiply-negative",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:ordered-field",
-      "to": "thm:multiply-positive",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:ordered-field",
-      "to": "thm:positive-fraction-iff-positive-product",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:ordered-field",
-      "to": "thm:squares-nonnegative",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:rational-numbers",
-      "to": "thm:dyadic-rationals-are-rational",
+      "to": "def:rational-sequence",
       "kind": "depends_on"
     },
     {
@@ -48304,173 +47814,218 @@
       "kind": "depends_on"
     },
     {
-      "from": "def:rational-sequence",
-      "to": "def:bounded-sequence-q",
-      "kind": "depends_on"
-    },
-    {
-      "from": "def:rational-sequence",
-      "to": "def:subsequence-q",
-      "kind": "depends_on"
-    },
-    {
       "from": "def:subsequence-q",
-      "to": "thm:subsequence-convergence-q",
+      "to": "def:rational-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:first-grid-point-crossing",
+      "to": "thm:rational-square-bracketing",
       "kind": "depends_on"
     },
     {
       "from": "lem:mediant-gap",
-      "to": "thm:stern-brocot-enumeration",
+      "to": "thm:mediant-inequality",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:rational-perturbation-lemma",
+      "to": "lem:rational-upper-lower-perturbation",
       "kind": "depends_on"
     },
     {
       "from": "lem:rational-upper-lower-perturbation",
-      "to": "lem:rational-perturbation-lemma",
+      "to": "thm:q-has-no-minimum-positive-element",
       "kind": "depends_on"
     },
     {
       "from": "lem:sb-denom-growth",
-      "to": "cor:sb-limit-irrational",
-      "kind": "depends_on"
-    },
-    {
-      "from": "lem:sb-denom-growth",
-      "to": "lem:sb-length-zero",
+      "to": "thm:farey-neighbor-theorem",
       "kind": "depends_on"
     },
     {
       "from": "lem:sb-length-zero",
-      "to": "prop:sb-unique-point",
-      "kind": "depends_on"
-    },
-    {
-      "from": "prop:sb-unique-point",
-      "to": "cor:sb-path-limit",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:archimedean-q",
-      "to": "lem:sb-length-zero",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:between-any-two-rationals-is-a-rational",
-      "to": "cor:q-dense-in-itself",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:between-any-two-rationals-is-a-rational",
-      "to": "cor:q-has-no-adjacent-points",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:cauchy-bounded-q",
-      "to": "thm:cauchy-closed-operations-q",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:cauchy-bounded-q",
-      "to": "thm:cauchy-equiv-preserved-operations",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:cauchy-closed-operations-q",
-      "to": "thm:cauchy-equiv-preserved-operations",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:dyadic-rationals-are-rational",
-      "to": "thm:dyadic-midpoint-closure",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:farey-gap",
-      "to": "lem:sb-length-zero",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:farey-neighbor-theorem",
-      "to": "cor:sb-limit-irrational",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:farey-neighbor-theorem",
       "to": "lem:sb-denom-growth",
       "kind": "depends_on"
     },
     {
-      "from": "thm:farey-neighbor-theorem",
+      "from": "lem:sb-length-zero",
+      "to": "thm:archimedean-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:sb-length-zero",
       "to": "thm:farey-gap",
       "kind": "depends_on"
     },
     {
-      "from": "thm:farey-neighbor-theorem",
-      "to": "thm:stern-brocot-enumeration",
+      "from": "prop:sb-unique-point",
+      "to": "lem:sb-length-zero",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-bounded-q",
+      "to": "def:bounded-sequence-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-bounded-q",
+      "to": "def:cauchy-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-closed-operations-q",
+      "to": "def:cauchy-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-closed-operations-q",
+      "to": "thm:cauchy-bounded-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-equiv-preserved-operations",
+      "to": "def:cauchy-equivalence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-equiv-preserved-operations",
+      "to": "thm:cauchy-bounded-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:cauchy-equiv-preserved-operations",
+      "to": "thm:cauchy-closed-operations-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:convergent-bounded-q",
+      "to": "def:bounded-sequence-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:convergent-bounded-q",
+      "to": "def:convergent-rational-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:dyadic-midpoint-closure",
+      "to": "def:dyadic-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:dyadic-midpoint-closure",
+      "to": "thm:dyadic-rationals-are-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:dyadic-rationals-are-rational",
+      "to": "def:dyadic-rational",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:dyadic-rationals-are-rational",
+      "to": "def:rational-numbers",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:farey-gap",
+      "to": "thm:farey-neighbor-theorem",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:farey-mediant-property",
+      "to": "def:farey-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:farey-mediant-property",
+      "to": "thm:mediant-inequality",
       "kind": "depends_on"
     },
     {
       "from": "thm:fraction-order-comparison-general",
-      "to": "thm:fraction-order-comparison-positive-denominator-product",
+      "to": "def:ordered-field",
       "kind": "depends_on"
     },
     {
-      "from": "thm:inverse-positive",
-      "to": "thm:positive-fraction-iff-positive-product",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:inverse-positive",
-      "to": "thm:reciprocal-order-for-positive-elements",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:mediant-inequality",
-      "to": "lem:mediant-gap",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:mediant-inequality",
-      "to": "thm:farey-mediant-property",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:multiply-negative",
-      "to": "thm:fraction-order-comparison-general",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:multiply-positive",
-      "to": "thm:fraction-order-comparison-general",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:multiply-positive",
-      "to": "thm:fraction-order-comparison-positive-denominator-product",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:multiply-positive",
+      "from": "thm:fraction-order-comparison-general",
       "to": "thm:multiply-negative",
       "kind": "depends_on"
     },
     {
+      "from": "thm:fraction-order-comparison-general",
+      "to": "thm:multiply-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:fraction-order-comparison-positive-denominator-product",
+      "to": "thm:fraction-order-comparison-general",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:fraction-order-comparison-positive-denominator-product",
+      "to": "thm:multiply-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:inverse-positive",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:inverse-positive",
+      "to": "thm:one-positive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:inverse-positive",
+      "to": "thm:squares-nonnegative",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:limit-unique-q",
+      "to": "def:convergent-rational-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:limit-unique-q",
+      "to": "thm:q-is-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:mediant-inequality",
+      "to": "def:mediant",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:mediant-inequality",
+      "to": "thm:q-is-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiply-negative",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiply-negative",
+      "to": "thm:multiply-positive",
+      "kind": "depends_on"
+    },
+    {
       "from": "thm:multiply-positive",
-      "to": "thm:reciprocal-order-for-positive-elements",
+      "to": "def:ordered-field",
       "kind": "depends_on"
     },
     {
-      "from": "thm:one-positive",
-      "to": "cor:n-positive",
+      "from": "thm:positive-fraction-iff-positive-product",
+      "to": "def:ordered-field",
       "kind": "depends_on"
     },
     {
-      "from": "thm:one-positive",
+      "from": "thm:positive-fraction-iff-positive-product",
       "to": "thm:inverse-positive",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:q-has-no-minimum-positive-element",
-      "to": "lem:rational-upper-lower-perturbation",
       "kind": "depends_on"
     },
     {
@@ -48484,33 +48039,48 @@
       "kind": "depends_on"
     },
     {
-      "from": "thm:q-is-ordered-field",
-      "to": "thm:limit-unique-q",
+      "from": "thm:reciprocal-order-for-positive-elements",
+      "to": "thm:inverse-positive",
       "kind": "depends_on"
     },
     {
-      "from": "thm:q-is-ordered-field",
-      "to": "thm:mediant-inequality",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:q-is-ordered-field",
-      "to": "thm:squares-nonnegative",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:rational-square-bracketing",
-      "to": "lem:first-grid-point-crossing",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:sqrt2-irrational",
-      "to": "cor:sb-limit-irrational",
+      "from": "thm:reciprocal-order-for-positive-elements",
+      "to": "thm:multiply-positive",
       "kind": "depends_on"
     },
     {
       "from": "thm:squares-nonnegative",
-      "to": "thm:inverse-positive",
+      "to": "def:ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:squares-nonnegative",
+      "to": "thm:q-is-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:stern-brocot-enumeration",
+      "to": "def:mediant",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:stern-brocot-enumeration",
+      "to": "lem:mediant-gap",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:stern-brocot-enumeration",
+      "to": "thm:farey-neighbor-theorem",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:subsequence-convergence-q",
+      "to": "def:convergent-rational-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:subsequence-convergence-q",
+      "to": "def:subsequence-q",
       "kind": "depends_on"
     },
     {
