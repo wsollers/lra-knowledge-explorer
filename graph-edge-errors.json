@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T04:31:01.080759+00:00",
+  "generated_at": "2026-06-16T04:42:15.449965+00:00",
   "chapters": [
     "peano-systems",
     "natural-numbers",
@@ -9,14 +9,38 @@
     "continuity",
     "differentiation"
   ],
-  "error_count": 103,
+  "error_count": 106,
   "errors": [
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:mediant-inequality",
+      "missing_target_id": "thm:q-is-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/linear-approximation-in-q/notes-mediant.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
     {
       "type": "dangling_graph_edge_reference",
       "source_node_id": "lem:sb-denom-growth",
       "missing_target_id": "thm:induction-principle-for-peano-system",
       "relationship_kind": "depends_on",
       "source": "notes/linear-approximation-in-q/stern-brocot.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "cor:sb-limit-irrational",
+      "missing_target_id": "thm:sqrt2-irrational",
+      "relationship_kind": "depends_on",
+      "source": "notes/linear-approximation-in-q/stern-brocot.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:limit-unique-q",
+      "missing_target_id": "thm:q-is-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {

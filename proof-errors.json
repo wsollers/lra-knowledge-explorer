@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T04:31:01.076098+00:00",
+  "generated_at": "2026-06-16T04:42:15.443960+00:00",
   "chapters": [
     "peano-systems",
     "natural-numbers",
@@ -9,7 +9,7 @@
     "continuity",
     "differentiation"
   ],
-  "error_count": 431,
+  "error_count": 580,
   "errors": [
     {
       "type": "multiple_primary_statements_in_box",
@@ -38,7 +38,7 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Axiom",
-      "node_id": "ax:peano-one-in-n",
+      "node_id": "ax:peano-base-in-set",
       "title": "Distinguished Element Lies in the Underlying Set",
       "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
@@ -62,7 +62,7 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Axiom",
-      "node_id": "ax:peano-one-not-successor",
+      "node_id": "ax:peano-base-not-successor",
       "title": "Distinguished Element Is Not a Successor",
       "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
@@ -121,6 +121,18 @@
     },
     {
       "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:strong-induction-on-peano-system",
+      "title": "Strong Induction on a Peano System",
+      "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $\\varphi$ be a predicate on $P$. If \\[ \\forall n \\in P\\; \\bigl(\\forall k \\in P\\;(k < n \\Longrightarrow \\varphi(k))\\bigr) \\Longrightarrow \\varphi(n), \\] then \\[ \\forall n \\in P\\;\\varphi(n). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
       "kind": "Definition",
       "node_id": "def:successor-closed-subset",
       "title": "Successor-Closed Subset",
@@ -142,6 +154,18 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "Let $(P,S,1)$ be a Peano system, and let $A \\subseteq P$. The subset $A$ is called \\emph{inductive} exactly when $1 \\in A$ and $A$ is successor-closed."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:peano-minimality",
+      "title": "Minimality of a Peano System",
+      "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. If $A\\subseteq P$ contains $1$ and is closed under successor, then $A=P$. \\[ \\bigl(1\\in A \\land \\forall n\\in P\\;(n\\in A \\Longrightarrow S(n)\\in A)\\bigr) \\Longrightarrow A=P. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -238,6 +262,86 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "Let $(P,S,1)$ be a Peano system. For every $n \\in P$, \\[ S(n) \\neq n. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:presburger-signature",
+      "title": "Presburger Signature",
+      "source": "notes/presburger-arithmetic/notes-presburger-arithmetic.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The \\emph{Presburger signature} is the first-order signature \\[ \\mathcal{L}_{\\mathrm{Pres}} = \\{0, S, +, <, =\\}, \\] where $0$ is a constant symbol, $S$ is a unary function symbol, $+$ is a binary function symbol, and $<$ and $=$ are binary relation symbols."
+    },
+    {
+      "type": "predicate_notation_in_standard_field",
+      "kind": "Definition",
+      "node_id": "def:presburger-signature",
+      "title": "Presburger Signature",
+      "source": "notes/presburger-arithmetic/notes-presburger-arithmetic.tex",
+      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
+      "signals": [
+        "formal:PresburgerSignature",
+        "fully_quantified_form:PresburgerSignature"
+      ],
+      "fields": [
+        {
+          "field": "formal",
+          "predicate_names": [
+            "PresburgerSignature"
+          ]
+        },
+        {
+          "field": "fully_quantified_form",
+          "predicate_names": [
+            "PresburgerSignature"
+          ]
+        }
+      ],
+      "excerpt": "\\[ \\operatorname{PresburgerSignature}(\\mathcal{L}) \\Longleftrightarrow \\mathcal{L} = \\{0,S,+,<,=\\} \\land \\operatorname{ar}(S)=1 \\land \\operatorname{ar}(+)=2 \\land \\operatorname{ar}(<)=2 \\land \\operatorname{ar}(=)=2. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:presburger-arithmetic",
+      "title": "Presburger Arithmetic",
+      "source": "notes/presburger-arithmetic/notes-presburger-arithmetic.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "\\emph{Presburger arithmetic} is the first-order theory of the natural numbers in the Presburger signature. Its intended structure is \\[ (\\mathbb{N},0,S,+,<,=), \\] and its axioms describe the behavior of zero, successor, addition, order, and induction for formulas written in the language $\\mathcal{L}_{\\mathrm{Pres}}$."
+    },
+    {
+      "type": "predicate_notation_in_standard_field",
+      "kind": "Definition",
+      "node_id": "def:presburger-arithmetic",
+      "title": "Presburger Arithmetic",
+      "source": "notes/presburger-arithmetic/notes-presburger-arithmetic.tex",
+      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
+      "signals": [
+        "formal:PresburgerArithmetic, Sentences",
+        "fully_quantified_form:PresburgerArithmetic, Sentences"
+      ],
+      "fields": [
+        {
+          "field": "formal",
+          "predicate_names": [
+            "PresburgerArithmetic",
+            "Sentences"
+          ]
+        },
+        {
+          "field": "fully_quantified_form",
+          "predicate_names": [
+            "PresburgerArithmetic",
+            "Sentences"
+          ]
+        }
+      ],
+      "excerpt": "\\[ \\operatorname{PresburgerArithmetic}(T) \\Longleftrightarrow T \\subseteq \\operatorname{Sentences}(\\mathcal{L}_{\\mathrm{Pres}}) \\land T \\text{ axiomatizes } (\\mathbb{N},0,S,+,<,=). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -602,6 +706,18 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
+      "node_id": "thm:addition-cancellation",
+      "title": "Cancellation for Addition",
+      "source": "notes/addition-on-n/notes-addition-on-n.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. Addition on $P$ satisfies cancellation on both sides: \\[ a+b=a+c\\Longrightarrow b=c \\qquad\\text{and}\\qquad b+a=c+a\\Longrightarrow b=c. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
       "node_id": "thm:no-natural-number-equals-itself-plus-a-natural-number",
       "title": "No Natural Number Equals Itself Plus a Natural Number",
       "source": "notes/addition-on-n/notes-addition-on-n.tex",
@@ -682,18 +798,6 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "Let $(P,S,1)$ be a Peano system. Then $(P,+,\\cdot)$ satisfies: \\begin{enumerate} \\item $(P,+)$ is a commutative semigroup. \\item $(P,\\cdot,1)$ is a commutative monoid. \\item Multiplication distributes over addition: for all $a,b,c \\in P$, \\[ a \\cdot (b+c) = (a \\cdot b) + (a \\cdot c). \\] \\end{enumerate}"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:strong-induction-on-peano-system",
-      "title": "Strong Induction on a Peano System",
-      "source": "notes/induction/notes-induction.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system, and let $\\varphi$ be a predicate on $P$. If \\[ \\forall n \\in P\\; \\bigl(\\forall k \\in P\\;(k < n \\Longrightarrow \\varphi(k))\\bigr) \\Longrightarrow \\varphi(n), \\] then \\[ \\forall n \\in P\\;\\varphi(n). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -794,6 +898,18 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
+      "node_id": "thm:multiplication-distributes-over-addition-both-sides",
+      "title": "Multiplication Distributes over Addition on Both Sides",
+      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ a\\cdot(b+c)=(a\\cdot b)+(a\\cdot c) \\qquad\\text{and}\\qquad (a+b)\\cdot c=(a\\cdot c)+(b\\cdot c). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
       "node_id": "thm:multiplication-associative",
       "title": "Multiplication Is Associative",
       "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
@@ -814,6 +930,114 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b \\in P$, \\[ a \\cdot b = b \\cdot a. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:multiplication-left-cancellation",
+      "title": "Left Cancellation for Multiplication",
+      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ a\\cdot b=a\\cdot c \\Longrightarrow b=c. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:multiplication-right-cancellation",
+      "title": "Right Cancellation for Multiplication",
+      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ b\\cdot a=c\\cdot a \\Longrightarrow b=c. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:multiplication-cancellation",
+      "title": "Cancellation for Multiplication",
+      "source": "notes/multiplication-on-n/notes-multiplication-on-n.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. Multiplication on $P$ satisfies cancellation on both sides: \\[ a\\cdot b=a\\cdot c\\Longrightarrow b=c \\qquad\\text{and}\\qquad b\\cdot a=c\\cdot a\\Longrightarrow b=c. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:natural-numbers",
+      "title": "The Natural Numbers",
+      "source": "notes/nz-axioms/notes-nz-axioms.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The natural numbers $\\mathbb{N}$ are the canonical Peano system \\[ (\\mathbb{N},1,S), \\] where $1 \\in \\mathbb{N}$ is the distinguished base element and $S:\\mathbb{N}\\to\\mathbb{N}$ is the successor operation."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Axiom",
+      "node_id": "ax:n-base",
+      "title": "N1, Base",
+      "source": "notes/nz-axioms/notes-nz-axioms.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "\\[ 1 \\in \\mathbb{N}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Axiom",
+      "node_id": "ax:n-successor-closure",
+      "title": "N2, Successor Closure",
+      "source": "notes/nz-axioms/notes-nz-axioms.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "\\[ \\forall n \\in \\mathbb{N}\\;(S(n)\\in \\mathbb{N}). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Axiom",
+      "node_id": "ax:n-base-has-no-predecessor",
+      "title": "N3, Base Has No Predecessor",
+      "source": "notes/nz-axioms/notes-nz-axioms.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "\\[ \\forall n \\in \\mathbb{N}\\;(S(n)\\ne 1). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Axiom",
+      "node_id": "ax:n-successor-injective",
+      "title": "N4, Successor Injectivity",
+      "source": "notes/nz-axioms/notes-nz-axioms.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "\\[ \\forall m,n \\in \\mathbb{N}\\;(S(m)=S(n)\\Longrightarrow m=n). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Axiom",
+      "node_id": "ax:n-induction",
+      "title": "N5, Induction",
+      "source": "notes/nz-axioms/notes-nz-axioms.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every predicate $\\varphi$ on $\\mathbb{N}$, \\[ \\Bigl(\\varphi(1)\\land \\forall n\\in\\mathbb{N}\\;(\\varphi(n)\\Longrightarrow \\varphi(S(n)))\\Bigr) \\Longrightarrow \\forall n\\in\\mathbb{N}\\;\\varphi(n). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -902,6 +1126,18 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
+      "node_id": "thm:addition-preserves-order",
+      "title": "Addition Preserves Order",
+      "source": "notes/order-on-n/notes-order-on-n.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b,c \\in P$, \\[ a \\le b \\Longrightarrow a+c \\le b+c \\qquad\\text{and}\\qquad a \\le b \\Longrightarrow c+a \\le c+b. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
       "node_id": "thm:multiplication-preserves-and-reflects-strict-order",
       "title": "Multiplication Preserves and Reflects Strict Order",
       "source": "notes/order-on-n/notes-order-on-n.tex",
@@ -934,6 +1170,18 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b \\in P$, exactly one of the following holds: \\[ a<b,\\qquad a=b,\\qquad b<a. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:natural-number-order-is-total",
+      "title": "Natural-Number Order Is Total",
+      "source": "notes/order-on-n/notes-order-on-n.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $(P,S,1)$ be a Peano system. For every $a,b \\in P$, \\[ a \\le b \\qquad\\text{or}\\qquad b \\le a. \\] Consequently $\\le$ is a total order on $P$."
     },
     {
       "type": "missing_dependencies_block",
@@ -1047,25 +1295,25 @@
       "type": "multiple_primary_statements_in_box",
       "kind": "Theorem",
       "node_id": "thm:induction-well-ordering-equivalence",
-      "title": "Induction and Well-Ordering Are Equivalent",
+      "title": "Induction, Strong Induction, and Well-Ordering Are Equivalent",
       "source": "notes/well-ordering-principle/notes-well-ordering-principle.tex",
       "message": "Extracted theorem/definition box appears to contain more than one primary statement. Extraction was preserved, but the source should be split into separate boxes and re-extracted.",
       "signals": [
-        "latex_list_with_multiple_items:2"
+        "latex_list_with_multiple_items:3"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system equipped with the order $\\le$. The following are equivalent: \\begin{enumerate} \\item The induction principle: for every predicate $\\varphi$ on $P$, if $\\varphi(1)$ holds and the successor step holds, then $\\varphi(n)$ holds for all $n \\in P$. \\item The well-ordering principle: every nonempty subset of $P$ has a least element with respect to $\\le$. \\end{enumerate}"
+      "excerpt": "Let $(P,S,1)$ be a Peano system equipped with the order $\\le$. The following are equivalent: \\begin{enumerate} \\item The induction principle: for every predicate $\\varphi$ on $P$, if $\\varphi(1)$ holds and the successor step holds, then $\\varphi(n)$ holds for all $n \\in P$. \\item The strong induction principle: for every predicate $\\varphi$ on $P$, if $\\varphi(k)$ holds for every $k<n$ implies $\\varphi(n)$, then $..."
     },
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "thm:induction-well-ordering-equivalence",
-      "title": "Induction and Well-Ordering Are Equivalent",
+      "title": "Induction, Strong Induction, and Well-Ordering Are Equivalent",
       "source": "notes/well-ordering-principle/notes-well-ordering-principle.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(P,S,1)$ be a Peano system equipped with the order $\\le$. The following are equivalent: \\begin{enumerate} \\item The induction principle: for every predicate $\\varphi$ on $P$, if $\\varphi(1)$ holds and the successor step holds, then $\\varphi(n)$ holds for all $n \\in P$. \\item The well-ordering principle: every nonempty subset of $P$ has a least element with respect to $\\le$. \\end{enumerate}"
+      "excerpt": "Let $(P,S,1)$ be a Peano system equipped with the order $\\le$. The following are equivalent: \\begin{enumerate} \\item The induction principle: for every predicate $\\varphi$ on $P$, if $\\varphi(1)$ holds and the successor step holds, then $\\varphi(n)$ holds for all $n \\in P$. \\item The strong induction principle: for every predicate $\\varphi$ on $P$, if $\\varphi(k)$ holds for every $k<n$ implies $\\varphi(n)$, then $..."
     },
     {
       "type": "missing_dependencies_block",
@@ -1154,6 +1402,138 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Definition",
+      "node_id": "def:two-in-q",
+      "title": "Two in $ $",
+      "source": "notes/arbitrary-closeness-in-q/notes-arbitrary-closeness-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Define \\[ 2_{\\mathbb{Q}}:=1_{\\mathbb{Q}}+1_{\\mathbb{Q}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:two-nonzero-in-q",
+      "title": "Two Is Nonzero in $ $",
+      "source": "notes/arbitrary-closeness-in-q/notes-arbitrary-closeness-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "In $\\mathbb{Q}$, \\[ 2_{\\mathbb{Q}}\\ne 0_{\\mathbb{Q}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:midpoint-between-q",
+      "title": "Midpoint Lies Strictly Between Rationals",
+      "source": "notes/arbitrary-closeness-in-q/notes-arbitrary-closeness-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ x<y \\Longrightarrow x< (x+y)\\cdot 2_{\\mathbb{Q}}^{-1}<y. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:density-of-q",
+      "title": "Density of $ $ in Itself",
+      "source": "notes/arbitrary-closeness-in-q/notes-arbitrary-closeness-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ x<y \\Longrightarrow \\exists r\\in\\mathbb{Q}\\ (x<r<y). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:archimedean-property-of-q",
+      "title": "Archimedean Property of $ $",
+      "source": "notes/arbitrary-closeness-in-q/notes-arbitrary-closeness-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<x \\Longrightarrow \\exists n\\in\\mathbb{N}\\ (y<n\\cdot x). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:arbitrarily-close-distinct-points",
+      "title": "Arbitrarily Close Distinct Points",
+      "source": "notes/arbitrary-closeness-in-q/notes-arbitrary-closeness-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A number system has arbitrarily close distinct points if for every point $x$ and every positive tolerance $\\varepsilon$, there is a point $y\\ne x$ such that \\[ |x-y|<\\varepsilon. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:q-has-arbitrarily-close-distinct-points",
+      "title": "$ $ Has Arbitrarily Close Distinct Points",
+      "source": "notes/arbitrary-closeness-in-q/notes-arbitrary-closeness-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$ and every $\\varepsilon\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<\\varepsilon \\Longrightarrow \\exists y\\in\\mathbb{Q}\\ (y\\ne x\\ \\text{and}\\ |x-y|<\\varepsilon). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:q-has-no-adjacent-points",
+      "title": "$ $ Has No Adjacent Points",
+      "source": "notes/arbitrary-closeness-in-q/notes-arbitrary-closeness-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "There do not exist rational numbers $x<y$ with no rational number strictly between them."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Proposition",
+      "node_id": "prop:no-least-positive-rational",
+      "title": "$ $ Has No Least Positive Rational",
+      "source": "notes/arbitrary-closeness-in-q/notes-arbitrary-closeness-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<x \\Longrightarrow \\exists y\\in\\mathbb{Q}\\ (0_{\\mathbb{Q}}<y<x). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:reciprocals-arbitrarily-small-q",
+      "title": "Reciprocals Become Arbitrarily Small in $ $",
+      "source": "notes/arbitrary-closeness-in-q/notes-arbitrary-closeness-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $\\varepsilon\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<\\varepsilon \\Longrightarrow \\exists n\\in\\mathbb{N}\\ \\left(0_{\\mathbb{Q}}<n^{-1}<\\varepsilon\\right). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Proposition",
+      "node_id": "prop:one-sided-rational-approximation",
+      "title": "One-Sided Rational Approximation",
+      "source": "notes/arbitrary-closeness-in-q/notes-arbitrary-closeness-in-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$ and every $\\varepsilon\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<\\varepsilon \\Longrightarrow \\exists y,z\\in\\mathbb{Q}\\ (x-\\varepsilon<y<x<z<x+\\varepsilon). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
       "node_id": "def:fraction-pairs",
       "title": "Fraction pairs",
       "source": "notes/constructing-rational-numbers/notes-constructing-rational-numbers.tex",
@@ -1210,6 +1590,350 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "Define \\[ 0 := [(0,1)] \\qquad\\text{and}\\qquad 1 := [(1,1)]. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:nonzero-integers",
+      "title": "Nonzero Integers",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The set of nonzero integers is \\[ \\mathbb{Z}^{\\ast}:=\\mathbb{Z}\\setminus\\{0_{\\mathbb{Z}}\\}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:prefraction",
+      "title": "Prefraction",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A \\emph{prefraction} is an ordered pair $(a,b)\\in\\mathbb{Z}\\times\\mathbb{Z}^{\\ast}$, read as the formal quotient $a/b$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:prefraction-set",
+      "title": "Prefraction Set",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The prefraction set is \\[ \\operatorname{Pre}\\mathbb{Q}:=\\mathbb{Z}\\times\\mathbb{Z}^{\\ast}. \\]"
+    },
+    {
+      "type": "predicate_notation_in_standard_field",
+      "kind": "Definition",
+      "node_id": "def:prefraction-set",
+      "title": "Prefraction Set",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
+      "signals": [
+        "statement_display:Pre"
+      ],
+      "fields": [
+        {
+          "field": "statement_display",
+          "predicate_names": [
+            "Pre"
+          ]
+        }
+      ],
+      "excerpt": "The prefraction set is \\[ \\operatorname{Pre}\\mathbb{Q}:=\\mathbb{Z}\\times\\mathbb{Z}^{\\ast}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:fraction-equivalence",
+      "title": "Fraction Equivalence",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For $(a,b),(c,d)\\in\\operatorname{Pre}\\mathbb{Q}$, define \\[ (a,b)\\sim_{\\mathbb{Q}}(c,d) \\quad:\\Longleftrightarrow\\quad a\\cdot d=b\\cdot c. \\]"
+    },
+    {
+      "type": "predicate_notation_in_standard_field",
+      "kind": "Definition",
+      "node_id": "def:fraction-equivalence",
+      "title": "Fraction Equivalence",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
+      "signals": [
+        "statement_display:Pre"
+      ],
+      "fields": [
+        {
+          "field": "statement_display",
+          "predicate_names": [
+            "Pre"
+          ]
+        }
+      ],
+      "excerpt": "For $(a,b),(c,d)\\in\\operatorname{Pre}\\mathbb{Q}$, define \\[ (a,b)\\sim_{\\mathbb{Q}}(c,d) \\quad:\\Longleftrightarrow\\quad a\\cdot d=b\\cdot c. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:fraction-equivalence-reflexive",
+      "title": "Fraction Equivalence Is Reflexive",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $(a,b)\\in\\operatorname{Pre}\\mathbb{Q}$, \\[ (a,b)\\sim_{\\mathbb{Q}}(a,b). \\]"
+    },
+    {
+      "type": "predicate_notation_in_standard_field",
+      "kind": "Lemma",
+      "node_id": "lem:fraction-equivalence-reflexive",
+      "title": "Fraction Equivalence Is Reflexive",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
+      "signals": [
+        "statement_display:Pre"
+      ],
+      "fields": [
+        {
+          "field": "statement_display",
+          "predicate_names": [
+            "Pre"
+          ]
+        }
+      ],
+      "excerpt": "For every $(a,b)\\in\\operatorname{Pre}\\mathbb{Q}$, \\[ (a,b)\\sim_{\\mathbb{Q}}(a,b). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:fraction-equivalence-symmetric",
+      "title": "Fraction Equivalence Is Symmetric",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all prefractions $(a,b),(c,d)$, \\[ (a,b)\\sim_{\\mathbb{Q}}(c,d) \\Longrightarrow (c,d)\\sim_{\\mathbb{Q}}(a,b). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:fraction-equivalence-transitive",
+      "title": "Fraction Equivalence Is Transitive",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all prefractions $(a,b),(c,d),(e,f)$, \\[ (a,b)\\sim_{\\mathbb{Q}}(c,d)\\land (c,d)\\sim_{\\mathbb{Q}}(e,f) \\Longrightarrow (a,b)\\sim_{\\mathbb{Q}}(e,f). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:fraction-equivalence-relation",
+      "title": "Fraction Equivalence Is an Equivalence Relation",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The relation $\\sim_{\\mathbb{Q}}$ is an equivalence relation on $\\operatorname{Pre}\\mathbb{Q}$."
+    },
+    {
+      "type": "predicate_notation_in_standard_field",
+      "kind": "Theorem",
+      "node_id": "thm:fraction-equivalence-relation",
+      "title": "Fraction Equivalence Is an Equivalence Relation",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
+      "signals": [
+        "statement_display:Pre"
+      ],
+      "fields": [
+        {
+          "field": "statement_display",
+          "predicate_names": [
+            "Pre"
+          ]
+        }
+      ],
+      "excerpt": "The relation $\\sim_{\\mathbb{Q}}$ is an equivalence relation on $\\operatorname{Pre}\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:rationals",
+      "title": "Rational Numbers",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The rational numbers are the quotient \\[ \\mathbb{Q}:=\\operatorname{Pre}\\mathbb{Q}/{\\sim_{\\mathbb{Q}}}. \\]"
+    },
+    {
+      "type": "predicate_notation_in_standard_field",
+      "kind": "Definition",
+      "node_id": "def:rationals",
+      "title": "Rational Numbers",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
+      "signals": [
+        "statement_display:Pre"
+      ],
+      "fields": [
+        {
+          "field": "statement_display",
+          "predicate_names": [
+            "Pre"
+          ]
+        }
+      ],
+      "excerpt": "The rational numbers are the quotient \\[ \\mathbb{Q}:=\\operatorname{Pre}\\mathbb{Q}/{\\sim_{\\mathbb{Q}}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:rational-class-notation",
+      "title": "Rational Class Notation",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The notation $[a,b]$ denotes the $\\sim_{\\mathbb{Q}}$-equivalence class of the prefraction $(a,b)$, where $b\\ne 0_{\\mathbb{Z}}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Proposition",
+      "node_id": "prop:equality-criterion-for-rational-classes",
+      "title": "Equality Criterion for Rational Classes",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For prefractions $(a,b),(c,d)\\in\\operatorname{Pre}\\mathbb{Q}$, \\[ [a,b]=[c,d] \\quad\\Longleftrightarrow\\quad a\\cdot d=b\\cdot c. \\]"
+    },
+    {
+      "type": "predicate_notation_in_standard_field",
+      "kind": "Proposition",
+      "node_id": "prop:equality-criterion-for-rational-classes",
+      "title": "Equality Criterion for Rational Classes",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
+      "signals": [
+        "statement_display:Pre"
+      ],
+      "fields": [
+        {
+          "field": "statement_display",
+          "predicate_names": [
+            "Pre"
+          ]
+        }
+      ],
+      "excerpt": "For prefractions $(a,b),(c,d)\\in\\operatorname{Pre}\\mathbb{Q}$, \\[ [a,b]=[c,d] \\quad\\Longleftrightarrow\\quad a\\cdot d=b\\cdot c. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:zero-in-q",
+      "title": "Zero in $ $",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Define \\[ 0_{\\mathbb{Q}}:=[0_{\\mathbb{Z}},1_{\\mathbb{Z}}]. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:one-in-q",
+      "title": "One in $ $",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Define \\[ 1_{\\mathbb{Q}}:=[1_{\\mathbb{Z}},1_{\\mathbb{Z}}]. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:vanishing-criterion-q",
+      "title": "Vanishing Criterion in $ $",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every prefraction $(a,b)\\in\\operatorname{Pre}\\mathbb{Q}$, \\[ [a,b]=0_{\\mathbb{Q}} \\quad\\Longleftrightarrow\\quad a=0_{\\mathbb{Z}}. \\]"
+    },
+    {
+      "type": "predicate_notation_in_standard_field",
+      "kind": "Lemma",
+      "node_id": "lem:vanishing-criterion-q",
+      "title": "Vanishing Criterion in $ $",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
+      "signals": [
+        "statement_display:Pre"
+      ],
+      "fields": [
+        {
+          "field": "statement_display",
+          "predicate_names": [
+            "Pre"
+          ]
+        }
+      ],
+      "excerpt": "For every prefraction $(a,b)\\in\\operatorname{Pre}\\mathbb{Q}$, \\[ [a,b]=0_{\\mathbb{Q}} \\quad\\Longleftrightarrow\\quad a=0_{\\mathbb{Z}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:zero-is-a-rational",
+      "title": "Zero Is a Rational",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The class $0_{\\mathbb{Q}}$ is an element of $\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:one-is-a-rational",
+      "title": "One Is a Rational",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The class $1_{\\mathbb{Q}}$ is an element of $\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:zero-not-one-in-q",
+      "title": "Zero Is Not One in $ $",
+      "source": "notes/construction-of-q/notes-construction-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "In $\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}\\ne 1_{\\mathbb{Q}}. \\]"
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -1308,244 +2032,304 @@
       "excerpt": "Let $S$ be a set with a relation $<$. We say that $(S,<)$ is \\emph{densely ordered} if: \\begin{enumerate} \\item $(S,<)$ is a simply ordered system; and \\item for every $x,y\\in S$ with $x<y$, there exists $z\\in S$ such that \\[ x<z<y. \\] \\end{enumerate}"
     },
     {
-      "type": "multiple_primary_statements_in_box",
-      "kind": "Definition",
-      "node_id": "def:integral-domain",
-      "title": "Integral domain",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition box appears to contain more than one primary statement. Extraction was preserved, but the source should be split into separate boxes and re-extracted.",
-      "signals": [
-        "latex_list_with_multiple_items:5"
-      ],
-      "excerpt": "A system \\[ (F,+,\\cdot,0,1) \\] is called an \\emph{integral domain} if: \\begin{enumerate} \\item $(F,+,0)$ is a commutative group; \\item multiplication on $F$ is associative and commutative; \\item $1\\neq 0$ and \\[ \\forall a\\in F,\\qquad 1\\cdot a=a=a\\cdot 1; \\] \\item multiplication distributes over addition; \\item $F$ has no zero divisors, that is, \\[ \\forall a,b\\in F,\\qquad ab=0 \\Longrightarrow a=0 \\text{ or } b=0. \\..."
-    },
-    {
       "type": "missing_dependencies_block",
       "kind": "Definition",
-      "node_id": "def:integral-domain",
-      "title": "Integral domain",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "node_id": "def:rational-chapter-embedding-z-into-q",
+      "title": "Embedding of $ $ into $ $",
+      "source": "notes/embedding-z-into-q/notes-embedding-z-into-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "A system \\[ (F,+,\\cdot,0,1) \\] is called an \\emph{integral domain} if: \\begin{enumerate} \\item $(F,+,0)$ is a commutative group; \\item multiplication on $F$ is associative and commutative; \\item $1\\neq 0$ and \\[ \\forall a\\in F,\\qquad 1\\cdot a=a=a\\cdot 1; \\] \\item multiplication distributes over addition; \\item $F$ has no zero divisors, that is, \\[ \\forall a,b\\in F,\\qquad ab=0 \\Longrightarrow a=0 \\text{ or } b=0. \\..."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:field",
-      "title": "Field",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A system \\[ (F,+,\\cdot,0,1) \\] is called a \\emph{field} if it is an integral domain and satisfies: \\[ \\forall a,b\\in F,\\qquad b\\neq 0 \\Longrightarrow \\exists x\\in F\\;(b\\cdot x=a). \\] Equivalently, every nonzero element of $F$ has a multiplicative inverse."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:subfield",
-      "title": "Subfield",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let \\[ (E,+,\\cdot,0,1) \\qquad\\text{and}\\qquad (F,+,\\cdot,0,1) \\] be fields with $E\\subseteq F$. We say that $E$ is a \\emph{subfield} of $F$ if the operations and distinguished elements on $E$ are the restrictions of those on $F$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:nonneg-integer-exponents-field",
-      "title": "Nonnegative integer exponents in a field",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $F$ be a field, let $x\\in F$, and let $n\\in\\mathbb{N}$. Define \\[ x^0 := 1 \\qquad\\text{and}\\qquad x^{n+1} := x^n\\cdot x. \\] In particular $x^1 = x$ and $x^2 = x\\cdot x$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:negative-integer-exponents-field",
-      "title": "Negative integer exponents in a field",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $F$ be a field, let $x\\in F$ with $x\\neq 0$, and let $m\\in\\mathbb{N}$. Define \\[ x^{-m}:=(x^{-1})^m. \\]"
+      "excerpt": "Define \\[ \\iota:\\mathbb{Z}\\to\\mathbb{Q}, \\qquad \\iota(n):=[n,1_{\\mathbb{Z}}]. \\]"
     },
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:q-is-integral-domain",
-      "title": "$ $ Is an Integral Domain",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "node_id": "thm:embedding-z-into-q-preserves-zero",
+      "title": "Embedding Preserves Zero",
+      "source": "notes/embedding-z-into-q/notes-embedding-z-into-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "With the operations of \\hyperref[def:rational-operations]{Definition~\\ref*{def:rational-operations}}, the system \\[ (\\mathbb{Q},+,\\cdot,0,1) \\] is an integral domain."
+      "excerpt": "The embedding sends integer zero to rational zero: \\[ \\iota(0_{\\mathbb{Z}})=0_{\\mathbb{Q}}. \\]"
     },
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:q-is-field",
-      "title": "$ $ Is a Field",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "node_id": "thm:embedding-z-into-q-preserves-one",
+      "title": "Embedding Preserves One",
+      "source": "notes/embedding-z-into-q/notes-embedding-z-into-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "With the operations of \\hyperref[def:rational-operations]{Definition~\\ref*{def:rational-operations}}, the system \\[ (\\mathbb{Q},+,\\cdot,0,1) \\] is a field."
+      "excerpt": "The embedding sends integer one to rational one: \\[ \\iota(1_{\\mathbb{Z}})=1_{\\mathbb{Q}}. \\]"
     },
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:negative-exponents-agree-with-inverse-power",
-      "title": "Negative Exponents Agree with Inverse Powers",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "node_id": "thm:embedding-z-into-q-injective",
+      "title": "Embedding $ $ into $ $ Is Injective",
+      "source": "notes/embedding-z-into-q/notes-embedding-z-into-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field, let $x\\in F$ with $x\\neq 0$, and let $m,n\\in\\mathbb{Z}$. Then \\[ x^{-m}=(x^{-1})^m=(x^m)^{-1}. \\] Moreover, the usual laws of exponents continue to hold for integer exponents."
+      "excerpt": "For all $m,n\\in\\mathbb{Z}$, \\[ \\iota(m)=\\iota(n)\\Longrightarrow m=n. \\]"
     },
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:power-of-product-in-field",
-      "title": "Power of a Product in a Field",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "node_id": "thm:embedding-z-into-q-preserves-addition",
+      "title": "Embedding Preserves Addition",
+      "source": "notes/embedding-z-into-q/notes-embedding-z-into-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(F,+,\\cdot,0,1)$ be a field. Let $q,r\\in F\\setminus\\{0\\}$ and let $a\\in\\mathbb{Z}$. Then \\[ (qr)^a=q^a r^a. \\]"
+      "excerpt": "For all $m,n\\in\\mathbb{Z}$, \\[ \\iota(m+n)=\\iota(m)+\\iota(n). \\]"
     },
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:integer-exponent-addition-law",
-      "title": "Integer Exponent Addition Law",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "node_id": "thm:embedding-z-into-q-preserves-multiplication",
+      "title": "Embedding Preserves Multiplication",
+      "source": "notes/embedding-z-into-q/notes-embedding-z-into-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(F,+,\\cdot,0,1)$ be a field, let $q\\in F\\setminus\\{0\\}$, and let $a,b\\in\\mathbb{Z}$. Then \\[ q^a q^b=q^{a+b}. \\]"
+      "excerpt": "For all $m,n\\in\\mathbb{Z}$, \\[ \\iota(m\\cdot n)=\\iota(m)\\cdot\\iota(n). \\]"
     },
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:power-of-a-power-in-field",
-      "title": "Power of a Power in a Field",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "node_id": "thm:embedding-z-into-q-preserves-order",
+      "title": "Embedding Preserves Order",
+      "source": "notes/embedding-z-into-q/notes-embedding-z-into-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(F,+,\\cdot,0,1)$ be a field, let $q\\in F\\setminus\\{0\\}$, and let $a,b\\in\\mathbb{Z}$. Then \\[ (q^a)^b=q^{ab}. \\]"
+      "excerpt": "For all $m,n\\in\\mathbb{Z}$, \\[ m\\le n \\Longleftrightarrow \\iota(m)\\le\\iota(n). \\]"
     },
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:zero-product",
-      "title": "Zero product",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "node_id": "thm:z-embeds-into-q",
+      "title": "$ $ Embeds into $ $",
+      "source": "notes/embedding-z-into-q/notes-embedding-z-into-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field and let $a\\in F$. Then \\[ a\\cdot 0 = 0. \\]"
+      "excerpt": "The map $\\iota:\\mathbb{Z}\\to\\mathbb{Q}$ is an injective order-preserving ring homomorphism."
     },
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:double-negation",
-      "title": "Double negation",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "node_id": "thm:q-is-field-of-fractions-of-z",
+      "title": "$ $ Is the Field of Fractions of $ $",
+      "source": "notes/embedding-z-into-q/notes-embedding-z-into-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field and let $a\\in F$. Then \\[ -(-a) = a. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:negation-of-product",
-      "title": "Negation of a product",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $F$ be a field and let $a,b\\in F$. Then \\[ -(a\\cdot b) = (-a)\\cdot b = a\\cdot(-b). \\]"
+      "excerpt": "For every $x\\in\\mathbb{Q}$, there exist $m,n\\in\\mathbb{Z}$ with $n\\ne0_{\\mathbb{Z}}$ such that \\[ x=\\iota(m)\\cdot \\iota(n)^{-1}. \\]"
     },
     {
       "type": "missing_dependencies_block",
       "kind": "Corollary",
-      "node_id": "cor:product-of-negatives",
-      "title": "Product of negatives",
-      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "node_id": "cor:embedding-z-into-q-not-surjective",
+      "title": "The Embedding of $ $ into $ $ Is Not Surjective",
+      "source": "notes/embedding-z-into-q/notes-embedding-z-into-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field and let $a,b\\in F$. Then \\[ (-a)\\cdot(-b) = a\\cdot b. \\]"
+      "excerpt": "The image of $\\iota:\\mathbb{Z}\\to\\mathbb{Q}$ is a proper subset of \\(\\mathbb{Q}\\)."
     },
     {
       "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:additive-cancellation",
-      "title": "Additive cancellation",
+      "kind": "Corollary",
+      "node_id": "cor:zero-product-on-q",
+      "title": "Zero Product on $ $",
       "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field and let $a,b,c\\in F$. If \\[ a + c = b + c, \\] then $a = b$."
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ x\\cdot y=0_{\\mathbb{Q}} \\quad\\Longleftrightarrow\\quad x=0_{\\mathbb{Q}}\\ \\text{or}\\ y=0_{\\mathbb{Q}}. \\]"
     },
     {
       "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:multiplicative-cancellation",
-      "title": "Multiplicative cancellation",
+      "kind": "Corollary",
+      "node_id": "cor:double-negation-on-q",
+      "title": "Double Negation on $ $",
       "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field and let $a,b,c\\in F$ with $c\\neq 0$. If \\[ a\\cdot c = b\\cdot c, \\] then $a = b$."
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ -(-x)=x. \\]"
     },
     {
       "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:uniqueness-of-multiplicative-inverse",
-      "title": "Uniqueness of multiplicative inverse",
+      "kind": "Corollary",
+      "node_id": "cor:negation-of-product-on-q",
+      "title": "Negation of a Product on $ $",
       "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $F$ be a field and let $a\\in F$ with $a\\neq 0$. If $b\\in F$ satisfies $a\\cdot b = 1$, then $b = a^{-1}$."
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ (-x)\\cdot y=-(x\\cdot y) \\qquad\\text{and}\\qquad x\\cdot(-y)=-(x\\cdot y). \\]"
     },
     {
       "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:one-inverse-is-one",
-      "title": "The inverse of one is one",
+      "kind": "Corollary",
+      "node_id": "cor:product-of-negatives-on-q",
+      "title": "Product of Negatives on $ $",
       "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "In any field, \\[ 1^{-1}=1. \\]"
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ (-x)\\cdot(-y)=x\\cdot y. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:additive-cancellation-on-q",
+      "title": "Additive Cancellation on $ $",
+      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x+z=y+z \\Longrightarrow x=y. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:multiplicative-cancellation-on-q",
+      "title": "Multiplicative Cancellation on $ $",
+      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ z\\ne 0_{\\mathbb{Q}}\\land x\\cdot z=y\\cdot z \\Longrightarrow x=y. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:uniqueness-additive-inverse-on-q",
+      "title": "Uniqueness of Additive Inverses on $ $",
+      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Every additive inverse in $\\mathbb{Q}$ is unique."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:uniqueness-multiplicative-inverse-on-q",
+      "title": "Uniqueness of Multiplicative Inverses on $ $",
+      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Every multiplicative inverse of a nonzero rational number is unique."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:inverse-of-one-is-one-on-q",
+      "title": "The Inverse of One Is One on $ $",
+      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "In $\\mathbb{Q}$, \\[ 1_{\\mathbb{Q}}^{-1}=1_{\\mathbb{Q}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:inverse-of-product-on-q",
+      "title": "Inverse of a Product on $ $",
+      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all nonzero $x,y\\in\\mathbb{Q}$, \\[ (x\\cdot y)^{-1}=x^{-1}\\cdot y^{-1}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:inverse-of-inverse-on-q",
+      "title": "Inverse of an Inverse on $ $",
+      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every nonzero $x\\in\\mathbb{Q}$, \\[ (x^{-1})^{-1}=x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:integer-power-on-q",
+      "title": "Integer Power on $ $",
+      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $x\\in\\mathbb{Q}$. For $n\\in\\mathbb{W}$, define $x^n$ by the usual recursive power operation. If $x\\ne 0_{\\mathbb{Q}}$ and $n\\in\\mathbb{Z}$ is negative, define \\[ x^n:=(x^{-1})^{-n}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:exponent-addition-on-q",
+      "title": "Exponent Addition Law on $ $",
+      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every nonzero $x\\in\\mathbb{Q}$ and all $m,n\\in\\mathbb{Z}$, \\[ x^{m+n}=x^m\\cdot x^n. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:power-of-power-on-q",
+      "title": "Power of a Power on $ $",
+      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every nonzero $x\\in\\mathbb{Q}$ and all $m,n\\in\\mathbb{Z}$, \\[ (x^m)^n=x^{m\\cdot n}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:power-of-product-on-q",
+      "title": "Power of a Product on $ $",
+      "source": "notes/field-structure-of-q/notes-field-structure-of-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all nonzero $x,y\\in\\mathbb{Q}$ and every $n\\in\\mathbb{Z}$, \\[ (x\\cdot y)^n=x^n\\cdot y^n. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -2302,147 +3086,1127 @@
     },
     {
       "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:addition-on-q-classes",
+      "title": "Addition on $ $-Classes",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Define addition on representatives by \\[ [a,b]+[c,d]:=[a\\cdot d+b\\cdot c,\\ b\\cdot d]. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:addition-denominator-nonzero-q",
+      "title": "Addition Lands in $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $b\\ne 0_{\\mathbb{Z}}$ and $d\\ne 0_{\\mathbb{Z}}$, then \\[ b\\cdot d\\ne 0_{\\mathbb{Z}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:addition-on-q-respects-left-equivalence",
+      "title": "Addition Respects Fraction Equivalence on the Left",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $[a,b]=[a',b']$, then \\[ [a,b]+[c,d]=[a',b']+[c,d]. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:addition-on-q-respects-right-equivalence",
+      "title": "Addition Respects Fraction Equivalence on the Right",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $[c,d]=[c',d']$, then \\[ [a,b]+[c,d]=[a,b]+[c',d']. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:addition-on-q-respects-equivalence",
+      "title": "Addition Respects Fraction Equivalence",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $[a,b]=[a',b']$ and $[c,d]=[c',d']$, then \\[ [a,b]+[c,d]=[a',b']+[c',d']. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:q-is-ordered-field",
+      "node_id": "thm:addition-on-q-well-defined",
+      "title": "Addition on $ $ Is Well-Defined",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Addition determines a well-defined binary operation $\\mathbb{Q}\\times\\mathbb{Q}\\to\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:addition-on-q-associative",
+      "title": "Addition on $ $ Is Associative",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ (x+y)+z=x+(y+z). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:addition-on-q-commutative",
+      "title": "Addition on $ $ Is Commutative",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ x+y=y+x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:zero-left-additive-identity-on-q",
+      "title": "Zero Is a Left Additive Identity on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}+x=x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:zero-right-additive-identity-on-q",
+      "title": "Zero Is a Right Additive Identity on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ x+0_{\\mathbb{Q}}=x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:zero-additive-identity-on-q",
+      "title": "Zero Is an Additive Identity on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}+x=x \\qquad\\text{and}\\qquad x+0_{\\mathbb{Q}}=x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:negation-on-q-classes",
+      "title": "Negation on $ $-Classes",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Define negation on representatives by \\[ -[a,b]:=[-a,b]. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:negation-on-q-respects-equivalence",
+      "title": "Negation Respects Fraction Equivalence",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $[a,b]=[a',b']$, then \\[ -[a,b]=-[a',b']. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:negation-on-q-well-defined",
+      "title": "Negation on $ $ Is Well-Defined",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Negation determines a well-defined unary operation $\\mathbb{Q}\\to\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:negation-left-additive-inverse-on-q",
+      "title": "Negation Gives a Left Additive Inverse on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ (-x)+x=0_{\\mathbb{Q}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:negation-right-additive-inverse-on-q",
+      "title": "Negation Gives a Right Additive Inverse on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ x+(-x)=0_{\\mathbb{Q}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:every-rational-has-additive-inverse",
+      "title": "Every Rational Has an Additive Inverse",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$ there exists $y\\in\\mathbb{Q}$ such that \\[ x+y=0_{\\mathbb{Q}} \\qquad\\text{and}\\qquad y+x=0_{\\mathbb{Q}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:subtraction-on-q",
+      "title": "Subtraction on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For $x,y\\in\\mathbb{Q}$, define \\[ x-y:=x+(-y). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:subtraction-on-q-well-defined",
+      "title": "Subtraction on $ $ Is Well-Defined",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Subtraction determines a well-defined binary operation $\\mathbb{Q}\\times\\mathbb{Q}\\to\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:multiplication-on-q-classes",
+      "title": "Multiplication on $ $-Classes",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Define multiplication on representatives by \\[ [a,b]\\cdot[c,d]:=[a\\cdot c,\\ b\\cdot d]. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:multiplication-denominator-nonzero-q",
+      "title": "Multiplication Lands in $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $b\\ne 0_{\\mathbb{Z}}$ and $d\\ne 0_{\\mathbb{Z}}$, then \\[ b\\cdot d\\ne 0_{\\mathbb{Z}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:multiplication-on-q-respects-left-equivalence",
+      "title": "Multiplication Respects Fraction Equivalence on the Left",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $[a,b]=[a',b']$, then \\[ [a,b]\\cdot[c,d]=[a',b']\\cdot[c,d]. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:multiplication-on-q-respects-right-equivalence",
+      "title": "Multiplication Respects Fraction Equivalence on the Right",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $[c,d]=[c',d']$, then \\[ [a,b]\\cdot[c,d]=[a,b]\\cdot[c',d']. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:multiplication-on-q-respects-equivalence",
+      "title": "Multiplication Respects Fraction Equivalence",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $[a,b]=[a',b']$ and $[c,d]=[c',d']$, then \\[ [a,b]\\cdot[c,d]=[a',b']\\cdot[c',d']. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:multiplication-on-q-well-defined",
+      "title": "Multiplication on $ $ Is Well-Defined",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Multiplication determines a well-defined binary operation $\\mathbb{Q}\\times\\mathbb{Q}\\to\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:multiplication-on-q-associative",
+      "title": "Multiplication on $ $ Is Associative",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ (x\\cdot y)\\cdot z=x\\cdot(y\\cdot z). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:multiplication-on-q-commutative",
+      "title": "Multiplication on $ $ Is Commutative",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ x\\cdot y=y\\cdot x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:one-left-multiplicative-identity-on-q",
+      "title": "One Is a Left Multiplicative Identity on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ 1_{\\mathbb{Q}}\\cdot x=x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:one-right-multiplicative-identity-on-q",
+      "title": "One Is a Right Multiplicative Identity on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ x\\cdot 1_{\\mathbb{Q}}=x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:one-multiplicative-identity-on-q",
+      "title": "One Is a Multiplicative Identity on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ 1_{\\mathbb{Q}}\\cdot x=x \\qquad\\text{and}\\qquad x\\cdot 1_{\\mathbb{Q}}=x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:nonzero-predicate-well-defined-q",
+      "title": "Nonzero Predicate Is Well-Defined on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every prefraction $(a,b)\\in\\operatorname{Pre}\\mathbb{Q}$, \\[ [a,b]\\ne 0_{\\mathbb{Q}} \\quad\\Longleftrightarrow\\quad a\\ne 0_{\\mathbb{Z}}. \\] Thus nonzeroness is independent of the representative."
+    },
+    {
+      "type": "predicate_notation_in_standard_field",
+      "kind": "Lemma",
+      "node_id": "lem:nonzero-predicate-well-defined-q",
+      "title": "Nonzero Predicate Is Well-Defined on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
+      "signals": [
+        "statement_display:Pre"
+      ],
+      "fields": [
+        {
+          "field": "statement_display",
+          "predicate_names": [
+            "Pre"
+          ]
+        }
+      ],
+      "excerpt": "For every prefraction $(a,b)\\in\\operatorname{Pre}\\mathbb{Q}$, \\[ [a,b]\\ne 0_{\\mathbb{Q}} \\quad\\Longleftrightarrow\\quad a\\ne 0_{\\mathbb{Z}}. \\] Thus nonzeroness is independent of the representative."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:reciprocal-on-q-classes",
+      "title": "Reciprocal on Nonzero $ $-Classes",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For $[a,b]\\ne 0_{\\mathbb{Q}}$, define \\[ [a,b]^{-1}:=[b,a]. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:reciprocal-denominator-nonzero-q",
+      "title": "Reciprocal Lands in $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $[a,b]\\ne 0_{\\mathbb{Q}}$, then $a\\ne 0_{\\mathbb{Z}}$, so $(b,a)$ is a prefraction."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:reciprocal-on-q-respects-equivalence",
+      "title": "Reciprocal Respects Fraction Equivalence",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $[a,b]=[a',b']$ and $[a,b]\\ne 0_{\\mathbb{Q}}$, then \\[ [a,b]^{-1}=[a',b']^{-1}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:reciprocal-on-q-well-defined",
+      "title": "Reciprocal on $ $ Is Well-Defined",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Reciprocal determines a well-defined map \\[ \\mathbb{Q}\\setminus\\{0_{\\mathbb{Q}}\\}\\to\\mathbb{Q}\\setminus\\{0_{\\mathbb{Q}}\\}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:reciprocal-left-multiplicative-inverse-on-q",
+      "title": "Reciprocal Gives a Left Multiplicative Inverse on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every nonzero $x\\in\\mathbb{Q}$, \\[ x^{-1}\\cdot x=1_{\\mathbb{Q}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:reciprocal-right-multiplicative-inverse-on-q",
+      "title": "Reciprocal Gives a Right Multiplicative Inverse on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every nonzero $x\\in\\mathbb{Q}$, \\[ x\\cdot x^{-1}=1_{\\mathbb{Q}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:every-nonzero-rational-has-multiplicative-inverse",
+      "title": "Every Nonzero Rational Has a Multiplicative Inverse",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$ with $x\\ne 0_{\\mathbb{Q}}$, there exists $y\\in\\mathbb{Q}$ such that \\[ x\\cdot y=1_{\\mathbb{Q}} \\qquad\\text{and}\\qquad y\\cdot x=1_{\\mathbb{Q}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:division-on-q",
+      "title": "Division on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For $x,y\\in\\mathbb{Q}$ with $y\\ne 0_{\\mathbb{Q}}$, define \\[ x/y:=x\\cdot y^{-1}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:division-on-q-well-defined",
+      "title": "Division on $ $ Is Well-Defined",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Division determines a well-defined map \\[ \\mathbb{Q}\\times(\\mathbb{Q}\\setminus\\{0_{\\mathbb{Q}}\\})\\to\\mathbb{Q}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:left-distributivity-on-q",
+      "title": "Left Distributivity on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x\\cdot(y+z)=x\\cdot y+x\\cdot z. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:right-distributivity-on-q",
+      "title": "Right Distributivity on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ (y+z)\\cdot x=y\\cdot x+z\\cdot x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:multiplication-distributes-over-addition-on-q",
+      "title": "Multiplication Distributes over Addition on $ $",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Multiplication distributes over addition on both sides in $\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:q-additive-abelian-group",
+      "title": "$ $ Is an Additive Abelian Group",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The structure $(\\mathbb{Q},+,0_{\\mathbb{Q}})$ is an abelian group."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:q-nonzero-multiplicative-abelian-group",
+      "title": "Nonzero $ $ Is a Multiplicative Abelian Group",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The structure $(\\mathbb{Q}\\setminus\\{0_{\\mathbb{Q}}\\},\\cdot,1_{\\mathbb{Q}})$ is an abelian group."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:q-is-a-field",
+      "title": "$ $ Is a Field",
+      "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The structure $(\\mathbb{Q},+,\\cdot,0_{\\mathbb{Q}},1_{\\mathbb{Q}})$ is a field."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:positive-rational",
+      "title": "Positive Rational",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A rational number $[a,b]\\in\\mathbb{Q}$ is \\emph{positive} if \\[ a\\cdot b>0_{\\mathbb{Z}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:positivity-respects-equivalence-q",
+      "title": "Positivity Respects Fraction Equivalence on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $[a,b]=[c,d]$, then \\[ a\\cdot b>0_{\\mathbb{Z}} \\Longleftrightarrow c\\cdot d>0_{\\mathbb{Z}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:positivity-on-q-well-defined",
+      "title": "Positivity on $ $ Is Well-Defined",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The predicate ``$x$ is positive'' is well-defined on equivalence classes in $\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:strict-order-on-q",
+      "title": "Strict Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For $x,y\\in\\mathbb{Q}$, define \\[ x<y \\quad:\\Longleftrightarrow\\quad y-x \\text{ is positive}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:order-on-q",
+      "title": "Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For $x,y\\in\\mathbb{Q}$, define \\[ x\\le y \\quad:\\Longleftrightarrow\\quad x<y \\text{ or } x=y. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Proposition",
+      "node_id": "prop:product-of-positives-is-positive-q",
+      "title": "Product of Positives Is Positive on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<x\\land 0_{\\mathbb{Q}}<y \\Longrightarrow 0_{\\mathbb{Q}}<x\\cdot y. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:sign-trichotomy-on-q",
+      "title": "Sign Trichotomy on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, exactly one of \\[ x<0_{\\mathbb{Q}},\\qquad x=0_{\\mathbb{Q}},\\qquad 0_{\\mathbb{Q}}<x \\] holds."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:trichotomy-on-q",
+      "title": "Trichotomy on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, exactly one of \\[ x<y,\\qquad x=y,\\qquad y<x \\] holds."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:strict-order-on-q-irreflexive",
+      "title": "Strict Order on $ $ Is Irreflexive",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, not $x<x$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:strict-order-on-q-asymmetric",
+      "title": "Strict Order on $ $ Is Asymmetric",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ x<y \\Longrightarrow \\neg(y<x). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:strict-order-on-q-transitive",
+      "title": "Strict Order on $ $ Is Transitive",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x<y\\land y<z \\Longrightarrow x<z. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:order-on-q-reflexive",
+      "title": "Order on $ $ Is Reflexive",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, $x\\le x$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:order-on-q-antisymmetric",
+      "title": "Order on $ $ Is Antisymmetric",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ x\\le y\\land y\\le x \\Longrightarrow x=y. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:order-on-q-transitive",
+      "title": "Order on $ $ Is Transitive",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x\\le y\\land y\\le z \\Longrightarrow x\\le z. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:order-on-q-total",
+      "title": "Order on $ $ Is Total",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ x\\le y\\text{ or }y\\le x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:q-totally-ordered-set",
+      "title": "$ $ Is a Totally Ordered Set",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The ordered pair $(\\mathbb{Q},\\le)$ is a totally ordered set."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:left-addition-preserves-strict-order-on-q",
+      "title": "Left Addition Preserves Strict Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x<y \\Longrightarrow z+x<z+y. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:right-addition-preserves-strict-order-on-q",
+      "title": "Right Addition Preserves Strict Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x<y \\Longrightarrow x+z<y+z. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:addition-preserves-strict-order-on-q",
+      "title": "Addition Preserves Strict Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Addition preserves strict order on both sides in $\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:left-addition-preserves-order-on-q",
+      "title": "Left Addition Preserves Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x\\le y \\Longrightarrow z+x\\le z+y. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:right-addition-preserves-order-on-q",
+      "title": "Right Addition Preserves Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x\\le y \\Longrightarrow x+z\\le y+z. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:addition-preserves-order-on-q",
+      "title": "Addition Preserves Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Addition preserves non-strict order on both sides in $\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:addition-reflects-order-on-q",
+      "title": "Addition Reflects Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Addition by a fixed rational reflects both strict and non-strict order."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:left-positive-multiplication-preserves-strict-order-on-q",
+      "title": "Left Multiplication by Positives Preserves Strict Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<z\\land x<y \\Longrightarrow z\\cdot x<z\\cdot y. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:right-positive-multiplication-preserves-strict-order-on-q",
+      "title": "Right Multiplication by Positives Preserves Strict Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<z\\land x<y \\Longrightarrow x\\cdot z<y\\cdot z. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:positive-multiplication-preserves-strict-order-on-q",
+      "title": "Multiplication by Positives Preserves Strict Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Multiplication by a positive rational preserves strict order on both sides."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:left-positive-multiplication-preserves-order-on-q",
+      "title": "Left Multiplication by Positives Preserves Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<z\\land x\\le y \\Longrightarrow z\\cdot x\\le z\\cdot y. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:right-positive-multiplication-preserves-order-on-q",
+      "title": "Right Multiplication by Positives Preserves Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<z\\land x\\le y \\Longrightarrow x\\cdot z\\le y\\cdot z. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:positive-multiplication-preserves-order-on-q",
+      "title": "Multiplication by Positives Preserves Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Multiplication by a positive rational preserves non-strict order on both sides."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:negative-multiplication-reverses-strict-order-on-q",
+      "title": "Multiplication by Negatives Reverses Strict Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ z<0_{\\mathbb{Q}}\\land x<y \\Longrightarrow z\\cdot y<z\\cdot x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:negative-multiplication-reverses-order-on-q",
+      "title": "Multiplication by Negatives Reverses Order on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ z<0_{\\mathbb{Q}}\\land x\\le y \\Longrightarrow z\\cdot y\\le z\\cdot x. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:sign-of-reciprocal-q",
+      "title": "Sign of a Reciprocal on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every nonzero $x\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<x \\Longrightarrow 0_{\\mathbb{Q}}<x^{-1}, \\qquad x<0_{\\mathbb{Q}} \\Longrightarrow x^{-1}<0_{\\mathbb{Q}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:reciprocal-reverses-order-on-positives-q",
+      "title": "Reciprocal Reverses Order on Positives in $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<x<y \\Longrightarrow 0_{\\mathbb{Q}}<y^{-1}<x^{-1}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:absolute-value-on-q",
+      "title": "Absolute Value on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For $x\\in\\mathbb{Q}$, define \\[ |x|:= \\begin{cases} x, & 0_{\\mathbb{Q}}\\le x,\\\\ -x, & x<0_{\\mathbb{Q}}. \\end{cases} \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-nonnegative-on-q",
+      "title": "Absolute Value Is Nonnegative on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}\\le |x|. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-zero-iff-on-q",
+      "title": "Absolute Value Vanishes Only at Zero on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ |x|=0_{\\mathbb{Q}} \\quad\\Longleftrightarrow\\quad x=0_{\\mathbb{Q}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-multiplicative-on-q",
+      "title": "Absolute Value Is Multiplicative on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ |x\\cdot y|=|x|\\cdot |y|. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:triangle-inequality-on-q",
+      "title": "Triangle Inequality on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ |x+y|\\le |x|+|y|. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-of-reciprocal-q",
+      "title": "Absolute Value of a Reciprocal on $ $",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every nonzero $x\\in\\mathbb{Q}$, \\[ |x^{-1}|=|x|^{-1}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:q-is-an-ordered-field",
       "title": "$ $ Is an Ordered Field",
       "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "With its usual order, the system \\[ (\\mathbb{Q},+,\\cdot,0,1,<) \\] is an ordered field."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:squares-nonnegative",
-      "title": "Squares Are Nonnegative",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "In any ordered field $F$, for every $a\\in F$, \\[ a^2\\ge 0. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:inverse-positive",
-      "title": "Positive Elements Have Positive Inverses",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "In any ordered field, if $a>0$, then $a^{-1}>0$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:multiply-positive",
-      "title": "Multiplication by a Positive Element Preserves Order",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "In any ordered field, if $a<b$ and $c>0$, then \\[ ac<bc. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:multiply-negative",
-      "title": "Multiplication by a Negative Element Reverses Order",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "In any ordered field, if $a<b$ and $c<0$, then \\[ ac>bc. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:one-positive",
-      "title": "$1$ Is Positive",
-      "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "In any ordered field, \\[ 1>0. \\]"
+      "excerpt": "The structure \\[ (\\mathbb{Q},+,\\cdot,0_{\\mathbb{Q}},1_{\\mathbb{Q}},\\le) \\] is an ordered field."
     },
     {
       "type": "missing_dependencies_block",
       "kind": "Corollary",
-      "node_id": "cor:n-positive",
-      "title": "Natural Numbers Are Positive",
+      "node_id": "cor:ordered-field-laws-on-q",
+      "title": "Ordered Field Laws Hold on $ $",
       "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "In any ordered field, for every natural number $n$, \\[ n>0. \\]"
+      "excerpt": "Every theorem that depends only on the ordered-field axioms applies to $\\mathbb{Q}$ with its constructed operations and order."
     },
     {
       "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:positive-fraction-iff-positive-product",
-      "title": "Positivity of a Quotient via the Product $ab$",
+      "kind": "Corollary",
+      "node_id": "cor:squares-nonnegative-on-q",
+      "title": "Squares Are Nonnegative on $ $",
       "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For any $a,b\\in F$ with $b\\neq 0$, \\[ 0<\\frac{a}{b} \\quad\\Longleftrightarrow\\quad 0<a\\cdot b. \\]"
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}\\le x^2. \\]"
     },
     {
       "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:fraction-order-comparison-general",
-      "title": "General Fraction Comparison in an Ordered Field",
+      "kind": "Corollary",
+      "node_id": "cor:one-positive-on-q",
+      "title": "One Is Positive in $ $",
       "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For any $a,b,c,d\\in F$ with $b\\neq 0$ and $d\\neq 0$, \\[ \\frac{a}{b}<\\frac{c}{d} \\quad\\Longleftrightarrow\\quad (a\\cdot d)\\cdot(b\\cdot d)<(b\\cdot c)\\cdot(b\\cdot d). \\]"
+      "excerpt": "In $\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<1_{\\mathbb{Q}}. \\]"
     },
     {
       "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:fraction-order-comparison-positive-denominator-product",
-      "title": "Fraction Comparison When the Denominator Product Is Positive",
+      "kind": "Corollary",
+      "node_id": "cor:natural-numbers-positive-on-q",
+      "title": "Natural Numbers Are Positive in $ $",
       "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For any $a,b,c,d\\in F$, if $b\\neq 0$, $d\\neq 0$, and $0<b\\cdot d$, then \\[ \\frac{a}{b}<\\frac{c}{d} \\quad\\Longleftrightarrow\\quad a\\cdot d<b\\cdot c. \\]"
+      "excerpt": "Every natural number embedded in $\\mathbb{Q}$ is positive."
     },
     {
       "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:reciprocal-order-for-positive-elements",
-      "title": "Reciprocal Order for Positive Elements",
+      "kind": "Corollary",
+      "node_id": "cor:positive-rationals-have-positive-inverses",
+      "title": "Positive Rationals Have Positive Inverses",
       "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "In any ordered field, if $0<d<b$, then \\[ 0<\\frac{1}{b}<\\frac{1}{d}. \\] Conversely, if $0<1/b<1/d$, then $0<d<b$."
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<x \\Longrightarrow 0_{\\mathbb{Q}}<x^{-1}. \\]"
     },
     {
       "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:ordered-fields-are-densely-ordered",
-      "title": "Ordered Fields Are Densely Ordered",
+      "kind": "Corollary",
+      "node_id": "cor:fraction-comparison-on-q",
+      "title": "Fraction Comparison in $ $",
       "source": "notes/ordered-field-structure-of-q/notes-ordered-field-structure-of-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Every ordered field is densely ordered by its order relation."
+      "excerpt": "For rational classes with positive denominator product, \\[ [a,b]<[c,d] \\quad\\Longleftrightarrow\\quad a\\cdot d<c\\cdot b. \\]"
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -2711,14 +4475,98 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:sqrt2-irrational",
-      "title": "No Rational Number Has Square $2$",
+      "node_id": "thm:no-rational-square-root-of-two",
+      "title": "No Rational Square Root of Two",
       "source": "notes/rational-gaps/notes-rational-gaps.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "There is no rational number whose square is $2$."
+      "excerpt": "There is no rational number $q\\in\\mathbb{Q}$ such that \\[ q\\cdot q=2_{\\mathbb{Q}}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:gap-set-q",
+      "title": "The Gap Set in $ $",
+      "source": "notes/rational-gaps/notes-rational-gaps.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Define \\[ S:=\\{q\\in\\mathbb{Q}:0_{\\mathbb{Q}}<q\\ \\text{and}\\ q\\cdot q<2_{\\mathbb{Q}}\\}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Proposition",
+      "node_id": "prop:gap-set-bounded-above-q",
+      "title": "The Gap Set Is Bounded Above in $ $",
+      "source": "notes/rational-gaps/notes-rational-gaps.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The set $S$ is nonempty and bounded above in $\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:gap-set-no-rational-supremum-q",
+      "title": "The Square-Two Gap Has No Rational Supremum",
+      "source": "notes/rational-gaps/notes-rational-gaps.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The set $S$ has no least upper bound in $\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Corollary",
+      "node_id": "cor:q-order-incomplete",
+      "title": "$ $ Is Order-Incomplete",
+      "source": "notes/rational-gaps/notes-rational-gaps.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The ordered field $\\mathbb{Q}$ is not order-complete: there exists a nonempty bounded-above subset of $\\mathbb{Q}$ with no supremum in $\\mathbb{Q}$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:cauchy-sequence-in-q",
+      "title": "Cauchy Sequence in $ $",
+      "source": "notes/rational-gaps/notes-rational-gaps.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A sequence $(x_n)$ in $\\mathbb{Q}$ is Cauchy if \\[ \\forall\\varepsilon\\in\\mathbb{Q}\\, \\left( 0_{\\mathbb{Q}}<\\varepsilon \\Longrightarrow \\exists N\\in\\mathbb{N}\\, \\forall m,n\\ge N\\, \\left|x_m-x_n\\right|<\\varepsilon \\right). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:null-sequence-in-q",
+      "title": "Null Sequence in $ $",
+      "source": "notes/rational-gaps/notes-rational-gaps.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A sequence $(x_n)$ in $\\mathbb{Q}$ is null if \\[ \\forall\\varepsilon\\in\\mathbb{Q}\\, \\left( 0_{\\mathbb{Q}}<\\varepsilon \\Longrightarrow \\exists N\\in\\mathbb{N}\\, \\forall n\\ge N\\, \\left|x_n\\right|<\\varepsilon \\right). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:rational-limit-unique",
+      "title": "Rational Limits Are Unique",
+      "source": "notes/rational-gaps/notes-rational-gaps.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A convergent sequence in $\\mathbb{Q}$ has at most one rational limit."
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -2806,10 +4654,34 @@
     },
     {
       "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:mediant-inequality",
+      "missing_target_id": "thm:q-is-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/linear-approximation-in-q/notes-mediant.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
       "source_node_id": "lem:sb-denom-growth",
       "missing_target_id": "thm:induction-principle-for-peano-system",
       "relationship_kind": "depends_on",
       "source": "notes/linear-approximation-in-q/stern-brocot.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "cor:sb-limit-irrational",
+      "missing_target_id": "thm:sqrt2-irrational",
+      "relationship_kind": "depends_on",
+      "source": "notes/linear-approximation-in-q/stern-brocot.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:limit-unique-q",
+      "missing_target_id": "thm:q-is-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/nonlinear-approximation-in-q/notes-problems-in-q.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {

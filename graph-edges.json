@@ -1,15 +1,5 @@
 [
   {
-    "from": "cor:n-positive",
-    "to": "def:ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:n-positive",
-    "to": "thm:one-positive",
-    "kind": "depends_on"
-  },
-  {
     "from": "cor:q-dense-in-itself",
     "to": "thm:between-any-two-rationals-is-a-rational",
     "kind": "depends_on"
@@ -30,11 +20,6 @@
     "kind": "depends_on"
   },
   {
-    "from": "cor:sb-limit-irrational",
-    "to": "thm:sqrt2-irrational",
-    "kind": "depends_on"
-  },
-  {
     "from": "cor:sb-path-limit",
     "to": "prop:sb-unique-point",
     "kind": "depends_on"
@@ -42,16 +27,6 @@
   {
     "from": "def:bounded-sequence-q",
     "to": "def:rational-sequence",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:rational-operations",
-    "to": "thm:q-is-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:rational-operations",
-    "to": "thm:q-is-integral-domain",
     "kind": "depends_on"
   },
   {
@@ -166,7 +141,7 @@
   },
   {
     "from": "thm:dyadic-rationals-are-rational",
-    "to": "def:rational-numbers",
+    "to": "def:rationals",
     "kind": "depends_on"
   },
   {
@@ -185,118 +160,13 @@
     "kind": "depends_on"
   },
   {
-    "from": "thm:fraction-order-comparison-general",
-    "to": "def:ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:fraction-order-comparison-general",
-    "to": "thm:multiply-negative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:fraction-order-comparison-general",
-    "to": "thm:multiply-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:fraction-order-comparison-positive-denominator-product",
-    "to": "thm:fraction-order-comparison-general",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:fraction-order-comparison-positive-denominator-product",
-    "to": "thm:multiply-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:inverse-positive",
-    "to": "def:ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:inverse-positive",
-    "to": "thm:one-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:inverse-positive",
-    "to": "thm:squares-nonnegative",
-    "kind": "depends_on"
-  },
-  {
     "from": "thm:limit-unique-q",
     "to": "def:convergent-rational-sequence",
     "kind": "depends_on"
   },
   {
-    "from": "thm:limit-unique-q",
-    "to": "thm:q-is-ordered-field",
-    "kind": "depends_on"
-  },
-  {
     "from": "thm:mediant-inequality",
     "to": "def:mediant",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:mediant-inequality",
-    "to": "thm:q-is-ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiply-negative",
-    "to": "def:ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiply-negative",
-    "to": "thm:multiply-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:multiply-positive",
-    "to": "def:ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:positive-fraction-iff-positive-product",
-    "to": "def:ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:positive-fraction-iff-positive-product",
-    "to": "thm:inverse-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:q-is-field",
-    "to": "def:rational-operations",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:q-is-integral-domain",
-    "to": "def:rational-operations",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:reciprocal-order-for-positive-elements",
-    "to": "thm:inverse-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:reciprocal-order-for-positive-elements",
-    "to": "thm:multiply-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:squares-nonnegative",
-    "to": "def:ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:squares-nonnegative",
-    "to": "thm:q-is-ordered-field",
     "kind": "depends_on"
   },
   {
