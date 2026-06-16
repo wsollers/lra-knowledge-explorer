@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T05:39:47.982052+00:00",
+  "generated_at": "2026-06-16T05:40:37.559320+00:00",
   "chapters": [
     "peano-systems",
     "natural-numbers",
@@ -1986,7 +1986,7 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Definition",
-      "node_id": "def:ordered-field",
+      "node_id": "def:rational-ordered-field",
       "title": "Ordered field",
       "source": "notes/defining-order-on-q/notes-defining-order-on-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",

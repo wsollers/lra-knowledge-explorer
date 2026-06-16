@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-06-16T05:39:47.947786+00:00",
+    "generated_at": "2026-06-16T05:40:37.528920+00:00",
     "chapters": [
       "peano-systems",
       "natural-numbers",
@@ -9304,7 +9304,7 @@
       "text_preview": "[Ordered integral domain] An is an integral domain \\[ (F,+, ,0,1) \\] together with a relation $<$ on $F$ such that: for all $a,b F$, exactly one of the relations \\[ a<b, a=b, b<a \\] holds; if $a<b$, then for every $c F$,"
     },
     {
-      "id": "def:ordered-field",
+      "id": "def:rational-ordered-field",
       "kind": "Definition",
       "name": "Ordered field",
       "deck": "Defining Order On Q",
@@ -9351,15 +9351,15 @@
       "equivalent_to_titles": [],
       "implies_titles": [],
       "dependencies": [],
-      "raw_latex_b64": "XGJlZ2lue2RlZmluaXRpb259W09yZGVyZWQgZmllbGRdClxsYWJlbHtkZWY6b3JkZXJlZC1maWVsZH0KQW4gXGVtcGh7b3JkZXJlZCBmaWVsZH0gaXMgYSBmaWVsZApcWwooRiwrLFxjZG90LDAsMSkKXF0KdG9nZXRoZXIgd2l0aCBhIHJlbGF0aW9uICQ8JCBvbiAkRiQgbWFraW5nICRGJCBpbnRvIGFuIG9yZGVyZWQgaW50ZWdyYWwKZG9tYWluLgpcZW5ke2RlZmluaXRpb259",
-      "body_latex_b64": "ClxsYWJlbHtkZWY6b3JkZXJlZC1maWVsZH0KQW4gXGVtcGh7b3JkZXJlZCBmaWVsZH0gaXMgYSBmaWVsZApcWwooRiwrLFxjZG90LDAsMSkKXF0KdG9nZXRoZXIgd2l0aCBhIHJlbGF0aW9uICQ8JCBvbiAkRiQgbWFraW5nICRGJCBpbnRvIGFuIG9yZGVyZWQgaW50ZWdyYWwKZG9tYWluLgo=",
+      "raw_latex_b64": "XGJlZ2lue2RlZmluaXRpb259W09yZGVyZWQgZmllbGRdClxsYWJlbHtkZWY6cmF0aW9uYWwtb3JkZXJlZC1maWVsZH0KQW4gXGVtcGh7b3JkZXJlZCBmaWVsZH0gaXMgYSBmaWVsZApcWwooRiwrLFxjZG90LDAsMSkKXF0KdG9nZXRoZXIgd2l0aCBhIHJlbGF0aW9uICQ8JCBvbiAkRiQgbWFraW5nICRGJCBpbnRvIGFuIG9yZGVyZWQgaW50ZWdyYWwKZG9tYWluLgpcZW5ke2RlZmluaXRpb259",
+      "body_latex_b64": "ClxsYWJlbHtkZWY6cmF0aW9uYWwtb3JkZXJlZC1maWVsZH0KQW4gXGVtcGh7b3JkZXJlZCBmaWVsZH0gaXMgYSBmaWVsZApcWwooRiwrLFxjZG90LDAsMSkKXF0KdG9nZXRoZXIgd2l0aCBhIHJlbGF0aW9uICQ8JCBvbiAkRiQgbWFraW5nICRGJCBpbnRvIGFuIG9yZGVyZWQgaW50ZWdyYWwKZG9tYWluLgo=",
       "title_latex_b64": "T3JkZXJlZCBmaWVsZA==",
       "proof_raw_latex_b64": null,
       "remark_blocks": [],
       "expositions": [],
       "proof_file_blocks": [],
       "seed_labels": [
-        "def:ordered-field"
+        "def:rational-ordered-field"
       ],
       "seed_proof_refs": [],
       "seed_theorem_refs": [],
