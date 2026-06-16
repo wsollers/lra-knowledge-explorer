@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T05:46:21.037385+00:00",
+  "generated_at": "2026-06-16T05:55:06.852566+00:00",
   "chapters": [
     "peano-systems",
     "natural-numbers",
@@ -9,7 +9,7 @@
     "continuity",
     "differentiation"
   ],
-  "error_count": 613,
+  "error_count": 611,
   "errors": [
     {
       "type": "multiple_primary_statements_in_box",
@@ -1934,30 +1934,6 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "In $\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}\\ne 1_{\\mathbb{Q}}. \\]"
-    },
-    {
-      "type": "multiple_primary_statements_in_box",
-      "kind": "Definition",
-      "node_id": "def:positive-cone",
-      "title": "Positive cone",
-      "source": "notes/defining-order-on-q/notes-defining-order-on-q.tex",
-      "message": "Extracted theorem/definition box appears to contain more than one primary statement. Extraction was preserved, but the source should be split into separate boxes and re-extracted.",
-      "signals": [
-        "latex_list_with_multiple_items:3"
-      ],
-      "excerpt": "Let $F$ be a field. A subset $P\\subset F$ is called a \\emph{positive cone} if it satisfies: \\begin{enumerate} \\item if $a,b\\in P$, then $a+b\\in P$; \\item if $a,b\\in P$, then $ab\\in P$; \\item for every $a\\in F$, exactly one of the following holds: \\[ a\\in P, \\qquad a=0, \\qquad -a\\in P. \\] \\end{enumerate} Define the order relation by \\[ a<b \\iff b-a\\in P. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:positive-cone",
-      "title": "Positive cone",
-      "source": "notes/defining-order-on-q/notes-defining-order-on-q.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $F$ be a field. A subset $P\\subset F$ is called a \\emph{positive cone} if it satisfies: \\begin{enumerate} \\item if $a,b\\in P$, then $a+b\\in P$; \\item if $a,b\\in P$, then $ab\\in P$; \\item for every $a\\in F$, exactly one of the following holds: \\[ a\\in P, \\qquad a=0, \\qquad -a\\in P. \\] \\end{enumerate} Define the order relation by \\[ a<b \\iff b-a\\in P. \\]"
     },
     {
       "type": "multiple_primary_statements_in_box",
