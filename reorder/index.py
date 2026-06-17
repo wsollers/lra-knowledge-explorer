@@ -65,13 +65,26 @@ def title_of(n: dict) -> str:
 
 
 def load_chapter_volumes() -> dict:
+    """Return a flat {chapter: volume-label} map.
+
+    Accepts either a flat JSON object ({"bounding": "iii"}) or the richer schema
+    with a nested "chapter_to_volume" block whose values may be full dir names
+    ("volume-iii"); the "volume-" prefix is stripped to a bare label.
+    """
     p = HERE / "chapter-volumes.json"
     if not p.exists():
         return {}
     try:
-        return json.loads(p.read_text(encoding="utf-8"))
+        data = json.loads(p.read_text(encoding="utf-8"))
     except Exception:
         return {}
+    raw = data.get("chapter_to_volume", data) if isinstance(data, dict) else {}
+    out = {}
+    for chap, vol in raw.items():
+        if not isinstance(vol, str):
+            continue
+        out[chap] = vol[len("volume-"):] if vol.startswith("volume-") else vol
+    return out
 
 
 def main() -> None:
