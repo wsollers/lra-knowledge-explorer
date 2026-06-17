@@ -1,0 +1,18 @@
+{
+  "definitional_roots": [
+    "def:signature",
+    "def:truth-value-propositional-logic",
+    "def:propositional-language"
+  ],
+  "accepted_leaf_definitions": {
+    "_example:def:variable": {
+      "reason": "Primitive syntactic object; legitimately has no dependencies."
+    }
+  },
+  "well_definedness_dependencies": {
+    "_example:def:integer-addition": {
+      "obligation": "thm:integer-addition-well-defined",
+      "reason": "Quotient operation; needs representative-independence before it names a function."
+    }
+  }
+}
