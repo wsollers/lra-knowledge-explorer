@@ -1,5 +1,290 @@
 [
   {
+    "from": "def:canonical-conjunctive-normal-form-propositional-logic",
+    "to": "def:truth-table-row-clause-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:canonical-conjunctive-normal-form-propositional-logic",
+    "to": "thm:canonical-conjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:canonical-disjunctive-normal-form-propositional-logic",
+    "to": "def:truth-table-row-conjunction-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:canonical-disjunctive-normal-form-propositional-logic",
+    "to": "thm:canonical-disjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:clause-propositional-logic",
+    "to": "def:conjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:clause-propositional-logic",
+    "to": "def:elementary-disjunction-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complementary-literals-propositional-logic",
+    "to": "thm:dnf-satisfiability-criterion-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:conjunctive-normal-form-propositional-logic",
+    "to": "def:clause-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:conjunctive-normal-form-propositional-logic",
+    "to": "thm:existence-conjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:conjunctive-normal-form-propositional-logic",
+    "to": "thm:normal-form-semantic-classification-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:contingency-propositional-logic",
+    "to": "thm:normal-form-semantic-classification-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:contradiction-propositional-logic",
+    "to": "thm:normal-form-semantic-classification-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:disjunctive-normal-form-propositional-logic",
+    "to": "def:elementary-conjunction-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:disjunctive-normal-form-propositional-logic",
+    "to": "thm:dnf-satisfiability-criterion-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:disjunctive-normal-form-propositional-logic",
+    "to": "thm:existence-disjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:disjunctive-normal-form-propositional-logic",
+    "to": "thm:normal-form-semantic-classification-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:elementary-conjunction-propositional-logic",
+    "to": "def:disjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:elementary-conjunction-propositional-logic",
+    "to": "def:literal-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:elementary-conjunction-propositional-logic",
+    "to": "def:minterm-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:elementary-conjunction-propositional-logic",
+    "to": "def:term-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:elementary-disjunction-propositional-logic",
+    "to": "def:clause-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:elementary-disjunction-propositional-logic",
+    "to": "def:literal-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:elementary-disjunction-propositional-logic",
+    "to": "def:maxterm-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:literal-propositional-logic",
+    "to": "def:elementary-conjunction-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:literal-propositional-logic",
+    "to": "def:elementary-disjunction-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:logical-equivalence-propositional-logic",
+    "to": "thm:canonical-conjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:logical-equivalence-propositional-logic",
+    "to": "thm:canonical-disjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:maxterm-propositional-logic",
+    "to": "def:elementary-disjunction-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:minterm-propositional-logic",
+    "to": "def:elementary-conjunction-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:satisfiable-formula-propositional-logic",
+    "to": "thm:dnf-satisfiability-criterion-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:satisfiable-formula-propositional-logic",
+    "to": "thm:normal-form-semantic-classification-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:tautology-propositional-logic",
+    "to": "thm:normal-form-semantic-classification-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:term-propositional-logic",
+    "to": "def:elementary-conjunction-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:truth-table-propositional-logic",
+    "to": "def:truth-table-row-clause-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:truth-table-propositional-logic",
+    "to": "def:truth-table-row-conjunction-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:truth-table-row-clause-propositional-logic",
+    "to": "def:canonical-conjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:truth-table-row-clause-propositional-logic",
+    "to": "def:truth-table-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:truth-table-row-conjunction-propositional-logic",
+    "to": "def:canonical-disjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:truth-table-row-conjunction-propositional-logic",
+    "to": "def:truth-table-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:canonical-conjunctive-normal-form-propositional-logic",
+    "to": "def:canonical-conjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:canonical-conjunctive-normal-form-propositional-logic",
+    "to": "def:logical-equivalence-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:canonical-disjunctive-normal-form-propositional-logic",
+    "to": "def:canonical-disjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:canonical-disjunctive-normal-form-propositional-logic",
+    "to": "def:logical-equivalence-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:dnf-satisfiability-criterion-propositional-logic",
+    "to": "def:complementary-literals-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:dnf-satisfiability-criterion-propositional-logic",
+    "to": "def:disjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:dnf-satisfiability-criterion-propositional-logic",
+    "to": "def:satisfiable-formula-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:existence-conjunctive-normal-form-propositional-logic",
+    "to": "def:conjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:existence-disjunctive-normal-form-propositional-logic",
+    "to": "def:disjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "def:conjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "def:contingency-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "def:contradiction-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "def:disjunctive-normal-form-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "def:satisfiable-formula-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "def:tautology-propositional-logic",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:binary-closure",
+    "to": "def:binary-arithmetic-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:unary-closure",
+    "to": "def:unary-arithmetic-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:equivalence-class",
+    "to": "def:equivalence-relation",
+    "kind": "depends_on"
+  },
+  {
     "from": "cor:q-dense-in-itself",
     "to": "thm:between-any-two-rationals-is-a-rational",
     "kind": "depends_on"
@@ -192,6 +477,251 @@
   {
     "from": "thm:subsequence-convergence-q",
     "to": "def:subsequence-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:absolute-value",
+    "to": "thm:absolute-value-bounds",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:absolute-value",
+    "to": "thm:absolute-value-lt-iff",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:absolute-value",
+    "to": "thm:absolute-value-nonneg",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:absolute-value",
+    "to": "thm:absolute-value-product",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:absolute-value",
+    "to": "thm:absolute-value-quotient",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:absolute-value",
+    "to": "thm:absolute-value-self-or-neg",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:absolute-value",
+    "to": "thm:absolute-value-sum-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:absolute-value",
+    "to": "thm:absolute-value-symmetric",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:absolute-value",
+    "to": "thm:absolute-value-zero-iff-zero",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:absolute-value",
+    "to": "thm:reverse-triangle-inequality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:absolute-value-le-iff",
+    "to": "thm:absolute-value-lt-iff",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:absolute-value-nonneg",
+    "to": "thm:absolute-value-bounds",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:absolute-value-nonneg",
+    "to": "thm:absolute-value-zero-iff-zero",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:absolute-value-product",
+    "to": "thm:absolute-value-quotient",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:absolute-value-symmetric",
+    "to": "thm:reverse-triangle-inequality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:absolute-value-zero-iff-zero",
+    "to": "thm:absolute-value-quotient",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-add-both-sides",
+    "to": "thm:ineq-add-inequalities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-add-both-sides",
+    "to": "thm:ineq-mixed-add",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-add-both-sides",
+    "to": "thm:ineq-nonstrict-add-both-sides",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-add-inequalities",
+    "to": "thm:ineq-square-monotone",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-multiply-positive",
+    "to": "thm:ineq-nonstrict-multiply-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-multiply-positive",
+    "to": "thm:ineq-reciprocal-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-multiply-positive",
+    "to": "thm:ineq-square-monotone",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-nonstrict-add-both-sides",
+    "to": "thm:ineq-mixed-add",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-nonstrict-add-both-sides",
+    "to": "thm:ineq-nonstrict-add-inequalities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-nonstrict-multiply-positive",
+    "to": "thm:ineq-nonstrict-multiply-nonneg",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-reciprocal-positive",
+    "to": "thm:ineq-reciprocal-flip",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-square-monotone",
+    "to": "thm:ineq-am-gm-two",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-square-monotone",
+    "to": "thm:ineq-square-root-monotone",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-square-root-monotone",
+    "to": "thm:ineq-am-gm-two",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-transitivity-mixed",
+    "to": "thm:ineq-mixed-add",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-transitivity-strict",
+    "to": "thm:ineq-add-inequalities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-transitivity-strict",
+    "to": "thm:ineq-transitivity-mixed",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:natural-number-model",
+    "to": "def:arithmetic-signature",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rational-field-model",
+    "to": "def:arithmetic-signature",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:bottom-element",
+    "to": "def:lifting",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:co-lifting",
+    "to": "def:top-element",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:lattice-chain",
+    "to": "def:lattice-order-total-order",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:lattice-order-embedding",
+    "to": "def:order-isomorphism",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:lattice-order-partial-order",
+    "to": "def:lattice-order-total-order",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:lattice-order-total-order",
+    "to": "def:lattice-chain",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:lattice-order-total-order",
+    "to": "def:lattice-order-partial-order",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:lifting",
+    "to": "def:bottom-element",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:order-isomorphism",
+    "to": "def:lattice-order-embedding",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:order-isomorphism",
+    "to": "prop:predicates-power-sets-iso",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:partial-map",
+    "to": "def:total-map",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:top-element",
+    "to": "def:co-lifting",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:total-map",
+    "to": "def:partial-map",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:predicates-power-sets-iso",
+    "to": "def:order-isomorphism",
     "kind": "depends_on"
   }
 ]
