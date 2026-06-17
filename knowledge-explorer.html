@@ -507,7 +507,11 @@ function renderDetails(n){
     blocks.push(`<div class="card proof-panel"><div class="label">${label}</div><div class="value"><button class="link-button" data-open-proofs="${esc(n.id)}">${buttonText}</button>${mineCount?` <span class="tiny">${mineCount} vault attempt${mineCount===1?'':'s'}</span>`:''}</div></div>`);
   }
   addProof('Proof sketch',n.proof_sketch);
-  addChips('Depends on',n.depends_on_ids||n.dependency_refs,'dep');
+  const _outEdges=(state.edges||[]).filter(e=>e.from===n.id);
+  const _depIds=_outEdges.filter(e=>normalizeEdgeKind(e.kind)==='depends_on').map(e=>e.to);
+  const _proofDepIds=_outEdges.filter(e=>normalizeEdgeKind(e.kind)==='proof_depends_on').map(e=>e.to);
+  addChips('Depends on',_depIds.length?_depIds:(n.depends_on_ids||n.dependency_refs),'dep');
+  addChips('Proof depends on',_proofDepIds,'dep');
   addChips('Used by',n.used_by_ids,'use');
   add('Source',n.source||n.source_path);
   add('Proof source',n.proof_source||n.proof_source_path);
