@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-06-17T13:57:39.212858+00:00",
+    "generated_at": "2026-06-17T14:02:24.803970+00:00",
     "chapters": [
       "axiom-systems",
       "predicate-logic",
@@ -47,9 +47,9 @@
       "linear-algebra",
       "set-algebra"
     ],
-    "node_count": 1834,
-    "edge_count": 145,
-    "error_count": 2126,
+    "node_count": 1836,
+    "edge_count": 154,
+    "error_count": 2124,
     "schema_version": "0.4",
     "script": "run_extraction.py"
   },
@@ -967,9 +967,9 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "definitional_root": false,
-      "is_root": false,
-      "root_kind": "",
+      "definitional_root": true,
+      "is_root": true,
+      "root_kind": "definitional",
       "depends_on_titles": [],
       "used_by_titles": [],
       "prereq_titles": [],
@@ -5745,7 +5745,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:free-for",
+        "def:subst-notation"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -5769,7 +5772,10 @@
       "definitional_root": false,
       "is_root": false,
       "root_kind": "",
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Free for Substitution",
+        "Substitution Notation"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -6013,7 +6019,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:free-for",
+        "def:subst-notation"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -6037,7 +6046,10 @@
       "definitional_root": false,
       "is_root": false,
       "root_kind": "",
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Free for Substitution",
+        "Substitution Notation"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -6125,6 +6137,79 @@
       "seed_proof_return_targets": [],
       "env_name": "definition",
       "text_preview": "[Atomic Formula] An of a first-order language \\( L\\) is a string of the form \\[ P(t_1, ,t_n), \\] where \\(P\\) is an \\(n\\)-ary predicate symbol and \\(t_1, ,t_n\\) are terms."
+    },
+    {
+      "id": "def:formula",
+      "kind": "Definition",
+      "name": "Formula",
+      "deck": "Syntax",
+      "chapter": "predicate-logic",
+      "source": "notes/syntax/notes-terms-formulas.tex",
+      "proof_source": "",
+      "question": "State the definition: Formula.",
+      "statement_display": "For a first-order language \\(\\mathcal L\\), a \\emph{formula} is an expression\nformed by the formula grammar of \\(\\mathcal L\\). The grammar starts from atomic\nformulas and closes under the logical connectives and quantifiers of the\nlanguage.",
+      "statement_tex": "For a first-order language \\(\\mathcal L\\), a \\emph{formula} is an expression\nformed by the formula grammar of \\(\\mathcal L\\). The grammar starts from atomic\nformulas and closes under the logical connectives and quantifiers of the\nlanguage.",
+      "hint": "",
+      "proposition": "",
+      "formal": "",
+      "fully_quantified_form": "",
+      "negation_display": "",
+      "negation_formal": "",
+      "negation_predicate": "",
+      "failure_modes": "",
+      "failure_mode_decomposition": "",
+      "contrapositive": "",
+      "depends_on_ids": [
+        "def:free-for",
+        "def:subst-notation"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "aliases": [],
+      "tags": [],
+      "symbol": "",
+      "category": "",
+      "proof_sketch": "",
+      "proof_steps": [],
+      "proof_sketch_source": "",
+      "proof_idea": "",
+      "proof_type": "",
+      "method": "",
+      "uses_text": "",
+      "source_text": "",
+      "section": "syntax",
+      "has_proof_file": false,
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "depends_on_titles": [
+        "Free for Substitution",
+        "Substitution Notation"
+      ],
+      "used_by_titles": [],
+      "prereq_titles": [],
+      "equivalent_to_titles": [],
+      "implies_titles": [],
+      "dependencies": [],
+      "raw_latex_b64": "XGJlZ2lue2RlZmluaXRpb259W0Zvcm11bGFdClxsYWJlbHtkZWY6Zm9ybXVsYX0KRm9yIGEgZmlyc3Qtb3JkZXIgbGFuZ3VhZ2UgXChcbWF0aGNhbCBMXCksIGEgXGVtcGh7Zm9ybXVsYX0gaXMgYW4gZXhwcmVzc2lvbgpmb3JtZWQgYnkgdGhlIGZvcm11bGEgZ3JhbW1hciBvZiBcKFxtYXRoY2FsIExcKS4gVGhlIGdyYW1tYXIgc3RhcnRzIGZyb20gYXRvbWljCmZvcm11bGFzIGFuZCBjbG9zZXMgdW5kZXIgdGhlIGxvZ2ljYWwgY29ubmVjdGl2ZXMgYW5kIHF1YW50aWZpZXJzIG9mIHRoZQpsYW5ndWFnZS4KXGVuZHtkZWZpbml0aW9ufQ==",
+      "body_latex_b64": "ClxsYWJlbHtkZWY6Zm9ybXVsYX0KRm9yIGEgZmlyc3Qtb3JkZXIgbGFuZ3VhZ2UgXChcbWF0aGNhbCBMXCksIGEgXGVtcGh7Zm9ybXVsYX0gaXMgYW4gZXhwcmVzc2lvbgpmb3JtZWQgYnkgdGhlIGZvcm11bGEgZ3JhbW1hciBvZiBcKFxtYXRoY2FsIExcKS4gVGhlIGdyYW1tYXIgc3RhcnRzIGZyb20gYXRvbWljCmZvcm11bGFzIGFuZCBjbG9zZXMgdW5kZXIgdGhlIGxvZ2ljYWwgY29ubmVjdGl2ZXMgYW5kIHF1YW50aWZpZXJzIG9mIHRoZQpsYW5ndWFnZS4K",
+      "title_latex_b64": "Rm9ybXVsYQ==",
+      "proof_raw_latex_b64": null,
+      "remark_blocks": [],
+      "expositions": [],
+      "proof_file_blocks": [],
+      "seed_labels": [
+        "def:formula"
+      ],
+      "seed_proof_refs": [],
+      "seed_theorem_refs": [],
+      "seed_proof_return_targets": [],
+      "env_name": "definition",
+      "text_preview": "[Formula] For a first-order language \\( L\\), a is an expression formed by the formula grammar of \\( L\\). The grammar starts from atomic formulas and closes under the logical connectives and quantifiers of the language."
     },
     {
       "id": "def:wff-pred",
@@ -6348,7 +6433,10 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:free-for",
+        "def:subst-notation"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -6372,7 +6460,10 @@
       "definitional_root": false,
       "is_root": false,
       "root_kind": "",
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Free for Substitution",
+        "Substitution Notation"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -6415,7 +6506,9 @@
       "failure_modes": "",
       "failure_mode_decomposition": "",
       "contrapositive": "",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:free-for"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -6439,7 +6532,9 @@
       "definitional_root": false,
       "is_root": false,
       "root_kind": "",
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Free for Substitution"
+      ],
       "used_by_titles": [],
       "prereq_titles": [],
       "equivalent_to_titles": [],
@@ -6550,7 +6645,12 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:bound-free",
+        "def:formula",
+        "def:term",
+        "def:variable"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -6574,7 +6674,12 @@
       "is_root": false,
       "root_kind": "",
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Bound and Free Occurrences",
+        "Formula",
+        "Term",
+        "Variable"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -6617,7 +6722,13 @@
       "failure_mode_decomposition": "",
       "contrapositive": "",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:bound-free",
+        "def:formula",
+        "def:fv",
+        "def:term",
+        "def:variable"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -6641,7 +6752,13 @@
       "is_root": false,
       "root_kind": "",
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Bound and Free Occurrences",
+        "Formula",
+        "Free Variables of a Formula",
+        "Term",
+        "Variable"
+      ],
       "prereq_titles": [],
       "equivalent_to_titles": [],
       "implies_titles": [],
@@ -6657,8 +6774,8 @@
           "raw_latex_b64": "XGJlZ2lue3JlbWFyayp9W1N0YW5kYXJkIHF1YW50aWZpZWQgc3RhdGVtZW50XQpUaGUgcmVsYXRpb24gYGAkdCQgaXMgZnJlZSBmb3IgJHgkIGluICRcdmFycGhpJCcnIGlzIGRlZmluZWQgYnkgc3RydWN0dXJhbAppbmR1Y3Rpb24gb24gZm9ybXVsYXMuIEl0IGlzIGF1dG9tYXRpYyBmb3IgYXRvbWljIGZvcm11bGFzLiBJdCBpcyBwcmVzZXJ2ZWQKdGhyb3VnaCBCb29sZWFuIGNvbm5lY3RpdmVzOgpcWwogIHRcdGV4dHsgZnJlZSBmb3IgfXhcdGV4dHsgaW4gfVxuZWdcdmFycGhpCiAgXGlmZgogIHRcdGV4dHsgZnJlZSBmb3IgfXhcdGV4dHsgaW4gfVx2YXJwaGksClxdCmFuZCBzaW1pbGFybHkgY29tcG9uZW50d2lzZSBmb3IgJFx2YXJwaGlcbGFuZFxwc2kkLCAkXHZhcnBoaVxsb3JccHNpJCwgYW5kCiRcdmFycGhpXHRvXHBzaSQuIEZvciBhIHF1YW50aWZpZWQgZm9ybXVsYSwgdGhlIGNhcHR1cmUtYXZvaWRhbmNlIGNvbmRpdGlvbiBpcwpcWwogIHRcdGV4dHsgZnJlZSBmb3IgfXhcdGV4dHsgaW4gfVF5XCxcdmFycGhpCiAgXGlmZgogIFxiaWdsKHhcdGV4dHsgaXMgbm90IGZyZWUgaW4gfVF5XCxcdmFycGhpXGJpZ3IpCiAgXHRleHR7IG9yIH0KICBcYmlnbCh5XG5vdGluXG9wZXJhdG9ybmFtZXtWYXJ9KHQpCiAgICBcdGV4dHsgYW5kIH10XHRleHR7IGlzIGZyZWUgZm9yIH14XHRleHR7IGluIH1cdmFycGhpXGJpZ3IpLApcXQp3aGVyZSAkUSQgaXMgZWl0aGVyICRcZm9yYWxsJCBvciAkXGV4aXN0cyQuClxlbmR7cmVtYXJrKn0=",
           "body_latex_b64": "VGhlIHJlbGF0aW9uIGBgJHQkIGlzIGZyZWUgZm9yICR4JCBpbiAkXHZhcnBoaSQnJyBpcyBkZWZpbmVkIGJ5IHN0cnVjdHVyYWwKaW5kdWN0aW9uIG9uIGZvcm11bGFzLiBJdCBpcyBhdXRvbWF0aWMgZm9yIGF0b21pYyBmb3JtdWxhcy4gSXQgaXMgcHJlc2VydmVkCnRocm91Z2ggQm9vbGVhbiBjb25uZWN0aXZlczoKXFsKICB0XHRleHR7IGZyZWUgZm9yIH14XHRleHR7IGluIH1cbmVnXHZhcnBoaQogIFxpZmYKICB0XHRleHR7IGZyZWUgZm9yIH14XHRleHR7IGluIH1cdmFycGhpLApcXQphbmQgc2ltaWxhcmx5IGNvbXBvbmVudHdpc2UgZm9yICRcdmFycGhpXGxhbmRccHNpJCwgJFx2YXJwaGlcbG9yXHBzaSQsIGFuZAokXHZhcnBoaVx0b1xwc2kkLiBGb3IgYSBxdWFudGlmaWVkIGZvcm11bGEsIHRoZSBjYXB0dXJlLWF2b2lkYW5jZSBjb25kaXRpb24gaXMKXFsKICB0XHRleHR7IGZyZWUgZm9yIH14XHRleHR7IGluIH1ReVwsXHZhcnBoaQogIFxpZmYKICBcYmlnbCh4XHRleHR7IGlzIG5vdCBmcmVlIGluIH1ReVwsXHZhcnBoaVxiaWdyKQogIFx0ZXh0eyBvciB9CiAgXGJpZ2woeVxub3RpblxvcGVyYXRvcm5hbWV7VmFyfSh0KQogICAgXHRleHR7IGFuZCB9dFx0ZXh0eyBpcyBmcmVlIGZvciB9eFx0ZXh0eyBpbiB9XHZhcnBoaVxiaWdyKSwKXF0Kd2hlcmUgJFEkIGlzIGVpdGhlciAkXGZvcmFsbCQgb3IgJFxleGlzdHMkLg==",
           "body_preview": "The relation ``$t$ is free for $x$ in $ $'' is defined by structural induction on formulas. It is automatic for atomic formulas. It is preserved through Boolean connectives: \\[ t x t x , \\] and similarly componentwise fo",
-          "source_line_start": 138,
-          "source_line_end": 158
+          "source_line_start": 175,
+          "source_line_end": 195
         }
       ],
       "expositions": [],
@@ -9949,14 +10066,14 @@
       "text_preview": "[Destructive Dilemma is Valid] The argument form \\[ , , \\] is valid."
     },
     {
-      "id": "ax:propositional-logic-1",
+      "id": "ax:propositional-weakening",
       "kind": "Axiom",
-      "name": "Propositional Axiom Schema 1",
+      "name": "Propositional Weakening",
       "deck": "Axioms",
       "chapter": "propositional-logic",
       "source": "notes/axioms/notes-axioms.tex",
       "proof_source": "",
-      "question": "State the axiom: Propositional Axiom Schema 1.",
+      "question": "State the axiom: Propositional Weakening.",
       "statement_display": "For all formulas $P$ and $Q$,\n\\[\nP \\Longrightarrow (Q \\Longrightarrow P).\n\\]",
       "statement_tex": "For all formulas $P$ and $Q$,\n\\[\nP \\Longrightarrow (Q \\Longrightarrow P).\n\\]",
       "hint": "",
@@ -9999,31 +10116,31 @@
       "equivalent_to_titles": [],
       "implies_titles": [],
       "dependencies": [],
-      "raw_latex_b64": "XGJlZ2lue2F4aW9tfVtQcm9wb3NpdGlvbmFsIEF4aW9tIFNjaGVtYSAxXQpcbGFiZWx7YXg6cHJvcG9zaXRpb25hbC1sb2dpYy0xfQpGb3IgYWxsIGZvcm11bGFzICRQJCBhbmQgJFEkLApcWwpQIFxMb25ncmlnaHRhcnJvdyAoUSBcTG9uZ3JpZ2h0YXJyb3cgUCkuClxdClxlbmR7YXhpb219",
-      "body_latex_b64": "ClxsYWJlbHtheDpwcm9wb3NpdGlvbmFsLWxvZ2ljLTF9CkZvciBhbGwgZm9ybXVsYXMgJFAkIGFuZCAkUSQsClxbClAgXExvbmdyaWdodGFycm93IChRIFxMb25ncmlnaHRhcnJvdyBQKS4KXF0K",
-      "title_latex_b64": "UHJvcG9zaXRpb25hbCBBeGlvbSBTY2hlbWEgMQ==",
+      "raw_latex_b64": "XGJlZ2lue2F4aW9tfVtQcm9wb3NpdGlvbmFsIFdlYWtlbmluZ10KXGxhYmVse2F4OnByb3Bvc2l0aW9uYWwtd2Vha2VuaW5nfQpGb3IgYWxsIGZvcm11bGFzICRQJCBhbmQgJFEkLApcWwpQIFxMb25ncmlnaHRhcnJvdyAoUSBcTG9uZ3JpZ2h0YXJyb3cgUCkuClxdClxlbmR7YXhpb219",
+      "body_latex_b64": "ClxsYWJlbHtheDpwcm9wb3NpdGlvbmFsLXdlYWtlbmluZ30KRm9yIGFsbCBmb3JtdWxhcyAkUCQgYW5kICRRJCwKXFsKUCBcTG9uZ3JpZ2h0YXJyb3cgKFEgXExvbmdyaWdodGFycm93IFApLgpcXQo=",
+      "title_latex_b64": "UHJvcG9zaXRpb25hbCBXZWFrZW5pbmc=",
       "proof_raw_latex_b64": null,
       "remark_blocks": [],
       "expositions": [],
       "proof_file_blocks": [],
       "seed_labels": [
-        "ax:propositional-logic-1"
+        "ax:propositional-weakening"
       ],
       "seed_proof_refs": [],
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "axiom",
-      "text_preview": "[Propositional Axiom Schema 1] For all formulas $P$ and $Q$, \\[ P (Q P). \\]"
+      "text_preview": "[Propositional Weakening] For all formulas $P$ and $Q$, \\[ P (Q P). \\]"
     },
     {
-      "id": "ax:propositional-logic-2",
+      "id": "ax:propositional-implication-distribution",
       "kind": "Axiom",
-      "name": "Propositional Axiom Schema 2",
+      "name": "Implication Distribution",
       "deck": "Axioms",
       "chapter": "propositional-logic",
       "source": "notes/axioms/notes-axioms.tex",
       "proof_source": "",
-      "question": "State the axiom: Propositional Axiom Schema 2.",
+      "question": "State the axiom: Implication Distribution.",
       "statement_display": "For all formulas $P$, $Q$, and $R$,\n\\[\n\\bigl(P \\Longrightarrow (Q \\Longrightarrow R)\\bigr)\n\\Longrightarrow\n\\bigl((P \\Longrightarrow Q) \\Longrightarrow (P \\Longrightarrow R)\\bigr).\n\\]",
       "statement_tex": "For all formulas $P$, $Q$, and $R$,\n\\[\n\\bigl(P \\Longrightarrow (Q \\Longrightarrow R)\\bigr)\n\\Longrightarrow\n\\bigl((P \\Longrightarrow Q) \\Longrightarrow (P \\Longrightarrow R)\\bigr).\n\\]",
       "hint": "",
@@ -10066,31 +10183,31 @@
       "equivalent_to_titles": [],
       "implies_titles": [],
       "dependencies": [],
-      "raw_latex_b64": "XGJlZ2lue2F4aW9tfVtQcm9wb3NpdGlvbmFsIEF4aW9tIFNjaGVtYSAyXQpcbGFiZWx7YXg6cHJvcG9zaXRpb25hbC1sb2dpYy0yfQpGb3IgYWxsIGZvcm11bGFzICRQJCwgJFEkLCBhbmQgJFIkLApcWwpcYmlnbChQIFxMb25ncmlnaHRhcnJvdyAoUSBcTG9uZ3JpZ2h0YXJyb3cgUilcYmlncikKXExvbmdyaWdodGFycm93ClxiaWdsKChQIFxMb25ncmlnaHRhcnJvdyBRKSBcTG9uZ3JpZ2h0YXJyb3cgKFAgXExvbmdyaWdodGFycm93IFIpXGJpZ3IpLgpcXQpcZW5ke2F4aW9tfQ==",
-      "body_latex_b64": "ClxsYWJlbHtheDpwcm9wb3NpdGlvbmFsLWxvZ2ljLTJ9CkZvciBhbGwgZm9ybXVsYXMgJFAkLCAkUSQsIGFuZCAkUiQsClxbClxiaWdsKFAgXExvbmdyaWdodGFycm93IChRIFxMb25ncmlnaHRhcnJvdyBSKVxiaWdyKQpcTG9uZ3JpZ2h0YXJyb3cKXGJpZ2woKFAgXExvbmdyaWdodGFycm93IFEpIFxMb25ncmlnaHRhcnJvdyAoUCBcTG9uZ3JpZ2h0YXJyb3cgUilcYmlncikuClxdCg==",
-      "title_latex_b64": "UHJvcG9zaXRpb25hbCBBeGlvbSBTY2hlbWEgMg==",
+      "raw_latex_b64": "XGJlZ2lue2F4aW9tfVtJbXBsaWNhdGlvbiBEaXN0cmlidXRpb25dClxsYWJlbHtheDpwcm9wb3NpdGlvbmFsLWltcGxpY2F0aW9uLWRpc3RyaWJ1dGlvbn0KRm9yIGFsbCBmb3JtdWxhcyAkUCQsICRRJCwgYW5kICRSJCwKXFsKXGJpZ2woUCBcTG9uZ3JpZ2h0YXJyb3cgKFEgXExvbmdyaWdodGFycm93IFIpXGJpZ3IpClxMb25ncmlnaHRhcnJvdwpcYmlnbCgoUCBcTG9uZ3JpZ2h0YXJyb3cgUSkgXExvbmdyaWdodGFycm93IChQIFxMb25ncmlnaHRhcnJvdyBSKVxiaWdyKS4KXF0KXGVuZHtheGlvbX0=",
+      "body_latex_b64": "ClxsYWJlbHtheDpwcm9wb3NpdGlvbmFsLWltcGxpY2F0aW9uLWRpc3RyaWJ1dGlvbn0KRm9yIGFsbCBmb3JtdWxhcyAkUCQsICRRJCwgYW5kICRSJCwKXFsKXGJpZ2woUCBcTG9uZ3JpZ2h0YXJyb3cgKFEgXExvbmdyaWdodGFycm93IFIpXGJpZ3IpClxMb25ncmlnaHRhcnJvdwpcYmlnbCgoUCBcTG9uZ3JpZ2h0YXJyb3cgUSkgXExvbmdyaWdodGFycm93IChQIFxMb25ncmlnaHRhcnJvdyBSKVxiaWdyKS4KXF0K",
+      "title_latex_b64": "SW1wbGljYXRpb24gRGlzdHJpYnV0aW9u",
       "proof_raw_latex_b64": null,
       "remark_blocks": [],
       "expositions": [],
       "proof_file_blocks": [],
       "seed_labels": [
-        "ax:propositional-logic-2"
+        "ax:propositional-implication-distribution"
       ],
       "seed_proof_refs": [],
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "axiom",
-      "text_preview": "[Propositional Axiom Schema 2] For all formulas $P$, $Q$, and $R$, \\[ (P (Q R) ) ((P Q) (P R) ). \\]"
+      "text_preview": "[Implication Distribution] For all formulas $P$, $Q$, and $R$, \\[ (P (Q R) ) ((P Q) (P R) ). \\]"
     },
     {
-      "id": "ax:propositional-logic-3",
+      "id": "ax:propositional-classical-contraposition",
       "kind": "Axiom",
-      "name": "Propositional Axiom Schema 3",
+      "name": "Classical Contraposition",
       "deck": "Axioms",
       "chapter": "propositional-logic",
       "source": "notes/axioms/notes-axioms.tex",
       "proof_source": "",
-      "question": "State the axiom: Propositional Axiom Schema 3.",
+      "question": "State the axiom: Classical Contraposition.",
       "statement_display": "For all formulas $P$ and $Q$,\n\\[\n(\\neg Q \\Longrightarrow \\neg P) \\Longrightarrow (P \\Longrightarrow Q).\n\\]",
       "statement_tex": "For all formulas $P$ and $Q$,\n\\[\n(\\neg Q \\Longrightarrow \\neg P) \\Longrightarrow (P \\Longrightarrow Q).\n\\]",
       "hint": "",
@@ -10133,21 +10250,21 @@
       "equivalent_to_titles": [],
       "implies_titles": [],
       "dependencies": [],
-      "raw_latex_b64": "XGJlZ2lue2F4aW9tfVtQcm9wb3NpdGlvbmFsIEF4aW9tIFNjaGVtYSAzXQpcbGFiZWx7YXg6cHJvcG9zaXRpb25hbC1sb2dpYy0zfQpGb3IgYWxsIGZvcm11bGFzICRQJCBhbmQgJFEkLApcWwooXG5lZyBRIFxMb25ncmlnaHRhcnJvdyBcbmVnIFApIFxMb25ncmlnaHRhcnJvdyAoUCBcTG9uZ3JpZ2h0YXJyb3cgUSkuClxdClxlbmR7YXhpb219",
-      "body_latex_b64": "ClxsYWJlbHtheDpwcm9wb3NpdGlvbmFsLWxvZ2ljLTN9CkZvciBhbGwgZm9ybXVsYXMgJFAkIGFuZCAkUSQsClxbCihcbmVnIFEgXExvbmdyaWdodGFycm93IFxuZWcgUCkgXExvbmdyaWdodGFycm93IChQIFxMb25ncmlnaHRhcnJvdyBRKS4KXF0K",
-      "title_latex_b64": "UHJvcG9zaXRpb25hbCBBeGlvbSBTY2hlbWEgMw==",
+      "raw_latex_b64": "XGJlZ2lue2F4aW9tfVtDbGFzc2ljYWwgQ29udHJhcG9zaXRpb25dClxsYWJlbHtheDpwcm9wb3NpdGlvbmFsLWNsYXNzaWNhbC1jb250cmFwb3NpdGlvbn0KRm9yIGFsbCBmb3JtdWxhcyAkUCQgYW5kICRRJCwKXFsKKFxuZWcgUSBcTG9uZ3JpZ2h0YXJyb3cgXG5lZyBQKSBcTG9uZ3JpZ2h0YXJyb3cgKFAgXExvbmdyaWdodGFycm93IFEpLgpcXQpcZW5ke2F4aW9tfQ==",
+      "body_latex_b64": "ClxsYWJlbHtheDpwcm9wb3NpdGlvbmFsLWNsYXNzaWNhbC1jb250cmFwb3NpdGlvbn0KRm9yIGFsbCBmb3JtdWxhcyAkUCQgYW5kICRRJCwKXFsKKFxuZWcgUSBcTG9uZ3JpZ2h0YXJyb3cgXG5lZyBQKSBcTG9uZ3JpZ2h0YXJyb3cgKFAgXExvbmdyaWdodGFycm93IFEpLgpcXQo=",
+      "title_latex_b64": "Q2xhc3NpY2FsIENvbnRyYXBvc2l0aW9u",
       "proof_raw_latex_b64": null,
       "remark_blocks": [],
       "expositions": [],
       "proof_file_blocks": [],
       "seed_labels": [
-        "ax:propositional-logic-3"
+        "ax:propositional-classical-contraposition"
       ],
       "seed_proof_refs": [],
       "seed_theorem_refs": [],
       "seed_proof_return_targets": [],
       "env_name": "axiom",
-      "text_preview": "[Propositional Axiom Schema 3] For all formulas $P$ and $Q$, \\[ ( Q P) (P Q). \\]"
+      "text_preview": "[Classical Contraposition] For all formulas $P$ and $Q$, \\[ ( Q P) (P Q). \\]"
     },
     {
       "id": "def:unsatisfiability-witness-propositional-logic",
@@ -15623,9 +15740,9 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "definitional_root": false,
-      "is_root": false,
-      "root_kind": "",
+      "definitional_root": true,
+      "is_root": true,
+      "root_kind": "definitional",
       "depends_on_titles": [],
       "used_by_titles": [],
       "prereq_titles": [],
@@ -15690,9 +15807,9 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "definitional_root": false,
-      "is_root": false,
-      "root_kind": "",
+      "definitional_root": true,
+      "is_root": true,
+      "root_kind": "definitional",
       "depends_on_titles": [],
       "used_by_titles": [],
       "prereq_titles": [],
@@ -25615,9 +25732,9 @@
       "has_proof_file": false,
       "ignored": false,
       "is_theorem_like": true,
-      "definitional_root": false,
-      "is_root": false,
-      "root_kind": "",
+      "definitional_root": true,
+      "is_root": true,
+      "root_kind": "definitional",
       "depends_on_titles": [],
       "used_by_titles": [],
       "prereq_titles": [],
@@ -26721,6 +26838,75 @@
       "seed_proof_return_targets": [],
       "env_name": "definition",
       "text_preview": "[Power Set] The of $A$, denoted $ (A)$, is the set of all subsets of $A$: \\[ (A) \\;:=\\; \\ \\, S S A \\,\\ . \\]"
+    },
+    {
+      "id": "thm:de-morgan",
+      "kind": "Theorem",
+      "name": "De Morgan's Laws",
+      "deck": "Sets",
+      "chapter": "sets-relations-functions",
+      "source": "notes/sets/notes-set-operations.tex",
+      "proof_source": "",
+      "question": "State the theorem: De Morgan's Laws.",
+      "statement_display": "Let $U$ be a universe and $A,B \\subseteq U$. Then\n\\[\n(A \\cup B)^c = A^c \\cap B^c\n\\quad\\text{and}\\quad\n(A \\cap B)^c = A^c \\cup B^c.\n\\]",
+      "statement_tex": "Let $U$ be a universe and $A,B \\subseteq U$. Then\n\\[\n(A \\cup B)^c = A^c \\cap B^c\n\\quad\\text{and}\\quad\n(A \\cap B)^c = A^c \\cup B^c.\n\\]",
+      "hint": "",
+      "proposition": "",
+      "formal": "",
+      "fully_quantified_form": "",
+      "negation_display": "",
+      "negation_formal": "",
+      "negation_predicate": "",
+      "failure_modes": "",
+      "failure_mode_decomposition": "",
+      "contrapositive": "",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "aliases": [],
+      "tags": [],
+      "symbol": "",
+      "category": "",
+      "proof_sketch": "",
+      "proof_steps": [],
+      "proof_sketch_source": "",
+      "proof_idea": "",
+      "proof_type": "",
+      "method": "",
+      "uses_text": "",
+      "source_text": "",
+      "section": "sets",
+      "has_proof_file": false,
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "prereq_titles": [],
+      "equivalent_to_titles": [],
+      "implies_titles": [],
+      "dependencies": [],
+      "raw_latex_b64": "XGJlZ2lue3RoZW9yZW19W0RlIE1vcmdhbidzIExhd3NdXGxhYmVse3RobTpkZS1tb3JnYW59CkxldCAkVSQgYmUgYSB1bml2ZXJzZSBhbmQgJEEsQiBcc3Vic2V0ZXEgVSQuIFRoZW4KXFsKKEEgXGN1cCBCKV5jID0gQV5jIFxjYXAgQl5jClxxdWFkXHRleHR7YW5kfVxxdWFkCihBIFxjYXAgQileYyA9IEFeYyBcY3VwIEJeYy4KXF0KXGh5cGVycmVmW3ByZjpkZS1tb3JnYW5de0dvIHRvIHByb29mLn0KXGVuZHt0aGVvcmVtfQ==",
+      "body_latex_b64": "XGxhYmVse3RobTpkZS1tb3JnYW59CkxldCAkVSQgYmUgYSB1bml2ZXJzZSBhbmQgJEEsQiBcc3Vic2V0ZXEgVSQuIFRoZW4KXFsKKEEgXGN1cCBCKV5jID0gQV5jIFxjYXAgQl5jClxxdWFkXHRleHR7YW5kfVxxdWFkCihBIFxjYXAgQileYyA9IEFeYyBcY3VwIEJeYy4KXF0KXGh5cGVycmVmW3ByZjpkZS1tb3JnYW5de0dvIHRvIHByb29mLn0K",
+      "title_latex_b64": "RGUgTW9yZ2FuJ3MgTGF3cw==",
+      "proof_raw_latex_b64": null,
+      "remark_blocks": [],
+      "expositions": [],
+      "proof_file_blocks": [],
+      "seed_labels": [
+        "thm:de-morgan"
+      ],
+      "seed_proof_refs": [
+        "prf:de-morgan"
+      ],
+      "seed_theorem_refs": [],
+      "seed_proof_return_targets": [],
+      "env_name": "theorem",
+      "text_preview": "[De Morgan's Laws] Let $U$ be a universe and $A,B U$. Then \\[ (A B)^c = A^c B^c (A B)^c = A^c B^c. \\]"
     },
     {
       "id": "def:set-duality",
@@ -129987,6 +130173,51 @@
     }
   ],
   "edges": [
+    {
+      "from": "def:free-for",
+      "to": "def:bound-free",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:free-for",
+      "to": "def:formula",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:free-for",
+      "to": "def:fv",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:free-for",
+      "to": "def:term",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:free-for",
+      "to": "def:variable",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:subst-notation",
+      "to": "def:bound-free",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:subst-notation",
+      "to": "def:formula",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:subst-notation",
+      "to": "def:term",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:subst-notation",
+      "to": "def:variable",
+      "kind": "depends_on"
+    },
     {
       "from": "def:canonical-conjunctive-normal-form-propositional-logic",
       "to": "def:truth-table-row-clause-propositional-logic",

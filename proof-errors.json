@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T13:57:39.322948+00:00",
+  "generated_at": "2026-06-17T14:02:24.910184+00:00",
   "chapters": [
     "axiom-systems",
     "predicate-logic",
@@ -46,7 +46,7 @@
     "linear-algebra",
     "set-algebra"
   ],
-  "error_count": 2075,
+  "error_count": 2073,
   "errors": [
     {
       "type": "missing_dependencies_block",
@@ -295,18 +295,6 @@
         }
       ],
       "excerpt": "Let $\\Gamma\\subseteq\\operatorname{Sent}(\\mathcal{L})$ be a set of premises, let $\\varphi\\in\\operatorname{Sent}(\\mathcal{L})$, and let $\\mathfrak{M}$ be an $\\mathcal{L}$-structure. A \\emph{countermodel to the entailment $\\Gamma\\vDash\\varphi$} is a structure $\\mathfrak{M}$ that satisfies every sentence in $\\Gamma$ but does not satisfy $\\varphi$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:signature",
-      "title": "First-Order Signature",
-      "source": "notes/signatures/signature.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A \\emph{first-order signature} is a tuple \\[ \\Sigma=(\\mathcal{C},\\mathcal{F},\\mathcal{R},\\operatorname{ar}), \\] where $\\mathcal{C}$ is a set of constant symbols, $\\mathcal{F}$ is a set of function symbols, $\\mathcal{R}$ is a set of relation symbols, and \\[ \\operatorname{ar}:\\mathcal{F}\\cup\\mathcal{R}\\to \\mathbb{Z}_{>0} \\] assigns to each function or relation symbol its number of arguments."
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -1349,6 +1337,18 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "An \\emph{atomic formula} of a first-order language \\(\\mathcal L\\) is a string of the form \\[ P(t_1,\\ldots,t_n), \\] where \\(P\\) is an \\(n\\)-ary predicate symbol and \\(t_1,\\ldots,t_n\\) are terms."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:formula",
+      "title": "Formula",
+      "source": "notes/syntax/notes-terms-formulas.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For a first-order language \\(\\mathcal L\\), a \\emph{formula} is an expression formed by the formula grammar of \\(\\mathcal L\\). The grammar starts from atomic formulas and closes under the logical connectives and quantifiers of the language."
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -3262,18 +3262,6 @@
       "excerpt": "There are exactly \\[ 2^{2^n} \\] Boolean functions \\(\\mathbb{B}^n\\to\\mathbb{B}\\). \\hyperref[prf:counting-boolean-functions]{Go to proof.}"
     },
     {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:truth-value-propositional-logic",
-      "title": "Truth Value",
-      "source": "notes/syntax/notes-syntax.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "The set of truth values is \\[ \\mathbb{B} := \\{\\mathrm{False},\\mathrm{True}\\}. \\] Some sources identify this set with \\(\\{0,1\\}\\), with \\(0\\) read as false and \\(1\\) read as true."
-    },
-    {
       "type": "multiple_primary_statements_in_box",
       "kind": "Definition",
       "node_id": "def:propositional-language",
@@ -3282,18 +3270,6 @@
       "message": "Extracted theorem/definition box appears to contain more than one primary statement. Extraction was preserved, but the source should be split into separate boxes and re-extracted.",
       "signals": [
         "latex_list_with_multiple_items:4"
-      ],
-      "excerpt": "A propositional language consists of: \\begin{enumerate} \\item a set \\(\\Prop\\) of propositional variables; \\item logical connectives; \\item punctuation symbols such as parentheses; \\item recursive formation rules specifying the well-formed formulas. \\end{enumerate}"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:propositional-language",
-      "title": "Propositional Language",
-      "source": "notes/syntax/notes-syntax.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
       ],
       "excerpt": "A propositional language consists of: \\begin{enumerate} \\item a set \\(\\Prop\\) of propositional variables; \\item logical connectives; \\item punctuation symbols such as parentheses; \\item recursive formation rules specifying the well-formed formulas. \\end{enumerate}"
     },
@@ -5622,18 +5598,6 @@
     },
     {
       "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:set-membership",
-      "title": "Set and Membership",
-      "source": "notes/sets/notes-foundations.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "In axiomatic set theory, the notions of \\emph{set} and \\emph{membership} are \\emph{primitive}. \\begin{itemize} \\item A \\emph{set} is an object. \\item \\emph{Membership} is a binary relation, denoted by $\\in$, between objects. \\end{itemize} If $x$ is an object and $A$ is a set, the statement $x \\in A$ is read as ``$x$ is an element of $A$.'' No definition of ``set'' or ``$\\in$'' is given in more basic terms. Their m..."
-    },
-    {
-      "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "thm:commutativity",
       "title": "Commutativity of Union and Intersection",
@@ -5823,6 +5787,18 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "The \\emph{power set} of $A$, denoted $\\mathcal{P}(A)$, is the set of all subsets of $A$: \\[ \\mathcal{P}(A) \\;:=\\; \\{\\, S \\mid S \\subseteq A \\,\\}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:de-morgan",
+      "title": "De Morgan's Laws",
+      "source": "notes/sets/notes-set-operations.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $U$ be a universe and $A,B \\subseteq U$. Then \\[ (A \\cup B)^c = A^c \\cap B^c \\quad\\text{and}\\quad (A \\cap B)^c = A^c \\cup B^c. \\]"
     },
     {
       "type": "missing_dependencies_block",

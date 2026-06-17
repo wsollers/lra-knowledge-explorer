@@ -1,5 +1,50 @@
 [
   {
+    "from": "def:free-for",
+    "to": "def:bound-free",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:free-for",
+    "to": "def:formula",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:free-for",
+    "to": "def:fv",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:free-for",
+    "to": "def:term",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:free-for",
+    "to": "def:variable",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:subst-notation",
+    "to": "def:bound-free",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:subst-notation",
+    "to": "def:formula",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:subst-notation",
+    "to": "def:term",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:subst-notation",
+    "to": "def:variable",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:canonical-conjunctive-normal-form-propositional-logic",
     "to": "def:truth-table-row-clause-propositional-logic",
     "kind": "depends_on"
