@@ -114,6 +114,8 @@ a{color:#93c5fd}
       <label class="chk"><input type="checkbox" id="showDepends" checked/>Dependencies</label>
       <label class="chk"><input type="checkbox" id="showImplies" checked/>Implications</label>
     </div>
+    <div class="tiny" style="margin:10px 0 4px">Volume</div>
+    <select id="volumeFilter"><option value="All">All volumes</option></select>
     <div class="tiny" style="margin:10px 0 4px">Chapter</div>
     <select id="chapterFilter"><option value="All">All chapters</option></select>
     <div class="tiny" style="margin:10px 0 4px">Section</div>
@@ -171,9 +173,13 @@ a{color:#93c5fd}
 <script>
 const INITIAL_ZOOM      = 0.45;
 const INITIAL_ANCHOR_ID = 'def:supremum';
+const VOLUME_TITLES={1:'Logic, Sets, and Proof',2:'Foundations of Formal Number Systems',3:'Analysis',4:'Algebra and Abstract Structures',5:'Topology and Geometry',6:'Computational Mathematics',7:'Numerical and Approximation Mathematics',8:'Mathematical Logic and Foundations'};
+const VOLUME_ROMAN={1:'I',2:'II',3:'III',4:'IV',5:'V',6:'VI',7:'VII',8:'VIII'};
+const CHAPTER_TO_VOLUME={'propositional-logic':1,'predicate-logic':1,'sets-relations-functions':1,'axiom-systems':1,'proof-techniques':1,'identity-equality-equivalence':2,'arithmetic-operations-relations':2,'peano-systems':2,'natural-numbers':2,'whole-numbers':2,'integers':2,'rationals':2,'reals':2,'numbers-summary':2,'embedding-number-systems':2,'number-lines':2,'structure-of-real-line':2,'formalizing-number-systems':2,'lean':2,'complex-numbers':2,'real-analysis':3,'bounding':3,'sequences':3,'elementary-functions':3,'functions':3,'continuity':3,'differentiation':3,'riemann-integration':3,'measure-theory':3,'probability-theory':3,'functional-analysis':3,'complex-analysis':3,'series':3,'function-sequences':3,'foundations':3,'discrete-calculus':3,'algebraic-structures':4,'abstract-algebra':4,'linear-algebra':4,'lattice-order':4,'set-algebra':4,'algebraic-geometry':4,'summation-algebra':4,'euclidean-geometry':5,'analytical-geometry':5,'trigonometry':5,'non-euclidean-geometry':5,'differential-geometry':5,'riemannian-geometry':5,'topology':5,'calculus':6,'geometric-modeling':6,'computational-geometry':6,'computational-linear-algebra':6,'computational-probability':6,'ordinary-differential-equations':6,'partial-differential-equations':6,'fourier-analysis':6,'numerical-analysis':7,'numerical-pde':7,'category-theory':8,'model-theory':8,'proof-theory':8,'type-theory':8,'lambda-calculus':8,'algebras-of-sets':8};
+function nodeVolume(n){return CHAPTER_TO_VOLUME[n&&n.chapter]||0;}
 
-const state={knowledge:{metadata:{},nodes:[]},edges:[],proofVault:{records:{}},activeProofNode:null,activeProofTab:'standard',zoom:1,selectedId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showImplies:true,chapter:'All',deck:'All',treeMode:'off'}};
-const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),treeMode:document.getElementById('treeMode'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose')};
+const state={knowledge:{metadata:{},nodes:[]},edges:[],proofVault:{records:{}},activeProofNode:null,activeProofTab:'standard',zoom:1,selectedId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showImplies:true,volume:'All',chapter:'All',deck:'All',treeMode:'off'}};
+const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose')};
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function decodeB64(s){if(!s)return'';try{return decodeURIComponent(escape(atob(s)));}catch(e){try{return atob(s);}catch(_){return'';}}}
@@ -330,11 +336,21 @@ function normalizeEdges(knowledge,edgeData){const nodes=knowledge?.nodes||[];con
 // syncFilters: populates both the Chapter dropdown (n.chapter) and Section dropdown (n.deck).
 // When a chapter is selected, the section dropdown is narrowed to only sections within that chapter.
 function syncFilters(nodes){
+  const selVolume=state.filters.volume;
   const selChapter=state.filters.chapter;
   const selDeck=state.filters.deck;
 
+  const volNums=Array.from(new Set(nodes.map(nodeVolume).filter(v=>v>0))).sort((a,b)=>a-b);
+  const volOpts=['All',...volNums.map(String)];
+  const exVol=Array.from(els.volumeFilter.options).map(o=>o.value);
+  if(exVol.join('|')!==volOpts.join('|')){
+    els.volumeFilter.innerHTML='';
+    volOpts.forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v==='All'?'All volumes':('Volume '+VOLUME_ROMAN[v]+' \u2014 '+VOLUME_TITLES[v]);if(v===selVolume)o.selected=true;els.volumeFilter.appendChild(o);});
+  }
+  const volNodes=selVolume==='All'?nodes:nodes.filter(n=>String(nodeVolume(n))===String(selVolume));
+
   // Chapters: unique n.chapter values (new extractor nodes only — old nodes have no chapter field)
-  const chapters=['All',...Array.from(new Set(nodes.map(n=>n.chapter).filter(Boolean))).sort()];
+  const chapters=['All',...Array.from(new Set(volNodes.map(n=>n.chapter).filter(Boolean))).sort()];
   const exCh=Array.from(els.chapterFilter.options).map(o=>o.value);
   if(exCh.join('|')!==chapters.join('|')){
     els.chapterFilter.innerHTML='';
@@ -342,7 +358,7 @@ function syncFilters(nodes){
   }
 
   // Sections: unique n.deck values, filtered by selected chapter if one is active
-  const filteredNodes=selChapter==='All'?nodes:nodes.filter(n=>n.chapter===selChapter);
+  const filteredNodes=selChapter==='All'?volNodes:volNodes.filter(n=>n.chapter===selChapter);
   const decks=['All',...Array.from(new Set(filteredNodes.map(n=>n.deck).filter(Boolean))).sort()];
   const exDeck=Array.from(els.deckFilter.options).map(o=>o.value);
   if(exDeck.join('|')!==decks.join('|')){
@@ -363,6 +379,7 @@ function visibleGraph(){
   const q=state.filters.search.trim().toLowerCase();
   const selCh=state.filters.chapter;
   const selDeck=state.filters.deck;
+  const selVol=state.filters.volume;
   const vis=new Map();
   for(const n of nodes){
     const cls=nodeClass(n);
@@ -371,8 +388,9 @@ function visibleGraph(){
     const byChapter=selCh==='All'||n.chapter===selCh;
     // Section filter: match n.deck exactly or pass if 'All'
     const byDeck=selDeck==='All'||n.deck===selDeck;
+    const byVolume=selVol==='All'||String(nodeVolume(n))===String(selVol);
     const blob=JSON.stringify(n).toLowerCase();
-    vis.set(n.id,byType&&byChapter&&byDeck&&(!q||blob.includes(q)));
+    vis.set(n.id,byType&&byChapter&&byDeck&&byVolume&&(!q||blob.includes(q)));
   }
   const outNodes=nodes.filter(n=>vis.get(n.id));
   const ids=new Set(outNodes.map(n=>n.id));
@@ -561,6 +579,7 @@ els.showDepends.onchange=e=>{state.filters.showDepends=e.target.checked;render()
 els.showImplies.onchange=e=>{state.filters.showImplies=e.target.checked;render();};
 els.treeMode.onchange=e=>{state.filters.treeMode=e.target.value;state.nodePositions={};render();};
 // When chapter changes, reset section to All and re-render (syncFilters will narrow the section list)
+els.volumeFilter.onchange=e=>{state.filters.volume=e.target.value;state.filters.chapter='All';state.filters.deck='All';els.chapterFilter.value='All';els.deckFilter.value='All';render();};
 els.chapterFilter.onchange=e=>{state.filters.chapter=e.target.value;state.filters.deck='All';els.deckFilter.value='All';render();};
 els.deckFilter.onchange=e=>{state.filters.deck=e.target.value;render();};
 els.zoomInBtn.onclick=()=>{state.zoom=Math.min(2.4,+(state.zoom+0.1).toFixed(2));render();};
