@@ -33,11 +33,13 @@ svg{position:absolute;inset:0}
 .node{position:absolute;width:250px;min-height:86px;padding:14px;border-radius:18px;cursor:pointer;border:2px solid rgba(255,255,255,.08);
  box-shadow:0 10px 24px rgba(0,0,0,.28);touch-action:none;user-select:none}
 .node.dragging{cursor:grabbing;z-index:5}
-.node.definition{background:linear-gradient(180deg, rgba(58,154,130,.18), rgba(58,154,130,.1));border-color:rgba(58,154,130,.75)}
-.node.axiom{background:linear-gradient(180deg, rgba(138,106,191,.22), rgba(138,106,191,.13));border-color:rgba(138,106,191,.85)}
-.node.primitive{background:linear-gradient(180deg, rgba(129,140,248,.22), rgba(129,140,248,.12));border-color:rgba(165,180,252,.9);border-style:dashed}
-.node.theorem{background:linear-gradient(180deg, rgba(192,120,64,.22), rgba(192,120,64,.13));border-color:rgba(192,120,64,.85)}
-.node.lemma,.node.proposition,.node.corollary{background:linear-gradient(180deg, rgba(96,165,250,.18), rgba(96,165,250,.1));border-color:rgba(147,197,253,.55)}
+.node.definition{background:linear-gradient(180deg, rgba(58,154,130,.20), rgba(58,154,130,.10));border-color:rgba(58,154,130,.85)}
+.node.axiom{background:linear-gradient(180deg, rgba(196,122,44,.22), rgba(196,122,44,.12));border-color:rgba(196,122,44,.9)}
+.node.primitive{background:linear-gradient(180deg, rgba(109,91,208,.24), rgba(109,91,208,.13));border-color:rgba(109,91,208,.92);border-style:dashed}
+.node.theorem{background:linear-gradient(180deg, rgba(47,111,174,.24), rgba(47,111,174,.13));border-color:rgba(47,111,174,.9)}
+.node.proposition{background:linear-gradient(180deg, rgba(95,134,199,.20), rgba(95,134,199,.11));border-color:rgba(95,134,199,.82)}
+.node.lemma{background:linear-gradient(180deg, rgba(127,160,212,.18), rgba(127,160,212,.10));border-color:rgba(127,160,212,.72)}
+.node.corollary{background:linear-gradient(180deg, rgba(168,190,223,.16), rgba(168,190,223,.09));border-color:rgba(168,190,223,.66)}
 .node.selected{outline:3px solid rgba(245,158,11,.8)}
 .type{font-size:.73rem;text-transform:uppercase;letter-spacing:.08em;color:#cbd5e1;font-weight:700;margin-bottom:6px}
 .title{font-size:.97rem;line-height:1.25;font-weight:700;color:white}
@@ -103,10 +105,10 @@ a{color:#93c5fd}
     <h2>Filters</h2>
     <input type="text" id="searchBox" placeholder="Search title, id, statement..."/>
     <div class="row" style="margin-top:10px">
-      <label class="chk"><input type="checkbox" id="showDefinitions" checked/>Definitions</label>
+      <label class="chk"><input type="checkbox" id="showPrimitives" checked/>Definitional Truths</label>
       <label class="chk"><input type="checkbox" id="showAxioms" checked/>Axioms</label>
+      <label class="chk"><input type="checkbox" id="showDefinitions" checked/>Definitions</label>
       <label class="chk"><input type="checkbox" id="showResults" checked/>Results</label>
-      <label class="chk"><input type="checkbox" id="showPrimitives" checked/>Primitives</label>
     </div>
     <div class="row" style="margin-top:10px">
       <label class="chk"><input type="checkbox" id="showDepends" checked/>Dependencies</label>
@@ -407,7 +409,33 @@ function rectPt(rect,target,inset=0){const cx=rect.x+rect.w/2,cy=rect.y+rect.h/2
 
 function scrollToGraphPoint(gx,gy){const z=state.zoom;const vw=els.graphWrap.clientWidth;const vh=els.graphWrap.clientHeight;els.graphWrap.scrollLeft=gx*z-vw/2;els.graphWrap.scrollTop=gy*z-vh/2;}
 function centerOnNode(id){const g=state.renderedGraph;if(!g)return;const node=g.nodes.find(n=>n.id===id);if(!node)return;scrollToGraphPoint(node.x+(node.w||250)/2,node.y+(node.h||86)/2);}
-function applyInitialView(){state.zoom=INITIAL_ZOOM;els.graphInner.style.transform=`scale(${state.zoom})`;requestAnimationFrame(()=>{requestAnimationFrame(()=>{centerOnNode(INITIAL_ANCHOR_ID);});});}
+function resolveInitialAnchor(){
+  const nodes=state.knowledge.nodes||[];
+  const exists=id=>!!id&&nodes.some(n=>n.id===id);
+  // 1) URL override: ?node= / ?focus= / ?center= / ?id= (exact id, then case-insensitive id/label/title).
+  const params=new URLSearchParams(location.search);
+  const requested=(params.get('node')||params.get('focus')||params.get('center')||params.get('id')||'').trim();
+  if(requested){
+    if(exists(requested))return requested;
+    const lc=requested.toLowerCase();
+    const hit=nodes.find(n=>String(n.id).toLowerCase()===lc||String(n.label||'').toLowerCase()===lc||String(nodeTitle(n)).toLowerCase()===lc);
+    if(hit)return hit.id;
+  }
+  // 2) Default anchor: the Supremum.
+  if(exists(INITIAL_ANCHOR_ID))return INITIAL_ANCHOR_ID;
+  // 3) Fallback: highest-degree node, else the first node.
+  return chooseAnchor(nodes,state.edges)||(nodes[0]&&nodes[0].id)||null;
+}
+function applyInitialView(){
+  const anchor=resolveInitialAnchor();
+  state.selectedId=anchor;
+  state.zoom=INITIAL_ZOOM;
+  render();
+  const target=(state.knowledge.nodes||[]).find(n=>n.id===anchor);
+  if(target){renderDetails(target);}
+  else{els.detailEmpty.style.display='block';els.detailContent.style.display='none';}
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{if(anchor)centerOnNode(anchor);}));
+}
 
 function drawEdges(g=state.renderedGraph){if(!g)return;els.edgeLayer.querySelectorAll('path.edge').forEach(p=>p.remove());const nm=new Map(g.nodes.map(n=>[n.id,n]));for(const e of g.edges){const a=nm.get(e.from),b=nm.get(e.to);if(!a||!b)continue;const aB=nodeBox(a),bB=nodeBox(b);const aC={x:aB.x+aB.w/2,y:aB.y+aB.h/2},bC={x:bB.x+bB.w/2,y:bB.y+bB.h/2};const s=rectPt(aB,bC,0),en=rectPt(bB,aC,1);const dir=Math.sign(en.x-s.x)||1,bend=Math.max(80,Math.abs(en.x-s.x)*.45);const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.classList.add('edge');p.setAttribute('d',`M ${s.x} ${s.y} C ${s.x+dir*bend} ${s.y}, ${en.x-dir*bend} ${en.y}, ${en.x} ${en.y}`);p.setAttribute('fill','none');const v=edgeVisual(e.kind);p.setAttribute('stroke',v.color);p.setAttribute('stroke-width',v.width);p.setAttribute('opacity',v.opacity);p.setAttribute('marker-end',v.marker);els.edgeLayer.appendChild(p);}}
 
@@ -451,7 +479,7 @@ function renderDetails(n){
   function add(t,v,danger=false){if(!v&&v!==0)return;const cls=danger?'card danger':'card';blocks.push(`<div class="${cls}"><div class="label">${esc(t)}</div><div class="value">${texToHtml(String(v))}</div></div>`);}
   function addProof(t,v){const cleaned=cleanProofText(v);if(!cleaned)return;blocks.push(`<div class="card"><div class="label">${esc(t)}</div><div class="value">${texToHtml(cleaned)}</div></div>`);}
   function addChips(label,ids,treeMode){if(!ids||!ids.length)return;const html=chipList(ids,treeMode);if(!html)return;blocks.push(`<div class="card"><div class="label">${esc(label)}</div><div class="value" style="line-height:2">${html}</div></div>`);}
-  const rootTag=(function(){const rk=String(n.root_kind||'').toLowerCase();if(rk==='definitional')return' · <strong style="color:#c7d2fe">definitional root · primitive</strong>';if(rk==='primitive')return' · <strong style="color:#c7d2fe">primitive · policy</strong>';if(rk==='axiom')return' · <strong style="color:#c7d2fe">axiom · root</strong>';return'';})();
+  const rootTag=(function(){const rk=String(n.root_kind||'').toLowerCase();if(rk==='definitional')return' · <strong style="color:#c7d2fe">definitional truth</strong>';if(rk==='primitive')return' · <strong style="color:#c7d2fe">definitional truth · policy</strong>';if(rk==='axiom')return' · <strong style="color:#c7d2fe">axiom · root</strong>';return'';})();
   blocks.push(`<div class="card"><div class="label">Title</div><div class="value"><strong>${texToHtml(nodeTitle(n))}</strong></div><div class="tiny" style="margin-top:8px">${esc(n.kind)} · ${esc(nodeDeck(n)||nodeChapter(n))} · ${esc(n.id)}${rootTag}</div></div>`);
   const fm=n.fully_quantified_form||n.formal||'';
   const pred=n.formal&&n.fully_quantified_form&&n.formal!==n.fully_quantified_form?n.formal:(n.proposition||'');
@@ -502,8 +530,7 @@ async function tryAutoLoad(){
     state.proofVault=pv||{records:{}};
     state.knowledge=k;state.edges=normalizeEdges(state.knowledge,e);state.nodePositions={};
     els.status.textContent=`Loaded ${(k.nodes||[]).length} nodes, ${state.edges.length} edges.`;
-    state.selectedId=null;render();applyInitialView();
-    els.detailEmpty.style.display='block';els.detailContent.style.display='none';
+    applyInitialView();
   }catch(err){els.status.textContent='Auto-load failed: '+err.message;}
 }
 async function loadManual(){
@@ -513,8 +540,7 @@ async function loadManual(){
     const[k,e]=await Promise.all([kf.text().then(JSON.parse),ef.text().then(JSON.parse)]);
     state.knowledge=k;state.edges=normalizeEdges(state.knowledge,e);state.nodePositions={};
     els.status.textContent=`Loaded ${(k.nodes||[]).length} nodes.`;
-    state.selectedId=null;render();applyInitialView();
-    els.detailEmpty.style.display='block';els.detailContent.style.display='none';
+    applyInitialView();
   }catch(err){els.status.textContent='Load failed: '+err.message;}
 }
 
