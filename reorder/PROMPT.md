@@ -17,15 +17,48 @@ load; ignore notation that is merely typing the variables.
 
 You audit the dependency graph one node at a time. You do **not** edit any source.
 You read `index.json` once, then for each `graph-NNNN.json` you decide whether its
-**direct** dependencies are the right set, and emit a `resolution-NNNN.json`.
+**direct** dependencies are the right set, and emit a `resolution-NNNN.json`. You work
+through the batches in `manifest.json` order, resuming wherever the previous run
+stopped — see **Walking the batches** below.
 
 ## Inputs
 
-- `index.json` — the entire vocabulary: `{id, kind, title, gloss, root}` per node.
-  This is the **only** set of ids you may reference. Never invent an id.
+Read **only** these files. All are small and well under the filesystem read limit.
+
+- `PROMPT.md` — this file (read first, verbatim, every run).
+- `index.json` — the entire vocabulary: `{id, kind, title, gloss, root}` per node
+  (~0.5 MB). This is the **only** set of ids you may reference. Never invent an id.
+- `manifest.json` — the ordered list of batches `{batch, volume, chapter, graphs}`,
+  already sorted highest-volume-first. This drives the walk order.
 - `batch-XXXX/graph-NNNN.json` — one node: its `statement`, `kind`, `root`, and
-  `current_dependencies` (direct only). The deep structure is already verified
+  `current_dependencies` (direct only). Each graph is **self-contained**: it carries
+  every dependency's id, title, and kind. The deep structure is already verified
   deterministically; you only judge this node's local neighbourhood.
+
+> **Never read `knowledge.json` or `graph-edges.json`.** They are ~14 MB, exceed the
+> 1 MB filesystem-read limit, and are **not needed** — the batch graph already contains
+> the statement and every dependency with its title. If you feel you need them, you do
+> not: re-read the graph file and `index.json`. Opening them only fails the run.
+
+## Walking the batches (resume cursor)
+
+The same prompt is pasted every run; it must pick up exactly where the last one
+stopped. **The filesystem is the cursor** — nothing else tracks progress.
+
+1. Read `manifest.json`. Process batches **in listed order** (highest volume first:
+   `batch-0001`, `batch-0002`, …). Do not skip ahead or reorder.
+2. A single graph is **done** when a `resolution-NNNN.json` sits beside its
+   `graph-NNNN.json`. A batch is **done** when *every* graph in it is done.
+3. For the first batch that is not done, list its `graph-*.json` and existing
+   `resolution-*.json` (use `search_files`), and process **only** the graphs with no
+   resolution yet — so a partly-finished batch resumes correctly at the graph level.
+   Read the pending graphs in bulk with `read_multiple_files`.
+4. Write each `resolution-NNNN.json` as you go (never hold them in memory). Continue
+   across graphs and into the next batch until you are **running low on context**,
+   then **stop cleanly** and end your reply with exactly one line:
+   `RESUME: <batch-XXXX> graph-<NNNN>` — the first graph still needing a resolution.
+   That line is how the next paste of this same prompt knows where to continue.
+5. Never edit `.tex` or `.json` source. You only write `resolution-*.json`.
 
 ## Rules (do not improvise others)
 
