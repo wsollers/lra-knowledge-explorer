@@ -1,0 +1,34 @@
+{
+  "graph_id": "graph-0001",
+  "batch": "batch-0001",
+  "volume": "volume-viii",
+  "chapter": "algebras-of-sets",
+  "node": {
+    "id": "def:boolean-ring",
+    "kind": "Definition",
+    "name": "Boolean Ring",
+    "source": "notes/rings-of-sets/notes-boolean-rings.tex",
+    "is_root": false,
+    "root_kind": "",
+    "statement": "A \\textbf{Boolean ring} is an idempotent ring with unit.\n\nThat is, a Boolean ring is a ring $(R, +, \\cdot, -, 0, 1)$\nsatisfying the additional axiom:\n\\[\np \\cdot p = p \\qquad \\text{for all } p \\in R. \\tag{11}\n\\]\nAn element $p$ satisfying $p \\cdot p = p$ is called\n\\textbf{idempotent}.\nA ring in which every element is idempotent is called an\n\\textbf{idempotent ring}."
+  },
+  "current_dependencies": [
+    {
+      "id": "def:ring",
+      "kind": "Definition",
+      "name": "Ring",
+      "gloss": "[Ring] A is a triple where R is a set and + and are binary operations on R: (R,+) is an abelian group; multiplication is associative"
+    }
+  ],
+  "structural_checks": {
+    "layering": {
+      "status": "ok",
+      "detail": "closure stays within definitions/primitives"
+    },
+    "single_dependency": true,
+    "terminal_nonroot_leaves": [
+      "def:binary-arithmetic-operation",
+      "def:binary-closure"
+    ]
+  }
+}

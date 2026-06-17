@@ -1,0 +1,17 @@
+{
+  "graph_id": "graph-sample-change",
+  "node": "def:infimum",
+  "verdict": "change",
+  "dependencies": ["def:lower-bound"],
+  "changes": [
+    {
+      "change_type": "delete",
+      "dependency": "def:least-upper-bound-property",
+      "rationale": "The infimum is the greatest lower bound. Its statement requires only a lower bound and the order relation. The least-upper-bound PROPERTY is a completeness consequence used to PROVE that infima exist, not a concept needed to DEFINE one. This is a deductive (existence) dependency miscategorized as a definitional one - exactly the error a definition's closure touching a completeness-type node should surface.",
+      "licensing_quote": "i is a lower bound of A and every lower bound l of A satisfies l <= i",
+      "confidence": 0.85
+    }
+  ],
+  "confidence": 0.85,
+  "notes": "Do NOT route this to ax:completeness-of-reals. Completeness belongs to the existence THEOREM (thm:lub-property-r / a dual greatest-lower-bound existence theorem), never to the definition."
+}

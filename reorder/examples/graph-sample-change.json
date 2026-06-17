@@ -1,0 +1,37 @@
+{
+  "graph_id": "graph-sample",
+  "batch": "examples",
+  "volume": "volume-iii",
+  "chapter": "bounding",
+  "node": {
+    "id": "def:infimum",
+    "kind": "Definition",
+    "name": "Infimum",
+    "source": "notes/bounds-extremals/notes-supremum.tex",
+    "is_root": false,
+    "root_kind": "",
+    "statement": "Let $(S,\\le)$ be an ordered set, let $A\\subseteq S$, and let $i\\in S$. The element $i$ is the infimum of $A$ if and only if $i$ is a lower bound of $A$ and every lower bound $l$ of $A$ satisfies $l\\le i$."
+  },
+  "current_dependencies": [
+    {
+      "id": "def:least-upper-bound-property",
+      "kind": "Definition",
+      "name": "Least Upper Bound Property",
+      "gloss": "[Least Upper Bound Property] Every nonempty subset bounded above has a supremum."
+    },
+    {
+      "id": "def:lower-bound",
+      "kind": "Definition",
+      "name": "Lower Bound",
+      "gloss": "[Lower Bound] l is a lower bound of A iff every x in A satisfies l <= x."
+    }
+  ],
+  "structural_checks": {
+    "layering": {
+      "status": "warn",
+      "detail": "definition's closure touches non-definitional node(s) via def:least-upper-bound-property -> def:supremum -> ..."
+    },
+    "single_dependency": false,
+    "terminal_nonroot_leaves": []
+  }
+}

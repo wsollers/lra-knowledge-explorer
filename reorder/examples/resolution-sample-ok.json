@@ -1,0 +1,8 @@
+{
+  "graph_id": "graph-sample-ok",
+  "node": "def:boolean-ring",
+  "verdict": "ok",
+  "dependencies": ["def:ring"],
+  "confidence": 0.95,
+  "notes": "A Boolean ring is an idempotent ring with unit. To STATE it you need only the concept of a ring; idempotence is an added axiom on that structure, not a separate dependency. Closure stays within definitions/primitives, so no completeness/axiom edge is wanted."
+}

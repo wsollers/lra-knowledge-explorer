@@ -1,0 +1,40 @@
+{
+  "graph_id": "graph-0002",
+  "batch": "batch-0001",
+  "volume": "volume-viii",
+  "chapter": "algebras-of-sets",
+  "node": {
+    "id": "def:characteristic-2",
+    "kind": "Definition",
+    "name": "Characteristic 2",
+    "source": "notes/rings-of-sets/notes-boolean-rings.tex",
+    "is_root": false,
+    "root_kind": "",
+    "statement": "A ring $R$ is said to have \\textbf{characteristic~$2$} if\n\\[\np + p = 0 \\qquad \\text{for all } p \\in R. \\tag{10}\n\\]"
+  },
+  "current_dependencies": [
+    {
+      "id": "def:boolean-ring",
+      "kind": "Definition",
+      "name": "Boolean Ring",
+      "gloss": "[Boolean Ring] An idempotent ring with unit."
+    },
+    {
+      "id": "def:idempotent-element",
+      "kind": "Definition",
+      "name": "Idempotent Element",
+      "gloss": "[Idempotent Element] An element p of a ring R with p*p = p."
+    }
+  ],
+  "structural_checks": {
+    "layering": {
+      "status": "ok",
+      "detail": "closure stays within definitions/primitives"
+    },
+    "single_dependency": false,
+    "terminal_nonroot_leaves": [
+      "def:binary-arithmetic-operation",
+      "def:binary-closure"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "graph_id": "graph-sample-reorder",
+  "node": "def:characteristic-2",
+  "verdict": "reorder",
+  "dependencies": ["def:idempotent-element", "def:boolean-ring"],
+  "confidence": 0.8,
+  "notes": "Same dependency SET as current ({def:boolean-ring, def:idempotent-element}); only the order changes so the more primitive notion (idempotent element) is listed first. A reorder changes no edges, so this is safe to auto-apply. NEVER use verdict=reorder if you are adding or removing a dependency."
+}
