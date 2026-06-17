@@ -18,8 +18,8 @@ load; ignore notation that is merely typing the variables.
 You audit the dependency graph one node at a time. You do **not** edit any source.
 You read `index.json` once, then for each `graph-NNNN.json` you decide whether its
 **direct** dependencies are the right set, and emit a `resolution-NNNN.json`. You work
-through the batches in `manifest.json` order, resuming wherever the previous run
-stopped — see **Walking the batches** below.
+through the batches in `manifest.json` in **reverse order — highest batch number
+first** — resuming wherever the previous run stopped; see **Walking the batches** below.
 
 ## Inputs
 
@@ -28,8 +28,8 @@ Read **only** these files. All are small and well under the filesystem read limi
 - `PROMPT.md` — this file (read first, verbatim, every run).
 - `index.json` — the entire vocabulary: `{id, kind, title, gloss, root}` per node
   (~0.5 MB). This is the **only** set of ids you may reference. Never invent an id.
-- `manifest.json` — the ordered list of batches `{batch, volume, chapter, graphs}`,
-  already sorted highest-volume-first. This drives the walk order.
+- `manifest.json` — the ordered list of batches `{batch, volume, chapter, graphs}`.
+  You walk it **in reverse**, last entry first. This drives the walk order.
 - `batch-XXXX/graph-NNNN.json` — one node: its `statement`, `kind`, `root`, and
   `current_dependencies` (direct only). Each graph is **self-contained**: it carries
   every dependency's id, title, and kind. The deep structure is already verified
@@ -45,11 +45,12 @@ Read **only** these files. All are small and well under the filesystem read limi
 The same prompt is pasted every run; it must pick up exactly where the last one
 stopped. **The filesystem is the cursor** — nothing else tracks progress.
 
-1. Read `manifest.json`. Process batches **in listed order** (highest volume first:
-   `batch-0001`, `batch-0002`, …). Do not skip ahead or reorder.
+1. Read `manifest.json`. Process batches **from the highest batch number downward**:
+   start at the **last** entry (currently `batch-0035`) and walk backwards toward
+   `batch-0001`. Do not skip around; step down the list one batch at a time.
 2. A single graph is **done** when a `resolution-NNNN.json` sits beside its
    `graph-NNNN.json`. A batch is **done** when *every* graph in it is done.
-3. For the first batch that is not done, list its `graph-*.json` and existing
+3. For the **highest-numbered** batch that is not yet done, list its `graph-*.json` and existing
    `resolution-*.json` (use `search_files`), and process **only** the graphs with no
    resolution yet — so a partly-finished batch resumes correctly at the graph level.
    Read the pending graphs in bulk with `read_multiple_files`.
