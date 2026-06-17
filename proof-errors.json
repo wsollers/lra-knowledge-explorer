@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T22:05:48.377896+00:00",
+  "generated_at": "2026-06-17T12:55:05.283497+00:00",
   "chapters": [
     "peano-systems",
     "natural-numbers",
@@ -9,7 +9,7 @@
     "continuity",
     "differentiation"
   ],
-  "error_count": 611,
+  "error_count": 599,
   "errors": [
     {
       "type": "multiple_primary_statements_in_box",
@@ -34,78 +34,6 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "A triple $(P,S,1)$ is called a \\emph{Peano system} exactly when $P$ is a set, $1 \\in P$, $S : P \\to P$ is a function, and the following axioms hold: \\begin{enumerate} \\item[\\textbf{P1.}] $1 \\in P$. \\item[\\textbf{P2.}] For every $n \\in P$, $S(n) \\in P$. \\item[\\textbf{P3.}] For every $n \\in P$, $S(n) \\neq 1$. \\item[\\textbf{P4.}] For all $m,n \\in P$, if $S(m)=S(n)$ then $m=n$. \\item[\\textbf{P5.}] If $A \\subseteq P$,..."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Axiom",
-      "node_id": "ax:peano-base-in-set",
-      "title": "Distinguished Element Lies in the Underlying Set",
-      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "\\[ 1 \\in P. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Axiom",
-      "node_id": "ax:peano-successor-closure",
-      "title": "Closure Under Successor",
-      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $n \\in P$, then $S(n) \\in P$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Axiom",
-      "node_id": "ax:peano-base-not-successor",
-      "title": "Distinguished Element Is Not a Successor",
-      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For every $n \\in P$, $S(n) \\neq 1$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Axiom",
-      "node_id": "ax:peano-successor-injective",
-      "title": "Injectivity of Successor",
-      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $m,n \\in P$ and $S(m)=S(n)$, then $m=n$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Axiom",
-      "node_id": "ax:peano-induction",
-      "title": "Induction Axiom",
-      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $A \\subseteq P$. If $1 \\in A$ and if \\[ \\forall n \\in P\\;(n \\in A \\Longrightarrow S(n) \\in A), \\] then $A=P$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Axiom",
-      "node_id": "ax:peano-system-existence",
-      "title": "Existence of a Peano System",
-      "source": "notes/defining-peano-systems/notes-defining-peano-systems.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "There exists a Peano system."
     },
     {
       "type": "missing_dependencies_block",
@@ -978,66 +906,6 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "The natural numbers $\\mathbb{N}$ are the canonical Peano system \\[ (\\mathbb{N},1,S), \\] where $1 \\in \\mathbb{N}$ is the distinguished base element and $S:\\mathbb{N}\\to\\mathbb{N}$ is the successor operation."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Axiom",
-      "node_id": "ax:n-base",
-      "title": "N1, Base",
-      "source": "notes/nz-axioms/notes-nz-axioms.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "\\[ 1 \\in \\mathbb{N}. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Axiom",
-      "node_id": "ax:n-successor-closure",
-      "title": "N2, Successor Closure",
-      "source": "notes/nz-axioms/notes-nz-axioms.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "\\[ \\forall n \\in \\mathbb{N}\\;(S(n)\\in \\mathbb{N}). \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Axiom",
-      "node_id": "ax:n-base-has-no-predecessor",
-      "title": "N3, Base Has No Predecessor",
-      "source": "notes/nz-axioms/notes-nz-axioms.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "\\[ \\forall n \\in \\mathbb{N}\\;(S(n)\\ne 1). \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Axiom",
-      "node_id": "ax:n-successor-injective",
-      "title": "N4, Successor Injectivity",
-      "source": "notes/nz-axioms/notes-nz-axioms.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "\\[ \\forall m,n \\in \\mathbb{N}\\;(S(m)=S(n)\\Longrightarrow m=n). \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Axiom",
-      "node_id": "ax:n-induction",
-      "title": "N5, Induction",
-      "source": "notes/nz-axioms/notes-nz-axioms.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For every predicate $\\varphi$ on $\\mathbb{N}$, \\[ \\Bigl(\\varphi(1)\\land \\forall n\\in\\mathbb{N}\\;(\\varphi(n)\\Longrightarrow \\varphi(S(n)))\\Bigr) \\Longrightarrow \\forall n\\in\\mathbb{N}\\;\\varphi(n). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -5099,18 +4967,6 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "Let $(S,\\le)$ be an ordered set. The set $S$ has the \\emph{Least Upper Bound Property} if and only if every nonempty subset of $S$ that is bounded above in $S$ has a supremum in $S$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Axiom",
-      "node_id": "ax:completeness-of-reals",
-      "title": "Completeness of $ $",
-      "source": "notes/completeness/notes-axiom-of-completess.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "The ordered field $\\mathbb{R}$ has the Least Upper Bound Property."
     },
     {
       "type": "missing_dependencies_block",
