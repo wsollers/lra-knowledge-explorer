@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T15:09:42.411119+00:00",
+  "generated_at": "2026-06-17T16:29:33.182101+00:00",
   "chapters": [
     "axiom-systems",
     "predicate-logic",
@@ -46,7 +46,7 @@
     "linear-algebra",
     "set-algebra"
   ],
-  "error_count": 2693,
+  "error_count": 2832,
   "errors": [
     {
       "type": "missing_dependencies_block",
@@ -23514,154 +23514,82 @@
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "prop:maximum-implies-supremum",
-      "missing_target_id": "pred:maximum",
+      "source_node_id": "def:upper-bound",
+      "missing_target_id": "def:ordered-set",
       "relationship_kind": "depends_on",
-      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source": "notes/bounds-extremals/notes-supremum.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "prop:maximum-implies-supremum",
-      "missing_target_id": "pred:upper-bound",
+      "source_node_id": "def:lower-bound",
+      "missing_target_id": "def:ordered-set",
       "relationship_kind": "depends_on",
-      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source": "notes/bounds-extremals/notes-supremum.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "prop:maximum-implies-supremum",
-      "missing_target_id": "pred:supremum",
+      "source_node_id": "def:minimum",
+      "missing_target_id": "def:ordered-set",
       "relationship_kind": "depends_on",
-      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source": "notes/bounds-extremals/notes-supremum.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:infimum-less-than-supremum",
-      "missing_target_id": "pred:nonempty-set",
+      "source_node_id": "def:maximum",
+      "missing_target_id": "def:ordered-set",
       "relationship_kind": "depends_on",
-      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source": "notes/bounds-extremals/notes-supremum.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:infimum-less-than-supremum",
-      "missing_target_id": "pred:infimum",
+      "source_node_id": "def:supremum",
+      "missing_target_id": "def:ordered-set",
       "relationship_kind": "depends_on",
-      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source": "notes/bounds-extremals/notes-supremum.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:infimum-less-than-supremum",
-      "missing_target_id": "pred:supremum",
+      "source_node_id": "def:supremum",
+      "missing_target_id": "def:subset",
       "relationship_kind": "depends_on",
-      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source": "notes/bounds-extremals/notes-supremum.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:infimum-less-than-supremum",
-      "missing_target_id": "pred:least-upper-bound-property",
+      "source_node_id": "def:least-upper-bound-property",
+      "missing_target_id": "def:ordered-set",
       "relationship_kind": "depends_on",
-      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source": "notes/completeness/notes-axiom-of-completess.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:negation-exchange-sup-inf",
-      "missing_target_id": "pred:infimum",
+      "source_node_id": "def:least-upper-bound-property",
+      "missing_target_id": "def:subset",
       "relationship_kind": "depends_on",
-      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source": "notes/completeness/notes-axiom-of-completess.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:negation-exchange-sup-inf",
-      "missing_target_id": "pred:supremum",
+      "source_node_id": "def:order-dense-subset",
+      "missing_target_id": "def:subset",
       "relationship_kind": "depends_on",
-      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source": "notes/completeness/notes-density.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:negation-exchange-sup-inf",
-      "missing_target_id": "ax:inequality-negation",
+      "source_node_id": "def:order-dense-subset",
+      "missing_target_id": "def:total-order",
       "relationship_kind": "depends_on",
-      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:supremum-sum-set",
-      "missing_target_id": "pred:supremum",
-      "relationship_kind": "depends_on",
-      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:supremum-sum-set",
-      "missing_target_id": "pred:upper-bound",
-      "relationship_kind": "depends_on",
-      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:supremum-sum-set",
-      "missing_target_id": "thm:epsilon-characterization-supremum",
-      "relationship_kind": "depends_on",
-      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:archimedean-property",
-      "missing_target_id": "pred:least-upper-bound-property",
-      "relationship_kind": "depends_on",
-      "source": "notes/completeness/notes-archimedean-property.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:archimedean-property",
-      "missing_target_id": "pred:supremum",
-      "relationship_kind": "depends_on",
-      "source": "notes/completeness/notes-archimedean-property.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:archimedean-property",
-      "missing_target_id": "pred:upper-bound",
-      "relationship_kind": "depends_on",
-      "source": "notes/completeness/notes-archimedean-property.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:nested-interval-theorem",
-      "missing_target_id": "pred:least-upper-bound-property",
-      "relationship_kind": "depends_on",
-      "source": "notes/completeness/notes-nested-interval-property.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:nested-interval-theorem",
-      "missing_target_id": "pred:monotone-increasing-sequence",
-      "relationship_kind": "depends_on",
-      "source": "notes/completeness/notes-nested-interval-property.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:nested-interval-theorem",
-      "missing_target_id": "thm:infimum-supremum-comparison",
-      "relationship_kind": "depends_on",
-      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "source": "notes/completeness/notes-density.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
@@ -24634,6 +24562,334 @@
     },
     {
       "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:piecewise-linear-function",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/approximation/notes-approximation.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:piecewise-linear-function",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/approximation/notes-approximation.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:piecewise-linear-function",
+      "missing_target_id": "def:natural-numbers",
+      "relationship_kind": "depends_on",
+      "source": "notes/approximation/notes-approximation.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:piecewise-linear-function",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/approximation/notes-approximation.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bernstein-polynomial",
+      "missing_target_id": "def:addition-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/approximation/notes-approximation.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bernstein-polynomial",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/approximation/notes-approximation.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bernstein-polynomial",
+      "missing_target_id": "def:multiplication-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/approximation/notes-approximation.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bernstein-polynomial",
+      "missing_target_id": "def:natural-numbers",
+      "relationship_kind": "depends_on",
+      "source": "notes/approximation/notes-approximation.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:interval-partition",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/gauge/notes-gauge.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:interval-partition",
+      "missing_target_id": "def:natural-numbers",
+      "relationship_kind": "depends_on",
+      "source": "notes/gauge/notes-gauge.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:interval-partition",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/gauge/notes-gauge.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:gauge",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/gauge/notes-gauge.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:gauge",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/gauge/notes-gauge.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:gauge",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/gauge/notes-gauge.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bounded-on-a-set",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bounded-on-a-set",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bounded-on-a-set",
+      "missing_target_id": "def:real-chapter-absolute-value-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bounded-on-a-set",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:absolute-extrema",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:absolute-extrema",
+      "missing_target_id": "def:maximum",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:absolute-extrema",
+      "missing_target_id": "def:minimum",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:absolute-extrema",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:absolute-extrema",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:bolzano-intermediate-value",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:bolzano-intermediate-value",
+      "missing_target_id": "def:maximum",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:bolzano-intermediate-value",
+      "missing_target_id": "def:minimum",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:bolzano-intermediate-value",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:bolzano-intermediate-value",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/global-theorems/notes-ivt.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:limsup-liminf-function",
+      "missing_target_id": "def:epsilon-neighbourhood",
+      "relationship_kind": "depends_on",
+      "source": "notes/monotone-functions/notes-limsup-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:limsup-liminf-function",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/monotone-functions/notes-limsup-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:limsup-liminf-function",
+      "missing_target_id": "def:infimum",
+      "relationship_kind": "depends_on",
+      "source": "notes/monotone-functions/notes-limsup-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:limsup-liminf-function",
+      "missing_target_id": "def:supremum",
+      "relationship_kind": "depends_on",
+      "source": "notes/monotone-functions/notes-limsup-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:monotone-one-sided-limits",
+      "missing_target_id": "ax:completeness-of-reals",
+      "relationship_kind": "depends_on",
+      "source": "notes/monotone-functions/notes-monotone-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:monotone-one-sided-limits",
+      "missing_target_id": "def:function-monotone",
+      "relationship_kind": "depends_on",
+      "source": "notes/monotone-functions/notes-monotone-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:monotone-one-sided-limits",
+      "missing_target_id": "def:infimum",
+      "relationship_kind": "depends_on",
+      "source": "notes/monotone-functions/notes-monotone-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:monotone-one-sided-limits",
+      "missing_target_id": "def:supremum",
+      "relationship_kind": "depends_on",
+      "source": "notes/monotone-functions/notes-monotone-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:continuous-inverse-theorem",
+      "missing_target_id": "def:function-strictly-decreasing",
+      "relationship_kind": "depends_on",
+      "source": "notes/monotone-functions/notes-monotone-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:continuous-inverse-theorem",
+      "missing_target_id": "def:function-strictly-increasing",
+      "relationship_kind": "depends_on",
+      "source": "notes/monotone-functions/notes-monotone-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:relative-neighborhood",
+      "missing_target_id": "def:epsilon-neighbourhood",
+      "relationship_kind": "depends_on",
+      "source": "notes/point-continuity/notes-continuity.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:relative-neighborhood",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/point-continuity/notes-continuity.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:relative-neighborhood",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/point-continuity/notes-continuity.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
       "source_node_id": "def:continuous-at-point",
       "missing_target_id": "def:limit-function",
       "relationship_kind": "depends_on",
@@ -24666,8 +24922,88 @@
     },
     {
       "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:oscillation-on-a-set",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/point-continuity/notes-oscillation.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:oscillation-on-a-set",
+      "missing_target_id": "def:real-chapter-absolute-value-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/point-continuity/notes-oscillation.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:oscillation-on-a-set",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/point-continuity/notes-oscillation.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:oscillation-on-a-set",
+      "missing_target_id": "def:supremum",
+      "relationship_kind": "depends_on",
+      "source": "notes/point-continuity/notes-oscillation.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:uniform-continuity",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/uniform-continuity/notes-uniform-continuity.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:uniform-continuity",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/uniform-continuity/notes-uniform-continuity.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:uniform-continuity",
+      "missing_target_id": "def:real-chapter-absolute-value-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/uniform-continuity/notes-uniform-continuity.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:uniform-continuity",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/uniform-continuity/notes-uniform-continuity.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
       "source_node_id": "prop:uniform-continuity-cauchy",
       "missing_target_id": "def:cauchy-sequence",
+      "relationship_kind": "depends_on",
+      "source": "notes/uniform-continuity/notes-uniform-continuity.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:lipschitz-condition",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/uniform-continuity/notes-uniform-continuity.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bi-lipschitz",
+      "missing_target_id": "def:function",
       "relationship_kind": "depends_on",
       "source": "notes/uniform-continuity/notes-uniform-continuity.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
@@ -26853,10 +27189,114 @@
     },
     {
       "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:derivative-at-a-point",
+      "missing_target_id": "def:limit-function",
+      "relationship_kind": "depends_on",
+      "source": "notes/derivative-definition/notes-derivative-definition.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:topological-definition-of-derivative-at-a-point",
+      "missing_target_id": "def:division-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/derivative-definition/notes-derivative-definition.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:topological-definition-of-derivative-at-a-point",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/derivative-definition/notes-derivative-definition.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:topological-definition-of-derivative-at-a-point",
+      "missing_target_id": "def:relative-neighborhood",
+      "relationship_kind": "depends_on",
+      "source": "notes/derivative-definition/notes-derivative-definition.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:topological-definition-of-derivative-at-a-point",
+      "missing_target_id": "def:subtraction-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/derivative-definition/notes-derivative-definition.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:sequential-definition-of-derivative-at-a-point",
+      "missing_target_id": "def:convergent-sequence",
+      "relationship_kind": "depends_on",
+      "source": "notes/derivative-definition/notes-derivative-definition.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:sequential-definition-of-derivative-at-a-point",
+      "missing_target_id": "def:limit-function",
+      "relationship_kind": "depends_on",
+      "source": "notes/derivative-definition/notes-derivative-definition.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:sequential-definition-of-derivative-at-a-point",
+      "missing_target_id": "def:sequence",
+      "relationship_kind": "depends_on",
+      "source": "notes/derivative-definition/notes-derivative-definition.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:differentiable-implies-continuous",
       "missing_target_id": "def:continuous-at-point",
       "relationship_kind": "depends_on",
       "source": "notes/derivative-definition/notes-derivative-definition.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "prop:derivative-of-the-identity",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/derivative-definition/notes-derivative-definition.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:relative-minimum",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/derivative-geometry/notes-derivative-geometry.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:relative-minimum",
+      "missing_target_id": "def:open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/derivative-geometry/notes-derivative-geometry.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:relative-minimum",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/derivative-geometry/notes-derivative-geometry.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:relative-minimum",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/derivative-geometry/notes-derivative-geometry.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
@@ -27326,6 +27766,22 @@
       ],
       "excerpt": "\\[ \\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2} = \\frac{1}{2}. \\]",
       "proof_source": "proofs/trigonometric/prf-limit-one-minus-cos.tex"
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:number-e",
+      "missing_target_id": "def:convergent-sequence",
+      "relationship_kind": "depends_on",
+      "source": "notes/power-exponential/notes-power-exponential.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:number-e",
+      "missing_target_id": "def:sequence",
+      "relationship_kind": "depends_on",
+      "source": "notes/power-exponential/notes-power-exponential.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
       "type": "missing_dependencies_block",
@@ -28301,6 +28757,737 @@
       "excerpt": "Property $P(f(x))$ is \\textbf{true near $x_0$} if $\\exists\\delta>0,\\;\\forall x : 0<|x-x_0|< \\delta) \\Rightarrow P(f(x))$."
     },
     {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "prop:composition-injective",
+      "missing_target_id": "def:composition",
+      "relationship_kind": "depends_on",
+      "source": "notes/algebra-of-functions/notes-algebra-of-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "prop:composition-injective",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/algebra-of-functions/notes-algebra-of-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "prop:composition-surjective",
+      "missing_target_id": "def:composition",
+      "relationship_kind": "depends_on",
+      "source": "notes/algebra-of-functions/notes-algebra-of-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "prop:composition-surjective",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/algebra-of-functions/notes-algebra-of-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "cor:composition-bijective",
+      "missing_target_id": "def:composition",
+      "relationship_kind": "depends_on",
+      "source": "notes/algebra-of-functions/notes-algebra-of-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "cor:composition-bijective",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/algebra-of-functions/notes-algebra-of-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "prop:inverse-bijection",
+      "missing_target_id": "def:composition",
+      "relationship_kind": "depends_on",
+      "source": "notes/algebra-of-functions/notes-algebra-of-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "prop:inverse-bijection",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/algebra-of-functions/notes-algebra-of-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "prop:preimage-union-intersection",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/algebra-of-functions/notes-algebra-of-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-sum-of-functions",
+      "missing_target_id": "def:addition-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-sum-of-functions",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-sum-of-functions",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-difference-of-functions",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-difference-of-functions",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-difference-of-functions",
+      "missing_target_id": "def:subtraction-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-product-of-functions",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-product-of-functions",
+      "missing_target_id": "def:multiplication-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-product-of-functions",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-scalar-multiple-of-a-function",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-scalar-multiple-of-a-function",
+      "missing_target_id": "def:multiplication-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-scalar-multiple-of-a-function",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-absolute-value-of-a-function",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-absolute-value-of-a-function",
+      "missing_target_id": "def:real-chapter-absolute-value-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-absolute-value-of-a-function",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-maximum-of-two-functions",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-maximum-of-two-functions",
+      "missing_target_id": "def:maximum",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-maximum-of-two-functions",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-quotient-of-functions",
+      "missing_target_id": "def:division-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-quotient-of-functions",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:pointwise-quotient-of-functions",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:function-bounded-above",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:function-bounded-above",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:function-bounded-above",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:function-bounded-below",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:function-bounded-below",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:function-bounded-below",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:function-increasing",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:function-increasing",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:function-increasing",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:function-decreasing",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:function-decreasing",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:function-decreasing",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:epsilon-neighbourhood",
+      "missing_target_id": "def:open-ball",
+      "relationship_kind": "depends_on",
+      "source": "notes/subsets-real-line/notes-subsets-of-R.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bounded-set-r",
+      "missing_target_id": "def:order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/subsets-real-line/notes-subsets-of-R.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bounded-set-r",
+      "missing_target_id": "def:real-chapter-absolute-value-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/subsets-real-line/notes-subsets-of-R.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bounded-set-r",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/subsets-real-line/notes-subsets-of-R.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-add-both-sides",
+      "title": "Addition Preserves Strict Inequality",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b, c \\in \\mathbb{R}$, \\[ a < b \\;\\Rightarrow\\; a + c < b + c. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-add-both-sides.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-nonstrict-add-both-sides",
+      "title": "Addition Preserves Nonstrict Inequality",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b, c \\in \\mathbb{R}$, \\[ a \\le b \\;\\Rightarrow\\; a + c \\le b + c. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-nonstrict-add-both-sides.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-add-inequalities",
+      "title": "Addition of Strict Inequalities",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b, c, d \\in \\mathbb{R}$, \\[ a < b \\;\\land\\; c < d \\;\\Rightarrow\\; a + c < b + d. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-add-inequalities.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-nonstrict-add-inequalities",
+      "title": "Addition of Nonstrict Inequalities",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b, c, d \\in \\mathbb{R}$, \\[ a \\le b \\;\\land\\; c \\le d \\;\\Rightarrow\\; a + c \\le b + d. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-nonstrict-add-inequalities.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-mixed-add",
+      "title": "Mixed Addition of Inequalities",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b, c, d \\in \\mathbb{R}$, \\[ a \\le b \\;\\land\\; c < d \\;\\Rightarrow\\; a + c < b + d. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-mixed-add.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-multiply-positive",
+      "title": "Multiplication by a Positive Scalar Preserves Strict Inequality",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b, c \\in \\mathbb{R}$, \\[ a < b \\;\\land\\; 0 < c \\;\\Rightarrow\\; ac < bc. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-multiply-positive.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-multiply-negative",
+      "title": "Multiplication by a Negative Scalar Reverses Strict Inequality",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b, c \\in \\mathbb{R}$, \\[ a < b \\;\\land\\; c < 0 \\;\\Rightarrow\\; ac > bc. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-multiply-negative.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-nonstrict-multiply-positive",
+      "title": "Multiplication by a Positive Scalar Preserves Nonstrict Inequality",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b, c \\in \\mathbb{R}$, \\[ a \\le b \\;\\land\\; 0 < c \\;\\Rightarrow\\; ac \\le bc. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-nonstrict-multiply-positive.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-nonstrict-multiply-nonneg",
+      "title": "Multiplication by a Nonneg Scalar Preserves Nonstrict Inequality",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b, c \\in \\mathbb{R}$, \\[ a \\le b \\;\\land\\; 0 \\le c \\;\\Rightarrow\\; ac \\le bc. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-nonstrict-multiply-nonneg.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-squeeze",
+      "title": "Squeeze",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b, c \\in \\mathbb{R}$, \\[ a \\le b \\le c \\;\\land\\; a = c \\;\\Rightarrow\\; b = a. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-squeeze.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-transitivity-strict",
+      "title": "Transitivity of Strict Inequality",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b, c \\in \\mathbb{R}$, \\[ a < b \\;\\land\\; b < c \\;\\Rightarrow\\; a < c. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-transitivity-strict.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-transitivity-mixed",
+      "title": "Mixed Transitivity",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b, c \\in \\mathbb{R}$, \\[ a \\le b \\;\\land\\; b < c \\;\\Rightarrow\\; a < c. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-transitivity-mixed.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-reciprocal-positive",
+      "title": "Reciprocal Reverses Strict Inequality for Positives",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b \\in \\mathbb{R}$, \\[ 0 < a < b \\;\\Rightarrow\\; 0 < \\frac{1}{b} < \\frac{1}{a}. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-reciprocal-positive.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-reciprocal-flip",
+      "title": "Reciprocal Equivalence for Positives",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b \\in \\mathbb{R}$ with $a > 0$ and $b > 0$, \\[ a < b \\iff \\frac{1}{b} < \\frac{1}{a}. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-reciprocal-flip.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-square-monotone",
+      "title": "Square Is Strictly Monotone on Nonneg Reals",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b \\in \\mathbb{R}$, \\[ 0 \\le a < b \\;\\Rightarrow\\; a^2 < b^2. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-square-monotone.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-square-root-monotone",
+      "title": "Square Root Is Monotone on Nonneg Reals",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b \\in \\mathbb{R}$, \\[ 0 \\le a \\le b \\;\\Rightarrow\\; \\sqrt{a} \\le \\sqrt{b}. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-square-root-monotone.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-am-gm-two",
+      "title": "AM-GM Inequality for Two Terms",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b \\ge 0$, \\[ \\sqrt{ab} \\le \\frac{a + b}{2}. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-am-gm-two.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:ineq-bernoulli",
+      "title": "Bernoulli's Inequality",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $x \\in \\mathbb{R}$ with $x \\ge -1$ and all $n \\in \\mathbb{N}$, \\[ (1 + x)^n \\ge 1 + nx. \\]",
+      "proof_source": "proofs/inequality/prf-ineq-bernoulli.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:absolute-value",
+      "title": "Absolute Value",
+      "source": "notes/modulus/notes-modulus.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $a \\in \\mathbb{R}$. The \\emph{absolute value} (or \\emph{modulus}) of $a$ is \\[ \\lvert a \\rvert \\;:=\\; \\begin{cases} a & \\text{if } a \\ge 0, \\\\ -a & \\text{if } a < 0. \\end{cases} \\] Equivalently, $\\lvert a \\rvert := \\max(a, -a)$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-nonneg",
+      "title": "Absolute Value Is Nonnegative",
+      "source": "notes/modulus/notes-modulus.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a \\in \\mathbb{R}$, \\[ \\lvert a \\rvert \\ge 0. \\]",
+      "proof_source": "proofs/modulus/prf-absolute-value-nonneg.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-zero-iff-zero",
+      "title": "Absolute Value Zero Iff Zero",
+      "source": "notes/modulus/notes-modulus.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a \\in \\mathbb{R}$, \\[ \\lvert a \\rvert = 0 \\iff a = 0. \\]",
+      "proof_source": "proofs/modulus/prf-absolute-value-zero-iff-zero.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-self-or-neg",
+      "title": "Absolute Value Equals Self or Negation",
+      "source": "notes/modulus/notes-modulus.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a \\in \\mathbb{R}$, either $\\lvert a \\rvert = a$ or $\\lvert a \\rvert = -a$.",
+      "proof_source": "proofs/modulus/prf-absolute-value-self-or-neg.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-symmetric",
+      "title": "Absolute Value Is Symmetric",
+      "source": "notes/modulus/notes-modulus.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a \\in \\mathbb{R}$, \\[ \\lvert -a \\rvert = \\lvert a \\rvert. \\]",
+      "proof_source": "proofs/modulus/prf-absolute-value-symmetric.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-product",
+      "title": "Absolute Value of a Product",
+      "source": "notes/modulus/notes-modulus.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b \\in \\mathbb{R}$, \\[ \\lvert ab \\rvert = \\lvert a \\rvert\\,\\lvert b \\rvert. \\]",
+      "proof_source": "proofs/modulus/prf-absolute-value-product.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-quotient",
+      "title": "Absolute Value of a Quotient",
+      "source": "notes/modulus/notes-modulus.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a \\in \\mathbb{R}$ and $b \\in \\mathbb{R}$ with $b \\ne 0$, \\[ \\left\\lvert \\frac{a}{b} \\right\\rvert = \\frac{\\lvert a \\rvert}{\\lvert b \\rvert}. \\]",
+      "proof_source": "proofs/modulus/prf-absolute-value-quotient.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-bounds",
+      "title": "Bound by Modulus",
+      "source": "notes/modulus/notes-modulus.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a \\in \\mathbb{R}$, \\[ -\\lvert a \\rvert \\le a \\le \\lvert a \\rvert. \\]",
+      "proof_source": "proofs/modulus/prf-absolute-value-bounds.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-le-iff",
+      "title": "Nonstrict Modulus Inequality",
+      "source": "notes/modulus/notes-modulus.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a \\in \\mathbb{R}$ and $r \\ge 0$, \\[ \\lvert a \\rvert \\le r \\iff -r \\le a \\le r. \\]",
+      "proof_source": "proofs/modulus/prf-absolute-value-le-iff.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-lt-iff",
+      "title": "Strict Modulus Inequality",
+      "source": "notes/modulus/notes-modulus.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a \\in \\mathbb{R}$ and $r > 0$, \\[ \\lvert a \\rvert < r \\iff -r < a < r. \\]",
+      "proof_source": "proofs/modulus/prf-absolute-value-lt-iff.tex"
+    },
+    {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "theorem:notes-modulus:011",
@@ -28311,6 +29498,32 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "For all $a, b \\in \\mathbb{R}$, \\[ \\lvert a + b \\rvert \\le \\lvert a \\rvert + \\lvert b \\rvert. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:reverse-triangle-inequality",
+      "title": "Reverse Triangle Inequality",
+      "source": "notes/modulus/notes-modulus.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $a, b \\in \\mathbb{R}$, \\[ \\lvert\\, \\lvert a \\rvert - \\lvert b \\rvert \\,\\rvert \\le \\lvert a - b \\rvert. \\]",
+      "proof_source": "proofs/modulus/prf-reverse-triangle-inequality.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:absolute-value-sum-bound",
+      "title": "Generalised Triangle Inequality",
+      "source": "notes/modulus/notes-modulus.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all $n \\in \\mathbb{N}$ and $a_1, \\ldots, a_n \\in \\mathbb{R}$, \\[ \\left\\lvert \\sum_{k=1}^{n} a_k \\right\\rvert \\le \\sum_{k=1}^{n} \\lvert a_k \\rvert. \\]",
+      "proof_source": "proofs/modulus/prf-absolute-value-sum-bound.tex"
     },
     {
       "type": "multiple_primary_statements_in_box",
@@ -28473,6 +29686,14 @@
     {
       "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:ineq-add-both-sides",
+      "missing_target_id": "cor:additive-cancellation-on-q",
+      "relationship_kind": "depends_on",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:ineq-add-both-sides",
       "missing_target_id": "def:real-ordered-field",
       "relationship_kind": "depends_on",
       "source": "notes/inequality/notes-inequality.tex",
@@ -28488,16 +29709,16 @@
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:ineq-add-both-sides",
-      "missing_target_id": "cor:additive-cancellation-on-q",
+      "source_node_id": "thm:ineq-nonstrict-add-both-sides",
+      "missing_target_id": "def:real-ordered-field",
       "relationship_kind": "depends_on",
       "source": "notes/inequality/notes-inequality.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:ineq-nonstrict-add-both-sides",
-      "missing_target_id": "def:real-ordered-field",
+      "source_node_id": "thm:ineq-multiply-positive",
+      "missing_target_id": "def:positive-cone",
       "relationship_kind": "depends_on",
       "source": "notes/inequality/notes-inequality.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
@@ -28520,7 +29741,7 @@
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:ineq-multiply-positive",
+      "source_node_id": "thm:ineq-multiply-negative",
       "missing_target_id": "def:positive-cone",
       "relationship_kind": "depends_on",
       "source": "notes/inequality/notes-inequality.tex",
@@ -28544,23 +29765,7 @@
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:ineq-multiply-negative",
-      "missing_target_id": "def:positive-cone",
-      "relationship_kind": "depends_on",
-      "source": "notes/inequality/notes-inequality.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:ineq-nonstrict-multiply-nonneg",
-      "missing_target_id": "def:real-ordered-field",
-      "relationship_kind": "depends_on",
-      "source": "notes/inequality/notes-inequality.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:ineq-squeeze",
       "missing_target_id": "def:real-ordered-field",
       "relationship_kind": "depends_on",
       "source": "notes/inequality/notes-inequality.tex",
@@ -28576,7 +29781,7 @@
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:ineq-transitivity-strict",
+      "source_node_id": "thm:ineq-squeeze",
       "missing_target_id": "def:real-ordered-field",
       "relationship_kind": "depends_on",
       "source": "notes/inequality/notes-inequality.tex",
@@ -28586,6 +29791,14 @@
       "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:ineq-transitivity-strict",
       "missing_target_id": "def:positive-cone",
+      "relationship_kind": "depends_on",
+      "source": "notes/inequality/notes-inequality.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:ineq-transitivity-strict",
+      "missing_target_id": "def:real-ordered-field",
       "relationship_kind": "depends_on",
       "source": "notes/inequality/notes-inequality.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
@@ -28681,7 +29894,7 @@
     {
       "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:absolute-value-nonneg",
-      "missing_target_id": "thm:ordered-field-squares-nonnegative",
+      "missing_target_id": "def:real-ordered-field",
       "relationship_kind": "depends_on",
       "source": "notes/modulus/notes-modulus.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
@@ -28689,7 +29902,7 @@
     {
       "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:absolute-value-nonneg",
-      "missing_target_id": "def:real-ordered-field",
+      "missing_target_id": "thm:ordered-field-squares-nonnegative",
       "relationship_kind": "depends_on",
       "source": "notes/modulus/notes-modulus.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
@@ -28713,6 +29926,14 @@
     {
       "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:absolute-value-product",
+      "missing_target_id": "thm:ordered-field-squares-nonnegative",
+      "relationship_kind": "depends_on",
+      "source": "notes/modulus/notes-modulus.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:absolute-value-product",
       "missing_target_id": "thm:ring-negation-of-product",
       "relationship_kind": "depends_on",
       "source": "notes/modulus/notes-modulus.tex",
@@ -28722,14 +29943,6 @@
       "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:absolute-value-product",
       "missing_target_id": "thm:ring-product-of-negatives",
-      "relationship_kind": "depends_on",
-      "source": "notes/modulus/notes-modulus.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:absolute-value-product",
-      "missing_target_id": "thm:ordered-field-squares-nonnegative",
       "relationship_kind": "depends_on",
       "source": "notes/modulus/notes-modulus.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
@@ -30539,6 +31752,18 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Definition",
+      "node_id": "def:strictly-increasing-index-map",
+      "title": "Strictly Increasing Index Map",
+      "source": "notes/subsequences/notes-subsequences.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $\\sigma:\\mathbb{N}\\to\\mathbb{N}$ be a function. The function $\\sigma$ is a \\textbf{strictly increasing index map} if \\[ k<\\ell \\Longrightarrow \\sigma(k)<\\sigma(\\ell) \\qquad \\text{for all } k,\\ell\\in\\mathbb{N}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
       "node_id": "def:subsequence",
       "title": "Subsequence",
       "source": "notes/subsequences/notes-subsequences.tex",
@@ -30855,6 +32080,22 @@
     },
     {
       "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:sequence",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/definition/notes-sequences-definitions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:sequence",
+      "missing_target_id": "def:natural-numbers",
+      "relationship_kind": "depends_on",
+      "source": "notes/definition/notes-sequences-definitions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
       "source_node_id": "def:tail-supremum-sequence",
       "missing_target_id": "def:supremum",
       "relationship_kind": "depends_on",
@@ -30915,6 +32156,30 @@
       "missing_target_id": "def:infimum",
       "relationship_kind": "depends_on",
       "source": "notes/order-limits/notes-order-limits.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:strictly-increasing-index-map",
+      "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/subsequences/notes-subsequences.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:strictly-increasing-index-map",
+      "missing_target_id": "def:natural-numbers",
+      "relationship_kind": "depends_on",
+      "source": "notes/subsequences/notes-subsequences.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:strictly-increasing-index-map",
+      "missing_target_id": "thm:strict-order-successor-characterization",
+      "relationship_kind": "depends_on",
+      "source": "notes/subsequences/notes-subsequences.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {

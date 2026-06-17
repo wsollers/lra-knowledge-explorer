@@ -8630,11 +8630,6 @@
     "kind": "depends_on"
   },
   {
-    "from": "ax:completeness-of-reals",
-    "to": "def:least-upper-bound-property",
-    "kind": "depends_on"
-  },
-  {
     "from": "cor:archimedean-reciprocal",
     "to": "thm:archimedean-property",
     "kind": "depends_on"
@@ -8657,6 +8652,11 @@
   {
     "from": "def:epsilon-characterization-of-supremum",
     "to": "def:upper-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:infimum",
+    "to": "def:least-upper-bound-property",
     "kind": "depends_on"
   },
   {
@@ -9245,6 +9245,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:bolzano-intermediate-value",
+    "to": "def:continuous-at-point",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:boundedness-theorem",
     "to": "def:bounded-on-a-set",
     "kind": "depends_on"
@@ -9262,6 +9267,16 @@
   {
     "from": "thm:continuity-iff-zero-oscillation",
     "to": "def:oscillation-at-a-point",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:continuous-inverse-theorem",
+    "to": "def:continuous-at-point",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:continuous-inverse-theorem",
+    "to": "thm:bolzano-intermediate-value",
     "kind": "depends_on"
   },
   {
@@ -9327,6 +9342,21 @@
   {
     "from": "thm:monotone-discontinuities-countable",
     "to": "thm:monotone-one-sided-limits",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:piecewise-linear-approximation",
+    "to": "def:continuous-at-point",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:piecewise-linear-approximation",
+    "to": "def:piecewise-linear-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:piecewise-linear-approximation",
+    "to": "thm:heine-cantor",
     "kind": "depends_on"
   },
   {
@@ -9450,6 +9480,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:sequential-definition-of-derivative-at-a-point",
+    "to": "def:derivative-at-a-point",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:tangent-line",
     "to": "def:derivative-at-a-point",
     "kind": "depends_on"
@@ -9491,6 +9526,11 @@
   },
   {
     "from": "prop:derivative-h-form-equivalence",
+    "to": "def:derivative-at-a-point",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:derivative-of-the-identity",
     "to": "def:derivative-at-a-point",
     "kind": "depends_on"
   },
@@ -10105,188 +10145,188 @@
     "kind": "depends_on"
   },
   {
-    "from": "def:absolute-value",
-    "to": "thm:absolute-value-bounds",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:absolute-value",
-    "to": "thm:absolute-value-le-iff",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:absolute-value",
-    "to": "thm:absolute-value-lt-iff",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:absolute-value",
-    "to": "thm:absolute-value-nonneg",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:absolute-value",
-    "to": "thm:absolute-value-product",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:absolute-value",
-    "to": "thm:absolute-value-quotient",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:absolute-value",
-    "to": "thm:absolute-value-self-or-neg",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:absolute-value",
-    "to": "thm:absolute-value-sum-bound",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:absolute-value",
-    "to": "thm:absolute-value-symmetric",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:absolute-value",
-    "to": "thm:absolute-value-zero-iff-zero",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:absolute-value",
-    "to": "thm:reverse-triangle-inequality",
+    "from": "thm:absolute-value-bounds",
+    "to": "def:absolute-value",
     "kind": "depends_on"
   },
   {
     "from": "thm:absolute-value-bounds",
-    "to": "thm:absolute-value-le-iff",
+    "to": "thm:absolute-value-nonneg",
     "kind": "depends_on"
   },
   {
     "from": "thm:absolute-value-le-iff",
-    "to": "thm:absolute-value-lt-iff",
+    "to": "def:absolute-value",
     "kind": "depends_on"
   },
   {
-    "from": "thm:absolute-value-nonneg",
+    "from": "thm:absolute-value-le-iff",
     "to": "thm:absolute-value-bounds",
     "kind": "depends_on"
   },
   {
+    "from": "thm:absolute-value-lt-iff",
+    "to": "def:absolute-value",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:absolute-value-lt-iff",
+    "to": "thm:absolute-value-le-iff",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:absolute-value-nonneg",
-    "to": "thm:absolute-value-zero-iff-zero",
+    "to": "def:absolute-value",
     "kind": "depends_on"
   },
   {
     "from": "thm:absolute-value-product",
-    "to": "thm:absolute-value-quotient",
+    "to": "def:absolute-value",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:absolute-value-quotient",
+    "to": "def:absolute-value",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:absolute-value-quotient",
+    "to": "thm:absolute-value-product",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:absolute-value-quotient",
+    "to": "thm:absolute-value-zero-iff-zero",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:absolute-value-self-or-neg",
+    "to": "def:absolute-value",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:absolute-value-sum-bound",
+    "to": "def:absolute-value",
     "kind": "depends_on"
   },
   {
     "from": "thm:absolute-value-symmetric",
-    "to": "thm:reverse-triangle-inequality",
+    "to": "def:absolute-value",
     "kind": "depends_on"
   },
   {
     "from": "thm:absolute-value-zero-iff-zero",
-    "to": "thm:absolute-value-quotient",
+    "to": "def:absolute-value",
     "kind": "depends_on"
   },
   {
-    "from": "thm:ineq-add-both-sides",
-    "to": "thm:ineq-add-inequalities",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ineq-add-both-sides",
-    "to": "thm:ineq-mixed-add",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ineq-add-both-sides",
-    "to": "thm:ineq-nonstrict-add-both-sides",
+    "from": "thm:absolute-value-zero-iff-zero",
+    "to": "thm:absolute-value-nonneg",
     "kind": "depends_on"
   },
   {
     "from": "thm:ineq-add-inequalities",
+    "to": "thm:ineq-add-both-sides",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-add-inequalities",
+    "to": "thm:ineq-transitivity-strict",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm-two",
     "to": "thm:ineq-square-monotone",
     "kind": "depends_on"
   },
   {
-    "from": "thm:ineq-multiply-positive",
-    "to": "thm:ineq-nonstrict-multiply-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ineq-multiply-positive",
-    "to": "thm:ineq-reciprocal-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ineq-multiply-positive",
-    "to": "thm:ineq-square-monotone",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ineq-nonstrict-add-both-sides",
-    "to": "thm:ineq-bernoulli",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ineq-nonstrict-add-both-sides",
-    "to": "thm:ineq-mixed-add",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ineq-nonstrict-add-both-sides",
-    "to": "thm:ineq-nonstrict-add-inequalities",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ineq-nonstrict-multiply-nonneg",
-    "to": "thm:ineq-bernoulli",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ineq-nonstrict-multiply-positive",
-    "to": "thm:ineq-nonstrict-multiply-nonneg",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ineq-reciprocal-positive",
-    "to": "thm:ineq-reciprocal-flip",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ineq-square-monotone",
-    "to": "thm:ineq-am-gm-two",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ineq-square-monotone",
+    "from": "thm:ineq-am-gm-two",
     "to": "thm:ineq-square-root-monotone",
     "kind": "depends_on"
   },
   {
-    "from": "thm:ineq-square-root-monotone",
-    "to": "thm:ineq-am-gm-two",
+    "from": "thm:ineq-bernoulli",
+    "to": "thm:ineq-nonstrict-add-both-sides",
     "kind": "depends_on"
   },
   {
-    "from": "thm:ineq-transitivity-mixed",
-    "to": "thm:ineq-mixed-add",
+    "from": "thm:ineq-bernoulli",
+    "to": "thm:ineq-nonstrict-multiply-nonneg",
     "kind": "depends_on"
   },
   {
-    "from": "thm:ineq-transitivity-strict",
+    "from": "thm:ineq-mixed-add",
+    "to": "thm:ineq-add-both-sides",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-mixed-add",
+    "to": "thm:ineq-nonstrict-add-both-sides",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-mixed-add",
+    "to": "thm:ineq-transitivity-mixed",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-nonstrict-add-both-sides",
+    "to": "thm:ineq-add-both-sides",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-nonstrict-add-inequalities",
+    "to": "thm:ineq-nonstrict-add-both-sides",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-nonstrict-multiply-nonneg",
+    "to": "thm:ineq-nonstrict-multiply-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-nonstrict-multiply-positive",
+    "to": "thm:ineq-multiply-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-reciprocal-flip",
+    "to": "thm:ineq-reciprocal-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-reciprocal-positive",
+    "to": "thm:ineq-multiply-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-square-monotone",
     "to": "thm:ineq-add-inequalities",
     "kind": "depends_on"
   },
   {
-    "from": "thm:ineq-transitivity-strict",
-    "to": "thm:ineq-transitivity-mixed",
+    "from": "thm:ineq-square-monotone",
+    "to": "thm:ineq-multiply-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-square-root-monotone",
+    "to": "thm:ineq-square-monotone",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-transitivity-mixed",
+    "to": "thm:ineq-transitivity-strict",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:reverse-triangle-inequality",
+    "to": "def:absolute-value",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:reverse-triangle-inequality",
+    "to": "thm:absolute-value-symmetric",
     "kind": "depends_on"
   },
   {
