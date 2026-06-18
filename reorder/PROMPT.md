@@ -79,9 +79,12 @@ stopped. **The filesystem is the cursor** — nothing else tracks progress.
 3. **Statement licensing, not proof load.** Include a dependency when the statement
    cannot be written with its intended mathematical meaning unless that vocabulary
    already exists. Typing clauses and ambient structures are dependencies when they
-   introduce the objects, sets, relations, operations, or predicates used in the
-   statement. Do **not** add a node merely because it appears as a variable name or
-   decorative notation; do add it when it names part of the statement's grammar.
+   introduce the objects, sets, spaces, relations, operations, predicates, or
+   properties used in the statement. It is fine, and often correct, to include the
+   ambient space, predicate, or structural property when it appears in the assertion's
+   setup, signature, hypotheses, or conclusion. Do **not** add a node merely because
+   it appears as a variable name or decorative notation; do add it when it names part
+   of the statement's grammar.
    - **Test:** erase the candidate dependency from the vocabulary. If the statement
      no longer parses as the same mathematical assertion or definition, include it.
      If it still parses unchanged and the candidate is only used in a proof you know
@@ -90,6 +93,9 @@ stopped. **The filesystem is the cursor** — nothing else tracks progress.
      - `def:upper-bound`: "$S\subseteq\mathbb{R}$" and "$\alpha\le\gamma$" require
        the ambient set of reals, subset, and order vocabulary to state the definition.
        Include those statement-licensing dependencies.
+     - `thm:positive-multiplication-preserves-order`: the ambient ordered field,
+       positivity predicate, multiplication operation, and order relation all license
+       the statement itself. Include them when corresponding nodes exist.
      - `def:indexed-union`: "$\bigcup_{i\in I} A_i$" requires indexed-family and
        union/existential membership vocabulary to state the definition. Include them.
      - `thm:addition-on-q-associative`: the statement needs rational addition and the
@@ -99,8 +105,10 @@ stopped. **The filesystem is the cursor** — nothing else tracks progress.
      precisely. Record missing vocabulary in `notes` instead of force-fitting an edge.
 
 4. **Definition vs theorem layering.**
-   - A **definition's** dependencies are what you need to *state* it. These normally
-     bottom out at definitional-truths / primitives, never at an axiom or theorem.
+   - A **definition's** dependencies are what you need to *state* it, including the
+     ambient space, predicates, operations, relations, and structural properties that
+     appear in the definition. These normally bottom out at definitional-truths /
+     primitives, never at an axiom or theorem.
    - **Exception — well-definedness.** A definition *may* depend on a theorem when
      that theorem discharges an obligation needed to *name* the object: existence-
      and-uniqueness ("*the* limit", "*the* gcd"), representative-independence
@@ -109,10 +117,11 @@ stopped. **The filesystem is the cursor** — nothing else tracks progress.
      in `rationale`. A definition leaning on a theorem that is merely a *downstream
      consequence* of the concept is wrong — propose deleting it.
    - A **theorem/lemma/prop/cor's** dependencies are also what you need to *state*
-     the theorem, lemma, proposition, or corollary. Do not add proof-only facts unless
-     the statement names them or the local source convention explicitly uses the
-     dependency block for proof support. In this audit, the default is statement
-     licensing.
+     the theorem, lemma, proposition, or corollary, including ambient spaces,
+     predicates, operations, relations, and structural properties named by its
+     hypotheses or conclusion. Do not add proof-only facts unless the statement names
+     them or the local source convention explicitly uses the dependency block for
+     proof support. In this audit, the default is statement licensing.
 
 5. **The completeness trap.** Never route a supremum/infimum *definition* to
    `ax:completeness-of-reals`. Completeness governs the *existence* of suprema, which
