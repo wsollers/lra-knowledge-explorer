@@ -1,0 +1,83 @@
+- volume: viii
+  chapter: "model-theory"
+  term: "def:first-order-language"
+  change_type: add
+  dependency: "def:logical-connective"
+  rationale: "The current set omits the logical-connective vocabulary explicitly listed among the logical symbols of a first-order language. The other listed symbol and arity dependencies are needed to state the three components of the language."
+  licensing_quote: connectives $\lnot, \land, \lor, \to, \leftrightarrow$
+  confidence: 0.86
+- volume: viii
+  chapter: "model-theory"
+  term: "def:l-structure"
+  change_type: add
+  dependency: "def:arity"
+  rationale: "The statement explicitly quantifies over arity-bearing relation, function, and constant symbols, and uses subset notation for interpreted relations. Those are statement-licensing vocabulary, not proof-only facts; the named interpretation concept has no exact local node, so it is noted rather than force-fit."
+  licensing_quote: "for each $n$-ary relation symbol $R \\in \\mathcal{R}$,
+        a relation $R^{\\mathcal{M}} \\subseteq M^n$; ... for each $n$-ary function symbol $f \\in \\mathcal{F}$,
+        a function $f^{\\mathcal{M}} : M^n \\to M$; ... for each constant symbol $c \\in \\mathcal{C}$ ... denotes the \\textbf{interpretation} of each symbol"
+  confidence: 0.78
+- volume: viii
+  chapter: "model-theory"
+  term: "def:l-structure"
+  change_type: add
+  dependency: "def:relation-symbol"
+  rationale: "The statement explicitly quantifies over arity-bearing relation, function, and constant symbols, and uses subset notation for interpreted relations. Those are statement-licensing vocabulary, not proof-only facts; the named interpretation concept has no exact local node, so it is noted rather than force-fit."
+  licensing_quote: "for each $n$-ary relation symbol $R \\in \\mathcal{R}$,
+        a relation $R^{\\mathcal{M}} \\subseteq M^n$; ... for each $n$-ary function symbol $f \\in \\mathcal{F}$,
+        a function $f^{\\mathcal{M}} : M^n \\to M$; ... for each constant symbol $c \\in \\mathcal{C}$ ... denotes the \\textbf{interpretation} of each symbol"
+  confidence: 0.78
+- volume: viii
+  chapter: "model-theory"
+  term: "def:l-structure"
+  change_type: add
+  dependency: "def:function-symbol"
+  rationale: "The statement explicitly quantifies over arity-bearing relation, function, and constant symbols, and uses subset notation for interpreted relations. Those are statement-licensing vocabulary, not proof-only facts; the named interpretation concept has no exact local node, so it is noted rather than force-fit."
+  licensing_quote: "for each $n$-ary relation symbol $R \\in \\mathcal{R}$,
+        a relation $R^{\\mathcal{M}} \\subseteq M^n$; ... for each $n$-ary function symbol $f \\in \\mathcal{F}$,
+        a function $f^{\\mathcal{M}} : M^n \\to M$; ... for each constant symbol $c \\in \\mathcal{C}$ ... denotes the \\textbf{interpretation} of each symbol"
+  confidence: 0.78
+- volume: viii
+  chapter: "model-theory"
+  term: "def:l-structure"
+  change_type: add
+  dependency: "def:constant-symbol"
+  rationale: "The statement explicitly quantifies over arity-bearing relation, function, and constant symbols, and uses subset notation for interpreted relations. Those are statement-licensing vocabulary, not proof-only facts; the named interpretation concept has no exact local node, so it is noted rather than force-fit."
+  licensing_quote: "for each $n$-ary relation symbol $R \\in \\mathcal{R}$,
+        a relation $R^{\\mathcal{M}} \\subseteq M^n$; ... for each $n$-ary function symbol $f \\in \\mathcal{F}$,
+        a function $f^{\\mathcal{M}} : M^n \\to M$; ... for each constant symbol $c \\in \\mathcal{C}$ ... denotes the \\textbf{interpretation} of each symbol"
+  confidence: 0.78
+- volume: viii
+  chapter: "model-theory"
+  term: "def:l-structure"
+  change_type: add
+  dependency: "def:subset"
+  rationale: "The statement explicitly quantifies over arity-bearing relation, function, and constant symbols, and uses subset notation for interpreted relations. Those are statement-licensing vocabulary, not proof-only facts; the named interpretation concept has no exact local node, so it is noted rather than force-fit."
+  licensing_quote: "for each $n$-ary relation symbol $R \\in \\mathcal{R}$,
+        a relation $R^{\\mathcal{M}} \\subseteq M^n$; ... for each $n$-ary function symbol $f \\in \\mathcal{F}$,
+        a function $f^{\\mathcal{M}} : M^n \\to M$; ... for each constant symbol $c \\in \\mathcal{C}$ ... denotes the \\textbf{interpretation} of each symbol"
+  confidence: 0.78
+- volume: viii
+  chapter: "model-theory"
+  term: "def:term-evaluation"
+  change_type: add
+  dependency: "def:variable"
+  rationale: "The statement defines evaluation by cases on variables, constant symbols, and arity-bearing function symbols, so variable and arity vocabulary are direct statement dependencies in addition to the current term and symbol dependencies."
+  licensing_quote: "If $t = v_i$ is a variable ... If $t = c$ is a constant symbol ... If $t = f(t_1, \\ldots, t_n)$ for an $n$-ary function symbol $f$"
+  confidence: 0.84
+- volume: viii
+  chapter: "model-theory"
+  term: "def:term-evaluation"
+  change_type: add
+  dependency: "def:arity"
+  rationale: "The statement defines evaluation by cases on variables, constant symbols, and arity-bearing function symbols, so variable and arity vocabulary are direct statement dependencies in addition to the current term and symbol dependencies."
+  licensing_quote: "If $t = v_i$ is a variable ... If $t = c$ is a constant symbol ... If $t = f(t_1, \\ldots, t_n)$ for an $n$-ary function symbol $f$"
+  confidence: 0.84
+- volume: viii
+  chapter: "model-theory"
+  term: "def:variable-assignment"
+  change_type: add
+  dependency: "def:countable"
+  rationale: "The statement requires the ambient structure, first-order variables, function notation for the assignment, and the countability property of the fixed variable stock. Countability is part of the setup, not a proof-only condition."
+  licensing_quote: "$\\mathrm{Var} = \\{v_1, v_2, v_3, \\ldots\\}$ be a fixed countable set of
+first-order variables"
+  confidence: 0.9

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-06-18T06:49:49.803857+00:00",
+    "generated_at": "2026-06-18T07:09:20.527414+00:00",
     "chapters": [
       "axiom-systems",
       "predicate-logic",
@@ -35,11 +35,11 @@
       "model-theory"
     ],
     "node_count": 1638,
-    "edge_count": 3675,
+    "edge_count": 3684,
     "error_count": 0,
     "schema_version": "governance-export-1",
     "script": "lra-governance/tools/governance/extraction_pipeline/export_knowledge_explorer.py",
-    "source_run": "F:\\repos\\lra-governance\\runs\\extraction-20260618-064219"
+    "source_run": "F:\\repos\\lra-governance\\runs\\extraction-20260618-070909"
   },
   "nodes": [
     {
@@ -613,7 +613,9 @@
         "def:signature-constant-symbol",
         "def:signature-function-symbol",
         "def:relation-symbol",
-        "def:first-order-language"
+        "def:first-order-language",
+        "def:l-structure",
+        "def:term-evaluation"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -625,7 +627,9 @@
         "Constant Symbol",
         "Function Symbol",
         "Relation Symbol",
-        "First-Order Language $\\mathcal{L}$"
+        "First-Order Language $\\mathcal{L}$",
+        "$\\mathcal{L}$-Structure",
+        "Term Evaluation"
       ],
       "dependencies": [
         "def:signature"
@@ -779,7 +783,8 @@
         "def:arity"
       ],
       "used_by_ids": [
-        "def:first-order-language"
+        "def:first-order-language",
+        "def:l-structure"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -789,7 +794,8 @@
         "Arity"
       ],
       "used_by_titles": [
-        "First-Order Language $\\mathcal{L}$"
+        "First-Order Language $\\mathcal{L}$",
+        "$\\mathcal{L}$-Structure"
       ],
       "dependencies": [
         "def:signature",
@@ -3503,7 +3509,8 @@
         "def:domain-of-discourse-predicate-logic",
         "def:translation-constants-variables",
         "def:first-order-language",
-        "def:variable-assignment"
+        "def:variable-assignment",
+        "def:term-evaluation"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -3524,7 +3531,8 @@
         "Domain of Discourse",
         "Constants and Variables in a Translation",
         "First-Order Language $\\mathcal{L}$",
-        "Variable Assignment"
+        "Variable Assignment",
+        "Term Evaluation"
       ],
       "dependencies": [
         "def:language"
@@ -3559,6 +3567,7 @@
         "def:translation-key-predicate-logic",
         "def:translation-constants-variables",
         "def:first-order-language",
+        "def:l-structure",
         "def:term-evaluation"
       ],
       "prereq_ids": [],
@@ -3574,6 +3583,7 @@
         "Translation Key",
         "Constants and Variables in a Translation",
         "First-Order Language $\\mathcal{L}$",
+        "$\\mathcal{L}$-Structure",
         "Term Evaluation"
       ],
       "dependencies": [
@@ -3606,6 +3616,7 @@
         "def:fo-language",
         "def:predicate-symbol",
         "def:first-order-language",
+        "def:l-structure",
         "def:term-evaluation"
       ],
       "prereq_ids": [],
@@ -3618,6 +3629,7 @@
         "First-Order Language",
         "Predicate Symbol",
         "First-Order Language $\\mathcal{L}$",
+        "$\\mathcal{L}$-Structure",
         "Term Evaluation"
       ],
       "dependencies": [
@@ -9804,7 +9816,8 @@
         "def:well-formed-formula",
         "def:molecular-formula-propositional-logic",
         "def:main-connective-propositional-logic",
-        "lem:constructor-injectivity-propositional-formulas"
+        "lem:constructor-injectivity-propositional-formulas",
+        "def:first-order-language"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -9820,7 +9833,8 @@
         "Well-Formed Formula",
         "Molecular Formula",
         "Main Connective",
-        "Constructor Injectivity for Propositional Formulas"
+        "Constructor Injectivity for Propositional Formulas",
+        "First-Order Language $\\mathcal{L}$"
       ],
       "dependencies": [
         "def:propositional-language"
@@ -10890,7 +10904,8 @@
         "thm:Q-countable",
         "thm:countable-union",
         "thm:R-uncountable",
-        "def:sigma-algebra"
+        "def:sigma-algebra",
+        "def:variable-assignment"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -10904,7 +10919,8 @@
         "$\\mathbb{Q}$ is countable",
         "Countable union of countable sets is countable",
         "$\\mathbb{R}$ is uncountable",
-        "$\\sigma$-Algebra"
+        "$\\sigma$-Algebra",
+        "Variable Assignment"
       ],
       "dependencies": [
         "def:finite-infinite",
@@ -16759,7 +16775,8 @@
         "def:function-decreasing",
         "def:bounded-set-r",
         "def:box-contain",
-        "def:interval-contain"
+        "def:interval-contain",
+        "def:l-structure"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -16835,7 +16852,8 @@
         "Decreasing Function",
         "Bounded Subset of $\\mathbb{R}$",
         "Box Containment",
-        "Interval Containment"
+        "Interval Containment",
+        "$\\mathcal{L}$-Structure"
       ],
       "dependencies": [
         "ax:separation",
@@ -70818,7 +70836,8 @@
         "def:relation-symbol",
         "def:function-symbol",
         "def:constant-symbol",
-        "def:variable"
+        "def:variable",
+        "def:logical-connective"
       ],
       "used_by_ids": [
         "def:l-structure"
@@ -70831,7 +70850,8 @@
         "Relation Symbol",
         "Function Symbol",
         "Constant Symbol",
-        "Variable"
+        "Variable",
+        "Logical Connective"
       ],
       "used_by_titles": [
         "$\\mathcal{L}$-Structure"
@@ -70841,7 +70861,8 @@
         "def:relation-symbol",
         "def:function-symbol",
         "def:constant-symbol",
-        "def:variable"
+        "def:variable",
+        "def:logical-connective"
       ],
       "ignored": false,
       "is_theorem_like": false,
@@ -70865,9 +70886,14 @@
       "section": "l-structures",
       "depends_on_ids": [
         "def:first-order-language",
+        "def:arity",
+        "def:relation-symbol",
+        "def:function-symbol",
+        "def:constant-symbol",
         "def:relation",
         "def:function",
-        "def:cartesian-product"
+        "def:cartesian-product",
+        "def:subset"
       ],
       "used_by_ids": [
         "def:variable-assignment",
@@ -70878,9 +70904,14 @@
       "implies_ids": [],
       "depends_on_titles": [
         "First-Order Language $\\mathcal{L}$",
+        "Arity",
+        "Relation Symbol",
+        "Function Symbol",
+        "Constant Symbol",
         "Relation",
         "Function",
-        "Cartesian Product"
+        "Cartesian Product",
+        "Subset"
       ],
       "used_by_titles": [
         "Variable Assignment",
@@ -70888,9 +70919,14 @@
       ],
       "dependencies": [
         "def:first-order-language",
+        "def:arity",
+        "def:relation-symbol",
+        "def:function-symbol",
+        "def:constant-symbol",
         "def:relation",
         "def:function",
-        "def:cartesian-product"
+        "def:cartesian-product",
+        "def:subset"
       ],
       "ignored": false,
       "is_theorem_like": false,
@@ -70915,7 +70951,8 @@
       "depends_on_ids": [
         "def:l-structure",
         "def:variable",
-        "def:function"
+        "def:function",
+        "def:countable"
       ],
       "used_by_ids": [
         "def:term-evaluation"
@@ -70926,7 +70963,8 @@
       "depends_on_titles": [
         "$\\mathcal{L}$-Structure",
         "Variable",
-        "Function"
+        "Function",
+        "Countable and Uncountable Sets"
       ],
       "used_by_titles": [
         "Term Evaluation"
@@ -70934,7 +70972,8 @@
       "dependencies": [
         "def:l-structure",
         "def:variable",
-        "def:function"
+        "def:function",
+        "def:countable"
       ],
       "ignored": false,
       "is_theorem_like": false,
@@ -70960,6 +70999,8 @@
         "def:l-structure",
         "def:variable-assignment",
         "def:term",
+        "def:variable",
+        "def:arity",
         "def:function-symbol",
         "def:constant-symbol"
       ],
@@ -70971,6 +71012,8 @@
         "$\\mathcal{L}$-Structure",
         "Variable Assignment",
         "Term",
+        "Variable",
+        "Arity",
         "Function Symbol",
         "Constant Symbol"
       ],
@@ -70979,6 +71022,8 @@
         "def:l-structure",
         "def:variable-assignment",
         "def:term",
+        "def:variable",
+        "def:arity",
         "def:function-symbol",
         "def:constant-symbol"
       ],
@@ -89308,8 +89353,33 @@
       "kind": "depends_on"
     },
     {
+      "from": "def:first-order-language",
+      "to": "def:logical-connective",
+      "kind": "depends_on"
+    },
+    {
       "from": "def:l-structure",
       "to": "def:first-order-language",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:l-structure",
+      "to": "def:arity",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:l-structure",
+      "to": "def:relation-symbol",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:l-structure",
+      "to": "def:function-symbol",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:l-structure",
+      "to": "def:constant-symbol",
       "kind": "depends_on"
     },
     {
@@ -89328,6 +89398,11 @@
       "kind": "depends_on"
     },
     {
+      "from": "def:l-structure",
+      "to": "def:subset",
+      "kind": "depends_on"
+    },
+    {
       "from": "def:variable-assignment",
       "to": "def:l-structure",
       "kind": "depends_on"
@@ -89343,6 +89418,11 @@
       "kind": "depends_on"
     },
     {
+      "from": "def:variable-assignment",
+      "to": "def:countable",
+      "kind": "depends_on"
+    },
+    {
       "from": "def:term-evaluation",
       "to": "def:l-structure",
       "kind": "depends_on"
@@ -89355,6 +89435,16 @@
     {
       "from": "def:term-evaluation",
       "to": "def:term",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:term-evaluation",
+      "to": "def:variable",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:term-evaluation",
+      "to": "def:arity",
       "kind": "depends_on"
     },
     {

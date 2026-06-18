@@ -18315,8 +18315,33 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:first-order-language",
+    "to": "def:logical-connective",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:l-structure",
     "to": "def:first-order-language",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:l-structure",
+    "to": "def:arity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:l-structure",
+    "to": "def:relation-symbol",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:l-structure",
+    "to": "def:function-symbol",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:l-structure",
+    "to": "def:constant-symbol",
     "kind": "depends_on"
   },
   {
@@ -18335,6 +18360,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:l-structure",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:variable-assignment",
     "to": "def:l-structure",
     "kind": "depends_on"
@@ -18350,6 +18380,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:variable-assignment",
+    "to": "def:countable",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:term-evaluation",
     "to": "def:l-structure",
     "kind": "depends_on"
@@ -18362,6 +18397,16 @@
   {
     "from": "def:term-evaluation",
     "to": "def:term",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:term-evaluation",
+    "to": "def:variable",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:term-evaluation",
+    "to": "def:arity",
     "kind": "depends_on"
   },
   {
