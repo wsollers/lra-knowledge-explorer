@@ -1,6 +1,8 @@
 # regenerable by index.py
 index.json
 manifest.json
+dependency-universe.json
+__pycache__/
 batch-*/
 # scratch
 batch-test/

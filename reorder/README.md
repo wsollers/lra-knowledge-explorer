@@ -20,8 +20,17 @@ Nothing here edits `.tex` or `.json` source — the model **proposes**, a human 
    - `change` (or a `reorder` whose set secretly differs — the **guard**) →
      `suspicious.yaml` for human review. Low-confidence changes → `focus-queue.yaml`.
    Each resolution also renders `graph-NNNN.tree.txt` and appends to `progress.yaml`.
-4. Apply reviewed `patches.yaml`, then run the **governance validators** as the gate,
+4. `python reorder/build_dependency_universe.py`
+   Builds `dependency-universe.json`, a deterministic review index of direct
+   dependencies, transitive dependencies, and proposed additions. Use it during
+   triage to see whether a proposed edge is already present through the current
+   dependency tree or would create a cycle.
+5. Apply reviewed `patches.yaml`, then run the **governance validators** as the gate,
    **per batch**, before committing — a bad resolution is caught before it compounds.
+
+Use `TRIAGE_PROMPT.md` between steps 3 and 5 when reviewing `suspicious.yaml` or
+completed `resolution-*.json` files. It classifies proposed changes as applied,
+rejected, or investigate, with guidance for ancestor-owned dependencies.
 
 ## The cursor
 
