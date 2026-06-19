@@ -199,6 +199,7 @@ const INITIAL_ZOOM      = 0.45;
 const INITIAL_ANCHOR_ID = 'def:supremum';
 const VOLUME_TITLES={1:'Logic, Sets, and Proof',2:'Foundations of Formal Number Systems',3:'Analysis',4:'Algebra and Abstract Structures',5:'Topology and Geometry',6:'Computational Mathematics',7:'Numerical and Approximation Mathematics',8:'Mathematical Logic and Foundations'};
 const VOLUME_ROMAN={1:'I',2:'II',3:'III',4:'IV',5:'V',6:'VI',7:'VII',8:'VIII'};
+const VOLUME_NUMBER_BY_ID={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
 const CHAPTER_TO_VOLUME={'propositional-logic':1,'predicate-logic':1,'sets-relations-functions':1,'axiom-systems':1,'proof-techniques':1,'identity-equality-equivalence':2,'arithmetic-operations-relations':2,'peano-systems':2,'natural-numbers':2,'whole-numbers':2,'integers':2,'rationals':2,'reals':2,'numbers-summary':2,'embedding-number-systems':2,'number-lines':2,'structure-of-real-line':2,'formalizing-number-systems':2,'lean':2,'complex-numbers':2,'real-analysis':3,'bounding':3,'sequences':3,'elementary-functions':3,'functions':3,'continuity':3,'differentiation':3,'riemann-integration':3,'measure-theory':3,'probability-theory':3,'functional-analysis':3,'complex-analysis':3,'series':3,'function-sequences':3,'foundations':3,'discrete-calculus':3,'algebraic-structures':4,'abstract-algebra':4,'linear-algebra':4,'lattice-order':4,'set-algebra':4,'algebraic-geometry':4,'summation-algebra':4,'euclidean-geometry':5,'analytical-geometry':5,'trigonometry':5,'non-euclidean-geometry':5,'differential-geometry':5,'riemannian-geometry':5,'topology':5,'calculus':6,'geometric-modeling':6,'computational-geometry':6,'computational-linear-algebra':6,'computational-probability':6,'ordinary-differential-equations':6,'partial-differential-equations':6,'fourier-analysis':6,'numerical-analysis':7,'numerical-pde':7,'category-theory':8,'model-theory':8,'proof-theory':8,'type-theory':8,'lambda-calculus':8,'algebras-of-sets':8};
 function nodeVolume(n){return CHAPTER_TO_VOLUME[n&&n.chapter]||0;}
 
@@ -396,7 +397,8 @@ function tocVolumes(){
   const toc=(state.knowledge&&state.knowledge.metadata&&state.knowledge.metadata.toc)||[];
   return Array.isArray(toc)?toc:[];
 }
-function volumeTitle(v){return 'Volume '+VOLUME_ROMAN[v]+' \u2014 '+VOLUME_TITLES[v];}
+function volumeNumber(v){const s=String(v||'').toLowerCase();return VOLUME_NUMBER_BY_ID[s]||Number(s)||0;}
+function volumeTitle(v){const n=volumeNumber(v);return n?('Volume '+VOLUME_ROMAN[n]+' \u2014 '+VOLUME_TITLES[n]):('Volume '+String(v||''));}
 function fallbackTitle(slug){return String(slug||'').split('-').filter(Boolean).map(s=>s.charAt(0).toUpperCase()+s.slice(1)).join(' ');}
 function optionSet(select,options,current){
   const sig=options.map(o=>o.value+'='+o.label).join('|');
