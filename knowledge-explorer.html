@@ -546,10 +546,18 @@ function render(){const g=visibleGraph();const dims=layout(g.nodes,g.edges);stat
 
 async function tryAutoLoad(){
   try{
+    const DATA_VERSION='20260619-0217-proof-nav-strip';
+    const loadJson=(path,required=true)=>fetch(`${path}?v=${DATA_VERSION}`,{cache:'no-store'}).then(r=>{
+      if(!r.ok){
+        if(!required)return null;
+        throw new Error(path+' not found');
+      }
+      return r.json();
+    });
     const[k,e,pv]=await Promise.all([
-      fetch('knowledge.json').then(r=>{if(!r.ok)throw new Error('knowledge.json not found');return r.json();}),
-      fetch('graph-edges.json').then(r=>{if(!r.ok)throw new Error('graph-edges.json not found');return r.json();}),
-      fetch('proof-vault-index.json').then(r=>r.ok?r.json():{records:{}}).catch(()=>({records:{}}))
+      loadJson('knowledge.json'),
+      loadJson('graph-edges.json'),
+      loadJson('proof-vault-index.json',false).then(payload=>payload||{records:{}}).catch(()=>({records:{}}))
     ]);
     state.proofVault=pv||{records:{}};
     state.knowledge=k;state.edges=normalizeEdges(state.knowledge,e);state.nodePositions={};
