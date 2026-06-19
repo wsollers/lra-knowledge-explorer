@@ -163,6 +163,7 @@ def main() -> int:
         "nodes": graph_records,
         "direct_dependencies": {term: deps for term, deps in sorted(direct.items())},
         "transitive_dependencies": closures,
+        "via_direct_dependencies": via,
         "proposed_additions": proposed_additions,
     }
     write_json(OUT, payload)

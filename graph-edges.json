@@ -395,6 +395,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:q-alt",
+    "to": "def:prenex-formula",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:universal-implies-existential",
     "to": "def:structure",
     "kind": "depends_on"
@@ -507,6 +512,11 @@
   {
     "from": "thm:qcomm",
     "to": "def:existential-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:qcomm",
+    "to": "def:log-equiv",
     "kind": "depends_on"
   },
   {
@@ -852,6 +862,11 @@
   {
     "from": "def:fv",
     "to": "def:bound-free",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:fv",
+    "to": "def:atomic-formula",
     "kind": "depends_on"
   },
   {
@@ -2741,6 +2756,11 @@
   },
   {
     "from": "thm:countable-union",
+    "to": "def:indexed-family",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:countable-union",
     "to": "def:union",
     "kind": "depends_on"
   },
@@ -3481,6 +3501,11 @@
   },
   {
     "from": "def:identity",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:constant",
     "to": "def:function",
     "kind": "depends_on"
   },
@@ -4605,6 +4630,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "prop:invertibility-implies-left-cancellation",
+    "to": "def:left-cancellation",
+    "kind": "depends_on"
+  },
+  {
     "from": "prop:invertibility-implies-cancellation",
     "to": "prop:invertibility-implies-left-cancellation",
     "kind": "depends_on"
@@ -4632,6 +4662,11 @@
   {
     "from": "prop:invertibility-implies-right-cancellation",
     "to": "def:two-sided-inverse",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:invertibility-implies-right-cancellation",
+    "to": "def:right-cancellation",
     "kind": "depends_on"
   },
   {
@@ -5687,6 +5722,16 @@
   {
     "from": "thm:embedding-identifies-with-image",
     "to": "def:image-of-embedding",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:identity-relation",
+    "to": "def:relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:equality-relation",
+    "to": "def:relation",
     "kind": "depends_on"
   },
   {
@@ -11126,7 +11171,12 @@
   },
   {
     "from": "def:real-ordered-field",
-    "to": "thm:lub-property-r",
+    "to": "def:abstract-ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-ordered-field",
+    "to": "def:least-upper-bound-property-on-r",
     "kind": "depends_on"
   },
   {
@@ -11180,6 +11230,26 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:least-upper-bound-property-on-r",
+    "to": "def:reals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:least-upper-bound-property-on-r",
+    "to": "def:order-on-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:least-upper-bound-property-on-r",
+    "to": "def:upper-bound-in-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:least-upper-bound-property-on-r",
+    "to": "def:supremum-in-r",
+    "kind": "depends_on"
+  },
+  {
     "from": "lem:union-of-cuts-is-a-cut",
     "to": "def:dedekind-cut",
     "kind": "depends_on"
@@ -11196,7 +11266,17 @@
   },
   {
     "from": "thm:lub-property-r",
-    "to": "ax:completeness-of-reals",
+    "to": "def:least-upper-bound-property-on-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:lub-property-r",
+    "to": "lem:union-of-cuts-is-a-cut",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:lub-property-r",
+    "to": "def:supremum-in-r",
     "kind": "depends_on"
   },
   {
@@ -11562,6 +11642,11 @@
   {
     "from": "cor:ordered-field-laws-on-r",
     "to": "cor:generic-ordered-field-laws",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:r-is-complete-ordered-field",
+    "to": "def:real-ordered-field",
     "kind": "depends_on"
   },
   {
@@ -13300,6 +13385,21 @@
     "kind": "depends_on"
   },
   {
+    "from": "ax:completeness-of-reals",
+    "to": "def:reals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "ax:completeness-of-reals",
+    "to": "def:abstract-ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "ax:completeness-of-reals",
+    "to": "def:least-upper-bound-property",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:order-dense-subset",
     "to": "def:total-order",
     "kind": "depends_on"
@@ -13900,6 +14000,16 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:algebra-of-uniform-continuity-general",
+    "to": "def:linear-combination-of-real-valued-functions",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:algebra-of-uniform-continuity-general",
+    "to": "def:pointwise-difference-of-functions",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:algebra-of-uniform-continuity-bounded",
     "to": "def:uniform-continuity",
     "kind": "depends_on"
@@ -14056,6 +14166,16 @@
   },
   {
     "from": "thm:finite-linear-combination-rule",
+    "to": "def:real-linear-rule",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:finite-linear-combination-rule",
+    "to": "def:linear-combination-of-real-valued-functions",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:finite-linear-combination-rule",
     "to": "thm:constant-multiple-rule",
     "kind": "depends_on"
   },
@@ -14097,6 +14217,16 @@
   {
     "from": "cor:power-rule-special-case-interval",
     "to": "cor:power-rule-special-case",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:finite-linear-combination-rule-interval",
+    "to": "def:real-linear-rule",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:finite-linear-combination-rule-interval",
+    "to": "def:linear-combination-of-real-valued-functions",
     "kind": "depends_on"
   },
   {
@@ -15005,8 +15135,28 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:limit-function-neighbourhood",
+    "to": "def:limit-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:limit-function-neighbourhood",
+    "to": "def:epsilon-neighbourhood",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:limit-function-neighbourhood",
+    "to": "def:deleted-epsilon-neighbourhood",
+    "kind": "depends_on"
+  },
+  {
     "from": "prop:limit-neighbourhood-equiv",
     "to": "def:limit-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:limit-neighbourhood-equiv",
+    "to": "def:limit-function-neighbourhood",
     "kind": "depends_on"
   },
   {
@@ -15037,6 +15187,16 @@
   {
     "from": "cor:limit-three-equiv",
     "to": "def:limit-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:limit-three-equiv",
+    "to": "def:limit-function-neighbourhood",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:limit-three-equiv",
+    "to": "def:limit-function-sequential",
     "kind": "depends_on"
   },
   {
@@ -15270,6 +15430,26 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:linear-combination-of-real-valued-functions",
+    "to": "def:pointwise-scalar-multiple-of-a-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:linear-combination-of-real-valued-functions",
+    "to": "def:pointwise-sum-of-functions",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-linear-rule",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-linear-rule",
+    "to": "def:linear-combination-of-real-valued-functions",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:function-bounded-above",
     "to": "def:function",
     "kind": "depends_on"
@@ -15285,6 +15465,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:function-bounded-above",
+    "to": "def:bounded-above",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:function-bounded-below",
     "to": "def:function",
     "kind": "depends_on"
@@ -15297,6 +15482,11 @@
   {
     "from": "def:function-bounded-below",
     "to": "def:order-on-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-bounded-below",
+    "to": "def:bounded-below",
     "kind": "depends_on"
   },
   {
@@ -15307,6 +15497,86 @@
   {
     "from": "def:function-bounded",
     "to": "def:function-bounded-below",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-supremum-on-set",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-supremum-on-set",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-supremum-on-set",
+    "to": "def:image-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-supremum-on-set",
+    "to": "def:supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-infimum-on-set",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-infimum-on-set",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-infimum-on-set",
+    "to": "def:image-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-infimum-on-set",
+    "to": "def:infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-maximum-point",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-maximum-point",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-maximum-point",
+    "to": "def:order-on-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-maximum-point",
+    "to": "def:maximum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-minimum-point",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-minimum-point",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-minimum-point",
+    "to": "def:order-on-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-minimum-point",
+    "to": "def:minimum",
     "kind": "depends_on"
   },
   {
@@ -15326,7 +15596,17 @@
   },
   {
     "from": "def:function-strictly-increasing",
-    "to": "def:function-increasing",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-strictly-increasing",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-strictly-increasing",
+    "to": "def:strict-order-on-r",
     "kind": "depends_on"
   },
   {
@@ -15346,7 +15626,17 @@
   },
   {
     "from": "def:function-strictly-decreasing",
-    "to": "def:function-decreasing",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-strictly-decreasing",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-strictly-decreasing",
+    "to": "def:strict-order-on-r",
     "kind": "depends_on"
   },
   {
@@ -15357,6 +15647,16 @@
   {
     "from": "def:function-monotone",
     "to": "def:function-decreasing",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-constant",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:function-constant",
+    "to": "def:subset",
     "kind": "depends_on"
   },
   {
@@ -15686,17 +15986,17 @@
   },
   {
     "from": "thm:linear-combination-cauchy-sequences",
+    "to": "def:linear-combination-of-real-sequences",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:linear-combination-cauchy-sequences",
     "to": "thm:scalar-multiple-cauchy-sequence",
     "kind": "depends_on"
   },
   {
     "from": "thm:linear-combination-cauchy-sequences",
     "to": "thm:sum-cauchy-sequences",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:linear-combination-cauchy-sequences",
-    "to": "def:pointwise-sum-sequence",
     "kind": "depends_on"
   },
   {
@@ -15822,6 +16122,16 @@
   {
     "from": "def:scalar-multiple-sequence",
     "to": "def:sequence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:linear-combination-of-real-sequences",
+    "to": "def:scalar-multiple-sequence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:linear-combination-of-real-sequences",
+    "to": "def:pointwise-sum-sequence",
     "kind": "depends_on"
   },
   {
@@ -16192,6 +16502,11 @@
   {
     "from": "thm:difference-from-limit-is-null",
     "to": "def:null-sequence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:difference-from-limit-is-null",
+    "to": "def:pointwise-difference-sequence",
     "kind": "depends_on"
   },
   {
@@ -16815,6 +17130,16 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:unbounded-monotone-divergence",
+    "to": "def:sequence-bounded-above",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:unbounded-monotone-divergence",
+    "to": "def:sequence-bounded-below",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:algebraic-transformations-preserve-monotonicity",
     "to": "def:pointwise-sum-sequence",
     "kind": "depends_on"
@@ -17301,6 +17626,11 @@
   },
   {
     "from": "def:lifting",
+    "to": "def:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:lifting",
     "to": "def:bottom-element",
     "kind": "depends_on"
   },
@@ -17370,6 +17700,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:total-map",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:list",
     "to": "def:function",
     "kind": "depends_on"
@@ -17435,8 +17770,18 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:vector-and-point",
+    "to": "def:reals",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:real-vector-space",
     "to": "def:vector-space",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-vector-space",
+    "to": "def:reals",
     "kind": "depends_on"
   },
   {
@@ -18025,6 +18370,16 @@
     "kind": "depends_on"
   },
   {
+    "from": "ax:euclid-postulate-draw-straight-line",
+    "to": "def:euclid-straight-line",
+    "kind": "depends_on"
+  },
+  {
+    "from": "ax:euclid-postulate-produce-straight-line",
+    "to": "def:euclid-straight-line",
+    "kind": "depends_on"
+  },
+  {
     "from": "lem:computational-geometry-convex-hull-smallest-convex-set",
     "to": "def:computational-geometry-convex-set",
     "kind": "depends_on"
@@ -18122,6 +18477,11 @@
   {
     "from": "thm:computational-geometry-greedy-slope-upper-hull",
     "to": "thm:computational-geometry-monotone-slope-upper-hull",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:numerical-analysis-ieee-754-infinity-encoding",
+    "to": "def:numerical-analysis-ieee-754-binary-floating-point-datum",
     "kind": "depends_on"
   },
   {

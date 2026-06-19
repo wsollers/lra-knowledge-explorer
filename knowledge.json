@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-06-18T07:09:20.527414+00:00",
+    "generated_at": "2026-06-19T01:35:14.251454+00:00",
     "chapters": [
       "axiom-systems",
       "predicate-logic",
@@ -34,12 +34,12 @@
       "lambda-calculus",
       "model-theory"
     ],
-    "node_count": 1638,
-    "edge_count": 3684,
+    "node_count": 1643,
+    "edge_count": 3756,
     "error_count": 0,
     "schema_version": "governance-export-1",
     "script": "lra-governance/tools/governance/extraction_pipeline/export_knowledge_explorer.py",
-    "source_run": "F:\\repos\\lra-governance\\runs\\extraction-20260618-070909"
+    "source_run": "F:\\repos\\lra-governance\\runs\\extraction-20260619-013454"
   },
   "nodes": [
     {
@@ -1965,7 +1965,8 @@
       "source_text": "The \\emph{quantifier order} of a prenex formula is the ordered list of\nquantifiers in its prefix. A change of order is significant when it changes\nwhich witnesses may depend on earlier variables.",
       "section": "quantifiers",
       "depends_on_ids": [
-        "def:quantifier-prefix"
+        "def:quantifier-prefix",
+        "def:prenex-formula"
       ],
       "used_by_ids": [
         "thm:uniform-witness-implies-dependent-witness",
@@ -1975,14 +1976,16 @@
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Quantifier Prefix"
+        "Quantifier Prefix",
+        "Prenex Formula"
       ],
       "used_by_titles": [
         "Uniform Witness Implies Dependent Witness",
         "Scope Ambiguity"
       ],
       "dependencies": [
-        "def:quantifier-prefix"
+        "def:quantifier-prefix",
+        "def:prenex-formula"
       ],
       "ignored": false,
       "is_theorem_like": false,
@@ -2240,6 +2243,7 @@
         "def:matrix-prenex"
       ],
       "used_by_ids": [
+        "def:q-alt",
         "def:pnf"
       ],
       "prereq_ids": [],
@@ -2250,6 +2254,7 @@
         "Matrix"
       ],
       "used_by_titles": [
+        "Quantifier Order",
         "Prenex Normal Form"
       ],
       "dependencies": [
@@ -2450,7 +2455,8 @@
       "section": "quantifiers",
       "depends_on_ids": [
         "def:universal-q",
-        "def:existential-q"
+        "def:existential-q",
+        "def:log-equiv"
       ],
       "used_by_ids": [
         "thm:mixed-quantifiers-do-not-commute"
@@ -2460,14 +2466,16 @@
       "implies_ids": [],
       "depends_on_titles": [
         "Universal Formula",
-        "Existential Formula"
+        "Existential Formula",
+        "Logical Equivalence"
       ],
       "used_by_titles": [
         "Mixed Quantifiers Do Not Commute"
       ],
       "dependencies": [
         "def:universal-q",
-        "def:existential-q"
+        "def:existential-q",
+        "def:log-equiv"
       ],
       "ignored": false,
       "is_theorem_like": true,
@@ -2851,6 +2859,7 @@
       "used_by_ids": [
         "def:pnf",
         "thm:qneg",
+        "thm:qcomm",
         "thm:qdist"
       ],
       "prereq_ids": [],
@@ -2862,6 +2871,7 @@
       "used_by_titles": [
         "Prenex Normal Form",
         "Quantifier Negation Laws",
+        "Same-Type Quantifier Commutation",
         "Valid Quantifier Distribution"
       ],
       "dependencies": [
@@ -3761,6 +3771,7 @@
       ],
       "used_by_ids": [
         "def:molecular",
+        "def:fv",
         "def:translation-predicate-relation-symbol"
       ],
       "prereq_ids": [],
@@ -3772,6 +3783,7 @@
       ],
       "used_by_titles": [
         "Molecular Formula",
+        "Free Variables of a Formula",
         "Predicate and Relation Symbols in a Translation"
       ],
       "dependencies": [
@@ -4054,6 +4066,7 @@
       "section": "syntax",
       "depends_on_ids": [
         "def:bound-free",
+        "def:atomic-formula",
         "def:formula",
         "def:term",
         "def:variable",
@@ -4069,6 +4082,7 @@
       "implies_ids": [],
       "depends_on_titles": [
         "Bound and Free Occurrences",
+        "Atomic Formula",
         "Formula",
         "Term",
         "Variable",
@@ -4081,6 +4095,7 @@
       ],
       "dependencies": [
         "def:bound-free",
+        "def:atomic-formula",
         "def:formula",
         "def:term",
         "def:variable",
@@ -11031,6 +11046,7 @@
       "depends_on_ids": [
         "def:countable",
         "def:natural-numbers",
+        "def:indexed-family",
         "def:union"
       ],
       "used_by_ids": [
@@ -11042,6 +11058,7 @@
       "depends_on_titles": [
         "Countable and Uncountable Sets",
         "The Natural Numbers",
+        "Indexed Family of Sets",
         "Union"
       ],
       "used_by_titles": [
@@ -11050,6 +11067,7 @@
       "dependencies": [
         "def:countable",
         "def:natural-numbers",
+        "def:indexed-family",
         "def:union"
       ],
       "ignored": false,
@@ -11892,6 +11910,7 @@
         "def:power-set"
       ],
       "used_by_ids": [
+        "thm:countable-union",
         "def:indexed-union",
         "def:indexed-intersection",
         "def:pairwise-disjoint",
@@ -11907,6 +11926,7 @@
         "Power Set"
       ],
       "used_by_titles": [
+        "Countable union of countable sets is countable",
         "Indexed Union",
         "Indexed Intersection",
         "Pairwise Disjoint Family",
@@ -12728,6 +12748,7 @@
         "def:surjective",
         "def:bijective",
         "def:identity",
+        "def:constant",
         "def:induced-order",
         "prop:induced-preorder",
         "def:f-indist",
@@ -12766,12 +12787,21 @@
         "def:pointwise-absolute-value-of-a-function",
         "def:pointwise-maximum-of-two-functions",
         "def:pointwise-quotient-of-functions",
+        "def:real-linear-rule",
         "def:function-bounded-above",
         "def:function-bounded-below",
+        "def:function-supremum-on-set",
+        "def:function-infimum-on-set",
+        "def:function-maximum-point",
+        "def:function-minimum-point",
         "def:function-increasing",
+        "def:function-strictly-increasing",
         "def:function-decreasing",
+        "def:function-strictly-decreasing",
+        "def:function-constant",
         "def:sequence",
         "def:strictly-increasing-index-map",
+        "def:total-map",
         "def:list",
         "def:vector-parametric-form",
         "def:l-structure",
@@ -12814,6 +12844,7 @@
         "Surjective Function",
         "Bijective Function",
         "Identity and Inclusion",
+        "Constant Function",
         "Induced Order",
         "\\texorpdfstring{\\hyperref[prf:induced-preorder",
         "$f$-Indistinguishable Elements",
@@ -12852,12 +12883,21 @@
         "Pointwise Absolute Value of a Function",
         "Pointwise Maximum of Two Functions",
         "Pointwise Quotient of Functions",
+        "Real-Linear Rule",
         "Bounded Above Function",
         "Bounded Below Function",
+        "Supremum of a Function on a Set",
+        "Infimum of a Function on a Set",
+        "Maximum Point of a Function",
+        "Minimum Point of a Function",
         "Increasing Function",
+        "Strictly Increasing Function",
         "Decreasing Function",
+        "Strictly Decreasing Function",
+        "Constant Function",
         "Sequence",
         "Strictly Increasing Index Map",
+        "Total Map",
         "List",
         "Vector parametric form",
         "$\\mathcal{L}$-Structure",
@@ -12972,7 +13012,9 @@
       ],
       "used_by_ids": [
         "thm:image-ops",
-        "prop:embedding-iso"
+        "prop:embedding-iso",
+        "def:function-supremum-on-set",
+        "def:function-infimum-on-set"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -12984,7 +13026,9 @@
       ],
       "used_by_titles": [
         "Images and Set Operations",
-        "Order embedding is isomorphism onto image"
+        "Order embedding is isomorphism onto image",
+        "Supremum of a Function on a Set",
+        "Infimum of a Function on a Set"
       ],
       "dependencies": [
         "def:function",
@@ -13336,14 +13380,20 @@
       "statement_tex": "$f : A \\to B$ is \\emph{constant} if there exists $b_0 \\in B$ with\n$f(a) = b_0$ for all $a \\in A$.",
       "source_text": "$f : A \\to B$ is \\emph{constant} if there exists $b_0 \\in B$ with\n$f(a) = b_0$ for all $a \\in A$.",
       "section": "functions",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:function"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Function"
+      ],
       "used_by_titles": [],
-      "dependencies": [],
+      "dependencies": [
+        "def:function"
+      ],
       "ignored": false,
       "is_theorem_like": false,
       "definitional_root": false,
@@ -15612,6 +15662,8 @@
         "def:transitive-relation",
         "def:total-relation",
         "def:abstract-order-embedding",
+        "def:identity-relation",
+        "def:equality-relation",
         "def:equivalence-relation",
         "def:relation-respects-equivalence",
         "def:formal-difference-equivalence",
@@ -15659,6 +15711,8 @@
         "Transitive Relation",
         "Total Relation",
         "Order Embedding",
+        "Identity",
+        "Equality on a Domain",
         "Equivalence Relation",
         "Relation Respects an Equivalence",
         "Formal-Difference Equivalence",
@@ -16771,8 +16825,15 @@
         "def:pointwise-quotient-of-functions",
         "def:function-bounded-above",
         "def:function-bounded-below",
+        "def:function-supremum-on-set",
+        "def:function-infimum-on-set",
+        "def:function-maximum-point",
+        "def:function-minimum-point",
         "def:function-increasing",
+        "def:function-strictly-increasing",
         "def:function-decreasing",
+        "def:function-strictly-decreasing",
+        "def:function-constant",
         "def:bounded-set-r",
         "def:box-contain",
         "def:interval-contain",
@@ -16848,8 +16909,15 @@
         "Pointwise Quotient of Functions",
         "Bounded Above Function",
         "Bounded Below Function",
+        "Supremum of a Function on a Set",
+        "Infimum of a Function on a Set",
+        "Maximum Point of a Function",
+        "Minimum Point of a Function",
         "Increasing Function",
+        "Strictly Increasing Function",
         "Decreasing Function",
+        "Strictly Decreasing Function",
+        "Constant Function",
         "Bounded Subset of $\\mathbb{R}$",
         "Box Containment",
         "Interval Containment",
@@ -16985,7 +17053,8 @@
         "thm:de-morgan",
         "def:set-duality",
         "lem:union-of-cuts-is-a-cut",
-        "def:union-of-intervals"
+        "def:union-of-intervals",
+        "def:lifting"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -17015,7 +17084,8 @@
         "De Morgan's Laws",
         "Set Duality",
         "Union of a Bounded Nonempty Family of Cuts Is a Cut",
-        "Union of Intervals"
+        "Union of Intervals",
+        "Lifting"
       ],
       "dependencies": [
         "def:set-membership",
@@ -17771,7 +17841,8 @@
         "def:binary-arithmetic-operation"
       ],
       "used_by_ids": [
-        "def:two-sided-cancellation"
+        "def:two-sided-cancellation",
+        "prop:invertibility-implies-left-cancellation"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -17780,7 +17851,8 @@
         "Binary Arithmetic Operation"
       ],
       "used_by_titles": [
-        "Two-Sided Cancellation"
+        "Two-Sided Cancellation",
+        "Invertibility Implies Left Cancellation"
       ],
       "dependencies": [
         "def:binary-arithmetic-operation"
@@ -17809,7 +17881,8 @@
         "def:binary-arithmetic-operation"
       ],
       "used_by_ids": [
-        "def:two-sided-cancellation"
+        "def:two-sided-cancellation",
+        "prop:invertibility-implies-right-cancellation"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -17818,7 +17891,8 @@
         "Binary Arithmetic Operation"
       ],
       "used_by_titles": [
-        "Two-Sided Cancellation"
+        "Two-Sided Cancellation",
+        "Invertibility Implies Right Cancellation"
       ],
       "dependencies": [
         "def:binary-arithmetic-operation"
@@ -17887,7 +17961,8 @@
       "depends_on_ids": [
         "def:associativity",
         "def:two-sided-identity",
-        "def:two-sided-inverse"
+        "def:two-sided-inverse",
+        "def:left-cancellation"
       ],
       "used_by_ids": [
         "prop:invertibility-implies-cancellation"
@@ -17898,7 +17973,8 @@
       "depends_on_titles": [
         "Associativity",
         "Two-Sided Identity",
-        "Two-Sided Inverse"
+        "Two-Sided Inverse",
+        "Left Cancellation"
       ],
       "used_by_titles": [
         "Invertibility Implies Cancellation"
@@ -17906,7 +17982,8 @@
       "dependencies": [
         "def:associativity",
         "def:two-sided-identity",
-        "def:two-sided-inverse"
+        "def:two-sided-inverse",
+        "def:left-cancellation"
       ],
       "ignored": false,
       "is_theorem_like": true,
@@ -17971,7 +18048,8 @@
       "depends_on_ids": [
         "def:associativity",
         "def:two-sided-identity",
-        "def:two-sided-inverse"
+        "def:two-sided-inverse",
+        "def:right-cancellation"
       ],
       "used_by_ids": [
         "prop:invertibility-implies-cancellation"
@@ -17982,7 +18060,8 @@
       "depends_on_titles": [
         "Associativity",
         "Two-Sided Identity",
-        "Two-Sided Inverse"
+        "Two-Sided Inverse",
+        "Right Cancellation"
       ],
       "used_by_titles": [
         "Invertibility Implies Cancellation"
@@ -17990,7 +18069,8 @@
       "dependencies": [
         "def:associativity",
         "def:two-sided-identity",
-        "def:two-sided-inverse"
+        "def:two-sided-inverse",
+        "def:right-cancellation"
       ],
       "ignored": false,
       "is_theorem_like": true,
@@ -18489,7 +18569,9 @@
         "def:closed-interval",
         "def:left-half-open-interval",
         "def:right-half-open-interval",
-        "def:ray"
+        "def:ray",
+        "def:real-ordered-field",
+        "ax:completeness-of-reals"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -18513,7 +18595,9 @@
         "Closed Interval",
         "Left-Half-Open Interval",
         "Right-Half-Open Interval",
-        "Ray"
+        "Ray",
+        "Complete Ordered Field",
+        "Completeness of $\\mathbb{R}$"
       ],
       "dependencies": [
         "def:abstract-field",
@@ -22756,14 +22840,20 @@
       "statement_tex": "Two expressions $x$ and $y$ are \\emph{identical} when they denote the same\nobject.",
       "source_text": "Two expressions $x$ and $y$ are \\emph{identical} when they denote the same\nobject.",
       "section": "equality",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:relation"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Relation"
+      ],
       "used_by_titles": [],
-      "dependencies": [],
+      "dependencies": [
+        "def:relation"
+      ],
       "ignored": false,
       "is_theorem_like": false,
       "definitional_root": false,
@@ -22818,14 +22908,20 @@
       "statement_tex": "Let $A$ be a domain. \\emph{Equality on $A$} is the relation, written $=$,\nthat holds exactly when two terms or constructions denote the same element of\n$A$.",
       "source_text": "Let $A$ be a domain. \\emph{Equality on $A$} is the relation, written $=$,\nthat holds exactly when two terms or constructions denote the same element of\n$A$.",
       "section": "equality",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:relation"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Relation"
+      ],
       "used_by_titles": [],
-      "dependencies": [],
+      "dependencies": [
+        "def:relation"
+      ],
       "ignored": false,
       "is_theorem_like": false,
       "definitional_root": false,
@@ -42162,24 +42258,29 @@
       "source_text": "A \\emph{complete ordered field} is an ordered field satisfying the\nleast-upper-bound property.",
       "section": "characterization-of-r",
       "depends_on_ids": [
-        "thm:lub-property-r"
+        "def:abstract-ordered-field",
+        "def:least-upper-bound-property-on-r"
       ],
       "used_by_ids": [
         "thm:uniqueness-of-cof",
-        "cor:r-is-the-reals"
+        "cor:r-is-the-reals",
+        "thm:r-is-complete-ordered-field"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Least-Upper-Bound Property"
+        "Ordered Field",
+        "Least-Upper-Bound Property on $\\mathbb{R}$"
       ],
       "used_by_titles": [
         "Uniqueness of the Complete Ordered Field",
-        "$\\mathbb{R}$ Is the Real Numbers"
+        "$\\mathbb{R}$ Is the Real Numbers",
+        "$\\mathbb{R}$ Is a Complete Ordered Field"
       ],
       "dependencies": [
-        "thm:lub-property-r"
+        "def:abstract-ordered-field",
+        "def:least-upper-bound-property-on-r"
       ],
       "ignored": false,
       "is_theorem_like": false,
@@ -42289,6 +42390,7 @@
       ],
       "used_by_ids": [
         "def:supremum-in-r",
+        "def:least-upper-bound-property-on-r",
         "lem:union-of-cuts-is-a-cut"
       ],
       "prereq_ids": [],
@@ -42301,6 +42403,7 @@
       ],
       "used_by_titles": [
         "Supremum in $\\mathbb{R}$",
+        "Least-Upper-Bound Property on $\\mathbb{R}$",
         "Union of a Bounded Nonempty Family of Cuts Is a Cut"
       ],
       "dependencies": [
@@ -42332,7 +42435,10 @@
         "def:upper-bound-in-r",
         "def:order-on-r"
       ],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:least-upper-bound-property-on-r",
+        "thm:lub-property-r"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -42340,7 +42446,10 @@
         "Upper Bound in $\\mathbb{R}$",
         "Order on $\\mathbb{R}$"
       ],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Least-Upper-Bound Property on $\\mathbb{R}$",
+        "Least-Upper-Bound Property"
+      ],
       "dependencies": [
         "def:upper-bound-in-r",
         "def:order-on-r"
@@ -42352,6 +42461,55 @@
       "root_kind": "",
       "env_name": "definition",
       "text_preview": "For $S\\subseteq\\mathbb{R}$, a cut $\\sigma$ is the supremum of $S$ if $\\sigma$ is an upper bound of $S$ and every upper bound $\\gamma$ of $S$ satisfies $\\sigma\\le\\gamma$."
+    },
+    {
+      "id": "def:least-upper-bound-property-on-r",
+      "kind": "Definition",
+      "name": "Least-Upper-Bound Property on $\\mathbb{R}$",
+      "deck": "",
+      "chapter": "reals",
+      "volume": "ii",
+      "source": "notes/completeness-of-r/notes-completeness-of-r.tex",
+      "statement_display": "The ordered set $\\mathbb{R}$ has the \\emph{least-upper-bound property} if every\nnonempty subset of $\\mathbb{R}$ that is bounded above has a supremum in\n$\\mathbb{R}$.",
+      "statement_tex": "The ordered set $\\mathbb{R}$ has the \\emph{least-upper-bound property} if every\nnonempty subset of $\\mathbb{R}$ that is bounded above has a supremum in\n$\\mathbb{R}$.",
+      "source_text": "The ordered set $\\mathbb{R}$ has the \\emph{least-upper-bound property} if every\nnonempty subset of $\\mathbb{R}$ that is bounded above has a supremum in\n$\\mathbb{R}$.",
+      "section": "completeness-of-r",
+      "depends_on_ids": [
+        "def:reals",
+        "def:order-on-r",
+        "def:upper-bound-in-r",
+        "def:supremum-in-r"
+      ],
+      "used_by_ids": [
+        "def:real-ordered-field",
+        "thm:lub-property-r"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "The Real Numbers",
+        "Order on $\\mathbb{R}$",
+        "Upper Bound in $\\mathbb{R}$",
+        "Supremum in $\\mathbb{R}$"
+      ],
+      "used_by_titles": [
+        "Complete Ordered Field",
+        "Least-Upper-Bound Property"
+      ],
+      "dependencies": [
+        "def:reals",
+        "def:order-on-r",
+        "def:upper-bound-in-r",
+        "def:supremum-in-r"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "The ordered set $\\mathbb{R}$ has the \\emph{least-upper-bound property} if every nonempty subset of $\\mathbb{R}$ that is bounded above has a supremum in $\\mathbb{R}$."
     },
     {
       "id": "lem:union-of-cuts-is-a-cut",
@@ -42370,7 +42528,9 @@
         "def:upper-bound-in-r",
         "def:union"
       ],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:lub-property-r"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -42379,7 +42539,9 @@
         "Upper Bound in $\\mathbb{R}$",
         "Union"
       ],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Least-Upper-Bound Property"
+      ],
       "dependencies": [
         "def:dedekind-cut",
         "def:upper-bound-in-r",
@@ -42406,10 +42568,11 @@
       "source_text": "Every nonempty subset $S\\subseteq\\mathbb{R}$ that is bounded above has a least\nupper bound, namely\n\\[\n\\sup S=\\bigcup_{\\alpha\\in S}\\alpha.\n\\]",
       "section": "completeness-of-r",
       "depends_on_ids": [
-        "ax:completeness-of-reals"
+        "def:least-upper-bound-property-on-r",
+        "lem:union-of-cuts-is-a-cut",
+        "def:supremum-in-r"
       ],
       "used_by_ids": [
-        "def:real-ordered-field",
         "cor:glb-property-r",
         "thm:archimedean-property-of-r",
         "thm:r-is-complete-ordered-field",
@@ -42419,17 +42582,20 @@
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Completeness of $\\mathbb{R}$"
+        "Least-Upper-Bound Property on $\\mathbb{R}$",
+        "Union of a Bounded Nonempty Family of Cuts Is a Cut",
+        "Supremum in $\\mathbb{R}$"
       ],
       "used_by_titles": [
-        "Complete Ordered Field",
         "Greatest-Lower-Bound Property",
         "Archimedean Property of $\\mathbb{R}$",
         "$\\mathbb{R}$ Is a Complete Ordered Field",
         "Closed Bounded Intervals Are Compact"
       ],
       "dependencies": [
-        "ax:completeness-of-reals"
+        "def:least-upper-bound-property-on-r",
+        "lem:union-of-cuts-is-a-cut",
+        "def:supremum-in-r"
       ],
       "ignored": false,
       "is_theorem_like": true,
@@ -42546,6 +42712,7 @@
         "def:addition-on-r",
         "def:negation-on-r",
         "def:upper-bound-in-r",
+        "def:least-upper-bound-property-on-r",
         "thm:zero-one-are-reals",
         "def:real-chapter-embedding-q-into-r",
         "def:nonnegative-cut",
@@ -42553,7 +42720,10 @@
         "def:reciprocal-positive-on-r",
         "def:order-on-r",
         "def:strict-order-on-r",
+        "ax:completeness-of-reals",
         "def:sine-cosine",
+        "def:vector-and-point",
+        "def:real-vector-space",
         "def:point-slope-form",
         "def:general-linear-form",
         "def:vector-parametric-form",
@@ -42571,6 +42741,7 @@
         "Addition of Cuts",
         "Negation of a Cut",
         "Upper Bound in $\\mathbb{R}$",
+        "Least-Upper-Bound Property on $\\mathbb{R}$",
         "Zero and One Are Reals",
         "Embedding of $\\mathbb{Q}$ into $\\mathbb{R}$",
         "Nonnegative Cut",
@@ -42578,7 +42749,10 @@
         "Reciprocal of a Positive Cut",
         "Order on $\\mathbb{R}$",
         "Strict Order on $\\mathbb{R}$",
+        "Completeness of $\\mathbb{R}$",
         "Sine and Cosine via Power Series",
+        "Vector and Point",
+        "Real Vector Space",
         "Point-slope form",
         "General linear form",
         "Vector parametric form",
@@ -43591,6 +43765,7 @@
       "source_text": "The ordered field $\\mathbb{R}$ satisfies the least-upper-bound property.",
       "section": "field-and-ordered-field-structure-of-r",
       "depends_on_ids": [
+        "def:real-ordered-field",
         "thm:r-is-an-ordered-field",
         "thm:lub-property-r"
       ],
@@ -43602,6 +43777,7 @@
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
+        "Complete Ordered Field",
         "$\\mathbb{R}$ Is an Ordered Field",
         "Least-Upper-Bound Property"
       ],
@@ -43610,6 +43786,7 @@
         "$\\mathbb{R}$ Is the Real Numbers"
       ],
       "dependencies": [
+        "def:real-ordered-field",
         "thm:r-is-an-ordered-field",
         "thm:lub-property-r"
       ],
@@ -44456,6 +44633,7 @@
       "used_by_ids": [
         "def:upper-bound-in-r",
         "def:supremum-in-r",
+        "def:least-upper-bound-property-on-r",
         "thm:embedding-q-into-r-preserves-order",
         "thm:addition-preserves-order-on-r",
         "thm:positive-multiplication-preserves-order-on-r",
@@ -44480,6 +44658,8 @@
         "def:relative-minimum",
         "def:function-bounded-above",
         "def:function-bounded-below",
+        "def:function-maximum-point",
+        "def:function-minimum-point",
         "def:function-increasing",
         "def:function-decreasing",
         "def:bounded-set-r",
@@ -44501,6 +44681,7 @@
       "used_by_titles": [
         "Upper Bound in $\\mathbb{R}$",
         "Supremum in $\\mathbb{R}$",
+        "Least-Upper-Bound Property on $\\mathbb{R}$",
         "Embedding Preserves Order",
         "Addition Preserves Order on $\\mathbb{R}$",
         "Multiplication by Positives Preserves Order on $\\mathbb{R}$",
@@ -44525,6 +44706,8 @@
         "Relative Minimum",
         "Bounded Above Function",
         "Bounded Below Function",
+        "Maximum Point of a Function",
+        "Minimum Point of a Function",
         "Increasing Function",
         "Decreasing Function",
         "Bounded Subset of $\\mathbb{R}$",
@@ -44570,7 +44753,9 @@
         "thm:addition-preserves-order-on-r",
         "thm:positive-multiplication-preserves-order-on-r",
         "def:real-chapter-absolute-value-on-r",
-        "thm:trichotomy-on-r"
+        "thm:trichotomy-on-r",
+        "def:function-strictly-increasing",
+        "def:function-strictly-decreasing"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -44585,7 +44770,9 @@
         "Addition Preserves Order on $\\mathbb{R}$",
         "Multiplication by Positives Preserves Order on $\\mathbb{R}$",
         "Absolute Value on $\\mathbb{R}$",
-        "Trichotomy on $\\mathbb{R}$"
+        "Trichotomy on $\\mathbb{R}$",
+        "Strictly Increasing Function",
+        "Strictly Decreasing Function"
       ],
       "dependencies": [
         "def:reals",
@@ -49286,7 +49473,8 @@
         "def:upper-bound"
       ],
       "used_by_ids": [
-        "def:bounded"
+        "def:bounded",
+        "def:function-bounded-above"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -49297,7 +49485,8 @@
         "Upper Bound"
       ],
       "used_by_titles": [
-        "Bounded"
+        "Bounded",
+        "Bounded Above Function"
       ],
       "dependencies": [
         "def:ordered-set",
@@ -49384,7 +49573,8 @@
         "def:lower-bound"
       ],
       "used_by_ids": [
-        "def:bounded"
+        "def:bounded",
+        "def:function-bounded-below"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -49395,7 +49585,8 @@
         "Lower Bound"
       ],
       "used_by_titles": [
-        "Bounded"
+        "Bounded",
+        "Bounded Below Function"
       ],
       "dependencies": [
         "def:ordered-set",
@@ -49473,7 +49664,8 @@
       ],
       "used_by_ids": [
         "def:absolute-extrema",
-        "thm:bolzano-intermediate-value"
+        "thm:bolzano-intermediate-value",
+        "def:function-minimum-point"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -49486,7 +49678,8 @@
       ],
       "used_by_titles": [
         "Absolute Maximum and Absolute Minimum",
-        "Bolzano's Intermediate Value Theorem"
+        "Bolzano's Intermediate Value Theorem",
+        "Minimum Point of a Function"
       ],
       "dependencies": [
         "def:ordered-set",
@@ -49528,7 +49721,8 @@
         "thm:supremum-absolute-value-image",
         "def:absolute-extrema",
         "thm:bolzano-intermediate-value",
-        "def:pointwise-maximum-of-two-functions"
+        "def:pointwise-maximum-of-two-functions",
+        "def:function-maximum-point"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -49547,7 +49741,8 @@
         "Supremum of the Absolute-Value Image",
         "Absolute Maximum and Absolute Minimum",
         "Bolzano's Intermediate Value Theorem",
-        "Pointwise Maximum of Two Functions"
+        "Pointwise Maximum of Two Functions",
+        "Maximum Point of a Function"
       ],
       "dependencies": [
         "def:ordered-set",
@@ -49608,6 +49803,7 @@
         "def:limsup-liminf-function",
         "thm:monotone-one-sided-limits",
         "def:oscillation-on-a-set",
+        "def:function-supremum-on-set",
         "def:tail-supremum-sequence",
         "thm:monotone-convergence-theorem",
         "thm:increasing-sequence-limit-as-supremum"
@@ -49648,6 +49844,7 @@
         "Limits Superior and Inferior of a Function",
         "One-Sided Limits of Monotone Functions",
         "Oscillation on a Set",
+        "Supremum of a Function on a Set",
         "Tail Supremum Sequence",
         "Monotone Convergence Theorem",
         "Increasing Sequence Limit as Supremum"
@@ -49691,6 +49888,7 @@
         "prop:bounds-sum-set",
         "def:limsup-liminf-function",
         "thm:monotone-one-sided-limits",
+        "def:function-infimum-on-set",
         "def:tail-infimum-sequence",
         "thm:tail-infima-are-increasing",
         "thm:monotone-convergence-theorem",
@@ -49713,6 +49911,7 @@
         "Bounds for Suprema and Infima Under Set Addition",
         "Limits Superior and Inferior of a Function",
         "One-Sided Limits of Monotone Functions",
+        "Infimum of a Function on a Set",
         "Tail Infimum Sequence",
         "Tail Infima Are Increasing",
         "Monotone Convergence Theorem",
@@ -49904,7 +50103,8 @@
       ],
       "used_by_ids": [
         "def:infimum",
-        "thm:lub-property-implies-existence-of-suprema"
+        "thm:lub-property-implies-existence-of-suprema",
+        "ax:completeness-of-reals"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -49917,7 +50117,8 @@
       ],
       "used_by_titles": [
         "Infimum",
-        "Least Upper Bound Property Implies Existence of Suprema"
+        "Least Upper Bound Property Implies Existence of Suprema",
+        "Completeness of $\\mathbb{R}$"
       ],
       "dependencies": [
         "def:ordered-set",
@@ -49945,9 +50146,12 @@
       "statement_tex": "The ordered field $\\mathbb{R}$ has the Least Upper Bound Property.",
       "source_text": "The ordered field $\\mathbb{R}$ has the Least Upper Bound Property.",
       "section": "completeness",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:reals",
+        "def:abstract-ordered-field",
+        "def:least-upper-bound-property"
+      ],
       "used_by_ids": [
-        "thm:lub-property-r",
         "thm:archimedean-property",
         "thm:nested-interval-theorem",
         "thm:monotone-one-sided-limits"
@@ -49955,14 +50159,21 @@
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "The Real Numbers",
+        "Ordered Field",
+        "Least Upper Bound Property"
+      ],
       "used_by_titles": [
-        "Least-Upper-Bound Property",
         "Archimedean Property",
         "Nested Interval Property",
         "One-Sided Limits of Monotone Functions"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "def:reals",
+        "def:abstract-ordered-field",
+        "def:least-upper-bound-property"
+      ],
       "ignored": false,
       "is_theorem_like": false,
       "definitional_root": false,
@@ -52358,18 +52569,24 @@
       "source_text": "\\begin{enumerate}[label=(\\alph*)]\n  \\item For every set $A \\subseteq \\mathbb{R}$, every pair of functions $f,g : A \\to \\mathbb{R}$ that are uniformly continuous on $A$, and every scalar $c \\in \\mathbb{R}$, the functions $f+g$, $f-g$, and $cf$ are uniformly continuous on $A$.\n  \\item There exist a set $A \\subseteq \\mathbb{R}$ and uniformly continuous functions $f,g : A \\to \\mathbb{R}$ such that the product $fg$ is not uniformly continuous on $A$.\n\\end{enumerate}\n\\hyperref[prf:algebra-of-uniform-continuity-general]{Go to proof.}",
       "section": "uniform-continuity",
       "depends_on_ids": [
-        "def:uniform-continuity"
+        "def:uniform-continuity",
+        "def:linear-combination-of-real-valued-functions",
+        "def:pointwise-difference-of-functions"
       ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Uniform Continuity"
+        "Uniform Continuity",
+        "Linear Combination of Real-Valued Functions",
+        "Pointwise Difference of Functions"
       ],
       "used_by_titles": [],
       "dependencies": [
-        "def:uniform-continuity"
+        "def:uniform-continuity",
+        "def:linear-combination-of-real-valued-functions",
+        "def:pointwise-difference-of-functions"
       ],
       "ignored": false,
       "is_theorem_like": true,
@@ -53047,6 +53264,8 @@
       "source_text": "Let $A \\subseteq \\mathbb{R}$, let $f_1, \\dots, f_n : A \\to \\mathbb{R}$, let $\\alpha_1, \\dots, \\alpha_n \\in \\mathbb{R}$, and let $c \\in A$ be a limit point of $A$. If each $f_i$ is differentiable at $c$, then\n\\[\n\\left(\\sum_{i=1}^{n} \\alpha_i f_i\\right)'(c) = \\sum_{i=1}^{n} \\alpha_i f_i'(c).\n\\]\n\\hyperref[prf:finite-linear-combination]{Go to proof.}\n\\hyperref[prf:finite-linear-combination-rule]{Go to proof.}",
       "section": "algebra-of-derivatives",
       "depends_on_ids": [
+        "def:real-linear-rule",
+        "def:linear-combination-of-real-valued-functions",
         "thm:constant-multiple-rule",
         "thm:sum-rule"
       ],
@@ -53057,6 +53276,8 @@
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
+        "Real-Linear Rule",
+        "Linear Combination of Real-Valued Functions",
         "Constant Multiple Rule",
         "Sum Rule"
       ],
@@ -53064,6 +53285,8 @@
         "Finite Linear Combination Rule on an Interval"
       ],
       "dependencies": [
+        "def:real-linear-rule",
+        "def:linear-combination-of-real-valued-functions",
         "thm:constant-multiple-rule",
         "thm:sum-rule"
       ],
@@ -53326,6 +53549,8 @@
       "source_text": "Let $I \\subseteq \\mathbb{R}$ be an interval, let $f_1, \\dots, f_n : I \\to \\mathbb{R}$, and let $\\alpha_1, \\dots, \\alpha_n \\in \\mathbb{R}$. If each $f_i$ is differentiable on $I$, then\n\\[\n\\left(\\sum_{i=1}^{n} \\alpha_i f_i\\right)'(x) = \\sum_{i=1}^{n} \\alpha_i f_i'(x) \\qquad \\text{for all } x \\in I.\n\\]\n\\hyperref[prf:finite-linear-combination-rule-interval]{Go to proof.}",
       "section": "algebra-of-derivatives",
       "depends_on_ids": [
+        "def:real-linear-rule",
+        "def:linear-combination-of-real-valued-functions",
         "thm:finite-linear-combination-rule"
       ],
       "used_by_ids": [],
@@ -53333,10 +53558,14 @@
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
+        "Real-Linear Rule",
+        "Linear Combination of Real-Valued Functions",
         "Finite Linear Combination Rule"
       ],
       "used_by_titles": [],
       "dependencies": [
+        "def:real-linear-rule",
+        "def:linear-combination-of-real-valued-functions",
         "thm:finite-linear-combination-rule"
       ],
       "ignored": false,
@@ -56486,6 +56715,7 @@
         "thm:limit-product",
         "thm:limit-quotient",
         "def:limit-function-sequential",
+        "def:limit-function-neighbourhood",
         "prop:limit-neighbourhood-equiv",
         "thm:limit-unique",
         "prop:sequential-criterion-limits",
@@ -56523,6 +56753,7 @@
         "Product Rule for Function Limits",
         "Quotient Rule for Function Limits",
         "Sequential Definition of Limit",
+        "Neighbourhood Form of Limit",
         "Neighbourhood Form of the Limit",
         "Uniqueness of Limits of Functions",
         "Sequential Criterion for Function Limits",
@@ -56567,6 +56798,7 @@
       ],
       "used_by_ids": [
         "prop:sequential-criterion-limits",
+        "cor:limit-three-equiv",
         "thm:sequential-criterion-right-hand-limit",
         "cor:sequential-criterion-left-hand-limit"
       ],
@@ -56579,6 +56811,7 @@
       ],
       "used_by_titles": [
         "Sequential Criterion for Function Limits",
+        "Three Equivalent Forms of the Function Limit",
         "Sequential Criterion for Right-Hand Limits",
         "Sequential Criterion for Left-Hand Limits"
       ],
@@ -56595,6 +56828,52 @@
       "text_preview": "Let $f : A \\to \\mathbb{R}$ and let $c$ be a cluster point of $A$. The limit $\\lim_{x \\to c} f(x) = L$ in the \\textbf{sequential sense} holds if for every sequence $(x_n) \\subseteq A \\setminus \\{c\\}$ with $x_n \\to c$, the sequence $(f(x_n))$"
     },
     {
+      "id": "def:limit-function-neighbourhood",
+      "kind": "Definition",
+      "name": "Neighbourhood Form of Limit",
+      "deck": "",
+      "chapter": "functions",
+      "volume": "iii",
+      "source": "notes/limits/notes-limits.tex",
+      "statement_display": "Let $f : A \\to \\mathbb{R}$ and let $c$ be a cluster point of $A$.\nThe limit $\\lim_{x\\to c}f(x)=L$ in the \\textbf{neighbourhood\nsense} holds if for every $\\varepsilon$-neighbourhood\n$V_\\varepsilon(L)$ there exists a deleted $\\delta$-neighbourhood\n$V_\\delta^*(c)$ such that\n\\[\n  x\\in V_\\delta^*(c)\\cap A\n  \\quad\\Longrightarrow\\quad\n  f(x)\\in V_\\varepsilon(L).\n\\]",
+      "statement_tex": "Let $f : A \\to \\mathbb{R}$ and let $c$ be a cluster point of $A$.\nThe limit $\\lim_{x\\to c}f(x)=L$ in the \\textbf{neighbourhood\nsense} holds if for every $\\varepsilon$-neighbourhood\n$V_\\varepsilon(L)$ there exists a deleted $\\delta$-neighbourhood\n$V_\\delta^*(c)$ such that\n\\[\n  x\\in V_\\delta^*(c)\\cap A\n  \\quad\\Longrightarrow\\quad\n  f(x)\\in V_\\varepsilon(L).\n\\]",
+      "source_text": "Let $f : A \\to \\mathbb{R}$ and let $c$ be a cluster point of $A$.\nThe limit $\\lim_{x\\to c}f(x)=L$ in the \\textbf{neighbourhood\nsense} holds if for every $\\varepsilon$-neighbourhood\n$V_\\varepsilon(L)$ there exists a deleted $\\delta$-neighbourhood\n$V_\\delta^*(c)$ such that\n\\[\n  x\\in V_\\delta^*(c)\\cap A\n  \\quad\\Longrightarrow\\quad\n  f(x)\\in V_\\varepsilon(L).\n\\]",
+      "section": "limits",
+      "depends_on_ids": [
+        "def:limit-function",
+        "def:epsilon-neighbourhood",
+        "def:deleted-epsilon-neighbourhood"
+      ],
+      "used_by_ids": [
+        "prop:limit-neighbourhood-equiv",
+        "cor:limit-three-equiv"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Limit of a Function",
+        "$\\varepsilon$-Neighbourhood",
+        "Deleted $\\varepsilon$-Neighbourhood"
+      ],
+      "used_by_titles": [
+        "Neighbourhood Form of the Limit",
+        "Three Equivalent Forms of the Function Limit"
+      ],
+      "dependencies": [
+        "def:limit-function",
+        "def:epsilon-neighbourhood",
+        "def:deleted-epsilon-neighbourhood"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Let $f : A \\to \\mathbb{R}$ and let $c$ be a cluster point of $A$. The limit $\\lim_{x\\to c}f(x)=L$ in the \\textbf{neighbourhood sense} holds if for every $\\varepsilon$-neighbourhood $V_\\varepsilon(L)$ there exists a deleted $\\delta$-neighbou"
+    },
+    {
       "id": "prop:limit-neighbourhood-equiv",
       "kind": "Proposition",
       "name": "Neighbourhood Form of the Limit",
@@ -56608,6 +56887,7 @@
       "section": "limits",
       "depends_on_ids": [
         "def:limit-function",
+        "def:limit-function-neighbourhood",
         "def:epsilon-neighbourhood",
         "def:deleted-epsilon-neighbourhood"
       ],
@@ -56619,6 +56899,7 @@
       "implies_ids": [],
       "depends_on_titles": [
         "Limit of a Function",
+        "Neighbourhood Form of Limit",
         "$\\varepsilon$-Neighbourhood",
         "Deleted $\\varepsilon$-Neighbourhood"
       ],
@@ -56627,6 +56908,7 @@
       ],
       "dependencies": [
         "def:limit-function",
+        "def:limit-function-neighbourhood",
         "def:epsilon-neighbourhood",
         "def:deleted-epsilon-neighbourhood"
       ],
@@ -56727,6 +57009,8 @@
       "section": "limits",
       "depends_on_ids": [
         "def:limit-function",
+        "def:limit-function-neighbourhood",
+        "def:limit-function-sequential",
         "prop:limit-neighbourhood-equiv",
         "prop:sequential-criterion-limits"
       ],
@@ -56736,12 +57020,16 @@
       "implies_ids": [],
       "depends_on_titles": [
         "Limit of a Function",
+        "Neighbourhood Form of Limit",
+        "Sequential Definition of Limit",
         "Neighbourhood Form of the Limit",
         "Sequential Criterion for Function Limits"
       ],
       "used_by_titles": [],
       "dependencies": [
         "def:limit-function",
+        "def:limit-function-neighbourhood",
+        "def:limit-function-sequential",
         "prop:limit-neighbourhood-equiv",
         "prop:sequential-criterion-limits"
       ],
@@ -57277,7 +57565,8 @@
         "def:addition-on-r"
       ],
       "used_by_ids": [
-        "thm:limit-sum"
+        "thm:limit-sum",
+        "def:linear-combination-of-real-valued-functions"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -57288,7 +57577,8 @@
         "Addition of Cuts"
       ],
       "used_by_titles": [
-        "Sum Rule for Function Limits"
+        "Sum Rule for Function Limits",
+        "Linear Combination of Real-Valued Functions"
       ],
       "dependencies": [
         "def:function",
@@ -57321,6 +57611,7 @@
         "def:subtraction-on-r"
       ],
       "used_by_ids": [
+        "thm:algebra-of-uniform-continuity-general",
         "thm:limit-difference"
       ],
       "prereq_ids": [],
@@ -57332,6 +57623,7 @@
         "Subtraction on $\\mathbb{R}$"
       ],
       "used_by_titles": [
+        "Algebra of Uniform Continuity on a General Domain",
         "Difference Rule for Function Limits"
       ],
       "dependencies": [
@@ -57409,7 +57701,8 @@
         "def:multiplication-on-r"
       ],
       "used_by_ids": [
-        "thm:limit-scalar-multiple"
+        "thm:limit-scalar-multiple",
+        "def:linear-combination-of-real-valued-functions"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -57420,7 +57713,8 @@
         "Multiplication of Cuts"
       ],
       "used_by_titles": [
-        "Scalar Multiple Rule for Function Limits"
+        "Scalar Multiple Rule for Function Limits",
+        "Linear Combination of Real-Valued Functions"
       ],
       "dependencies": [
         "def:function",
@@ -57560,6 +57854,96 @@
       "text_preview": "Let $X\\subseteq\\mathbb{R}$ and let $f,g:X\\to\\mathbb{R}$. Suppose $g(x)\\neq 0$ for every $x\\in X$. The pointwise quotient $f/g:X\\to\\mathbb{R}$ is the function defined by \\[ (f/g)(x)=\\frac{f(x)}{g(x)} \\qquad (x\\in X). \\]"
     },
     {
+      "id": "def:linear-combination-of-real-valued-functions",
+      "kind": "Definition",
+      "name": "Linear Combination of Real-Valued Functions",
+      "deck": "",
+      "chapter": "functions",
+      "volume": "iii",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "statement_display": "Let $X\\subseteq\\mathbb{R}$, let $f,g:X\\to\\mathbb{R}$, and let\n$\\alpha,\\beta\\in\\mathbb{R}$.  The real linear combination\n$\\alpha f+\\beta g:X\\to\\mathbb{R}$ is the function defined by\n\\[\n  (\\alpha f+\\beta g)(x)=\\alpha f(x)+\\beta g(x)\n  \\qquad (x\\in X).\n\\]",
+      "statement_tex": "Let $X\\subseteq\\mathbb{R}$, let $f,g:X\\to\\mathbb{R}$, and let\n$\\alpha,\\beta\\in\\mathbb{R}$.  The real linear combination\n$\\alpha f+\\beta g:X\\to\\mathbb{R}$ is the function defined by\n\\[\n  (\\alpha f+\\beta g)(x)=\\alpha f(x)+\\beta g(x)\n  \\qquad (x\\in X).\n\\]",
+      "source_text": "Let $X\\subseteq\\mathbb{R}$, let $f,g:X\\to\\mathbb{R}$, and let\n$\\alpha,\\beta\\in\\mathbb{R}$.  The real linear combination\n$\\alpha f+\\beta g:X\\to\\mathbb{R}$ is the function defined by\n\\[\n  (\\alpha f+\\beta g)(x)=\\alpha f(x)+\\beta g(x)\n  \\qquad (x\\in X).\n\\]",
+      "section": "real-valued-functions",
+      "depends_on_ids": [
+        "def:pointwise-scalar-multiple-of-a-function",
+        "def:pointwise-sum-of-functions"
+      ],
+      "used_by_ids": [
+        "thm:algebra-of-uniform-continuity-general",
+        "thm:finite-linear-combination-rule",
+        "thm:finite-linear-combination-rule-interval",
+        "def:real-linear-rule"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Pointwise Scalar Multiple of a Function",
+        "Pointwise Sum of Functions"
+      ],
+      "used_by_titles": [
+        "Algebra of Uniform Continuity on a General Domain",
+        "Finite Linear Combination Rule",
+        "Finite Linear Combination Rule on an Interval",
+        "Real-Linear Rule"
+      ],
+      "dependencies": [
+        "def:pointwise-scalar-multiple-of-a-function",
+        "def:pointwise-sum-of-functions"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Let $X\\subseteq\\mathbb{R}$, let $f,g:X\\to\\mathbb{R}$, and let $\\alpha,\\beta\\in\\mathbb{R}$. The real linear combination $\\alpha f+\\beta g:X\\to\\mathbb{R}$ is the function defined by \\[ (\\alpha f+\\beta g)(x)=\\alpha f(x)+\\beta g(x) \\qquad (x\\in"
+    },
+    {
+      "id": "def:real-linear-rule",
+      "kind": "Definition",
+      "name": "Real-Linear Rule",
+      "deck": "",
+      "chapter": "functions",
+      "volume": "iii",
+      "source": "notes/real-valued-functions/notes-real-valued-functions.tex",
+      "statement_display": "Let $\\mathcal{C}$ be a class of real-valued functions closed under real\nlinear combinations.  A rule $T$ on $\\mathcal{C}$ is real-linear if,\nwhenever $f,g\\in\\mathcal{C}$ and $\\alpha,\\beta\\in\\mathbb{R}$,\n\\[\n  T(\\alpha f+\\beta g)=\\alpha T(f)+\\beta T(g)\n\\]\nwhenever both sides are defined.",
+      "statement_tex": "Let $\\mathcal{C}$ be a class of real-valued functions closed under real\nlinear combinations.  A rule $T$ on $\\mathcal{C}$ is real-linear if,\nwhenever $f,g\\in\\mathcal{C}$ and $\\alpha,\\beta\\in\\mathbb{R}$,\n\\[\n  T(\\alpha f+\\beta g)=\\alpha T(f)+\\beta T(g)\n\\]\nwhenever both sides are defined.",
+      "source_text": "Let $\\mathcal{C}$ be a class of real-valued functions closed under real\nlinear combinations.  A rule $T$ on $\\mathcal{C}$ is real-linear if,\nwhenever $f,g\\in\\mathcal{C}$ and $\\alpha,\\beta\\in\\mathbb{R}$,\n\\[\n  T(\\alpha f+\\beta g)=\\alpha T(f)+\\beta T(g)\n\\]\nwhenever both sides are defined.",
+      "section": "real-valued-functions",
+      "depends_on_ids": [
+        "def:function",
+        "def:linear-combination-of-real-valued-functions"
+      ],
+      "used_by_ids": [
+        "thm:finite-linear-combination-rule",
+        "thm:finite-linear-combination-rule-interval"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Function",
+        "Linear Combination of Real-Valued Functions"
+      ],
+      "used_by_titles": [
+        "Finite Linear Combination Rule",
+        "Finite Linear Combination Rule on an Interval"
+      ],
+      "dependencies": [
+        "def:function",
+        "def:linear-combination-of-real-valued-functions"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Let $\\mathcal{C}$ be a class of real-valued functions closed under real linear combinations. A rule $T$ on $\\mathcal{C}$ is real-linear if, whenever $f,g\\in\\mathcal{C}$ and $\\alpha,\\beta\\in\\mathbb{R}$, \\[ T(\\alpha f+\\beta g)=\\alpha T(f)+\\be"
+    },
+    {
       "id": "def:function-bounded-above",
       "kind": "Definition",
       "name": "Bounded Above Function",
@@ -57574,7 +57958,8 @@
       "depends_on_ids": [
         "def:function",
         "def:subset",
-        "def:order-on-r"
+        "def:order-on-r",
+        "def:bounded-above"
       ],
       "used_by_ids": [
         "def:function-bounded"
@@ -57585,7 +57970,8 @@
       "depends_on_titles": [
         "Function",
         "Subset",
-        "Order on $\\mathbb{R}$"
+        "Order on $\\mathbb{R}$",
+        "Bounded Above"
       ],
       "used_by_titles": [
         "Bounded Function"
@@ -57593,7 +57979,8 @@
       "dependencies": [
         "def:function",
         "def:subset",
-        "def:order-on-r"
+        "def:order-on-r",
+        "def:bounded-above"
       ],
       "ignored": false,
       "is_theorem_like": false,
@@ -57618,7 +58005,8 @@
       "depends_on_ids": [
         "def:function",
         "def:subset",
-        "def:order-on-r"
+        "def:order-on-r",
+        "def:bounded-below"
       ],
       "used_by_ids": [
         "def:function-bounded"
@@ -57629,7 +58017,8 @@
       "depends_on_titles": [
         "Function",
         "Subset",
-        "Order on $\\mathbb{R}$"
+        "Order on $\\mathbb{R}$",
+        "Bounded Below"
       ],
       "used_by_titles": [
         "Bounded Function"
@@ -57637,7 +58026,8 @@
       "dependencies": [
         "def:function",
         "def:subset",
-        "def:order-on-r"
+        "def:order-on-r",
+        "def:bounded-below"
       ],
       "ignored": false,
       "is_theorem_like": false,
@@ -57700,14 +58090,29 @@
       "statement_tex": "Let $A\\subseteq\\mathbb{R}$ and let $f:A\\to\\mathbb{R}$.  The supremum of\n$f$ on $A$ is\n\\[\n  \\sup_{x\\in A} f(x) = \\sup f(A),\n\\]\nprovided the supremum of $f(A)$ exists.",
       "source_text": "Let $A\\subseteq\\mathbb{R}$ and let $f:A\\to\\mathbb{R}$.  The supremum of\n$f$ on $A$ is\n\\[\n  \\sup_{x\\in A} f(x) = \\sup f(A),\n\\]\nprovided the supremum of $f(A)$ exists.",
       "section": "real-valued-functions",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:function",
+        "def:subset",
+        "def:image-set",
+        "def:supremum"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Function",
+        "Subset",
+        "Image of a Set",
+        "Supremum"
+      ],
       "used_by_titles": [],
-      "dependencies": [],
+      "dependencies": [
+        "def:function",
+        "def:subset",
+        "def:image-set",
+        "def:supremum"
+      ],
       "ignored": false,
       "is_theorem_like": false,
       "definitional_root": false,
@@ -57728,14 +58133,29 @@
       "statement_tex": "Let $A\\subseteq\\mathbb{R}$ and let $f:A\\to\\mathbb{R}$.  The infimum of\n$f$ on $A$ is\n\\[\n  \\inf_{x\\in A} f(x) = \\inf f(A),\n\\]\nprovided the infimum of $f(A)$ exists.",
       "source_text": "Let $A\\subseteq\\mathbb{R}$ and let $f:A\\to\\mathbb{R}$.  The infimum of\n$f$ on $A$ is\n\\[\n  \\inf_{x\\in A} f(x) = \\inf f(A),\n\\]\nprovided the infimum of $f(A)$ exists.",
       "section": "real-valued-functions",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:function",
+        "def:subset",
+        "def:image-set",
+        "def:infimum"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Function",
+        "Subset",
+        "Image of a Set",
+        "Infimum"
+      ],
       "used_by_titles": [],
-      "dependencies": [],
+      "dependencies": [
+        "def:function",
+        "def:subset",
+        "def:image-set",
+        "def:infimum"
+      ],
       "ignored": false,
       "is_theorem_like": false,
       "definitional_root": false,
@@ -57756,14 +58176,29 @@
       "statement_tex": "Let $A\\subseteq\\mathbb{R}$ and let $f:A\\to\\mathbb{R}$.  A point\n$x^*\\in A$ is a maximum point of $f$ on $A$ if\n\\[\n  f(x)\\leq f(x^*)\n  \\qquad (x\\in A).\n\\]",
       "source_text": "Let $A\\subseteq\\mathbb{R}$ and let $f:A\\to\\mathbb{R}$.  A point\n$x^*\\in A$ is a maximum point of $f$ on $A$ if\n\\[\n  f(x)\\leq f(x^*)\n  \\qquad (x\\in A).\n\\]",
       "section": "real-valued-functions",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:function",
+        "def:subset",
+        "def:order-on-r",
+        "def:maximum"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Function",
+        "Subset",
+        "Order on $\\mathbb{R}$",
+        "Maximum"
+      ],
       "used_by_titles": [],
-      "dependencies": [],
+      "dependencies": [
+        "def:function",
+        "def:subset",
+        "def:order-on-r",
+        "def:maximum"
+      ],
       "ignored": false,
       "is_theorem_like": false,
       "definitional_root": false,
@@ -57784,14 +58219,29 @@
       "statement_tex": "Let $A\\subseteq\\mathbb{R}$ and let $f:A\\to\\mathbb{R}$.  A point\n$x_*\\in A$ is a minimum point of $f$ on $A$ if\n\\[\n  f(x_*)\\leq f(x)\n  \\qquad (x\\in A).\n\\]",
       "source_text": "Let $A\\subseteq\\mathbb{R}$ and let $f:A\\to\\mathbb{R}$.  A point\n$x_*\\in A$ is a minimum point of $f$ on $A$ if\n\\[\n  f(x_*)\\leq f(x)\n  \\qquad (x\\in A).\n\\]",
       "section": "real-valued-functions",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:function",
+        "def:subset",
+        "def:order-on-r",
+        "def:minimum"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Function",
+        "Subset",
+        "Order on $\\mathbb{R}$",
+        "Minimum"
+      ],
       "used_by_titles": [],
-      "dependencies": [],
+      "dependencies": [
+        "def:function",
+        "def:subset",
+        "def:order-on-r",
+        "def:minimum"
+      ],
       "ignored": false,
       "is_theorem_like": false,
       "definitional_root": false,
@@ -57818,7 +58268,6 @@
         "def:order-on-r"
       ],
       "used_by_ids": [
-        "def:function-strictly-increasing",
         "def:function-monotone"
       ],
       "prereq_ids": [],
@@ -57830,7 +58279,6 @@
         "Order on $\\mathbb{R}$"
       ],
       "used_by_titles": [
-        "Strictly Increasing Function",
         "Monotone Function"
       ],
       "dependencies": [
@@ -57859,7 +58307,9 @@
       "source_text": "Let $A\\subseteq\\mathbb{R}$ and let $f:A\\to\\mathbb{R}$.  The function\n$f$ is strictly increasing on $A$ if\n\\[\n  x_1<x_2\\;\\Longrightarrow\\;f(x_1)<f(x_2)\n  \\qquad (x_1,x_2\\in A).\n\\]",
       "section": "real-valued-functions",
       "depends_on_ids": [
-        "def:function-increasing"
+        "def:function",
+        "def:subset",
+        "def:strict-order-on-r"
       ],
       "used_by_ids": [
         "thm:continuous-inverse-theorem",
@@ -57869,14 +58319,18 @@
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Increasing Function"
+        "Function",
+        "Subset",
+        "Strict Order on $\\mathbb{R}$"
       ],
       "used_by_titles": [
         "Continuous Inverse Theorem",
         "Increasing at a Point"
       ],
       "dependencies": [
-        "def:function-increasing"
+        "def:function",
+        "def:subset",
+        "def:strict-order-on-r"
       ],
       "ignored": false,
       "is_theorem_like": false,
@@ -57904,7 +58358,6 @@
         "def:order-on-r"
       ],
       "used_by_ids": [
-        "def:function-strictly-decreasing",
         "def:function-monotone"
       ],
       "prereq_ids": [],
@@ -57916,7 +58369,6 @@
         "Order on $\\mathbb{R}$"
       ],
       "used_by_titles": [
-        "Strictly Decreasing Function",
         "Monotone Function"
       ],
       "dependencies": [
@@ -57945,7 +58397,9 @@
       "source_text": "Let $A\\subseteq\\mathbb{R}$ and let $f:A\\to\\mathbb{R}$.  The function\n$f$ is strictly decreasing on $A$ if\n\\[\n  x_1<x_2\\;\\Longrightarrow\\;f(x_1)>f(x_2)\n  \\qquad (x_1,x_2\\in A).\n\\]",
       "section": "real-valued-functions",
       "depends_on_ids": [
-        "def:function-decreasing"
+        "def:function",
+        "def:subset",
+        "def:strict-order-on-r"
       ],
       "used_by_ids": [
         "thm:continuous-inverse-theorem"
@@ -57954,13 +58408,17 @@
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Decreasing Function"
+        "Function",
+        "Subset",
+        "Strict Order on $\\mathbb{R}$"
       ],
       "used_by_titles": [
         "Continuous Inverse Theorem"
       ],
       "dependencies": [
-        "def:function-decreasing"
+        "def:function",
+        "def:subset",
+        "def:strict-order-on-r"
       ],
       "ignored": false,
       "is_theorem_like": false,
@@ -58025,14 +58483,23 @@
       "statement_tex": "Let $A\\subseteq\\mathbb{R}$ and let $f:A\\to\\mathbb{R}$.  The function\n$f$ is constant on $A$ if\n\\[\n  f(x_1)=f(x_2)\n  \\qquad (x_1,x_2\\in A).\n\\]",
       "source_text": "Let $A\\subseteq\\mathbb{R}$ and let $f:A\\to\\mathbb{R}$.  The function\n$f$ is constant on $A$ if\n\\[\n  f(x_1)=f(x_2)\n  \\qquad (x_1,x_2\\in A).\n\\]",
       "section": "real-valued-functions",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:function",
+        "def:subset"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Function",
+        "Subset"
+      ],
       "used_by_titles": [],
-      "dependencies": [],
+      "dependencies": [
+        "def:function",
+        "def:subset"
+      ],
       "ignored": false,
       "is_theorem_like": false,
       "definitional_root": false,
@@ -58059,6 +58526,7 @@
       "used_by_ids": [
         "def:limsup-liminf-function",
         "def:relative-neighborhood",
+        "def:limit-function-neighbourhood",
         "prop:limit-neighbourhood-equiv",
         "def:deleted-epsilon-neighbourhood",
         "def:adherent-point-r",
@@ -58076,6 +58544,7 @@
       "used_by_titles": [
         "Limits Superior and Inferior of a Function",
         "Relative Neighborhood",
+        "Neighbourhood Form of Limit",
         "Neighbourhood Form of the Limit",
         "Deleted $\\varepsilon$-Neighbourhood",
         "Adherent Point",
@@ -58111,6 +58580,7 @@
         "def:epsilon-neighbourhood"
       ],
       "used_by_ids": [
+        "def:limit-function-neighbourhood",
         "prop:limit-neighbourhood-equiv",
         "def:cluster-point-r"
       ],
@@ -58121,6 +58591,7 @@
         "$\\varepsilon$-Neighbourhood"
       ],
       "used_by_titles": [
+        "Neighbourhood Form of Limit",
         "Neighbourhood Form of the Limit",
         "Cluster Point"
       ],
@@ -59542,24 +60013,24 @@
       "source_text": "Let $(x_n)$ and $(y_n)$ be Cauchy real sequences, and let\n$\\alpha,\\beta\\in\\mathbb{R}$. Then $(\\alpha x_n+\\beta y_n)$ is Cauchy.\n\n\\smallskip\n\\noindent\n\\hyperref[prf:linear-combination-cauchy-sequences]{\\textit{Go to proof.}}",
       "section": "cauchy",
       "depends_on_ids": [
+        "def:linear-combination-of-real-sequences",
         "thm:scalar-multiple-cauchy-sequence",
-        "thm:sum-cauchy-sequences",
-        "def:pointwise-sum-sequence"
+        "thm:sum-cauchy-sequences"
       ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
+        "Linear Combination of Real Sequences",
         "Scalar Multiples of Cauchy Sequences",
-        "Sums of Cauchy Sequences",
-        "Pointwise Sum of Sequences"
+        "Sums of Cauchy Sequences"
       ],
       "used_by_titles": [],
       "dependencies": [
+        "def:linear-combination-of-real-sequences",
         "thm:scalar-multiple-cauchy-sequence",
-        "thm:sum-cauchy-sequences",
-        "def:pointwise-sum-sequence"
+        "thm:sum-cauchy-sequences"
       ],
       "ignored": false,
       "is_theorem_like": true,
@@ -59915,8 +60386,8 @@
       ],
       "used_by_ids": [
         "thm:sum-cauchy-sequences",
-        "thm:linear-combination-cauchy-sequences",
         "def:pointwise-difference-sequence",
+        "def:linear-combination-of-real-sequences",
         "thm:limit-of-a-sum",
         "thm:algebraic-transformations-preserve-monotonicity"
       ],
@@ -59928,8 +60399,8 @@
       ],
       "used_by_titles": [
         "Sums of Cauchy Sequences",
-        "Linear Combinations of Cauchy Sequences",
         "Pointwise Difference of Sequences",
+        "Linear Combination of Real Sequences",
         "Limit of a Sum",
         "Algebraic Transformations Preserve Monotonicity"
       ],
@@ -59962,7 +60433,8 @@
       ],
       "used_by_ids": [
         "thm:difference-cauchy-sequences",
-        "thm:limit-of-a-difference"
+        "thm:limit-of-a-difference",
+        "thm:difference-from-limit-is-null"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -59973,7 +60445,8 @@
       ],
       "used_by_titles": [
         "Differences of Cauchy Sequences",
-        "Limit of a Difference"
+        "Limit of a Difference",
+        "Difference from the Limit is Null"
       ],
       "dependencies": [
         "def:sequence",
@@ -60004,6 +60477,7 @@
       ],
       "used_by_ids": [
         "thm:scalar-multiple-cauchy-sequence",
+        "def:linear-combination-of-real-sequences",
         "def:pointwise-negation-sequence",
         "thm:limit-of-scalar-multiple",
         "thm:algebraic-transformations-preserve-monotonicity"
@@ -60016,6 +60490,7 @@
       ],
       "used_by_titles": [
         "Scalar Multiples of Cauchy Sequences",
+        "Linear Combination of Real Sequences",
         "Pointwise Negation of a Sequence",
         "Limit of a Scalar Multiple",
         "Algebraic Transformations Preserve Monotonicity"
@@ -60030,6 +60505,47 @@
       "root_kind": "",
       "env_name": "definition",
       "text_preview": "Let $(x_n)$ be a real sequence, and let $\\alpha\\in\\mathbb{R}$. The \\textbf{scalar multiple} $\\alpha(x_n)$ is the real sequence $(\\alpha x_n)$ defined by \\[ (\\alpha x)_n := \\alpha x_n \\qquad \\text{for every } n\\in\\mathbb{N}. \\]"
+    },
+    {
+      "id": "def:linear-combination-of-real-sequences",
+      "kind": "Definition",
+      "name": "Linear Combination of Real Sequences",
+      "deck": "",
+      "chapter": "sequences",
+      "volume": "iii",
+      "source": "notes/convergence/notes-algebra.tex",
+      "statement_display": "Let $(x_n)$ and $(y_n)$ be real sequences, and let\n$\\alpha,\\beta\\in\\mathbb{R}$.  The real linear combination\n$\\alpha(x_n)+\\beta(y_n)$ is the real sequence $(\\alpha x_n+\\beta y_n)$\ndefined by\n\\[\n(\\alpha x+\\beta y)_n := \\alpha x_n+\\beta y_n\n\\qquad\n\\text{for every } n\\in\\mathbb{N}.\n\\]",
+      "statement_tex": "Let $(x_n)$ and $(y_n)$ be real sequences, and let\n$\\alpha,\\beta\\in\\mathbb{R}$.  The real linear combination\n$\\alpha(x_n)+\\beta(y_n)$ is the real sequence $(\\alpha x_n+\\beta y_n)$\ndefined by\n\\[\n(\\alpha x+\\beta y)_n := \\alpha x_n+\\beta y_n\n\\qquad\n\\text{for every } n\\in\\mathbb{N}.\n\\]",
+      "source_text": "Let $(x_n)$ and $(y_n)$ be real sequences, and let\n$\\alpha,\\beta\\in\\mathbb{R}$.  The real linear combination\n$\\alpha(x_n)+\\beta(y_n)$ is the real sequence $(\\alpha x_n+\\beta y_n)$\ndefined by\n\\[\n(\\alpha x+\\beta y)_n := \\alpha x_n+\\beta y_n\n\\qquad\n\\text{for every } n\\in\\mathbb{N}.\n\\]",
+      "section": "convergence",
+      "depends_on_ids": [
+        "def:scalar-multiple-sequence",
+        "def:pointwise-sum-sequence"
+      ],
+      "used_by_ids": [
+        "thm:linear-combination-cauchy-sequences"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Scalar Multiple of a Sequence",
+        "Pointwise Sum of Sequences"
+      ],
+      "used_by_titles": [
+        "Linear Combinations of Cauchy Sequences"
+      ],
+      "dependencies": [
+        "def:scalar-multiple-sequence",
+        "def:pointwise-sum-sequence"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Let $(x_n)$ and $(y_n)$ be real sequences, and let $\\alpha,\\beta\\in\\mathbb{R}$. The real linear combination $\\alpha(x_n)+\\beta(y_n)$ is the real sequence $(\\alpha x_n+\\beta y_n)$ defined by \\[ (\\alpha x+\\beta y)_n := \\alpha x_n+\\beta y_n \\q"
     },
     {
       "id": "def:pointwise-negation-sequence",
@@ -61699,7 +62215,8 @@
       "section": "definition",
       "depends_on_ids": [
         "def:convergent-sequence",
-        "def:null-sequence"
+        "def:null-sequence",
+        "def:pointwise-difference-sequence"
       ],
       "used_by_ids": [],
       "prereq_ids": [],
@@ -61707,12 +62224,14 @@
       "implies_ids": [],
       "depends_on_titles": [
         "Convergence of a Sequence",
-        "Null Sequence"
+        "Null Sequence",
+        "Pointwise Difference of Sequences"
       ],
       "used_by_titles": [],
       "dependencies": [
         "def:convergent-sequence",
-        "def:null-sequence"
+        "def:null-sequence",
+        "def:pointwise-difference-sequence"
       ],
       "ignored": false,
       "is_theorem_like": true,
@@ -61926,6 +62445,7 @@
         "thm:upper-and-lower-bounds-give-absolute-bound",
         "thm:unbounded-above-has-positive-infinity-subsequence",
         "thm:monotone-convergence-theorem",
+        "thm:unbounded-monotone-divergence",
         "thm:increasing-sequence-limit-as-supremum"
       ],
       "prereq_ids": [],
@@ -61941,6 +62461,7 @@
         "Upper and Lower Bounds Give an Absolute Bound",
         "Unbounded Above Sequence Has a Positive-Infinity Subsequence",
         "Monotone Convergence Theorem",
+        "Unbounded Monotone Divergence",
         "Increasing Sequence Limit as Supremum"
       ],
       "dependencies": [
@@ -61976,6 +62497,7 @@
         "thm:upper-and-lower-bounds-give-absolute-bound",
         "thm:unbounded-below-has-negative-infinity-subsequence",
         "thm:monotone-convergence-theorem",
+        "thm:unbounded-monotone-divergence",
         "thm:decreasing-sequence-limit-as-infimum"
       ],
       "prereq_ids": [],
@@ -61991,6 +62513,7 @@
         "Upper and Lower Bounds Give an Absolute Bound",
         "Unbounded Below Sequence Has a Negative-Infinity Subsequence",
         "Monotone Convergence Theorem",
+        "Unbounded Monotone Divergence",
         "Decreasing Sequence Limit as Infimum"
       ],
       "dependencies": [
@@ -63993,7 +64516,9 @@
         "def:diverges-to-positive-infinity",
         "def:diverges-to-negative-infinity",
         "def:increasing-sequence",
-        "def:decreasing-sequence"
+        "def:decreasing-sequence",
+        "def:sequence-bounded-above",
+        "def:sequence-bounded-below"
       ],
       "used_by_ids": [],
       "prereq_ids": [],
@@ -64003,14 +64528,18 @@
         "Divergence to Positive Infinity",
         "Divergence to Negative Infinity",
         "Increasing Sequence",
-        "Decreasing Sequence"
+        "Decreasing Sequence",
+        "Sequence Bounded Above",
+        "Sequence Bounded Below"
       ],
       "used_by_titles": [],
       "dependencies": [
         "def:diverges-to-positive-infinity",
         "def:diverges-to-negative-infinity",
         "def:increasing-sequence",
-        "def:decreasing-sequence"
+        "def:decreasing-sequence",
+        "def:sequence-bounded-above",
+        "def:sequence-bounded-below"
       ],
       "ignored": false,
       "is_theorem_like": true,
@@ -65909,6 +66438,7 @@
       "section": "ordered-sets",
       "depends_on_ids": [
         "def:lattice-order-partial-order",
+        "def:union",
         "def:bottom-element"
       ],
       "used_by_ids": [
@@ -65919,6 +66449,7 @@
       "implies_ids": [],
       "depends_on_titles": [
         "Partial Order",
+        "Union",
         "Bottom Element"
       ],
       "used_by_titles": [
@@ -65926,6 +66457,7 @@
       ],
       "dependencies": [
         "def:lattice-order-partial-order",
+        "def:union",
         "def:bottom-element"
       ],
       "ignored": false,
@@ -66323,18 +66855,21 @@
       "source_text": "A \\hyperref[def:partial-map]{partial map} $f : A \\rightharpoonup B$ is a\n\\emph{total map} if it is defined on every element of $A$:\n\\[\n\\forall x \\in A,\\; \\exists y \\in B,\\quad (x, y) \\in f.\n\\]\nA total map is written $f : A \\to B$ and is precisely a function in the\nusual sense.",
       "section": "ordered-sets",
       "depends_on_ids": [
-        "def:partial-map"
+        "def:partial-map",
+        "def:function"
       ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Partial Map"
+        "Partial Map",
+        "Function"
       ],
       "used_by_titles": [],
       "dependencies": [
-        "def:partial-map"
+        "def:partial-map",
+        "def:function"
       ],
       "ignored": false,
       "is_theorem_like": false,
@@ -66693,18 +67228,21 @@
       "source_text": "An element of a vector space $V$ is called a \\textbf{vector}.\n\nWhen $V = \\mathbf{F}^n$, an element of $\\mathbf{F}^n$ may also be called\na \\textbf{point}.",
       "section": "vector-spaces",
       "depends_on_ids": [
-        "def:vector-space"
+        "def:vector-space",
+        "def:reals"
       ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Vector Space"
+        "Vector Space",
+        "The Real Numbers"
       ],
       "used_by_titles": [],
       "dependencies": [
-        "def:vector-space"
+        "def:vector-space",
+        "def:reals"
       ],
       "ignored": false,
       "is_theorem_like": false,
@@ -66727,18 +67265,21 @@
       "source_text": "A \\textbf{real vector space} is a vector space over $\\mathbb{R}$.",
       "section": "vector-spaces",
       "depends_on_ids": [
-        "def:vector-space"
+        "def:vector-space",
+        "def:reals"
       ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Vector Space"
+        "Vector Space",
+        "The Real Numbers"
       ],
       "used_by_titles": [],
       "dependencies": [
-        "def:vector-space"
+        "def:vector-space",
+        "def:reals"
       ],
       "ignored": false,
       "is_theorem_like": false,
@@ -68067,7 +68608,9 @@
         "def:euclid-circle",
         "def:euclid-diameter",
         "def:euclid-rectilinear-figures",
-        "def:euclid-parallel-straight-lines"
+        "def:euclid-parallel-straight-lines",
+        "ax:euclid-postulate-draw-straight-line",
+        "ax:euclid-postulate-produce-straight-line"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -68087,7 +68630,9 @@
         "Circle",
         "Diameter",
         "Rectilinear figures",
-        "Parallel straight lines"
+        "Parallel straight lines",
+        "Euclid Postulate I: Drawing a straight line",
+        "Euclid Postulate II: Producing a finite straight line"
       ],
       "dependencies": [
         "def:euclid-line",
@@ -68916,7 +69461,9 @@
       "statement_tex": "Let it have been postulated to draw a straight line from any point to any point.",
       "source_text": "Let it have been postulated to draw a straight line from any point to any point.",
       "section": "foundations",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:euclid-straight-line"
+      ],
       "used_by_ids": [
         "thm:euclid-i-1",
         "thm:euclid-i-2"
@@ -68924,12 +69471,16 @@
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Straight line"
+      ],
       "used_by_titles": [
         "Euclid I.1: Constructing an equilateral triangle",
         "Euclid I.2: Copying a segment from a given point"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "def:euclid-straight-line"
+      ],
       "ignored": false,
       "is_theorem_like": false,
       "definitional_root": false,
@@ -68950,18 +69501,24 @@
       "statement_tex": "Let it have been postulated to produce a finite straight line continuously in a\nstraight line.",
       "source_text": "Let it have been postulated to produce a finite straight line continuously in a\nstraight line.",
       "section": "foundations",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:euclid-straight-line"
+      ],
       "used_by_ids": [
         "thm:euclid-i-2"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "Straight line"
+      ],
       "used_by_titles": [
         "Euclid I.2: Copying a segment from a given point"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "def:euclid-straight-line"
+      ],
       "ignored": false,
       "is_theorem_like": false,
       "definitional_root": false,
@@ -69930,12 +70487,16 @@
       "source_text": "An \\emph{IEEE 754 binary floating-point datum} is a binary encoding partitioned into\nthree fields:\n\n\\begin{itemize}\n    \\item a \\emph{sign field} consisting of one bit,\n    \\item an \\emph{exponent field} consisting of a fixed number of bits,\n    \\item a \\emph{fraction field} consisting of a fixed number of bits.\n\\end{itemize}\n\nIts interpretation depends on the exponent-field pattern and the fraction-field pattern.",
       "section": "ieee-floating-point",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "def:numerical-analysis-ieee-754-infinity-encoding"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "IEEE 754 Infinity Encoding"
+      ],
       "dependencies": [],
       "ignored": false,
       "is_theorem_like": false,
@@ -70013,14 +70574,20 @@
       "statement_tex": "An IEEE 754 binary floating-point datum encodes \\emph{infinity} if its exponent field\nis all ones and its fraction field is all zeros.\n\nThe sign bit determines whether the represented value is $+\\infty$ or $-\\infty$.",
       "source_text": "An IEEE 754 binary floating-point datum encodes \\emph{infinity} if its exponent field\nis all ones and its fraction field is all zeros.\n\nThe sign bit determines whether the represented value is $+\\infty$ or $-\\infty$.",
       "section": "ieee-floating-point",
-      "depends_on_ids": [],
+      "depends_on_ids": [
+        "def:numerical-analysis-ieee-754-binary-floating-point-datum"
+      ],
       "used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [],
+      "depends_on_titles": [
+        "IEEE 754 Binary Floating-Point Datum"
+      ],
       "used_by_titles": [],
-      "dependencies": [],
+      "dependencies": [
+        "def:numerical-analysis-ieee-754-binary-floating-point-datum"
+      ],
       "ignored": false,
       "is_theorem_like": false,
       "definitional_root": false,
@@ -71433,6 +72000,11 @@
       "kind": "depends_on"
     },
     {
+      "from": "def:q-alt",
+      "to": "def:prenex-formula",
+      "kind": "depends_on"
+    },
+    {
       "from": "thm:universal-implies-existential",
       "to": "def:structure",
       "kind": "depends_on"
@@ -71545,6 +72117,11 @@
     {
       "from": "thm:qcomm",
       "to": "def:existential-q",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:qcomm",
+      "to": "def:log-equiv",
       "kind": "depends_on"
     },
     {
@@ -71890,6 +72467,11 @@
     {
       "from": "def:fv",
       "to": "def:bound-free",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:fv",
+      "to": "def:atomic-formula",
       "kind": "depends_on"
     },
     {
@@ -73779,6 +74361,11 @@
     },
     {
       "from": "thm:countable-union",
+      "to": "def:indexed-family",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:countable-union",
       "to": "def:union",
       "kind": "depends_on"
     },
@@ -74519,6 +75106,11 @@
     },
     {
       "from": "def:identity",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:constant",
       "to": "def:function",
       "kind": "depends_on"
     },
@@ -75643,6 +76235,11 @@
       "kind": "depends_on"
     },
     {
+      "from": "prop:invertibility-implies-left-cancellation",
+      "to": "def:left-cancellation",
+      "kind": "depends_on"
+    },
+    {
       "from": "prop:invertibility-implies-cancellation",
       "to": "prop:invertibility-implies-left-cancellation",
       "kind": "depends_on"
@@ -75670,6 +76267,11 @@
     {
       "from": "prop:invertibility-implies-right-cancellation",
       "to": "def:two-sided-inverse",
+      "kind": "depends_on"
+    },
+    {
+      "from": "prop:invertibility-implies-right-cancellation",
+      "to": "def:right-cancellation",
       "kind": "depends_on"
     },
     {
@@ -76725,6 +77327,16 @@
     {
       "from": "thm:embedding-identifies-with-image",
       "to": "def:image-of-embedding",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:identity-relation",
+      "to": "def:relation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:equality-relation",
+      "to": "def:relation",
       "kind": "depends_on"
     },
     {
@@ -82164,7 +82776,12 @@
     },
     {
       "from": "def:real-ordered-field",
-      "to": "thm:lub-property-r",
+      "to": "def:abstract-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:real-ordered-field",
+      "to": "def:least-upper-bound-property-on-r",
       "kind": "depends_on"
     },
     {
@@ -82218,6 +82835,26 @@
       "kind": "depends_on"
     },
     {
+      "from": "def:least-upper-bound-property-on-r",
+      "to": "def:reals",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:least-upper-bound-property-on-r",
+      "to": "def:order-on-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:least-upper-bound-property-on-r",
+      "to": "def:upper-bound-in-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:least-upper-bound-property-on-r",
+      "to": "def:supremum-in-r",
+      "kind": "depends_on"
+    },
+    {
       "from": "lem:union-of-cuts-is-a-cut",
       "to": "def:dedekind-cut",
       "kind": "depends_on"
@@ -82234,7 +82871,17 @@
     },
     {
       "from": "thm:lub-property-r",
-      "to": "ax:completeness-of-reals",
+      "to": "def:least-upper-bound-property-on-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:lub-property-r",
+      "to": "lem:union-of-cuts-is-a-cut",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:lub-property-r",
+      "to": "def:supremum-in-r",
       "kind": "depends_on"
     },
     {
@@ -82600,6 +83247,11 @@
     {
       "from": "cor:ordered-field-laws-on-r",
       "to": "cor:generic-ordered-field-laws",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:r-is-complete-ordered-field",
+      "to": "def:real-ordered-field",
       "kind": "depends_on"
     },
     {
@@ -84338,6 +84990,21 @@
       "kind": "depends_on"
     },
     {
+      "from": "ax:completeness-of-reals",
+      "to": "def:reals",
+      "kind": "depends_on"
+    },
+    {
+      "from": "ax:completeness-of-reals",
+      "to": "def:abstract-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "ax:completeness-of-reals",
+      "to": "def:least-upper-bound-property",
+      "kind": "depends_on"
+    },
+    {
       "from": "def:order-dense-subset",
       "to": "def:total-order",
       "kind": "depends_on"
@@ -84938,6 +85605,16 @@
       "kind": "depends_on"
     },
     {
+      "from": "thm:algebra-of-uniform-continuity-general",
+      "to": "def:linear-combination-of-real-valued-functions",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:algebra-of-uniform-continuity-general",
+      "to": "def:pointwise-difference-of-functions",
+      "kind": "depends_on"
+    },
+    {
       "from": "thm:algebra-of-uniform-continuity-bounded",
       "to": "def:uniform-continuity",
       "kind": "depends_on"
@@ -85094,6 +85771,16 @@
     },
     {
       "from": "thm:finite-linear-combination-rule",
+      "to": "def:real-linear-rule",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:finite-linear-combination-rule",
+      "to": "def:linear-combination-of-real-valued-functions",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:finite-linear-combination-rule",
       "to": "thm:constant-multiple-rule",
       "kind": "depends_on"
     },
@@ -85135,6 +85822,16 @@
     {
       "from": "cor:power-rule-special-case-interval",
       "to": "cor:power-rule-special-case",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:finite-linear-combination-rule-interval",
+      "to": "def:real-linear-rule",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:finite-linear-combination-rule-interval",
+      "to": "def:linear-combination-of-real-valued-functions",
       "kind": "depends_on"
     },
     {
@@ -86043,8 +86740,28 @@
       "kind": "depends_on"
     },
     {
+      "from": "def:limit-function-neighbourhood",
+      "to": "def:limit-function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:limit-function-neighbourhood",
+      "to": "def:epsilon-neighbourhood",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:limit-function-neighbourhood",
+      "to": "def:deleted-epsilon-neighbourhood",
+      "kind": "depends_on"
+    },
+    {
       "from": "prop:limit-neighbourhood-equiv",
       "to": "def:limit-function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "prop:limit-neighbourhood-equiv",
+      "to": "def:limit-function-neighbourhood",
       "kind": "depends_on"
     },
     {
@@ -86075,6 +86792,16 @@
     {
       "from": "cor:limit-three-equiv",
       "to": "def:limit-function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:limit-three-equiv",
+      "to": "def:limit-function-neighbourhood",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:limit-three-equiv",
+      "to": "def:limit-function-sequential",
       "kind": "depends_on"
     },
     {
@@ -86308,6 +87035,26 @@
       "kind": "depends_on"
     },
     {
+      "from": "def:linear-combination-of-real-valued-functions",
+      "to": "def:pointwise-scalar-multiple-of-a-function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:linear-combination-of-real-valued-functions",
+      "to": "def:pointwise-sum-of-functions",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:real-linear-rule",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:real-linear-rule",
+      "to": "def:linear-combination-of-real-valued-functions",
+      "kind": "depends_on"
+    },
+    {
       "from": "def:function-bounded-above",
       "to": "def:function",
       "kind": "depends_on"
@@ -86323,6 +87070,11 @@
       "kind": "depends_on"
     },
     {
+      "from": "def:function-bounded-above",
+      "to": "def:bounded-above",
+      "kind": "depends_on"
+    },
+    {
       "from": "def:function-bounded-below",
       "to": "def:function",
       "kind": "depends_on"
@@ -86335,6 +87087,11 @@
     {
       "from": "def:function-bounded-below",
       "to": "def:order-on-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-bounded-below",
+      "to": "def:bounded-below",
       "kind": "depends_on"
     },
     {
@@ -86345,6 +87102,86 @@
     {
       "from": "def:function-bounded",
       "to": "def:function-bounded-below",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-supremum-on-set",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-supremum-on-set",
+      "to": "def:subset",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-supremum-on-set",
+      "to": "def:image-set",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-supremum-on-set",
+      "to": "def:supremum",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-infimum-on-set",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-infimum-on-set",
+      "to": "def:subset",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-infimum-on-set",
+      "to": "def:image-set",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-infimum-on-set",
+      "to": "def:infimum",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-maximum-point",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-maximum-point",
+      "to": "def:subset",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-maximum-point",
+      "to": "def:order-on-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-maximum-point",
+      "to": "def:maximum",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-minimum-point",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-minimum-point",
+      "to": "def:subset",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-minimum-point",
+      "to": "def:order-on-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-minimum-point",
+      "to": "def:minimum",
       "kind": "depends_on"
     },
     {
@@ -86364,7 +87201,17 @@
     },
     {
       "from": "def:function-strictly-increasing",
-      "to": "def:function-increasing",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-strictly-increasing",
+      "to": "def:subset",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-strictly-increasing",
+      "to": "def:strict-order-on-r",
       "kind": "depends_on"
     },
     {
@@ -86384,7 +87231,17 @@
     },
     {
       "from": "def:function-strictly-decreasing",
-      "to": "def:function-decreasing",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-strictly-decreasing",
+      "to": "def:subset",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-strictly-decreasing",
+      "to": "def:strict-order-on-r",
       "kind": "depends_on"
     },
     {
@@ -86395,6 +87252,16 @@
     {
       "from": "def:function-monotone",
       "to": "def:function-decreasing",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-constant",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:function-constant",
+      "to": "def:subset",
       "kind": "depends_on"
     },
     {
@@ -86724,17 +87591,17 @@
     },
     {
       "from": "thm:linear-combination-cauchy-sequences",
+      "to": "def:linear-combination-of-real-sequences",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:linear-combination-cauchy-sequences",
       "to": "thm:scalar-multiple-cauchy-sequence",
       "kind": "depends_on"
     },
     {
       "from": "thm:linear-combination-cauchy-sequences",
       "to": "thm:sum-cauchy-sequences",
-      "kind": "depends_on"
-    },
-    {
-      "from": "thm:linear-combination-cauchy-sequences",
-      "to": "def:pointwise-sum-sequence",
       "kind": "depends_on"
     },
     {
@@ -86860,6 +87727,16 @@
     {
       "from": "def:scalar-multiple-sequence",
       "to": "def:sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:linear-combination-of-real-sequences",
+      "to": "def:scalar-multiple-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:linear-combination-of-real-sequences",
+      "to": "def:pointwise-sum-sequence",
       "kind": "depends_on"
     },
     {
@@ -87230,6 +88107,11 @@
     {
       "from": "thm:difference-from-limit-is-null",
       "to": "def:null-sequence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:difference-from-limit-is-null",
+      "to": "def:pointwise-difference-sequence",
       "kind": "depends_on"
     },
     {
@@ -87853,6 +88735,16 @@
       "kind": "depends_on"
     },
     {
+      "from": "thm:unbounded-monotone-divergence",
+      "to": "def:sequence-bounded-above",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:unbounded-monotone-divergence",
+      "to": "def:sequence-bounded-below",
+      "kind": "depends_on"
+    },
+    {
       "from": "thm:algebraic-transformations-preserve-monotonicity",
       "to": "def:pointwise-sum-sequence",
       "kind": "depends_on"
@@ -88339,6 +89231,11 @@
     },
     {
       "from": "def:lifting",
+      "to": "def:union",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:lifting",
       "to": "def:bottom-element",
       "kind": "depends_on"
     },
@@ -88408,6 +89305,11 @@
       "kind": "depends_on"
     },
     {
+      "from": "def:total-map",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
       "from": "def:list",
       "to": "def:function",
       "kind": "depends_on"
@@ -88473,8 +89375,18 @@
       "kind": "depends_on"
     },
     {
+      "from": "def:vector-and-point",
+      "to": "def:reals",
+      "kind": "depends_on"
+    },
+    {
       "from": "def:real-vector-space",
       "to": "def:vector-space",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:real-vector-space",
+      "to": "def:reals",
       "kind": "depends_on"
     },
     {
@@ -89063,6 +89975,16 @@
       "kind": "depends_on"
     },
     {
+      "from": "ax:euclid-postulate-draw-straight-line",
+      "to": "def:euclid-straight-line",
+      "kind": "depends_on"
+    },
+    {
+      "from": "ax:euclid-postulate-produce-straight-line",
+      "to": "def:euclid-straight-line",
+      "kind": "depends_on"
+    },
+    {
       "from": "lem:computational-geometry-convex-hull-smallest-convex-set",
       "to": "def:computational-geometry-convex-set",
       "kind": "depends_on"
@@ -89160,6 +90082,11 @@
     {
       "from": "thm:computational-geometry-greedy-slope-upper-hull",
       "to": "thm:computational-geometry-monotone-slope-upper-hull",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:numerical-analysis-ieee-754-infinity-encoding",
+      "to": "def:numerical-analysis-ieee-754-binary-floating-point-datum",
       "kind": "depends_on"
     },
     {

@@ -62,13 +62,16 @@ def write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def build_maps(universe: dict[str, Any]) -> tuple[dict[tuple[str, str], set[str]], dict[str, set[str]], dict[str, set[str]]]:
+def build_maps(
+    universe: dict[str, Any],
+) -> tuple[dict[tuple[str, str], set[str]], dict[str, set[str]], dict[str, set[str]], dict[str, dict[str, list[str]]]]:
     direct = {term: set(deps) for term, deps in universe.get("direct_dependencies", {}).items()}
     transitive = {term: set(deps) for term, deps in universe.get("transitive_dependencies", {}).items()}
+    via = universe.get("via_direct_dependencies", {})
     proposed: dict[tuple[str, str], set[str]] = defaultdict(set)
     for row in universe.get("proposed_additions", []):
         proposed[(row.get("batch", ""), row.get("graph", ""))].add(row.get("dependency", ""))
-    return proposed, direct, transitive
+    return proposed, direct, transitive, via
 
 
 def has_real_ambient_context(term: str, adds: set[str], direct: dict[str, set[str]], transitive: dict[str, set[str]]) -> bool:
@@ -82,7 +85,49 @@ def real_ambient_adds(adds: set[str]) -> set[str]:
     return adds & REAL_AMBIENT_TERMS
 
 
+def apply_already_reachable_triage(
+    decision: dict[str, Any],
+    direct: dict[str, set[str]],
+    transitive: dict[str, set[str]],
+    via: dict[str, dict[str, list[str]]],
+) -> bool:
+    if str(decision.get("reason", "")).startswith("source fix applied:"):
+        return False
+    if decision.get("verdict") != "change":
+        return False
+    if decision.get("decision") == "applied":
+        return False
+    adds = set(decision.get("adds") or [])
+    removes = set(decision.get("removes") or [])
+    if not adds or removes:
+        return False
+
+    term = decision.get("term", "")
+    direct_deps = direct.get(term, set())
+    transitive_deps = transitive.get(term, set())
+    if not all(dep in direct_deps or dep in transitive_deps for dep in adds):
+        return False
+
+    paths: list[str] = []
+    via_for_term = via.get(term, {})
+    for dep in sorted(adds):
+        ancestors = via_for_term.get(dep, [])
+        if dep in direct_deps:
+            paths.append(f"{dep} directly")
+        elif ancestors:
+            paths.append(f"{dep} via {'/'.join(ancestors)}")
+        else:
+            paths.append(f"{dep} transitively")
+
+    decision["decision"] = "rejected"
+    decision["reason"] = "added dependency is already reachable in the dependency tree: " + ", ".join(paths)
+    decision.pop("ambient_noise_rejected", None)
+    return True
+
+
 def apply_real_ambient_triage(decision: dict[str, Any], direct: dict[str, set[str]], transitive: dict[str, set[str]]) -> bool:
+    if str(decision.get("reason", "")).startswith("source fix applied:"):
+        return False
     if decision.get("verdict") != "change":
         return False
     if decision.get("decision") == "applied":
@@ -119,11 +164,32 @@ def apply_real_ambient_triage(decision: dict[str, Any], direct: dict[str, set[st
 
 def update_summary(payload: dict[str, Any]) -> None:
     decisions = payload.get("decisions", [])
+    manifest = load_json(MANIFEST)
+    graph_count = sum(int(entry.get("graphs", 0)) for entry in manifest)
+    resolution_count = sum(1 for _ in HERE.glob("batch-*/resolution-*.json"))
+    universe = load_json(UNIVERSE)
     change_counts = Counter(
         row.get("decision", "other")
         for row in decisions
         if row.get("verdict") == "change"
     )
+    verdict_counts = Counter(row.get("verdict", "other") for row in decisions)
+    payload.setdefault("summary", {})
+    payload["summary"]["total_batches"] = len(manifest)
+    payload["summary"]["processed_batches"] = sum(
+        1 for entry in manifest if any((HERE / entry["batch"]).glob("resolution-*.json"))
+    )
+    payload["summary"]["graphs_manifest"] = graph_count
+    payload["summary"]["graphs_processed"] = len(decisions)
+    payload["summary"]["resolutions"] = resolution_count
+    payload["summary"]["unresolved"] = graph_count - resolution_count
+    payload["summary"]["verdicts"] = {
+        "ok": verdict_counts.get("ok", 0),
+        "reorder": verdict_counts.get("reorder", 0),
+        "change": verdict_counts.get("change", 0),
+        "other": sum(count for key, count in verdict_counts.items() if key not in {"ok", "reorder", "change"}),
+    }
+    payload["summary"]["universe_summary"] = universe.get("summary", {})
     payload.setdefault("summary", {}).setdefault("change_decisions", {})
     payload["summary"]["change_decisions"] = {
         "applied": change_counts.get("applied", 0),
@@ -150,14 +216,51 @@ def resolution_dependencies(batch: str, resolution_name: str) -> list[str]:
     return sorted(dep for dep in resolution.get("dependencies", []) if isinstance(dep, str) and dep)
 
 
+ROMAN_VOLUME_RANK = {
+    "i": 1,
+    "ii": 2,
+    "iii": 3,
+    "iv": 4,
+    "v": 5,
+    "vi": 6,
+    "vii": 7,
+    "viii": 8,
+    "ix": 9,
+    "x": 10,
+}
+
+
+def volume_rank(volume: str) -> int:
+    return ROMAN_VOLUME_RANK.get(volume.lower(), 999)
+
+
 def markdown_escape(value: str) -> str:
     return value.replace("|", "\\|").replace("\n", " ")
 
 
 def write_report(payload: dict[str, Any], changed: int) -> None:
     decisions = payload.get("decisions", [])
-    summary = payload.get("summary", {})
     manifest = load_json(MANIFEST)
+    visible_batches = {
+        entry["batch"]
+        for entry in manifest
+        if volume_rank(entry.get("volume", "")) < 5
+    }
+    visible_manifest = [
+        entry
+        for entry in manifest
+        if entry["batch"] in visible_batches
+    ]
+    active_change_decisions = [
+        row
+        for row in decisions
+        if (
+            row.get("verdict") == "change"
+            and row.get("decision") == "investigate"
+            and row.get("batch", "") in visible_batches
+        )
+    ]
+    summary = payload.get("summary", {})
     change_decisions = summary.get("change_decisions", {})
     per_batch: dict[str, Counter[str]] = defaultdict(Counter)
     verdicts_by_batch: dict[str, Counter[str]] = defaultdict(Counter)
@@ -173,7 +276,7 @@ def write_report(payload: dict[str, Any], changed: int) -> None:
             per_batch[batch][row.get("decision", "other")] += 1
 
     ambient_rows = [
-        row for row in decisions
+        row for row in active_change_decisions
         if row.get("ambient_noise_rejected")
     ]
     ambient_rows.sort(key=lambda row: (row.get("batch", ""), row.get("graph", ""), row.get("term", "")))
@@ -200,6 +303,7 @@ def write_report(payload: dict[str, Any], changed: int) -> None:
         ),
         f"- Real-ambient noise decisions marked: {summary.get('real_ambient_noise_marked', 0)}",
         f"- Decisions changed by latest real-ambient pass: {changed}",
+        f"- Rendered scope: Volumes I-IV only; Volume V and later batches excluded: {len(manifest) - len(visible_manifest)}",
         "",
         "## Real-Ambient Noise",
         "",
@@ -223,7 +327,7 @@ def write_report(payload: dict[str, Any], changed: int) -> None:
         )
 
     lines.extend(["", "## Per-Batch Change Decisions", "", "| Batch | Applied | Rejected | Investigate |", "|---|---:|---:|---:|"])
-    for entry in manifest:
+    for entry in visible_manifest:
         batch = entry["batch"]
         counts = per_batch[batch]
         lines.append(f"| {batch} | {counts.get('applied', 0)} | {counts.get('rejected', 0)} | {counts.get('investigate', 0)} |")
@@ -237,7 +341,7 @@ def write_report(payload: dict[str, Any], changed: int) -> None:
             "|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|",
         ]
     )
-    for entry in manifest:
+    for entry in visible_manifest:
         batch = entry["batch"]
         counts = verdicts_by_batch[batch]
         decision_counts = per_batch[batch]
@@ -272,12 +376,11 @@ def write_report(payload: dict[str, Any], changed: int) -> None:
         )
 
     decisions_by_batch: dict[str, list[dict[str, Any]]] = defaultdict(list)
-    for row in decisions:
-        if row.get("verdict") == "change":
-            decisions_by_batch[row.get("batch", "")].append(row)
+    for row in active_change_decisions:
+        decisions_by_batch[row.get("batch", "")].append(row)
 
     lines.extend(["", "## Change Candidates", ""])
-    for entry in manifest:
+    for entry in visible_manifest:
         batch = entry["batch"]
         rows = sorted(decisions_by_batch.get(batch, []), key=lambda row: row.get("graph", ""))
         if not rows:
@@ -320,12 +423,13 @@ def write_report(payload: dict[str, Any], changed: int) -> None:
 def main() -> int:
     universe = load_json(UNIVERSE)
     payload = load_json(DECISIONS)
-    _proposed, direct, transitive = build_maps(universe)
+    _proposed, direct, transitive, via = build_maps(universe)
 
     changed = 0
     for decision in payload.get("decisions", []):
         before = json.dumps(decision, sort_keys=True)
-        apply_real_ambient_triage(decision, direct, transitive)
+        if not apply_already_reachable_triage(decision, direct, transitive, via):
+            apply_real_ambient_triage(decision, direct, transitive)
         after = json.dumps(decision, sort_keys=True)
         if before != after:
             changed += 1

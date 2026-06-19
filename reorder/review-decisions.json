@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-06-18T16:38:10+00:00",
+  "generated_at": "2026-06-19T01:39:44+00:00",
   "prompt": "TRIAGE_PROMPT.md",
   "dependency_universe": "dependency-universe.json",
   "policy": "Idempotent review-only triage using dependency-universe.json for already-transitive and cycle checks. No source files are edited.",
   "summary": {
     "total_batches": 31,
     "processed_batches": 31,
-    "graphs_manifest": 1638,
-    "graphs_processed": 1638,
-    "resolutions": 1638,
+    "graphs_manifest": 1643,
+    "graphs_processed": 1643,
+    "resolutions": 1643,
     "unresolved": 0,
     "verdicts": {
-      "ok": 414,
+      "ok": 419,
       "reorder": 0,
       "change": 1224,
       "other": 0
     },
     "change_decisions": {
       "applied": 15,
-      "rejected": 445,
-      "investigate": 764
+      "rejected": 466,
+      "investigate": 743
     },
     "universe_summary": {
-      "vocabulary_nodes": 1638,
-      "graph_nodes": 1638,
-      "resolution_files": 1638,
-      "direct_edges": 3684,
-      "proposed_additions": 3225,
-      "proposed_already_transitive": 1867,
+      "vocabulary_nodes": 1643,
+      "graph_nodes": 1643,
+      "resolution_files": 1643,
+      "direct_edges": 3756,
+      "proposed_additions": 3182,
+      "proposed_already_transitive": 1890,
       "proposed_creates_cycle": 36
     },
-    "real_ambient_noise_marked": 385
+    "real_ambient_noise_marked": 347
   },
   "decisions": [
     {
@@ -1435,8 +1435,8 @@
       "resolution": "resolution-0033.json",
       "term": "ax:euclid-postulate-draw-straight-line",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "not an obvious literal statement-vocabulary addition",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:euclid-point via def:euclid-straight-line, def:euclid-straight-line directly",
       "adds": [
         "def:euclid-point",
         "def:euclid-straight-line"
@@ -2927,6 +2927,18 @@
       "batch": "batch-0011",
       "graph": "graph-0030.json",
       "resolution": "resolution-0030.json",
+      "term": "def:linear-combination-of-real-sequences",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
+      "removes": [],
+      "confidence": 0.97
+    },
+    {
+      "batch": "batch-0011",
+      "graph": "graph-0031.json",
+      "resolution": "resolution-0031.json",
       "term": "def:pointwise-difference-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -2947,8 +2959,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0031.json",
-      "resolution": "resolution-0031.json",
+      "graph": "graph-0032.json",
+      "resolution": "resolution-0032.json",
       "term": "def:pointwise-negation-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -2970,8 +2982,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0032.json",
-      "resolution": "resolution-0032.json",
+      "graph": "graph-0033.json",
+      "resolution": "resolution-0033.json",
       "term": "def:pointwise-product-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -2990,8 +3002,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0033.json",
-      "resolution": "resolution-0033.json",
+      "graph": "graph-0034.json",
+      "resolution": "resolution-0034.json",
       "term": "def:pointwise-quotient-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -3016,8 +3028,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0034.json",
-      "resolution": "resolution-0034.json",
+      "graph": "graph-0035.json",
+      "resolution": "resolution-0035.json",
       "term": "def:pointwise-sum-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -3036,8 +3048,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0035.json",
-      "resolution": "resolution-0035.json",
+      "graph": "graph-0036.json",
+      "resolution": "resolution-0036.json",
       "term": "def:reciprocal-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -3060,8 +3072,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0036.json",
-      "resolution": "resolution-0036.json",
+      "graph": "graph-0037.json",
+      "resolution": "resolution-0037.json",
       "term": "def:scalar-multiple-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -3080,8 +3092,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0037.json",
-      "resolution": "resolution-0037.json",
+      "graph": "graph-0038.json",
+      "resolution": "resolution-0038.json",
       "term": "def:square-root-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -3102,8 +3114,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0038.json",
-      "resolution": "resolution-0038.json",
+      "graph": "graph-0039.json",
+      "resolution": "resolution-0039.json",
       "term": "def:square-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -3124,8 +3136,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0039.json",
-      "resolution": "resolution-0039.json",
+      "graph": "graph-0040.json",
+      "resolution": "resolution-0040.json",
       "term": "thm:limit-of-a-difference",
       "verdict": "change",
       "decision": "investigate",
@@ -3147,8 +3159,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0040.json",
-      "resolution": "resolution-0040.json",
+      "graph": "graph-0041.json",
+      "resolution": "resolution-0041.json",
       "term": "thm:limit-of-a-negation",
       "verdict": "change",
       "decision": "investigate",
@@ -3169,8 +3181,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0041.json",
-      "resolution": "resolution-0041.json",
+      "graph": "graph-0042.json",
+      "resolution": "resolution-0042.json",
       "term": "thm:limit-of-a-product",
       "verdict": "change",
       "decision": "investigate",
@@ -3190,8 +3202,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0042.json",
-      "resolution": "resolution-0042.json",
+      "graph": "graph-0043.json",
+      "resolution": "resolution-0043.json",
       "term": "thm:limit-of-a-quotient",
       "verdict": "change",
       "decision": "investigate",
@@ -3215,8 +3227,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0043.json",
-      "resolution": "resolution-0043.json",
+      "graph": "graph-0044.json",
+      "resolution": "resolution-0044.json",
       "term": "thm:limit-of-a-reciprocal",
       "verdict": "change",
       "decision": "investigate",
@@ -3241,8 +3253,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0044.json",
-      "resolution": "resolution-0044.json",
+      "graph": "graph-0045.json",
+      "resolution": "resolution-0045.json",
       "term": "thm:limit-of-a-square",
       "verdict": "change",
       "decision": "investigate",
@@ -3262,8 +3274,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0045.json",
-      "resolution": "resolution-0045.json",
+      "graph": "graph-0046.json",
+      "resolution": "resolution-0046.json",
       "term": "thm:limit-of-a-square-root",
       "verdict": "ok",
       "decision": "current-ok",
@@ -3274,8 +3286,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0046.json",
-      "resolution": "resolution-0046.json",
+      "graph": "graph-0047.json",
+      "resolution": "resolution-0047.json",
       "term": "thm:limit-of-a-sum",
       "verdict": "change",
       "decision": "investigate",
@@ -3295,8 +3307,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0047.json",
-      "resolution": "resolution-0047.json",
+      "graph": "graph-0048.json",
+      "resolution": "resolution-0048.json",
       "term": "thm:limit-of-an-absolute-value",
       "verdict": "change",
       "decision": "investigate",
@@ -3317,8 +3329,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0048.json",
-      "resolution": "resolution-0048.json",
+      "graph": "graph-0049.json",
+      "resolution": "resolution-0049.json",
       "term": "thm:limit-of-scalar-multiple",
       "verdict": "ok",
       "decision": "current-ok",
@@ -3329,8 +3341,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0049.json",
-      "resolution": "resolution-0049.json",
+      "graph": "graph-0050.json",
+      "resolution": "resolution-0050.json",
       "term": "thm:nonzero-limit-eventually-nonzero",
       "verdict": "change",
       "decision": "investigate",
@@ -3349,8 +3361,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0050.json",
-      "resolution": "resolution-0050.json",
+      "graph": "graph-0051.json",
+      "resolution": "resolution-0051.json",
       "term": "thm:polynomial-sequence-limit",
       "verdict": "change",
       "decision": "rejected",
@@ -3368,8 +3380,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0051.json",
-      "resolution": "resolution-0051.json",
+      "graph": "graph-0052.json",
+      "resolution": "resolution-0052.json",
       "term": "thm:positive-limit-eventually-positive",
       "verdict": "change",
       "decision": "rejected",
@@ -3389,8 +3401,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0052.json",
-      "resolution": "resolution-0052.json",
+      "graph": "graph-0053.json",
+      "resolution": "resolution-0053.json",
       "term": "thm:rational-sequence-limit",
       "verdict": "change",
       "decision": "investigate",
@@ -3413,8 +3425,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0053.json",
-      "resolution": "resolution-0053.json",
+      "graph": "graph-0054.json",
+      "resolution": "resolution-0054.json",
       "term": "def:convergent-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -3439,21 +3451,9 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0054.json",
-      "resolution": "resolution-0054.json",
-      "term": "def:convergent-sequence-neighborhood",
-      "verdict": "ok",
-      "decision": "current-ok",
-      "reason": "no proposed dependency-set change",
-      "adds": [],
-      "removes": [],
-      "confidence": 0.92
-    },
-    {
-      "batch": "batch-0011",
       "graph": "graph-0055.json",
       "resolution": "resolution-0055.json",
-      "term": "thm:equivalence-of-convergence-formulations",
+      "term": "def:convergent-sequence-neighborhood",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
@@ -3465,6 +3465,18 @@
       "batch": "batch-0011",
       "graph": "graph-0056.json",
       "resolution": "resolution-0056.json",
+      "term": "thm:equivalence-of-convergence-formulations",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
+      "removes": [],
+      "confidence": 0.92
+    },
+    {
+      "batch": "batch-0011",
+      "graph": "graph-0057.json",
+      "resolution": "resolution-0057.json",
       "term": "thm:absolute-value-squeeze-theorem",
       "verdict": "change",
       "decision": "investigate",
@@ -3486,8 +3498,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0057.json",
-      "resolution": "resolution-0057.json",
+      "graph": "graph-0058.json",
+      "resolution": "resolution-0058.json",
       "term": "thm:constant-comparison-for-sequence-limits",
       "verdict": "change",
       "decision": "investigate",
@@ -3512,8 +3524,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0058.json",
-      "resolution": "resolution-0058.json",
+      "graph": "graph-0059.json",
+      "resolution": "resolution-0059.json",
       "term": "thm:constant-squeeze-theorem",
       "verdict": "change",
       "decision": "investigate",
@@ -3533,8 +3545,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0059.json",
-      "resolution": "resolution-0059.json",
+      "graph": "graph-0060.json",
+      "resolution": "resolution-0060.json",
       "term": "thm:eventual-strict-comparison-preserves-weak-limit-order",
       "verdict": "change",
       "decision": "investigate",
@@ -3557,8 +3569,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0060.json",
-      "resolution": "resolution-0060.json",
+      "graph": "graph-0061.json",
+      "resolution": "resolution-0061.json",
       "term": "thm:limit-preserves-eventual-order",
       "verdict": "change",
       "decision": "rejected",
@@ -3578,8 +3590,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0061.json",
-      "resolution": "resolution-0061.json",
+      "graph": "graph-0062.json",
+      "resolution": "resolution-0062.json",
       "term": "thm:sequence-squeeze-theorem",
       "verdict": "change",
       "decision": "rejected",
@@ -3599,8 +3611,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0062.json",
-      "resolution": "resolution-0062.json",
+      "graph": "graph-0063.json",
+      "resolution": "resolution-0063.json",
       "term": "thm:strict-limit-separation-gives-eventual-order",
       "verdict": "change",
       "decision": "rejected",
@@ -3620,8 +3632,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0063.json",
-      "resolution": "resolution-0063.json",
+      "graph": "graph-0064.json",
+      "resolution": "resolution-0064.json",
       "term": "thm:uniqueness-of-limits",
       "verdict": "change",
       "decision": "investigate",
@@ -3634,8 +3646,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0064.json",
-      "resolution": "resolution-0064.json",
+      "graph": "graph-0065.json",
+      "resolution": "resolution-0065.json",
       "term": "def:bounded-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -3658,8 +3670,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0065.json",
-      "resolution": "resolution-0065.json",
+      "graph": "graph-0066.json",
+      "resolution": "resolution-0066.json",
       "term": "def:constant-sequence",
       "verdict": "change",
       "decision": "rejected",
@@ -3676,8 +3688,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0066.json",
-      "resolution": "resolution-0066.json",
+      "graph": "graph-0067.json",
+      "resolution": "resolution-0067.json",
       "term": "def:null-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -3700,29 +3712,9 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0067.json",
-      "resolution": "resolution-0067.json",
-      "term": "def:sequence-bounded-above",
-      "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:order-on-r, def:reals",
-      "adds": [
-        "def:natural-numbers",
-        "def:order-on-r",
-        "def:reals"
-      ],
-      "removes": [],
-      "confidence": 0.93,
-      "ambient_noise_rejected": [
-        "def:order-on-r",
-        "def:reals"
-      ]
-    },
-    {
-      "batch": "batch-0011",
       "graph": "graph-0068.json",
       "resolution": "resolution-0068.json",
-      "term": "def:sequence-bounded-below",
+      "term": "def:sequence-bounded-above",
       "verdict": "change",
       "decision": "investigate",
       "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:order-on-r, def:reals",
@@ -3742,6 +3734,26 @@
       "batch": "batch-0011",
       "graph": "graph-0069.json",
       "resolution": "resolution-0069.json",
+      "term": "def:sequence-bounded-below",
+      "verdict": "change",
+      "decision": "investigate",
+      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:order-on-r, def:reals",
+      "adds": [
+        "def:natural-numbers",
+        "def:order-on-r",
+        "def:reals"
+      ],
+      "removes": [],
+      "confidence": 0.93,
+      "ambient_noise_rejected": [
+        "def:order-on-r",
+        "def:reals"
+      ]
+    },
+    {
+      "batch": "batch-0011",
+      "graph": "graph-0070.json",
+      "resolution": "resolution-0070.json",
       "term": "def:ultimately-constant-sequence",
       "verdict": "change",
       "decision": "rejected",
@@ -3758,8 +3770,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0070.json",
-      "resolution": "resolution-0070.json",
+      "graph": "graph-0071.json",
+      "resolution": "resolution-0071.json",
       "term": "thm:absolute-bound-gives-upper-and-lower-bounds",
       "verdict": "change",
       "decision": "investigate",
@@ -3786,21 +3798,9 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0071.json",
-      "resolution": "resolution-0071.json",
-      "term": "thm:bounded-sequence-iff-bounded-above-and-below",
-      "verdict": "ok",
-      "decision": "current-ok",
-      "reason": "no proposed dependency-set change",
-      "adds": [],
-      "removes": [],
-      "confidence": 0.95
-    },
-    {
-      "batch": "batch-0011",
       "graph": "graph-0072.json",
       "resolution": "resolution-0072.json",
-      "term": "thm:constant-implies-ultimately-constant",
+      "term": "thm:bounded-sequence-iff-bounded-above-and-below",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
@@ -3812,19 +3812,19 @@
       "batch": "batch-0011",
       "graph": "graph-0073.json",
       "resolution": "resolution-0073.json",
-      "term": "thm:constant-null-sequence",
+      "term": "thm:constant-implies-ultimately-constant",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
       "adds": [],
       "removes": [],
-      "confidence": 0.94
+      "confidence": 0.95
     },
     {
       "batch": "batch-0011",
       "graph": "graph-0074.json",
       "resolution": "resolution-0074.json",
-      "term": "thm:constant-sequence-convergence",
+      "term": "thm:constant-null-sequence",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
@@ -3836,6 +3836,18 @@
       "batch": "batch-0011",
       "graph": "graph-0075.json",
       "resolution": "resolution-0075.json",
+      "term": "thm:constant-sequence-convergence",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
+      "removes": [],
+      "confidence": 0.94
+    },
+    {
+      "batch": "batch-0011",
+      "graph": "graph-0076.json",
+      "resolution": "resolution-0076.json",
       "term": "thm:difference-from-limit-is-null",
       "verdict": "change",
       "decision": "applied",
@@ -3848,21 +3860,9 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0076.json",
-      "resolution": "resolution-0076.json",
-      "term": "thm:eventually-bounded-above-tail-formulation",
-      "verdict": "ok",
-      "decision": "current-ok",
-      "reason": "no proposed dependency-set change",
-      "adds": [],
-      "removes": [],
-      "confidence": 0.9
-    },
-    {
-      "batch": "batch-0011",
       "graph": "graph-0077.json",
       "resolution": "resolution-0077.json",
-      "term": "thm:eventually-bounded-below-tail-formulation",
+      "term": "thm:eventually-bounded-above-tail-formulation",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
@@ -3874,7 +3874,7 @@
       "batch": "batch-0011",
       "graph": "graph-0078.json",
       "resolution": "resolution-0078.json",
-      "term": "thm:eventually-bounded-tail-formulation",
+      "term": "thm:eventually-bounded-below-tail-formulation",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
@@ -3886,7 +3886,7 @@
       "batch": "batch-0011",
       "graph": "graph-0079.json",
       "resolution": "resolution-0079.json",
-      "term": "thm:tail-equality-preserves-convergence",
+      "term": "thm:eventually-bounded-tail-formulation",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
@@ -3898,19 +3898,19 @@
       "batch": "batch-0011",
       "graph": "graph-0080.json",
       "resolution": "resolution-0080.json",
-      "term": "thm:ultimately-constant-null-sequence",
+      "term": "thm:tail-equality-preserves-convergence",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
       "adds": [],
       "removes": [],
-      "confidence": 0.94
+      "confidence": 0.9
     },
     {
       "batch": "batch-0011",
       "graph": "graph-0081.json",
       "resolution": "resolution-0081.json",
-      "term": "thm:ultimately-constant-sequence-convergence",
+      "term": "thm:ultimately-constant-null-sequence",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
@@ -3922,6 +3922,18 @@
       "batch": "batch-0011",
       "graph": "graph-0082.json",
       "resolution": "resolution-0082.json",
+      "term": "thm:ultimately-constant-sequence-convergence",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
+      "removes": [],
+      "confidence": 0.94
+    },
+    {
+      "batch": "batch-0011",
+      "graph": "graph-0083.json",
+      "resolution": "resolution-0083.json",
       "term": "thm:ultimately-zero-sequence-is-null",
       "verdict": "change",
       "decision": "investigate",
@@ -3941,8 +3953,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0083.json",
-      "resolution": "resolution-0083.json",
+      "graph": "graph-0084.json",
+      "resolution": "resolution-0084.json",
       "term": "thm:upper-and-lower-bounds-give-absolute-bound",
       "verdict": "change",
       "decision": "investigate",
@@ -3969,8 +3981,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0084.json",
-      "resolution": "resolution-0084.json",
+      "graph": "graph-0085.json",
+      "resolution": "resolution-0085.json",
       "term": "thm:zero-sequence-is-null",
       "verdict": "ok",
       "decision": "current-ok",
@@ -3981,8 +3993,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0085.json",
-      "resolution": "resolution-0085.json",
+      "graph": "graph-0086.json",
+      "resolution": "resolution-0086.json",
       "term": "def:sequence",
       "verdict": "ok",
       "decision": "current-ok",
@@ -3993,8 +4005,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0086.json",
-      "resolution": "resolution-0086.json",
+      "graph": "graph-0087.json",
+      "resolution": "resolution-0087.json",
       "term": "def:divergent-sequence",
       "verdict": "ok",
       "decision": "current-ok",
@@ -4005,29 +4017,9 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0087.json",
-      "resolution": "resolution-0087.json",
-      "term": "def:diverges-to-negative-infinity",
-      "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals, def:strict-order-on-r",
-      "adds": [
-        "def:natural-numbers",
-        "def:reals",
-        "def:strict-order-on-r"
-      ],
-      "removes": [],
-      "confidence": 0.92,
-      "ambient_noise_rejected": [
-        "def:reals",
-        "def:strict-order-on-r"
-      ]
-    },
-    {
-      "batch": "batch-0011",
       "graph": "graph-0088.json",
       "resolution": "resolution-0088.json",
-      "term": "def:diverges-to-positive-infinity",
+      "term": "def:diverges-to-negative-infinity",
       "verdict": "change",
       "decision": "investigate",
       "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals, def:strict-order-on-r",
@@ -4047,6 +4039,26 @@
       "batch": "batch-0011",
       "graph": "graph-0089.json",
       "resolution": "resolution-0089.json",
+      "term": "def:diverges-to-positive-infinity",
+      "verdict": "change",
+      "decision": "investigate",
+      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals, def:strict-order-on-r",
+      "adds": [
+        "def:natural-numbers",
+        "def:reals",
+        "def:strict-order-on-r"
+      ],
+      "removes": [],
+      "confidence": 0.92,
+      "ambient_noise_rejected": [
+        "def:reals",
+        "def:strict-order-on-r"
+      ]
+    },
+    {
+      "batch": "batch-0011",
+      "graph": "graph-0090.json",
+      "resolution": "resolution-0090.json",
       "term": "def:oscillatory-sequence",
       "verdict": "ok",
       "decision": "current-ok",
@@ -4057,8 +4069,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0090.json",
-      "resolution": "resolution-0090.json",
+      "graph": "graph-0091.json",
+      "resolution": "resolution-0091.json",
       "term": "thm:bounded-divergence-produces-two-subsequential-limits",
       "verdict": "change",
       "decision": "investigate",
@@ -4079,8 +4091,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0091.json",
-      "resolution": "resolution-0091.json",
+      "graph": "graph-0092.json",
+      "resolution": "resolution-0092.json",
       "term": "thm:divergence-to-infinity-implies-real-divergence",
       "verdict": "ok",
       "decision": "current-ok",
@@ -4091,8 +4103,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0092.json",
-      "resolution": "resolution-0092.json",
+      "graph": "graph-0093.json",
+      "resolution": "resolution-0093.json",
       "term": "thm:two-subsequential-limits-force-divergence",
       "verdict": "change",
       "decision": "investigate",
@@ -4115,21 +4127,9 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0093.json",
-      "resolution": "resolution-0093.json",
-      "term": "thm:unbounded-above-has-positive-infinity-subsequence",
-      "verdict": "ok",
-      "decision": "current-ok",
-      "reason": "no proposed dependency-set change",
-      "adds": [],
-      "removes": [],
-      "confidence": 0.94
-    },
-    {
-      "batch": "batch-0011",
       "graph": "graph-0094.json",
       "resolution": "resolution-0094.json",
-      "term": "thm:unbounded-below-has-negative-infinity-subsequence",
+      "term": "thm:unbounded-above-has-positive-infinity-subsequence",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
@@ -4141,6 +4141,18 @@
       "batch": "batch-0011",
       "graph": "graph-0095.json",
       "resolution": "resolution-0095.json",
+      "term": "thm:unbounded-below-has-negative-infinity-subsequence",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
+      "removes": [],
+      "confidence": 0.94
+    },
+    {
+      "batch": "batch-0011",
+      "graph": "graph-0096.json",
+      "resolution": "resolution-0096.json",
       "term": "def:liminf-sequence",
       "verdict": "change",
       "decision": "rejected",
@@ -4153,8 +4165,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0096.json",
-      "resolution": "resolution-0096.json",
+      "graph": "graph-0097.json",
+      "resolution": "resolution-0097.json",
       "term": "def:limsup-sequence",
       "verdict": "change",
       "decision": "rejected",
@@ -4167,21 +4179,9 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0097.json",
-      "resolution": "resolution-0097.json",
-      "term": "def:tail-infimum-sequence",
-      "verdict": "ok",
-      "decision": "current-ok",
-      "reason": "no proposed dependency-set change",
-      "adds": [],
-      "removes": [],
-      "confidence": 0.94
-    },
-    {
-      "batch": "batch-0011",
       "graph": "graph-0098.json",
       "resolution": "resolution-0098.json",
-      "term": "def:tail-supremum-sequence",
+      "term": "def:tail-infimum-sequence",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
@@ -4193,6 +4193,18 @@
       "batch": "batch-0011",
       "graph": "graph-0099.json",
       "resolution": "resolution-0099.json",
+      "term": "def:tail-supremum-sequence",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
+      "removes": [],
+      "confidence": 0.94
+    },
+    {
+      "batch": "batch-0011",
+      "graph": "graph-0100.json",
+      "resolution": "resolution-0100.json",
       "term": "thm:convergence-iff-liminf-equals-limsup",
       "verdict": "change",
       "decision": "rejected",
@@ -4211,8 +4223,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0100.json",
-      "resolution": "resolution-0100.json",
+      "graph": "graph-0101.json",
+      "resolution": "resolution-0101.json",
       "term": "thm:liminf-below-limsup",
       "verdict": "change",
       "decision": "rejected",
@@ -4231,8 +4243,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0101.json",
-      "resolution": "resolution-0101.json",
+      "graph": "graph-0102.json",
+      "resolution": "resolution-0102.json",
       "term": "thm:liminf-comparison-under-eventual-order",
       "verdict": "change",
       "decision": "rejected",
@@ -4251,8 +4263,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0102.json",
-      "resolution": "resolution-0102.json",
+      "graph": "graph-0103.json",
+      "resolution": "resolution-0103.json",
       "term": "thm:liminf-smallest-subsequential-limit",
       "verdict": "change",
       "decision": "rejected",
@@ -4271,8 +4283,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0103.json",
-      "resolution": "resolution-0103.json",
+      "graph": "graph-0104.json",
+      "resolution": "resolution-0104.json",
       "term": "thm:liminf-squeeze-under-eventual-order",
       "verdict": "change",
       "decision": "investigate",
@@ -4292,8 +4304,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0104.json",
-      "resolution": "resolution-0104.json",
+      "graph": "graph-0105.json",
+      "resolution": "resolution-0105.json",
       "term": "thm:limsup-comparison-under-eventual-order",
       "verdict": "change",
       "decision": "rejected",
@@ -4312,8 +4324,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0105.json",
-      "resolution": "resolution-0105.json",
+      "graph": "graph-0106.json",
+      "resolution": "resolution-0106.json",
       "term": "thm:limsup-largest-subsequential-limit",
       "verdict": "change",
       "decision": "rejected",
@@ -4332,8 +4344,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0106.json",
-      "resolution": "resolution-0106.json",
+      "graph": "graph-0107.json",
+      "resolution": "resolution-0107.json",
       "term": "thm:limsup-squeeze-under-eventual-order",
       "verdict": "change",
       "decision": "investigate",
@@ -4353,8 +4365,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0107.json",
-      "resolution": "resolution-0107.json",
+      "graph": "graph-0108.json",
+      "resolution": "resolution-0108.json",
       "term": "thm:oscillation-criterion-via-liminf-limsup",
       "verdict": "change",
       "decision": "investigate",
@@ -4378,8 +4390,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0108.json",
-      "resolution": "resolution-0108.json",
+      "graph": "graph-0109.json",
+      "resolution": "resolution-0109.json",
       "term": "thm:tail-infima-are-increasing",
       "verdict": "change",
       "decision": "investigate",
@@ -4394,8 +4406,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0109.json",
-      "resolution": "resolution-0109.json",
+      "graph": "graph-0110.json",
+      "resolution": "resolution-0110.json",
       "term": "thm:tail-suprema-are-decreasing",
       "verdict": "change",
       "decision": "investigate",
@@ -4410,8 +4422,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0110.json",
-      "resolution": "resolution-0110.json",
+      "graph": "graph-0111.json",
+      "resolution": "resolution-0111.json",
       "term": "def:decreasing-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -4430,21 +4442,9 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0111.json",
-      "resolution": "resolution-0111.json",
-      "term": "def:eventually-decreasing-sequence",
-      "verdict": "ok",
-      "decision": "current-ok",
-      "reason": "no proposed dependency-set change",
-      "adds": [],
-      "removes": [],
-      "confidence": 0.88
-    },
-    {
-      "batch": "batch-0011",
       "graph": "graph-0112.json",
       "resolution": "resolution-0112.json",
-      "term": "def:eventually-increasing-sequence",
+      "term": "def:eventually-decreasing-sequence",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
@@ -4456,6 +4456,18 @@
       "batch": "batch-0011",
       "graph": "graph-0113.json",
       "resolution": "resolution-0113.json",
+      "term": "def:eventually-increasing-sequence",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
+      "removes": [],
+      "confidence": 0.88
+    },
+    {
+      "batch": "batch-0011",
+      "graph": "graph-0114.json",
+      "resolution": "resolution-0114.json",
       "term": "def:eventually-monotone-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -4468,8 +4480,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0114.json",
-      "resolution": "resolution-0114.json",
+      "graph": "graph-0115.json",
+      "resolution": "resolution-0115.json",
       "term": "def:increasing-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -4488,8 +4500,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0115.json",
-      "resolution": "resolution-0115.json",
+      "graph": "graph-0116.json",
+      "resolution": "resolution-0116.json",
       "term": "def:monotone-sequence",
       "verdict": "ok",
       "decision": "current-ok",
@@ -4500,8 +4512,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0116.json",
-      "resolution": "resolution-0116.json",
+      "graph": "graph-0117.json",
+      "resolution": "resolution-0117.json",
       "term": "def:strictly-decreasing-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -4522,8 +4534,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0117.json",
-      "resolution": "resolution-0117.json",
+      "graph": "graph-0118.json",
+      "resolution": "resolution-0118.json",
       "term": "def:strictly-increasing-sequence",
       "verdict": "change",
       "decision": "investigate",
@@ -4544,8 +4556,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0118.json",
-      "resolution": "resolution-0118.json",
+      "graph": "graph-0119.json",
+      "resolution": "resolution-0119.json",
       "term": "thm:algebraic-transformations-preserve-monotonicity",
       "verdict": "change",
       "decision": "rejected",
@@ -4565,8 +4577,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0119.json",
-      "resolution": "resolution-0119.json",
+      "graph": "graph-0120.json",
+      "resolution": "resolution-0120.json",
       "term": "thm:bounded-monotone-sequence-equivalences",
       "verdict": "change",
       "decision": "investigate",
@@ -4585,8 +4597,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0120.json",
-      "resolution": "resolution-0120.json",
+      "graph": "graph-0121.json",
+      "resolution": "resolution-0121.json",
       "term": "thm:eventually-monotone-convergence-theorem",
       "verdict": "change",
       "decision": "investigate",
@@ -4606,21 +4618,9 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0121.json",
-      "resolution": "resolution-0121.json",
-      "term": "thm:monotone-convergence-theorem",
-      "verdict": "ok",
-      "decision": "current-ok",
-      "reason": "no proposed dependency-set change",
-      "adds": [],
-      "removes": [],
-      "confidence": 0.95
-    },
-    {
-      "batch": "batch-0011",
       "graph": "graph-0122.json",
       "resolution": "resolution-0122.json",
-      "term": "thm:strict-monotonicity-implies-monotonicity",
+      "term": "thm:monotone-convergence-theorem",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
@@ -4632,6 +4632,18 @@
       "batch": "batch-0011",
       "graph": "graph-0123.json",
       "resolution": "resolution-0123.json",
+      "term": "thm:strict-monotonicity-implies-monotonicity",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
+      "removes": [],
+      "confidence": 0.95
+    },
+    {
+      "batch": "batch-0011",
+      "graph": "graph-0124.json",
+      "resolution": "resolution-0124.json",
       "term": "thm:unbounded-monotone-divergence",
       "verdict": "change",
       "decision": "applied",
@@ -4645,8 +4657,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0124.json",
-      "resolution": "resolution-0124.json",
+      "graph": "graph-0125.json",
+      "resolution": "resolution-0125.json",
       "term": "thm:bounded-sequence-has-limsup-and-liminf",
       "verdict": "change",
       "decision": "rejected",
@@ -4661,25 +4673,9 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0125.json",
-      "resolution": "resolution-0125.json",
-      "term": "thm:decreasing-sequence-limit-as-infimum",
-      "verdict": "change",
-      "decision": "rejected",
-      "reason": "added dependency is already reachable in the dependency tree: def:convergent-sequence via thm:monotone-convergence-theorem",
-      "adds": [
-        "def:convergent-sequence"
-      ],
-      "removes": [
-        "thm:monotone-convergence-theorem"
-      ],
-      "confidence": 0.92
-    },
-    {
-      "batch": "batch-0011",
       "graph": "graph-0126.json",
       "resolution": "resolution-0126.json",
-      "term": "thm:increasing-sequence-limit-as-supremum",
+      "term": "thm:decreasing-sequence-limit-as-infimum",
       "verdict": "change",
       "decision": "rejected",
       "reason": "added dependency is already reachable in the dependency tree: def:convergent-sequence via thm:monotone-convergence-theorem",
@@ -4695,6 +4691,22 @@
       "batch": "batch-0011",
       "graph": "graph-0127.json",
       "resolution": "resolution-0127.json",
+      "term": "thm:increasing-sequence-limit-as-supremum",
+      "verdict": "change",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:convergent-sequence via thm:monotone-convergence-theorem",
+      "adds": [
+        "def:convergent-sequence"
+      ],
+      "removes": [
+        "thm:monotone-convergence-theorem"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "batch": "batch-0011",
+      "graph": "graph-0128.json",
+      "resolution": "resolution-0128.json",
       "term": "thm:tail-suprema-and-infima-converge",
       "verdict": "change",
       "decision": "investigate",
@@ -4714,8 +4726,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0128.json",
-      "resolution": "resolution-0128.json",
+      "graph": "graph-0129.json",
+      "resolution": "resolution-0129.json",
       "term": "def:has-convergent-subsequence",
       "verdict": "change",
       "decision": "investigate",
@@ -4738,8 +4750,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0129.json",
-      "resolution": "resolution-0129.json",
+      "graph": "graph-0130.json",
+      "resolution": "resolution-0130.json",
       "term": "def:strictly-increasing-index-map",
       "verdict": "change",
       "decision": "investigate",
@@ -4754,8 +4766,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0130.json",
-      "resolution": "resolution-0130.json",
+      "graph": "graph-0131.json",
+      "resolution": "resolution-0131.json",
       "term": "def:subsequence",
       "verdict": "ok",
       "decision": "current-ok",
@@ -4766,8 +4778,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0131.json",
-      "resolution": "resolution-0131.json",
+      "graph": "graph-0132.json",
+      "resolution": "resolution-0132.json",
       "term": "def:subsequential-limit",
       "verdict": "ok",
       "decision": "current-ok",
@@ -4778,8 +4790,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0132.json",
-      "resolution": "resolution-0132.json",
+      "graph": "graph-0133.json",
+      "resolution": "resolution-0133.json",
       "term": "thm:bolzano-weierstrass-sequences",
       "verdict": "change",
       "decision": "investigate",
@@ -4796,8 +4808,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0133.json",
-      "resolution": "resolution-0133.json",
+      "graph": "graph-0134.json",
+      "resolution": "resolution-0134.json",
       "term": "thm:boundedness-passes-to-subsequences",
       "verdict": "ok",
       "decision": "current-ok",
@@ -4808,8 +4820,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0134.json",
-      "resolution": "resolution-0134.json",
+      "graph": "graph-0135.json",
+      "resolution": "resolution-0135.json",
       "term": "thm:divergence-by-two-subsequential-limits",
       "verdict": "change",
       "decision": "rejected",
@@ -4824,8 +4836,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0135.json",
-      "resolution": "resolution-0135.json",
+      "graph": "graph-0136.json",
+      "resolution": "resolution-0136.json",
       "term": "thm:eventual-properties-pass-to-subsequences",
       "verdict": "change",
       "decision": "rejected",
@@ -4842,8 +4854,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0136.json",
-      "resolution": "resolution-0136.json",
+      "graph": "graph-0137.json",
+      "resolution": "resolution-0137.json",
       "term": "thm:frequent-properties-yield-subsequences",
       "verdict": "change",
       "decision": "rejected",
@@ -4859,21 +4871,9 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0137.json",
-      "resolution": "resolution-0137.json",
-      "term": "thm:monotone-subsequence-theorem",
-      "verdict": "ok",
-      "decision": "current-ok",
-      "reason": "no proposed dependency-set change",
-      "adds": [],
-      "removes": [],
-      "confidence": 0.95
-    },
-    {
-      "batch": "batch-0011",
       "graph": "graph-0138.json",
       "resolution": "resolution-0138.json",
-      "term": "thm:monotonicity-passes-to-subsequences",
+      "term": "thm:monotone-subsequence-theorem",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
@@ -4885,6 +4885,18 @@
       "batch": "batch-0011",
       "graph": "graph-0139.json",
       "resolution": "resolution-0139.json",
+      "term": "thm:monotonicity-passes-to-subsequences",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
+      "removes": [],
+      "confidence": 0.95
+    },
+    {
+      "batch": "batch-0011",
+      "graph": "graph-0140.json",
+      "resolution": "resolution-0140.json",
       "term": "thm:sequential-compactness-closed-bounded-interval",
       "verdict": "change",
       "decision": "investigate",
@@ -4909,8 +4921,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0140.json",
-      "resolution": "resolution-0140.json",
+      "graph": "graph-0141.json",
+      "resolution": "resolution-0141.json",
       "term": "thm:squeeze-passes-to-subsequences",
       "verdict": "change",
       "decision": "rejected",
@@ -4930,8 +4942,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0141.json",
-      "resolution": "resolution-0141.json",
+      "graph": "graph-0142.json",
+      "resolution": "resolution-0142.json",
       "term": "thm:subsequence-indices-dominate-identity",
       "verdict": "change",
       "decision": "rejected",
@@ -4945,8 +4957,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0142.json",
-      "resolution": "resolution-0142.json",
+      "graph": "graph-0143.json",
+      "resolution": "resolution-0143.json",
       "term": "thm:subsequence-of-subsequence",
       "verdict": "ok",
       "decision": "current-ok",
@@ -4957,8 +4969,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0143.json",
-      "resolution": "resolution-0143.json",
+      "graph": "graph-0144.json",
+      "resolution": "resolution-0144.json",
       "term": "thm:subsequences-preserve-limits",
       "verdict": "change",
       "decision": "investigate",
@@ -4971,8 +4983,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0144.json",
-      "resolution": "resolution-0144.json",
+      "graph": "graph-0145.json",
+      "resolution": "resolution-0145.json",
       "term": "thm:subsequential-limit-of-convergent-sequence",
       "verdict": "change",
       "decision": "rejected",
@@ -4989,8 +5001,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0145.json",
-      "resolution": "resolution-0145.json",
+      "graph": "graph-0146.json",
+      "resolution": "resolution-0146.json",
       "term": "thm:subsequential-limits-respect-bounds",
       "verdict": "change",
       "decision": "rejected",
@@ -5010,8 +5022,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0146.json",
-      "resolution": "resolution-0146.json",
+      "graph": "graph-0147.json",
+      "resolution": "resolution-0147.json",
       "term": "def:m-tail",
       "verdict": "change",
       "decision": "rejected",
@@ -5028,8 +5040,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0147.json",
-      "resolution": "resolution-0147.json",
+      "graph": "graph-0148.json",
+      "resolution": "resolution-0148.json",
       "term": "thm:convergence-by-domination",
       "verdict": "change",
       "decision": "investigate",
@@ -5056,8 +5068,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0148.json",
-      "resolution": "resolution-0148.json",
+      "graph": "graph-0149.json",
+      "resolution": "resolution-0149.json",
       "term": "thm:convergence-of-tail",
       "verdict": "change",
       "decision": "investigate",
@@ -5070,8 +5082,8 @@
     },
     {
       "batch": "batch-0011",
-      "graph": "graph-0149.json",
-      "resolution": "resolution-0149.json",
+      "graph": "graph-0150.json",
+      "resolution": "resolution-0150.json",
       "term": "thm:ratio-limit-less-than-one-implies-null",
       "verdict": "change",
       "decision": "investigate",
@@ -5178,8 +5190,8 @@
       "resolution": "resolution-0006.json",
       "term": "thm:limit-difference",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals, def:subtraction-on-r",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:cluster-point-r via def:limit-function, def:function via def:limit-function/def:pointwise-difference-of-functions, def:reals via def:limit-function/def:pointwise-difference-of-functions, def:subtraction-on-r via def:pointwise-difference-of-functions",
       "adds": [
         "def:cluster-point-r",
         "def:function",
@@ -5187,11 +5199,7 @@
         "def:subtraction-on-r"
       ],
       "removes": [],
-      "confidence": 0.91,
-      "ambient_noise_rejected": [
-        "def:reals",
-        "def:subtraction-on-r"
-      ]
+      "confidence": 0.91
     },
     {
       "batch": "batch-0012",
@@ -5199,8 +5207,8 @@
       "resolution": "resolution-0007.json",
       "term": "thm:limit-product",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:multiplication-on-r, def:reals",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:cluster-point-r via def:limit-function, def:function via def:limit-function/def:pointwise-product-of-functions, def:multiplication-on-r via def:limit-function/def:pointwise-product-of-functions, def:reals via def:limit-function/def:pointwise-product-of-functions",
       "adds": [
         "def:cluster-point-r",
         "def:function",
@@ -5208,11 +5216,7 @@
         "def:reals"
       ],
       "removes": [],
-      "confidence": 0.91,
-      "ambient_noise_rejected": [
-        "def:multiplication-on-r",
-        "def:reals"
-      ]
+      "confidence": 0.91
     },
     {
       "batch": "batch-0012",
@@ -5220,8 +5224,8 @@
       "resolution": "resolution-0008.json",
       "term": "thm:limit-quotient",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:division-on-r, def:order-on-r, def:real-chapter-absolute-value-on-r, def:reals, def:strict-order-on-r, def:zero-in-r",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:cluster-point-r via def:limit-function, def:division-on-r via def:pointwise-quotient-of-functions, def:function via def:limit-function/def:pointwise-quotient-of-functions, def:order-on-r via def:limit-function/def:pointwise-quotient-of-functions, def:real-chapter-absolute-value-on-r via def:limit-function/def:pointwise-quotient-of-functions, def:reals via def:limit-function/def:pointwise-quotient-of-functions, def:strict-order-on-r via def:limit-function/def:pointwise-quotient-of-functions, def:zero-in-r via def:limit-function/def:pointwise-quotient-of-functions",
       "adds": [
         "def:cluster-point-r",
         "def:division-on-r",
@@ -5233,15 +5237,7 @@
         "def:zero-in-r"
       ],
       "removes": [],
-      "confidence": 0.9,
-      "ambient_noise_rejected": [
-        "def:division-on-r",
-        "def:order-on-r",
-        "def:real-chapter-absolute-value-on-r",
-        "def:reals",
-        "def:strict-order-on-r",
-        "def:zero-in-r"
-      ]
+      "confidence": 0.9
     },
     {
       "batch": "batch-0012",
@@ -5249,8 +5245,8 @@
       "resolution": "resolution-0009.json",
       "term": "thm:limit-scalar-multiple",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:multiplication-on-r, def:reals",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:cluster-point-r via def:limit-function, def:function via def:limit-function/def:pointwise-scalar-multiple-of-a-function, def:multiplication-on-r via def:limit-function/def:pointwise-scalar-multiple-of-a-function, def:reals via def:limit-function/def:pointwise-scalar-multiple-of-a-function",
       "adds": [
         "def:cluster-point-r",
         "def:function",
@@ -5258,11 +5254,7 @@
         "def:reals"
       ],
       "removes": [],
-      "confidence": 0.91,
-      "ambient_noise_rejected": [
-        "def:multiplication-on-r",
-        "def:reals"
-      ]
+      "confidence": 0.91
     },
     {
       "batch": "batch-0012",
@@ -5270,8 +5262,8 @@
       "resolution": "resolution-0010.json",
       "term": "thm:limit-sum",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:addition-on-r, def:reals",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:addition-on-r via def:limit-function/def:pointwise-sum-of-functions, def:cluster-point-r via def:limit-function, def:function via def:limit-function/def:pointwise-sum-of-functions, def:reals via def:limit-function/def:pointwise-sum-of-functions",
       "adds": [
         "def:addition-on-r",
         "def:cluster-point-r",
@@ -5279,11 +5271,7 @@
         "def:reals"
       ],
       "removes": [],
-      "confidence": 0.91,
-      "ambient_noise_rejected": [
-        "def:addition-on-r",
-        "def:reals"
-      ]
+      "confidence": 0.91
     },
     {
       "batch": "batch-0012",
@@ -5291,18 +5279,15 @@
       "resolution": "resolution-0011.json",
       "term": "cor:limit-three-equiv",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:cluster-point-r via def:limit-function/def:limit-function-neighbourhood/def:limit-function-sequential/prop:limit-neighbourhood-equiv/prop:sequential-criterion-limits, def:function via def:limit-function/def:limit-function-neighbourhood/def:limit-function-sequential/prop:limit-neighbourhood-equiv/prop:sequential-criterion-limits, def:reals via def:limit-function/def:limit-function-neighbourhood/def:limit-function-sequential/prop:limit-neighbourhood-equiv/prop:sequential-criterion-limits",
       "adds": [
         "def:cluster-point-r",
         "def:function",
         "def:reals"
       ],
       "removes": [],
-      "confidence": 0.88,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
+      "confidence": 0.88
     },
     {
       "batch": "batch-0012",
@@ -5388,6 +5373,18 @@
       "batch": "batch-0012",
       "graph": "graph-0015.json",
       "resolution": "resolution-0015.json",
+      "term": "def:limit-function-neighbourhood",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
+      "removes": [],
+      "confidence": 0.96
+    },
+    {
+      "batch": "batch-0012",
+      "graph": "graph-0016.json",
+      "resolution": "resolution-0016.json",
       "term": "def:limit-function-sequential",
       "verdict": "change",
       "decision": "investigate",
@@ -5409,8 +5406,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0016.json",
-      "resolution": "resolution-0016.json",
+      "graph": "graph-0017.json",
+      "resolution": "resolution-0017.json",
       "term": "prop:cauchy-criterion-limits",
       "verdict": "change",
       "decision": "investigate",
@@ -5436,12 +5433,12 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0017.json",
-      "resolution": "resolution-0017.json",
+      "graph": "graph-0018.json",
+      "resolution": "resolution-0018.json",
       "term": "prop:limit-absolute-value",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:real-chapter-absolute-value-on-r, def:reals",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:cluster-point-r via def:limit-function, def:function via def:limit-function, def:real-chapter-absolute-value-on-r via def:limit-function, def:reals via def:limit-function",
       "adds": [
         "def:cluster-point-r",
         "def:function",
@@ -5449,16 +5446,12 @@
         "def:reals"
       ],
       "removes": [],
-      "confidence": 0.93,
-      "ambient_noise_rejected": [
-        "def:real-chapter-absolute-value-on-r",
-        "def:reals"
-      ]
+      "confidence": 0.93
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0018.json",
-      "resolution": "resolution-0018.json",
+      "graph": "graph-0019.json",
+      "resolution": "resolution-0019.json",
       "term": "prop:limit-neighbourhood-equiv",
       "verdict": "ok",
       "decision": "current-ok",
@@ -5469,8 +5462,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0019.json",
-      "resolution": "resolution-0019.json",
+      "graph": "graph-0020.json",
+      "resolution": "resolution-0020.json",
       "term": "prop:sequential-criterion-limits",
       "verdict": "ok",
       "decision": "current-ok",
@@ -5481,12 +5474,12 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0020.json",
-      "resolution": "resolution-0020.json",
+      "graph": "graph-0021.json",
+      "resolution": "resolution-0021.json",
       "term": "thm:bounded-limits",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:order-on-r, def:reals",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:cluster-point-r via def:limit-function, def:function via def:limit-function, def:order-on-r via def:limit-function, def:reals via def:limit-function",
       "adds": [
         "def:cluster-point-r",
         "def:function",
@@ -5494,16 +5487,12 @@
         "def:reals"
       ],
       "removes": [],
-      "confidence": 0.91,
-      "ambient_noise_rejected": [
-        "def:order-on-r",
-        "def:reals"
-      ]
+      "confidence": 0.91
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0021.json",
-      "resolution": "resolution-0021.json",
+      "graph": "graph-0022.json",
+      "resolution": "resolution-0022.json",
       "term": "thm:composition-of-limits",
       "verdict": "change",
       "decision": "investigate",
@@ -5522,8 +5511,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0022.json",
-      "resolution": "resolution-0022.json",
+      "graph": "graph-0023.json",
+      "resolution": "resolution-0023.json",
       "term": "thm:limit-implies-local-bounding",
       "verdict": "change",
       "decision": "investigate",
@@ -5549,8 +5538,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0023.json",
-      "resolution": "resolution-0023.json",
+      "graph": "graph-0024.json",
+      "resolution": "resolution-0024.json",
       "term": "thm:limit-unique",
       "verdict": "ok",
       "decision": "current-ok",
@@ -5561,8 +5550,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0024.json",
-      "resolution": "resolution-0024.json",
+      "graph": "graph-0025.json",
+      "resolution": "resolution-0025.json",
       "term": "thm:limits-are-local",
       "verdict": "change",
       "decision": "investigate",
@@ -5591,8 +5580,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0025.json",
-      "resolution": "resolution-0025.json",
+      "graph": "graph-0026.json",
+      "resolution": "resolution-0026.json",
       "term": "thm:monotone-limit-theorem",
       "verdict": "change",
       "decision": "investigate",
@@ -5614,8 +5603,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0026.json",
-      "resolution": "resolution-0026.json",
+      "graph": "graph-0027.json",
+      "resolution": "resolution-0027.json",
       "term": "thm:squeeze-function-limits",
       "verdict": "change",
       "decision": "investigate",
@@ -5643,8 +5632,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0027.json",
-      "resolution": "resolution-0027.json",
+      "graph": "graph-0028.json",
+      "resolution": "resolution-0028.json",
       "term": "cor:sequential-criterion-left-hand-limit",
       "verdict": "change",
       "decision": "investigate",
@@ -5665,40 +5654,9 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0028.json",
-      "resolution": "resolution-0028.json",
-      "term": "def:left-hand-limit",
-      "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:order-on-r, def:real-chapter-absolute-value-on-r, def:reals, def:strict-order-on-r, def:subtraction-on-r",
-      "adds": [
-        "def:function",
-        "def:intersection",
-        "def:open-interval",
-        "def:order-on-r",
-        "def:real-chapter-absolute-value-on-r",
-        "def:reals",
-        "def:strict-order-on-r",
-        "def:subset",
-        "def:subtraction-on-r"
-      ],
-      "removes": [
-        "def:limit-function"
-      ],
-      "confidence": 0.9,
-      "ambient_noise_rejected": [
-        "def:order-on-r",
-        "def:real-chapter-absolute-value-on-r",
-        "def:reals",
-        "def:strict-order-on-r",
-        "def:subtraction-on-r"
-      ]
-    },
-    {
-      "batch": "batch-0012",
       "graph": "graph-0029.json",
       "resolution": "resolution-0029.json",
-      "term": "def:right-hand-limit",
+      "term": "def:left-hand-limit",
       "verdict": "change",
       "decision": "investigate",
       "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:order-on-r, def:real-chapter-absolute-value-on-r, def:reals, def:strict-order-on-r, def:subtraction-on-r",
@@ -5729,6 +5687,37 @@
       "batch": "batch-0012",
       "graph": "graph-0030.json",
       "resolution": "resolution-0030.json",
+      "term": "def:right-hand-limit",
+      "verdict": "change",
+      "decision": "investigate",
+      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:order-on-r, def:real-chapter-absolute-value-on-r, def:reals, def:strict-order-on-r, def:subtraction-on-r",
+      "adds": [
+        "def:function",
+        "def:intersection",
+        "def:open-interval",
+        "def:order-on-r",
+        "def:real-chapter-absolute-value-on-r",
+        "def:reals",
+        "def:strict-order-on-r",
+        "def:subset",
+        "def:subtraction-on-r"
+      ],
+      "removes": [
+        "def:limit-function"
+      ],
+      "confidence": 0.9,
+      "ambient_noise_rejected": [
+        "def:order-on-r",
+        "def:real-chapter-absolute-value-on-r",
+        "def:reals",
+        "def:strict-order-on-r",
+        "def:subtraction-on-r"
+      ]
+    },
+    {
+      "batch": "batch-0012",
+      "graph": "graph-0031.json",
+      "resolution": "resolution-0031.json",
       "term": "thm:sequential-criterion-right-hand-limit",
       "verdict": "change",
       "decision": "investigate",
@@ -5749,8 +5738,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0031.json",
-      "resolution": "resolution-0031.json",
+      "graph": "graph-0032.json",
+      "resolution": "resolution-0032.json",
       "term": "thm:two-sided-limit-iff-matching-one-sided-limits",
       "verdict": "ok",
       "decision": "current-ok",
@@ -5761,8 +5750,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0032.json",
-      "resolution": "resolution-0032.json",
+      "graph": "graph-0033.json",
+      "resolution": "resolution-0033.json",
       "term": "def:function-bounded",
       "verdict": "change",
       "decision": "investigate",
@@ -5789,81 +5778,53 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0033.json",
-      "resolution": "resolution-0033.json",
+      "graph": "graph-0034.json",
+      "resolution": "resolution-0034.json",
       "term": "def:function-bounded-above",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals",
+      "reason": "source fix applied: bounded-above function now depends on the bounded-above predicate in live TeX",
       "adds": [
         "def:reals"
       ],
       "removes": [],
-      "confidence": 0.93,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
-    },
-    {
-      "batch": "batch-0012",
-      "graph": "graph-0034.json",
-      "resolution": "resolution-0034.json",
-      "term": "def:function-bounded-below",
-      "verdict": "change",
-      "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals",
-      "adds": [
-        "def:reals"
-      ],
-      "removes": [],
-      "confidence": 0.93,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
+      "confidence": 0.93
     },
     {
       "batch": "batch-0012",
       "graph": "graph-0035.json",
       "resolution": "resolution-0035.json",
+      "term": "def:function-bounded-below",
+      "verdict": "change",
+      "decision": "rejected",
+      "reason": "source fix applied: bounded-below function now depends on the bounded-below predicate in live TeX",
+      "adds": [
+        "def:reals"
+      ],
+      "removes": [],
+      "confidence": 0.93
+    },
+    {
+      "batch": "batch-0012",
+      "graph": "graph-0036.json",
+      "resolution": "resolution-0036.json",
       "term": "def:function-constant",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals",
+      "decision": "rejected",
+      "reason": "source fix applied: constant function now has function/subset dependencies in live TeX; reject ambient def:reals noise",
       "adds": [
         "def:function",
         "def:reals",
         "def:subset"
       ],
       "removes": [],
-      "confidence": 0.92,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
-    },
-    {
-      "batch": "batch-0012",
-      "graph": "graph-0036.json",
-      "resolution": "resolution-0036.json",
-      "term": "def:function-decreasing",
-      "verdict": "change",
-      "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals, def:strict-order-on-r",
-      "adds": [
-        "def:reals",
-        "def:strict-order-on-r"
-      ],
-      "removes": [],
-      "confidence": 0.93,
-      "ambient_noise_rejected": [
-        "def:reals",
-        "def:strict-order-on-r"
-      ]
+      "confidence": 0.92
     },
     {
       "batch": "batch-0012",
       "graph": "graph-0037.json",
       "resolution": "resolution-0037.json",
-      "term": "def:function-increasing",
+      "term": "def:function-decreasing",
       "verdict": "change",
       "decision": "rejected",
       "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals, def:strict-order-on-r",
@@ -5882,10 +5843,29 @@
       "batch": "batch-0012",
       "graph": "graph-0038.json",
       "resolution": "resolution-0038.json",
+      "term": "def:function-increasing",
+      "verdict": "change",
+      "decision": "rejected",
+      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals, def:strict-order-on-r",
+      "adds": [
+        "def:reals",
+        "def:strict-order-on-r"
+      ],
+      "removes": [],
+      "confidence": 0.93,
+      "ambient_noise_rejected": [
+        "def:reals",
+        "def:strict-order-on-r"
+      ]
+    },
+    {
+      "batch": "batch-0012",
+      "graph": "graph-0039.json",
+      "resolution": "resolution-0039.json",
       "term": "def:function-infimum-on-set",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals",
+      "decision": "rejected",
+      "reason": "source fix applied: function infimum now depends on image-set and infimum in live TeX",
       "adds": [
         "def:function",
         "def:image-set",
@@ -5894,40 +5874,16 @@
         "def:subset"
       ],
       "removes": [],
-      "confidence": 0.9,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
-    },
-    {
-      "batch": "batch-0012",
-      "graph": "graph-0039.json",
-      "resolution": "resolution-0039.json",
-      "term": "def:function-maximum-point",
-      "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:order-on-r, def:reals",
-      "adds": [
-        "def:function",
-        "def:order-on-r",
-        "def:reals",
-        "def:subset"
-      ],
-      "removes": [],
-      "confidence": 0.92,
-      "ambient_noise_rejected": [
-        "def:order-on-r",
-        "def:reals"
-      ]
+      "confidence": 0.9
     },
     {
       "batch": "batch-0012",
       "graph": "graph-0040.json",
       "resolution": "resolution-0040.json",
-      "term": "def:function-minimum-point",
+      "term": "def:function-maximum-point",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:order-on-r, def:reals",
+      "decision": "rejected",
+      "reason": "source fix applied: maximum point now depends on maximum and order-on-r in live TeX",
       "adds": [
         "def:function",
         "def:order-on-r",
@@ -5935,16 +5891,29 @@
         "def:subset"
       ],
       "removes": [],
-      "confidence": 0.92,
-      "ambient_noise_rejected": [
-        "def:order-on-r",
-        "def:reals"
-      ]
+      "confidence": 0.92
     },
     {
       "batch": "batch-0012",
       "graph": "graph-0041.json",
       "resolution": "resolution-0041.json",
+      "term": "def:function-minimum-point",
+      "verdict": "change",
+      "decision": "rejected",
+      "reason": "source fix applied: minimum point now depends on minimum and order-on-r in live TeX",
+      "adds": [
+        "def:function",
+        "def:order-on-r",
+        "def:reals",
+        "def:subset"
+      ],
+      "removes": [],
+      "confidence": 0.92
+    },
+    {
+      "batch": "batch-0012",
+      "graph": "graph-0042.json",
+      "resolution": "resolution-0042.json",
       "term": "def:function-monotone",
       "verdict": "ok",
       "decision": "current-ok",
@@ -5955,12 +5924,12 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0042.json",
-      "resolution": "resolution-0042.json",
+      "graph": "graph-0043.json",
+      "resolution": "resolution-0043.json",
       "term": "def:function-strictly-decreasing",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:order-on-r, def:reals, def:strict-order-on-r",
+      "decision": "rejected",
+      "reason": "source fix applied: strictly decreasing now depends directly on strict-order-on-r in live TeX",
       "adds": [
         "def:function",
         "def:order-on-r",
@@ -5971,21 +5940,16 @@
       "removes": [
         "def:function-decreasing"
       ],
-      "confidence": 0.9,
-      "ambient_noise_rejected": [
-        "def:order-on-r",
-        "def:reals",
-        "def:strict-order-on-r"
-      ]
+      "confidence": 0.9
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0043.json",
-      "resolution": "resolution-0043.json",
+      "graph": "graph-0044.json",
+      "resolution": "resolution-0044.json",
       "term": "def:function-strictly-increasing",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:order-on-r, def:reals, def:strict-order-on-r",
+      "decision": "rejected",
+      "reason": "source fix applied: strictly increasing now depends directly on strict-order-on-r in live TeX",
       "adds": [
         "def:function",
         "def:order-on-r",
@@ -5996,21 +5960,16 @@
       "removes": [
         "def:function-increasing"
       ],
-      "confidence": 0.9,
-      "ambient_noise_rejected": [
-        "def:order-on-r",
-        "def:reals",
-        "def:strict-order-on-r"
-      ]
+      "confidence": 0.9
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0044.json",
-      "resolution": "resolution-0044.json",
+      "graph": "graph-0045.json",
+      "resolution": "resolution-0045.json",
       "term": "def:function-supremum-on-set",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals",
+      "decision": "rejected",
+      "reason": "source fix applied: function supremum now depends on image-set and supremum in live TeX",
       "adds": [
         "def:function",
         "def:image-set",
@@ -6019,49 +5978,52 @@
         "def:supremum"
       ],
       "removes": [],
-      "confidence": 0.9,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
-    },
-    {
-      "batch": "batch-0012",
-      "graph": "graph-0045.json",
-      "resolution": "resolution-0045.json",
-      "term": "def:pointwise-absolute-value-of-a-function",
-      "verdict": "change",
-      "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals",
-      "adds": [
-        "def:reals"
-      ],
-      "removes": [],
-      "confidence": 0.93,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
+      "confidence": 0.9
     },
     {
       "batch": "batch-0012",
       "graph": "graph-0046.json",
       "resolution": "resolution-0046.json",
-      "term": "def:pointwise-difference-of-functions",
-      "verdict": "change",
-      "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals",
-      "adds": [
-        "def:reals"
-      ],
+      "term": "def:linear-combination-of-real-valued-functions",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
       "removes": [],
-      "confidence": 0.93,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
+      "confidence": 0.97
     },
     {
       "batch": "batch-0012",
       "graph": "graph-0047.json",
       "resolution": "resolution-0047.json",
+      "term": "def:pointwise-absolute-value-of-a-function",
+      "verdict": "change",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:reals via def:real-chapter-absolute-value-on-r",
+      "adds": [
+        "def:reals"
+      ],
+      "removes": [],
+      "confidence": 0.93
+    },
+    {
+      "batch": "batch-0012",
+      "graph": "graph-0048.json",
+      "resolution": "resolution-0048.json",
+      "term": "def:pointwise-difference-of-functions",
+      "verdict": "change",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:reals via def:subtraction-on-r",
+      "adds": [
+        "def:reals"
+      ],
+      "removes": [],
+      "confidence": 0.93
+    },
+    {
+      "batch": "batch-0012",
+      "graph": "graph-0049.json",
+      "resolution": "resolution-0049.json",
       "term": "def:pointwise-maximum-of-two-functions",
       "verdict": "change",
       "decision": "rejected",
@@ -6079,78 +6041,77 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0048.json",
-      "resolution": "resolution-0048.json",
+      "graph": "graph-0050.json",
+      "resolution": "resolution-0050.json",
       "term": "def:pointwise-product-of-functions",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals",
+      "reason": "added dependency is already reachable in the dependency tree: def:reals via def:multiplication-on-r",
       "adds": [
         "def:reals"
       ],
       "removes": [],
-      "confidence": 0.93,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
-    },
-    {
-      "batch": "batch-0012",
-      "graph": "graph-0049.json",
-      "resolution": "resolution-0049.json",
-      "term": "def:pointwise-quotient-of-functions",
-      "verdict": "change",
-      "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals, def:zero-in-r",
-      "adds": [
-        "def:reals",
-        "def:zero-in-r"
-      ],
-      "removes": [],
-      "confidence": 0.93,
-      "ambient_noise_rejected": [
-        "def:reals",
-        "def:zero-in-r"
-      ]
-    },
-    {
-      "batch": "batch-0012",
-      "graph": "graph-0050.json",
-      "resolution": "resolution-0050.json",
-      "term": "def:pointwise-scalar-multiple-of-a-function",
-      "verdict": "change",
-      "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals",
-      "adds": [
-        "def:reals"
-      ],
-      "removes": [],
-      "confidence": 0.93,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
+      "confidence": 0.93
     },
     {
       "batch": "batch-0012",
       "graph": "graph-0051.json",
       "resolution": "resolution-0051.json",
-      "term": "def:pointwise-sum-of-functions",
+      "term": "def:pointwise-quotient-of-functions",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals",
+      "reason": "added dependency is already reachable in the dependency tree: def:reals via def:division-on-r, def:zero-in-r via def:division-on-r",
       "adds": [
-        "def:reals"
+        "def:reals",
+        "def:zero-in-r"
       ],
       "removes": [],
-      "confidence": 0.93,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
+      "confidence": 0.93
     },
     {
       "batch": "batch-0012",
       "graph": "graph-0052.json",
       "resolution": "resolution-0052.json",
+      "term": "def:pointwise-scalar-multiple-of-a-function",
+      "verdict": "change",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:reals via def:multiplication-on-r",
+      "adds": [
+        "def:reals"
+      ],
+      "removes": [],
+      "confidence": 0.93
+    },
+    {
+      "batch": "batch-0012",
+      "graph": "graph-0053.json",
+      "resolution": "resolution-0053.json",
+      "term": "def:pointwise-sum-of-functions",
+      "verdict": "change",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:reals via def:addition-on-r",
+      "adds": [
+        "def:reals"
+      ],
+      "removes": [],
+      "confidence": 0.93
+    },
+    {
+      "batch": "batch-0012",
+      "graph": "graph-0054.json",
+      "resolution": "resolution-0054.json",
+      "term": "def:real-linear-rule",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
+      "removes": [],
+      "confidence": 0.94
+    },
+    {
+      "batch": "batch-0012",
+      "graph": "graph-0055.json",
+      "resolution": "resolution-0055.json",
       "term": "cor:closed-iff-seq-limits",
       "verdict": "change",
       "decision": "investigate",
@@ -6166,8 +6127,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0053.json",
-      "resolution": "resolution-0053.json",
+      "graph": "graph-0056.json",
+      "resolution": "resolution-0056.json",
       "term": "cor:interval-all-limit-points",
       "verdict": "change",
       "decision": "investigate",
@@ -6178,8 +6139,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0054.json",
-      "resolution": "resolution-0054.json",
+      "graph": "graph-0057.json",
+      "resolution": "resolution-0057.json",
       "term": "def:adherent-point-r",
       "verdict": "change",
       "decision": "investigate",
@@ -6204,8 +6165,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0055.json",
-      "resolution": "resolution-0055.json",
+      "graph": "graph-0058.json",
+      "resolution": "resolution-0058.json",
       "term": "def:boundary-point-r",
       "verdict": "change",
       "decision": "investigate",
@@ -6224,8 +6185,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0056.json",
-      "resolution": "resolution-0056.json",
+      "graph": "graph-0059.json",
+      "resolution": "resolution-0059.json",
       "term": "def:boundary-r",
       "verdict": "ok",
       "decision": "current-ok",
@@ -6236,27 +6197,23 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0057.json",
-      "resolution": "resolution-0057.json",
+      "graph": "graph-0060.json",
+      "resolution": "resolution-0060.json",
       "term": "def:bounded-set-r",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals, def:strict-order-on-r",
+      "reason": "added dependency is already reachable in the dependency tree: def:reals via def:order-on-r/def:real-chapter-absolute-value-on-r, def:strict-order-on-r via def:real-chapter-absolute-value-on-r",
       "adds": [
         "def:reals",
         "def:strict-order-on-r"
       ],
       "removes": [],
-      "confidence": 0.92,
-      "ambient_noise_rejected": [
-        "def:reals",
-        "def:strict-order-on-r"
-      ]
+      "confidence": 0.92
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0058.json",
-      "resolution": "resolution-0058.json",
+      "graph": "graph-0061.json",
+      "resolution": "resolution-0061.json",
       "term": "def:closed-set-r",
       "verdict": "ok",
       "decision": "current-ok",
@@ -6267,8 +6224,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0059.json",
-      "resolution": "resolution-0059.json",
+      "graph": "graph-0062.json",
+      "resolution": "resolution-0062.json",
       "term": "def:closure-r",
       "verdict": "ok",
       "decision": "current-ok",
@@ -6279,8 +6236,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0060.json",
-      "resolution": "resolution-0060.json",
+      "graph": "graph-0063.json",
+      "resolution": "resolution-0063.json",
       "term": "def:cluster-point-r",
       "verdict": "ok",
       "decision": "current-ok",
@@ -6291,8 +6248,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0061.json",
-      "resolution": "resolution-0061.json",
+      "graph": "graph-0064.json",
+      "resolution": "resolution-0064.json",
       "term": "def:deleted-epsilon-neighbourhood",
       "verdict": "ok",
       "decision": "current-ok",
@@ -6303,8 +6260,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0062.json",
-      "resolution": "resolution-0062.json",
+      "graph": "graph-0065.json",
+      "resolution": "resolution-0065.json",
       "term": "def:epsilon-neighbourhood",
       "verdict": "change",
       "decision": "investigate",
@@ -6331,26 +6288,23 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0063.json",
-      "resolution": "resolution-0063.json",
+      "graph": "graph-0066.json",
+      "resolution": "resolution-0066.json",
       "term": "def:interior-point-r",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals",
+      "reason": "added dependency is already reachable in the dependency tree: def:reals via def:epsilon-neighbourhood, def:subset via def:epsilon-neighbourhood",
       "adds": [
         "def:reals",
         "def:subset"
       ],
       "removes": [],
-      "confidence": 0.92,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
+      "confidence": 0.92
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0064.json",
-      "resolution": "resolution-0064.json",
+      "graph": "graph-0067.json",
+      "resolution": "resolution-0067.json",
       "term": "def:interior-r",
       "verdict": "ok",
       "decision": "current-ok",
@@ -6361,8 +6315,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0065.json",
-      "resolution": "resolution-0065.json",
+      "graph": "graph-0068.json",
+      "resolution": "resolution-0068.json",
       "term": "def:isolated-point-r",
       "verdict": "change",
       "decision": "investigate",
@@ -6384,8 +6338,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0066.json",
-      "resolution": "resolution-0066.json",
+      "graph": "graph-0069.json",
+      "resolution": "resolution-0069.json",
       "term": "def:true-near",
       "verdict": "change",
       "decision": "rejected",
@@ -6407,8 +6361,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0067.json",
-      "resolution": "resolution-0067.json",
+      "graph": "graph-0070.json",
+      "resolution": "resolution-0070.json",
       "term": "lem:closure-elementary",
       "verdict": "change",
       "decision": "rejected",
@@ -6423,8 +6377,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0068.json",
-      "resolution": "resolution-0068.json",
+      "graph": "graph-0071.json",
+      "resolution": "resolution-0071.json",
       "term": "thm:cluster-point-sequential",
       "verdict": "change",
       "decision": "investigate",
@@ -6439,8 +6393,8 @@
     },
     {
       "batch": "batch-0012",
-      "graph": "graph-0069.json",
-      "resolution": "resolution-0069.json",
+      "graph": "graph-0072.json",
+      "resolution": "resolution-0072.json",
       "term": "thm:heine-borel-subsets-real-line",
       "verdict": "change",
       "decision": "investigate",
@@ -8585,18 +8539,15 @@
       "resolution": "resolution-0010.json",
       "term": "def:tagged-partition",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:order-on-r",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:closed-interval via def:interval-partition, def:natural-numbers via def:interval-partition, def:order-on-r via def:interval-partition",
       "adds": [
         "def:closed-interval",
         "def:natural-numbers",
         "def:order-on-r"
       ],
       "removes": [],
-      "confidence": 0.78,
-      "ambient_noise_rejected": [
-        "def:order-on-r"
-      ]
+      "confidence": 0.78
     },
     {
       "batch": "batch-0015",
@@ -9367,18 +9318,15 @@
       "resolution": "resolution-0044.json",
       "term": "def:point-of-discontinuity",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:function via def:continuous-at-point, def:reals via def:continuous-at-point, def:subset via def:continuous-at-point",
       "adds": [
         "def:function",
         "def:reals",
         "def:subset"
       ],
       "removes": [],
-      "confidence": 0.78,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
+      "confidence": 0.78
     },
     {
       "batch": "batch-0015",
@@ -10577,19 +10525,15 @@
       "resolution": "resolution-0040.json",
       "term": "ax:completeness-of-reals",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:abstract-ordered-field, def:reals",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:abstract-ordered-field directly, def:least-upper-bound-property directly, def:reals directly",
       "adds": [
         "def:abstract-ordered-field",
         "def:least-upper-bound-property",
         "def:reals"
       ],
       "removes": [],
-      "confidence": 0.79,
-      "ambient_noise_rejected": [
-        "def:abstract-ordered-field",
-        "def:reals"
-      ]
+      "confidence": 0.79
     },
     {
       "batch": "batch-0016",
@@ -11489,17 +11433,13 @@
       "term": "prop:abs-value-is-distance-to-zero",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:real-chapter-absolute-value-on-r, def:reals",
+      "reason": "added dependency is already reachable in the dependency tree: def:real-chapter-absolute-value-on-r via def:distance-on-real-line, def:reals via def:distance-on-real-line",
       "adds": [
         "def:real-chapter-absolute-value-on-r",
         "def:reals"
       ],
       "removes": [],
-      "confidence": 0.79,
-      "ambient_noise_rejected": [
-        "def:real-chapter-absolute-value-on-r",
-        "def:reals"
-      ]
+      "confidence": 0.79
     },
     {
       "batch": "batch-0018",
@@ -11527,16 +11467,13 @@
       "term": "thm:closed-iff-contains-limit-points",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals",
+      "reason": "added dependency is already reachable in the dependency tree: def:reals via def:closed-set/def:limit-point, def:subset via def:closed-set/def:limit-point",
       "adds": [
         "def:reals",
         "def:subset"
       ],
       "removes": [],
-      "confidence": 0.79,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
+      "confidence": 0.79
     },
     {
       "batch": "batch-0018",
@@ -11565,16 +11502,13 @@
       "term": "thm:compact-implies-closed-bounded",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals",
+      "reason": "added dependency is already reachable in the dependency tree: def:reals via def:bounded-subset-of-r/def:closed-set/def:compact-set, def:subset via def:bounded-subset-of-r/def:closed-set/def:compact-set",
       "adds": [
         "def:reals",
         "def:subset"
       ],
       "removes": [],
-      "confidence": 0.79,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
+      "confidence": 0.79
     },
     {
       "batch": "batch-0018",
@@ -11704,16 +11638,13 @@
       "term": "def:interior-of-set",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals",
+      "reason": "added dependency is already reachable in the dependency tree: def:reals via def:interior-point, def:subset via def:interior-point",
       "adds": [
         "def:reals",
         "def:subset"
       ],
       "removes": [],
-      "confidence": 0.79,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
+      "confidence": 0.79
     },
     {
       "batch": "batch-0018",
@@ -12135,15 +12066,12 @@
       "term": "def:subtraction-on-r",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals",
+      "reason": "added dependency is already reachable in the dependency tree: def:reals via def:addition-on-r/def:negation-on-r",
       "adds": [
         "def:reals"
       ],
       "removes": [],
-      "confidence": 0.79,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
+      "confidence": 0.79
     },
     {
       "batch": "batch-0019",
@@ -12366,6 +12294,18 @@
       "batch": "batch-0019",
       "graph": "graph-0015.json",
       "resolution": "resolution-0015.json",
+      "term": "def:least-upper-bound-property-on-r",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
+      "removes": [],
+      "confidence": 0.96
+    },
+    {
+      "batch": "batch-0019",
+      "graph": "graph-0016.json",
+      "resolution": "resolution-0016.json",
       "term": "def:supremum-in-r",
       "verdict": "change",
       "decision": "investigate",
@@ -12383,8 +12323,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0016.json",
-      "resolution": "resolution-0016.json",
+      "graph": "graph-0017.json",
+      "resolution": "resolution-0017.json",
       "term": "def:upper-bound-in-r",
       "verdict": "change",
       "decision": "investigate",
@@ -12398,8 +12338,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0017.json",
-      "resolution": "resolution-0017.json",
+      "graph": "graph-0018.json",
+      "resolution": "resolution-0018.json",
       "term": "lem:union-of-cuts-is-a-cut",
       "verdict": "change",
       "decision": "investigate",
@@ -12420,8 +12360,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0018.json",
-      "resolution": "resolution-0018.json",
+      "graph": "graph-0019.json",
+      "resolution": "resolution-0019.json",
       "term": "thm:lub-property-r",
       "verdict": "change",
       "decision": "investigate",
@@ -12446,8 +12386,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0019.json",
-      "resolution": "resolution-0019.json",
+      "graph": "graph-0020.json",
+      "resolution": "resolution-0020.json",
       "term": "def:dedekind-cut",
       "verdict": "change",
       "decision": "investigate",
@@ -12465,21 +12405,9 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0020.json",
-      "resolution": "resolution-0020.json",
-      "term": "def:one-in-r",
-      "verdict": "ok",
-      "decision": "current-ok",
-      "reason": "no proposed dependency-set change",
-      "adds": [],
-      "removes": [],
-      "confidence": 0.87
-    },
-    {
-      "batch": "batch-0019",
       "graph": "graph-0021.json",
       "resolution": "resolution-0021.json",
-      "term": "def:rational-cut",
+      "term": "def:one-in-r",
       "verdict": "ok",
       "decision": "current-ok",
       "reason": "no proposed dependency-set change",
@@ -12491,6 +12419,18 @@
       "batch": "batch-0019",
       "graph": "graph-0022.json",
       "resolution": "resolution-0022.json",
+      "term": "def:rational-cut",
+      "verdict": "ok",
+      "decision": "current-ok",
+      "reason": "no proposed dependency-set change",
+      "adds": [],
+      "removes": [],
+      "confidence": 0.87
+    },
+    {
+      "batch": "batch-0019",
+      "graph": "graph-0023.json",
+      "resolution": "resolution-0023.json",
       "term": "def:reals",
       "verdict": "change",
       "decision": "rejected",
@@ -12503,8 +12443,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0023.json",
-      "resolution": "resolution-0023.json",
+      "graph": "graph-0024.json",
+      "resolution": "resolution-0024.json",
       "term": "def:zero-in-r",
       "verdict": "ok",
       "decision": "current-ok",
@@ -12515,8 +12455,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0024.json",
-      "resolution": "resolution-0024.json",
+      "graph": "graph-0025.json",
+      "resolution": "resolution-0025.json",
       "term": "lem:rational-cut-is-a-cut",
       "verdict": "change",
       "decision": "rejected",
@@ -12533,8 +12473,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0025.json",
-      "resolution": "resolution-0025.json",
+      "graph": "graph-0026.json",
+      "resolution": "resolution-0026.json",
       "term": "thm:zero-not-one-in-r",
       "verdict": "change",
       "decision": "investigate",
@@ -12552,8 +12492,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0026.json",
-      "resolution": "resolution-0026.json",
+      "graph": "graph-0027.json",
+      "resolution": "resolution-0027.json",
       "term": "thm:zero-one-are-reals",
       "verdict": "change",
       "decision": "investigate",
@@ -12566,8 +12506,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0027.json",
-      "resolution": "resolution-0027.json",
+      "graph": "graph-0028.json",
+      "resolution": "resolution-0028.json",
       "term": "def:real-chapter-embedding-q-into-r",
       "verdict": "change",
       "decision": "rejected",
@@ -12580,8 +12520,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0028.json",
-      "resolution": "resolution-0028.json",
+      "graph": "graph-0029.json",
+      "resolution": "resolution-0029.json",
       "term": "thm:archimedean-property-of-r",
       "verdict": "change",
       "decision": "investigate",
@@ -12607,8 +12547,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0029.json",
-      "resolution": "resolution-0029.json",
+      "graph": "graph-0030.json",
+      "resolution": "resolution-0030.json",
       "term": "thm:density-of-q-in-r",
       "verdict": "change",
       "decision": "rejected",
@@ -12628,8 +12568,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0030.json",
-      "resolution": "resolution-0030.json",
+      "graph": "graph-0031.json",
+      "resolution": "resolution-0031.json",
       "term": "thm:embedding-q-into-r-injective",
       "verdict": "change",
       "decision": "rejected",
@@ -12645,8 +12585,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0031.json",
-      "resolution": "resolution-0031.json",
+      "graph": "graph-0032.json",
+      "resolution": "resolution-0032.json",
       "term": "thm:embedding-q-into-r-preserves-arithmetic",
       "verdict": "change",
       "decision": "rejected",
@@ -12662,8 +12602,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0032.json",
-      "resolution": "resolution-0032.json",
+      "graph": "graph-0033.json",
+      "resolution": "resolution-0033.json",
       "term": "thm:embedding-q-into-r-preserves-order",
       "verdict": "change",
       "decision": "rejected",
@@ -12679,26 +12619,23 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0033.json",
-      "resolution": "resolution-0033.json",
+      "graph": "graph-0034.json",
+      "resolution": "resolution-0034.json",
       "term": "thm:embedding-q-into-r-preserves-zero-one",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:reals",
+      "reason": "added dependency is already reachable in the dependency tree: def:rationals via def:one-in-q/def:one-in-r/def:real-chapter-embedding-q-into-r/def:zero-in-q/def:zero-in-r, def:reals via def:real-chapter-embedding-q-into-r",
       "adds": [
         "def:rationals",
         "def:reals"
       ],
       "removes": [],
-      "confidence": 0.79,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
+      "confidence": 0.79
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0034.json",
-      "resolution": "resolution-0034.json",
+      "graph": "graph-0035.json",
+      "resolution": "resolution-0035.json",
       "term": "thm:q-embeds-into-r",
       "verdict": "change",
       "decision": "investigate",
@@ -12723,8 +12660,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0035.json",
-      "resolution": "resolution-0035.json",
+      "graph": "graph-0036.json",
+      "resolution": "resolution-0036.json",
       "term": "cor:field-laws-on-r",
       "verdict": "change",
       "decision": "rejected",
@@ -12748,8 +12685,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0036.json",
-      "resolution": "resolution-0036.json",
+      "graph": "graph-0037.json",
+      "resolution": "resolution-0037.json",
       "term": "cor:ordered-field-laws-on-r",
       "verdict": "change",
       "decision": "rejected",
@@ -12769,8 +12706,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0037.json",
-      "resolution": "resolution-0037.json",
+      "graph": "graph-0038.json",
+      "resolution": "resolution-0038.json",
       "term": "thm:addition-preserves-order-on-r",
       "verdict": "change",
       "decision": "rejected",
@@ -12788,8 +12725,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0038.json",
-      "resolution": "resolution-0038.json",
+      "graph": "graph-0039.json",
+      "resolution": "resolution-0039.json",
       "term": "thm:positive-multiplication-preserves-order-on-r",
       "verdict": "change",
       "decision": "rejected",
@@ -12810,8 +12747,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0039.json",
-      "resolution": "resolution-0039.json",
+      "graph": "graph-0040.json",
+      "resolution": "resolution-0040.json",
       "term": "thm:r-is-a-field",
       "verdict": "change",
       "decision": "investigate",
@@ -12842,8 +12779,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0040.json",
-      "resolution": "resolution-0040.json",
+      "graph": "graph-0041.json",
+      "resolution": "resolution-0041.json",
       "term": "thm:r-is-an-ordered-field",
       "verdict": "change",
       "decision": "investigate",
@@ -12877,8 +12814,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0041.json",
-      "resolution": "resolution-0041.json",
+      "graph": "graph-0042.json",
+      "resolution": "resolution-0042.json",
       "term": "thm:r-is-complete-ordered-field",
       "verdict": "change",
       "decision": "investigate",
@@ -12900,8 +12837,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0042.json",
-      "resolution": "resolution-0042.json",
+      "graph": "graph-0043.json",
+      "resolution": "resolution-0043.json",
       "term": "thm:r-nonzero-multiplicative-abelian-group",
       "verdict": "change",
       "decision": "investigate",
@@ -12926,8 +12863,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0043.json",
-      "resolution": "resolution-0043.json",
+      "graph": "graph-0044.json",
+      "resolution": "resolution-0044.json",
       "term": "def:division-on-r",
       "verdict": "ok",
       "decision": "current-ok",
@@ -12938,25 +12875,22 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0044.json",
-      "resolution": "resolution-0044.json",
+      "graph": "graph-0045.json",
+      "resolution": "resolution-0045.json",
       "term": "def:multiplication-on-r",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:order-on-r",
+      "reason": "added dependency is already reachable in the dependency tree: def:order-on-r via def:product-nonnegative-on-r/def:real-chapter-absolute-value-on-r",
       "adds": [
         "def:order-on-r"
       ],
       "removes": [],
-      "confidence": 0.79,
-      "ambient_noise_rejected": [
-        "def:order-on-r"
-      ]
+      "confidence": 0.79
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0045.json",
-      "resolution": "resolution-0045.json",
+      "graph": "graph-0046.json",
+      "resolution": "resolution-0046.json",
       "term": "def:nonnegative-cut",
       "verdict": "change",
       "decision": "rejected",
@@ -12972,8 +12906,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0046.json",
-      "resolution": "resolution-0046.json",
+      "graph": "graph-0047.json",
+      "resolution": "resolution-0047.json",
       "term": "def:product-nonnegative-on-r",
       "verdict": "change",
       "decision": "investigate",
@@ -12990,42 +12924,36 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0047.json",
-      "resolution": "resolution-0047.json",
+      "graph": "graph-0048.json",
+      "resolution": "resolution-0048.json",
       "term": "def:real-chapter-absolute-value-on-r",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:reals",
+      "reason": "added dependency is already reachable in the dependency tree: def:reals via def:negation-on-r/def:order-on-r/def:strict-order-on-r",
       "adds": [
         "def:reals"
       ],
       "removes": [],
-      "confidence": 0.79,
-      "ambient_noise_rejected": [
-        "def:reals"
-      ]
-    },
-    {
-      "batch": "batch-0019",
-      "graph": "graph-0048.json",
-      "resolution": "resolution-0048.json",
-      "term": "def:reciprocal-on-r",
-      "verdict": "change",
-      "decision": "rejected",
-      "reason": "real ambient structure should be carried by def:reals or its ambient ancestor, not repeated as direct descendant edges: def:strict-order-on-r",
-      "adds": [
-        "def:strict-order-on-r"
-      ],
-      "removes": [],
-      "confidence": 0.79,
-      "ambient_noise_rejected": [
-        "def:strict-order-on-r"
-      ]
+      "confidence": 0.79
     },
     {
       "batch": "batch-0019",
       "graph": "graph-0049.json",
       "resolution": "resolution-0049.json",
+      "term": "def:reciprocal-on-r",
+      "verdict": "change",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:strict-order-on-r via def:real-chapter-absolute-value-on-r",
+      "adds": [
+        "def:strict-order-on-r"
+      ],
+      "removes": [],
+      "confidence": 0.79
+    },
+    {
+      "batch": "batch-0019",
+      "graph": "graph-0050.json",
+      "resolution": "resolution-0050.json",
       "term": "def:reciprocal-positive-on-r",
       "verdict": "change",
       "decision": "investigate",
@@ -13042,8 +12970,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0050.json",
-      "resolution": "resolution-0050.json",
+      "graph": "graph-0051.json",
+      "resolution": "resolution-0051.json",
       "term": "lem:product-nonnegative-is-a-cut",
       "verdict": "change",
       "decision": "investigate",
@@ -13066,8 +12994,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0051.json",
-      "resolution": "resolution-0051.json",
+      "graph": "graph-0052.json",
+      "resolution": "resolution-0052.json",
       "term": "lem:product-of-cuts-is-a-cut",
       "verdict": "change",
       "decision": "rejected",
@@ -13087,8 +13015,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0052.json",
-      "resolution": "resolution-0052.json",
+      "graph": "graph-0053.json",
+      "resolution": "resolution-0053.json",
       "term": "lem:reciprocal-is-a-cut",
       "verdict": "change",
       "decision": "rejected",
@@ -13110,8 +13038,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0053.json",
-      "resolution": "resolution-0053.json",
+      "graph": "graph-0054.json",
+      "resolution": "resolution-0054.json",
       "term": "thm:distributivity-on-r",
       "verdict": "change",
       "decision": "rejected",
@@ -13129,8 +13057,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0054.json",
-      "resolution": "resolution-0054.json",
+      "graph": "graph-0055.json",
+      "resolution": "resolution-0055.json",
       "term": "thm:multiplication-on-r-associative",
       "verdict": "change",
       "decision": "rejected",
@@ -13149,8 +13077,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0055.json",
-      "resolution": "resolution-0055.json",
+      "graph": "graph-0056.json",
+      "resolution": "resolution-0056.json",
       "term": "thm:multiplication-on-r-commutative",
       "verdict": "change",
       "decision": "rejected",
@@ -13169,8 +13097,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0056.json",
-      "resolution": "resolution-0056.json",
+      "graph": "graph-0057.json",
+      "resolution": "resolution-0057.json",
       "term": "thm:one-multiplicative-identity-on-r",
       "verdict": "change",
       "decision": "rejected",
@@ -13188,8 +13116,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0057.json",
-      "resolution": "resolution-0057.json",
+      "graph": "graph-0058.json",
+      "resolution": "resolution-0058.json",
       "term": "thm:reciprocal-multiplicative-inverse-on-r",
       "verdict": "change",
       "decision": "rejected",
@@ -13209,8 +13137,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0058.json",
-      "resolution": "resolution-0058.json",
+      "graph": "graph-0059.json",
+      "resolution": "resolution-0059.json",
       "term": "thm:triangle-inequality",
       "verdict": "change",
       "decision": "investigate",
@@ -13232,8 +13160,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0059.json",
-      "resolution": "resolution-0059.json",
+      "graph": "graph-0060.json",
+      "resolution": "resolution-0060.json",
       "term": "def:order-on-r",
       "verdict": "ok",
       "decision": "current-ok",
@@ -13244,8 +13172,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0060.json",
-      "resolution": "resolution-0060.json",
+      "graph": "graph-0061.json",
+      "resolution": "resolution-0061.json",
       "term": "def:strict-order-on-r",
       "verdict": "change",
       "decision": "investigate",
@@ -13258,8 +13186,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0061.json",
-      "resolution": "resolution-0061.json",
+      "graph": "graph-0062.json",
+      "resolution": "resolution-0062.json",
       "term": "thm:comparability-of-cuts",
       "verdict": "change",
       "decision": "rejected",
@@ -13279,8 +13207,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0062.json",
-      "resolution": "resolution-0062.json",
+      "graph": "graph-0063.json",
+      "resolution": "resolution-0063.json",
       "term": "thm:order-on-r-antisymmetric",
       "verdict": "change",
       "decision": "rejected",
@@ -13299,8 +13227,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0063.json",
-      "resolution": "resolution-0063.json",
+      "graph": "graph-0064.json",
+      "resolution": "resolution-0064.json",
       "term": "thm:order-on-r-reflexive",
       "verdict": "change",
       "decision": "rejected",
@@ -13318,8 +13246,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0064.json",
-      "resolution": "resolution-0064.json",
+      "graph": "graph-0065.json",
+      "resolution": "resolution-0065.json",
       "term": "thm:order-on-r-total",
       "verdict": "change",
       "decision": "rejected",
@@ -13337,8 +13265,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0065.json",
-      "resolution": "resolution-0065.json",
+      "graph": "graph-0066.json",
+      "resolution": "resolution-0066.json",
       "term": "thm:order-on-r-transitive",
       "verdict": "change",
       "decision": "rejected",
@@ -13356,8 +13284,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0066.json",
-      "resolution": "resolution-0066.json",
+      "graph": "graph-0067.json",
+      "resolution": "resolution-0067.json",
       "term": "thm:r-totally-ordered-set",
       "verdict": "change",
       "decision": "rejected",
@@ -13378,8 +13306,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0067.json",
-      "resolution": "resolution-0067.json",
+      "graph": "graph-0068.json",
+      "resolution": "resolution-0068.json",
       "term": "thm:trichotomy-on-r",
       "verdict": "change",
       "decision": "rejected",
@@ -13398,8 +13326,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0068.json",
-      "resolution": "resolution-0068.json",
+      "graph": "graph-0069.json",
+      "resolution": "resolution-0069.json",
       "term": "cor:r-fills-the-gap",
       "verdict": "change",
       "decision": "investigate",
@@ -13430,8 +13358,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0069.json",
-      "resolution": "resolution-0069.json",
+      "graph": "graph-0070.json",
+      "resolution": "resolution-0070.json",
       "term": "def:sqrt-two-cut",
       "verdict": "change",
       "decision": "investigate",
@@ -13447,8 +13375,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0070.json",
-      "resolution": "resolution-0070.json",
+      "graph": "graph-0071.json",
+      "resolution": "resolution-0071.json",
       "term": "lem:sqrt-two-is-a-cut",
       "verdict": "change",
       "decision": "investigate",
@@ -13464,8 +13392,8 @@
     },
     {
       "batch": "batch-0019",
-      "graph": "graph-0071.json",
-      "resolution": "resolution-0071.json",
+      "graph": "graph-0072.json",
+      "resolution": "resolution-0072.json",
       "term": "thm:sqrt-two-squared-is-two",
       "verdict": "change",
       "decision": "rejected",
@@ -16059,16 +15987,13 @@
       "term": "cor:ordered-field-laws-on-q",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "mixed proposal contains real-ambient noise better handled by def:reals or an ambient ancestor; review remaining changes separately: def:abstract-field",
+      "reason": "added dependency is already reachable in the dependency tree: def:abstract-field via cor:generic-ordered-field-laws, def:rationals via thm:q-is-an-ordered-field",
       "adds": [
         "def:abstract-field",
         "def:rationals"
       ],
       "removes": [],
-      "confidence": 0.78,
-      "ambient_noise_rejected": [
-        "def:abstract-field"
-      ]
+      "confidence": 0.78
     },
     {
       "batch": "batch-0020",
@@ -25346,7 +25271,7 @@
       "term": "def:canonical-conjunctive-normal-form-propositional-logic",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "added dependency is already reachable in the dependency tree: def:formula-variable-set-propositional-logic via def:truth-table-propositional-logic/def:truth-table-row-clause-propositional-logic, def:well-formed-formula via def:conjunctive-normal-form-propositional-logic/def:empty-conjunction-propositional-logic/def:truth-table-propositional-logic",
+      "reason": "added dependency is already reachable in the dependency tree: def:formula-variable-set-propositional-logic via def:truth-table-propositional-logic/def:truth-table-row-clause-propositional-logic, def:well-formed-formula via def:conjunctive-normal-form-propositional-logic/def:empty-conjunction-propositional-logic/def:truth-table-propositional-logic/def:truth-table-row-clause-propositional-logic",
       "adds": [
         "def:formula-variable-set-propositional-logic",
         "def:well-formed-formula"
@@ -25361,7 +25286,7 @@
       "term": "def:canonical-disjunctive-normal-form-propositional-logic",
       "verdict": "change",
       "decision": "rejected",
-      "reason": "added dependency is already reachable in the dependency tree: def:formula-variable-set-propositional-logic via def:truth-table-propositional-logic/def:truth-table-row-conjunction-propositional-logic, def:well-formed-formula via def:disjunctive-normal-form-propositional-logic/def:empty-clause-propositional-logic/def:truth-table-propositional-logic",
+      "reason": "added dependency is already reachable in the dependency tree: def:formula-variable-set-propositional-logic via def:truth-table-propositional-logic/def:truth-table-row-conjunction-propositional-logic, def:well-formed-formula via def:disjunctive-normal-form-propositional-logic/def:empty-clause-propositional-logic/def:truth-table-propositional-logic/def:truth-table-row-conjunction-propositional-logic",
       "adds": [
         "def:formula-variable-set-propositional-logic",
         "def:well-formed-formula"
@@ -27137,8 +27062,8 @@
       "resolution": "resolution-0053.json",
       "term": "def:fol-satisfiability",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "cluster suggests an ambient-structure or ancestor fix rather than direct child edges",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:formula via def:fol-satisfaction, def:structure via def:fol-satisfaction, def:var-assign via def:fol-satisfaction",
       "adds": [
         "def:formula",
         "def:structure",
@@ -27169,8 +27094,8 @@
       "resolution": "resolution-0055.json",
       "term": "def:validity",
       "verdict": "change",
-      "decision": "investigate",
-      "reason": "cluster suggests an ambient-structure or ancestor fix rather than direct child edges",
+      "decision": "rejected",
+      "reason": "added dependency is already reachable in the dependency tree: def:formula via def:fol-satisfaction, def:structure via def:fol-satisfaction, def:var-assign via def:fol-satisfaction",
       "adds": [
         "def:formula",
         "def:structure",
