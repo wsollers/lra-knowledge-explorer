@@ -400,6 +400,17 @@ function tocVolumes(){
 function volumeNumber(v){const s=String(v||'').toLowerCase();return VOLUME_NUMBER_BY_ID[s]||Number(s)||0;}
 function volumeTitle(v){const n=volumeNumber(v);return n?('Volume '+VOLUME_ROMAN[n]+' \u2014 '+VOLUME_TITLES[n]):('Volume '+String(v||''));}
 function fallbackTitle(slug){return String(slug||'').split('-').filter(Boolean).map(s=>s.charAt(0).toUpperCase()+s.slice(1)).join(' ');}
+function plainOptionLabel(label){
+  return String(label||'')
+    .replace(/\$\\mathbb\{([^{}]+)\}\$/g,'$1')
+    .replace(/\\mathbb\{([^{}]+)\}/g,'$1')
+    .replace(/\$([^$]*)\$/g,'$1')
+    .replace(/\\text\{([^{}]+)\}/g,'$1')
+    .replace(/\\(?:mathrm|operatorname)\{([^{}]+)\}/g,'$1')
+    .replace(/\\([A-Za-z]+)\b/g,'$1')
+    .replace(/\s+/g,' ')
+    .trim();
+}
 function optionSet(select,options,current){
   const sig=options.map(o=>o.value+'='+o.label).join('|');
   const existing=Array.from(select.options).map(o=>o.value+'='+o.textContent).join('|');
@@ -422,14 +433,14 @@ function syncFilters(nodes){
 
   const activeVolumes=state.filters.volume==='All'?toc:toc.filter(v=>String(v.id)===String(state.filters.volume));
   const chapterOptions=[{value:'All',label:'All chapters'}];
-  activeVolumes.forEach(v=>(v.chapters||[]).forEach(c=>chapterOptions.push({value:c.id,label:c.title||fallbackTitle(c.id)})));
+  activeVolumes.forEach(v=>(v.chapters||[]).forEach(c=>chapterOptions.push({value:c.id,label:plainOptionLabel(c.title||fallbackTitle(c.id))})));
   if(state.filters.chapter!=='All'&&!chapterOptions.some(o=>o.value===state.filters.chapter))state.filters.chapter='All';
   optionSet(els.chapterFilter,chapterOptions,state.filters.chapter);
 
   const sectionOptions=[{value:'All',label:'All sections'}];
   activeVolumes.forEach(v=>(v.chapters||[]).forEach(c=>{
     if(state.filters.chapter!=='All'&&c.id!==state.filters.chapter)return;
-    (c.sections||[]).forEach(s=>sectionOptions.push({value:s.id,label:s.title||fallbackTitle(s.id)}));
+    (c.sections||[]).forEach(s=>sectionOptions.push({value:s.id,label:plainOptionLabel(s.title||fallbackTitle(s.id))}));
   }));
   if(state.filters.deck!=='All'&&!sectionOptions.some(o=>o.value===state.filters.deck))state.filters.deck='All';
   optionSet(els.deckFilter,sectionOptions,state.filters.deck);
