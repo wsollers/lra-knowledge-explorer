@@ -49,6 +49,7 @@ svg{position:absolute;inset:0}
 .value{line-height:1.6;overflow-wrap:anywhere;word-break:break-word;max-width:100%;overflow:visible}
 .value .katex-display{max-width:100%;overflow-x:auto;overflow-y:visible;padding:.3rem 0;margin:.5rem 0}
 .value .katex{max-width:100%}
+.data-meta{margin:-2px 0 12px;padding:8px 10px;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:rgba(255,255,255,.03)}
 .danger{border:2px solid var(--danger)!important;background:rgba(127,29,29,.16)!important}
 .tooltip{position:fixed;display:none;pointer-events:none;max-width:520px;background:rgba(15,23,42,.98);border:1px solid #334155;border-radius:14px;padding:12px;z-index:50;box-shadow:0 18px 38px rgba(0,0,0,.4)}
 .tooltip .block{margin-top:8px;padding:9px 10px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
@@ -147,6 +148,7 @@ a{color:#93c5fd}
 <aside class="detail">
   <div class="section">
     <h2>Node details</h2>
+    <div id="dataMeta" class="tiny data-meta">Data version unavailable.</div>
     <div id="detailEmpty" class="tiny">Click a node to inspect its extracted fields.</div>
     <div id="detailContent" style="display:none"></div>
   </div>
@@ -179,7 +181,7 @@ const CHAPTER_TO_VOLUME={'propositional-logic':1,'predicate-logic':1,'sets-relat
 function nodeVolume(n){return CHAPTER_TO_VOLUME[n&&n.chapter]||0;}
 
 const state={knowledge:{metadata:{},nodes:[]},edges:[],proofVault:{records:{}},activeProofNode:null,activeProofTab:'standard',zoom:1,selectedId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showImplies:true,volume:'All',chapter:'All',deck:'All',treeMode:'off'}};
-const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose')};
+const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose')};
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function decodeB64(s){if(!s)return'';try{return decodeURIComponent(escape(atob(s)));}catch(e){try{return atob(s);}catch(_){return'';}}}
@@ -191,6 +193,14 @@ function normalizeLatex(t){let o=Array.isArray(t)?t.join('\n'):String(t??'');o=o
 function renderInlineMath(src){const re=/(\\\[[\s\S]*?\\\]|\$\$[\s\S]*?\$\$|\\\((?:[\s\S]*?)\\\)|\$(?:[^$\\]|\\.)*\$)/g;let out='',pos=0,m;while((m=re.exec(src))!==null){const plain=src.slice(pos,m.index);if(plain)out+=plain.replace(/\n/g,'<br>').replace(/&(?![a-z#0-9]+;)/g,'&amp;');const tk=m[0];if(tk.startsWith('\\[')){out+=renderLatex(tk.slice(2,-2),true);}else if(tk.startsWith('$$')){out+=renderLatex(tk.slice(2,-2),true);}else if(tk.startsWith('\\(')){out+=renderLatex(tk.slice(2,-2),false);}else{out+=renderLatex(tk.slice(1,-1),false);}pos=re.lastIndex;}const tail=src.slice(pos);if(tail)out+=tail.replace(/\n/g,'<br>').replace(/&(?![a-z#0-9]+;)/g,'&amp;');return out;}
 function renderMixedMath(text){const listHtml=renderList(text);if(listHtml)return listHtml;const src=normalizeLatex(text);const listRe=/\\begin\{(itemize|enumerate)\}([\s\S]*?)\\end\{\1\}/g;let out='',pos=0,m;while((m=listRe.exec(src))!==null){const plain=src.slice(pos,m.index);if(plain)out+=renderInlineMath(plain);out+=renderListBlock(m[1],m[2]);pos=listRe.lastIndex;}const tail=src.slice(pos);if(tail)out+=renderInlineMath(tail);return out;}
 function texToHtml(s){if(!s)return'';return renderMixedMath(String(s));}
+function renderDataMeta(){
+  const m=(state.knowledge&&state.knowledge.metadata)||{};
+  const version=m.version_id??m.data_version??'';
+  const stamp=m.generated_at||m.updated_at||'';
+  let shown=stamp;
+  try{if(stamp)shown=new Date(stamp).toLocaleString();}catch(e){}
+  els.dataMeta.textContent=(version||shown)?`Data version ${version||'?'} - ${shown||'timestamp unavailable'}`:'Data version unavailable.';
+}
 
 function cleanProofText(s){
   if(!s)return'';
@@ -548,7 +558,7 @@ function render(){const g=visibleGraph();const dims=layout(g.nodes,g.edges);stat
 
 async function tryAutoLoad(){
   try{
-    const DATA_VERSION='20260619-0255-embedded-lists';
+    const DATA_VERSION='20260619-0305-data-version';
     const loadJson=(path,required=true)=>fetch(`${path}?v=${DATA_VERSION}`,{cache:'no-store'}).then(r=>{
       if(!r.ok){
         if(!required)return null;
@@ -563,6 +573,7 @@ async function tryAutoLoad(){
     ]);
     state.proofVault=pv||{records:{}};
     state.knowledge=k;state.edges=normalizeEdges(state.knowledge,e);state.nodePositions={};
+    renderDataMeta();
     els.status.textContent=`Loaded ${(k.nodes||[]).length} nodes, ${state.edges.length} edges.`;
     applyInitialView();
   }catch(err){els.status.textContent='Auto-load failed: '+err.message;}
@@ -573,6 +584,7 @@ async function loadManual(){
     if(!kf||!ef)throw new Error('Select both files.');
     const[k,e]=await Promise.all([kf.text().then(JSON.parse),ef.text().then(JSON.parse)]);
     state.knowledge=k;state.edges=normalizeEdges(state.knowledge,e);state.nodePositions={};
+    renderDataMeta();
     els.status.textContent=`Loaded ${(k.nodes||[]).length} nodes.`;
     applyInitialView();
   }catch(err){els.status.textContent='Load failed: '+err.message;}
