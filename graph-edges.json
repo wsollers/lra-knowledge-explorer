@@ -5570,6 +5570,526 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:complex-prepair",
+    "to": "def:ordered-pair",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-prepair",
+    "to": "def:reals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-prepair-set",
+    "to": "def:cartesian-product-rel",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-prepair-set",
+    "to": "def:reals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-coordinate-equivalence",
+    "to": "def:relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-coordinate-equivalence",
+    "to": "def:complex-prepair-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complex-coordinate-equivalence-relation",
+    "to": "def:equivalence-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complex-coordinate-equivalence-relation",
+    "to": "def:complex-coordinate-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complex-coordinate-equivalence-relation",
+    "to": "lem:complex-coordinate-equivalence-reflexive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complex-coordinate-equivalence-relation",
+    "to": "lem:complex-coordinate-equivalence-symmetric",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complex-coordinate-equivalence-relation",
+    "to": "lem:complex-coordinate-equivalence-transitive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-numbers",
+    "to": "def:quotient-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-numbers",
+    "to": "def:complex-prepair-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-numbers",
+    "to": "def:complex-coordinate-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:zero-one-i-in-c",
+    "to": "def:equiv-class",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:zero-one-i-in-c",
+    "to": "def:complex-class-notation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:zero-one-i-in-c",
+    "to": "def:reals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:canonical-embedding-r-into-c",
+    "to": "def:reals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:canonical-embedding-r-into-c",
+    "to": "def:complex-numbers",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:canonical-embedding-r-into-c",
+    "to": "def:complex-class-notation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:c-is-a-field",
+    "to": "thm:addition-on-c-well-defined",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:c-is-a-field",
+    "to": "thm:multiplication-on-c-well-defined",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:c-is-a-field",
+    "to": "thm:every-nonzero-complex-has-inverse",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:addition-on-c-classes",
+    "to": "def:complex-class-notation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:addition-on-c-classes",
+    "to": "def:addition-on-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:addition-on-c-respects-equivalence",
+    "to": "def:addition-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:addition-on-c-respects-equivalence",
+    "to": "def:complex-coordinate-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:addition-on-c-well-defined",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:addition-on-c-well-defined",
+    "to": "def:addition-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:addition-on-c-well-defined",
+    "to": "lem:addition-on-c-respects-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:negation-on-c-well-defined",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:negation-on-c-well-defined",
+    "to": "def:negation-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:negation-on-c-well-defined",
+    "to": "lem:negation-on-c-respects-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:subtraction-on-c-well-defined",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:subtraction-on-c-well-defined",
+    "to": "def:subtraction-on-c",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:subtraction-on-c-well-defined",
+    "to": "thm:addition-on-c-well-defined",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:subtraction-on-c-well-defined",
+    "to": "thm:negation-on-c-well-defined",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:multiplication-on-c-classes",
+    "to": "def:complex-class-notation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:multiplication-on-c-classes",
+    "to": "def:multiplication-on-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:multiplication-on-c-classes",
+    "to": "def:addition-on-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-c-well-defined",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-c-well-defined",
+    "to": "def:multiplication-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-c-well-defined",
+    "to": "lem:multiplication-on-c-respects-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complex-conjugation-well-defined",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complex-conjugation-well-defined",
+    "to": "def:complex-conjugation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inversion-on-c-well-defined",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inversion-on-c-well-defined",
+    "to": "def:multiplicative-inverse-on-c",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inversion-on-c-well-defined",
+    "to": "lem:complex-product-with-conjugate",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:congruence-modulo-integer",
+    "to": "def:integers",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:congruence-modulo-integer",
+    "to": "def:positive-integer",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:congruence-modulo-integer",
+    "to": "def:divisibility-in-z",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:congruence-modulo-integer",
+    "to": "def:subtraction-on-z",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:congruence-modulo-integer-equivalence",
+    "to": "def:equivalence-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:congruence-modulo-integer-equivalence",
+    "to": "def:congruence-modulo-integer",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:congruence-modulo-integer-equivalence",
+    "to": "def:divisibility-in-z",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:integers-modulo-n",
+    "to": "def:quotient-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:integers-modulo-n",
+    "to": "def:integers",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:integers-modulo-n",
+    "to": "def:congruence-modulo-integer",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:residue-class-modulo-n",
+    "to": "def:integers-modulo-n",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:residue-class-modulo-n",
+    "to": "def:equiv-class",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:residue-class-modulo-n",
+    "to": "def:congruence-modulo-integer",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:addition-modulo-n",
+    "to": "def:residue-class-modulo-n",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:addition-modulo-n",
+    "to": "def:addition-on-z-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:multiplication-modulo-n",
+    "to": "def:residue-class-modulo-n",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:multiplication-modulo-n",
+    "to": "def:multiplication-on-z-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:modular-operations-well-defined",
+    "to": "def:operation-well-definedness",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:modular-operations-well-defined",
+    "to": "def:addition-modulo-n",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:modular-operations-well-defined",
+    "to": "def:multiplication-modulo-n",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:modular-operations-well-defined",
+    "to": "def:congruence-modulo-integer",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:finite-modular-number-system",
+    "to": "def:integers-modulo-n",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:finite-modular-number-system",
+    "to": "def:addition-modulo-n",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:finite-modular-number-system",
+    "to": "def:multiplication-modulo-n",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:finite-modular-number-system",
+    "to": "def:zero-in-z",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:finite-modular-number-system",
+    "to": "def:one-in-z",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:z-mod-four-has-zero-divisors",
+    "to": "def:finite-modular-number-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:z-mod-four-has-zero-divisors",
+    "to": "def:multiplication-modulo-n",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:z-mod-four-has-zero-divisors",
+    "to": "def:abstract-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:number-system-construction-target",
+    "to": "def:binary-arithmetic-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:number-system-construction-target",
+    "to": "def:ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:number-system-construction-target",
+    "to": "def:abstract-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:number-system-construction-target",
+    "to": "def:abstract-ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:number-system-construction-data",
+    "to": "def:number-system-construction-target",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:number-system-construction-data",
+    "to": "def:equivalence-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:number-system-construction-data",
+    "to": "def:binary-arithmetic-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:number-system-construction-verification",
+    "to": "def:number-system-construction-target",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:number-system-construction-verification",
+    "to": "def:number-system-construction-data",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:number-system-construction-verification",
+    "to": "def:operation-well-definedness",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:number-system-construction-verification",
+    "to": "def:operation-respects-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:two-element-carrier",
+    "to": "def:zero-in-z",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:two-element-carrier",
+    "to": "def:one-in-z",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:addition-on-two-element-system",
+    "to": "def:two-element-carrier",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:addition-on-two-element-system",
+    "to": "def:binary-arithmetic-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:multiplication-on-two-element-system",
+    "to": "def:two-element-carrier",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:multiplication-on-two-element-system",
+    "to": "def:binary-arithmetic-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:two-element-number-system",
+    "to": "def:two-element-carrier",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:two-element-number-system",
+    "to": "def:addition-on-two-element-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:two-element-number-system",
+    "to": "def:multiplication-on-two-element-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:two-element-system-is-field",
+    "to": "def:two-element-number-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:two-element-system-is-field",
+    "to": "def:abstract-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:two-element-system-not-ordered-field",
+    "to": "thm:two-element-system-is-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:two-element-system-not-ordered-field",
+    "to": "def:abstract-ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:z-mod-two-is-two-element-system",
+    "to": "def:finite-modular-number-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:z-mod-two-is-two-element-system",
+    "to": "def:two-element-number-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:z-mod-two-is-two-element-system",
+    "to": "thm:modular-operations-well-defined",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:embedding-chain-compatibility",
     "to": "thm:n-embeds-into-w-as-positive-part",
     "kind": "depends_on"

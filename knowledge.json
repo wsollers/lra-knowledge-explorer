@@ -1,13 +1,15 @@
 {
   "metadata": {
-    "generated_at": "2026-06-19T03:19:43.652529+00:00",
-    "version_id": 6,
+    "generated_at": "2026-06-19T05:57:32.740141+00:00",
+    "version_id": 7,
     "chapters": [
       "axiom-systems",
       "predicate-logic",
       "propositional-logic",
       "sets-relations-functions",
       "arithmetic-operations-relations",
+      "complex-numbers",
+      "constructing-number-systems",
       "embedding-number-systems",
       "identity-equality-equivalence",
       "integers",
@@ -35,12 +37,12 @@
       "lambda-calculus",
       "model-theory"
     ],
-    "node_count": 1643,
-    "edge_count": 3756,
+    "node_count": 1706,
+    "edge_count": 3860,
     "error_count": 0,
     "schema_version": "governance-export-1",
     "script": "lra-governance/tools/governance/extraction_pipeline/export_knowledge_explorer.py",
-    "source_run": "F:\\repos\\lra-governance\\runs\\extraction-20260619-030735",
+    "source_run": "F:\\repos\\lra-governance\\runs\\extraction-20260619-055641",
     "toc": [
       {
         "id": "i",
@@ -466,12 +468,52 @@
             ]
           },
           {
+            "id": "complex-numbers",
+            "title": "Complex Numbers",
+            "sections": [
+              {
+                "id": "construction-of-c",
+                "title": "Construction of $\\mathbb{C}$"
+              },
+              {
+                "id": "operations-on-c-classes",
+                "title": "Operations on $\\mathbb{C}$-Classes"
+              },
+              {
+                "id": "field-structure-of-c",
+                "title": "Field Structure of $\\mathbb{C}$"
+              },
+              {
+                "id": "embedding-r-into-c",
+                "title": "Embedding $\\mathbb{R}$ into $\\mathbb{C}$"
+              }
+            ]
+          },
+          {
             "id": "numbers-summary",
             "title": "Summary: The Number Systems",
             "sections": [
               {
                 "id": "number-systems-summary",
                 "title": "Number Systems Summary"
+              }
+            ]
+          },
+          {
+            "id": "constructing-number-systems",
+            "title": "Constructing a Number System",
+            "sections": [
+              {
+                "id": "ground-rules",
+                "title": "Ground Rules"
+              },
+              {
+                "id": "finite-modular-number-systems",
+                "title": "Finite Modular Number Systems"
+              },
+              {
+                "id": "zero-one-number-system",
+                "title": "The \\(\\{0,1\\}\\) Number System"
               }
             ]
           },
@@ -12911,6 +12953,8 @@
         "def:canonical-surj",
         "lem:rep-independence",
         "thm:equiv-partition",
+        "def:zero-one-i-in-c",
+        "def:residue-class-modulo-n",
         "prop:equality-criterion-for-rational-classes"
       ],
       "prereq_ids": [],
@@ -12925,6 +12969,8 @@
         "Canonical Surjection",
         "Representative Independence Lemma",
         "Equivalence Relations and Partitions",
+        "Zero, One, and the Imaginary Unit in $\\mathbb{C}$",
+        "Residue Class Modulo \\(n\\)",
         "Equality Criterion for Rational Classes"
       ],
       "dependencies": [
@@ -12965,6 +13011,8 @@
         "thm:quotient-universal",
         "cor:complete-preorder-extension",
         "thm:induced-operation-well-defined",
+        "def:complex-numbers",
+        "def:integers-modulo-n",
         "def:canonical-projection",
         "prop:projection-is-surjective",
         "thm:existence-of-a-quotient",
@@ -12987,6 +13035,8 @@
         "Universal Property of the Quotient Map",
         "Complete preorder extension",
         "Induced Operation",
+        "Complex Numbers",
+        "Integers Modulo \\(n\\)",
         "Canonical Projection",
         "Projection Is Surjective",
         "Existence of a Quotient",
@@ -14476,6 +14526,12 @@
         "def:strictly-monotone-map",
         "def:homomorphism",
         "def:abstract-order-embedding",
+        "thm:addition-on-c-well-defined",
+        "thm:negation-on-c-well-defined",
+        "thm:subtraction-on-c-well-defined",
+        "thm:multiplication-on-c-well-defined",
+        "thm:complex-conjugation-well-defined",
+        "thm:inversion-on-c-well-defined",
         "def:canonical-embedding-w-into-z",
         "def:piecewise-linear-function",
         "def:bernstein-polynomial",
@@ -14572,6 +14628,12 @@
         "Strictly Monotone Map",
         "Homomorphism",
         "Order Embedding",
+        "Addition on $\\mathbb{C}$ Is Well-Defined",
+        "Negation on $\\mathbb{C}$ Is Well-Defined",
+        "Subtraction on $\\mathbb{C}$ Is Well-Defined",
+        "Multiplication on $\\mathbb{C}$ Is Well-Defined",
+        "Complex Conjugation Is Well-Defined",
+        "Inversion on $\\mathbb{C}^{\\times}$ Is Well-Defined",
         "Embedding of $\\mathbb{W}$ into $\\mathbb{Z}$",
         "Piecewise Linear Function",
         "Bernstein Polynomial",
@@ -17319,6 +17381,7 @@
         "thm:ordered-pair-unique",
         "def:cartesian-product-rel",
         "def:cartesian-product",
+        "def:complex-prepair",
         "def:integer-prepair",
         "def:prefraction"
       ],
@@ -17333,6 +17396,7 @@
         "Uniqueness of Ordered Pairs",
         "Cartesian Product — as foundation for relations",
         "Cartesian Product",
+        "Complex Prepair",
         "Integer Prepair",
         "Prefraction"
       ],
@@ -17414,6 +17478,7 @@
         "def:function",
         "def:relation",
         "def:binary-arithmetic-operation",
+        "def:complex-prepair-set",
         "def:operation-respects-equivalence",
         "def:integer-prepair-set",
         "def:prefraction-set"
@@ -17432,6 +17497,7 @@
         "Function",
         "Relation",
         "Binary Arithmetic Operation",
+        "Complex Prepair Set",
         "Operation Respects an Equivalence",
         "Integer Prepair Set",
         "Prefraction Set"
@@ -17502,6 +17568,7 @@
         "def:transitive-relation",
         "def:total-relation",
         "def:abstract-order-embedding",
+        "def:complex-coordinate-equivalence",
         "def:identity-relation",
         "def:equality-relation",
         "def:equivalence-relation",
@@ -17551,6 +17618,7 @@
         "Transitive Relation",
         "Total Relation",
         "Order Embedding",
+        "Complex Coordinate Equivalence",
         "Identity",
         "Equality on a Domain",
         "Equivalence Relation",
@@ -20328,6 +20396,7 @@
         "prop:left-sign-rule",
         "prop:right-sign-rule",
         "thm:ring-double-negation",
+        "def:number-system-construction-target",
         "def:boolean-ring",
         "def:idempotent-element"
       ],
@@ -20345,6 +20414,7 @@
         "Left Sign Rule",
         "Right Sign Rule",
         "Ring Double Negation",
+        "Number-System Construction Target",
         "Boolean Ring",
         "Idempotent Element"
       ],
@@ -20471,7 +20541,10 @@
         "thm:field-zero-product",
         "thm:field-multiplicative-cancellation",
         "thm:field-uniqueness-of-inverse",
-        "def:field-integer-power"
+        "def:field-integer-power",
+        "thm:z-mod-four-has-zero-divisors",
+        "def:number-system-construction-target",
+        "thm:two-element-system-is-field"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -20486,7 +20559,10 @@
         "Field Zero Product",
         "Field Multiplicative Cancellation",
         "Field Uniqueness of Inverse",
-        "Field Integer Power"
+        "Field Integer Power",
+        "\\(\\mathbb{Z}/4\\mathbb{Z}\\) Has Zero Divisors",
+        "Number-System Construction Target",
+        "The Two-Element System Is a Field"
       ],
       "dependencies": [
         "def:commutative-ring",
@@ -20528,6 +20604,8 @@
         "thm:ordered-field-positive-multiplication-preserves-order",
         "prop:multiplication-order-compatibility-left",
         "prop:multiplication-order-compatibility-right",
+        "def:number-system-construction-target",
+        "thm:two-element-system-not-ordered-field",
         "def:structure-preserving-map",
         "def:open-interval",
         "def:closed-interval",
@@ -20554,6 +20632,8 @@
         "Ordered Field Positive Multiplication Preserves Order",
         "Multiplication Preserves Order on the Left",
         "Multiplication Preserves Order on the Right",
+        "Number-System Construction Target",
+        "The Two-Element System Is Not an Ordered Field",
         "Structure-Preserving Map",
         "Open Interval",
         "Closed Interval",
@@ -20837,6 +20917,10 @@
         "def:right-order-reflection",
         "def:left-order-reflection",
         "def:homomorphism",
+        "def:number-system-construction-target",
+        "def:number-system-construction-data",
+        "def:addition-on-two-element-system",
+        "def:multiplication-on-two-element-system",
         "def:operation-respects-equivalence"
       ],
       "prereq_ids": [],
@@ -20866,6 +20950,10 @@
         "Right Order Reflection",
         "Left Order Reflection",
         "Homomorphism",
+        "Number-System Construction Target",
+        "Construction Data",
+        "Addition on the Two-Element System",
+        "Multiplication on the Two-Element System",
         "Operation Respects an Equivalence"
       ],
       "dependencies": [
@@ -20976,7 +21064,9 @@
       "used_by_ids": [
         "lem:operation-left-respect",
         "lem:operation-right-respect",
-        "thm:induced-operation-well-defined"
+        "thm:induced-operation-well-defined",
+        "thm:modular-operations-well-defined",
+        "def:number-system-construction-verification"
       ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
@@ -20987,7 +21077,9 @@
       "used_by_titles": [
         "Left Respect",
         "Right Respect",
-        "Induced Operation"
+        "Induced Operation",
+        "Modular Addition and Multiplication Are Well-Defined",
+        "Construction Verification"
       ],
       "dependencies": [
         "def:equivalence-relation"
@@ -24421,6 +24513,2498 @@
       "text_preview": "The identity map on a structure is a homomorphism from that structure to itself."
     },
     {
+      "id": "def:complex-prepair",
+      "kind": "Definition",
+      "name": "Complex Prepair",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "statement_display": "A \\emph{complex prepair} is an ordered pair $(a,b)\\in\\mathbb{R}\\times\\mathbb{R}$,\nread informally as the expression $a+bi$.",
+      "statement_tex": "A \\emph{complex prepair} is an ordered pair $(a,b)\\in\\mathbb{R}\\times\\mathbb{R}$,\nread informally as the expression $a+bi$.",
+      "source_text": "A \\emph{complex prepair} is an ordered pair $(a,b)\\in\\mathbb{R}\\times\\mathbb{R}$,\nread informally as the expression $a+bi$.",
+      "section": "construction-of-c",
+      "section_title": "Construction of $\\mathbb{C}$",
+      "depends_on_ids": [
+        "def:ordered-pair",
+        "def:reals"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Ordered Pair",
+        "The Real Numbers"
+      ],
+      "used_by_titles": [],
+      "dependencies": [
+        "def:ordered-pair",
+        "def:reals"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "A \\emph{complex prepair} is an ordered pair $(a,b)\\in\\mathbb{R}\\times\\mathbb{R}$, read informally as the expression $a+bi$."
+    },
+    {
+      "id": "def:complex-prepair-set",
+      "kind": "Definition",
+      "name": "Complex Prepair Set",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "statement_display": "The complex prepair set is\n\\[\n\\operatorname{Pre}\\mathbb{C}:=\\mathbb{R}\\times\\mathbb{R}.\n\\]",
+      "statement_tex": "The complex prepair set is\n\\[\n\\operatorname{Pre}\\mathbb{C}:=\\mathbb{R}\\times\\mathbb{R}.\n\\]",
+      "source_text": "The complex prepair set is\n\\[\n\\operatorname{Pre}\\mathbb{C}:=\\mathbb{R}\\times\\mathbb{R}.\n\\]",
+      "section": "construction-of-c",
+      "section_title": "Construction of $\\mathbb{C}$",
+      "depends_on_ids": [
+        "def:cartesian-product-rel",
+        "def:reals"
+      ],
+      "used_by_ids": [
+        "def:complex-coordinate-equivalence",
+        "def:complex-numbers"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Cartesian Product — as foundation for relations",
+        "The Real Numbers"
+      ],
+      "used_by_titles": [
+        "Complex Coordinate Equivalence",
+        "Complex Numbers"
+      ],
+      "dependencies": [
+        "def:cartesian-product-rel",
+        "def:reals"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "The complex prepair set is \\[ \\operatorname{Pre}\\mathbb{C}:=\\mathbb{R}\\times\\mathbb{R}. \\]"
+    },
+    {
+      "id": "def:complex-coordinate-equivalence",
+      "kind": "Definition",
+      "name": "Complex Coordinate Equivalence",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "statement_display": "For $(a,b),(c,d)\\in\\operatorname{Pre}\\mathbb{C}$, define\n\\[\n(a,b)\\sim_{\\mathbb{C}}(c,d)\n\\quad:\\Longleftrightarrow\\quad\na=c\\ \\text{ and }\\ b=d.\n\\]",
+      "statement_tex": "For $(a,b),(c,d)\\in\\operatorname{Pre}\\mathbb{C}$, define\n\\[\n(a,b)\\sim_{\\mathbb{C}}(c,d)\n\\quad:\\Longleftrightarrow\\quad\na=c\\ \\text{ and }\\ b=d.\n\\]",
+      "source_text": "For $(a,b),(c,d)\\in\\operatorname{Pre}\\mathbb{C}$, define\n\\[\n(a,b)\\sim_{\\mathbb{C}}(c,d)\n\\quad:\\Longleftrightarrow\\quad\na=c\\ \\text{ and }\\ b=d.\n\\]",
+      "section": "construction-of-c",
+      "section_title": "Construction of $\\mathbb{C}$",
+      "depends_on_ids": [
+        "def:relation",
+        "def:complex-prepair-set"
+      ],
+      "used_by_ids": [
+        "thm:complex-coordinate-equivalence-relation",
+        "def:complex-numbers",
+        "lem:addition-on-c-respects-equivalence"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Relation",
+        "Complex Prepair Set"
+      ],
+      "used_by_titles": [
+        "Complex Coordinate Equivalence Is an Equivalence Relation",
+        "Complex Numbers",
+        "Addition Respects Complex Coordinate Equivalence"
+      ],
+      "dependencies": [
+        "def:relation",
+        "def:complex-prepair-set"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "For $(a,b),(c,d)\\in\\operatorname{Pre}\\mathbb{C}$, define \\[ (a,b)\\sim_{\\mathbb{C}}(c,d) \\quad:\\Longleftrightarrow\\quad a=c\\ \\text{ and }\\ b=d. \\]"
+    },
+    {
+      "id": "lem:complex-coordinate-equivalence-reflexive",
+      "kind": "Lemma",
+      "name": "Complex Coordinate Equivalence Is Reflexive",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "statement_display": "For every $(a,b)\\in\\operatorname{Pre}\\mathbb{C}$,\n\\[\n(a,b)\\sim_{\\mathbb{C}}(a,b).\n\\]",
+      "statement_tex": "For every $(a,b)\\in\\operatorname{Pre}\\mathbb{C}$,\n\\[\n(a,b)\\sim_{\\mathbb{C}}(a,b).\n\\]",
+      "source_text": "For every $(a,b)\\in\\operatorname{Pre}\\mathbb{C}$,\n\\[\n(a,b)\\sim_{\\mathbb{C}}(a,b).\n\\]",
+      "section": "construction-of-c",
+      "section_title": "Construction of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:complex-coordinate-equivalence-relation"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Complex Coordinate Equivalence Is an Equivalence Relation"
+      ],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "For every $(a,b)\\in\\operatorname{Pre}\\mathbb{C}$, \\[ (a,b)\\sim_{\\mathbb{C}}(a,b). \\]"
+    },
+    {
+      "id": "lem:complex-coordinate-equivalence-symmetric",
+      "kind": "Lemma",
+      "name": "Complex Coordinate Equivalence Is Symmetric",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "statement_display": "For all prepairs $(a,b),(c,d)$,\n\\[\n(a,b)\\sim_{\\mathbb{C}}(c,d)\n\\Longrightarrow\n(c,d)\\sim_{\\mathbb{C}}(a,b).\n\\]",
+      "statement_tex": "For all prepairs $(a,b),(c,d)$,\n\\[\n(a,b)\\sim_{\\mathbb{C}}(c,d)\n\\Longrightarrow\n(c,d)\\sim_{\\mathbb{C}}(a,b).\n\\]",
+      "source_text": "For all prepairs $(a,b),(c,d)$,\n\\[\n(a,b)\\sim_{\\mathbb{C}}(c,d)\n\\Longrightarrow\n(c,d)\\sim_{\\mathbb{C}}(a,b).\n\\]",
+      "section": "construction-of-c",
+      "section_title": "Construction of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:complex-coordinate-equivalence-relation"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Complex Coordinate Equivalence Is an Equivalence Relation"
+      ],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "For all prepairs $(a,b),(c,d)$, \\[ (a,b)\\sim_{\\mathbb{C}}(c,d) \\Longrightarrow (c,d)\\sim_{\\mathbb{C}}(a,b). \\]"
+    },
+    {
+      "id": "lem:complex-coordinate-equivalence-transitive",
+      "kind": "Lemma",
+      "name": "Complex Coordinate Equivalence Is Transitive",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "statement_display": "For all prepairs $(a,b),(c,d),(e,f)$,\n\\[\n(a,b)\\sim_{\\mathbb{C}}(c,d)\\land\n(c,d)\\sim_{\\mathbb{C}}(e,f)\n\\Longrightarrow\n(a,b)\\sim_{\\mathbb{C}}(e,f).\n\\]",
+      "statement_tex": "For all prepairs $(a,b),(c,d),(e,f)$,\n\\[\n(a,b)\\sim_{\\mathbb{C}}(c,d)\\land\n(c,d)\\sim_{\\mathbb{C}}(e,f)\n\\Longrightarrow\n(a,b)\\sim_{\\mathbb{C}}(e,f).\n\\]",
+      "source_text": "For all prepairs $(a,b),(c,d),(e,f)$,\n\\[\n(a,b)\\sim_{\\mathbb{C}}(c,d)\\land\n(c,d)\\sim_{\\mathbb{C}}(e,f)\n\\Longrightarrow\n(a,b)\\sim_{\\mathbb{C}}(e,f).\n\\]",
+      "section": "construction-of-c",
+      "section_title": "Construction of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:complex-coordinate-equivalence-relation"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Complex Coordinate Equivalence Is an Equivalence Relation"
+      ],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "For all prepairs $(a,b),(c,d),(e,f)$, \\[ (a,b)\\sim_{\\mathbb{C}}(c,d)\\land (c,d)\\sim_{\\mathbb{C}}(e,f) \\Longrightarrow (a,b)\\sim_{\\mathbb{C}}(e,f). \\]"
+    },
+    {
+      "id": "thm:complex-coordinate-equivalence-relation",
+      "kind": "Theorem",
+      "name": "Complex Coordinate Equivalence Is an Equivalence Relation",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "statement_display": "The relation $\\sim_{\\mathbb{C}}$ is an equivalence relation on\n\\(\\operatorname{Pre}\\mathbb{C}\\).",
+      "statement_tex": "The relation $\\sim_{\\mathbb{C}}$ is an equivalence relation on\n\\(\\operatorname{Pre}\\mathbb{C}\\).",
+      "source_text": "The relation $\\sim_{\\mathbb{C}}$ is an equivalence relation on\n\\(\\operatorname{Pre}\\mathbb{C}\\).",
+      "section": "construction-of-c",
+      "section_title": "Construction of $\\mathbb{C}$",
+      "depends_on_ids": [
+        "def:equivalence-relation",
+        "def:complex-coordinate-equivalence",
+        "lem:complex-coordinate-equivalence-reflexive",
+        "lem:complex-coordinate-equivalence-symmetric",
+        "lem:complex-coordinate-equivalence-transitive"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Equivalence Relation",
+        "Complex Coordinate Equivalence",
+        "Complex Coordinate Equivalence Is Reflexive",
+        "Complex Coordinate Equivalence Is Symmetric",
+        "Complex Coordinate Equivalence Is Transitive"
+      ],
+      "used_by_titles": [],
+      "dependencies": [
+        "def:equivalence-relation",
+        "def:complex-coordinate-equivalence",
+        "lem:complex-coordinate-equivalence-reflexive",
+        "lem:complex-coordinate-equivalence-symmetric",
+        "lem:complex-coordinate-equivalence-transitive"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "The relation $\\sim_{\\mathbb{C}}$ is an equivalence relation on \\(\\operatorname{Pre}\\mathbb{C}\\)."
+    },
+    {
+      "id": "def:complex-numbers",
+      "kind": "Definition",
+      "name": "Complex Numbers",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "statement_display": "The complex numbers are the quotient\n\\[\n\\mathbb{C}:=\\operatorname{Pre}\\mathbb{C}/{\\sim_{\\mathbb{C}}}.\n\\]",
+      "statement_tex": "The complex numbers are the quotient\n\\[\n\\mathbb{C}:=\\operatorname{Pre}\\mathbb{C}/{\\sim_{\\mathbb{C}}}.\n\\]",
+      "source_text": "The complex numbers are the quotient\n\\[\n\\mathbb{C}:=\\operatorname{Pre}\\mathbb{C}/{\\sim_{\\mathbb{C}}}.\n\\]",
+      "section": "construction-of-c",
+      "section_title": "Construction of $\\mathbb{C}$",
+      "depends_on_ids": [
+        "def:quotient-set",
+        "def:complex-prepair-set",
+        "def:complex-coordinate-equivalence"
+      ],
+      "used_by_ids": [
+        "def:canonical-embedding-r-into-c"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Quotient Set",
+        "Complex Prepair Set",
+        "Complex Coordinate Equivalence"
+      ],
+      "used_by_titles": [
+        "Canonical Embedding of $\\mathbb{R}$ into $\\mathbb{C}$"
+      ],
+      "dependencies": [
+        "def:quotient-set",
+        "def:complex-prepair-set",
+        "def:complex-coordinate-equivalence"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "The complex numbers are the quotient \\[ \\mathbb{C}:=\\operatorname{Pre}\\mathbb{C}/{\\sim_{\\mathbb{C}}}. \\]"
+    },
+    {
+      "id": "def:complex-class-notation",
+      "kind": "Definition",
+      "name": "Complex Class Notation",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "statement_display": "The notation $[a,b]_{\\mathbb{C}}$ denotes the\n\\(\\sim_{\\mathbb{C}}\\)-equivalence class of the prepair $(a,b)$.",
+      "statement_tex": "The notation $[a,b]_{\\mathbb{C}}$ denotes the\n\\(\\sim_{\\mathbb{C}}\\)-equivalence class of the prepair $(a,b)$.",
+      "source_text": "The notation $[a,b]_{\\mathbb{C}}$ denotes the\n\\(\\sim_{\\mathbb{C}}\\)-equivalence class of the prepair $(a,b)$.",
+      "section": "construction-of-c",
+      "section_title": "Construction of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "def:zero-one-i-in-c",
+        "def:canonical-embedding-r-into-c",
+        "def:addition-on-c-classes",
+        "def:multiplication-on-c-classes"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Zero, One, and the Imaginary Unit in $\\mathbb{C}$",
+        "Canonical Embedding of $\\mathbb{R}$ into $\\mathbb{C}$",
+        "Addition on $\\mathbb{C}$-Classes",
+        "Multiplication on $\\mathbb{C}$-Classes"
+      ],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "The notation $[a,b]_{\\mathbb{C}}$ denotes the \\(\\sim_{\\mathbb{C}}\\)-equivalence class of the prepair $(a,b)$."
+    },
+    {
+      "id": "def:zero-one-i-in-c",
+      "kind": "Definition",
+      "name": "Zero, One, and the Imaginary Unit in $\\mathbb{C}$",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "statement_display": "Define\n\\[\n0_{\\mathbb{C}}:=[0,0]_{\\mathbb{C}},\n\\qquad\n1_{\\mathbb{C}}:=[1,0]_{\\mathbb{C}},\n\\qquad\ni:=[0,1]_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "Define\n\\[\n0_{\\mathbb{C}}:=[0,0]_{\\mathbb{C}},\n\\qquad\n1_{\\mathbb{C}}:=[1,0]_{\\mathbb{C}},\n\\qquad\ni:=[0,1]_{\\mathbb{C}}.\n\\]",
+      "source_text": "Define\n\\[\n0_{\\mathbb{C}}:=[0,0]_{\\mathbb{C}},\n\\qquad\n1_{\\mathbb{C}}:=[1,0]_{\\mathbb{C}},\n\\qquad\ni:=[0,1]_{\\mathbb{C}}.\n\\]",
+      "section": "construction-of-c",
+      "section_title": "Construction of $\\mathbb{C}$",
+      "depends_on_ids": [
+        "def:equiv-class",
+        "def:complex-class-notation",
+        "def:reals"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Equivalence Class",
+        "Complex Class Notation",
+        "The Real Numbers"
+      ],
+      "used_by_titles": [],
+      "dependencies": [
+        "def:equiv-class",
+        "def:complex-class-notation",
+        "def:reals"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Define \\[ 0_{\\mathbb{C}}:=[0,0]_{\\mathbb{C}}, \\qquad 1_{\\mathbb{C}}:=[1,0]_{\\mathbb{C}}, \\qquad i:=[0,1]_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "def:canonical-embedding-r-into-c",
+      "kind": "Definition",
+      "name": "Canonical Embedding of $\\mathbb{R}$ into $\\mathbb{C}$",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/embedding-r-into-c/notes-embedding-r-into-c.tex",
+      "statement_display": "Define\n\\[\n\\iota:\\mathbb{R}\\to\\mathbb{C},\n\\qquad\n\\iota(a):=[a,0]_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "Define\n\\[\n\\iota:\\mathbb{R}\\to\\mathbb{C},\n\\qquad\n\\iota(a):=[a,0]_{\\mathbb{C}}.\n\\]",
+      "source_text": "Define\n\\[\n\\iota:\\mathbb{R}\\to\\mathbb{C},\n\\qquad\n\\iota(a):=[a,0]_{\\mathbb{C}}.\n\\]",
+      "section": "embedding-r-into-c",
+      "section_title": "Embedding $\\mathbb{R}$ into $\\mathbb{C}$",
+      "depends_on_ids": [
+        "def:reals",
+        "def:complex-numbers",
+        "def:complex-class-notation"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "The Real Numbers",
+        "Complex Numbers",
+        "Complex Class Notation"
+      ],
+      "used_by_titles": [],
+      "dependencies": [
+        "def:reals",
+        "def:complex-numbers",
+        "def:complex-class-notation"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Define \\[ \\iota:\\mathbb{R}\\to\\mathbb{C}, \\qquad \\iota(a):=[a,0]_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "thm:embedding-r-into-c-injective",
+      "kind": "Theorem",
+      "name": "The Real Embedding into $\\mathbb{C}$ Is Injective",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/embedding-r-into-c/notes-embedding-r-into-c.tex",
+      "statement_display": "If \\(\\iota(a)=\\iota(b)\\), then \\(a=b\\).",
+      "statement_tex": "If \\(\\iota(a)=\\iota(b)\\), then \\(a=b\\).",
+      "source_text": "If \\(\\iota(a)=\\iota(b)\\), then \\(a=b\\).",
+      "section": "embedding-r-into-c",
+      "section_title": "Embedding $\\mathbb{R}$ into $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "If \\(\\iota(a)=\\iota(b)\\), then \\(a=b\\)."
+    },
+    {
+      "id": "thm:embedding-r-into-c-preserves-operations",
+      "kind": "Theorem",
+      "name": "The Real Embedding Preserves Addition and Multiplication",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/embedding-r-into-c/notes-embedding-r-into-c.tex",
+      "statement_display": "For all \\(a,b\\in\\mathbb{R}\\),\n\\[\n\\iota(a+b)=\\iota(a)+\\iota(b),\n\\qquad\n\\iota(ab)=\\iota(a)\\iota(b).\n\\]",
+      "statement_tex": "For all \\(a,b\\in\\mathbb{R}\\),\n\\[\n\\iota(a+b)=\\iota(a)+\\iota(b),\n\\qquad\n\\iota(ab)=\\iota(a)\\iota(b).\n\\]",
+      "source_text": "For all \\(a,b\\in\\mathbb{R}\\),\n\\[\n\\iota(a+b)=\\iota(a)+\\iota(b),\n\\qquad\n\\iota(ab)=\\iota(a)\\iota(b).\n\\]",
+      "section": "embedding-r-into-c",
+      "section_title": "Embedding $\\mathbb{R}$ into $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For all \\(a,b\\in\\mathbb{R}\\), \\[ \\iota(a+b)=\\iota(a)+\\iota(b), \\qquad \\iota(ab)=\\iota(a)\\iota(b). \\]"
+    },
+    {
+      "id": "thm:embedding-r-into-c-preserves-zero-one",
+      "kind": "Theorem",
+      "name": "The Real Embedding Preserves Zero and One",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/embedding-r-into-c/notes-embedding-r-into-c.tex",
+      "statement_display": "\\[\n\\iota(0)=0_{\\mathbb{C}},\n\\qquad\n\\iota(1)=1_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "\\[\n\\iota(0)=0_{\\mathbb{C}},\n\\qquad\n\\iota(1)=1_{\\mathbb{C}}.\n\\]",
+      "source_text": "\\[\n\\iota(0)=0_{\\mathbb{C}},\n\\qquad\n\\iota(1)=1_{\\mathbb{C}}.\n\\]",
+      "section": "embedding-r-into-c",
+      "section_title": "Embedding $\\mathbb{R}$ into $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "\\[ \\iota(0)=0_{\\mathbb{C}}, \\qquad \\iota(1)=1_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "def:real-and-imaginary-parts",
+      "kind": "Definition",
+      "name": "Real and Imaginary Parts",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/embedding-r-into-c/notes-embedding-r-into-c.tex",
+      "statement_display": "For \\(z=[a,b]_{\\mathbb{C}}\\), define\n\\[\n\\operatorname{Re}(z):=a,\n\\qquad\n\\operatorname{Im}(z):=b.\n\\]",
+      "statement_tex": "For \\(z=[a,b]_{\\mathbb{C}}\\), define\n\\[\n\\operatorname{Re}(z):=a,\n\\qquad\n\\operatorname{Im}(z):=b.\n\\]",
+      "source_text": "For \\(z=[a,b]_{\\mathbb{C}}\\), define\n\\[\n\\operatorname{Re}(z):=a,\n\\qquad\n\\operatorname{Im}(z):=b.\n\\]",
+      "section": "embedding-r-into-c",
+      "section_title": "Embedding $\\mathbb{R}$ into $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "For \\(z=[a,b]_{\\mathbb{C}}\\), define \\[ \\operatorname{Re}(z):=a, \\qquad \\operatorname{Im}(z):=b. \\]"
+    },
+    {
+      "id": "thm:real-imaginary-parts-well-defined",
+      "kind": "Theorem",
+      "name": "Real and Imaginary Parts Are Well-Defined",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/embedding-r-into-c/notes-embedding-r-into-c.tex",
+      "statement_display": "The functions\n\\[\n\\operatorname{Re},\\operatorname{Im}:\\mathbb{C}\\to\\mathbb{R}\n\\]\nare well-defined.",
+      "statement_tex": "The functions\n\\[\n\\operatorname{Re},\\operatorname{Im}:\\mathbb{C}\\to\\mathbb{R}\n\\]\nare well-defined.",
+      "source_text": "The functions\n\\[\n\\operatorname{Re},\\operatorname{Im}:\\mathbb{C}\\to\\mathbb{R}\n\\]\nare well-defined.",
+      "section": "embedding-r-into-c",
+      "section_title": "Embedding $\\mathbb{R}$ into $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "The functions \\[ \\operatorname{Re},\\operatorname{Im}:\\mathbb{C}\\to\\mathbb{R} \\] are well-defined."
+    },
+    {
+      "id": "thm:addition-on-c-associative",
+      "kind": "Theorem",
+      "name": "Addition on $\\mathbb{C}$ Is Associative",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "statement_display": "For all \\(z,w,u\\in\\mathbb{C}\\),\n\\[\n(z+w)+u=z+(w+u).\n\\]",
+      "statement_tex": "For all \\(z,w,u\\in\\mathbb{C}\\),\n\\[\n(z+w)+u=z+(w+u).\n\\]",
+      "source_text": "For all \\(z,w,u\\in\\mathbb{C}\\),\n\\[\n(z+w)+u=z+(w+u).\n\\]",
+      "section": "field-structure-of-c",
+      "section_title": "Field Structure of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For all \\(z,w,u\\in\\mathbb{C}\\), \\[ (z+w)+u=z+(w+u). \\]"
+    },
+    {
+      "id": "thm:addition-on-c-commutative",
+      "kind": "Theorem",
+      "name": "Addition on $\\mathbb{C}$ Is Commutative",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "statement_display": "For all \\(z,w\\in\\mathbb{C}\\),\n\\[\nz+w=w+z.\n\\]",
+      "statement_tex": "For all \\(z,w\\in\\mathbb{C}\\),\n\\[\nz+w=w+z.\n\\]",
+      "source_text": "For all \\(z,w\\in\\mathbb{C}\\),\n\\[\nz+w=w+z.\n\\]",
+      "section": "field-structure-of-c",
+      "section_title": "Field Structure of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For all \\(z,w\\in\\mathbb{C}\\), \\[ z+w=w+z. \\]"
+    },
+    {
+      "id": "thm:zero-additive-identity-on-c",
+      "kind": "Theorem",
+      "name": "Zero Is an Additive Identity on $\\mathbb{C}$",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "statement_display": "For every \\(z\\in\\mathbb{C}\\),\n\\[\n0_{\\mathbb{C}}+z=z\n\\qquad\\text{and}\\qquad\nz+0_{\\mathbb{C}}=z.\n\\]",
+      "statement_tex": "For every \\(z\\in\\mathbb{C}\\),\n\\[\n0_{\\mathbb{C}}+z=z\n\\qquad\\text{and}\\qquad\nz+0_{\\mathbb{C}}=z.\n\\]",
+      "source_text": "For every \\(z\\in\\mathbb{C}\\),\n\\[\n0_{\\mathbb{C}}+z=z\n\\qquad\\text{and}\\qquad\nz+0_{\\mathbb{C}}=z.\n\\]",
+      "section": "field-structure-of-c",
+      "section_title": "Field Structure of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For every \\(z\\in\\mathbb{C}\\), \\[ 0_{\\mathbb{C}}+z=z \\qquad\\text{and}\\qquad z+0_{\\mathbb{C}}=z. \\]"
+    },
+    {
+      "id": "thm:every-complex-has-additive-inverse",
+      "kind": "Theorem",
+      "name": "Every Complex Number Has an Additive Inverse",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "statement_display": "For every \\(z\\in\\mathbb{C}\\),\n\\[\nz+(-z)=0_{\\mathbb{C}}\n\\qquad\\text{and}\\qquad\n(-z)+z=0_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "For every \\(z\\in\\mathbb{C}\\),\n\\[\nz+(-z)=0_{\\mathbb{C}}\n\\qquad\\text{and}\\qquad\n(-z)+z=0_{\\mathbb{C}}.\n\\]",
+      "source_text": "For every \\(z\\in\\mathbb{C}\\),\n\\[\nz+(-z)=0_{\\mathbb{C}}\n\\qquad\\text{and}\\qquad\n(-z)+z=0_{\\mathbb{C}}.\n\\]",
+      "section": "field-structure-of-c",
+      "section_title": "Field Structure of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For every \\(z\\in\\mathbb{C}\\), \\[ z+(-z)=0_{\\mathbb{C}} \\qquad\\text{and}\\qquad (-z)+z=0_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "thm:multiplication-on-c-associative",
+      "kind": "Theorem",
+      "name": "Multiplication on $\\mathbb{C}$ Is Associative",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "statement_display": "For all \\(z,w,u\\in\\mathbb{C}\\),\n\\[\n(zw)u=z(wu).\n\\]",
+      "statement_tex": "For all \\(z,w,u\\in\\mathbb{C}\\),\n\\[\n(zw)u=z(wu).\n\\]",
+      "source_text": "For all \\(z,w,u\\in\\mathbb{C}\\),\n\\[\n(zw)u=z(wu).\n\\]",
+      "section": "field-structure-of-c",
+      "section_title": "Field Structure of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For all \\(z,w,u\\in\\mathbb{C}\\), \\[ (zw)u=z(wu). \\]"
+    },
+    {
+      "id": "thm:multiplication-on-c-commutative",
+      "kind": "Theorem",
+      "name": "Multiplication on $\\mathbb{C}$ Is Commutative",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "statement_display": "For all \\(z,w\\in\\mathbb{C}\\),\n\\[\nzw=wz.\n\\]",
+      "statement_tex": "For all \\(z,w\\in\\mathbb{C}\\),\n\\[\nzw=wz.\n\\]",
+      "source_text": "For all \\(z,w\\in\\mathbb{C}\\),\n\\[\nzw=wz.\n\\]",
+      "section": "field-structure-of-c",
+      "section_title": "Field Structure of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For all \\(z,w\\in\\mathbb{C}\\), \\[ zw=wz. \\]"
+    },
+    {
+      "id": "thm:one-multiplicative-identity-on-c",
+      "kind": "Theorem",
+      "name": "One Is a Multiplicative Identity on $\\mathbb{C}$",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "statement_display": "For every \\(z\\in\\mathbb{C}\\),\n\\[\n1_{\\mathbb{C}}z=z\n\\qquad\\text{and}\\qquad\nz1_{\\mathbb{C}}=z.\n\\]",
+      "statement_tex": "For every \\(z\\in\\mathbb{C}\\),\n\\[\n1_{\\mathbb{C}}z=z\n\\qquad\\text{and}\\qquad\nz1_{\\mathbb{C}}=z.\n\\]",
+      "source_text": "For every \\(z\\in\\mathbb{C}\\),\n\\[\n1_{\\mathbb{C}}z=z\n\\qquad\\text{and}\\qquad\nz1_{\\mathbb{C}}=z.\n\\]",
+      "section": "field-structure-of-c",
+      "section_title": "Field Structure of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For every \\(z\\in\\mathbb{C}\\), \\[ 1_{\\mathbb{C}}z=z \\qquad\\text{and}\\qquad z1_{\\mathbb{C}}=z. \\]"
+    },
+    {
+      "id": "thm:every-nonzero-complex-has-inverse",
+      "kind": "Theorem",
+      "name": "Every Nonzero Complex Number Has a Multiplicative Inverse",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "statement_display": "For every \\(z\\in\\mathbb{C}\\) with \\(z\\ne 0_{\\mathbb{C}}\\),\n\\[\nzz^{-1}=1_{\\mathbb{C}}\n\\qquad\\text{and}\\qquad\nz^{-1}z=1_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "For every \\(z\\in\\mathbb{C}\\) with \\(z\\ne 0_{\\mathbb{C}}\\),\n\\[\nzz^{-1}=1_{\\mathbb{C}}\n\\qquad\\text{and}\\qquad\nz^{-1}z=1_{\\mathbb{C}}.\n\\]",
+      "source_text": "For every \\(z\\in\\mathbb{C}\\) with \\(z\\ne 0_{\\mathbb{C}}\\),\n\\[\nzz^{-1}=1_{\\mathbb{C}}\n\\qquad\\text{and}\\qquad\nz^{-1}z=1_{\\mathbb{C}}.\n\\]",
+      "section": "field-structure-of-c",
+      "section_title": "Field Structure of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:c-is-a-field"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "$\\mathbb{C}$ Is a Field"
+      ],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For every \\(z\\in\\mathbb{C}\\) with \\(z\\ne 0_{\\mathbb{C}}\\), \\[ zz^{-1}=1_{\\mathbb{C}} \\qquad\\text{and}\\qquad z^{-1}z=1_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "thm:multiplication-distributes-over-addition-on-c",
+      "kind": "Theorem",
+      "name": "Multiplication Distributes over Addition on $\\mathbb{C}$",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "statement_display": "For all \\(z,w,u\\in\\mathbb{C}\\),\n\\[\nz(w+u)=zw+zu\n\\qquad\\text{and}\\qquad\n(w+u)z=wz+uz.\n\\]",
+      "statement_tex": "For all \\(z,w,u\\in\\mathbb{C}\\),\n\\[\nz(w+u)=zw+zu\n\\qquad\\text{and}\\qquad\n(w+u)z=wz+uz.\n\\]",
+      "source_text": "For all \\(z,w,u\\in\\mathbb{C}\\),\n\\[\nz(w+u)=zw+zu\n\\qquad\\text{and}\\qquad\n(w+u)z=wz+uz.\n\\]",
+      "section": "field-structure-of-c",
+      "section_title": "Field Structure of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For all \\(z,w,u\\in\\mathbb{C}\\), \\[ z(w+u)=zw+zu \\qquad\\text{and}\\qquad (w+u)z=wz+uz. \\]"
+    },
+    {
+      "id": "thm:c-is-a-field",
+      "kind": "Theorem",
+      "name": "$\\mathbb{C}$ Is a Field",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "statement_display": "With the operations defined above,\n\\[\n(\\mathbb{C},+,\\,\\cdot,\\,0_{\\mathbb{C}},\\,1_{\\mathbb{C}})\n\\]\nis a field.",
+      "statement_tex": "With the operations defined above,\n\\[\n(\\mathbb{C},+,\\,\\cdot,\\,0_{\\mathbb{C}},\\,1_{\\mathbb{C}})\n\\]\nis a field.",
+      "source_text": "With the operations defined above,\n\\[\n(\\mathbb{C},+,\\,\\cdot,\\,0_{\\mathbb{C}},\\,1_{\\mathbb{C}})\n\\]\nis a field.",
+      "section": "field-structure-of-c",
+      "section_title": "Field Structure of $\\mathbb{C}$",
+      "depends_on_ids": [
+        "thm:addition-on-c-well-defined",
+        "thm:multiplication-on-c-well-defined",
+        "thm:every-nonzero-complex-has-inverse"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Addition on $\\mathbb{C}$ Is Well-Defined",
+        "Multiplication on $\\mathbb{C}$ Is Well-Defined",
+        "Every Nonzero Complex Number Has a Multiplicative Inverse"
+      ],
+      "used_by_titles": [],
+      "dependencies": [
+        "thm:addition-on-c-well-defined",
+        "thm:multiplication-on-c-well-defined",
+        "thm:every-nonzero-complex-has-inverse"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "With the operations defined above, \\[ (\\mathbb{C},+,\\,\\cdot,\\,0_{\\mathbb{C}},\\,1_{\\mathbb{C}}) \\] is a field."
+    },
+    {
+      "id": "thm:i-squared-negative-one",
+      "kind": "Theorem",
+      "name": "The Imaginary Unit Squares to Negative One",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "statement_display": "In \\(\\mathbb{C}\\),\n\\[\ni^2=-1_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "In \\(\\mathbb{C}\\),\n\\[\ni^2=-1_{\\mathbb{C}}.\n\\]",
+      "source_text": "In \\(\\mathbb{C}\\),\n\\[\ni^2=-1_{\\mathbb{C}}.\n\\]",
+      "section": "field-structure-of-c",
+      "section_title": "Field Structure of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "In \\(\\mathbb{C}\\), \\[ i^2=-1_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "thm:c-is-not-an-ordered-field",
+      "kind": "Theorem",
+      "name": "$\\mathbb{C}$ Is Not an Ordered Field",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "statement_display": "There is no order relation on \\(\\mathbb{C}\\) making \\(\\mathbb{C}\\) an ordered\nfield and extending the usual order on \\(\\mathbb{R}\\).",
+      "statement_tex": "There is no order relation on \\(\\mathbb{C}\\) making \\(\\mathbb{C}\\) an ordered\nfield and extending the usual order on \\(\\mathbb{R}\\).",
+      "source_text": "There is no order relation on \\(\\mathbb{C}\\) making \\(\\mathbb{C}\\) an ordered\nfield and extending the usual order on \\(\\mathbb{R}\\).",
+      "section": "field-structure-of-c",
+      "section_title": "Field Structure of $\\mathbb{C}$",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "There is no order relation on \\(\\mathbb{C}\\) making \\(\\mathbb{C}\\) an ordered field and extending the usual order on \\(\\mathbb{R}\\)."
+    },
+    {
+      "id": "def:addition-on-c-classes",
+      "kind": "Definition",
+      "name": "Addition on $\\mathbb{C}$-Classes",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "Define addition on representatives by\n\\[\n[a,b]_{\\mathbb{C}}+[c,d]_{\\mathbb{C}}\n:=[a+c,b+d]_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "Define addition on representatives by\n\\[\n[a,b]_{\\mathbb{C}}+[c,d]_{\\mathbb{C}}\n:=[a+c,b+d]_{\\mathbb{C}}.\n\\]",
+      "source_text": "Define addition on representatives by\n\\[\n[a,b]_{\\mathbb{C}}+[c,d]_{\\mathbb{C}}\n:=[a+c,b+d]_{\\mathbb{C}}.\n\\]",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [
+        "def:complex-class-notation",
+        "def:addition-on-r"
+      ],
+      "used_by_ids": [
+        "lem:addition-on-c-respects-equivalence",
+        "thm:addition-on-c-well-defined"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Complex Class Notation",
+        "Addition of Cuts"
+      ],
+      "used_by_titles": [
+        "Addition Respects Complex Coordinate Equivalence",
+        "Addition on $\\mathbb{C}$ Is Well-Defined"
+      ],
+      "dependencies": [
+        "def:complex-class-notation",
+        "def:addition-on-r"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Define addition on representatives by \\[ [a,b]_{\\mathbb{C}}+[c,d]_{\\mathbb{C}} :=[a+c,b+d]_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "lem:addition-on-c-respects-equivalence",
+      "kind": "Lemma",
+      "name": "Addition Respects Complex Coordinate Equivalence",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "If $[a,b]_{\\mathbb{C}}=[a',b']_{\\mathbb{C}}$ and\n$[c,d]_{\\mathbb{C}}=[c',d']_{\\mathbb{C}}$, then\n\\[\n[a,b]_{\\mathbb{C}}+[c,d]_{\\mathbb{C}}\n=\n[a',b']_{\\mathbb{C}}+[c',d']_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "If $[a,b]_{\\mathbb{C}}=[a',b']_{\\mathbb{C}}$ and\n$[c,d]_{\\mathbb{C}}=[c',d']_{\\mathbb{C}}$, then\n\\[\n[a,b]_{\\mathbb{C}}+[c,d]_{\\mathbb{C}}\n=\n[a',b']_{\\mathbb{C}}+[c',d']_{\\mathbb{C}}.\n\\]",
+      "source_text": "If $[a,b]_{\\mathbb{C}}=[a',b']_{\\mathbb{C}}$ and\n$[c,d]_{\\mathbb{C}}=[c',d']_{\\mathbb{C}}$, then\n\\[\n[a,b]_{\\mathbb{C}}+[c,d]_{\\mathbb{C}}\n=\n[a',b']_{\\mathbb{C}}+[c',d']_{\\mathbb{C}}.\n\\]",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [
+        "def:addition-on-c-classes",
+        "def:complex-coordinate-equivalence"
+      ],
+      "used_by_ids": [
+        "thm:addition-on-c-well-defined"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Addition on $\\mathbb{C}$-Classes",
+        "Complex Coordinate Equivalence"
+      ],
+      "used_by_titles": [
+        "Addition on $\\mathbb{C}$ Is Well-Defined"
+      ],
+      "dependencies": [
+        "def:addition-on-c-classes",
+        "def:complex-coordinate-equivalence"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "If $[a,b]_{\\mathbb{C}}=[a',b']_{\\mathbb{C}}$ and $[c,d]_{\\mathbb{C}}=[c',d']_{\\mathbb{C}}$, then \\[ [a,b]_{\\mathbb{C}}+[c,d]_{\\mathbb{C}} = [a',b']_{\\mathbb{C}}+[c',d']_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "thm:addition-on-c-well-defined",
+      "kind": "Theorem",
+      "name": "Addition on $\\mathbb{C}$ Is Well-Defined",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "Addition determines a well-defined binary operation\n\\[\n\\mathbb{C}\\times\\mathbb{C}\\to\\mathbb{C}.\n\\]",
+      "statement_tex": "Addition determines a well-defined binary operation\n\\[\n\\mathbb{C}\\times\\mathbb{C}\\to\\mathbb{C}.\n\\]",
+      "source_text": "Addition determines a well-defined binary operation\n\\[\n\\mathbb{C}\\times\\mathbb{C}\\to\\mathbb{C}.\n\\]",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [
+        "def:function",
+        "def:addition-on-c-classes",
+        "lem:addition-on-c-respects-equivalence"
+      ],
+      "used_by_ids": [
+        "thm:c-is-a-field",
+        "thm:subtraction-on-c-well-defined"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Function",
+        "Addition on $\\mathbb{C}$-Classes",
+        "Addition Respects Complex Coordinate Equivalence"
+      ],
+      "used_by_titles": [
+        "$\\mathbb{C}$ Is a Field",
+        "Subtraction on $\\mathbb{C}$ Is Well-Defined"
+      ],
+      "dependencies": [
+        "def:function",
+        "def:addition-on-c-classes",
+        "lem:addition-on-c-respects-equivalence"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "Addition determines a well-defined binary operation \\[ \\mathbb{C}\\times\\mathbb{C}\\to\\mathbb{C}. \\]"
+    },
+    {
+      "id": "def:negation-on-c-classes",
+      "kind": "Definition",
+      "name": "Negation on $\\mathbb{C}$-Classes",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "Define negation by\n\\[\n-[a,b]_{\\mathbb{C}}:=[-a,-b]_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "Define negation by\n\\[\n-[a,b]_{\\mathbb{C}}:=[-a,-b]_{\\mathbb{C}}.\n\\]",
+      "source_text": "Define negation by\n\\[\n-[a,b]_{\\mathbb{C}}:=[-a,-b]_{\\mathbb{C}}.\n\\]",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:negation-on-c-well-defined"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Negation on $\\mathbb{C}$ Is Well-Defined"
+      ],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Define negation by \\[ -[a,b]_{\\mathbb{C}}:=[-a,-b]_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "lem:negation-on-c-respects-equivalence",
+      "kind": "Lemma",
+      "name": "Negation Respects Complex Coordinate Equivalence",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "If $[a,b]_{\\mathbb{C}}=[a',b']_{\\mathbb{C}}$, then\n\\[\n-[a,b]_{\\mathbb{C}}=-[a',b']_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "If $[a,b]_{\\mathbb{C}}=[a',b']_{\\mathbb{C}}$, then\n\\[\n-[a,b]_{\\mathbb{C}}=-[a',b']_{\\mathbb{C}}.\n\\]",
+      "source_text": "If $[a,b]_{\\mathbb{C}}=[a',b']_{\\mathbb{C}}$, then\n\\[\n-[a,b]_{\\mathbb{C}}=-[a',b']_{\\mathbb{C}}.\n\\]",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:negation-on-c-well-defined"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Negation on $\\mathbb{C}$ Is Well-Defined"
+      ],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "If $[a,b]_{\\mathbb{C}}=[a',b']_{\\mathbb{C}}$, then \\[ -[a,b]_{\\mathbb{C}}=-[a',b']_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "thm:negation-on-c-well-defined",
+      "kind": "Theorem",
+      "name": "Negation on $\\mathbb{C}$ Is Well-Defined",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "Negation determines a well-defined unary operation $\\mathbb{C}\\to\\mathbb{C}$.",
+      "statement_tex": "Negation determines a well-defined unary operation $\\mathbb{C}\\to\\mathbb{C}$.",
+      "source_text": "Negation determines a well-defined unary operation $\\mathbb{C}\\to\\mathbb{C}$.",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [
+        "def:function",
+        "def:negation-on-c-classes",
+        "lem:negation-on-c-respects-equivalence"
+      ],
+      "used_by_ids": [
+        "thm:subtraction-on-c-well-defined"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Function",
+        "Negation on $\\mathbb{C}$-Classes",
+        "Negation Respects Complex Coordinate Equivalence"
+      ],
+      "used_by_titles": [
+        "Subtraction on $\\mathbb{C}$ Is Well-Defined"
+      ],
+      "dependencies": [
+        "def:function",
+        "def:negation-on-c-classes",
+        "lem:negation-on-c-respects-equivalence"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "Negation determines a well-defined unary operation $\\mathbb{C}\\to\\mathbb{C}$."
+    },
+    {
+      "id": "def:subtraction-on-c",
+      "kind": "Definition",
+      "name": "Subtraction on $\\mathbb{C}$",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "For $z,w\\in\\mathbb{C}$, define\n\\[\nz-w:=z+(-w).\n\\]",
+      "statement_tex": "For $z,w\\in\\mathbb{C}$, define\n\\[\nz-w:=z+(-w).\n\\]",
+      "source_text": "For $z,w\\in\\mathbb{C}$, define\n\\[\nz-w:=z+(-w).\n\\]",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:subtraction-on-c-well-defined"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Subtraction on $\\mathbb{C}$ Is Well-Defined"
+      ],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "For $z,w\\in\\mathbb{C}$, define \\[ z-w:=z+(-w). \\]"
+    },
+    {
+      "id": "thm:subtraction-on-c-well-defined",
+      "kind": "Theorem",
+      "name": "Subtraction on $\\mathbb{C}$ Is Well-Defined",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "Subtraction determines a well-defined binary operation\n\\(\\mathbb{C}\\times\\mathbb{C}\\to\\mathbb{C}\\).",
+      "statement_tex": "Subtraction determines a well-defined binary operation\n\\(\\mathbb{C}\\times\\mathbb{C}\\to\\mathbb{C}\\).",
+      "source_text": "Subtraction determines a well-defined binary operation\n\\(\\mathbb{C}\\times\\mathbb{C}\\to\\mathbb{C}\\).",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [
+        "def:function",
+        "def:subtraction-on-c",
+        "thm:addition-on-c-well-defined",
+        "thm:negation-on-c-well-defined"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Function",
+        "Subtraction on $\\mathbb{C}$",
+        "Addition on $\\mathbb{C}$ Is Well-Defined",
+        "Negation on $\\mathbb{C}$ Is Well-Defined"
+      ],
+      "used_by_titles": [],
+      "dependencies": [
+        "def:function",
+        "def:subtraction-on-c",
+        "thm:addition-on-c-well-defined",
+        "thm:negation-on-c-well-defined"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "Subtraction determines a well-defined binary operation \\(\\mathbb{C}\\times\\mathbb{C}\\to\\mathbb{C}\\)."
+    },
+    {
+      "id": "def:multiplication-on-c-classes",
+      "kind": "Definition",
+      "name": "Multiplication on $\\mathbb{C}$-Classes",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "Define multiplication on representatives by\n\\[\n[a,b]_{\\mathbb{C}}\\cdot[c,d]_{\\mathbb{C}}\n:=[ac-bd,ad+bc]_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "Define multiplication on representatives by\n\\[\n[a,b]_{\\mathbb{C}}\\cdot[c,d]_{\\mathbb{C}}\n:=[ac-bd,ad+bc]_{\\mathbb{C}}.\n\\]",
+      "source_text": "Define multiplication on representatives by\n\\[\n[a,b]_{\\mathbb{C}}\\cdot[c,d]_{\\mathbb{C}}\n:=[ac-bd,ad+bc]_{\\mathbb{C}}.\n\\]",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [
+        "def:complex-class-notation",
+        "def:multiplication-on-r",
+        "def:addition-on-r"
+      ],
+      "used_by_ids": [
+        "thm:multiplication-on-c-well-defined"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Complex Class Notation",
+        "Multiplication of Cuts",
+        "Addition of Cuts"
+      ],
+      "used_by_titles": [
+        "Multiplication on $\\mathbb{C}$ Is Well-Defined"
+      ],
+      "dependencies": [
+        "def:complex-class-notation",
+        "def:multiplication-on-r",
+        "def:addition-on-r"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Define multiplication on representatives by \\[ [a,b]_{\\mathbb{C}}\\cdot[c,d]_{\\mathbb{C}} :=[ac-bd,ad+bc]_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "lem:multiplication-on-c-respects-equivalence",
+      "kind": "Lemma",
+      "name": "Multiplication Respects Complex Coordinate Equivalence",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "If $[a,b]_{\\mathbb{C}}=[a',b']_{\\mathbb{C}}$ and\n$[c,d]_{\\mathbb{C}}=[c',d']_{\\mathbb{C}}$, then\n\\[\n[a,b]_{\\mathbb{C}}\\cdot[c,d]_{\\mathbb{C}}\n=\n[a',b']_{\\mathbb{C}}\\cdot[c',d']_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "If $[a,b]_{\\mathbb{C}}=[a',b']_{\\mathbb{C}}$ and\n$[c,d]_{\\mathbb{C}}=[c',d']_{\\mathbb{C}}$, then\n\\[\n[a,b]_{\\mathbb{C}}\\cdot[c,d]_{\\mathbb{C}}\n=\n[a',b']_{\\mathbb{C}}\\cdot[c',d']_{\\mathbb{C}}.\n\\]",
+      "source_text": "If $[a,b]_{\\mathbb{C}}=[a',b']_{\\mathbb{C}}$ and\n$[c,d]_{\\mathbb{C}}=[c',d']_{\\mathbb{C}}$, then\n\\[\n[a,b]_{\\mathbb{C}}\\cdot[c,d]_{\\mathbb{C}}\n=\n[a',b']_{\\mathbb{C}}\\cdot[c',d']_{\\mathbb{C}}.\n\\]",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:multiplication-on-c-well-defined"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Multiplication on $\\mathbb{C}$ Is Well-Defined"
+      ],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "If $[a,b]_{\\mathbb{C}}=[a',b']_{\\mathbb{C}}$ and $[c,d]_{\\mathbb{C}}=[c',d']_{\\mathbb{C}}$, then \\[ [a,b]_{\\mathbb{C}}\\cdot[c,d]_{\\mathbb{C}} = [a',b']_{\\mathbb{C}}\\cdot[c',d']_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "thm:multiplication-on-c-well-defined",
+      "kind": "Theorem",
+      "name": "Multiplication on $\\mathbb{C}$ Is Well-Defined",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "Multiplication determines a well-defined binary operation\n\\[\n\\mathbb{C}\\times\\mathbb{C}\\to\\mathbb{C}.\n\\]",
+      "statement_tex": "Multiplication determines a well-defined binary operation\n\\[\n\\mathbb{C}\\times\\mathbb{C}\\to\\mathbb{C}.\n\\]",
+      "source_text": "Multiplication determines a well-defined binary operation\n\\[\n\\mathbb{C}\\times\\mathbb{C}\\to\\mathbb{C}.\n\\]",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [
+        "def:function",
+        "def:multiplication-on-c-classes",
+        "lem:multiplication-on-c-respects-equivalence"
+      ],
+      "used_by_ids": [
+        "thm:c-is-a-field"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Function",
+        "Multiplication on $\\mathbb{C}$-Classes",
+        "Multiplication Respects Complex Coordinate Equivalence"
+      ],
+      "used_by_titles": [
+        "$\\mathbb{C}$ Is a Field"
+      ],
+      "dependencies": [
+        "def:function",
+        "def:multiplication-on-c-classes",
+        "lem:multiplication-on-c-respects-equivalence"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "Multiplication determines a well-defined binary operation \\[ \\mathbb{C}\\times\\mathbb{C}\\to\\mathbb{C}. \\]"
+    },
+    {
+      "id": "def:complex-conjugation",
+      "kind": "Definition",
+      "name": "Complex Conjugation",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "For \\(z=[a,b]_{\\mathbb{C}}\\), define its \\emph{complex conjugate} by\n\\[\n\\overline{z}:=[a,-b]_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "For \\(z=[a,b]_{\\mathbb{C}}\\), define its \\emph{complex conjugate} by\n\\[\n\\overline{z}:=[a,-b]_{\\mathbb{C}}.\n\\]",
+      "source_text": "For \\(z=[a,b]_{\\mathbb{C}}\\), define its \\emph{complex conjugate} by\n\\[\n\\overline{z}:=[a,-b]_{\\mathbb{C}}.\n\\]",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:complex-conjugation-well-defined"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Complex Conjugation Is Well-Defined"
+      ],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "For \\(z=[a,b]_{\\mathbb{C}}\\), define its \\emph{complex conjugate} by \\[ \\overline{z}:=[a,-b]_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "thm:complex-conjugation-well-defined",
+      "kind": "Theorem",
+      "name": "Complex Conjugation Is Well-Defined",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "Complex conjugation determines a well-defined unary operation\n\\(\\mathbb{C}\\to\\mathbb{C}\\).",
+      "statement_tex": "Complex conjugation determines a well-defined unary operation\n\\(\\mathbb{C}\\to\\mathbb{C}\\).",
+      "source_text": "Complex conjugation determines a well-defined unary operation\n\\(\\mathbb{C}\\to\\mathbb{C}\\).",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [
+        "def:function",
+        "def:complex-conjugation"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Function",
+        "Complex Conjugation"
+      ],
+      "used_by_titles": [],
+      "dependencies": [
+        "def:function",
+        "def:complex-conjugation"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "Complex conjugation determines a well-defined unary operation \\(\\mathbb{C}\\to\\mathbb{C}\\)."
+    },
+    {
+      "id": "lem:complex-product-with-conjugate",
+      "kind": "Lemma",
+      "name": "Product with the Conjugate Is Real and Nonnegative",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "For \\(z=[a,b]_{\\mathbb{C}}\\),\n\\[\nz\\overline{z}=[a^2+b^2,0]_{\\mathbb{C}}.\n\\]\nMoreover, if \\(z\\ne 0_{\\mathbb{C}}\\), then \\(a^2+b^2\\ne 0\\).",
+      "statement_tex": "For \\(z=[a,b]_{\\mathbb{C}}\\),\n\\[\nz\\overline{z}=[a^2+b^2,0]_{\\mathbb{C}}.\n\\]\nMoreover, if \\(z\\ne 0_{\\mathbb{C}}\\), then \\(a^2+b^2\\ne 0\\).",
+      "source_text": "For \\(z=[a,b]_{\\mathbb{C}}\\),\n\\[\nz\\overline{z}=[a^2+b^2,0]_{\\mathbb{C}}.\n\\]\nMoreover, if \\(z\\ne 0_{\\mathbb{C}}\\), then \\(a^2+b^2\\ne 0\\).",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:inversion-on-c-well-defined"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Inversion on $\\mathbb{C}^{\\times}$ Is Well-Defined"
+      ],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "For \\(z=[a,b]_{\\mathbb{C}}\\), \\[ z\\overline{z}=[a^2+b^2,0]_{\\mathbb{C}}. \\] Moreover, if \\(z\\ne 0_{\\mathbb{C}}\\), then \\(a^2+b^2\\ne 0\\)."
+    },
+    {
+      "id": "def:multiplicative-inverse-on-c",
+      "kind": "Definition",
+      "name": "Multiplicative Inverse in $\\mathbb{C}$",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "For \\(z=[a,b]_{\\mathbb{C}}\\ne 0_{\\mathbb{C}}\\), define\n\\[\nz^{-1}\n:=\n\\left[\\frac{a}{a^2+b^2},\\frac{-b}{a^2+b^2}\\right]_{\\mathbb{C}}.\n\\]",
+      "statement_tex": "For \\(z=[a,b]_{\\mathbb{C}}\\ne 0_{\\mathbb{C}}\\), define\n\\[\nz^{-1}\n:=\n\\left[\\frac{a}{a^2+b^2},\\frac{-b}{a^2+b^2}\\right]_{\\mathbb{C}}.\n\\]",
+      "source_text": "For \\(z=[a,b]_{\\mathbb{C}}\\ne 0_{\\mathbb{C}}\\), define\n\\[\nz^{-1}\n:=\n\\left[\\frac{a}{a^2+b^2},\\frac{-b}{a^2+b^2}\\right]_{\\mathbb{C}}.\n\\]",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:inversion-on-c-well-defined"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Inversion on $\\mathbb{C}^{\\times}$ Is Well-Defined"
+      ],
+      "dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "For \\(z=[a,b]_{\\mathbb{C}}\\ne 0_{\\mathbb{C}}\\), define \\[ z^{-1} := \\left[\\frac{a}{a^2+b^2},\\frac{-b}{a^2+b^2}\\right]_{\\mathbb{C}}. \\]"
+    },
+    {
+      "id": "thm:inversion-on-c-well-defined",
+      "kind": "Theorem",
+      "name": "Inversion on $\\mathbb{C}^{\\times}$ Is Well-Defined",
+      "deck": "",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "volume": "ii",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "statement_display": "Inversion determines a well-defined operation on the nonzero complex numbers.",
+      "statement_tex": "Inversion determines a well-defined operation on the nonzero complex numbers.",
+      "source_text": "Inversion determines a well-defined operation on the nonzero complex numbers.",
+      "section": "operations-on-c-classes",
+      "section_title": "Operations on $\\mathbb{C}$-Classes",
+      "depends_on_ids": [
+        "def:function",
+        "def:multiplicative-inverse-on-c",
+        "lem:complex-product-with-conjugate"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Function",
+        "Multiplicative Inverse in $\\mathbb{C}$",
+        "Product with the Conjugate Is Real and Nonnegative"
+      ],
+      "used_by_titles": [],
+      "dependencies": [
+        "def:function",
+        "def:multiplicative-inverse-on-c",
+        "lem:complex-product-with-conjugate"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "Inversion determines a well-defined operation on the nonzero complex numbers."
+    },
+    {
+      "id": "def:congruence-modulo-integer",
+      "kind": "Definition",
+      "name": "Congruence Modulo an Integer",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/finite-modular-number-systems/notes-modular-number-systems.tex",
+      "statement_display": "Let \\(n\\in\\mathbb{Z}\\) be positive. For \\(a,b\\in\\mathbb{Z}\\), define\n\\[\na\\equiv b \\pmod n\n\\quad:\\Longleftrightarrow\\quad\nn\\mid (a-b).\n\\]",
+      "statement_tex": "Let \\(n\\in\\mathbb{Z}\\) be positive. For \\(a,b\\in\\mathbb{Z}\\), define\n\\[\na\\equiv b \\pmod n\n\\quad:\\Longleftrightarrow\\quad\nn\\mid (a-b).\n\\]",
+      "source_text": "Let \\(n\\in\\mathbb{Z}\\) be positive. For \\(a,b\\in\\mathbb{Z}\\), define\n\\[\na\\equiv b \\pmod n\n\\quad:\\Longleftrightarrow\\quad\nn\\mid (a-b).\n\\]",
+      "section": "finite-modular-number-systems",
+      "section_title": "Finite Modular Number Systems",
+      "depends_on_ids": [
+        "def:integers",
+        "def:positive-integer",
+        "def:divisibility-in-z",
+        "def:subtraction-on-z"
+      ],
+      "used_by_ids": [
+        "thm:congruence-modulo-integer-equivalence",
+        "def:integers-modulo-n",
+        "def:residue-class-modulo-n",
+        "thm:modular-operations-well-defined"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Integers",
+        "Positive Integer",
+        "Divisibility in $\\mathbb{Z}$",
+        "Subtraction on $\\mathbb{Z}$"
+      ],
+      "used_by_titles": [
+        "Congruence Modulo an Integer Is an Equivalence Relation",
+        "Integers Modulo \\(n\\)",
+        "Residue Class Modulo \\(n\\)",
+        "Modular Addition and Multiplication Are Well-Defined"
+      ],
+      "dependencies": [
+        "def:integers",
+        "def:positive-integer",
+        "def:divisibility-in-z",
+        "def:subtraction-on-z"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Let \\(n\\in\\mathbb{Z}\\) be positive. For \\(a,b\\in\\mathbb{Z}\\), define \\[ a\\equiv b \\pmod n \\quad:\\Longleftrightarrow\\quad n\\mid (a-b). \\]"
+    },
+    {
+      "id": "thm:congruence-modulo-integer-equivalence",
+      "kind": "Theorem",
+      "name": "Congruence Modulo an Integer Is an Equivalence Relation",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/finite-modular-number-systems/notes-modular-number-systems.tex",
+      "statement_display": "For each positive integer \\(n\\), congruence modulo \\(n\\) is an equivalence\nrelation on \\(\\mathbb{Z}\\).",
+      "statement_tex": "For each positive integer \\(n\\), congruence modulo \\(n\\) is an equivalence\nrelation on \\(\\mathbb{Z}\\).",
+      "source_text": "For each positive integer \\(n\\), congruence modulo \\(n\\) is an equivalence\nrelation on \\(\\mathbb{Z}\\).",
+      "section": "finite-modular-number-systems",
+      "section_title": "Finite Modular Number Systems",
+      "depends_on_ids": [
+        "def:equivalence-relation",
+        "def:congruence-modulo-integer",
+        "def:divisibility-in-z"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Equivalence Relation",
+        "Congruence Modulo an Integer",
+        "Divisibility in $\\mathbb{Z}$"
+      ],
+      "used_by_titles": [],
+      "dependencies": [
+        "def:equivalence-relation",
+        "def:congruence-modulo-integer",
+        "def:divisibility-in-z"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For each positive integer \\(n\\), congruence modulo \\(n\\) is an equivalence relation on \\(\\mathbb{Z}\\)."
+    },
+    {
+      "id": "def:integers-modulo-n",
+      "kind": "Definition",
+      "name": "Integers Modulo \\(n\\)",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/finite-modular-number-systems/notes-modular-number-systems.tex",
+      "statement_display": "Let \\(n\\in\\mathbb{Z}\\) be positive. The \\emph{integers modulo \\(n\\)} are the\nquotient set\n\\[\n\\mathbb{Z}/n\\mathbb{Z}:=\\mathbb{Z}/{\\equiv \\pmod n}.\n\\]",
+      "statement_tex": "Let \\(n\\in\\mathbb{Z}\\) be positive. The \\emph{integers modulo \\(n\\)} are the\nquotient set\n\\[\n\\mathbb{Z}/n\\mathbb{Z}:=\\mathbb{Z}/{\\equiv \\pmod n}.\n\\]",
+      "source_text": "Let \\(n\\in\\mathbb{Z}\\) be positive. The \\emph{integers modulo \\(n\\)} are the\nquotient set\n\\[\n\\mathbb{Z}/n\\mathbb{Z}:=\\mathbb{Z}/{\\equiv \\pmod n}.\n\\]",
+      "section": "finite-modular-number-systems",
+      "section_title": "Finite Modular Number Systems",
+      "depends_on_ids": [
+        "def:quotient-set",
+        "def:integers",
+        "def:congruence-modulo-integer"
+      ],
+      "used_by_ids": [
+        "def:residue-class-modulo-n",
+        "def:finite-modular-number-system"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Quotient Set",
+        "Integers",
+        "Congruence Modulo an Integer"
+      ],
+      "used_by_titles": [
+        "Residue Class Modulo \\(n\\)",
+        "Finite Modular Number System"
+      ],
+      "dependencies": [
+        "def:quotient-set",
+        "def:integers",
+        "def:congruence-modulo-integer"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Let \\(n\\in\\mathbb{Z}\\) be positive. The \\emph{integers modulo \\(n\\)} are the quotient set \\[ \\mathbb{Z}/n\\mathbb{Z}:=\\mathbb{Z}/{\\equiv \\pmod n}. \\]"
+    },
+    {
+      "id": "def:residue-class-modulo-n",
+      "kind": "Definition",
+      "name": "Residue Class Modulo \\(n\\)",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/finite-modular-number-systems/notes-modular-number-systems.tex",
+      "statement_display": "For \\(a\\in\\mathbb{Z}\\), the \\emph{residue class of \\(a\\) modulo \\(n\\)} is\n\\[\n[a]_n:=\\{b\\in\\mathbb{Z}: b\\equiv a\\pmod n\\}.\n\\]",
+      "statement_tex": "For \\(a\\in\\mathbb{Z}\\), the \\emph{residue class of \\(a\\) modulo \\(n\\)} is\n\\[\n[a]_n:=\\{b\\in\\mathbb{Z}: b\\equiv a\\pmod n\\}.\n\\]",
+      "source_text": "For \\(a\\in\\mathbb{Z}\\), the \\emph{residue class of \\(a\\) modulo \\(n\\)} is\n\\[\n[a]_n:=\\{b\\in\\mathbb{Z}: b\\equiv a\\pmod n\\}.\n\\]",
+      "section": "finite-modular-number-systems",
+      "section_title": "Finite Modular Number Systems",
+      "depends_on_ids": [
+        "def:integers-modulo-n",
+        "def:equiv-class",
+        "def:congruence-modulo-integer"
+      ],
+      "used_by_ids": [
+        "def:addition-modulo-n",
+        "def:multiplication-modulo-n"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Integers Modulo \\(n\\)",
+        "Equivalence Class",
+        "Congruence Modulo an Integer"
+      ],
+      "used_by_titles": [
+        "Addition Modulo \\(n\\)",
+        "Multiplication Modulo \\(n\\)"
+      ],
+      "dependencies": [
+        "def:integers-modulo-n",
+        "def:equiv-class",
+        "def:congruence-modulo-integer"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "For \\(a\\in\\mathbb{Z}\\), the \\emph{residue class of \\(a\\) modulo \\(n\\)} is \\[ [a]_n:=\\{b\\in\\mathbb{Z}: b\\equiv a\\pmod n\\}. \\]"
+    },
+    {
+      "id": "def:addition-modulo-n",
+      "kind": "Definition",
+      "name": "Addition Modulo \\(n\\)",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/finite-modular-number-systems/notes-modular-number-systems.tex",
+      "statement_display": "For residue classes modulo a positive integer \\(n\\), define\n\\[\n[a]_n+[b]_n:=[a+b]_n.\n\\]",
+      "statement_tex": "For residue classes modulo a positive integer \\(n\\), define\n\\[\n[a]_n+[b]_n:=[a+b]_n.\n\\]",
+      "source_text": "For residue classes modulo a positive integer \\(n\\), define\n\\[\n[a]_n+[b]_n:=[a+b]_n.\n\\]",
+      "section": "finite-modular-number-systems",
+      "section_title": "Finite Modular Number Systems",
+      "depends_on_ids": [
+        "def:residue-class-modulo-n",
+        "def:addition-on-z-classes"
+      ],
+      "used_by_ids": [
+        "thm:modular-operations-well-defined",
+        "def:finite-modular-number-system"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Residue Class Modulo \\(n\\)",
+        "Addition on $\\mathbb{Z}$-Classes"
+      ],
+      "used_by_titles": [
+        "Modular Addition and Multiplication Are Well-Defined",
+        "Finite Modular Number System"
+      ],
+      "dependencies": [
+        "def:residue-class-modulo-n",
+        "def:addition-on-z-classes"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "For residue classes modulo a positive integer \\(n\\), define \\[ [a]_n+[b]_n:=[a+b]_n. \\]"
+    },
+    {
+      "id": "def:multiplication-modulo-n",
+      "kind": "Definition",
+      "name": "Multiplication Modulo \\(n\\)",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/finite-modular-number-systems/notes-modular-number-systems.tex",
+      "statement_display": "For residue classes modulo a positive integer \\(n\\), define\n\\[\n[a]_n\\cdot[b]_n:=[ab]_n.\n\\]",
+      "statement_tex": "For residue classes modulo a positive integer \\(n\\), define\n\\[\n[a]_n\\cdot[b]_n:=[ab]_n.\n\\]",
+      "source_text": "For residue classes modulo a positive integer \\(n\\), define\n\\[\n[a]_n\\cdot[b]_n:=[ab]_n.\n\\]",
+      "section": "finite-modular-number-systems",
+      "section_title": "Finite Modular Number Systems",
+      "depends_on_ids": [
+        "def:residue-class-modulo-n",
+        "def:multiplication-on-z-classes"
+      ],
+      "used_by_ids": [
+        "thm:modular-operations-well-defined",
+        "def:finite-modular-number-system",
+        "thm:z-mod-four-has-zero-divisors"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Residue Class Modulo \\(n\\)",
+        "Multiplication on $\\mathbb{Z}$-Classes"
+      ],
+      "used_by_titles": [
+        "Modular Addition and Multiplication Are Well-Defined",
+        "Finite Modular Number System",
+        "\\(\\mathbb{Z}/4\\mathbb{Z}\\) Has Zero Divisors"
+      ],
+      "dependencies": [
+        "def:residue-class-modulo-n",
+        "def:multiplication-on-z-classes"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "For residue classes modulo a positive integer \\(n\\), define \\[ [a]_n\\cdot[b]_n:=[ab]_n. \\]"
+    },
+    {
+      "id": "thm:modular-operations-well-defined",
+      "kind": "Theorem",
+      "name": "Modular Addition and Multiplication Are Well-Defined",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/finite-modular-number-systems/notes-modular-number-systems.tex",
+      "statement_display": "For each positive integer \\(n\\), addition and multiplication modulo \\(n\\) are\nwell-defined operations on \\(\\mathbb{Z}/n\\mathbb{Z}\\).",
+      "statement_tex": "For each positive integer \\(n\\), addition and multiplication modulo \\(n\\) are\nwell-defined operations on \\(\\mathbb{Z}/n\\mathbb{Z}\\).",
+      "source_text": "For each positive integer \\(n\\), addition and multiplication modulo \\(n\\) are\nwell-defined operations on \\(\\mathbb{Z}/n\\mathbb{Z}\\).",
+      "section": "finite-modular-number-systems",
+      "section_title": "Finite Modular Number Systems",
+      "depends_on_ids": [
+        "def:operation-well-definedness",
+        "def:addition-modulo-n",
+        "def:multiplication-modulo-n",
+        "def:congruence-modulo-integer"
+      ],
+      "used_by_ids": [
+        "thm:z-mod-two-is-two-element-system"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Operation Well-Definedness",
+        "Addition Modulo \\(n\\)",
+        "Multiplication Modulo \\(n\\)",
+        "Congruence Modulo an Integer"
+      ],
+      "used_by_titles": [
+        "\\(\\mathbb{Z}/2\\mathbb{Z}\\) Is the Two-Element System"
+      ],
+      "dependencies": [
+        "def:operation-well-definedness",
+        "def:addition-modulo-n",
+        "def:multiplication-modulo-n",
+        "def:congruence-modulo-integer"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For each positive integer \\(n\\), addition and multiplication modulo \\(n\\) are well-defined operations on \\(\\mathbb{Z}/n\\mathbb{Z}\\)."
+    },
+    {
+      "id": "def:finite-modular-number-system",
+      "kind": "Definition",
+      "name": "Finite Modular Number System",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/finite-modular-number-systems/notes-modular-number-systems.tex",
+      "statement_display": "For a positive integer \\(n\\), the \\emph{finite modular number system modulo\n\\(n\\)} is\n\\[\n\\mathbb{Z}/n\\mathbb{Z}\n\\]\nwith addition and multiplication modulo \\(n\\), additive identity \\([0]_n\\),\nand multiplicative identity \\([1]_n\\).",
+      "statement_tex": "For a positive integer \\(n\\), the \\emph{finite modular number system modulo\n\\(n\\)} is\n\\[\n\\mathbb{Z}/n\\mathbb{Z}\n\\]\nwith addition and multiplication modulo \\(n\\), additive identity \\([0]_n\\),\nand multiplicative identity \\([1]_n\\).",
+      "source_text": "For a positive integer \\(n\\), the \\emph{finite modular number system modulo\n\\(n\\)} is\n\\[\n\\mathbb{Z}/n\\mathbb{Z}\n\\]\nwith addition and multiplication modulo \\(n\\), additive identity \\([0]_n\\),\nand multiplicative identity \\([1]_n\\).",
+      "section": "finite-modular-number-systems",
+      "section_title": "Finite Modular Number Systems",
+      "depends_on_ids": [
+        "def:integers-modulo-n",
+        "def:addition-modulo-n",
+        "def:multiplication-modulo-n",
+        "def:zero-in-z",
+        "def:one-in-z"
+      ],
+      "used_by_ids": [
+        "thm:z-mod-four-has-zero-divisors",
+        "thm:z-mod-two-is-two-element-system"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Integers Modulo \\(n\\)",
+        "Addition Modulo \\(n\\)",
+        "Multiplication Modulo \\(n\\)",
+        "Zero in $\\mathbb{Z}$",
+        "One in $\\mathbb{Z}$"
+      ],
+      "used_by_titles": [
+        "\\(\\mathbb{Z}/4\\mathbb{Z}\\) Has Zero Divisors",
+        "\\(\\mathbb{Z}/2\\mathbb{Z}\\) Is the Two-Element System"
+      ],
+      "dependencies": [
+        "def:integers-modulo-n",
+        "def:addition-modulo-n",
+        "def:multiplication-modulo-n",
+        "def:zero-in-z",
+        "def:one-in-z"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "For a positive integer \\(n\\), the \\emph{finite modular number system modulo \\(n\\)} is \\[ \\mathbb{Z}/n\\mathbb{Z} \\] with addition and multiplication modulo \\(n\\), additive identity \\([0]_n\\), and multiplicative identity \\([1]_n\\)."
+    },
+    {
+      "id": "thm:z-mod-four-has-zero-divisors",
+      "kind": "Theorem",
+      "name": "\\(\\mathbb{Z}/4\\mathbb{Z}\\) Has Zero Divisors",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/finite-modular-number-systems/notes-modular-number-systems.tex",
+      "statement_display": "In \\(\\mathbb{Z}/4\\mathbb{Z}\\), the nonzero class \\([2]_4\\) satisfies\n\\[\n[2]_4\\cdot[2]_4=[0]_4.\n\\]\nTherefore \\(\\mathbb{Z}/4\\mathbb{Z}\\) is not a field.",
+      "statement_tex": "In \\(\\mathbb{Z}/4\\mathbb{Z}\\), the nonzero class \\([2]_4\\) satisfies\n\\[\n[2]_4\\cdot[2]_4=[0]_4.\n\\]\nTherefore \\(\\mathbb{Z}/4\\mathbb{Z}\\) is not a field.",
+      "source_text": "In \\(\\mathbb{Z}/4\\mathbb{Z}\\), the nonzero class \\([2]_4\\) satisfies\n\\[\n[2]_4\\cdot[2]_4=[0]_4.\n\\]\nTherefore \\(\\mathbb{Z}/4\\mathbb{Z}\\) is not a field.",
+      "section": "finite-modular-number-systems",
+      "section_title": "Finite Modular Number Systems",
+      "depends_on_ids": [
+        "def:finite-modular-number-system",
+        "def:multiplication-modulo-n",
+        "def:abstract-field"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Finite Modular Number System",
+        "Multiplication Modulo \\(n\\)",
+        "Field"
+      ],
+      "used_by_titles": [],
+      "dependencies": [
+        "def:finite-modular-number-system",
+        "def:multiplication-modulo-n",
+        "def:abstract-field"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "In \\(\\mathbb{Z}/4\\mathbb{Z}\\), the nonzero class \\([2]_4\\) satisfies \\[ [2]_4\\cdot[2]_4=[0]_4. \\] Therefore \\(\\mathbb{Z}/4\\mathbb{Z}\\) is not a field."
+    },
+    {
+      "id": "def:number-system-construction-target",
+      "kind": "Definition",
+      "name": "Number-System Construction Target",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/ground-rules/notes-constructing-number-systems.tex",
+      "statement_display": "A \\emph{number-system construction target} is the specified algebraic and\norder structure that a proposed system is meant to satisfy. The target fixes\nthe required carrier, operations, relations, distinguished elements, and laws.",
+      "statement_tex": "A \\emph{number-system construction target} is the specified algebraic and\norder structure that a proposed system is meant to satisfy. The target fixes\nthe required carrier, operations, relations, distinguished elements, and laws.",
+      "source_text": "A \\emph{number-system construction target} is the specified algebraic and\norder structure that a proposed system is meant to satisfy. The target fixes\nthe required carrier, operations, relations, distinguished elements, and laws.",
+      "section": "ground-rules",
+      "section_title": "Ground Rules",
+      "depends_on_ids": [
+        "def:binary-arithmetic-operation",
+        "def:ring",
+        "def:abstract-field",
+        "def:abstract-ordered-field"
+      ],
+      "used_by_ids": [
+        "def:number-system-construction-data",
+        "def:number-system-construction-verification"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Binary Arithmetic Operation",
+        "Ring",
+        "Field",
+        "Ordered Field"
+      ],
+      "used_by_titles": [
+        "Construction Data",
+        "Construction Verification"
+      ],
+      "dependencies": [
+        "def:binary-arithmetic-operation",
+        "def:ring",
+        "def:abstract-field",
+        "def:abstract-ordered-field"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "A \\emph{number-system construction target} is the specified algebraic and order structure that a proposed system is meant to satisfy. The target fixes the required carrier, operations, relations, distinguished elements, and laws."
+    },
+    {
+      "id": "def:number-system-construction-data",
+      "kind": "Definition",
+      "name": "Construction Data",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/ground-rules/notes-constructing-number-systems.tex",
+      "statement_display": "The \\emph{construction data} for a number system consists of the raw carrier\nobjects, the intended equality or equivalence relation, the distinguished\nelements, and the operation formulas from which the system is built.",
+      "statement_tex": "The \\emph{construction data} for a number system consists of the raw carrier\nobjects, the intended equality or equivalence relation, the distinguished\nelements, and the operation formulas from which the system is built.",
+      "source_text": "The \\emph{construction data} for a number system consists of the raw carrier\nobjects, the intended equality or equivalence relation, the distinguished\nelements, and the operation formulas from which the system is built.",
+      "section": "ground-rules",
+      "section_title": "Ground Rules",
+      "depends_on_ids": [
+        "def:number-system-construction-target",
+        "def:equivalence-relation",
+        "def:binary-arithmetic-operation"
+      ],
+      "used_by_ids": [
+        "def:number-system-construction-verification"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Number-System Construction Target",
+        "Equivalence Relation",
+        "Binary Arithmetic Operation"
+      ],
+      "used_by_titles": [
+        "Construction Verification"
+      ],
+      "dependencies": [
+        "def:number-system-construction-target",
+        "def:equivalence-relation",
+        "def:binary-arithmetic-operation"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "The \\emph{construction data} for a number system consists of the raw carrier objects, the intended equality or equivalence relation, the distinguished elements, and the operation formulas from which the system is built."
+    },
+    {
+      "id": "def:number-system-construction-verification",
+      "kind": "Definition",
+      "name": "Construction Verification",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/ground-rules/notes-constructing-number-systems.tex",
+      "statement_display": "\\emph{Construction verification} is the proof that the construction data\nactually satisfies the construction target. It includes, as applicable,\nclosure of operations, equivalence-relation proofs, well-definedness of\noperations on classes, algebraic laws, order laws, and compatibility of\nembeddings with earlier systems.",
+      "statement_tex": "\\emph{Construction verification} is the proof that the construction data\nactually satisfies the construction target. It includes, as applicable,\nclosure of operations, equivalence-relation proofs, well-definedness of\noperations on classes, algebraic laws, order laws, and compatibility of\nembeddings with earlier systems.",
+      "source_text": "\\emph{Construction verification} is the proof that the construction data\nactually satisfies the construction target. It includes, as applicable,\nclosure of operations, equivalence-relation proofs, well-definedness of\noperations on classes, algebraic laws, order laws, and compatibility of\nembeddings with earlier systems.",
+      "section": "ground-rules",
+      "section_title": "Ground Rules",
+      "depends_on_ids": [
+        "def:number-system-construction-target",
+        "def:number-system-construction-data",
+        "def:operation-well-definedness",
+        "def:operation-respects-equivalence"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Number-System Construction Target",
+        "Construction Data",
+        "Operation Well-Definedness",
+        "Operation Respects an Equivalence"
+      ],
+      "used_by_titles": [],
+      "dependencies": [
+        "def:number-system-construction-target",
+        "def:number-system-construction-data",
+        "def:operation-well-definedness",
+        "def:operation-respects-equivalence"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "\\emph{Construction verification} is the proof that the construction data actually satisfies the construction target. It includes, as applicable, closure of operations, equivalence-relation proofs, well-definedness of operations on classes, "
+    },
+    {
+      "id": "def:two-element-carrier",
+      "kind": "Definition",
+      "name": "Two-Element Carrier",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/zero-one-number-system/notes-two-element-system.tex",
+      "statement_display": "The \\emph{two-element carrier} is the set\n\\[\n\\mathbb{B}_2:=\\{0,1\\}.\n\\]",
+      "statement_tex": "The \\emph{two-element carrier} is the set\n\\[\n\\mathbb{B}_2:=\\{0,1\\}.\n\\]",
+      "source_text": "The \\emph{two-element carrier} is the set\n\\[\n\\mathbb{B}_2:=\\{0,1\\}.\n\\]",
+      "section": "zero-one-number-system",
+      "section_title": "The \\(\\{0,1\\}\\) Number System",
+      "depends_on_ids": [
+        "def:zero-in-z",
+        "def:one-in-z"
+      ],
+      "used_by_ids": [
+        "def:addition-on-two-element-system",
+        "def:multiplication-on-two-element-system",
+        "def:two-element-number-system"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Zero in $\\mathbb{Z}$",
+        "One in $\\mathbb{Z}$"
+      ],
+      "used_by_titles": [
+        "Addition on the Two-Element System",
+        "Multiplication on the Two-Element System",
+        "Two-Element Number System"
+      ],
+      "dependencies": [
+        "def:zero-in-z",
+        "def:one-in-z"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "The \\emph{two-element carrier} is the set \\[ \\mathbb{B}_2:=\\{0,1\\}. \\]"
+    },
+    {
+      "id": "def:addition-on-two-element-system",
+      "kind": "Definition",
+      "name": "Addition on the Two-Element System",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/zero-one-number-system/notes-two-element-system.tex",
+      "statement_display": "Addition on \\(\\mathbb{B}_2\\) is the binary operation \\(+_2\\) determined by\n\\[\n\\begin{array}{c|cc}\n+_2 & 0 & 1\\\\ \\hline\n0 & 0 & 1\\\\\n1 & 1 & 0\n\\end{array}\n\\]",
+      "statement_tex": "Addition on \\(\\mathbb{B}_2\\) is the binary operation \\(+_2\\) determined by\n\\[\n\\begin{array}{c|cc}\n+_2 & 0 & 1\\\\ \\hline\n0 & 0 & 1\\\\\n1 & 1 & 0\n\\end{array}\n\\]",
+      "source_text": "Addition on \\(\\mathbb{B}_2\\) is the binary operation \\(+_2\\) determined by\n\\[\n\\begin{array}{c|cc}\n+_2 & 0 & 1\\\\ \\hline\n0 & 0 & 1\\\\\n1 & 1 & 0\n\\end{array}\n\\]",
+      "section": "zero-one-number-system",
+      "section_title": "The \\(\\{0,1\\}\\) Number System",
+      "depends_on_ids": [
+        "def:two-element-carrier",
+        "def:binary-arithmetic-operation"
+      ],
+      "used_by_ids": [
+        "def:two-element-number-system"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Two-Element Carrier",
+        "Binary Arithmetic Operation"
+      ],
+      "used_by_titles": [
+        "Two-Element Number System"
+      ],
+      "dependencies": [
+        "def:two-element-carrier",
+        "def:binary-arithmetic-operation"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Addition on \\(\\mathbb{B}_2\\) is the binary operation \\(+_2\\) determined by \\[ \\begin{array}{c|cc} +_2 & 0 & 1\\\\ \\hline 0 & 0 & 1\\\\ 1 & 1 & 0 \\end{array} \\]"
+    },
+    {
+      "id": "def:multiplication-on-two-element-system",
+      "kind": "Definition",
+      "name": "Multiplication on the Two-Element System",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/zero-one-number-system/notes-two-element-system.tex",
+      "statement_display": "Multiplication on \\(\\mathbb{B}_2\\) is the binary operation \\(\\cdot_2\\)\ndetermined by\n\\[\n\\begin{array}{c|cc}\n\\cdot_2 & 0 & 1\\\\ \\hline\n0 & 0 & 0\\\\\n1 & 0 & 1\n\\end{array}\n\\]",
+      "statement_tex": "Multiplication on \\(\\mathbb{B}_2\\) is the binary operation \\(\\cdot_2\\)\ndetermined by\n\\[\n\\begin{array}{c|cc}\n\\cdot_2 & 0 & 1\\\\ \\hline\n0 & 0 & 0\\\\\n1 & 0 & 1\n\\end{array}\n\\]",
+      "source_text": "Multiplication on \\(\\mathbb{B}_2\\) is the binary operation \\(\\cdot_2\\)\ndetermined by\n\\[\n\\begin{array}{c|cc}\n\\cdot_2 & 0 & 1\\\\ \\hline\n0 & 0 & 0\\\\\n1 & 0 & 1\n\\end{array}\n\\]",
+      "section": "zero-one-number-system",
+      "section_title": "The \\(\\{0,1\\}\\) Number System",
+      "depends_on_ids": [
+        "def:two-element-carrier",
+        "def:binary-arithmetic-operation"
+      ],
+      "used_by_ids": [
+        "def:two-element-number-system"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Two-Element Carrier",
+        "Binary Arithmetic Operation"
+      ],
+      "used_by_titles": [
+        "Two-Element Number System"
+      ],
+      "dependencies": [
+        "def:two-element-carrier",
+        "def:binary-arithmetic-operation"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Multiplication on \\(\\mathbb{B}_2\\) is the binary operation \\(\\cdot_2\\) determined by \\[ \\begin{array}{c|cc} \\cdot_2 & 0 & 1\\\\ \\hline 0 & 0 & 0\\\\ 1 & 0 & 1 \\end{array} \\]"
+    },
+    {
+      "id": "def:two-element-number-system",
+      "kind": "Definition",
+      "name": "Two-Element Number System",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/zero-one-number-system/notes-two-element-system.tex",
+      "statement_display": "The \\emph{two-element number system} is\n\\[\n\\mathbb{F}_2:=(\\mathbb{B}_2,+_2,\\cdot_2,0,1).\n\\]",
+      "statement_tex": "The \\emph{two-element number system} is\n\\[\n\\mathbb{F}_2:=(\\mathbb{B}_2,+_2,\\cdot_2,0,1).\n\\]",
+      "source_text": "The \\emph{two-element number system} is\n\\[\n\\mathbb{F}_2:=(\\mathbb{B}_2,+_2,\\cdot_2,0,1).\n\\]",
+      "section": "zero-one-number-system",
+      "section_title": "The \\(\\{0,1\\}\\) Number System",
+      "depends_on_ids": [
+        "def:two-element-carrier",
+        "def:addition-on-two-element-system",
+        "def:multiplication-on-two-element-system"
+      ],
+      "used_by_ids": [
+        "thm:two-element-system-is-field",
+        "thm:z-mod-two-is-two-element-system"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Two-Element Carrier",
+        "Addition on the Two-Element System",
+        "Multiplication on the Two-Element System"
+      ],
+      "used_by_titles": [
+        "The Two-Element System Is a Field",
+        "\\(\\mathbb{Z}/2\\mathbb{Z}\\) Is the Two-Element System"
+      ],
+      "dependencies": [
+        "def:two-element-carrier",
+        "def:addition-on-two-element-system",
+        "def:multiplication-on-two-element-system"
+      ],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "The \\emph{two-element number system} is \\[ \\mathbb{F}_2:=(\\mathbb{B}_2,+_2,\\cdot_2,0,1). \\]"
+    },
+    {
+      "id": "thm:two-element-system-is-field",
+      "kind": "Theorem",
+      "name": "The Two-Element System Is a Field",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/zero-one-number-system/notes-two-element-system.tex",
+      "statement_display": "The two-element number system \\(\\mathbb{F}_2\\) is a field.",
+      "statement_tex": "The two-element number system \\(\\mathbb{F}_2\\) is a field.",
+      "source_text": "The two-element number system \\(\\mathbb{F}_2\\) is a field.",
+      "section": "zero-one-number-system",
+      "section_title": "The \\(\\{0,1\\}\\) Number System",
+      "depends_on_ids": [
+        "def:two-element-number-system",
+        "def:abstract-field"
+      ],
+      "used_by_ids": [
+        "thm:two-element-system-not-ordered-field"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Two-Element Number System",
+        "Field"
+      ],
+      "used_by_titles": [
+        "The Two-Element System Is Not an Ordered Field"
+      ],
+      "dependencies": [
+        "def:two-element-number-system",
+        "def:abstract-field"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "The two-element number system \\(\\mathbb{F}_2\\) is a field."
+    },
+    {
+      "id": "thm:two-element-system-not-ordered-field",
+      "kind": "Theorem",
+      "name": "The Two-Element System Is Not an Ordered Field",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/zero-one-number-system/notes-two-element-system.tex",
+      "statement_display": "There is no order on \\(\\mathbb{B}_2\\) that makes\n\\(\\mathbb{F}_2\\) an ordered field.",
+      "statement_tex": "There is no order on \\(\\mathbb{B}_2\\) that makes\n\\(\\mathbb{F}_2\\) an ordered field.",
+      "source_text": "There is no order on \\(\\mathbb{B}_2\\) that makes\n\\(\\mathbb{F}_2\\) an ordered field.",
+      "section": "zero-one-number-system",
+      "section_title": "The \\(\\{0,1\\}\\) Number System",
+      "depends_on_ids": [
+        "thm:two-element-system-is-field",
+        "def:abstract-ordered-field"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "The Two-Element System Is a Field",
+        "Ordered Field"
+      ],
+      "used_by_titles": [],
+      "dependencies": [
+        "thm:two-element-system-is-field",
+        "def:abstract-ordered-field"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "There is no order on \\(\\mathbb{B}_2\\) that makes \\(\\mathbb{F}_2\\) an ordered field."
+    },
+    {
+      "id": "thm:z-mod-two-is-two-element-system",
+      "kind": "Theorem",
+      "name": "\\(\\mathbb{Z}/2\\mathbb{Z}\\) Is the Two-Element System",
+      "deck": "",
+      "chapter": "constructing-number-systems",
+      "chapter_title": "Constructing a Number System",
+      "volume": "ii",
+      "source": "notes/zero-one-number-system/notes-two-element-system.tex",
+      "statement_display": "The finite modular number system \\(\\mathbb{Z}/2\\mathbb{Z}\\) has exactly two\nclasses, \\([0]_2\\) and \\([1]_2\\), and its addition and multiplication tables\nare the tables of \\(\\mathbb{F}_2\\).",
+      "statement_tex": "The finite modular number system \\(\\mathbb{Z}/2\\mathbb{Z}\\) has exactly two\nclasses, \\([0]_2\\) and \\([1]_2\\), and its addition and multiplication tables\nare the tables of \\(\\mathbb{F}_2\\).",
+      "source_text": "The finite modular number system \\(\\mathbb{Z}/2\\mathbb{Z}\\) has exactly two\nclasses, \\([0]_2\\) and \\([1]_2\\), and its addition and multiplication tables\nare the tables of \\(\\mathbb{F}_2\\).",
+      "section": "zero-one-number-system",
+      "section_title": "The \\(\\{0,1\\}\\) Number System",
+      "depends_on_ids": [
+        "def:finite-modular-number-system",
+        "def:two-element-number-system",
+        "thm:modular-operations-well-defined"
+      ],
+      "used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Finite Modular Number System",
+        "Two-Element Number System",
+        "Modular Addition and Multiplication Are Well-Defined"
+      ],
+      "used_by_titles": [],
+      "dependencies": [
+        "def:finite-modular-number-system",
+        "def:two-element-number-system",
+        "thm:modular-operations-well-defined"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "The finite modular number system \\(\\mathbb{Z}/2\\mathbb{Z}\\) has exactly two classes, \\([0]_2\\) and \\([1]_2\\), and its addition and multiplication tables are the tables of \\(\\mathbb{F}_2\\)."
+    },
+    {
       "id": "thm:embedding-chain-compatibility",
       "kind": "Theorem",
       "name": "Compatibility of the Embedding Chain",
@@ -25163,6 +27747,9 @@
         "thm:equiv-partition",
         "thm:quotient-universal",
         "def:operation-well-definedness",
+        "thm:complex-coordinate-equivalence-relation",
+        "thm:congruence-modulo-integer-equivalence",
+        "def:number-system-construction-data",
         "cor:equality-is-finest-equivalence",
         "def:equivalence-class",
         "thm:equivalence-classes-partition-domain",
@@ -25190,6 +27777,9 @@
         "Equivalence Relations and Partitions",
         "Universal Property of the Quotient Map",
         "Operation Well-Definedness",
+        "Complex Coordinate Equivalence Is an Equivalence Relation",
+        "Congruence Modulo an Integer Is an Equivalence Relation",
+        "Construction Data",
         "Equality Is the Finest Equivalence",
         "Equivalence Class",
         "Equivalence Classes Partition the Domain",
@@ -25594,6 +28184,7 @@
         "def:cartesian-product-rel"
       ],
       "used_by_ids": [
+        "def:number-system-construction-verification",
         "def:left-right-respect-equivalence",
         "lem:respect-splits",
         "thm:induced-operation-on-quotient",
@@ -25608,6 +28199,7 @@
         "Cartesian Product — as foundation for relations"
       ],
       "used_by_titles": [
+        "Construction Verification",
         "Left and Right Respect",
         "Respect Splits",
         "Induced Operation on a Quotient",
@@ -27409,6 +30001,8 @@
         "def:formal-difference-equivalence"
       ],
       "used_by_ids": [
+        "def:congruence-modulo-integer",
+        "def:integers-modulo-n",
         "def:integer-class-notation",
         "thm:zero-is-an-integer",
         "thm:one-is-an-integer",
@@ -27429,6 +30023,8 @@
         "Formal-Difference Equivalence"
       ],
       "used_by_titles": [
+        "Congruence Modulo an Integer",
+        "Integers Modulo \\(n\\)",
         "Integer Class Notation",
         "Zero Is an Integer",
         "One Is an Integer",
@@ -27533,6 +30129,8 @@
         "def:whole-numbers"
       ],
       "used_by_ids": [
+        "def:finite-modular-number-system",
+        "def:two-element-carrier",
         "cor:zero-absorption-on-z",
         "thm:zero-is-an-integer",
         "thm:embedding-w-into-z-preserves-zero",
@@ -27554,6 +30152,8 @@
         "Whole Numbers"
       ],
       "used_by_titles": [
+        "Finite Modular Number System",
+        "Two-Element Carrier",
         "Zero Absorption on $\\mathbb{Z}$",
         "Zero Is an Integer",
         "Embedding Preserves Zero",
@@ -27598,6 +30198,8 @@
         "def:whole-numbers"
       ],
       "used_by_ids": [
+        "def:finite-modular-number-system",
+        "def:two-element-carrier",
         "cor:negative-one-rule-on-z",
         "thm:one-is-an-integer",
         "prop:divisibility-reflexive-on-z",
@@ -27619,6 +30221,8 @@
         "Whole Numbers"
       ],
       "used_by_titles": [
+        "Finite Modular Number System",
+        "Two-Element Carrier",
         "Negative One Rule on $\\mathbb{Z}$",
         "One Is an Integer",
         "Divisibility Is Reflexive on $\\mathbb{Z}$",
@@ -27796,6 +30400,8 @@
         "def:existential-q"
       ],
       "used_by_ids": [
+        "def:congruence-modulo-integer",
+        "thm:congruence-modulo-integer-equivalence",
         "prop:divisibility-reflexive-on-z",
         "prop:divisibility-transitive-on-z",
         "prop:units-divide-everything-on-z",
@@ -27815,6 +30421,8 @@
         "Existential Formula"
       ],
       "used_by_titles": [
+        "Congruence Modulo an Integer",
+        "Congruence Modulo an Integer Is an Equivalence Relation",
         "Divisibility Is Reflexive on $\\mathbb{Z}$",
         "Divisibility Is Transitive on $\\mathbb{Z}$",
         "One and Negative One Divide Every Integer",
@@ -28878,6 +31486,7 @@
         "def:addition-on-w"
       ],
       "used_by_ids": [
+        "def:addition-modulo-n",
         "lem:addition-on-z-classes-respects-left-equivalence",
         "lem:addition-on-z-classes-respects-right-equivalence",
         "lem:addition-on-z-classes-respects-equivalence",
@@ -28902,6 +31511,7 @@
         "Addition on $\\mathbb{W}$"
       ],
       "used_by_titles": [
+        "Addition Modulo \\(n\\)",
         "Addition Respects Formal-Difference Equivalence on the Left",
         "Addition Respects Formal-Difference Equivalence on the Right",
         "Addition Respects Formal-Difference Equivalence",
@@ -29675,6 +32285,7 @@
         "def:negation-on-z-classes"
       ],
       "used_by_ids": [
+        "def:congruence-modulo-integer",
         "thm:subtraction-on-z-well-defined",
         "def:strict-order-on-z",
         "thm:trichotomy-on-z",
@@ -29689,6 +32300,7 @@
         "Negation on $\\mathbb{Z}$-Classes"
       ],
       "used_by_titles": [
+        "Congruence Modulo an Integer",
         "Subtraction on $\\mathbb{Z}$ Is Well-Defined",
         "Strict Order on $\\mathbb{Z}$",
         "Trichotomy on $\\mathbb{Z}$",
@@ -29769,6 +32381,7 @@
         "def:multiplication-on-w"
       ],
       "used_by_ids": [
+        "def:multiplication-modulo-n",
         "lem:multiplication-on-z-classes-respects-equivalence",
         "thm:multiplication-on-z-well-defined",
         "thm:multiplication-on-z-associative",
@@ -29793,6 +32406,7 @@
         "Multiplication on $\\mathbb{W}$"
       ],
       "used_by_titles": [
+        "Multiplication Modulo \\(n\\)",
         "Multiplication Respects Formal-Difference Equivalence",
         "Multiplication on $\\mathbb{Z}$ Is Well-Defined",
         "Multiplication on $\\mathbb{Z}$ Is Associative",
@@ -30609,6 +33223,7 @@
         "def:order-on-w"
       ],
       "used_by_ids": [
+        "def:congruence-modulo-integer",
         "def:greatest-common-divisor-in-z",
         "thm:positivity-on-z-well-defined",
         "def:strict-order-on-z",
@@ -30625,6 +33240,7 @@
         "Order on $\\mathbb{W}$"
       ],
       "used_by_titles": [
+        "Congruence Modulo an Integer",
         "Greatest Common Divisor in $\\mathbb{Z}$",
         "Positivity on $\\mathbb{Z}$ Is Well-Defined",
         "Strict Order on $\\mathbb{Z}$",
@@ -44794,6 +47410,8 @@
         "def:addition-on-q-classes"
       ],
       "used_by_ids": [
+        "def:addition-on-c-classes",
+        "def:multiplication-on-c-classes",
         "lem:sum-of-cuts-is-a-cut",
         "thm:addition-on-r-associative",
         "thm:addition-on-r-commutative",
@@ -44823,6 +47441,8 @@
         "Addition on $\\mathbb{Q}$-Classes"
       ],
       "used_by_titles": [
+        "Addition on $\\mathbb{C}$-Classes",
+        "Multiplication on $\\mathbb{C}$-Classes",
         "Sum of Cuts Is a Cut",
         "Addition on $\\mathbb{R}$ Is Associative",
         "Addition on $\\mathbb{R}$ Is Commutative",
@@ -45792,6 +48412,10 @@
         "def:dedekind-cut"
       ],
       "used_by_ids": [
+        "def:complex-prepair",
+        "def:complex-prepair-set",
+        "def:zero-one-i-in-c",
+        "def:canonical-embedding-r-into-c",
         "def:embedding-q-into-r",
         "thm:q-embeds-in-r",
         "def:addition-on-r",
@@ -45821,6 +48445,10 @@
         "Dedekind Cut"
       ],
       "used_by_titles": [
+        "Complex Prepair",
+        "Complex Prepair Set",
+        "Zero, One, and the Imaginary Unit in $\\mathbb{C}$",
+        "Canonical Embedding of $\\mathbb{R}$ into $\\mathbb{C}$",
         "Embedding $\\mathbb{Q}$ into $\\mathbb{R}$",
         "$\\mathbb{Q}$ Embeds in $\\mathbb{R}$",
         "Addition of Cuts",
@@ -47209,6 +49837,7 @@
         "def:zero-in-r"
       ],
       "used_by_ids": [
+        "def:multiplication-on-c-classes",
         "thm:embedding-q-into-r-preserves-arithmetic",
         "thm:r-nonzero-multiplicative-abelian-group",
         "thm:positive-multiplication-preserves-order-on-r",
@@ -47246,6 +49875,7 @@
         "Zero in $\\mathbb{R}$"
       ],
       "used_by_titles": [
+        "Multiplication on $\\mathbb{C}$-Classes",
         "Embedding Preserves Addition and Multiplication",
         "Nonzero $\\mathbb{R}$ Is a Multiplicative Abelian Group",
         "Multiplication by Positives Preserves Order on $\\mathbb{R}$",
@@ -81623,6 +84253,526 @@
     {
       "from": "cor:identity-map-is-homomorphism",
       "to": "def:homomorphism",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:complex-prepair",
+      "to": "def:ordered-pair",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:complex-prepair",
+      "to": "def:reals",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:complex-prepair-set",
+      "to": "def:cartesian-product-rel",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:complex-prepair-set",
+      "to": "def:reals",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:complex-coordinate-equivalence",
+      "to": "def:relation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:complex-coordinate-equivalence",
+      "to": "def:complex-prepair-set",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:complex-coordinate-equivalence-relation",
+      "to": "def:equivalence-relation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:complex-coordinate-equivalence-relation",
+      "to": "def:complex-coordinate-equivalence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:complex-coordinate-equivalence-relation",
+      "to": "lem:complex-coordinate-equivalence-reflexive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:complex-coordinate-equivalence-relation",
+      "to": "lem:complex-coordinate-equivalence-symmetric",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:complex-coordinate-equivalence-relation",
+      "to": "lem:complex-coordinate-equivalence-transitive",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:complex-numbers",
+      "to": "def:quotient-set",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:complex-numbers",
+      "to": "def:complex-prepair-set",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:complex-numbers",
+      "to": "def:complex-coordinate-equivalence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:zero-one-i-in-c",
+      "to": "def:equiv-class",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:zero-one-i-in-c",
+      "to": "def:complex-class-notation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:zero-one-i-in-c",
+      "to": "def:reals",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:canonical-embedding-r-into-c",
+      "to": "def:reals",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:canonical-embedding-r-into-c",
+      "to": "def:complex-numbers",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:canonical-embedding-r-into-c",
+      "to": "def:complex-class-notation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:c-is-a-field",
+      "to": "thm:addition-on-c-well-defined",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:c-is-a-field",
+      "to": "thm:multiplication-on-c-well-defined",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:c-is-a-field",
+      "to": "thm:every-nonzero-complex-has-inverse",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:addition-on-c-classes",
+      "to": "def:complex-class-notation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:addition-on-c-classes",
+      "to": "def:addition-on-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:addition-on-c-respects-equivalence",
+      "to": "def:addition-on-c-classes",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:addition-on-c-respects-equivalence",
+      "to": "def:complex-coordinate-equivalence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-on-c-well-defined",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-on-c-well-defined",
+      "to": "def:addition-on-c-classes",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:addition-on-c-well-defined",
+      "to": "lem:addition-on-c-respects-equivalence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:negation-on-c-well-defined",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:negation-on-c-well-defined",
+      "to": "def:negation-on-c-classes",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:negation-on-c-well-defined",
+      "to": "lem:negation-on-c-respects-equivalence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:subtraction-on-c-well-defined",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:subtraction-on-c-well-defined",
+      "to": "def:subtraction-on-c",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:subtraction-on-c-well-defined",
+      "to": "thm:addition-on-c-well-defined",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:subtraction-on-c-well-defined",
+      "to": "thm:negation-on-c-well-defined",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:multiplication-on-c-classes",
+      "to": "def:complex-class-notation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:multiplication-on-c-classes",
+      "to": "def:multiplication-on-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:multiplication-on-c-classes",
+      "to": "def:addition-on-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-on-c-well-defined",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-on-c-well-defined",
+      "to": "def:multiplication-on-c-classes",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:multiplication-on-c-well-defined",
+      "to": "lem:multiplication-on-c-respects-equivalence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:complex-conjugation-well-defined",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:complex-conjugation-well-defined",
+      "to": "def:complex-conjugation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:inversion-on-c-well-defined",
+      "to": "def:function",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:inversion-on-c-well-defined",
+      "to": "def:multiplicative-inverse-on-c",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:inversion-on-c-well-defined",
+      "to": "lem:complex-product-with-conjugate",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:congruence-modulo-integer",
+      "to": "def:integers",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:congruence-modulo-integer",
+      "to": "def:positive-integer",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:congruence-modulo-integer",
+      "to": "def:divisibility-in-z",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:congruence-modulo-integer",
+      "to": "def:subtraction-on-z",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:congruence-modulo-integer-equivalence",
+      "to": "def:equivalence-relation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:congruence-modulo-integer-equivalence",
+      "to": "def:congruence-modulo-integer",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:congruence-modulo-integer-equivalence",
+      "to": "def:divisibility-in-z",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:integers-modulo-n",
+      "to": "def:quotient-set",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:integers-modulo-n",
+      "to": "def:integers",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:integers-modulo-n",
+      "to": "def:congruence-modulo-integer",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:residue-class-modulo-n",
+      "to": "def:integers-modulo-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:residue-class-modulo-n",
+      "to": "def:equiv-class",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:residue-class-modulo-n",
+      "to": "def:congruence-modulo-integer",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:addition-modulo-n",
+      "to": "def:residue-class-modulo-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:addition-modulo-n",
+      "to": "def:addition-on-z-classes",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:multiplication-modulo-n",
+      "to": "def:residue-class-modulo-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:multiplication-modulo-n",
+      "to": "def:multiplication-on-z-classes",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:modular-operations-well-defined",
+      "to": "def:operation-well-definedness",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:modular-operations-well-defined",
+      "to": "def:addition-modulo-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:modular-operations-well-defined",
+      "to": "def:multiplication-modulo-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:modular-operations-well-defined",
+      "to": "def:congruence-modulo-integer",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:finite-modular-number-system",
+      "to": "def:integers-modulo-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:finite-modular-number-system",
+      "to": "def:addition-modulo-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:finite-modular-number-system",
+      "to": "def:multiplication-modulo-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:finite-modular-number-system",
+      "to": "def:zero-in-z",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:finite-modular-number-system",
+      "to": "def:one-in-z",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:z-mod-four-has-zero-divisors",
+      "to": "def:finite-modular-number-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:z-mod-four-has-zero-divisors",
+      "to": "def:multiplication-modulo-n",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:z-mod-four-has-zero-divisors",
+      "to": "def:abstract-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:number-system-construction-target",
+      "to": "def:binary-arithmetic-operation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:number-system-construction-target",
+      "to": "def:ring",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:number-system-construction-target",
+      "to": "def:abstract-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:number-system-construction-target",
+      "to": "def:abstract-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:number-system-construction-data",
+      "to": "def:number-system-construction-target",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:number-system-construction-data",
+      "to": "def:equivalence-relation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:number-system-construction-data",
+      "to": "def:binary-arithmetic-operation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:number-system-construction-verification",
+      "to": "def:number-system-construction-target",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:number-system-construction-verification",
+      "to": "def:number-system-construction-data",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:number-system-construction-verification",
+      "to": "def:operation-well-definedness",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:number-system-construction-verification",
+      "to": "def:operation-respects-equivalence",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:two-element-carrier",
+      "to": "def:zero-in-z",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:two-element-carrier",
+      "to": "def:one-in-z",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:addition-on-two-element-system",
+      "to": "def:two-element-carrier",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:addition-on-two-element-system",
+      "to": "def:binary-arithmetic-operation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:multiplication-on-two-element-system",
+      "to": "def:two-element-carrier",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:multiplication-on-two-element-system",
+      "to": "def:binary-arithmetic-operation",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:two-element-number-system",
+      "to": "def:two-element-carrier",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:two-element-number-system",
+      "to": "def:addition-on-two-element-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:two-element-number-system",
+      "to": "def:multiplication-on-two-element-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:two-element-system-is-field",
+      "to": "def:two-element-number-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:two-element-system-is-field",
+      "to": "def:abstract-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:two-element-system-not-ordered-field",
+      "to": "thm:two-element-system-is-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:two-element-system-not-ordered-field",
+      "to": "def:abstract-ordered-field",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:z-mod-two-is-two-element-system",
+      "to": "def:finite-modular-number-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:z-mod-two-is-two-element-system",
+      "to": "def:two-element-number-system",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:z-mod-two-is-two-element-system",
+      "to": "thm:modular-operations-well-defined",
       "kind": "depends_on"
     },
     {
