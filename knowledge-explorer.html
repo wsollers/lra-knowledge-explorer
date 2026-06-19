@@ -369,10 +369,10 @@ function openExamplesModal(id){
 }
 function closeExamplesModal(){els.examplesModal.style.display='none';state.activeExampleNode=null;}
 
-// nodeDeck: section-level label. Old yaml nodes: `deck`. New extractor nodes: humanized section from pass-2.
-function nodeDeck(n){return n.deck||'';}
-// nodeChapter: top-level chapter key. New extractor nodes: `chapter`. Old yaml nodes: no chapter field.
-function nodeChapter(n){return n.chapter||'';}
+// nodeDeck: section-level label. Old yaml nodes: `deck`; governance exports use `section` plus TOC title metadata.
+function nodeDeck(n){return n.section_title||n.deck||n.section||'';}
+// nodeChapter: top-level chapter title. Governance exports preserve the chapter key in n.chapter and TOC title in n.chapter_title.
+function nodeChapter(n){return n.chapter_title||n.chapter||'';}
 // nodeTitle: old yaml nodes use `name`, new extractor nodes use `title`.
 function nodeTitle(n){return n.name||n.title||'';}
 
@@ -392,38 +392,45 @@ function splitTargets(v){if(Array.isArray(v))return v.map(cleanEdge).filter(Bool
 function addEdge(edges,seen,ids,from,to,kind){const f=cleanEdge(from),t=cleanEdge(to),k=normalizeEdgeKind(kind);if(!f||!t||f===t||!ids.has(f)||!ids.has(t))return;const sig=`${f}|${t}|${k}`;if(seen.has(sig))return;seen.add(sig);edges.push({from:f,to:t,kind:k});}
 function normalizeEdges(knowledge,edgeData){const nodes=knowledge?.nodes||[];const ids=new Set(nodes.map(n=>n.id));const raw=Array.isArray(edgeData)?edgeData:(edgeData?.edges||[]);const edges=[];const seen=new Set();raw.forEach(e=>addEdge(edges,seen,ids,e.from??e.source,e.to??e.target,e.kind??e.type??e.label));nodes.forEach(n=>{splitTargets(n.depends_on_ids).forEach(id=>addEdge(edges,seen,ids,n.id,id,'depends_on'));splitTargets(n.implies_ids).forEach(id=>addEdge(edges,seen,ids,n.id,id,'implies'));splitTargets(n.equivalent_to_ids).forEach(id=>addEdge(edges,seen,ids,n.id,id,'equivalent_to'));});return edges;}
 
-// syncFilters: populates both the Chapter dropdown (n.chapter) and Section dropdown (n.deck).
-// When a chapter is selected, the section dropdown is narrowed to only sections within that chapter.
+function tocVolumes(){
+  const toc=(state.knowledge&&state.knowledge.metadata&&state.knowledge.metadata.toc)||[];
+  return Array.isArray(toc)?toc:[];
+}
+function volumeTitle(v){return 'Volume '+VOLUME_ROMAN[v]+' \u2014 '+VOLUME_TITLES[v];}
+function fallbackTitle(slug){return String(slug||'').split('-').filter(Boolean).map(s=>s.charAt(0).toUpperCase()+s.slice(1)).join(' ');}
+function optionSet(select,options,current){
+  const sig=options.map(o=>o.value+'='+o.label).join('|');
+  const existing=Array.from(select.options).map(o=>o.value+'='+o.textContent).join('|');
+  if(sig!==existing){
+    select.innerHTML='';
+    options.forEach(item=>{const o=document.createElement('option');o.value=item.value;o.textContent=item.label;if(item.value===current)o.selected=true;select.appendChild(o);});
+  }
+}
+// syncFilters: populates Volume, Chapter, and Section from exported TOC metadata.
+// Filters keep slug keys internally but display the same chapter/section titles and order as the source indexes.
 function syncFilters(nodes){
   const selVolume=state.filters.volume;
   const selChapter=state.filters.chapter;
   const selDeck=state.filters.deck;
+  const nodeVols=new Set(nodes.map(n=>String(n.volume||nodeVolume(n))).filter(Boolean));
+  const toc=tocVolumes().filter(v=>nodeVols.has(String(v.id))||((v.chapters||[]).length));
+  const volumeOptions=[{value:'All',label:'All volumes'},...toc.map(v=>({value:String(v.id),label:volumeTitle(v.id)}))];
+  if(selVolume!=='All'&&!volumeOptions.some(o=>o.value===selVolume))state.filters.volume='All';
+  optionSet(els.volumeFilter,volumeOptions,state.filters.volume);
 
-  const volNums=Array.from(new Set(nodes.map(nodeVolume).filter(v=>v>0))).sort((a,b)=>a-b);
-  const volOpts=['All',...volNums.map(String)];
-  const exVol=Array.from(els.volumeFilter.options).map(o=>o.value);
-  if(exVol.join('|')!==volOpts.join('|')){
-    els.volumeFilter.innerHTML='';
-    volOpts.forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v==='All'?'All volumes':('Volume '+VOLUME_ROMAN[v]+' \u2014 '+VOLUME_TITLES[v]);if(v===selVolume)o.selected=true;els.volumeFilter.appendChild(o);});
-  }
-  const volNodes=selVolume==='All'?nodes:nodes.filter(n=>String(nodeVolume(n))===String(selVolume));
+  const activeVolumes=state.filters.volume==='All'?toc:toc.filter(v=>String(v.id)===String(state.filters.volume));
+  const chapterOptions=[{value:'All',label:'All chapters'}];
+  activeVolumes.forEach(v=>(v.chapters||[]).forEach(c=>chapterOptions.push({value:c.id,label:c.title||fallbackTitle(c.id)})));
+  if(state.filters.chapter!=='All'&&!chapterOptions.some(o=>o.value===state.filters.chapter))state.filters.chapter='All';
+  optionSet(els.chapterFilter,chapterOptions,state.filters.chapter);
 
-  // Chapters: unique n.chapter values (new extractor nodes only — old nodes have no chapter field)
-  const chapters=['All',...Array.from(new Set(volNodes.map(n=>n.chapter).filter(Boolean))).sort()];
-  const exCh=Array.from(els.chapterFilter.options).map(o=>o.value);
-  if(exCh.join('|')!==chapters.join('|')){
-    els.chapterFilter.innerHTML='';
-    chapters.forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;if(c===selChapter)o.selected=true;els.chapterFilter.appendChild(o);});
-  }
-
-  // Sections: unique n.deck values, filtered by selected chapter if one is active
-  const filteredNodes=selChapter==='All'?volNodes:volNodes.filter(n=>n.chapter===selChapter);
-  const decks=['All',...Array.from(new Set(filteredNodes.map(n=>n.deck).filter(Boolean))).sort()];
-  const exDeck=Array.from(els.deckFilter.options).map(o=>o.value);
-  if(exDeck.join('|')!==decks.join('|')){
-    els.deckFilter.innerHTML='';
-    decks.forEach(d=>{const o=document.createElement('option');o.value=d;o.textContent=d;if(d===selDeck)o.selected=true;els.deckFilter.appendChild(o);});
-  }
+  const sectionOptions=[{value:'All',label:'All sections'}];
+  activeVolumes.forEach(v=>(v.chapters||[]).forEach(c=>{
+    if(state.filters.chapter!=='All'&&c.id!==state.filters.chapter)return;
+    (c.sections||[]).forEach(s=>sectionOptions.push({value:s.id,label:s.title||fallbackTitle(s.id)}));
+  }));
+  if(state.filters.deck!=='All'&&!sectionOptions.some(o=>o.value===state.filters.deck))state.filters.deck='All';
+  optionSet(els.deckFilter,sectionOptions,state.filters.deck);
 }
 
 function getNodes(){return state.knowledge.nodes||[];}
@@ -445,9 +452,9 @@ function visibleGraph(){
     const byType=cls==='primitive'?state.filters.showPrimitives:(cls==='axiom'?state.filters.showAxioms:(cls==='definition'?state.filters.showDefinitions:state.filters.showResults));
     // Chapter filter: match n.chapter exactly (new nodes) or pass if 'All'
     const byChapter=selCh==='All'||n.chapter===selCh;
-    // Section filter: match n.deck exactly or pass if 'All'
-    const byDeck=selDeck==='All'||n.deck===selDeck;
-    const byVolume=selVol==='All'||String(nodeVolume(n))===String(selVol);
+    // Section filter: match the source section key or pass if 'All'
+    const byDeck=selDeck==='All'||n.section===selDeck||n.deck===selDeck;
+    const byVolume=selVol==='All'||String(n.volume||nodeVolume(n))===String(selVol);
     const blob=JSON.stringify(n).toLowerCase();
     vis.set(n.id,byType&&byChapter&&byDeck&&byVolume&&(!q||blob.includes(q)));
   }
