@@ -511,7 +511,7 @@ function applyInitialView(){
   requestAnimationFrame(()=>requestAnimationFrame(()=>{if(anchor)centerOnNode(anchor);}));
 }
 
-function drawEdges(g=state.renderedGraph){if(!g)return;els.edgeLayer.querySelectorAll('path.edge').forEach(p=>p.remove());const nm=new Map(g.nodes.map(n=>[n.id,n]));for(const e of g.edges){const a=nm.get(e.from),b=nm.get(e.to);if(!a||!b)continue;const aB=nodeBox(a),bB=nodeBox(b);const aC={x:aB.x+aB.w/2,y:aB.y+aB.h/2},bC={x:bB.x+bB.w/2,y:bB.y+bB.h/2};const s=rectPt(aB,bC,0),en=rectPt(bB,aC,1);const dir=Math.sign(en.x-s.x)||1,bend=Math.max(80,Math.abs(en.x-s.x)*.45);const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.classList.add('edge');p.setAttribute('d',`M ${s.x} ${s.y} C ${s.x+dir*bend} ${s.y}, ${en.x-dir*bend} ${en.y}, ${en.x} ${en.y}`);p.setAttribute('fill','none');const v=edgeVisual(e.kind);p.setAttribute('stroke',v.color);p.setAttribute('stroke-width',v.width);p.setAttribute('opacity',v.opacity);p.setAttribute('marker-end',v.marker);els.edgeLayer.appendChild(p);}}
+function drawEdges(g=state.renderedGraph){if(!g)return;els.edgeLayer.querySelectorAll('path.edge').forEach(p=>p.remove());const nm=new Map(g.nodes.map(n=>[n.id,n]));const flowDeps=state.filters.layoutMode==='topo';for(const e of g.edges){let a=nm.get(e.from),b=nm.get(e.to);if(!a||!b)continue;if(flowDeps&&isDependencyKind(e.kind)){a=nm.get(e.to);b=nm.get(e.from);}const aB=nodeBox(a),bB=nodeBox(b);const aC={x:aB.x+aB.w/2,y:aB.y+aB.h/2},bC={x:bB.x+bB.w/2,y:bB.y+bB.h/2};const s=rectPt(aB,bC,0),en=rectPt(bB,aC,1);const dir=Math.sign(en.x-s.x)||1,bend=Math.max(80,Math.abs(en.x-s.x)*.45);const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.classList.add('edge');p.setAttribute('d',`M ${s.x} ${s.y} C ${s.x+dir*bend} ${s.y}, ${en.x-dir*bend} ${en.y}, ${en.x} ${en.y}`);p.setAttribute('fill','none');const v=edgeVisual(e.kind);p.setAttribute('stroke',v.color);p.setAttribute('stroke-width',v.width);p.setAttribute('opacity',v.opacity);p.setAttribute('marker-end',v.marker);els.edgeLayer.appendChild(p);}}
 
 function attachDrag(el,n){function finish(ev){const d=state.dragging;if(!d||d.id!==n.id)return;el.classList.remove('dragging');try{el.releasePointerCapture(ev.pointerId);}catch(_){}if(d.moved){state.suppressNextClick=true;setTimeout(()=>{state.suppressNextClick=false;},0);}state.dragging=null;}el.addEventListener('pointerdown',ev=>{if(ev.button!==0)return;hideTooltip();state.dragging={id:n.id,startX:ev.clientX,startY:ev.clientY,originX:n.x,originY:n.y,moved:false};el.classList.add('dragging');el.setPointerCapture(ev.pointerId);});el.addEventListener('pointermove',ev=>{const d=state.dragging;if(!d||d.id!==n.id)return;const dx=(ev.clientX-d.startX)/state.zoom,dy=(ev.clientY-d.startY)/state.zoom;if(Math.abs(dx)+Math.abs(dy)>3)d.moved=true;n.x=d.originX+dx;n.y=d.originY+dy;state.nodePositions[n.id]={x:n.x,y:n.y};el.style.left=n.x+'px';el.style.top=n.y+'px';drawEdges();ev.preventDefault();});el.addEventListener('pointerup',finish);el.addEventListener('pointercancel',finish);}
 
@@ -600,7 +600,7 @@ function render(){const g=visibleGraph();const dims=layout(g.nodes,g.edges);stat
 
 async function tryAutoLoad(){
   try{
-    const DATA_VERSION='20260619-0325-topo-layout';
+    const DATA_VERSION='20260619-0335-topo-arrow-flow';
     const loadJson=(path,required=true)=>fetch(`${path}?v=${DATA_VERSION}`,{cache:'no-store'}).then(r=>{
       if(!r.ok){
         if(!required)return null;
