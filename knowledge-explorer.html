@@ -84,6 +84,7 @@ a{color:#93c5fd}
 .verification-status.pending,.verification-status.not_started{border-color:rgba(148,163,184,.45);background:rgba(148,163,184,.12);color:#cbd5e1}
 .proof-attempt{margin-bottom:16px}
 .proof-attempt h3{font-size:.95rem;margin:0 0 8px;color:#e2e8f0}
+.example-select{width:auto;min-width:min(420px,100%);border-radius:8px;padding:8px 10px}
 </style>
 </head>
 <body>
@@ -177,6 +178,21 @@ a{color:#93c5fd}
     <div class="proof-body" id="proofModalBody"></div>
   </div>
 </div>
+<div class="proof-modal-backdrop" id="examplesModal" role="dialog" aria-modal="true" aria-labelledby="examplesModalTitle">
+  <div class="proof-modal">
+    <div class="proof-modal-head">
+      <div>
+        <div class="label">Examples</div>
+        <div class="proof-modal-title" id="examplesModalTitle">Examples</div>
+      </div>
+      <button class="proof-modal-close" id="examplesModalClose" aria-label="Close examples">&times;</button>
+    </div>
+    <div class="proof-tabs">
+      <select id="examplesSelect" class="example-select" aria-label="Example"></select>
+    </div>
+    <div class="proof-body" id="examplesModalBody"></div>
+  </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
 <script>
 const INITIAL_ZOOM      = 0.45;
@@ -186,8 +202,8 @@ const VOLUME_ROMAN={1:'I',2:'II',3:'III',4:'IV',5:'V',6:'VI',7:'VII',8:'VIII'};
 const CHAPTER_TO_VOLUME={'propositional-logic':1,'predicate-logic':1,'sets-relations-functions':1,'axiom-systems':1,'proof-techniques':1,'identity-equality-equivalence':2,'arithmetic-operations-relations':2,'peano-systems':2,'natural-numbers':2,'whole-numbers':2,'integers':2,'rationals':2,'reals':2,'numbers-summary':2,'embedding-number-systems':2,'number-lines':2,'structure-of-real-line':2,'formalizing-number-systems':2,'lean':2,'complex-numbers':2,'real-analysis':3,'bounding':3,'sequences':3,'elementary-functions':3,'functions':3,'continuity':3,'differentiation':3,'riemann-integration':3,'measure-theory':3,'probability-theory':3,'functional-analysis':3,'complex-analysis':3,'series':3,'function-sequences':3,'foundations':3,'discrete-calculus':3,'algebraic-structures':4,'abstract-algebra':4,'linear-algebra':4,'lattice-order':4,'set-algebra':4,'algebraic-geometry':4,'summation-algebra':4,'euclidean-geometry':5,'analytical-geometry':5,'trigonometry':5,'non-euclidean-geometry':5,'differential-geometry':5,'riemannian-geometry':5,'topology':5,'calculus':6,'geometric-modeling':6,'computational-geometry':6,'computational-linear-algebra':6,'computational-probability':6,'ordinary-differential-equations':6,'partial-differential-equations':6,'fourier-analysis':6,'numerical-analysis':7,'numerical-pde':7,'category-theory':8,'model-theory':8,'proof-theory':8,'type-theory':8,'lambda-calculus':8,'algebras-of-sets':8};
 function nodeVolume(n){return CHAPTER_TO_VOLUME[n&&n.chapter]||0;}
 
-const state={knowledge:{metadata:{},nodes:[]},edges:[],proofVault:{records:{}},activeProofNode:null,activeProofTab:'standard',zoom:1,selectedId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showImplies:true,volume:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
-const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose')};
+const state={knowledge:{metadata:{},nodes:[]},edges:[],proofVault:{records:{}},activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,zoom:1,selectedId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showImplies:true,volume:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
+const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect')};
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function decodeB64(s){if(!s)return'';try{return decodeURIComponent(escape(atob(s)));}catch(e){try{return atob(s);}catch(_){return'';}}}
@@ -284,6 +300,8 @@ function hasVerification(n){
   return!!(v.status||v.module||v.declaration||v.decl||v.source_path||v.source||v.code_b64||v.lean_code_b64||v.lean_code||v.code||n.verification_status||n.lean_module||n.verification_module||n.lean_decl||n.verification_decl||n.lean_source||n.verification_source||n.lean_code_b64||n.verification_code_b64||n.lean_code||n.verification_code);
 }
 function hasAnyProof(n){const b=proofBundle(n);return!!(b.standard||b.detailed||b.mine.length||hasVerification(n));}
+function examplesForNode(n){return Array.isArray(n.examples)?n.examples:[];}
+function hasExamples(n){return examplesForNode(n).length>0;}
 function renderMine(records){
   if(!records.length)return'<div class="proof-empty">No proof-vault attempt is indexed for this theorem yet.</div>';
   return records.map((r,i)=>{
@@ -328,6 +346,28 @@ function openProofModal(id,tab='standard'){
   els.proofModal.style.display='flex';
 }
 function closeProofModal(){els.proofModal.style.display='none';state.activeProofNode=null;}
+function renderExampleModal(){
+  const n=state.activeExampleNode;if(!n)return;
+  const examples=examplesForNode(n);
+  if(!examples.length){els.examplesModalBody.innerHTML='<div class="proof-empty">No examples are available for this node yet.</div>';return;}
+  const index=Math.max(0,Math.min(state.activeExampleIndex,examples.length-1));
+  state.activeExampleIndex=index;
+  const ex=examples[index]||{};
+  const source=ex.source?`<div class="tiny" style="margin-top:12px">${esc(ex.source)}${ex.source_line?`:${esc(ex.source_line)}`:''}</div>`:'';
+  const uses=Array.isArray(ex.uses)&&ex.uses.length?`<div class="tiny" style="margin-top:8px">Uses: ${esc(ex.uses.join(', '))}</div>`:'';
+  const body=ex.body_tex||ex.body_latex||decodeB64(ex.body_latex_b64)||ex.body_preview||'';
+  els.examplesModalBody.innerHTML=body?`<div class="value">${texToHtml(body)}</div>${uses}${source}`:'<div class="proof-empty">This example has no body text yet.</div>';
+}
+function openExamplesModal(id){
+  const n=(state.knowledge.nodes||[]).find(x=>x.id===id);if(!n)return;
+  state.activeExampleNode=n;state.activeExampleIndex=0;
+  els.examplesModalTitle.innerHTML=texToHtml(nodeTitle(n)||n.id);
+  const examples=examplesForNode(n);
+  els.examplesSelect.innerHTML=examples.map((ex,i)=>`<option value="${i}">${esc(ex.label||ex.title||`Example ${i+1}`)}</option>`).join('');
+  renderExampleModal();
+  els.examplesModal.style.display='flex';
+}
+function closeExamplesModal(){els.examplesModal.style.display='none';state.activeExampleNode=null;}
 
 // nodeDeck: section-level label. Old yaml nodes: `deck`. New extractor nodes: humanized section from pass-2.
 function nodeDeck(n){return n.deck||'';}
@@ -572,11 +612,14 @@ function renderDetails(n){
     });
   }
   add('Proof type',n.proof_type);
-  if(hasAnyProof(n)){
+  if(hasAnyProof(n)||hasExamples(n)){
     const mineCount=proofVaultRecords(n).length;
-    const label=hasVerification(n)?'Proofs and Verification':'Proofs';
-    const buttonText=hasVerification(n)?'Open proofs and verification':'Open proofs';
-    blocks.push(`<div class="card proof-panel"><div class="label">${label}</div><div class="value"><button class="link-button" data-open-proofs="${esc(n.id)}">${buttonText}</button>${mineCount?` <span class="tiny">${mineCount} vault attempt${mineCount===1?'':'s'}</span>`:''}</div></div>`);
+    const exampleCount=examplesForNode(n).length;
+    const proofLabel=hasVerification(n)?'Open proofs and verification':'Open proofs';
+    const exampleButton=exampleCount?`<button class="link-button" data-open-examples="${esc(n.id)}">Examples</button>`:'';
+    const proofButton=hasAnyProof(n)?`<button class="link-button" data-open-proofs="${esc(n.id)}">${proofLabel}</button>`:'';
+    const counts=[exampleCount?`${exampleCount} example${exampleCount===1?'':'s'}`:'',mineCount?`${mineCount} vault attempt${mineCount===1?'':'s'}`:''].filter(Boolean).join(' · ');
+    blocks.push(`<div class="card proof-panel"><div class="label">Learning artifacts</div><div class="value">${exampleButton} ${proofButton}${counts?` <span class="tiny">${esc(counts)}</span>`:''}</div></div>`);
   }
   addProof('Proof sketch',n.proof_sketch);
   const _outEdges=(state.edges||[]).filter(e=>e.from===n.id);
@@ -594,13 +637,16 @@ function renderDetails(n){
   els.detailContent.querySelectorAll('[data-open-proofs]').forEach(btn=>{
     btn.addEventListener('click',()=>openProofModal(btn.dataset.openProofs));
   });
+  els.detailContent.querySelectorAll('[data-open-examples]').forEach(btn=>{
+    btn.addEventListener('click',()=>openExamplesModal(btn.dataset.openExamples));
+  });
 }
 
 function render(){const g=visibleGraph();const dims=layout(g.nodes,g.edges);state.renderedGraph=g;els.graphInner.style.width=dims.width+'px';els.graphInner.style.height=dims.height+'px';els.graphInner.style.transform=`scale(${state.zoom})`;els.edgeLayer.setAttribute('width',dims.width);els.edgeLayer.setAttribute('height',dims.height);els.edgeLayer.setAttribute('viewBox',`0 0 ${dims.width} ${dims.height}`);els.edgeLayer.innerHTML=`<defs><marker id="arrowDep" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#94a3b8"/></marker><marker id="arrowUse" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#a78bfa"/></marker><marker id="arrowImp" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#f59e0b"/></marker><marker id="arrowEquiv" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#22c55e"/></marker></defs>`;els.nodeLayer.innerHTML='';state.nodeElements=new Map();for(const n of g.nodes){const d=document.createElement('div');d.className=`node ${nodeClass(n)}`+(state.selectedId===n.id?' selected':'');d.style.left=n.x+'px';d.style.top=n.y+'px';d.dataset.nodeId=n.id;d.innerHTML=`<div class="type">${esc(kindLabel(n))}</div><div class="title">${texToHtml(nodeTitle(n))}</div><div class="meta"><span>${esc(nodeDeck(n)||nodeChapter(n))}</span><span>${esc(n.id)}</span></div>`;d.addEventListener('mouseenter',ev=>showTooltip(ev,n));d.addEventListener('mousemove',moveTooltip);d.addEventListener('mouseleave',hideTooltip);d.addEventListener('click',()=>{if(state.suppressNextClick){state.suppressNextClick=false;return;}state.selectedId=n.id;render();renderDetails(n);});attachDrag(d,n);els.nodeLayer.appendChild(d);state.nodeElements.set(n.id,d);}drawEdges(g);}
 
 async function tryAutoLoad(){
   try{
-    const DATA_VERSION='20260619-0335-topo-arrow-flow';
+    const DATA_VERSION='20260619-0410-examples-modal';
     const loadJson=(path,required=true)=>fetch(`${path}?v=${DATA_VERSION}`,{cache:'no-store'}).then(r=>{
       if(!r.ok){
         if(!required)return null;
@@ -652,8 +698,15 @@ els.zoomOutBtn.onclick=()=>{state.zoom=Math.max(0.45,+(state.zoom-0.1).toFixed(2
 els.resetBtn.onclick=()=>{state.nodePositions={};render();applyInitialView();};
 els.proofModalClose.onclick=closeProofModal;
 els.proofModal.addEventListener('click',e=>{if(e.target===els.proofModal)closeProofModal();});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&els.proofModal.style.display==='flex')closeProofModal();});
 els.proofModal.querySelectorAll('.proof-tab').forEach(btn=>btn.addEventListener('click',()=>{state.activeProofTab=btn.dataset.proofTab;renderProofTab();}));
+els.examplesSelect.onchange=e=>{state.activeExampleIndex=Number(e.target.value)||0;renderExampleModal();};
+els.examplesModalClose.onclick=closeExamplesModal;
+els.examplesModal.addEventListener('click',e=>{if(e.target===els.examplesModal)closeExamplesModal();});
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Escape')return;
+  if(els.proofModal.style.display==='flex')closeProofModal();
+  if(els.examplesModal.style.display==='flex')closeExamplesModal();
+});
 tryAutoLoad();
 </script>
 </body>

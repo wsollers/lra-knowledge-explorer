@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-06-19T02:46:15.833847+00:00",
-    "version_id": 1,
+    "generated_at": "2026-06-19T03:10:14.212970+00:00",
+    "version_id": 3,
     "chapters": [
       "axiom-systems",
       "predicate-logic",
@@ -40,7 +40,7 @@
     "error_count": 0,
     "schema_version": "governance-export-1",
     "script": "lra-governance/tools/governance/extraction_pipeline/export_knowledge_explorer.py",
-    "source_run": "F:\\repos\\lra-governance\\runs\\extraction-20260619-013454"
+    "source_run": "F:\\repos\\lra-governance\\runs\\extraction-20260619-030735"
   },
   "nodes": [
     {
@@ -33857,7 +33857,40 @@
       "is_root": false,
       "root_kind": "",
       "env_name": "theorem",
-      "text_preview": "Let $(P,S,1)$ be a Peano system. For every $n \\in P$, \\[ S(n) \\neq n. \\]"
+      "text_preview": "Let $(P,S,1)$ be a Peano system. For every $n \\in P$, \\[ S(n) \\neq n. \\]",
+      "examples": [
+        {
+          "label": "Why the base case is forced",
+          "title": "Why the base case is forced",
+          "body_tex": "For the first element, the theorem says\n\\[\nS(1)\\neq 1.\n\\]\nThis is exactly the axiom that the distinguished element is not a successor:\nthere is no element $x\\in P$ with $S(x)=1$. In particular, taking $x=1$\nwould be impossible, so $S(1)\\neq 1$.",
+          "uses": [
+            "ax:peano-base-not-successor"
+          ],
+          "tags": [
+            "peano systems",
+            "induction",
+            "base case"
+          ],
+          "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+          "source_line": 804
+        },
+        {
+          "label": "Why the induction step uses injectivity",
+          "title": "Why the induction step uses injectivity",
+          "body_tex": "Suppose the induction hypothesis gives $S(n)\\neq n$. To prove the next case,\nwe must show\n\\[\nS(S(n))\\neq S(n).\n\\]\nIf equality held, injectivity of $S$ would let us cancel the outer successor\nand conclude $S(n)=n$, contradicting the induction hypothesis. Thus the\nproperty propagates from $n$ to $S(n)$.",
+          "uses": [
+            "ax:peano-successor-injective",
+            "thm:induction-principle-for-peano-system"
+          ],
+          "tags": [
+            "peano systems",
+            "induction",
+            "injectivity"
+          ],
+          "source": "notes/defining-peano-systems/notes-peano-system-theorems.tex",
+          "source_line": 817
+        }
+      ]
     },
     {
       "id": "def:presburger-signature",
