@@ -489,8 +489,8 @@ function chipList(ids,treeMode){
   const byId=new Map((state.knowledge.nodes||[]).map(n=>[n.id,n]));
   return ids.map(id=>{
     const label=byId.has(id)?nodeTitle(byId.get(id))||id:id;
-    return`<span class="node-chip" data-node-id="${esc(id)}" data-tree="${esc(treeMode||'')}" title="${esc(id)}">${esc(label)}</span>`;
-  }).join('');
+    return`<span class="node-chip" data-node-id="${esc(id)}" data-tree="${esc(treeMode||'')}" title="${esc(id)}">${texToHtml(label)}</span>`;
+  }).join(' ');
 }
 
 function renderDetails(n){
@@ -546,7 +546,7 @@ function render(){const g=visibleGraph();const dims=layout(g.nodes,g.edges);stat
 
 async function tryAutoLoad(){
   try{
-    const DATA_VERSION='20260619-0225-tex-rendering';
+    const DATA_VERSION='20260619-0245-chip-rendering';
     const loadJson=(path,required=true)=>fetch(`${path}?v=${DATA_VERSION}`,{cache:'no-store'}).then(r=>{
       if(!r.ok){
         if(!required)return null;
