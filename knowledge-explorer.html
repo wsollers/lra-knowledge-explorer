@@ -50,6 +50,8 @@ svg{position:absolute;inset:0}
 .value .katex-display{max-width:100%;overflow-x:auto;overflow-y:visible;padding:.3rem 0;margin:.5rem 0}
 .value .katex{max-width:100%}
 .data-meta{margin:-2px 0 12px;padding:8px 10px;border:1px solid rgba(255,255,255,.08);border-radius:8px;background:rgba(255,255,255,.03)}
+.data-meta.pdf-launcher{width:100%;text-align:left;color:#bfdbfe;cursor:pointer}
+.data-meta.pdf-launcher:hover{background:rgba(96,165,250,.12);border-color:rgba(147,197,253,.35)}
 .danger{border:2px solid var(--danger)!important;background:rgba(127,29,29,.16)!important}
 .tooltip{position:fixed;display:none;pointer-events:none;max-width:520px;background:rgba(15,23,42,.98);border:1px solid #334155;border-radius:14px;padding:12px;z-index:50;box-shadow:0 18px 38px rgba(0,0,0,.4)}
 .tooltip .block{margin-top:8px;padding:9px 10px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
@@ -85,6 +87,11 @@ a{color:#93c5fd}
 .proof-attempt{margin-bottom:16px}
 .proof-attempt h3{font-size:.95rem;margin:0 0 8px;color:#e2e8f0}
 .example-select{width:auto;min-width:min(420px,100%);border-radius:8px;padding:8px 10px}
+.pdf-controls{display:grid;grid-template-columns:1fr 170px;gap:10px;padding:12px;border-bottom:1px solid #243041;background:#0f172a}
+.pdf-controls select{border-radius:8px}
+.pdf-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.pdf-actions .link-button{justify-content:center}
+@media (max-width:760px){.pdf-controls{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -155,7 +162,7 @@ a{color:#93c5fd}
 <aside class="detail">
   <div class="section">
     <h2>Node details</h2>
-    <div id="dataMeta" class="tiny data-meta">Data version unavailable.</div>
+    <button id="dataMeta" class="tiny data-meta pdf-launcher" type="button">Data version unavailable.</button>
     <div id="detailEmpty" class="tiny">Click a node to inspect its extracted fields.</div>
     <div id="detailContent" style="display:none"></div>
   </div>
@@ -193,18 +200,44 @@ a{color:#93c5fd}
     <div class="proof-body" id="examplesModalBody"></div>
   </div>
 </div>
+<div class="proof-modal-backdrop" id="pdfModal" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+  <div class="proof-modal">
+    <div class="proof-modal-head">
+      <div>
+        <div class="label">Volume PDFs</div>
+        <div class="proof-modal-title" id="pdfModalTitle">Open Volume PDF</div>
+      </div>
+      <button class="proof-modal-close" id="pdfModalClose" aria-label="Close PDF chooser">&times;</button>
+    </div>
+    <div class="pdf-controls">
+      <div>
+        <div class="tiny" style="margin:0 0 4px">Volume</div>
+        <select id="pdfVolumeSelect" aria-label="PDF volume"></select>
+      </div>
+      <div>
+        <div class="tiny" style="margin:0 0 4px">Edition</div>
+        <select id="pdfEditionSelect" aria-label="PDF edition">
+          <option value="digital">Digital</option>
+          <option value="print">Print</option>
+        </select>
+      </div>
+    </div>
+    <div class="proof-body" id="pdfModalBody"></div>
+  </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"></script>
 <script>
 const INITIAL_ZOOM      = 0.45;
 const INITIAL_ANCHOR_ID = 'def:supremum';
+const PDF_BASE_URL      = 'https://wsollers.github.io/lra-volumes-output';
 const VOLUME_TITLES={1:'Logic, Sets, and Proof',2:'Foundations of Formal Number Systems',3:'Analysis',4:'Algebra and Abstract Structures',5:'Topology and Geometry',6:'Computational Mathematics',7:'Numerical and Approximation Mathematics',8:'Mathematical Logic and Foundations'};
 const VOLUME_ROMAN={1:'I',2:'II',3:'III',4:'IV',5:'V',6:'VI',7:'VII',8:'VIII'};
 const VOLUME_NUMBER_BY_ID={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
 const CHAPTER_TO_VOLUME={'propositional-logic':1,'predicate-logic':1,'sets-relations-functions':1,'axiom-systems':1,'proof-techniques':1,'identity-equality-equivalence':2,'arithmetic-operations-relations':2,'peano-systems':2,'natural-numbers':2,'whole-numbers':2,'integers':2,'rationals':2,'reals':2,'numbers-summary':2,'embedding-number-systems':2,'number-lines':2,'structure-of-real-line':2,'formalizing-number-systems':2,'lean':2,'complex-numbers':2,'real-analysis':3,'bounding':3,'sequences':3,'elementary-functions':3,'functions':3,'continuity':3,'differentiation':3,'riemann-integration':3,'measure-theory':3,'probability-theory':3,'functional-analysis':3,'complex-analysis':3,'series':3,'function-sequences':3,'foundations':3,'discrete-calculus':3,'algebraic-structures':4,'abstract-algebra':4,'linear-algebra':4,'lattice-order':4,'set-algebra':4,'algebraic-geometry':4,'summation-algebra':4,'euclidean-geometry':5,'analytical-geometry':5,'trigonometry':5,'non-euclidean-geometry':5,'differential-geometry':5,'riemannian-geometry':5,'topology':5,'calculus':6,'geometric-modeling':6,'computational-geometry':6,'computational-linear-algebra':6,'computational-probability':6,'ordinary-differential-equations':6,'partial-differential-equations':6,'fourier-analysis':6,'numerical-analysis':7,'numerical-pde':7,'category-theory':8,'model-theory':8,'proof-theory':8,'type-theory':8,'lambda-calculus':8,'algebras-of-sets':8};
 function nodeVolume(n){return CHAPTER_TO_VOLUME[n&&n.chapter]||0;}
 
-const state={knowledge:{metadata:{},nodes:[]},edges:[],proofVault:{records:{}},activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,zoom:1,selectedId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showImplies:true,volume:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
-const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect')};
+const state={knowledge:{metadata:{},nodes:[]},edges:[],proofVault:{records:{}},activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,pdfVolume:'',pdfEdition:'digital',zoom:1,selectedId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showImplies:true,volume:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
+const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect'),pdfModal:document.getElementById('pdfModal'),pdfModalClose:document.getElementById('pdfModalClose'),pdfModalBody:document.getElementById('pdfModalBody'),pdfVolumeSelect:document.getElementById('pdfVolumeSelect'),pdfEditionSelect:document.getElementById('pdfEditionSelect')};
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function decodeB64(s){if(!s)return'';try{return decodeURIComponent(escape(atob(s)));}catch(e){try{return atob(s);}catch(_){return'';}}}
@@ -399,6 +432,39 @@ function tocVolumes(){
 }
 function volumeNumber(v){const s=String(v||'').toLowerCase();return VOLUME_NUMBER_BY_ID[s]||Number(s)||0;}
 function volumeTitle(v){const n=volumeNumber(v);return n?('Volume '+VOLUME_ROMAN[n]+' \u2014 '+VOLUME_TITLES[n]):('Volume '+String(v||''));}
+function volumePdfSlug(v){const n=volumeNumber(v);return n?String(VOLUME_ROMAN[n]).toLowerCase():String(v||'').toLowerCase();}
+function pdfUrl(){return `${PDF_BASE_URL}/${state.pdfEdition}/lra-volume-${volumePdfSlug(state.pdfVolume)}.pdf`;}
+function pdfVolumeOptions(){
+  const toc=tocVolumes();
+  if(toc.length)return toc.map(v=>({value:String(v.id),label:volumeTitle(v.id)}));
+  return [1,2,3,4,5,6,7,8].map(n=>({value:String(n),label:volumeTitle(n)}));
+}
+function defaultPdfVolume(){
+  if(state.filters.volume!=='All')return String(state.filters.volume);
+  const selected=(state.knowledge.nodes||[]).find(n=>n.id===state.selectedId);
+  if(selected)return String(selected.volume||nodeVolume(selected)||'2');
+  const opts=pdfVolumeOptions();
+  return opts[0]?.value||'2';
+}
+function syncPdfControls(){
+  const opts=pdfVolumeOptions();
+  if(!state.pdfVolume||!opts.some(o=>o.value===String(state.pdfVolume)))state.pdfVolume=defaultPdfVolume();
+  optionSet(els.pdfVolumeSelect,opts,String(state.pdfVolume));
+  els.pdfEditionSelect.value=state.pdfEdition;
+}
+function renderPdfModal(){
+  syncPdfControls();
+  const url=pdfUrl();
+  els.pdfModalBody.innerHTML=`<div class="card"><div class="label">PDF</div><div class="value"><strong>${esc(els.pdfVolumeSelect.options[els.pdfVolumeSelect.selectedIndex]?.textContent||'Volume')}</strong><div class="tiny" style="margin-top:6px">${esc(state.pdfEdition)} edition</div><div class="pdf-actions"><button class="link-button" id="openPdfBtn" type="button">Open PDF</button><a class="link-button" href="${esc(url)}" target="_blank" rel="noopener">Direct link</a></div><div class="tiny" style="margin-top:10px">${esc(url)}</div></div></div>`;
+  const btn=document.getElementById('openPdfBtn');
+  if(btn)btn.onclick=()=>window.open(url,'_blank','noopener');
+}
+function openPdfModal(){
+  state.pdfVolume=defaultPdfVolume();
+  renderPdfModal();
+  els.pdfModal.style.display='flex';
+}
+function closePdfModal(){els.pdfModal.style.display='none';}
 function fallbackTitle(slug){return String(slug||'').split('-').filter(Boolean).map(s=>s.charAt(0).toUpperCase()+s.slice(1)).join(' ');}
 function plainOptionLabel(label){
   return String(label||'')
@@ -716,16 +782,22 @@ els.deckFilter.onchange=e=>{state.filters.deck=e.target.value;render();};
 els.zoomInBtn.onclick=()=>{state.zoom=Math.min(2.4,+(state.zoom+0.1).toFixed(2));render();};
 els.zoomOutBtn.onclick=()=>{state.zoom=Math.max(0.45,+(state.zoom-0.1).toFixed(2));render();};
 els.resetBtn.onclick=()=>{state.nodePositions={};render();applyInitialView();};
+els.dataMeta.onclick=openPdfModal;
 els.proofModalClose.onclick=closeProofModal;
 els.proofModal.addEventListener('click',e=>{if(e.target===els.proofModal)closeProofModal();});
 els.proofModal.querySelectorAll('.proof-tab').forEach(btn=>btn.addEventListener('click',()=>{state.activeProofTab=btn.dataset.proofTab;renderProofTab();}));
 els.examplesSelect.onchange=e=>{state.activeExampleIndex=Number(e.target.value)||0;renderExampleModal();};
 els.examplesModalClose.onclick=closeExamplesModal;
 els.examplesModal.addEventListener('click',e=>{if(e.target===els.examplesModal)closeExamplesModal();});
+els.pdfVolumeSelect.onchange=e=>{state.pdfVolume=e.target.value;renderPdfModal();};
+els.pdfEditionSelect.onchange=e=>{state.pdfEdition=e.target.value;renderPdfModal();};
+els.pdfModalClose.onclick=closePdfModal;
+els.pdfModal.addEventListener('click',e=>{if(e.target===els.pdfModal)closePdfModal();});
 document.addEventListener('keydown',e=>{
   if(e.key!=='Escape')return;
   if(els.proofModal.style.display==='flex')closeProofModal();
   if(els.examplesModal.style.display==='flex')closeExamplesModal();
+  if(els.pdfModal.style.display==='flex')closePdfModal();
 });
 tryAutoLoad();
 </script>
