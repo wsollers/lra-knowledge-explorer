@@ -2,6 +2,9 @@
 index.json
 manifest.json
 dependency-universe.json
+section-batches/
+state/base-graph.json
+state/working-graph-summary.json
 __pycache__/
 batch-*/
 # scratch

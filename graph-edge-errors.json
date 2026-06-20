@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T05:57:32.740141+00:00",
+  "generated_at": "2026-06-20T03:49:29.065488+00:00",
   "chapters": [
     "axiom-systems",
     "predicate-logic",
@@ -24,6 +24,8 @@
     "elementary-functions",
     "functions",
     "sequences",
+    "algebraic-geometry",
+    "algebraic-structures",
     "lattice-order",
     "linear-algebra",
     "analytical-geometry",

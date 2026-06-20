@@ -1,0 +1,1618 @@
+{
+  "schema_version": "reorder-working-delta-2",
+  "description": "Accepted review deltas. Preserved across batch regeneration unless --reset-delta is used.",
+  "adds": [
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "Rational class notation explicitly refers to a prefraction.",
+      "recorded_at": "2026-06-20T03:58:51.578925+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "def:rational-class-notation",
+      "target": "def:prefraction"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "The statement uses integer multiplication.",
+      "recorded_at": "2026-06-20T03:58:52.173440+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-denominator-nonzero-q",
+      "target": "def:multiplication-on-z-classes"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "The statement uses zero in Z.",
+      "recorded_at": "2026-06-20T03:58:52.292377+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-denominator-nonzero-q",
+      "target": "def:zero-in-z"
+    },
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "The statement uses the fraction equivalence relation.",
+      "recorded_at": "2026-06-20T03:58:51.693531+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "lem:fraction-equivalence-transitive",
+      "target": "def:fraction-equivalence"
+    },
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "The statement quantifies over prefractions.",
+      "recorded_at": "2026-06-20T03:58:51.811356+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "lem:fraction-equivalence-transitive",
+      "target": "def:prefraction"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "The statement uses integer multiplication.",
+      "recorded_at": "2026-06-20T03:58:52.412040+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-denominator-nonzero-q",
+      "target": "def:multiplication-on-z-classes"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "The statement uses zero in Z.",
+      "recorded_at": "2026-06-20T03:58:52.531456+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-denominator-nonzero-q",
+      "target": "def:zero-in-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "The statement asserts a binary operation.",
+      "recorded_at": "2026-06-20T03:58:52.960369+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-well-defined",
+      "target": "def:binary-arithmetic-operation"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "The statement asserts well-definedness.",
+      "recorded_at": "2026-06-20T03:58:52.840981+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-well-defined",
+      "target": "def:operation-well-definedness"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "The statement uses zero in Q.",
+      "recorded_at": "2026-06-20T03:58:54.058642+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:every-rational-has-additive-inverse",
+      "target": "def:zero-in-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "The statement asserts a binary operation.",
+      "recorded_at": "2026-06-20T03:58:53.197888+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-on-q-well-defined",
+      "target": "def:binary-arithmetic-operation"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "The statement asserts well-definedness.",
+      "recorded_at": "2026-06-20T03:58:53.077688+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-on-q-well-defined",
+      "target": "def:operation-well-definedness"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "The statement asserts a unary operation.",
+      "recorded_at": "2026-06-20T03:58:53.318739+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:negation-on-q-well-defined",
+      "target": "def:unary-arithmetic-operation"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "The statement asserts an abelian group.",
+      "recorded_at": "2026-06-20T03:58:55.045626+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-additive-abelian-group",
+      "target": "def:algebraic-abelian-group"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "The statement asserts a field.",
+      "recorded_at": "2026-06-20T03:58:55.467214+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-is-a-field",
+      "target": "def:algebraic-field"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "The statement asserts an abelian group.",
+      "recorded_at": "2026-06-20T03:58:55.226112+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-nonzero-multiplicative-abelian-group",
+      "target": "def:algebraic-abelian-group"
+    },
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "The statement names one in Q.",
+      "recorded_at": "2026-06-20T03:58:52.055624+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "thm:zero-not-one-in-q",
+      "target": "def:one-in-q"
+    },
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "The statement names zero in Q.",
+      "recorded_at": "2026-06-20T03:58:51.931864+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "thm:zero-not-one-in-q",
+      "target": "def:zero-in-q"
+    }
+  ],
+  "removes": [
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves the right-inverse corollary.",
+      "recorded_at": "2026-06-20T03:57:02.344658+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:negation-right-additive-inverse-on-q",
+      "target": "thm:addition-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left inverse proves the right-inverse corollary.",
+      "recorded_at": "2026-06-20T03:57:02.453575+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:negation-right-additive-inverse-on-q",
+      "target": "thm:negation-left-additive-inverse-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves the right-identity corollary.",
+      "recorded_at": "2026-06-20T03:57:03.119780+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:one-right-multiplicative-identity-on-q",
+      "target": "thm:multiplication-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left identity proves the right-identity corollary.",
+      "recorded_at": "2026-06-20T03:57:03.221852+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:one-right-multiplicative-identity-on-q",
+      "target": "thm:one-left-multiplicative-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves the right-inverse corollary.",
+      "recorded_at": "2026-06-20T03:57:04.246808+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:reciprocal-right-multiplicative-inverse-on-q",
+      "target": "thm:multiplication-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left inverse proves the right-inverse corollary.",
+      "recorded_at": "2026-06-20T03:57:04.360193+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:reciprocal-right-multiplicative-inverse-on-q",
+      "target": "thm:reciprocal-left-multiplicative-inverse-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left distributivity proves the right-side corollary.",
+      "recorded_at": "2026-06-20T03:57:01.434324+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:right-distributivity-on-q",
+      "target": "thm:left-distributivity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves the right-side corollary.",
+      "recorded_at": "2026-06-20T03:57:01.538727+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:right-distributivity-on-q",
+      "target": "thm:multiplication-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves right identity.",
+      "recorded_at": "2026-06-20T03:57:05.820829+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:zero-right-additive-identity-on-q",
+      "target": "thm:addition-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left identity proves right identity.",
+      "recorded_at": "2026-06-20T03:57:05.932578+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:zero-right-additive-identity-on-q",
+      "target": "thm:zero-left-additive-identity-on-q"
+    },
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "Prefraction set is already supplied through fraction equivalence for the quotient statement.",
+      "recorded_at": "2026-06-20T03:57:07.150309+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "def:rationals",
+      "target": "def:prefraction-set"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Vanishing criterion justifies the denominator but is not needed to state reciprocal.",
+      "recorded_at": "2026-06-20T03:56:57.685878+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "def:reciprocal-on-q-classes",
+      "target": "lem:vanishing-criterion-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "No-zero-divisors is the proof fact for nonzero product.",
+      "recorded_at": "2026-06-20T03:56:57.813308+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-denominator-nonzero-q",
+      "target": "thm:z-has-no-zero-divisors"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left-respect lemma proves the combined respect statement.",
+      "recorded_at": "2026-06-20T03:56:58.373502+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-on-q-respects-equivalence",
+      "target": "lem:addition-on-q-respects-left-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right-respect lemma proves the combined respect statement.",
+      "recorded_at": "2026-06-20T03:56:58.484067+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-on-q-respects-equivalence",
+      "target": "lem:addition-on-q-respects-right-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer cancellation is proof-only.",
+      "recorded_at": "2026-06-20T03:56:57.924642+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-on-q-respects-left-equivalence",
+      "target": "cor:multiplicative-cancellation-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Equality criterion is proof-only for class equality manipulation.",
+      "recorded_at": "2026-06-20T03:56:58.034117+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-on-q-respects-left-equivalence",
+      "target": "prop:equality-criterion-for-rational-classes"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer cancellation is proof-only.",
+      "recorded_at": "2026-06-20T03:56:58.150917+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-on-q-respects-right-equivalence",
+      "target": "cor:multiplicative-cancellation-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Equality criterion is proof-only for class equality manipulation.",
+      "recorded_at": "2026-06-20T03:56:58.262329+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-on-q-respects-right-equivalence",
+      "target": "prop:equality-criterion-for-rational-classes"
+    },
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "Commutativity of integer multiplication is proof-only for reflexivity.",
+      "recorded_at": "2026-06-20T03:56:57.249884+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "lem:fraction-equivalence-reflexive",
+      "target": "thm:multiplication-on-z-commutative"
+    },
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "Commutativity of integer multiplication is proof-only for symmetry.",
+      "recorded_at": "2026-06-20T03:56:57.354920+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "lem:fraction-equivalence-symmetric",
+      "target": "thm:multiplication-on-z-commutative"
+    },
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "Integer cancellation is proof-only for transitivity.",
+      "recorded_at": "2026-06-20T03:56:57.465290+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "lem:fraction-equivalence-transitive",
+      "target": "cor:multiplicative-cancellation-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "No-zero-divisors is the proof fact for nonzero product.",
+      "recorded_at": "2026-06-20T03:56:58.595757+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-denominator-nonzero-q",
+      "target": "thm:z-has-no-zero-divisors"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left-respect lemma proves the combined respect statement.",
+      "recorded_at": "2026-06-20T03:56:59.127570+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-on-q-respects-equivalence",
+      "target": "lem:multiplication-on-q-respects-left-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right-respect lemma proves the combined respect statement.",
+      "recorded_at": "2026-06-20T03:56:59.237556+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-on-q-respects-equivalence",
+      "target": "lem:multiplication-on-q-respects-right-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer cancellation is proof-only.",
+      "recorded_at": "2026-06-20T03:56:58.699896+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-on-q-respects-left-equivalence",
+      "target": "cor:multiplicative-cancellation-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Equality criterion is proof-only for class equality manipulation.",
+      "recorded_at": "2026-06-20T03:56:58.807643+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-on-q-respects-left-equivalence",
+      "target": "prop:equality-criterion-for-rational-classes"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer cancellation is proof-only.",
+      "recorded_at": "2026-06-20T03:56:58.914428+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-on-q-respects-right-equivalence",
+      "target": "cor:multiplicative-cancellation-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Equality criterion is proof-only for class equality manipulation.",
+      "recorded_at": "2026-06-20T03:56:59.022132+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-on-q-respects-right-equivalence",
+      "target": "prop:equality-criterion-for-rational-classes"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer sign rule is proof-only.",
+      "recorded_at": "2026-06-20T03:56:59.346473+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:negation-on-q-respects-equivalence",
+      "target": "cor:sign-rule-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Vanishing criterion proves the nonzero equivalence.",
+      "recorded_at": "2026-06-20T03:56:59.456515+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:nonzero-predicate-well-defined-q",
+      "target": "lem:vanishing-criterion-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Vanishing criterion proves numerator nonzero.",
+      "recorded_at": "2026-06-20T03:56:59.568627+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:reciprocal-denominator-nonzero-q",
+      "target": "lem:vanishing-criterion-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Denominator lemma is proof-only for reciprocal respect.",
+      "recorded_at": "2026-06-20T03:56:59.678627+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:reciprocal-on-q-respects-equivalence",
+      "target": "lem:reciprocal-denominator-nonzero-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Well-definedness is proof support, not statement vocabulary.",
+      "recorded_at": "2026-06-20T03:56:59.895163+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-associative",
+      "target": "thm:addition-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer associativity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:00.006956+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-associative",
+      "target": "thm:addition-on-z-associative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer distributivity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:00.114731+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-associative",
+      "target": "thm:multiplication-distributes-over-addition-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer multiplication associativity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:00.225240+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-associative",
+      "target": "thm:multiplication-on-z-associative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:00.327629+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-commutative",
+      "target": "thm:addition-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer addition commutativity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:00.437475+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-commutative",
+      "target": "thm:addition-on-z-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Respect for equivalence proves well-definedness.",
+      "recorded_at": "2026-06-20T03:56:59.783138+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-well-defined",
+      "target": "lem:addition-on-q-respects-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Multiplication well-definedness proves division well-definedness.",
+      "recorded_at": "2026-06-20T03:57:03.791682+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:division-on-q-well-defined",
+      "target": "thm:multiplication-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Reciprocal well-definedness proves division well-definedness.",
+      "recorded_at": "2026-06-20T03:57:03.905719+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:division-on-q-well-defined",
+      "target": "thm:reciprocal-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right inverse theorem proves existence.",
+      "recorded_at": "2026-06-20T03:57:04.479229+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:every-nonzero-rational-has-multiplicative-inverse",
+      "target": "cor:reciprocal-right-multiplicative-inverse-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left inverse theorem proves existence.",
+      "recorded_at": "2026-06-20T03:57:04.589768+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:every-nonzero-rational-has-multiplicative-inverse",
+      "target": "thm:reciprocal-left-multiplicative-inverse-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right inverse theorem proves existence.",
+      "recorded_at": "2026-06-20T03:57:02.570101+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:every-rational-has-additive-inverse",
+      "target": "cor:negation-right-additive-inverse-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left inverse theorem proves existence.",
+      "recorded_at": "2026-06-20T03:57:02.676199+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:every-rational-has-additive-inverse",
+      "target": "thm:negation-left-additive-inverse-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Negation well-definedness provides the witness.",
+      "recorded_at": "2026-06-20T03:57:02.789296+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:every-rational-has-additive-inverse",
+      "target": "thm:negation-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Addition well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:00.661058+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:left-distributivity-on-q",
+      "target": "thm:addition-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer distributivity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:00.772387+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:left-distributivity-on-q",
+      "target": "thm:multiplication-distributes-over-addition-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Multiplication well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:00.876539+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:left-distributivity-on-q",
+      "target": "thm:multiplication-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right distributivity proves the combined theorem.",
+      "recorded_at": "2026-06-20T03:57:01.647508+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-distributes-over-addition-on-q",
+      "target": "cor:right-distributivity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left distributivity proves the combined theorem.",
+      "recorded_at": "2026-06-20T03:57:01.782238+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-distributes-over-addition-on-q",
+      "target": "thm:left-distributivity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:00.994393+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-on-q-associative",
+      "target": "thm:multiplication-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer associativity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:01.107840+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-on-q-associative",
+      "target": "thm:multiplication-on-z-associative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:01.223155+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-on-q-commutative",
+      "target": "thm:multiplication-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer commutativity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:01.328768+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-on-q-commutative",
+      "target": "thm:multiplication-on-z-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Respect for equivalence proves well-definedness.",
+      "recorded_at": "2026-06-20T03:57:00.544385+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-on-q-well-defined",
+      "target": "lem:multiplication-on-q-respects-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Addition well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:02.005563+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:negation-left-additive-inverse-on-q",
+      "target": "thm:addition-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer inverse law is proof-only.",
+      "recorded_at": "2026-06-20T03:57:02.120074+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:negation-left-additive-inverse-on-q",
+      "target": "thm:negation-left-additive-inverse-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Negation well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:02.229629+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:negation-left-additive-inverse-on-q",
+      "target": "thm:negation-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Respect for equivalence proves well-definedness.",
+      "recorded_at": "2026-06-20T03:57:01.895368+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:negation-on-q-well-defined",
+      "target": "lem:negation-on-q-respects-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Multiplication well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:02.898170+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:one-left-multiplicative-identity-on-q",
+      "target": "thm:multiplication-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer identity law is proof-only.",
+      "recorded_at": "2026-06-20T03:57:03.008948+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:one-left-multiplicative-identity-on-q",
+      "target": "thm:one-multiplicative-identity-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right identity proves the combined theorem.",
+      "recorded_at": "2026-06-20T03:57:03.341531+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:one-multiplicative-identity-on-q",
+      "target": "cor:one-right-multiplicative-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left identity proves the combined theorem.",
+      "recorded_at": "2026-06-20T03:57:03.459707+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:one-multiplicative-identity-on-q",
+      "target": "thm:one-left-multiplicative-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Two-sided inverse is not statement vocabulary once abelian-group structure is recorded; it is proof-level structure unpacking.",
+      "recorded_at": "2026-06-20T03:59:08.887835+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-additive-abelian-group",
+      "target": "def:two-sided-inverse"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Associativity proves group structure.",
+      "recorded_at": "2026-06-20T03:57:06.253093+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-additive-abelian-group",
+      "target": "thm:addition-on-q-associative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves abelian structure.",
+      "recorded_at": "2026-06-20T03:57:06.367486+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-additive-abelian-group",
+      "target": "thm:addition-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Inverse theorem proves group structure.",
+      "recorded_at": "2026-06-20T03:57:06.476230+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-additive-abelian-group",
+      "target": "thm:every-rational-has-additive-inverse"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Identity theorem proves group structure.",
+      "recorded_at": "2026-06-20T03:57:06.582719+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-additive-abelian-group",
+      "target": "thm:zero-additive-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Distributivity theorem proves field structure.",
+      "recorded_at": "2026-06-20T03:57:06.698076+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-is-a-field",
+      "target": "thm:multiplication-distributes-over-addition-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Additive group theorem proves field structure.",
+      "recorded_at": "2026-06-20T03:57:06.804405+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-is-a-field",
+      "target": "thm:q-additive-abelian-group"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Multiplicative group theorem proves field structure.",
+      "recorded_at": "2026-06-20T03:57:06.919484+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-is-a-field",
+      "target": "thm:q-nonzero-multiplicative-abelian-group"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Distinct zero and one proves field nontriviality.",
+      "recorded_at": "2026-06-20T03:57:07.036234+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-is-a-field",
+      "target": "thm:zero-not-one-in-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Two-sided inverse is not statement vocabulary once abelian-group structure is recorded; it is proof-level structure unpacking.",
+      "recorded_at": "2026-06-20T03:59:09.007386+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-nonzero-multiplicative-abelian-group",
+      "target": "def:two-sided-inverse"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Nonzero predicate well-definedness supports the proof of the structure theorem.",
+      "recorded_at": "2026-06-20T03:57:04.698376+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-nonzero-multiplicative-abelian-group",
+      "target": "lem:nonzero-predicate-well-defined-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Existence of inverses proves group structure.",
+      "recorded_at": "2026-06-20T03:57:04.815387+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-nonzero-multiplicative-abelian-group",
+      "target": "thm:every-nonzero-rational-has-multiplicative-inverse"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Associativity proves group structure.",
+      "recorded_at": "2026-06-20T03:57:04.924137+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-nonzero-multiplicative-abelian-group",
+      "target": "thm:multiplication-on-q-associative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves abelian structure.",
+      "recorded_at": "2026-06-20T03:57:05.029548+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-nonzero-multiplicative-abelian-group",
+      "target": "thm:multiplication-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Identity theorem proves group structure.",
+      "recorded_at": "2026-06-20T03:57:05.144514+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-nonzero-multiplicative-abelian-group",
+      "target": "thm:one-multiplicative-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Multiplication well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:04.017854+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:reciprocal-left-multiplicative-inverse-on-q",
+      "target": "thm:multiplication-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Reciprocal well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:04.137656+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:reciprocal-left-multiplicative-inverse-on-q",
+      "target": "thm:reciprocal-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Denominator lemma proves closure of reciprocal.",
+      "recorded_at": "2026-06-20T03:57:03.572600+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:reciprocal-on-q-well-defined",
+      "target": "lem:reciprocal-denominator-nonzero-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Respect for equivalence proves well-definedness.",
+      "recorded_at": "2026-06-20T03:57:03.683120+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:reciprocal-on-q-well-defined",
+      "target": "lem:reciprocal-on-q-respects-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Addition well-definedness proves subtraction well-definedness.",
+      "recorded_at": "2026-06-20T03:57:05.262759+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:subtraction-on-q-well-defined",
+      "target": "thm:addition-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Negation well-definedness proves subtraction well-definedness.",
+      "recorded_at": "2026-06-20T03:57:05.372882+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:subtraction-on-q-well-defined",
+      "target": "thm:negation-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right identity proves combined theorem.",
+      "recorded_at": "2026-06-20T03:57:06.036339+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:zero-additive-identity-on-q",
+      "target": "cor:zero-right-additive-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left identity proves combined theorem.",
+      "recorded_at": "2026-06-20T03:57:06.142845+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:zero-additive-identity-on-q",
+      "target": "thm:zero-left-additive-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Addition well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:05.481951+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:zero-left-additive-identity-on-q",
+      "target": "thm:addition-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer identity law is proof-only.",
+      "recorded_at": "2026-06-20T03:57:05.589533+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:zero-left-additive-identity-on-q",
+      "target": "thm:one-multiplicative-identity-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer zero identity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:05.711830+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:zero-left-additive-identity-on-q",
+      "target": "thm:zero-additive-identity-on-z"
+    },
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "Zero not one in integers is proof-only for the rational inequality.",
+      "recorded_at": "2026-06-20T03:56:57.575452+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "thm:zero-not-one-in-q",
+      "target": "thm:zero-not-one-in-z"
+    }
+  ],
+  "proof_dependencies": [
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves the right-inverse corollary.",
+      "recorded_at": "2026-06-20T03:57:02.398267+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:negation-right-additive-inverse-on-q",
+      "target": "thm:addition-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left inverse proves the right-inverse corollary.",
+      "recorded_at": "2026-06-20T03:57:02.518520+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:negation-right-additive-inverse-on-q",
+      "target": "thm:negation-left-additive-inverse-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves the right-identity corollary.",
+      "recorded_at": "2026-06-20T03:57:03.167358+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:one-right-multiplicative-identity-on-q",
+      "target": "thm:multiplication-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left identity proves the right-identity corollary.",
+      "recorded_at": "2026-06-20T03:57:03.283016+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:one-right-multiplicative-identity-on-q",
+      "target": "thm:one-left-multiplicative-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves the right-inverse corollary.",
+      "recorded_at": "2026-06-20T03:57:04.304672+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:reciprocal-right-multiplicative-inverse-on-q",
+      "target": "thm:multiplication-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left inverse proves the right-inverse corollary.",
+      "recorded_at": "2026-06-20T03:57:04.415002+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:reciprocal-right-multiplicative-inverse-on-q",
+      "target": "thm:reciprocal-left-multiplicative-inverse-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left distributivity proves the right-side corollary.",
+      "recorded_at": "2026-06-20T03:57:01.486841+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:right-distributivity-on-q",
+      "target": "thm:left-distributivity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves the right-side corollary.",
+      "recorded_at": "2026-06-20T03:57:01.591612+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:right-distributivity-on-q",
+      "target": "thm:multiplication-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves right identity.",
+      "recorded_at": "2026-06-20T03:57:05.877871+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:zero-right-additive-identity-on-q",
+      "target": "thm:addition-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left identity proves right identity.",
+      "recorded_at": "2026-06-20T03:57:05.986904+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "cor:zero-right-additive-identity-on-q",
+      "target": "thm:zero-left-additive-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Vanishing criterion justifies the denominator but is not needed to state reciprocal.",
+      "recorded_at": "2026-06-20T03:56:57.742847+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "def:reciprocal-on-q-classes",
+      "target": "lem:vanishing-criterion-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "No-zero-divisors is the proof fact for nonzero product.",
+      "recorded_at": "2026-06-20T03:56:57.869451+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-denominator-nonzero-q",
+      "target": "thm:z-has-no-zero-divisors"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left-respect lemma proves the combined respect statement.",
+      "recorded_at": "2026-06-20T03:56:58.428789+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-on-q-respects-equivalence",
+      "target": "lem:addition-on-q-respects-left-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right-respect lemma proves the combined respect statement.",
+      "recorded_at": "2026-06-20T03:56:58.539899+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-on-q-respects-equivalence",
+      "target": "lem:addition-on-q-respects-right-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer cancellation is proof-only.",
+      "recorded_at": "2026-06-20T03:56:57.979150+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-on-q-respects-left-equivalence",
+      "target": "cor:multiplicative-cancellation-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Equality criterion is proof-only for class equality manipulation.",
+      "recorded_at": "2026-06-20T03:56:58.094037+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-on-q-respects-left-equivalence",
+      "target": "prop:equality-criterion-for-rational-classes"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer cancellation is proof-only.",
+      "recorded_at": "2026-06-20T03:56:58.206855+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-on-q-respects-right-equivalence",
+      "target": "cor:multiplicative-cancellation-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Equality criterion is proof-only for class equality manipulation.",
+      "recorded_at": "2026-06-20T03:56:58.319493+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:addition-on-q-respects-right-equivalence",
+      "target": "prop:equality-criterion-for-rational-classes"
+    },
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "Commutativity of integer multiplication is proof-only for reflexivity.",
+      "recorded_at": "2026-06-20T03:56:57.301101+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "lem:fraction-equivalence-reflexive",
+      "target": "thm:multiplication-on-z-commutative"
+    },
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "Commutativity of integer multiplication is proof-only for symmetry.",
+      "recorded_at": "2026-06-20T03:56:57.408807+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "lem:fraction-equivalence-symmetric",
+      "target": "thm:multiplication-on-z-commutative"
+    },
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "Integer cancellation is proof-only for transitivity.",
+      "recorded_at": "2026-06-20T03:56:57.519162+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "lem:fraction-equivalence-transitive",
+      "target": "cor:multiplicative-cancellation-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "No-zero-divisors is the proof fact for nonzero product.",
+      "recorded_at": "2026-06-20T03:56:58.648194+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-denominator-nonzero-q",
+      "target": "thm:z-has-no-zero-divisors"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left-respect lemma proves the combined respect statement.",
+      "recorded_at": "2026-06-20T03:56:59.187174+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-on-q-respects-equivalence",
+      "target": "lem:multiplication-on-q-respects-left-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right-respect lemma proves the combined respect statement.",
+      "recorded_at": "2026-06-20T03:56:59.291614+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-on-q-respects-equivalence",
+      "target": "lem:multiplication-on-q-respects-right-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer cancellation is proof-only.",
+      "recorded_at": "2026-06-20T03:56:58.752696+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-on-q-respects-left-equivalence",
+      "target": "cor:multiplicative-cancellation-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Equality criterion is proof-only for class equality manipulation.",
+      "recorded_at": "2026-06-20T03:56:58.860622+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-on-q-respects-left-equivalence",
+      "target": "prop:equality-criterion-for-rational-classes"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer cancellation is proof-only.",
+      "recorded_at": "2026-06-20T03:56:58.969009+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-on-q-respects-right-equivalence",
+      "target": "cor:multiplicative-cancellation-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Equality criterion is proof-only for class equality manipulation.",
+      "recorded_at": "2026-06-20T03:56:59.075482+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:multiplication-on-q-respects-right-equivalence",
+      "target": "prop:equality-criterion-for-rational-classes"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer sign rule is proof-only.",
+      "recorded_at": "2026-06-20T03:56:59.399855+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:negation-on-q-respects-equivalence",
+      "target": "cor:sign-rule-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Vanishing criterion proves the nonzero equivalence.",
+      "recorded_at": "2026-06-20T03:56:59.513242+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:nonzero-predicate-well-defined-q",
+      "target": "lem:vanishing-criterion-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Vanishing criterion proves numerator nonzero.",
+      "recorded_at": "2026-06-20T03:56:59.625332+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:reciprocal-denominator-nonzero-q",
+      "target": "lem:vanishing-criterion-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Denominator lemma is proof-only for reciprocal respect.",
+      "recorded_at": "2026-06-20T03:56:59.732963+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "lem:reciprocal-on-q-respects-equivalence",
+      "target": "lem:reciprocal-denominator-nonzero-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Well-definedness is proof support, not statement vocabulary.",
+      "recorded_at": "2026-06-20T03:56:59.947605+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-associative",
+      "target": "thm:addition-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer associativity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:00.061606+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-associative",
+      "target": "thm:addition-on-z-associative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer distributivity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:00.168700+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-associative",
+      "target": "thm:multiplication-distributes-over-addition-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer multiplication associativity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:00.275171+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-associative",
+      "target": "thm:multiplication-on-z-associative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:00.384588+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-commutative",
+      "target": "thm:addition-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer addition commutativity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:00.490872+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-commutative",
+      "target": "thm:addition-on-z-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Respect for equivalence proves well-definedness.",
+      "recorded_at": "2026-06-20T03:56:59.835201+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:addition-on-q-well-defined",
+      "target": "lem:addition-on-q-respects-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Multiplication well-definedness proves division well-definedness.",
+      "recorded_at": "2026-06-20T03:57:03.845203+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:division-on-q-well-defined",
+      "target": "thm:multiplication-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Reciprocal well-definedness proves division well-definedness.",
+      "recorded_at": "2026-06-20T03:57:03.960472+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:division-on-q-well-defined",
+      "target": "thm:reciprocal-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right inverse theorem proves existence.",
+      "recorded_at": "2026-06-20T03:57:04.534033+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:every-nonzero-rational-has-multiplicative-inverse",
+      "target": "cor:reciprocal-right-multiplicative-inverse-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left inverse theorem proves existence.",
+      "recorded_at": "2026-06-20T03:57:04.644162+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:every-nonzero-rational-has-multiplicative-inverse",
+      "target": "thm:reciprocal-left-multiplicative-inverse-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right inverse theorem proves existence.",
+      "recorded_at": "2026-06-20T03:57:02.622650+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:every-rational-has-additive-inverse",
+      "target": "cor:negation-right-additive-inverse-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left inverse theorem proves existence.",
+      "recorded_at": "2026-06-20T03:57:02.730579+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:every-rational-has-additive-inverse",
+      "target": "thm:negation-left-additive-inverse-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Negation well-definedness provides the witness.",
+      "recorded_at": "2026-06-20T03:57:02.844312+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:every-rational-has-additive-inverse",
+      "target": "thm:negation-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Addition well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:00.716322+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:left-distributivity-on-q",
+      "target": "thm:addition-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer distributivity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:00.821841+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:left-distributivity-on-q",
+      "target": "thm:multiplication-distributes-over-addition-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Multiplication well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:00.930436+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:left-distributivity-on-q",
+      "target": "thm:multiplication-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right distributivity proves the combined theorem.",
+      "recorded_at": "2026-06-20T03:57:01.705554+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-distributes-over-addition-on-q",
+      "target": "cor:right-distributivity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left distributivity proves the combined theorem.",
+      "recorded_at": "2026-06-20T03:57:01.833271+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-distributes-over-addition-on-q",
+      "target": "thm:left-distributivity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:01.052946+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-on-q-associative",
+      "target": "thm:multiplication-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer associativity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:01.161656+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-on-q-associative",
+      "target": "thm:multiplication-on-z-associative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:01.277793+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-on-q-commutative",
+      "target": "thm:multiplication-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer commutativity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:01.381538+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-on-q-commutative",
+      "target": "thm:multiplication-on-z-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Respect for equivalence proves well-definedness.",
+      "recorded_at": "2026-06-20T03:57:00.605829+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:multiplication-on-q-well-defined",
+      "target": "lem:multiplication-on-q-respects-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Addition well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:02.059635+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:negation-left-additive-inverse-on-q",
+      "target": "thm:addition-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer inverse law is proof-only.",
+      "recorded_at": "2026-06-20T03:57:02.174996+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:negation-left-additive-inverse-on-q",
+      "target": "thm:negation-left-additive-inverse-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Negation well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:02.289202+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:negation-left-additive-inverse-on-q",
+      "target": "thm:negation-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Respect for equivalence proves well-definedness.",
+      "recorded_at": "2026-06-20T03:57:01.951281+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:negation-on-q-well-defined",
+      "target": "lem:negation-on-q-respects-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Multiplication well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:02.953718+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:one-left-multiplicative-identity-on-q",
+      "target": "thm:multiplication-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer identity law is proof-only.",
+      "recorded_at": "2026-06-20T03:57:03.064570+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:one-left-multiplicative-identity-on-q",
+      "target": "thm:one-multiplicative-identity-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right identity proves the combined theorem.",
+      "recorded_at": "2026-06-20T03:57:03.402422+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:one-multiplicative-identity-on-q",
+      "target": "cor:one-right-multiplicative-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left identity proves the combined theorem.",
+      "recorded_at": "2026-06-20T03:57:03.516924+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:one-multiplicative-identity-on-q",
+      "target": "thm:one-left-multiplicative-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Two-sided inverse is not statement vocabulary once abelian-group structure is recorded; it is proof-level structure unpacking.",
+      "recorded_at": "2026-06-20T03:59:08.950399+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-additive-abelian-group",
+      "target": "def:two-sided-inverse"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Associativity proves group structure.",
+      "recorded_at": "2026-06-20T03:57:06.311960+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-additive-abelian-group",
+      "target": "thm:addition-on-q-associative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves abelian structure.",
+      "recorded_at": "2026-06-20T03:57:06.421271+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-additive-abelian-group",
+      "target": "thm:addition-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Inverse theorem proves group structure.",
+      "recorded_at": "2026-06-20T03:57:06.528165+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-additive-abelian-group",
+      "target": "thm:every-rational-has-additive-inverse"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Identity theorem proves group structure.",
+      "recorded_at": "2026-06-20T03:57:06.638305+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-additive-abelian-group",
+      "target": "thm:zero-additive-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Distributivity theorem proves field structure.",
+      "recorded_at": "2026-06-20T03:57:06.750805+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-is-a-field",
+      "target": "thm:multiplication-distributes-over-addition-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Additive group theorem proves field structure.",
+      "recorded_at": "2026-06-20T03:57:06.857141+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-is-a-field",
+      "target": "thm:q-additive-abelian-group"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Multiplicative group theorem proves field structure.",
+      "recorded_at": "2026-06-20T03:57:06.981797+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-is-a-field",
+      "target": "thm:q-nonzero-multiplicative-abelian-group"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Distinct zero and one proves field nontriviality.",
+      "recorded_at": "2026-06-20T03:57:07.090928+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-is-a-field",
+      "target": "thm:zero-not-one-in-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Two-sided inverse is not statement vocabulary once abelian-group structure is recorded; it is proof-level structure unpacking.",
+      "recorded_at": "2026-06-20T03:59:09.061941+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-nonzero-multiplicative-abelian-group",
+      "target": "def:two-sided-inverse"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Nonzero predicate well-definedness supports the proof of the structure theorem.",
+      "recorded_at": "2026-06-20T03:57:04.759591+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-nonzero-multiplicative-abelian-group",
+      "target": "lem:nonzero-predicate-well-defined-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Existence of inverses proves group structure.",
+      "recorded_at": "2026-06-20T03:57:04.869082+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-nonzero-multiplicative-abelian-group",
+      "target": "thm:every-nonzero-rational-has-multiplicative-inverse"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Associativity proves group structure.",
+      "recorded_at": "2026-06-20T03:57:04.978690+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-nonzero-multiplicative-abelian-group",
+      "target": "thm:multiplication-on-q-associative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Commutativity proves abelian structure.",
+      "recorded_at": "2026-06-20T03:57:05.089631+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-nonzero-multiplicative-abelian-group",
+      "target": "thm:multiplication-on-q-commutative"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Identity theorem proves group structure.",
+      "recorded_at": "2026-06-20T03:57:05.198964+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:q-nonzero-multiplicative-abelian-group",
+      "target": "thm:one-multiplicative-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Multiplication well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:04.079715+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:reciprocal-left-multiplicative-inverse-on-q",
+      "target": "thm:multiplication-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Reciprocal well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:04.192207+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:reciprocal-left-multiplicative-inverse-on-q",
+      "target": "thm:reciprocal-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Denominator lemma proves closure of reciprocal.",
+      "recorded_at": "2026-06-20T03:57:03.629476+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:reciprocal-on-q-well-defined",
+      "target": "lem:reciprocal-denominator-nonzero-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Respect for equivalence proves well-definedness.",
+      "recorded_at": "2026-06-20T03:57:03.737365+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:reciprocal-on-q-well-defined",
+      "target": "lem:reciprocal-on-q-respects-equivalence"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Addition well-definedness proves subtraction well-definedness.",
+      "recorded_at": "2026-06-20T03:57:05.318136+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:subtraction-on-q-well-defined",
+      "target": "thm:addition-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Negation well-definedness proves subtraction well-definedness.",
+      "recorded_at": "2026-06-20T03:57:05.426833+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:subtraction-on-q-well-defined",
+      "target": "thm:negation-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Right identity proves combined theorem.",
+      "recorded_at": "2026-06-20T03:57:06.090490+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:zero-additive-identity-on-q",
+      "target": "cor:zero-right-additive-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Left identity proves combined theorem.",
+      "recorded_at": "2026-06-20T03:57:06.197829+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:zero-additive-identity-on-q",
+      "target": "thm:zero-left-additive-identity-on-q"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Addition well-definedness is proof support.",
+      "recorded_at": "2026-06-20T03:57:05.535348+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:zero-left-additive-identity-on-q",
+      "target": "thm:addition-on-q-well-defined"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer identity law is proof-only.",
+      "recorded_at": "2026-06-20T03:57:05.643797+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:zero-left-additive-identity-on-q",
+      "target": "thm:one-multiplicative-identity-on-z"
+    },
+    {
+      "batch": "batch-0038.volume-ii.rationals.operations-on-q-classes",
+      "reason": "Integer zero identity is proof-only.",
+      "recorded_at": "2026-06-20T03:57:05.767254+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0038.volume-ii.rationals.operations-on-q-classes.resolutions.json",
+      "source": "thm:zero-left-additive-identity-on-q",
+      "target": "thm:zero-additive-identity-on-z"
+    },
+    {
+      "batch": "batch-0037.volume-ii.rationals.construction-of-q",
+      "reason": "Zero not one in integers is proof-only for the rational inequality.",
+      "recorded_at": "2026-06-20T03:56:57.630009+00:00",
+      "resolution": "reorder/section-batches/trial-resolutions/batch-0037.volume-ii.rationals.construction-of-q.resolutions.json",
+      "source": "thm:zero-not-one-in-q",
+      "target": "thm:zero-not-one-in-z"
+    }
+  ]
+}

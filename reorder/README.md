@@ -3,7 +3,71 @@
 Deterministic where the truth is structural; the model only where it is semantic.
 Nothing here edits `.tex` or `.json` source — the model **proposes**, a human applies.
 
-## Flow
+## Current Section-Scoped Flow
+
+The newer audit path is section-scoped and cumulative. It is preferred for
+Volume II and Volume III dependency review.
+
+1. Regenerate explorer data from governance, then run:
+
+   ```powershell
+   python reorder\generate_section_batches.py
+   ```
+
+   This writes:
+
+   - `reorder/section-batches/*.json` — one batch per volume/chapter/section,
+     limited to Volumes II and III by default;
+   - `reorder/section-batches/manifest.json`;
+   - `reorder/state/base-graph.json` — the extracted graph snapshot;
+   - `reorder/state/working-delta.json` — accepted review deltas, preserved on
+     rerun unless `--reset-delta` is used. It has separate buckets for
+     statement dependency additions, statement dependency removals, and proof
+     dependencies.
+
+2. Review a batch with `SECTION_TRIAGE_PROMPT.md`.
+
+   Batches include full statement text, direct dependencies, transitive
+   dependencies, section context, and ancestor trees. Nodes are topologically
+   ordered so ancestor repairs can be considered before child repairs.
+
+3. Before accepting an added edge, run:
+
+   ```powershell
+   python reorder\tools\check_dependency_edge.py --source <source> --target <target>
+   ```
+
+   The checker reports source/target summaries, missing-label flags, the base
+   graph, and the cumulative graph after applying `working-delta.json`. Reject
+   additions that create cycles or are already direct/transitive in the
+   cumulative graph. Proof dependencies are not statement graph edges and are
+   not checked for cycles/transitive duplicates.
+
+4. Record accepted remembered changes with:
+
+   ```powershell
+   python reorder\tools\record_delta.py --action add --source <source> --target <target> --batch <batch-id> --resolution <resolution-file> --reason "<reason>"
+   ```
+
+   Use `--action remove` for accepted statement dependency removals.
+
+   Use `--action proof` for accepted proof-only dependencies:
+
+   ```powershell
+   python reorder\tools\record_delta.py --action proof --source <source> --target <target> --batch <batch-id> --resolution <resolution-file> --reason "<reason>"
+   ```
+
+   If an existing direct dependency is proof-only, record both a `remove` and a
+   `proof` entry. That removes it from the statement dependency graph while
+   preserving it for the separate proof dependency array.
+
+   The command is idempotent by `(source, target)`, serializes writes with a
+   lock file, and atomically replaces `working-delta.json`.
+
+5. Later, generate an apply plan from `working-delta.json`; do not mutate source
+   during triage.
+
+## Legacy Chapter-Batch Flow
 
 1. `python reorder/index.py`
    Reads `../knowledge.json` + `../graph-edges.json`. Writes:

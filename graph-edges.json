@@ -4670,146 +4670,6 @@
     "kind": "depends_on"
   },
   {
-    "from": "def:semigroup",
-    "to": "def:binary-arithmetic-operation",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:semigroup",
-    "to": "def:binary-closure",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:semigroup",
-    "to": "def:associativity",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:monoid",
-    "to": "def:semigroup",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:monoid",
-    "to": "def:two-sided-identity",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:commutative-monoid",
-    "to": "def:monoid",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:commutative-monoid",
-    "to": "def:commutativity",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:group",
-    "to": "def:monoid",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:group",
-    "to": "def:two-sided-inverse",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:abelian-group",
-    "to": "def:group",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:abelian-group",
-    "to": "def:commutativity",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:semiring",
-    "to": "def:commutative-monoid",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:semiring",
-    "to": "def:monoid",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:ring",
-    "to": "def:abelian-group",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:ring",
-    "to": "def:monoid",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:commutative-ring",
-    "to": "def:ring",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:commutative-ring",
-    "to": "def:commutativity",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:abstract-integral-domain",
-    "to": "def:commutative-ring",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:abstract-field",
-    "to": "def:commutative-ring",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:abstract-field",
-    "to": "def:two-sided-inverse",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:abstract-ordered-field",
-    "to": "def:abstract-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:abstract-ordered-field",
-    "to": "ax:ordered-field-trichotomy",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:abstract-ordered-field",
-    "to": "ax:ordered-field-addition-law",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:abstract-ordered-field",
-    "to": "ax:ordered-field-multiplication-law",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-field-transitivity",
-    "to": "def:abstract-ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:positive-cone",
-    "to": "def:abstract-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:positive-cone",
-    "to": "def:subset",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:positive-cone",
-    "to": "def:trichotomy",
-    "kind": "depends_on"
-  },
-  {
     "from": "def:unary-arithmetic-operation",
     "to": "def:function",
     "kind": "depends_on"
@@ -4881,12 +4741,32 @@
   },
   {
     "from": "prop:left-zero-absorption",
-    "to": "def:ring",
+    "to": "def:two-sided-distributivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:left-zero-absorption",
+    "to": "def:two-sided-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:left-zero-absorption",
+    "to": "def:absorbing-element",
     "kind": "depends_on"
   },
   {
     "from": "prop:right-zero-absorption",
-    "to": "def:ring",
+    "to": "def:two-sided-distributivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:right-zero-absorption",
+    "to": "def:two-sided-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:right-zero-absorption",
+    "to": "def:absorbing-element",
     "kind": "depends_on"
   },
   {
@@ -4901,7 +4781,12 @@
   },
   {
     "from": "prop:left-sign-rule",
-    "to": "def:ring",
+    "to": "def:two-sided-distributivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:left-sign-rule",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -4911,7 +4796,12 @@
   },
   {
     "from": "prop:right-sign-rule",
-    "to": "def:ring",
+    "to": "def:two-sided-distributivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:right-sign-rule",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -4945,228 +4835,13 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:zero-divisor",
+    "to": "def:binary-arithmetic-operation",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:no-zero-divisors",
-    "to": "def:abstract-integral-domain",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:group-cancellation",
-    "to": "def:group",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:group-cancellation",
-    "to": "thm:uniqueness-of-inverse",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:group-uniqueness-of-inverse",
-    "to": "def:group",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:group-uniqueness-of-inverse",
-    "to": "thm:uniqueness-of-inverse",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-zero-product",
-    "to": "def:abstract-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-zero-product",
-    "to": "thm:no-zero-divisors",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ring-double-negation",
-    "to": "def:ring",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ring-double-negation",
-    "to": "thm:uniqueness-of-inverse",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ring-negation-of-product",
-    "to": "prop:sign-rule",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ring-product-of-negatives",
-    "to": "prop:product-of-negatives",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-multiplicative-cancellation",
-    "to": "def:abstract-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-multiplicative-cancellation",
-    "to": "thm:group-cancellation",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-uniqueness-of-inverse",
-    "to": "def:abstract-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-uniqueness-of-inverse",
-    "to": "thm:group-uniqueness-of-inverse",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-inverse-of-one",
-    "to": "thm:field-uniqueness-of-inverse",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-inverse-of-product",
-    "to": "thm:field-uniqueness-of-inverse",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-inverse-of-product",
-    "to": "thm:field-zero-product",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-inverse-involution",
-    "to": "thm:field-uniqueness-of-inverse",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:field-integer-power",
-    "to": "def:abstract-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:field-integer-power",
-    "to": "thm:field-uniqueness-of-inverse",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-exponent-addition",
-    "to": "def:field-integer-power",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-power-of-power",
-    "to": "def:field-integer-power",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-power-of-product",
-    "to": "def:field-integer-power",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:field-power-of-product",
-    "to": "thm:field-inverse-of-product",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:generic-field-laws",
-    "to": "thm:field-zero-product",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:generic-field-laws",
-    "to": "thm:field-multiplicative-cancellation",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:generic-field-laws",
-    "to": "thm:field-inverse-of-product",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:generic-field-laws",
-    "to": "thm:field-exponent-addition",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-field-squares-nonnegative",
-    "to": "def:abstract-ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-field-one-positive",
-    "to": "def:abstract-ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-field-one-positive",
-    "to": "thm:ordered-field-squares-nonnegative",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-field-positive-product",
-    "to": "def:abstract-ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-field-positive-inverses",
-    "to": "thm:ordered-field-positive-product",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-field-positive-inverses",
-    "to": "thm:field-inverse-of-one",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-field-positive-multiplication-preserves-order",
-    "to": "def:abstract-ordered-field",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-field-positive-multiplication-preserves-order",
-    "to": "thm:ordered-field-positive-product",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-field-negative-multiplication-reverses-order",
-    "to": "thm:ordered-field-positive-multiplication-preserves-order",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-field-negative-multiplication-reverses-order",
-    "to": "thm:ring-negation-of-product",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-field-fraction-comparison",
-    "to": "thm:ordered-field-positive-multiplication-preserves-order",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ordered-field-fraction-comparison",
-    "to": "thm:field-multiplicative-cancellation",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:generic-ordered-field-laws",
-    "to": "thm:ordered-field-one-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:generic-ordered-field-laws",
-    "to": "thm:ordered-field-positive-product",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:generic-ordered-field-laws",
-    "to": "thm:ordered-field-positive-inverses",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:generic-ordered-field-laws",
-    "to": "thm:ordered-field-positive-multiplication-preserves-order",
+    "to": "def:binary-arithmetic-operation",
     "kind": "depends_on"
   },
   {
@@ -5187,6 +4862,11 @@
   {
     "from": "def:two-sided-identity",
     "to": "def:right-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:absorbing-element",
+    "to": "def:binary-arithmetic-operation",
     "kind": "depends_on"
   },
   {
@@ -5281,7 +4961,12 @@
   },
   {
     "from": "prop:solvability-iff-inverses",
-    "to": "def:monoid",
+    "to": "def:associativity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:solvability-iff-inverses",
+    "to": "def:two-sided-identity",
     "kind": "depends_on"
   },
   {
@@ -5365,6 +5050,21 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:positive-cone",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:positive-cone",
+    "to": "def:trichotomy",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:positive-cone",
+    "to": "def:binary-arithmetic-operation",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:monotone-map",
     "to": "def:function",
     "kind": "depends_on"
@@ -5411,7 +5111,7 @@
   },
   {
     "from": "prop:multiplication-order-compatibility-left",
-    "to": "def:abstract-ordered-field",
+    "to": "def:strict-total-order",
     "kind": "depends_on"
   },
   {
@@ -5421,7 +5121,7 @@
   },
   {
     "from": "prop:multiplication-order-compatibility-right",
-    "to": "def:abstract-ordered-field",
+    "to": "def:strict-total-order",
     "kind": "depends_on"
   },
   {
@@ -5951,7 +5651,7 @@
   },
   {
     "from": "thm:z-mod-four-has-zero-divisors",
-    "to": "def:abstract-field",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -5961,17 +5661,17 @@
   },
   {
     "from": "def:number-system-construction-target",
-    "to": "def:ring",
+    "to": "def:two-sided-distributivity",
     "kind": "depends_on"
   },
   {
     "from": "def:number-system-construction-target",
-    "to": "def:abstract-field",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
     "from": "def:number-system-construction-target",
-    "to": "def:abstract-ordered-field",
+    "to": "def:strict-total-order",
     "kind": "depends_on"
   },
   {
@@ -6061,7 +5761,7 @@
   },
   {
     "from": "thm:two-element-system-is-field",
-    "to": "def:abstract-field",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -6071,7 +5771,7 @@
   },
   {
     "from": "thm:two-element-system-not-ordered-field",
-    "to": "def:abstract-ordered-field",
+    "to": "def:strict-total-order",
     "kind": "depends_on"
   },
   {
@@ -6211,7 +5911,7 @@
   },
   {
     "from": "def:structure-preserving-map",
-    "to": "def:abstract-ordered-field",
+    "to": "def:strict-total-order",
     "kind": "depends_on"
   },
   {
@@ -7611,7 +7311,7 @@
   },
   {
     "from": "thm:z-additive-abelian-group",
-    "to": "def:group",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -7641,7 +7341,7 @@
   },
   {
     "from": "thm:z-multiplicative-commutative-monoid",
-    "to": "def:commutative-monoid",
+    "to": "def:commutativity",
     "kind": "depends_on"
   },
   {
@@ -7666,7 +7366,7 @@
   },
   {
     "from": "thm:z-commutative-ring",
-    "to": "def:commutative-ring",
+    "to": "def:commutativity",
     "kind": "depends_on"
   },
   {
@@ -9096,27 +8796,27 @@
   },
   {
     "from": "def:open-interval",
-    "to": "def:abstract-ordered-field",
+    "to": "def:strict-total-order",
     "kind": "depends_on"
   },
   {
     "from": "def:closed-interval",
-    "to": "def:abstract-ordered-field",
+    "to": "def:strict-total-order",
     "kind": "depends_on"
   },
   {
     "from": "def:left-half-open-interval",
-    "to": "def:abstract-ordered-field",
+    "to": "def:strict-total-order",
     "kind": "depends_on"
   },
   {
     "from": "def:right-half-open-interval",
-    "to": "def:abstract-ordered-field",
+    "to": "def:strict-total-order",
     "kind": "depends_on"
   },
   {
     "from": "def:ray",
-    "to": "def:abstract-ordered-field",
+    "to": "def:strict-total-order",
     "kind": "depends_on"
   },
   {
@@ -9126,7 +8826,17 @@
   },
   {
     "from": "def:peano-system",
-    "to": "ax:peano-system-existence",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:peano-system",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "ax:peano-system-existence",
+    "to": "def:peano-system",
     "kind": "depends_on"
   },
   {
@@ -9951,7 +9661,7 @@
   },
   {
     "from": "cor:zero-product-on-q",
-    "to": "thm:field-zero-product",
+    "to": "def:zero-divisor",
     "kind": "depends_on"
   },
   {
@@ -9961,7 +9671,7 @@
   },
   {
     "from": "cor:double-negation-on-q",
-    "to": "cor:generic-field-laws",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -9971,7 +9681,7 @@
   },
   {
     "from": "cor:negation-of-product-on-q",
-    "to": "cor:generic-field-laws",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -9991,7 +9701,7 @@
   },
   {
     "from": "cor:additive-cancellation-on-q",
-    "to": "cor:generic-field-laws",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -10001,7 +9711,7 @@
   },
   {
     "from": "cor:multiplicative-cancellation-on-q",
-    "to": "cor:generic-field-laws",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -10011,7 +9721,7 @@
   },
   {
     "from": "cor:uniqueness-additive-inverse-on-q",
-    "to": "cor:generic-field-laws",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -10021,7 +9731,7 @@
   },
   {
     "from": "cor:uniqueness-multiplicative-inverse-on-q",
-    "to": "cor:generic-field-laws",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -10056,7 +9766,7 @@
   },
   {
     "from": "cor:inverse-of-inverse-on-q",
-    "to": "cor:generic-field-laws",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -10071,7 +9781,7 @@
   },
   {
     "from": "def:integer-power-on-q",
-    "to": "def:field-integer-power",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -10080,33 +9790,18 @@
     "kind": "depends_on"
   },
   {
-    "from": "cor:exponent-addition-on-q",
-    "to": "thm:field-exponent-addition",
-    "kind": "depends_on"
-  },
-  {
     "from": "cor:power-of-power-on-q",
     "to": "def:integer-power-on-q",
     "kind": "depends_on"
   },
   {
-    "from": "cor:power-of-power-on-q",
-    "to": "thm:field-power-of-power",
+    "from": "cor:power-of-product-on-q",
+    "to": "def:integer-power-on-q",
     "kind": "depends_on"
   },
   {
     "from": "cor:power-of-product-on-q",
-    "to": "thm:field-exponent-addition",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:power-of-product-on-q",
-    "to": "thm:field-power-of-power",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:power-of-product-on-q",
-    "to": "thm:field-power-of-product",
+    "to": "cor:inverse-of-product-on-q",
     "kind": "depends_on"
   },
   {
@@ -10726,7 +10421,7 @@
   },
   {
     "from": "thm:q-additive-abelian-group",
-    "to": "def:group",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -10756,7 +10451,7 @@
   },
   {
     "from": "thm:q-nonzero-multiplicative-abelian-group",
-    "to": "def:group",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -11346,7 +11041,7 @@
   },
   {
     "from": "cor:ordered-field-laws-on-q",
-    "to": "cor:generic-ordered-field-laws",
+    "to": "def:strict-total-order",
     "kind": "depends_on"
   },
   {
@@ -11356,7 +11051,7 @@
   },
   {
     "from": "cor:squares-nonnegative-on-q",
-    "to": "thm:ordered-field-squares-nonnegative",
+    "to": "prop:product-of-positives-is-positive-q",
     "kind": "depends_on"
   },
   {
@@ -11366,7 +11061,7 @@
   },
   {
     "from": "cor:one-positive-on-q",
-    "to": "thm:ordered-field-one-positive",
+    "to": "def:one-in-q",
     "kind": "depends_on"
   },
   {
@@ -11381,7 +11076,7 @@
   },
   {
     "from": "cor:positive-rationals-have-positive-inverses",
-    "to": "thm:ordered-field-positive-inverses",
+    "to": "thm:reciprocal-reverses-order-on-positives-q",
     "kind": "depends_on"
   },
   {
@@ -11391,27 +11086,22 @@
   },
   {
     "from": "cor:fraction-comparison-on-q",
-    "to": "thm:ordered-field-squares-nonnegative",
+    "to": "prop:product-of-positives-is-positive-q",
     "kind": "depends_on"
   },
   {
     "from": "cor:fraction-comparison-on-q",
-    "to": "thm:ordered-field-one-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:fraction-comparison-on-q",
-    "to": "thm:ordered-field-positive-inverses",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:fraction-comparison-on-q",
-    "to": "thm:ordered-field-fraction-comparison",
+    "to": "def:one-in-q",
     "kind": "depends_on"
   },
   {
     "from": "cor:fraction-comparison-on-q",
     "to": "thm:reciprocal-reverses-order-on-positives-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:fraction-comparison-on-q",
+    "to": "thm:positive-multiplication-preserves-order-on-q",
     "kind": "depends_on"
   },
   {
@@ -11651,7 +11341,7 @@
   },
   {
     "from": "thm:r-additive-abelian-group",
-    "to": "def:group",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -11691,7 +11381,7 @@
   },
   {
     "from": "def:real-ordered-field",
-    "to": "def:abstract-ordered-field",
+    "to": "def:strict-total-order",
     "kind": "depends_on"
   },
   {
@@ -12041,7 +11731,7 @@
   },
   {
     "from": "thm:r-nonzero-multiplicative-abelian-group",
-    "to": "def:group",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -12091,7 +11781,7 @@
   },
   {
     "from": "cor:field-laws-on-r",
-    "to": "cor:generic-field-laws",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -12156,12 +11846,12 @@
   },
   {
     "from": "thm:r-is-an-ordered-field",
-    "to": "ax:ordered-field-trichotomy",
+    "to": "def:trichotomy",
     "kind": "depends_on"
   },
   {
     "from": "cor:ordered-field-laws-on-r",
-    "to": "cor:generic-ordered-field-laws",
+    "to": "def:strict-total-order",
     "kind": "depends_on"
   },
   {
@@ -13911,7 +13601,7 @@
   },
   {
     "from": "ax:completeness-of-reals",
-    "to": "def:abstract-ordered-field",
+    "to": "def:real-ordered-field",
     "kind": "depends_on"
   },
   {
@@ -15316,7 +15006,7 @@
   },
   {
     "from": "def:power-function",
-    "to": "def:field-integer-power",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -15351,7 +15041,7 @@
   },
   {
     "from": "def:exponential",
-    "to": "def:field-integer-power",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -15431,7 +15121,7 @@
   },
   {
     "from": "def:sine-cosine",
-    "to": "def:field-integer-power",
+    "to": "def:two-sided-inverse",
     "kind": "depends_on"
   },
   {
@@ -16296,7 +15986,7 @@
   },
   {
     "from": "def:newton-sequence-sqrt-two",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -16321,7 +16011,7 @@
   },
   {
     "from": "def:factorial-partial-sums",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -16341,7 +16031,7 @@
   },
   {
     "from": "def:compound-interest-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -16361,7 +16051,7 @@
   },
   {
     "from": "def:decimal-truncation-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -16376,7 +16066,7 @@
   },
   {
     "from": "def:cauchy-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -16566,7 +16256,7 @@
   },
   {
     "from": "def:cluster-value-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -16626,12 +16316,12 @@
   },
   {
     "from": "def:pointwise-sum-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
     "from": "def:pointwise-difference-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -16641,7 +16331,7 @@
   },
   {
     "from": "def:scalar-multiple-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -16661,12 +16351,12 @@
   },
   {
     "from": "def:pointwise-product-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
     "from": "def:reciprocal-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -16686,12 +16376,12 @@
   },
   {
     "from": "def:absolute-value-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
     "from": "def:square-root-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -16861,7 +16551,7 @@
   },
   {
     "from": "def:convergent-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -16971,12 +16661,12 @@
   },
   {
     "from": "def:constant-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
     "from": "def:null-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -17011,7 +16701,7 @@
   },
   {
     "from": "def:ultimately-constant-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -17076,17 +16766,17 @@
   },
   {
     "from": "def:sequence-bounded-above",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
     "from": "def:sequence-bounded-below",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
     "from": "def:bounded-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -17160,8 +16850,18 @@
     "kind": "depends_on"
   },
   {
-    "from": "def:divergent-sequence",
+    "from": "def:real-sequence",
     "to": "def:sequence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-sequence",
+    "to": "def:reals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:divergent-sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -17171,12 +16871,12 @@
   },
   {
     "from": "def:diverges-to-positive-infinity",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
     "from": "def:diverges-to-negative-infinity",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -17466,17 +17166,17 @@
   },
   {
     "from": "def:increasing-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
     "from": "def:decreasing-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
     "from": "def:strictly-increasing-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -17486,7 +17186,7 @@
   },
   {
     "from": "def:strictly-decreasing-sequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -17781,7 +17481,7 @@
   },
   {
     "from": "def:subsequence",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -17807,6 +17507,11 @@
   {
     "from": "thm:subsequence-indices-dominate-identity",
     "to": "def:strictly-increasing-index-map",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:subsequence-indices-dominate-identity",
+    "to": "thm:well-ordering-principle",
     "kind": "depends_on"
   },
   {
@@ -17875,6 +17580,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:subsequence-of-subsequence",
+    "to": "def:composition",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:eventual-properties-pass-to-subsequences",
     "to": "thm:subsequence-indices-dominate-identity",
     "kind": "depends_on"
@@ -17882,6 +17592,11 @@
   {
     "from": "thm:eventual-properties-pass-to-subsequences",
     "to": "def:subsequence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:frequent-properties-yield-subsequences",
+    "to": "thm:well-ordering-principle",
     "kind": "depends_on"
   },
   {
@@ -17920,6 +17635,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:monotone-subsequence-theorem",
+    "to": "thm:well-ordering-principle",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:bolzano-weierstrass-sequences",
     "to": "def:bounded-sequence",
     "kind": "depends_on"
@@ -17951,7 +17671,7 @@
   },
   {
     "from": "def:m-tail",
-    "to": "def:sequence",
+    "to": "def:real-sequence",
     "kind": "depends_on"
   },
   {
@@ -17997,6 +17717,661 @@
   {
     "from": "thm:ratio-limit-less-than-one-implies-null",
     "to": "thm:convergence-by-domination",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-abelian-group",
+    "to": "def:algebraic-group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-abelian-group",
+    "to": "def:algebraic-commutativity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-field",
+    "to": "def:algebraic-abelian-group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-field",
+    "to": "def:algebraic-left-distributivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-field",
+    "to": "def:algebraic-right-distributivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:abstract-field-is-domain",
+    "to": "def:algebraic-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:abstract-field-is-domain",
+    "to": "def:algebraic-integral-domain",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:abstract-field-is-domain",
+    "to": "def:inverse-element",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-group",
+    "to": "def:binary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-group",
+    "to": "def:algebraic-associativity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-group",
+    "to": "def:identity-element",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-group",
+    "to": "def:inverse-element",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:order-of-a-group",
+    "to": "def:algebraic-group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-integral-domain",
+    "to": "def:algebraic-commutative-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-integral-domain",
+    "to": "def:algebraic-ring-with-unity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-integral-domain",
+    "to": "def:zero-divisor",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:abstract-domain-cancellation",
+    "to": "def:algebraic-integral-domain",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:abstract-domain-cancellation",
+    "to": "def:zero-divisor",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:magma",
+    "to": "def:carrier-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:magma",
+    "to": "def:binary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-monoid",
+    "to": "def:algebraic-semigroup",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-monoid",
+    "to": "def:identity-element",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-ring",
+    "to": "def:algebraic-abelian-group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-ring",
+    "to": "def:algebraic-associativity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-ring",
+    "to": "def:algebraic-left-distributivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-ring",
+    "to": "def:algebraic-right-distributivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-commutative-ring",
+    "to": "def:algebraic-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-commutative-ring",
+    "to": "def:algebraic-commutativity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-ring-with-unity",
+    "to": "def:algebraic-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-ring-with-unity",
+    "to": "def:identity-element",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-semigroup",
+    "to": "def:magma",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-semigroup",
+    "to": "def:algebraic-associativity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:first-order-signature",
+    "to": "def:nullary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:first-order-signature",
+    "to": "def:unary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:first-order-signature",
+    "to": "def:binary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:first-order-signature",
+    "to": "def:binary-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-l-structure",
+    "to": "def:first-order-signature",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-l-structure",
+    "to": "def:carrier-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-absorbing-element",
+    "to": "def:binary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:identity-element",
+    "to": "def:binary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:identity-element-unique",
+    "to": "def:algebraic-group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:identity-element-unique",
+    "to": "def:identity-element",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-element",
+    "to": "def:binary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-element",
+    "to": "def:identity-element",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:inverse-element-unique",
+    "to": "def:algebraic-group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:inverse-element-unique",
+    "to": "def:inverse-element",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:inverse-element-unique",
+    "to": "def:identity-element",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:alg-bijective",
+    "to": "def:alg-injective",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:alg-bijective",
+    "to": "def:alg-surjective",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:alg-function",
+    "to": "def:binary-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:alg-function",
+    "to": "def:domain-codomain",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:alg-injective",
+    "to": "def:alg-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-homomorphism",
+    "to": "def:alg-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-homomorphism",
+    "to": "def:binary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:monomorphism",
+    "to": "def:algebraic-homomorphism",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:monomorphism",
+    "to": "def:alg-injective",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:epimorphism",
+    "to": "def:algebraic-homomorphism",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:epimorphism",
+    "to": "def:alg-surjective",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:isomorphism",
+    "to": "def:algebraic-homomorphism",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:isomorphism",
+    "to": "def:alg-bijective",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:endomorphism",
+    "to": "def:algebraic-homomorphism",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:automorphism",
+    "to": "def:endomorphism",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:automorphism",
+    "to": "def:alg-bijective",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:alg-surjective",
+    "to": "def:alg-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-associativity",
+    "to": "def:binary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:group-cancellation",
+    "to": "def:algebraic-group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:group-cancellation",
+    "to": "def:inverse-element",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-commutativity",
+    "to": "def:binary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-left-distributivity",
+    "to": "def:binary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-right-distributivity",
+    "to": "def:binary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:idempotent-operation",
+    "to": "def:binary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:structure-expansion",
+    "to": "def:carrier-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:structure-expansion",
+    "to": "def:first-order-signature",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:structure-reduction",
+    "to": "def:carrier-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:structure-reduction",
+    "to": "def:first-order-signature",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:arithmetic-signature",
+    "to": "def:first-order-signature",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:arithmetic-signature",
+    "to": "def:unary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:arithmetic-signature",
+    "to": "def:binary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:arithmetic-signature",
+    "to": "def:nullary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-number-model",
+    "to": "def:algebraic-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-number-model",
+    "to": "def:complex-numbers",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-number-model",
+    "to": "def:addition-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-number-model",
+    "to": "def:multiplication-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-number-model",
+    "to": "thm:c-is-a-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:integer-model",
+    "to": "def:arithmetic-signature",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:integer-model",
+    "to": "def:algebraic-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:integer-model",
+    "to": "def:integers",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:integer-model",
+    "to": "def:addition-on-z-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:integer-model",
+    "to": "def:multiplication-on-z-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:natural-number-model",
+    "to": "def:arithmetic-signature",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:natural-number-model",
+    "to": "def:peano-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:natural-number-model",
+    "to": "def:natural-numbers",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:natural-number-model",
+    "to": "def:addition-on-peano-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:natural-number-model",
+    "to": "def:multiplication-on-peano-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rational-field-model",
+    "to": "def:arithmetic-signature",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rational-field-model",
+    "to": "def:algebraic-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rational-field-model",
+    "to": "def:rationals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rational-field-model",
+    "to": "def:addition-on-q-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rational-field-model",
+    "to": "def:multiplication-on-q-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-number-model",
+    "to": "def:algebraic-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-number-model",
+    "to": "def:positive-cone",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-number-model",
+    "to": "def:reals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-number-model",
+    "to": "thm:r-is-a-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-number-model",
+    "to": "thm:r-is-an-ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-number-model",
+    "to": "thm:r-is-complete-ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:binary-operation",
+    "to": "def:carrier-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:binary-operation",
+    "to": "def:alg-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:nullary-operation",
+    "to": "def:carrier-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:unary-operation",
+    "to": "def:alg-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:unary-operation",
+    "to": "def:carrier-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:binary-relation",
+    "to": "def:carrier-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:equiv-relation",
+    "to": "def:binary-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:equiv-relation",
+    "to": "def:rel-reflexive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:equiv-relation",
+    "to": "def:rel-symmetric",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:equiv-relation",
+    "to": "def:rel-transitive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-partial-order",
+    "to": "def:binary-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-partial-order",
+    "to": "def:rel-reflexive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-partial-order",
+    "to": "def:rel-antisymmetric",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-partial-order",
+    "to": "def:rel-transitive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-strict-partial-order",
+    "to": "def:rel-irreflexive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-strict-partial-order",
+    "to": "def:rel-asymmetric",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-strict-partial-order",
+    "to": "def:rel-transitive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-total-order",
+    "to": "def:algebraic-partial-order",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-total-order",
+    "to": "def:rel-total",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rel-reflexive",
+    "to": "def:binary-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rel-irreflexive",
+    "to": "def:binary-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rel-symmetric",
+    "to": "def:binary-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rel-antisymmetric",
+    "to": "def:binary-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rel-asymmetric",
+    "to": "def:binary-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rel-transitive",
+    "to": "def:binary-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rel-total",
+    "to": "def:binary-relation",
     "kind": "depends_on"
   },
   {
@@ -18196,7 +18571,7 @@
   },
   {
     "from": "def:lattice-order-partial-order",
-    "to": "def:partial-order",
+    "to": "def:algebraic-partial-order",
     "kind": "depends_on"
   },
   {
@@ -19136,12 +19511,12 @@
   },
   {
     "from": "def:boolean-ring",
-    "to": "def:ring",
+    "to": "def:algebraic-ring",
     "kind": "depends_on"
   },
   {
     "from": "def:idempotent-element",
-    "to": "def:ring",
+    "to": "def:algebraic-ring",
     "kind": "depends_on"
   },
   {
