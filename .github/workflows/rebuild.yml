@@ -1,0 +1,70 @@
+name: Rebuild Knowledge Explorer
+
+on:
+  repository_dispatch:
+    types: [lra-rebuild]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: knowledge-explorer-rebuild
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout explorer
+        uses: actions/checkout@v4
+        with:
+          path: explorer
+          token: ${{ secrets.SYNC_PAT }}
+
+      - name: Checkout monorepo
+        uses: actions/checkout@v4
+        with:
+          repository: wsollers/Learning-Real-Analysis
+          path: monorepo
+          token: ${{ secrets.SYNC_PAT }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install extraction dependencies
+        run: python -m pip install --upgrade pyyaml
+
+      - name: Run monorepo extraction
+        working-directory: monorepo
+        run: python theorem-explorer/run_extraction.py
+
+      - name: Copy generated explorer data
+        run: |
+          cp monorepo/theorem-explorer/knowledge.json explorer/knowledge.json
+          cp monorepo/theorem-explorer/graph-edges.json explorer/graph-edges.json
+          cp monorepo/theorem-explorer/proof-errors.json explorer/proof-errors.json
+          cp monorepo/theorem-explorer/graph-edge-errors.json explorer/graph-edge-errors.json
+
+      - name: Validate generated JSON
+        working-directory: explorer
+        run: |
+          python -m json.tool knowledge.json >/dev/null
+          python -m json.tool graph-edges.json >/dev/null
+          python -m json.tool proof-errors.json >/dev/null
+          python -m json.tool graph-edge-errors.json >/dev/null
+
+      - name: Commit and push if changed
+        working-directory: explorer
+        run: |
+          git config user.name "lra-explorer-bot"
+          git config user.email "explorer-bot@noreply.github.com"
+          git add knowledge.json graph-edges.json proof-errors.json graph-edge-errors.json
+          if git diff --cached --quiet; then
+            echo "No explorer data changes."
+            exit 0
+          fi
+          git commit -m "Refresh knowledge explorer data"
+          git push
