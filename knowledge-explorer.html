@@ -87,6 +87,10 @@ a{color:#93c5fd}
 .proof-attempt{margin-bottom:16px}
 .proof-attempt h3{font-size:.95rem;margin:0 0 8px;color:#e2e8f0}
 .example-select{width:auto;min-width:min(420px,100%);border-radius:8px;padding:8px 10px}
+.model-card-select{margin-top:10px}
+.model-pill{display:inline-flex;align-items:center;width:auto;padding:3px 8px;border-radius:999px;border:1px solid rgba(244,114,182,.45);background:rgba(244,114,182,.12);color:#fbcfe8;font-size:.76rem;font-weight:800;text-transform:uppercase}
+.model-component{border-color:rgba(244,114,182,.22);background:rgba(244,114,182,.055)}
+.model-source{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.78rem;color:#cbd5e1}
 .pdf-controls{display:grid;grid-template-columns:1fr 170px;gap:10px;padding:12px;border-bottom:1px solid #243041;background:#0f172a}
 .pdf-controls select{border-radius:8px}
 .pdf-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
@@ -108,7 +112,16 @@ a{color:#93c5fd}
     <input type="file" id="knowledgeFile" accept=".json"/>
     <div class="tiny" style="margin:10px 0 4px">graph-edges.json</div>
     <input type="file" id="edgesFile" accept=".json"/>
+    <div class="tiny" style="margin:10px 0 4px">model-artifacts.json</div>
+    <input type="file" id="modelArtifactsFile" accept=".json"/>
     <div class="row" style="margin-top:10px"><button id="loadFilesBtn">Load selected files</button></div>
+  </div>
+  <div class="section">
+    <h2>Model Cards</h2>
+    <div class="tiny" id="modelArtifactStatus">No model artifacts loaded.</div>
+    <select id="modelArtifactSelect" class="model-card-select" disabled>
+      <option value="">Select a model card</option>
+    </select>
   </div>
   <div class="section">
     <h2>Filters</h2>
@@ -236,8 +249,8 @@ const VOLUME_NUMBER_BY_ID={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
 const CHAPTER_TO_VOLUME={'propositional-logic':1,'predicate-logic':1,'sets-relations-functions':1,'axiom-systems':1,'proof-techniques':1,'identity-equality-equivalence':2,'arithmetic-operations-relations':2,'peano-systems':2,'natural-numbers':2,'whole-numbers':2,'integers':2,'rationals':2,'reals':2,'numbers-summary':2,'embedding-number-systems':2,'number-lines':2,'structure-of-real-line':2,'formalizing-number-systems':2,'lean':2,'complex-numbers':2,'real-analysis':3,'bounding':3,'sequences':3,'elementary-functions':3,'functions':3,'continuity':3,'differentiation':3,'riemann-integration':3,'measure-theory':3,'probability-theory':3,'functional-analysis':3,'complex-analysis':3,'series':3,'function-sequences':3,'foundations':3,'discrete-calculus':3,'algebraic-structures':4,'abstract-algebra':4,'linear-algebra':4,'lattice-order':4,'set-algebra':4,'algebraic-geometry':4,'summation-algebra':4,'euclidean-geometry':5,'analytical-geometry':5,'trigonometry':5,'non-euclidean-geometry':5,'differential-geometry':5,'riemannian-geometry':5,'topology':5,'calculus':6,'geometric-modeling':6,'computational-geometry':6,'computational-linear-algebra':6,'computational-probability':6,'ordinary-differential-equations':6,'partial-differential-equations':6,'fourier-analysis':6,'numerical-analysis':7,'numerical-pde':7,'category-theory':8,'model-theory':8,'proof-theory':8,'type-theory':8,'lambda-calculus':8,'algebras-of-sets':8};
 function nodeVolume(n){return CHAPTER_TO_VOLUME[n&&n.chapter]||0;}
 
-const state={knowledge:{metadata:{},nodes:[]},edges:[],proofVault:{records:{}},activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,pdfVolume:'',pdfEdition:'digital',zoom:1,selectedId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showImplies:true,volume:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
-const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect'),pdfModal:document.getElementById('pdfModal'),pdfModalClose:document.getElementById('pdfModalClose'),pdfModalBody:document.getElementById('pdfModalBody'),pdfVolumeSelect:document.getElementById('pdfVolumeSelect'),pdfEditionSelect:document.getElementById('pdfEditionSelect')};
+const state={knowledge:{metadata:{},nodes:[]},edges:[],modelArtifacts:{metadata:{},artifacts:[],errors:[]},proofVault:{records:{}},activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,pdfVolume:'',pdfEdition:'digital',zoom:1,selectedId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showImplies:true,volume:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
+const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),modelArtifactsFile:document.getElementById('modelArtifactsFile'),modelArtifactStatus:document.getElementById('modelArtifactStatus'),modelArtifactSelect:document.getElementById('modelArtifactSelect'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect'),pdfModal:document.getElementById('pdfModal'),pdfModalClose:document.getElementById('pdfModalClose'),pdfModalBody:document.getElementById('pdfModalBody'),pdfVolumeSelect:document.getElementById('pdfVolumeSelect'),pdfEditionSelect:document.getElementById('pdfEditionSelect')};
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function decodeB64(s){if(!s)return'';try{return decodeURIComponent(escape(atob(s)));}catch(e){try{return atob(s);}catch(_){return'';}}}
@@ -673,6 +686,75 @@ function chipList(ids,treeMode){
   }).join(' ');
 }
 
+function modelArtifacts(){return (state.modelArtifacts&&state.modelArtifacts.artifacts)||[];}
+function modelArtifactById(id){return modelArtifacts().find(a=>a.id===id)||null;}
+function renderModelArtifactSelector(){
+  const artifacts=modelArtifacts();
+  const count=artifacts.length;
+  const errs=(state.modelArtifacts&&state.modelArtifacts.errors||[]).length;
+  els.modelArtifactStatus.textContent=count?`Loaded ${count} model card${count===1?'':'s'}${errs?` · ${errs} validation issue${errs===1?'':'s'}`:''}.`:'No model artifacts loaded.';
+  els.modelArtifactSelect.disabled=!count;
+  const current=els.modelArtifactSelect.value;
+  const options=['<option value="">Select a model card</option>'].concat(artifacts.map(a=>`<option value="${esc(a.id)}">${esc(a.layer||'shared')} · ${esc(a.title||a.id)}</option>`));
+  els.modelArtifactSelect.innerHTML=options.join('');
+  if(current&&artifacts.some(a=>a.id===current))els.modelArtifactSelect.value=current;
+}
+function modelDependencyChips(deps){
+  if(!deps||!deps.length)return'';
+  return deps.map(dep=>{
+    const id=dep.id||'';
+    const label=dep.label||id;
+    if(id&&modelArtifactById(id))return`<span class="node-chip" data-model-artifact-id="${esc(id)}" title="${esc(id)}">${texToHtml(label)}</span>`;
+    return`<span class="node-chip" title="${esc(id||label)}">${texToHtml(label)}</span>`;
+  }).join(' ');
+}
+function renderModelComponentValue(component){
+  const items=component.items||[];
+  if(items.length){
+    const rows=items.map(item=>{
+      if(item.symbol||item.type||item.description){
+        const head=[item.symbol,item.type].filter(Boolean).map(texToHtml).join(' · ');
+        return`<div style="margin:.35rem 0"><strong>${head}</strong>${item.description?`<br><span class="tiny">${texToHtml(item.description)}</span>`:''}</div>`;
+      }
+      if(item.source)return`<div style="margin:.35rem 0"><strong>${esc(item.source)}</strong><br>${texToHtml(item.items||'')}</div>`;
+      return`<div style="margin:.35rem 0">${texToHtml(item.tex||item.args?.join(' ')||'')}</div>`;
+    }).join('');
+    return rows;
+  }
+  return texToHtml(component.tex||'');
+}
+function renderModelArtifactDetails(artifact){
+  if(!artifact)return;
+  state.selectedId=null;
+  els.detailEmpty.style.display='none';
+  els.detailContent.style.display='block';
+  const blocks=[];
+  const kind=artifact.kind||'model-artifact';
+  blocks.push(`<div class="card model-component"><div class="label">Model Card</div><div class="value"><span class="model-pill">${esc(kind)}</span><br><strong>${texToHtml(artifact.title||artifact.id)}</strong></div><div class="tiny model-source" style="margin-top:8px">${esc(artifact.id)} · ${esc(artifact.layer||'layer unknown')} · ${esc(artifact.source_file||'')}</div></div>`);
+  const deps=modelDependencyChips(artifact.depends_on||[]);
+  if(deps)blocks.push(`<div class="card"><div class="label">Depends on</div><div class="value" style="line-height:2">${deps}</div></div>`);
+  if(Array.isArray(artifact.labels)&&artifact.labels.length)blocks.push(`<div class="card"><div class="label">Labels</div><div class="value">${artifact.labels.map(esc).join('<br>')}</div></div>`);
+  (artifact.components||[]).forEach(component=>{
+    if(!component.tex)return;
+    blocks.push(`<div class="card model-component"><div class="label">${esc(component.name||component.env||'Component')}</div><div class="value">${renderModelComponentValue(component)}</div></div>`);
+  });
+  if((state.modelArtifacts.errors||[]).length){
+    const related=state.modelArtifacts.errors.filter(e=>e.path===artifact.source_file);
+    if(related.length)blocks.push(`<div class="card danger"><div class="label">Validation issues</div><div class="value">${related.map(e=>esc(e.message)).join('<br>')}</div></div>`);
+  }
+  blocks.push(`<div class="card"><div class="label">Raw TeX</div><pre class="proof-pre">${esc(artifact.tex||'')}</pre></div>`);
+  els.detailContent.innerHTML=blocks.join('');
+  els.detailContent.querySelectorAll('[data-model-artifact-id]').forEach(chip=>{
+    chip.addEventListener('click',()=>openModelArtifact(chip.dataset.modelArtifactId));
+  });
+}
+function openModelArtifact(id){
+  const artifact=modelArtifactById(id);
+  if(!artifact)return;
+  els.modelArtifactSelect.value=id;
+  renderModelArtifactDetails(artifact);
+}
+
 function renderDetails(n){
   els.detailEmpty.style.display='none';els.detailContent.style.display='block';
   const blocks=[];
@@ -740,13 +822,16 @@ async function tryAutoLoad(){
       }
       return r.json();
     });
-    const[k,e,pv]=await Promise.all([
+    const[k,e,pv,ma]=await Promise.all([
       loadJson('knowledge.json'),
       loadJson('graph-edges.json'),
-      loadJson('proof-vault-index.json',false).then(payload=>payload||{records:{}}).catch(()=>({records:{}}))
+      loadJson('proof-vault-index.json',false).then(payload=>payload||{records:{}}).catch(()=>({records:{}})),
+      loadJson('model-artifacts.json',false).then(payload=>payload||{metadata:{},artifacts:[],errors:[]}).catch(()=>({metadata:{},artifacts:[],errors:[]}))
     ]);
     state.proofVault=pv||{records:{}};
+    state.modelArtifacts=ma||{metadata:{},artifacts:[],errors:[]};
     state.knowledge=k;state.edges=normalizeEdges(state.knowledge,e);state.nodePositions={};
+    renderModelArtifactSelector();
     renderDataMeta();
     els.status.textContent=`Loaded ${(k.nodes||[]).length} nodes, ${state.edges.length} edges.`;
     applyInitialView();
@@ -754,10 +839,12 @@ async function tryAutoLoad(){
 }
 async function loadManual(){
   try{
-    const kf=els.knowledgeFile.files[0],ef=els.edgesFile.files[0];
+    const kf=els.knowledgeFile.files[0],ef=els.edgesFile.files[0],mf=els.modelArtifactsFile.files[0];
     if(!kf||!ef)throw new Error('Select both files.');
     const[k,e]=await Promise.all([kf.text().then(JSON.parse),ef.text().then(JSON.parse)]);
+    if(mf)state.modelArtifacts=await mf.text().then(JSON.parse);
     state.knowledge=k;state.edges=normalizeEdges(state.knowledge,e);state.nodePositions={};
+    renderModelArtifactSelector();
     renderDataMeta();
     els.status.textContent=`Loaded ${(k.nodes||[]).length} nodes.`;
     applyInitialView();
@@ -766,6 +853,7 @@ async function loadManual(){
 
 els.autoBtn.onclick=tryAutoLoad;
 els.loadFilesBtn.onclick=loadManual;
+els.modelArtifactSelect.onchange=e=>{if(e.target.value)openModelArtifact(e.target.value);};
 els.searchBox.oninput=e=>{state.filters.search=e.target.value;render();};
 els.showDefinitions.onchange=e=>{state.filters.showDefinitions=e.target.checked;render();};
 els.showAxioms.onchange=e=>{state.filters.showAxioms=e.target.checked;render();};

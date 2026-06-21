@@ -9,6 +9,7 @@ on:
       - "knowledge-explorer.html"
       - "real-analysis-explorer.html"
       - "knowledge.json"
+      - "model-artifacts.json"
       - "graph-edges.json"
       - "proof-errors.json"
       - "graph-edge-errors.json"
