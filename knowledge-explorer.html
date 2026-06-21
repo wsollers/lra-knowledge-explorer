@@ -87,15 +87,29 @@ a{color:#93c5fd}
 .proof-attempt{margin-bottom:16px}
 .proof-attempt h3{font-size:.95rem;margin:0 0 8px;color:#e2e8f0}
 .example-select{width:auto;min-width:min(420px,100%);border-radius:8px;padding:8px 10px}
+.mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mode-button{border-radius:8px;color:#cbd5e1;background:#0b1220}
+.mode-button.active{background:rgba(244,114,182,.18);border-color:rgba(244,114,182,.65);color:#fbcfe8}
 .model-card-select{margin-top:10px}
 .model-pill{display:inline-flex;align-items:center;width:auto;padding:3px 8px;border-radius:999px;border:1px solid rgba(244,114,182,.45);background:rgba(244,114,182,.12);color:#fbcfe8;font-size:.76rem;font-weight:800;text-transform:uppercase}
 .model-component{border-color:rgba(244,114,182,.22);background:rgba(244,114,182,.055)}
 .model-source{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.78rem;color:#cbd5e1}
+.model-board{display:none;min-height:100%;padding:24px;overflow:auto;background:#0f172a}
+.model-board.visible{display:block}
+.model-board-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:18px}
+.model-board-title{font-size:1.35rem;font-weight:850;margin:0 0 4px}
+.model-board-controls{display:grid;grid-template-columns:minmax(220px,1fr) 190px;gap:10px;margin-bottom:16px}
+.model-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.model-list-card{cursor:pointer;border-color:rgba(244,114,182,.18);background:rgba(255,255,255,.035);border-radius:8px;min-height:122px}
+.model-list-card:hover{border-color:rgba(244,114,182,.55);background:rgba(244,114,182,.08)}
+.model-list-card.active{outline:2px solid rgba(244,114,182,.75);background:rgba(244,114,182,.11)}
+.model-list-title{font-weight:800;line-height:1.25;margin:8px 0}
+.model-list-meta{font-size:.78rem;color:#cbd5e1;line-height:1.45}
 .pdf-controls{display:grid;grid-template-columns:1fr 170px;gap:10px;padding:12px;border-bottom:1px solid #243041;background:#0f172a}
 .pdf-controls select{border-radius:8px}
 .pdf-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
 .pdf-actions .link-button{justify-content:center}
-@media (max-width:760px){.pdf-controls{grid-template-columns:1fr}}
+@media (max-width:760px){.pdf-controls,.model-board-controls{grid-template-columns:1fr}.model-board-head{display:block}}
 </style>
 </head>
 <body>
@@ -104,6 +118,13 @@ a{color:#93c5fd}
     <h1>Knowledge Explorer</h1>
     <p>Auto-loads <code>knowledge.json</code> and <code>graph-edges.json</code> from the same folder when served via GitHub Pages or a local server.</p>
     <div class="tiny" id="status">No data loaded yet.</div>
+  </div>
+  <div class="section">
+    <h2>Mode</h2>
+    <div class="mode-switch">
+      <button id="appModeGraphBtn" class="mode-button active" type="button">Graph</button>
+      <button id="appModeModelsBtn" class="mode-button" type="button">Models</button>
+    </div>
   </div>
   <div class="section">
     <h2>Data</h2>
@@ -171,6 +192,22 @@ a{color:#93c5fd}
     <div id="nodeLayer"></div>
   </div>
   <div class="tooltip" id="tooltip"></div>
+  <div id="modelBoard" class="model-board">
+    <div class="model-board-head">
+      <div>
+        <div class="model-board-title">Model Cards</div>
+        <div class="tiny" id="modelBoardStatus">No model artifacts loaded.</div>
+      </div>
+      <button id="modelBoardGraphBtn" class="link-button" type="button">Back to graph</button>
+    </div>
+    <div class="model-board-controls">
+      <input type="text" id="modelBoardSearch" placeholder="Search model, theory, bridge, set..."/>
+      <select id="modelBoardLayerFilter">
+        <option value="All">All layers</option>
+      </select>
+    </div>
+    <div id="modelBoardList" class="model-grid"></div>
+  </div>
 </main>
 <aside class="detail">
   <div class="section">
@@ -249,8 +286,8 @@ const VOLUME_NUMBER_BY_ID={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
 const CHAPTER_TO_VOLUME={'propositional-logic':1,'predicate-logic':1,'sets-relations-functions':1,'axiom-systems':1,'proof-techniques':1,'identity-equality-equivalence':2,'arithmetic-operations-relations':2,'peano-systems':2,'natural-numbers':2,'whole-numbers':2,'integers':2,'rationals':2,'reals':2,'numbers-summary':2,'embedding-number-systems':2,'number-lines':2,'structure-of-real-line':2,'formalizing-number-systems':2,'lean':2,'complex-numbers':2,'real-analysis':3,'bounding':3,'sequences':3,'elementary-functions':3,'functions':3,'continuity':3,'differentiation':3,'riemann-integration':3,'measure-theory':3,'probability-theory':3,'functional-analysis':3,'complex-analysis':3,'series':3,'function-sequences':3,'foundations':3,'discrete-calculus':3,'algebraic-structures':4,'abstract-algebra':4,'linear-algebra':4,'lattice-order':4,'set-algebra':4,'algebraic-geometry':4,'summation-algebra':4,'euclidean-geometry':5,'analytical-geometry':5,'trigonometry':5,'non-euclidean-geometry':5,'differential-geometry':5,'riemannian-geometry':5,'topology':5,'calculus':6,'geometric-modeling':6,'computational-geometry':6,'computational-linear-algebra':6,'computational-probability':6,'ordinary-differential-equations':6,'partial-differential-equations':6,'fourier-analysis':6,'numerical-analysis':7,'numerical-pde':7,'category-theory':8,'model-theory':8,'proof-theory':8,'type-theory':8,'lambda-calculus':8,'algebras-of-sets':8};
 function nodeVolume(n){return CHAPTER_TO_VOLUME[n&&n.chapter]||0;}
 
-const state={knowledge:{metadata:{},nodes:[]},edges:[],modelArtifacts:{metadata:{},artifacts:[],errors:[]},proofVault:{records:{}},activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,pdfVolume:'',pdfEdition:'digital',zoom:1,selectedId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showImplies:true,volume:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
-const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),modelArtifactsFile:document.getElementById('modelArtifactsFile'),modelArtifactStatus:document.getElementById('modelArtifactStatus'),modelArtifactSelect:document.getElementById('modelArtifactSelect'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect'),pdfModal:document.getElementById('pdfModal'),pdfModalClose:document.getElementById('pdfModalClose'),pdfModalBody:document.getElementById('pdfModalBody'),pdfVolumeSelect:document.getElementById('pdfVolumeSelect'),pdfEditionSelect:document.getElementById('pdfEditionSelect')};
+const state={knowledge:{metadata:{},nodes:[]},edges:[],modelArtifacts:{metadata:{},artifacts:[],errors:[]},proofVault:{records:{}},viewMode:'graph',modelBoardSearch:'',modelBoardLayer:'All',activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,pdfVolume:'',pdfEdition:'digital',zoom:1,selectedId:null,selectedModelArtifactId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showImplies:true,volume:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
+const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),appModeGraphBtn:document.getElementById('appModeGraphBtn'),appModeModelsBtn:document.getElementById('appModeModelsBtn'),modelBoard:document.getElementById('modelBoard'),modelBoardStatus:document.getElementById('modelBoardStatus'),modelBoardList:document.getElementById('modelBoardList'),modelBoardSearch:document.getElementById('modelBoardSearch'),modelBoardLayerFilter:document.getElementById('modelBoardLayerFilter'),modelBoardGraphBtn:document.getElementById('modelBoardGraphBtn'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),knowledgeFile:document.getElementById('knowledgeFile'),edgesFile:document.getElementById('edgesFile'),modelArtifactsFile:document.getElementById('modelArtifactsFile'),modelArtifactStatus:document.getElementById('modelArtifactStatus'),modelArtifactSelect:document.getElementById('modelArtifactSelect'),autoBtn:document.getElementById('autoBtn'),loadFilesBtn:document.getElementById('loadFilesBtn'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect'),pdfModal:document.getElementById('pdfModal'),pdfModalClose:document.getElementById('pdfModalClose'),pdfModalBody:document.getElementById('pdfModalBody'),pdfVolumeSelect:document.getElementById('pdfVolumeSelect'),pdfEditionSelect:document.getElementById('pdfEditionSelect')};
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function decodeB64(s){if(!s)return'';try{return decodeURIComponent(escape(atob(s)));}catch(e){try{return atob(s);}catch(_){return'';}}}
@@ -688,6 +725,15 @@ function chipList(ids,treeMode){
 
 function modelArtifacts(){return (state.modelArtifacts&&state.modelArtifacts.artifacts)||[];}
 function modelArtifactById(id){return modelArtifacts().find(a=>a.id===id)||null;}
+function setViewMode(mode){
+  state.viewMode=mode==='models'?'models':'graph';
+  const showingModels=state.viewMode==='models';
+  els.appModeGraphBtn.classList.toggle('active',!showingModels);
+  els.appModeModelsBtn.classList.toggle('active',showingModels);
+  els.graphInner.style.display=showingModels?'none':'block';
+  els.modelBoard.classList.toggle('visible',showingModels);
+  if(showingModels)renderModelBoard();
+}
 function renderModelArtifactSelector(){
   const artifacts=modelArtifacts();
   const count=artifacts.length;
@@ -698,6 +744,51 @@ function renderModelArtifactSelector(){
   const options=['<option value="">Select a model card</option>'].concat(artifacts.map(a=>`<option value="${esc(a.id)}">${esc(a.layer||'shared')} · ${esc(a.title||a.id)}</option>`));
   els.modelArtifactSelect.innerHTML=options.join('');
   if(current&&artifacts.some(a=>a.id===current))els.modelArtifactSelect.value=current;
+  renderModelBoard();
+}
+function modelSearchBlob(artifact){
+  return [
+    artifact.id,
+    artifact.title,
+    artifact.kind,
+    artifact.layer,
+    artifact.source_file,
+    (artifact.labels||[]).join(' '),
+    (artifact.depends_on||[]).map(d=>`${d.id||''} ${d.label||''}`).join(' ')
+  ].join(' ').toLowerCase();
+}
+function renderModelBoard(){
+  const artifacts=modelArtifacts();
+  const layers=[...new Set(artifacts.map(a=>a.layer||'shared'))].sort();
+  const layerOptions=['<option value="All">All layers</option>'].concat(layers.map(layer=>`<option value="${esc(layer)}">${esc(layer)}</option>`));
+  const currentLayer=state.modelBoardLayer;
+  els.modelBoardLayerFilter.innerHTML=layerOptions.join('');
+  els.modelBoardLayerFilter.value=layers.includes(currentLayer)?currentLayer:'All';
+  state.modelBoardLayer=els.modelBoardLayerFilter.value;
+  const q=state.modelBoardSearch.trim().toLowerCase();
+  const filtered=artifacts.filter(a=>{
+    const layerOk=state.modelBoardLayer==='All'||(a.layer||'shared')===state.modelBoardLayer;
+    const searchOk=!q||modelSearchBlob(a).includes(q);
+    return layerOk&&searchOk;
+  });
+  const errs=(state.modelArtifacts&&state.modelArtifacts.errors||[]).length;
+  els.modelBoardStatus.textContent=artifacts.length?`${filtered.length} of ${artifacts.length} model cards shown${errs?` · ${errs} validation issue${errs===1?'':'s'}`:''}.`:'No model artifacts loaded.';
+  if(!artifacts.length){
+    els.modelBoardList.innerHTML='<div class="card"><div class="value">No model artifacts loaded. Use auto-load or select model-artifacts.json.</div></div>';
+    return;
+  }
+  els.modelBoardList.innerHTML=filtered.map(a=>{
+    const depends=(a.depends_on||[]).filter(d=>d.id).slice(0,3).map(d=>`<span class="node-chip">${esc(d.id)}</span>`).join(' ');
+    return `<button type="button" class="card model-list-card${a.id===state.selectedModelArtifactId?' active':''}" data-model-artifact-id="${esc(a.id)}">
+      <span class="model-pill">${esc(a.kind||'model-artifact')}</span>
+      <div class="model-list-title">${texToHtml(a.title||a.id)}</div>
+      <div class="model-list-meta">${esc(a.id)}<br>${esc(a.layer||'shared')}</div>
+      ${depends?`<div style="margin-top:8px;line-height:1.9">${depends}</div>`:''}
+    </button>`;
+  }).join('')||'<div class="card"><div class="value">No model cards match the current filters.</div></div>';
+  els.modelBoardList.querySelectorAll('[data-model-artifact-id]').forEach(card=>{
+    card.addEventListener('click',()=>openModelArtifact(card.dataset.modelArtifactId));
+  });
 }
 function modelDependencyChips(deps){
   if(!deps||!deps.length)return'';
@@ -726,6 +817,7 @@ function renderModelComponentValue(component){
 function renderModelArtifactDetails(artifact){
   if(!artifact)return;
   state.selectedId=null;
+  state.selectedModelArtifactId=artifact.id;
   els.detailEmpty.style.display='none';
   els.detailContent.style.display='block';
   const blocks=[];
@@ -751,11 +843,14 @@ function renderModelArtifactDetails(artifact){
 function openModelArtifact(id){
   const artifact=modelArtifactById(id);
   if(!artifact)return;
+  setViewMode('models');
   els.modelArtifactSelect.value=id;
   renderModelArtifactDetails(artifact);
+  renderModelBoard();
 }
 
 function renderDetails(n){
+  state.selectedModelArtifactId=null;
   els.detailEmpty.style.display='none';els.detailContent.style.display='block';
   const blocks=[];
   function add(t,v,danger=false){if(!v&&v!==0)return;const cls=danger?'card danger':'card';blocks.push(`<div class="${cls}"><div class="label">${esc(t)}</div><div class="value">${texToHtml(String(v))}</div></div>`);}
@@ -854,6 +949,11 @@ async function loadManual(){
 els.autoBtn.onclick=tryAutoLoad;
 els.loadFilesBtn.onclick=loadManual;
 els.modelArtifactSelect.onchange=e=>{if(e.target.value)openModelArtifact(e.target.value);};
+els.appModeGraphBtn.onclick=()=>setViewMode('graph');
+els.appModeModelsBtn.onclick=()=>setViewMode('models');
+els.modelBoardGraphBtn.onclick=()=>setViewMode('graph');
+els.modelBoardSearch.oninput=e=>{state.modelBoardSearch=e.target.value;renderModelBoard();};
+els.modelBoardLayerFilter.onchange=e=>{state.modelBoardLayer=e.target.value;renderModelBoard();};
 els.searchBox.oninput=e=>{state.filters.search=e.target.value;render();};
 els.showDefinitions.onchange=e=>{state.filters.showDefinitions=e.target.checked;render();};
 els.showAxioms.onchange=e=>{state.filters.showAxioms=e.target.checked;render();};
@@ -869,7 +969,7 @@ els.chapterFilter.onchange=e=>{state.filters.chapter=e.target.value;state.filter
 els.deckFilter.onchange=e=>{state.filters.deck=e.target.value;render();};
 els.zoomInBtn.onclick=()=>{state.zoom=Math.min(2.4,+(state.zoom+0.1).toFixed(2));render();};
 els.zoomOutBtn.onclick=()=>{state.zoom=Math.max(0.45,+(state.zoom-0.1).toFixed(2));render();};
-els.resetBtn.onclick=()=>{state.nodePositions={};render();applyInitialView();};
+els.resetBtn.onclick=()=>{setViewMode('graph');state.nodePositions={};render();applyInitialView();};
 els.dataMeta.onclick=openPdfModal;
 els.proofModalClose.onclick=closeProofModal;
 els.proofModal.addEventListener('click',e=>{if(e.target===els.proofModal)closeProofModal();});
@@ -888,6 +988,7 @@ document.addEventListener('keydown',e=>{
   if(els.pdfModal.style.display==='flex')closePdfModal();
 });
 tryAutoLoad();
+if(location.hash==='#models')setViewMode('models');
 </script>
 </body>
 </html>
