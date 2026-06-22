@@ -530,15 +530,18 @@ function optionSet(select,options,current){
     options.forEach(item=>{const o=document.createElement('option');o.value=item.value;o.textContent=item.label;if(item.value===current)o.selected=true;select.appendChild(o);});
   }
 }
-function uniqueNodeOptions(nodes,key,labelKey){
+function uniqueNodeOptions(nodes,key,labelKey,preferredOrder=[]){
   const seen=new Set(),out=[];
+  const order=new Map(preferredOrder.map((value,index)=>[value,index]));
   nodes.forEach(n=>{
     const value=n[key];
     if(!value||seen.has(value))return;
     seen.add(value);
     out.push({value,label:plainOptionLabel(n[labelKey]||fallbackTitle(value))});
   });
-  return out.sort((a,b)=>a.label.localeCompare(b.label));
+  return preferredOrder.length
+    ? out.sort((a,b)=>(order.get(a.value)??9999)-(order.get(b.value)??9999))
+    : out;
 }
 // syncFilters: populates Volume, Chapter, and Section from exported TOC metadata.
 // Filters keep slug keys internally but display the same chapter/section titles and order as the source indexes.
@@ -560,7 +563,8 @@ function syncFilters(nodes){
   if(activeVolumes.length){
     activeVolumes.forEach(v=>(v.chapters||[]).forEach(c=>chapterOptions.push({value:c.id,label:plainOptionLabel(c.title||fallbackTitle(c.id))})));
   }else{
-    chapterOptions.push(...uniqueNodeOptions(selectedNodes,'chapter','chapter_title'));
+    const chapterOrder=((state.knowledge&&state.knowledge.metadata&&state.knowledge.metadata.chapters)||[]).filter(Boolean);
+    chapterOptions.push(...uniqueNodeOptions(selectedNodes,'chapter','chapter_title',chapterOrder));
   }
   if(state.filters.chapter!=='All'&&!chapterOptions.some(o=>o.value===state.filters.chapter))state.filters.chapter='All';
   optionSet(els.chapterFilter,chapterOptions,state.filters.chapter);
