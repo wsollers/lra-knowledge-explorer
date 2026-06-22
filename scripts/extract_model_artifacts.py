@@ -59,6 +59,8 @@ COMPONENT_ENV_NAMES = [
     *SEMANTIC_ENVIRONMENTS.keys(),
 ]
 COMPONENT_START_RE = re.compile(r"\\begin\{(" + "|".join(re.escape(name) for name in COMPONENT_ENV_NAMES) + r")\}")
+SIMPLE_COMMAND_RE = re.compile(r"\\(?:newcommand|providecommand)\s*\{(\\[A-Za-z@]+)\}")
+DECLARE_MATH_OPERATOR_RE = re.compile(r"\\DeclareMathOperator\*?\s*\{(\\[A-Za-z@]+)\}\s*\{([^{}]+)\}")
 
 
 COMPONENT_NAMES = {
@@ -207,6 +209,102 @@ def command_arguments(text: str, command: str, arity: int) -> list[list[str]]:
         if ok:
             out.append(args)
     return out
+
+
+def normalize_katex_macro_expansion(expansion: str) -> str:
+    expansion = clean_tex(expansion)
+    replacements = {
+        r"\vcentcolon\equiv": r"\equiv",
+        r"\;\vcentcolon\iff\;": r"\Longleftrightarrow",
+    }
+    for source, target in replacements.items():
+        expansion = expansion.replace(source, target)
+    return expansion
+
+
+def katex_macro_skip_reason(expansion: str) -> str:
+    unsupported_tokens = [
+        r"\par",
+        r"\noindent",
+        r"\ignorespaces",
+        r"\textbf",
+        r"\textit",
+        r"\texttt",
+        r"\href",
+        r"\hyperref",
+        r"\cite",
+        r"\citeauthor",
+        r"\mbox",
+        r"\begin",
+        r"\end",
+        r"\directlua",
+        "$",
+    ]
+    for token in unsupported_tokens:
+        if token in expansion:
+            return f"contains non-KaTeX frontend token {token}"
+    return ""
+
+
+def extract_katex_macros(path: Path | None) -> dict:
+    if not path or not path.exists():
+        return {"source_file": "", "macros": {}, "skipped": []}
+
+    text = read_text(path)
+    macros: dict[str, str] = {}
+    skipped: list[dict[str, str]] = []
+    command_names = {"newcommand", "providecommand", "renewcommand"}
+
+    for match in DECLARE_MATH_OPERATOR_RE.finditer(text):
+        name, operator = match.groups()
+        macros[name] = rf"\operatorname{{{operator}}}"
+
+    for match in SIMPLE_COMMAND_RE.finditer(text):
+        command_start = match.start()
+        if text[max(0, command_start - 1):command_start] == "%":
+            continue
+        name = match.group(1)
+        pos = match.end()
+        while pos < len(text) and text[pos].isspace():
+            pos += 1
+        if pos < len(text) and text[pos] == "[":
+            skipped.append({"name": name, "reason": "takes arguments or optional arguments"})
+            continue
+        if pos >= len(text) or text[pos] != "{":
+            skipped.append({"name": name, "reason": "missing simple replacement body"})
+            continue
+        try:
+            end = find_matching_brace(text, pos)
+        except ValueError:
+            skipped.append({"name": name, "reason": "unmatched replacement body"})
+            continue
+        expansion = normalize_katex_macro_expansion(text[pos + 1:end])
+        if any(rf"\{command_name}" in expansion for command_name in command_names):
+            skipped.append({"name": name, "reason": "replacement contains macro declaration"})
+            continue
+        reason = katex_macro_skip_reason(expansion)
+        if reason:
+            skipped.append({"name": name, "reason": reason})
+            continue
+        macros[name] = expansion
+
+    return {
+        "source_file": path.as_posix(),
+        "macros": dict(sorted(macros.items())),
+        "skipped": sorted(skipped, key=lambda item: item["name"]),
+    }
+
+
+def default_macro_file(source_root: Path) -> Path | None:
+    candidates = [
+        source_root.parent / "lra-common" / "common" / "macros.tex",
+        Path(__file__).resolve().parents[2] / "lra-common" / "common" / "macros.tex",
+        source_root / "common" / "macros.tex",
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate.resolve()
+    return None
 
 
 def extract_items(text: str) -> list[dict]:
@@ -404,6 +502,66 @@ def validate(artifacts: list[dict], errors: list[ExtractionError], forbid_generi
                 errors.append(ExtractionError(artifact["source_file"], f"{artifact['id']} depends on unknown model artifact '{did}'"))
 
 
+def model_artifact_rank(artifact: dict) -> tuple:
+    layer_rank = {
+        "shared": 0,
+        "propositional-logic": 1,
+        "first-order-logic": 2,
+        "set-theory": 3,
+    }
+    kind_rank = {
+        "bridge": 0,
+        "theory": 1,
+        "model": 2,
+        "definitional-extension": 3,
+    }
+    id_rank = {
+        "bridge:free-sigma-algebra-evaluation": 0,
+        "bridge:consequence": 1,
+    }
+    return (
+        layer_rank.get(artifact.get("layer"), 99),
+        kind_rank.get(artifact.get("kind"), 99),
+        id_rank.get(artifact.get("id"), 50),
+        artifact.get("title", ""),
+        artifact.get("id", ""),
+    )
+
+
+def order_artifacts(artifacts: list[dict]) -> list[dict]:
+    by_id = {artifact.get("id"): artifact for artifact in artifacts if artifact.get("id")}
+    indegree = {artifact.get("id"): 0 for artifact in artifacts}
+    outgoing = {artifact.get("id"): [] for artifact in artifacts}
+    for artifact in artifacts:
+        artifact_id = artifact.get("id")
+        if not artifact_id:
+            continue
+        for dep in artifact.get("depends_on", []):
+            dep_id = dep.get("id")
+            if dep_id in by_id:
+                outgoing[dep_id].append(artifact)
+                indegree[artifact_id] = indegree.get(artifact_id, 0) + 1
+
+    ready = sorted(
+        [artifact for artifact in artifacts if indegree.get(artifact.get("id"), 0) == 0],
+        key=model_artifact_rank,
+    )
+    ordered: list[dict] = []
+    while ready:
+        artifact = ready.pop(0)
+        ordered.append(artifact)
+        for dependent in sorted(outgoing.get(artifact.get("id"), []), key=model_artifact_rank):
+            dependent_id = dependent.get("id")
+            indegree[dependent_id] = indegree.get(dependent_id, 0) - 1
+            if indegree.get(dependent_id, 0) == 0:
+                ready.append(dependent)
+                ready.sort(key=model_artifact_rank)
+
+    if len(ordered) != len(artifacts):
+        return sorted(artifacts, key=model_artifact_rank)
+    return ordered
+
+
 def default_source_root() -> Path:
     here = Path(__file__).resolve()
     sibling = here.parents[2] / "lra-volume-i"
@@ -414,6 +572,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-root", type=Path, default=default_source_root())
     parser.add_argument("--output", type=Path, default=Path(__file__).resolve().parents[1] / "model-artifacts.json")
+    parser.add_argument("--macro-file", type=Path, default=None, help="TeX macro file used to seed frontend KaTeX macros.")
     parser.add_argument("--strict", action="store_true", help="Exit nonzero when validation errors are present.")
     args = parser.parse_args()
 
@@ -437,8 +596,10 @@ def main() -> int:
     artifacts: list[dict] = []
     for path in files:
         artifacts.extend(extract_file(path, root, errors))
-    artifacts.sort(key=lambda a: (a["layer"], a["kind"], a["id"]))
+    artifacts = order_artifacts(artifacts)
     validate(artifacts, errors, forbid_generic_components=args.strict)
+    macro_file = args.macro_file.resolve() if args.macro_file else default_macro_file(root)
+    katex_macros = extract_katex_macros(macro_file)
 
     payload = {
         "metadata": {
@@ -447,7 +608,10 @@ def main() -> int:
             "source_root": root.name,
             "artifact_count": len(artifacts),
             "error_count": len(errors),
+            "katex_macro_count": len(katex_macros["macros"]),
+            "katex_macro_source": katex_macros["source_file"],
         },
+        "katex_macros": katex_macros,
         "artifacts": artifacts,
         "errors": [error.__dict__ for error in errors],
     }

@@ -16,7 +16,17 @@ class ModelArtifactExtractionTest(unittest.TestCase):
         if output.exists():
             output.unlink()
         result = subprocess.run(
-            [sys.executable, str(SCRIPT), "--source-root", str(source_root), "--output", str(output), "--strict"],
+            [
+                sys.executable,
+                str(SCRIPT),
+                "--source-root",
+                str(source_root),
+                "--output",
+                str(output),
+                "--macro-file",
+                str(source_root / "common" / "macros.tex"),
+                "--strict",
+            ],
             text=True,
             capture_output=True,
         )
@@ -24,6 +34,23 @@ class ModelArtifactExtractionTest(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr + result.stdout)
         payload = json.loads(output.read_text(encoding="utf-8"))
         self.assertEqual(payload["metadata"]["artifact_count"], 3)
+        self.assertEqual(payload["metadata"]["katex_macro_count"], 5)
+        self.assertEqual(payload["katex_macros"]["macros"]["\\conv"], "\\operatorname{conv}")
+        self.assertEqual(payload["katex_macros"]["macros"]["\\False"], "\\mathsf{False}")
+        self.assertEqual(payload["katex_macros"]["macros"]["\\colonequiv"], "\\equiv")
+        self.assertEqual(payload["katex_macros"]["macros"]["\\dom"], "\\operatorname{dom}")
+        self.assertIn(
+            {"name": "\\ProofPlan", "reason": "contains non-KaTeX frontend token \\textbf"},
+            payload["katex_macros"]["skipped"],
+        )
+        self.assertEqual(
+            [artifact["id"] for artifact in payload["artifacts"]],
+            [
+                "bridge:free-sigma-algebra-evaluation",
+                "bridge:consequence",
+                "model:example",
+            ],
+        )
         artifact = next(a for a in payload["artifacts"] if a["id"] == "model:example")
         self.assertEqual(artifact["id"], "model:example")
         self.assertEqual(artifact["kind"], "model")
