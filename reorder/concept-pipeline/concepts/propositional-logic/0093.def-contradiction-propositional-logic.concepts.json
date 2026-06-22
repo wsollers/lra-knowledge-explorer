@@ -1,0 +1,61 @@
+{
+  "ambient_environment": [
+    "propositional logic semantics",
+    "classical propositional L-structure"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "classical propositional L-structure",
+      "emit_dependency": false,
+      "reason": "The virtual structure supplies semantic context but is not a graph node.",
+      "source": "virtual_structure"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "truth assignment",
+    "satisfaction",
+    "contradiction"
+  ],
+  "node": "def:contradiction-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "A formula \\(\\varphi\\in\\WFF\\) is a contradiction if no truth assignment satisfies \\(\\varphi\\)."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "truth assignment",
+      "confidence": "medium",
+      "reason": "The statement uses truth assignments or semantic evaluation.",
+      "role": "statement"
+    },
+    {
+      "concept": "satisfaction",
+      "confidence": "medium",
+      "reason": "The statement uses semantic satisfaction.",
+      "role": "statement"
+    },
+    {
+      "concept": "contradiction",
+      "confidence": "medium",
+      "reason": "The statement refers to contradictions.",
+      "role": "statement"
+    }
+  ]
+}

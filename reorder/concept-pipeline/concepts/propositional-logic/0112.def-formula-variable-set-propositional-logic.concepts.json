@@ -1,0 +1,102 @@
+{
+  "ambient_environment": [
+    "propositional logic syntax",
+    "recursive formation of well-formed formulas"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "propositional language",
+      "emit_dependency": false,
+      "reason": "The notation Prop and formula formation are ambient in the propositional language root.",
+      "source": "definitional_root"
+    }
+  ],
+  "instances": [
+    "formula phi",
+    "propositional variable P",
+    "subformula psi",
+    "subformula chi",
+    "connective circ",
+    "variable set Var(phi)"
+  ],
+  "mathematical_structures": [
+    "well-formed formula",
+    "propositional variable",
+    "logical connective",
+    "set of variables",
+    "singleton set",
+    "set union",
+    "recursive definition"
+  ],
+  "node": "def:formula-variable-set-propositional-logic",
+  "not_dependencies": [
+    {
+      "concept": "truth assignment",
+      "reason": "The variable set is syntactic and does not assign truth values."
+    },
+    {
+      "concept": "satisfaction",
+      "reason": "No semantic satisfaction relation is needed to state the set of variables occurring in a formula."
+    }
+  ],
+  "operations_relations_predicates": [
+    "membership in Prop",
+    "is negation of a formula",
+    "is binary connective formation",
+    "singleton formation",
+    "set union",
+    "recursive evaluation of Var"
+  ],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "The variable set Var(phi) is recursively defined.",
+    "For an atomic variable P, Var(phi) is the singleton set {P}.",
+    "Negation preserves the variable set of its subformula.",
+    "A binary connective formula has variable set equal to the union of the variable sets of its two subformulas."
+  ],
+  "statement_conditions": [
+    "If phi is a propositional variable P in Prop.",
+    "If phi has the form neg psi.",
+    "If phi has the form psi circ chi."
+  ],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "high",
+      "reason": "The variable-set operation is defined on formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "propositional variable",
+      "confidence": "high",
+      "reason": "The base case and codomain of the variable set use propositional variables.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "high",
+      "reason": "The recursive cases use negation and binary connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "singleton set",
+      "confidence": "medium",
+      "reason": "The atomic case states Var(phi) = {P}.",
+      "role": "statement"
+    },
+    {
+      "concept": "set union",
+      "confidence": "medium",
+      "reason": "The binary connective case defines Var(phi) using union of two variable sets.",
+      "role": "statement"
+    },
+    {
+      "concept": "recursive definition on formula structure",
+      "confidence": "medium",
+      "reason": "The definition is explicitly recursive over formula formation cases.",
+      "role": "statement"
+    }
+  ]
+}

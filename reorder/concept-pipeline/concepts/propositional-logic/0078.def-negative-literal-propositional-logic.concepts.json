@@ -1,0 +1,47 @@
+{
+  "ambient_environment": [
+    "propositional formula syntax",
+    "normal-form transformations"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "propositional variable",
+    "logical connective",
+    "literal"
+  ],
+  "node": "def:negative-literal-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "A \\emph{negative literal} is a literal of the form \\(\\neg P\\), where \\(P\\) is a\npropositional variable."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "propositional variable",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional variables.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "literal",
+      "confidence": "medium",
+      "reason": "The statement refers to literals.",
+      "role": "statement"
+    }
+  ]
+}

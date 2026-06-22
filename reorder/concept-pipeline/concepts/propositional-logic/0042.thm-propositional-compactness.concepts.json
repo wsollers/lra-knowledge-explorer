@@ -1,0 +1,54 @@
+{
+  "ambient_environment": [
+    "sets of propositional formulas",
+    "satisfiability semantics"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "satisfaction",
+    "finite subset",
+    "set of formulas"
+  ],
+  "node": "thm:propositional-compactness",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Let \\(\\Gamma\\subseteq\\WFF\\). If every finite subset of \\(\\Gamma\\) is\nsatisfiable, then \\(\\Gamma\\) is satisfiable."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "satisfaction",
+      "confidence": "medium",
+      "reason": "The statement uses semantic satisfaction.",
+      "role": "statement"
+    },
+    {
+      "concept": "finite subset",
+      "confidence": "medium",
+      "reason": "The statement refers to finite subsets.",
+      "role": "statement"
+    },
+    {
+      "concept": "set of formulas",
+      "confidence": "medium",
+      "reason": "The statement refers to a set of formulas.",
+      "role": "statement"
+    }
+  ]
+}

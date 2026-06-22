@@ -1,0 +1,435 @@
+{
+  "matcher": {
+    "candidate_limit": 8,
+    "method": "deterministic id/title/summary token scoring",
+    "min_score": 20
+  },
+  "matches": [
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:well-formed-formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formed, formula, formulas, well, wff",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 420,
+          "section": "syntax",
+          "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "thm:minimality-of-well-formed-formulas",
+          "kind": "Theorem",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "id token overlap: formed, formula, formulas, well, wff"
+          ],
+          "score": 240,
+          "section": "syntax",
+          "summary": "Let \\(S\\) be a set of strings over the propositional alphabet. Suppose: \\begin{enumerate}   \\item \\(\\Prop\\subseteq S\\);   \\item if \\(\\varphi\\in S\\), then \\(\\neg\\varphi\\in S\\);   \\item if \\(\\varphi,\\psi\\in S\\) and         \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then         \\((\\varphi\\circ\\psi)\\in S\\). \\end{enumerate} Then \\[ \\WFF\\subseteq S. \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:atomic-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "syntax",
+          "summary": "An atomic formula is a well-formed formula that is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:formula-context-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "algebra",
+          "summary": "A formula context \\(C[-]\\) is a well-formed formula with one distinguished placeholder occurrence \\([-]\\). For each well-formed formula \\(\\varphi\\), the expression \\(C[\\varphi]\\) denotes the formula obtained by replacing the placeholder with \\(\\varphi\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nor-only-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "functional-completeness",
+          "summary": "A \\emph{NOR-only formula} is a well-formed formula whose only connective is \\(\\downarrow\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:molecular-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "syntax",
+          "summary": "A molecular formula is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula formed using at least one logical connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nand-only-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "functional-completeness",
+          "summary": "A \\emph{NAND-only formula} is a well-formed formula whose only connective is \\(\\uparrow\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:open-formula-quantifiers",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 224,
+          "section": "quantifiers",
+          "summary": "An \\emph{open formula} is a well-formed formula with at least one free variable.",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The formation patterns use formulas phi and psi as inputs to build formulas.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "axiom-systems",
+          "id": "def:arity",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: arity",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: arity",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 325,
+          "section": "signatures",
+          "summary": "Let $\\Sigma=(\\mathcal{C},\\mathcal{F},\\mathcal{R},\\operatorname{ar})$ be a first-order signature. The \\emph{arity function} is the map \\[   \\operatorname{ar}:\\mathcal{F}\\cup\\mathcal{R}\\to\\mathbb{Z}_{>0} \\] that assigns to each function or relation symbol the number of arguments it requires. When constants are treated as $0$-ary function symbols, the codomain is enlarged to include $0$.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:logical-connective",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: arity",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 167,
+          "section": "syntax",
+          "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:constant-symbol",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: arity",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 152,
+          "section": "syntax",
+          "summary": "For a first-order language \\(\\mathcal L\\), a \\emph{constant symbol} is a non-logical symbol of arity \\(0\\). A constant symbol may occur as a term without taking input terms.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:function-symbol",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: arity",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 152,
+          "section": "syntax",
+          "summary": "For a first-order language \\(\\mathcal L\\), an \\(n\\)-ary \\emph{function symbol} is a non-logical symbol of arity \\(n\\geq 1\\). If \\(f\\) has arity \\(n\\), then it forms terms by the pattern \\[ f(t_1,\\ldots,t_n). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "axiom-systems",
+          "id": "def:relation-symbol",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: arity",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 152,
+          "section": "signatures",
+          "summary": "A \\emph{relation symbol}, or predicate symbol, is a non-logical symbol $R\\in\\mathcal{R}$ whose assigned arity determines how many terms it must take as inputs. If $\\operatorname{ar}(R)=n$, then $R$ is an $n$-ary formula constructor: it takes exactly $n$ terms and produces an atomic formula, hence something with a truth value rather than an object.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:predicate-symbol",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: arity",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 152,
+          "section": "syntax",
+          "summary": "For a first-order language \\(\\mathcal L\\), an \\(n\\)-ary \\emph{predicate symbol} is a non-logical symbol of arity \\(n\\geq 1\\). If \\(P\\) has arity \\(n\\), then it forms atomic formulas by the pattern \\[ P(t_1,\\ldots,t_n). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "axiom-systems",
+          "id": "def:signature-constant-symbol",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: arity",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 152,
+          "section": "signatures",
+          "summary": "A \\emph{constant symbol} is a non-logical symbol that behaves syntactically as a $0$-ary function symbol. In the streamlined convention where constants are included among function symbols, this is the condition \\[   \\operatorname{Constant}(c)   \\iff c\\in\\mathcal{F}\\text{ and }\\operatorname{ar}(c)=0. \\] Because its arity is $0$, the symbol $c$ is already a well-formed term and takes no input terms.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "axiom-systems",
+          "id": "def:signature-function-symbol",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: arity",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 152,
+          "section": "signatures",
+          "summary": "A \\emph{function symbol} is a non-logical symbol $f\\in\\mathcal{F}$ whose assigned arity determines how many terms it must take as inputs. If $\\operatorname{ar}(f)=n$, then $f$ is an $n$-ary term constructor: it takes exactly $n$ terms and produces a new term, not a truth value.",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "arity",
+      "confidence": "high",
+      "reason": "The statement classifies each connective by unary or binary arity.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:formula-depth-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 195,
+          "section": "syntax",
+          "summary": "The depth of a formula \\(\\varphi\\), denoted \\(\\operatorname{depth}(\\varphi)\\), is defined recursively: \\begin{enumerate} \\item if \\(\\varphi\\) is atomic, then \\(\\operatorname{depth}(\\varphi)=0\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{depth}(\\varphi)=\\operatorname{depth}(\\psi)+1\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{depth}(\\varphi)=\\max\\{\\operatorname{depth}(\\psi),\\operatorname{depth}(\\chi)\\}+1. \\] \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:atomic-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 195,
+          "section": "syntax",
+          "summary": "An atomic formula is a well-formed formula that is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:satisfaction-propositional-formula",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 195,
+          "section": "semantics",
+          "summary": "Let \\(v\\) be a truth assignment and let \\(\\varphi\\in\\WFF\\). We say that \\(v\\) satisfies \\(\\varphi\\), written \\[ v\\models\\varphi, \\] if \\[ \\widehat v(\\varphi)=\\mathrm{True}. \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:formula-context-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 195,
+          "section": "algebra",
+          "summary": "A formula context \\(C[-]\\) is a well-formed formula with one distinguished placeholder occurrence \\([-]\\). For each well-formed formula \\(\\varphi\\), the expression \\(C[\\varphi]\\) denotes the formula obtained by replacing the placeholder with \\(\\varphi\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nor-only-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 195,
+          "section": "functional-completeness",
+          "summary": "A \\emph{NOR-only formula} is a well-formed formula whose only connective is \\(\\downarrow\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:molecular-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 195,
+          "section": "syntax",
+          "summary": "A molecular formula is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula formed using at least one logical connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nand-only-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 195,
+          "section": "functional-completeness",
+          "summary": "A \\emph{NAND-only formula} is a well-formed formula whose only connective is \\(\\uparrow\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:satisfiable-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 195,
+          "section": "semantics",
+          "summary": "A formula \\(\\varphi\\in\\WFF\\) is satisfiable if at least one truth assignment satisfies it.",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "propositional formula formation pattern",
+      "confidence": "high",
+      "reason": "The table explicitly lists formation patterns for each connective.",
+      "source_role": "statement"
+    }
+  ],
+  "node": "def:logical-connective",
+  "schema_version": "concept-match-report-1",
+  "source_concepts": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0113.def-logical-connective.concepts.json"
+}

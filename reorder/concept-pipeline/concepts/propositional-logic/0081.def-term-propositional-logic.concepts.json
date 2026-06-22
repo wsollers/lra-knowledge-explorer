@@ -1,0 +1,40 @@
+{
+  "ambient_environment": [
+    "propositional formula syntax",
+    "normal-form transformations"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "literal",
+    "term"
+  ],
+  "node": "def:term-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "A \\emph{term}, also called a \\emph{conjunction term}, is a finite conjunction\nof literals."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "literal",
+      "confidence": "medium",
+      "reason": "The statement refers to literals.",
+      "role": "statement"
+    },
+    {
+      "concept": "term",
+      "confidence": "medium",
+      "reason": "The statement refers to conjunction terms.",
+      "role": "statement"
+    }
+  ]
+}

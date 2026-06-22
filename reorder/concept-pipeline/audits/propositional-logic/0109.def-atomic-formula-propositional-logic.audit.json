@@ -1,0 +1,105 @@
+{
+  "audits": [
+    {
+      "bucket": "statement",
+      "concept": "well-formed formula",
+      "concept_confidence": "high",
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:atomic-formula-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:atomic-formula-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "source_reason": "The definition states that an atomic formula is a kind of well-formed formula.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:well-formed-formula",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: formed, formula, formulas, well, wff",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: formed, formula, formulas, well, wff",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 420,
+        "section": "syntax",
+        "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "propositional variable",
+      "concept_confidence": "high",
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:atomic-formula-propositional-logic",
+          "def:propositional-variable"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:atomic-formula-propositional-logic",
+          "def:propositional-variable"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "source_reason": "The definition identifies atomic formulas with propositional variables.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:propositional-variable",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: prop, propositional, variable, variables",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: prop, propositional, variable, variables",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 400,
+        "section": "syntax",
+        "summary": "A propositional variable is an atomic symbol intended to stand for a proposition. A standard supply of variables is \\[ \\Prop=\\{P_1,P_2,P_3,\\ldots\\}. \\] Informally, variables are often written \\(P,Q,R,S,\\ldots\\).",
+        "title": "",
+        "volume": "i"
+      }
+    }
+  ],
+  "node": "def:atomic-formula-propositional-logic",
+  "schema_version": "concept-graph-audit-1",
+  "source_match_report": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0109.def-atomic-formula-propositional-logic.concepts.json"
+}

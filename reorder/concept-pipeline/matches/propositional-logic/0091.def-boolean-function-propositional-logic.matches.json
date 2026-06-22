@@ -1,0 +1,299 @@
+{
+  "matcher": {
+    "candidate_limit": 8,
+    "method": "deterministic id/title/summary token scoring",
+    "min_score": 20
+  },
+  "matches": [
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:logical-connective",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: connective, connectives, logical",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives, logical",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 320,
+          "section": "syntax",
+          "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:propositional-language",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: connective, connectives, logical",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 191,
+          "section": "syntax",
+          "summary": "A propositional language consists of: \\begin{enumerate} \\item a set \\(\\Prop\\) of propositional variables; \\item logical connectives; \\item punctuation symbols such as parentheses; \\item recursive formation rules specifying the well-formed formulas. \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:molecular-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: connective, connectives, logical",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 191,
+          "section": "syntax",
+          "summary": "A molecular formula is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula formed using at least one logical connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: connective, connectives, logical",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 176,
+          "section": "syntax",
+          "summary": "For a first-order language \\(\\mathcal L\\), a \\emph{formula} is an expression formed by the formula grammar of \\(\\mathcal L\\). The grammar starts from atomic formulas and closes under the logical connectives and quantifiers of the language.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:molecular",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: connective, connectives, logical",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 176,
+          "section": "syntax",
+          "summary": "A \\emph{molecular formula} is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula whose final formation step uses a logical connective or a quantifier.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nor-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "functional-completeness",
+          "summary": "The \\emph{NOR} connective, written \\(\\downarrow\\), is the binary connective defined by \\[ \\varphi\\downarrow\\psi\\equiv\\neg(\\varphi\\lor\\psi). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:main-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "syntax",
+          "summary": "The main connective of a molecular formula is the connective introduced at the final formation step: \\begin{enumerate} \\item for \\(\\neg\\varphi\\), the main connective is \\(\\neg\\); \\item for \\((\\varphi\\circ\\psi)\\), the main connective is \\(\\circ\\). \\end{enumerate} Atomic formulas have no main connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nand-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "functional-completeness",
+          "summary": "The \\emph{NAND} connective, written \\(\\uparrow\\), is the binary connective defined by \\[ \\varphi\\uparrow\\psi\\equiv\\neg(\\varphi\\land\\psi). \\]",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:boolean-function-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: boolean, function, truth",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: boolean, function, truth",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 380,
+          "section": "semantics",
+          "summary": "An \\(n\\)-ary Boolean function is a function \\[ f:\\mathbb{B}^n\\to\\mathbb{B}. \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:boolean-function-representation-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: boolean, function, truth",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: boolean, function, truth",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 380,
+          "section": "functional-completeness",
+          "summary": "Let \\(f:\\mathbb{B}^n\\to\\mathbb{B}\\) be a Boolean function. A formula \\(\\varphi\\in\\WFF\\) with variables among \\(P_1,\\ldots,P_n\\) \\emph{represents} \\(f\\) if for every truth assignment \\(v\\), \\[ \\widehat v(\\varphi)=f(v(P_1),\\ldots,v(P_n)). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:monotone-boolean-function-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: boolean, function, truth",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: boolean, function, truth"
+          ],
+          "score": 335,
+          "section": "functional-completeness",
+          "summary": "A Boolean function \\(f:\\mathbb{B}^n\\to\\mathbb{B}\\) is \\emph{monotone} if changing input coordinates from \\(\\False\\) to \\(\\True\\) never changes the output from \\(\\True\\) to \\(\\False\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "thm:dnf-representation-of-boolean-functions-propositional-logic",
+          "kind": "Theorem",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: boolean, function, truth",
+            "same chapter",
+            "id token overlap: boolean, truth"
+          ],
+          "score": 252,
+          "section": "functional-completeness",
+          "summary": "Every Boolean function \\(f:\\mathbb{B}^n\\to\\mathbb{B}\\) is represented by a formula in disjunctive normal form using variables \\(P_1,\\ldots,P_n\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "thm:counting-boolean-functions",
+          "kind": "Theorem",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: boolean, truth",
+            "same chapter",
+            "id token overlap: boolean, truth"
+          ],
+          "score": 240,
+          "section": "semantics",
+          "summary": "There are exactly \\[ 2^{2^n} \\] Boolean functions \\(\\mathbb{B}^n\\to\\mathbb{B}\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:truth-function-induced-by-formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: boolean, function, truth",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: boolean, function, truth"
+          ],
+          "score": 215,
+          "section": "semantics",
+          "summary": "Let \\(\\varphi\\in\\WFF\\), and suppose \\(\\operatorname{Var}(\\varphi)\\subseteq\\{P_1,\\ldots,P_n\\}\\). The truth function induced by \\(\\varphi\\) is the Boolean function \\[ f_\\varphi:\\mathbb{B}^n\\to\\mathbb{B} \\] defined by \\[ f_\\varphi(b_1,\\ldots,b_n)=\\widehat v(\\varphi), \\] where \\(v(P_i)=b_i\\) for each \\(i\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:functionally-complete-connective-set-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: boolean, function, truth",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 191,
+          "section": "functional-completeness",
+          "summary": "A connective basis \\(B\\) is \\emph{functionally complete} if every Boolean function \\(f:\\mathbb{B}^n\\to\\mathbb{B}\\), for every \\(n\\ge 1\\), is represented by some formula using only connectives from \\(B\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:truth-assignment-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: boolean, function, truth",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: boolean, truth"
+          ],
+          "score": 147,
+          "section": "semantics",
+          "summary": "A \\emph{truth assignment} is a function \\[ v:\\Prop\\to\\mathbb{B}. \\] For each propositional variable \\(P\\in\\Prop\\), the value \\(v(P)\\) is the truth value assigned to \\(P\\).",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "Boolean function",
+      "confidence": "medium",
+      "reason": "The statement refers to Boolean functions.",
+      "source_role": "statement"
+    }
+  ],
+  "node": "def:boolean-function-propositional-logic",
+  "schema_version": "concept-match-report-1",
+  "source_concepts": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0091.def-boolean-function-propositional-logic.concepts.json"
+}

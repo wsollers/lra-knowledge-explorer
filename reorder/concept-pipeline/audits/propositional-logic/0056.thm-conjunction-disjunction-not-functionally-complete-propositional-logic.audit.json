@@ -1,0 +1,150 @@
+{
+  "audits": [
+    {
+      "bucket": "statement",
+      "concept": "logical connective",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:conjunction-disjunction-not-functionally-complete-propositional-logic",
+          "def:functionally-complete-connective-set-propositional-logic",
+          "def:connective-basis-propositional-logic",
+          "def:logical-connective"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:conjunction-disjunction-not-functionally-complete-propositional-logic",
+          "def:functionally-complete-connective-set-propositional-logic",
+          "def:connective-basis-propositional-logic",
+          "def:logical-connective"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_redundant_in_cumulative_graph",
+      "source_reason": "The statement uses propositional connectives or connective formation.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:logical-connective",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "token overlap: connective, connectives, logical",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: connective, connectives, logical",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 320,
+        "section": "syntax",
+        "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "connective basis",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:conjunction-disjunction-not-functionally-complete-propositional-logic",
+          "def:functionally-complete-connective-set-propositional-logic",
+          "def:connective-basis-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:conjunction-disjunction-not-functionally-complete-propositional-logic",
+          "def:functionally-complete-connective-set-propositional-logic",
+          "def:connective-basis-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_redundant_in_cumulative_graph",
+      "source_reason": "The statement refers to a connective basis.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:connective-basis-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: basis, connective, connectives",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: basis, connective, connectives",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 380,
+        "section": "functional-completeness",
+        "summary": "A \\emph{connective basis} is a specified set \\(B\\) of propositional connectives allowed as primitive connectives for building formulas.",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "functional completeness",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": []
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": []
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "candidate_ok_graph_hygiene_only",
+      "source_reason": "The statement refers to functional completeness.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "predicate-logic",
+        "id": "def:fol-completeness",
+        "kind": "Definition",
+        "reasons": [
+          "token overlap: completeness",
+          "same volume",
+          "definition preferred for concept label",
+          "id token overlap: completeness"
+        ],
+        "score": 100,
+        "section": "proof-theory",
+        "summary": "A proof system is \\emph{complete} if every valid formula is provable: \\[ \\Gamma \\models \\varphi \\implies \\Gamma \\vdash \\varphi. \\]",
+        "title": "",
+        "volume": "i"
+      }
+    }
+  ],
+  "node": "thm:conjunction-disjunction-not-functionally-complete-propositional-logic",
+  "schema_version": "concept-graph-audit-1",
+  "source_match_report": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0056.thm-conjunction-disjunction-not-functionally-complete-propositional-logic.concepts.json"
+}

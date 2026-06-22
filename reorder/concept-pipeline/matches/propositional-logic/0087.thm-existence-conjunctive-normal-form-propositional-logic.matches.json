@@ -1,0 +1,582 @@
+{
+  "matcher": {
+    "candidate_limit": 8,
+    "method": "deterministic id/title/summary token scoring",
+    "min_score": 20
+  },
+  "matches": [
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:well-formed-formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formed, formula, formulas, well, wff",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 420,
+          "section": "syntax",
+          "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "thm:minimality-of-well-formed-formulas",
+          "kind": "Theorem",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "id token overlap: formed, formula, formulas, well, wff"
+          ],
+          "score": 240,
+          "section": "syntax",
+          "summary": "Let \\(S\\) be a set of strings over the propositional alphabet. Suppose: \\begin{enumerate}   \\item \\(\\Prop\\subseteq S\\);   \\item if \\(\\varphi\\in S\\), then \\(\\neg\\varphi\\in S\\);   \\item if \\(\\varphi,\\psi\\in S\\) and         \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then         \\((\\varphi\\circ\\psi)\\in S\\). \\end{enumerate} Then \\[ \\WFF\\subseteq S. \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:atomic-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "syntax",
+          "summary": "An atomic formula is a well-formed formula that is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:formula-context-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "algebra",
+          "summary": "A formula context \\(C[-]\\) is a well-formed formula with one distinguished placeholder occurrence \\([-]\\). For each well-formed formula \\(\\varphi\\), the expression \\(C[\\varphi]\\) denotes the formula obtained by replacing the placeholder with \\(\\varphi\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nor-only-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "functional-completeness",
+          "summary": "A \\emph{NOR-only formula} is a well-formed formula whose only connective is \\(\\downarrow\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:molecular-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "syntax",
+          "summary": "A molecular formula is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula formed using at least one logical connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nand-only-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "functional-completeness",
+          "summary": "A \\emph{NAND-only formula} is a well-formed formula whose only connective is \\(\\uparrow\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:open-formula-quantifiers",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 224,
+          "section": "quantifiers",
+          "summary": "An \\emph{open formula} is a well-formed formula with at least one free variable.",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:logical-equivalence-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: equivalence, logical",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: equivalence, logical",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 300,
+          "section": "semantics",
+          "summary": "Formulas \\(\\varphi,\\psi\\in\\WFF\\) are logically equivalent, written \\[ \\varphi\\equiv\\psi, \\] if they have the same truth value under every truth assignment.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "thm:logical-equivalence-equivalence-relation",
+          "kind": "Theorem",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: equivalence, logical",
+            "same chapter",
+            "id token overlap: equivalence, logical",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 285,
+          "section": "algebra",
+          "summary": "Logical equivalence is reflexive, symmetric, and transitive on \\(\\WFF\\): \\[ \\varphi\\equiv\\varphi, \\qquad \\varphi\\equiv\\psi\\Longrightarrow\\psi\\equiv\\varphi, \\] and \\[ (\\varphi\\equiv\\psi\\land\\psi\\equiv\\chi) \\Longrightarrow \\varphi\\equiv\\chi. \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "thm:replacement-rules-preserve-logical-equivalence-propositional-logic",
+          "kind": "Theorem",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: equivalence, logical",
+            "same chapter",
+            "id token overlap: equivalence, logical"
+          ],
+          "score": 180,
+          "section": "argument-forms",
+          "summary": "If a formula \\(\\psi\\) is obtained from a formula \\(\\varphi\\) by finitely many applications of rules of replacement, then \\(\\varphi\\equiv\\psi\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:logical-connective",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: logical",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: logical"
+          ],
+          "score": 115,
+          "section": "syntax",
+          "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:propositional-equivalence-law",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: equivalence",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: equivalence"
+          ],
+          "score": 115,
+          "section": "algebra",
+          "summary": "A propositional equivalence law is a valid schema of the form \\[ \\varphi\\equiv\\psi, \\] with \\(\\varphi,\\psi\\in\\WFF\\). Each instance of the schema says that the two formulas have the same truth value under every truth assignment.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:logical-consequence-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: logical",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: logical"
+          ],
+          "score": 115,
+          "section": "semantics",
+          "summary": "Let \\(\\Gamma\\subseteq\\WFF\\) and \\(\\varphi\\in\\WFF\\). The formula \\(\\varphi\\) is a logical consequence of \\(\\Gamma\\), written \\[ \\Gamma\\models\\varphi, \\] if every truth assignment satisfying \\(\\Gamma\\) also satisfies \\(\\varphi\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "thm:basic-boolean-equivalence-laws-propositional-logic",
+          "kind": "Theorem",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: equivalence, logical",
+            "same chapter",
+            "id token overlap: equivalence"
+          ],
+          "score": 112,
+          "section": "algebra",
+          "summary": "For all formulas \\(\\varphi,\\psi,\\chi\\in\\WFF\\), the following logical equivalences hold.  Commutativity: \\[ \\varphi\\land\\psi\\equiv\\psi\\land\\varphi, \\qquad \\varphi\\lor\\psi\\equiv\\psi\\lor\\varphi. \\]  Associativity: \\[ (\\varphi\\land\\psi)\\land\\chi \\equiv \\varphi\\land(\\psi\\land\\chi), \\qquad (\\varphi\\lor\\psi)\\lor\\chi \\equiv \\varphi\\lor(\\psi\\lor\\chi). \\]  Idempotence: \\[ \\varphi\\land\\varphi\\equiv\\varphi, \\qquad \\varphi\\lor\\varphi\\equiv\\varphi. \\]  Double negation: \\[ \\neg\\neg\\varphi\\equiv\\varphi. \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "thm:replacement-of-logical-equivalents-propositional-logic",
+          "kind": "Theorem",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: equivalence, logical",
+            "same chapter",
+            "id token overlap: logical"
+          ],
+          "score": 112,
+          "section": "algebra",
+          "summary": "Replacing logically equivalent formulas inside a formula context preserves logical equivalence: \\[ \\varphi\\equiv\\psi \\Longrightarrow C[\\varphi]\\equiv C[\\psi]. \\]",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "logical equivalence",
+      "confidence": "medium",
+      "reason": "The statement refers to logical equivalence.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nor-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: connective, connectives, nor",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives, nor",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 380,
+          "section": "functional-completeness",
+          "summary": "The \\emph{NOR} connective, written \\(\\downarrow\\), is the binary connective defined by \\[ \\varphi\\downarrow\\psi\\equiv\\neg(\\varphi\\lor\\psi). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nor-only-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives, nor",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: nor"
+          ],
+          "score": 139,
+          "section": "functional-completeness",
+          "summary": "A \\emph{NOR-only formula} is a well-formed formula whose only connective is \\(\\downarrow\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:logical-connective",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "syntax",
+          "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:main-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "syntax",
+          "summary": "The main connective of a molecular formula is the connective introduced at the final formation step: \\begin{enumerate} \\item for \\(\\neg\\varphi\\), the main connective is \\(\\neg\\); \\item for \\((\\varphi\\circ\\psi)\\), the main connective is \\(\\circ\\). \\end{enumerate} Atomic formulas have no main connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nand-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "functional-completeness",
+          "summary": "The \\emph{NAND} connective, written \\(\\uparrow\\), is the binary connective defined by \\[ \\varphi\\uparrow\\psi\\equiv\\neg(\\varphi\\land\\psi). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:connective-basis-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "functional-completeness",
+          "summary": "A \\emph{connective basis} is a specified set \\(B\\) of propositional connectives allowed as primitive connectives for building formulas.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:connective-count-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "syntax",
+          "summary": "The connective count of a formula \\(\\varphi\\), denoted \\(\\operatorname{conn}(\\varphi)\\), is defined recursively: \\begin{enumerate} \\item if \\(\\varphi\\) is atomic, then \\(\\operatorname{conn}(\\varphi)=0\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{conn}(\\varphi)=\\operatorname{conn}(\\psi)+1\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{conn}(\\varphi)=\\operatorname{conn}(\\psi)+\\operatorname{conn}(\\chi)+1. \\] \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:connective-reduction-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "functional-completeness",
+          "summary": "A \\emph{connective reduction} replaces a formula using one connective basis by a logically equivalent formula using a smaller or different connective basis.",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "NOR connective",
+      "confidence": "medium",
+      "reason": "The statement refers to NOR.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:conjunctive-normal-form-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: conjunctive, form, normal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: conjunctive, form, normal",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 380,
+          "section": "normal-forms",
+          "summary": "A formula is in \\emph{conjunctive normal form}, abbreviated \\emph{CNF}, when it is a finite conjunction of \\hyperref[def:clause-propositional-logic]{clauses}. Equivalently, it has the shape \\[ C_1\\land C_2\\land\\cdots\\land C_m, \\] where each \\(C_j\\) is a clause.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:canonical-conjunctive-normal-form-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: conjunctive, form, normal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: conjunctive, form, normal"
+          ],
+          "score": 335,
+          "section": "normal-forms",
+          "summary": "Let \\(\\varphi\\in\\WFF\\), and fix an ordering \\(P_1,\\ldots,P_n\\) of the finite variable set of \\(\\varphi\\). The \\emph{canonical conjunctive normal form} of \\(\\varphi\\) relative to this ordering is the conjunction of the \\hyperref[def:truth-table-row-clause-propositional-logic]{truth-table row clauses} corresponding to the rows on which \\(\\varphi\\) is false.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "thm:canonical-conjunctive-normal-form-propositional-logic",
+          "kind": "Theorem",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: conjunctive, form, normal",
+            "same chapter",
+            "id token overlap: conjunctive, form, normal"
+          ],
+          "score": 260,
+          "section": "normal-forms",
+          "summary": "Every formula \\(\\varphi\\in\\WFF\\) is \\hyperref[def:logical-equivalence-propositional-logic]{logically equivalent} to its \\hyperref[def:canonical-conjunctive-normal-form-propositional-logic]{canonical conjunctive normal form} relative to a fixed ordering of its finitely many variables. \\[ \\varphi\\equiv \\operatorname{CCNF}_{P_1,\\ldots,P_n}(\\varphi). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "thm:existence-conjunctive-normal-form-propositional-logic",
+          "kind": "Theorem",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: conjunctive, form, normal",
+            "same chapter",
+            "id token overlap: conjunctive, form, normal"
+          ],
+          "score": 260,
+          "section": "normal-forms",
+          "summary": "For every formula \\(\\varphi\\in\\WFF\\), there exists a formula \\(\\psi\\in\\WFF\\) such that \\(\\psi\\) is in \\hyperref[def:conjunctive-normal-form-propositional-logic]{conjunctive normal form} and \\[ \\varphi\\equiv\\psi. \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:negation-normal-form-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: form, normal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: form, normal"
+          ],
+          "score": 135,
+          "section": "normal-forms",
+          "summary": "A formula is in \\emph{negation normal form} if it uses only propositional variables, negated propositional variables, conjunction, and disjunction, and every negation occurs immediately before a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:disjunctive-normal-form-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: form, normal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: form, normal"
+          ],
+          "score": 135,
+          "section": "normal-forms",
+          "summary": "A formula is in \\emph{disjunctive normal form}, abbreviated \\emph{DNF}, when it is a finite disjunction of \\hyperref[def:elementary-conjunction-propositional-logic]{elementary conjunctions}. Equivalently, it has the shape \\[ C_1\\lor C_2\\lor\\cdots\\lor C_m, \\] where each \\(C_j\\) is an elementary conjunction.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:canonical-disjunctive-normal-form-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: form, normal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: form, normal"
+          ],
+          "score": 135,
+          "section": "normal-forms",
+          "summary": "Let \\(\\varphi\\in\\WFF\\), and fix an ordering \\(P_1,\\ldots,P_n\\) of the finite variable set of \\(\\varphi\\). The \\emph{canonical disjunctive normal form} of \\(\\varphi\\) relative to this ordering is the disjunction of the \\hyperref[def:truth-table-row-conjunction-propositional-logic]{truth-table row conjunctions} corresponding to the rows on which \\(\\varphi\\) is true.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nnf-conversion-procedure-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: form, normal",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 119,
+          "section": "normal-forms",
+          "summary": "The \\emph{NNF conversion procedure} converts a propositional formula to an equivalent formula in negation normal form by the following steps: \\begin{enumerate} \\item eliminate biconditionals using biconditional equivalence laws; \\item eliminate conditionals using conditional equivalence laws; \\item eliminate double negations; \\item push negations inward using De Morgan laws. \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "conjunctive normal form",
+      "confidence": "medium",
+      "reason": "The statement refers to CNF.",
+      "source_role": "statement"
+    }
+  ],
+  "node": "thm:existence-conjunctive-normal-form-propositional-logic",
+  "schema_version": "concept-match-report-1",
+  "source_concepts": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0087.thm-existence-conjunctive-normal-form-propositional-logic.concepts.json"
+}

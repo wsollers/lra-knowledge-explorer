@@ -1,0 +1,76 @@
+{
+  "ambient_environment": [
+    "propositional logic syntax",
+    "propositional language"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "propositional language",
+      "emit_dependency": false,
+      "reason": "Logical connectives are one of the primitive components of the propositional language root.",
+      "source": "definitional_root"
+    }
+  ],
+  "instances": [
+    "negation connective",
+    "conjunction connective",
+    "disjunction connective",
+    "conditional connective",
+    "biconditional connective",
+    "formulas phi and psi"
+  ],
+  "mathematical_structures": [
+    "logical connective",
+    "unary connective",
+    "binary connective",
+    "formation pattern",
+    "well-formed formula"
+  ],
+  "node": "def:logical-connective",
+  "not_dependencies": [
+    {
+      "concept": "truth assignment",
+      "reason": "This statement defines primitive syntactic connectives, not their semantic truth functions."
+    },
+    {
+      "concept": "satisfaction",
+      "reason": "Satisfaction is not needed to state the symbols, arities, or formation patterns."
+    }
+  ],
+  "operations_relations_predicates": [
+    "arity",
+    "formation pattern",
+    "unary connective",
+    "binary connective"
+  ],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "The primitive propositional connectives are negation, conjunction, disjunction, conditional, and biconditional.",
+    "Negation is unary.",
+    "Conjunction, disjunction, conditional, and biconditional are binary.",
+    "Each connective has a displayed formation pattern and reading."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The formation patterns use formulas phi and psi as inputs to build formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "arity",
+      "confidence": "high",
+      "reason": "The statement classifies each connective by unary or binary arity.",
+      "role": "statement"
+    },
+    {
+      "concept": "propositional formula formation pattern",
+      "confidence": "high",
+      "reason": "The table explicitly lists formation patterns for each connective.",
+      "role": "statement"
+    }
+  ]
+}

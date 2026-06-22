@@ -1,0 +1,68 @@
+{
+  "ambient_environment": [
+    "sets of propositional formulas",
+    "satisfiability semantics"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "logical connective",
+    "satisfaction",
+    "finite subset",
+    "finite satisfiability",
+    "set of formulas"
+  ],
+  "node": "def:finitely-satisfiable-set-of-propositional-formulas",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is finitely satisfiable if every\nfinite subset of \\(\\Gamma\\) is satisfiable.\n\\[\n\\operatorname{FinitelySatisfiableSet}(\\Gamma)\n\\Longleftrightarrow\n\\forall\\Delta\\,\\Bigl((\\Delta\\subseteq\\Gamma\\land \\Delta\\text{ is finite})\n\\Rightarrow \\operatorname{SatisfiableSet}(\\Delta)\\Bigr).\n\\]"
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "satisfaction",
+      "confidence": "medium",
+      "reason": "The statement uses semantic satisfaction.",
+      "role": "statement"
+    },
+    {
+      "concept": "finite subset",
+      "confidence": "medium",
+      "reason": "The statement refers to finite subsets.",
+      "role": "statement"
+    },
+    {
+      "concept": "finite satisfiability",
+      "confidence": "medium",
+      "reason": "The statement refers to finite satisfiability.",
+      "role": "statement"
+    },
+    {
+      "concept": "set of formulas",
+      "confidence": "medium",
+      "reason": "The statement refers to a set of formulas.",
+      "role": "statement"
+    }
+  ]
+}

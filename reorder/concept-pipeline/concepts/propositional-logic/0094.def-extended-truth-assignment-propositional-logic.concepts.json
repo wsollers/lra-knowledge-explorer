@@ -1,0 +1,74 @@
+{
+  "ambient_environment": [
+    "propositional logic semantics",
+    "classical propositional L-structure"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "propositional language",
+      "emit_dependency": false,
+      "reason": "Propositional language is an accepted definitional root and ambient context.",
+      "source": "definitional_root"
+    },
+    {
+      "concept": "classical propositional L-structure",
+      "emit_dependency": false,
+      "reason": "The virtual structure supplies semantic context but is not a graph node.",
+      "source": "virtual_structure"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "propositional variable",
+    "logical connective",
+    "truth assignment",
+    "recursive definition on formula structure"
+  ],
+  "node": "def:extended-truth-assignment-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Let\n\\[\nv:\\Prop\\to\\mathbb{B}\n\\]\nbe a truth assignment. The \\emph{extension} of \\(v\\) to well-formed formulas is\nthe function\n\\[\n\\widehat v:\\WFF\\to\\mathbb{B}\n\\]\ndefined recursively as follows:\n\\[\n\\widehat v(P)=v(P)\n\\quad\\text{for every }P\\in\\Prop,\n\\]\n\\[\n\\widehat v(\\neg\\varphi)=\\True\n\\Longleftrightarrow\n\\widehat v(\\varphi)=\\False,\n\\]\n\\[\n\\widehat v(\\varphi\\land\\psi)=\\True\n\\Longleftrightarrow\n\\widehat v(\\varphi)=\\True\n\\text{ and }\n\\widehat v(\\psi)=\\True,\n\\]\n\\[\n\\widehat v(\\varphi\\lor\\psi)=\\True\n\\Longleftrightarrow\n\\widehat v(\\varphi)=\\True\n\\text{ or }\n\\widehat v(\\psi)=\\True,\n\\]\n\\[\n\\widehat v(\\varphi\\to\\psi)=\\False\n\\Longleftrightarrow\n\\widehat v(\\varphi)=\\True\n\\text{ and }\n\\widehat v(\\psi)=\\False,\n\\]\nand\n\\[\n\\widehat v(\\varphi\\leftrightarrow\\psi)=\\True\n\\Longleftrightarrow\n\\widehat v(\\varphi)=\\widehat v(\\psi).\n\\]"
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "propositional variable",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional variables.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "truth assignment",
+      "confidence": "medium",
+      "reason": "The statement uses truth assignments or semantic evaluation.",
+      "role": "statement"
+    },
+    {
+      "concept": "recursive definition on formula structure",
+      "confidence": "medium",
+      "reason": "The statement is recursive over formula structure.",
+      "role": "statement"
+    }
+  ]
+}

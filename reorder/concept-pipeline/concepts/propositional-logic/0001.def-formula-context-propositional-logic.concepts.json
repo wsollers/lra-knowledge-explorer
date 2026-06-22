@@ -1,0 +1,33 @@
+{
+  "ambient_environment": [
+    "propositional equivalence algebra",
+    "formula contexts"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula"
+  ],
+  "node": "def:formula-context-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "A formula context \\(C[-]\\) is a well-formed formula with one distinguished placeholder occurrence \\([-]\\). For each well-formed formula \\(\\varphi\\), the expression \\(C[\\varphi]\\) denotes the formula obtained by replacing the placeholder with \\(\\varphi\\)."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    }
+  ]
+}

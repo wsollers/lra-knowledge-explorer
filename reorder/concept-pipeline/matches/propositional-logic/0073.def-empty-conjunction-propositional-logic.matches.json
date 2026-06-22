@@ -1,0 +1,154 @@
+{
+  "matcher": {
+    "candidate_limit": 8,
+    "method": "deterministic id/title/summary token scoring",
+    "min_score": 20
+  },
+  "matches": [
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:literal-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: literal",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 340,
+          "section": "normal-forms",
+          "summary": "A \\emph{literal} is either a propositional variable \\(P\\) or the negation \\(\\neg P\\) of a propositional variable \\(P\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:negative-literal-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: literal"
+          ],
+          "score": 295,
+          "section": "normal-forms",
+          "summary": "A \\emph{negative literal} is a literal of the form \\(\\neg P\\), where \\(P\\) is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:positive-literal-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: literal"
+          ],
+          "score": 295,
+          "section": "normal-forms",
+          "summary": "A \\emph{positive literal} is a literal of the form \\(P\\), where \\(P\\) is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:complementary-literals-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 275,
+          "section": "normal-forms",
+          "summary": "Two literals are \\emph{complementary} if they are \\(P\\) and \\(\\neg P\\) for the same propositional variable \\(P\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:elementary-conjunction-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 167,
+          "section": "normal-forms",
+          "summary": "An \\emph{elementary conjunction} is a finite conjunction of \\hyperref[def:literal-propositional-logic]{literals}. That is, it is a \\hyperref[def:term-propositional-logic]{term} of the form \\[ L_1\\land L_2\\land\\cdots\\land L_k, \\] where each \\(L_i\\) is a literal. The one-literal case is permitted.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:elementary-disjunction-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 167,
+          "section": "normal-forms",
+          "summary": "An \\emph{elementary disjunction} is a finite disjunction of \\hyperref[def:literal-propositional-logic]{literals}. That is, it is a \\hyperref[def:clause-propositional-logic]{clause} of the form \\[ L_1\\lor L_2\\lor\\cdots\\lor L_k, \\] where each \\(L_i\\) is a literal. The one-literal case is permitted.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:term-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 155,
+          "section": "normal-forms",
+          "summary": "A \\emph{term}, also called a \\emph{conjunction term}, is a finite conjunction of literals.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:clause-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 155,
+          "section": "normal-forms",
+          "summary": "A \\emph{clause} is a finite disjunction of literals.",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "literal",
+      "confidence": "medium",
+      "reason": "The statement refers to literals.",
+      "source_role": "statement"
+    }
+  ],
+  "node": "def:empty-conjunction-propositional-logic",
+  "schema_version": "concept-match-report-1",
+  "source_concepts": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0073.def-empty-conjunction-propositional-logic.concepts.json"
+}

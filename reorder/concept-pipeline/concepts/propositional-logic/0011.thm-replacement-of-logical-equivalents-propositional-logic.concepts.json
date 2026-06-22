@@ -1,0 +1,40 @@
+{
+  "ambient_environment": [
+    "propositional equivalence algebra",
+    "formula contexts"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "logical equivalence"
+  ],
+  "node": "thm:replacement-of-logical-equivalents-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Replacing logically equivalent formulas inside a formula context preserves logical equivalence:\n\\[\n\\varphi\\equiv\\psi\n\\Longrightarrow\nC[\\varphi]\\equiv C[\\psi].\n\\]"
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical equivalence",
+      "confidence": "medium",
+      "reason": "The statement refers to logical equivalence.",
+      "role": "statement"
+    }
+  ]
+}

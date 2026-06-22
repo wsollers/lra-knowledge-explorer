@@ -1,0 +1,58 @@
+{
+  "audits": [
+    {
+      "bucket": "statement",
+      "concept": "propositional formula",
+      "concept_confidence": "low",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": true,
+        "cycle_path_if_added": [
+          "def:truth-value-propositional-logic",
+          "def:satisfaction-propositional-formula",
+          "def:truth-assignment-propositional-logic",
+          "def:truth-value-propositional-logic"
+        ],
+        "transitive_path": []
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": true,
+        "cycle_path_if_added": [
+          "def:truth-value-propositional-logic",
+          "def:satisfaction-propositional-formula",
+          "def:truth-assignment-propositional-logic",
+          "def:truth-value-propositional-logic"
+        ],
+        "transitive_path": []
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_cycle",
+      "source_reason": "Fallback concept for a propositional-logic node with no keyword match.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:satisfaction-propositional-formula",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "token overlap: formula, formulas, prop, propositional, wff",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: formula, formulas, prop, propositional, wff"
+        ],
+        "score": 315,
+        "section": "semantics",
+        "summary": "Let \\(v\\) be a truth assignment and let \\(\\varphi\\in\\WFF\\). We say that \\(v\\) satisfies \\(\\varphi\\), written \\[ v\\models\\varphi, \\] if \\[ \\widehat v(\\varphi)=\\mathrm{True}. \\]",
+        "title": "",
+        "volume": "i"
+      }
+    }
+  ],
+  "node": "def:truth-value-propositional-logic",
+  "schema_version": "concept-graph-audit-1",
+  "source_match_report": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0121.def-truth-value-propositional-logic.concepts.json"
+}

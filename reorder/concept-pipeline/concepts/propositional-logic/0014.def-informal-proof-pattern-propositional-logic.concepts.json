@@ -1,0 +1,40 @@
+{
+  "ambient_environment": [
+    "propositional validity",
+    "argument forms"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "classical propositional L-structure",
+      "emit_dependency": false,
+      "reason": "The virtual structure supplies semantic context but is not a graph node.",
+      "source": "virtual_structure"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "propositional formula"
+  ],
+  "node": "def:informal-proof-pattern-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "An \\emph{informal proof pattern} is a reusable truth-preserving strategy for\norganizing an ordinary mathematical proof."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "propositional formula",
+      "confidence": "low",
+      "reason": "Fallback concept for a propositional-logic node with no keyword match.",
+      "role": "statement"
+    }
+  ]
+}

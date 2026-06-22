@@ -1,0 +1,54 @@
+{
+  "ambient_environment": [
+    "truth-functional semantics",
+    "connective bases"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "classical propositional L-structure",
+      "emit_dependency": false,
+      "reason": "The virtual structure supplies semantic context but is not a graph node.",
+      "source": "virtual_structure"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "logical connective",
+    "connective basis"
+  ],
+  "node": "def:definable-connective-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Let \\(B\\) be a connective basis. A connective \\(\\circ\\) is \\emph{definable from}\n\\(B\\) if there is a formula built using only connectives from \\(B\\) whose truth\nfunction agrees with the truth function of \\(\\circ\\)."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "connective basis",
+      "confidence": "medium",
+      "reason": "The statement refers to a connective basis.",
+      "role": "statement"
+    }
+  ]
+}

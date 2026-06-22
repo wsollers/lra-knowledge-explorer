@@ -1,0 +1,68 @@
+{
+  "ambient_environment": [
+    "truth-functional semantics",
+    "connective bases"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "classical propositional L-structure",
+      "emit_dependency": false,
+      "reason": "The virtual structure supplies semantic context but is not a graph node.",
+      "source": "virtual_structure"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "propositional variable",
+    "logical connective",
+    "truth assignment",
+    "Boolean function"
+  ],
+  "node": "def:boolean-function-representation-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Let \\(f:\\mathbb{B}^n\\to\\mathbb{B}\\) be a Boolean function. A formula\n\\(\\varphi\\in\\WFF\\) with variables among \\(P_1,\\ldots,P_n\\) \\emph{represents}\n\\(f\\) if for every truth assignment \\(v\\),\n\\[\n\\widehat v(\\varphi)=f(v(P_1),\\ldots,v(P_n)).\n\\]"
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "propositional variable",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional variables.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "truth assignment",
+      "confidence": "medium",
+      "reason": "The statement uses truth assignments or semantic evaluation.",
+      "role": "statement"
+    },
+    {
+      "concept": "Boolean function",
+      "confidence": "medium",
+      "reason": "The statement refers to Boolean functions.",
+      "role": "statement"
+    }
+  ]
+}

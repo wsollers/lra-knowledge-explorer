@@ -1,0 +1,68 @@
+{
+  "ambient_environment": [
+    "sets of propositional formulas",
+    "satisfiability semantics"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "classical propositional L-structure",
+      "emit_dependency": false,
+      "reason": "The virtual structure supplies semantic context but is not a graph node.",
+      "source": "virtual_structure"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "logical connective",
+    "truth assignment",
+    "satisfaction",
+    "set of formulas"
+  ],
+  "node": "def:satisfiable-set-of-propositional-formulas",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is satisfiable if there exists a\ntruth assignment \\(v\\) such that \\(v\\models\\Gamma\\).\n\\[\n\\operatorname{SatisfiableSet}(\\Gamma)\n\\Longleftrightarrow\n\\exists v\\,\\bigl(\\operatorname{TruthAssignment}(v)\\land v\\models\\Gamma\\bigr).\n\\]"
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "truth assignment",
+      "confidence": "medium",
+      "reason": "The statement uses truth assignments or semantic evaluation.",
+      "role": "statement"
+    },
+    {
+      "concept": "satisfaction",
+      "confidence": "medium",
+      "reason": "The statement uses semantic satisfaction.",
+      "role": "statement"
+    },
+    {
+      "concept": "set of formulas",
+      "confidence": "medium",
+      "reason": "The statement refers to a set of formulas.",
+      "role": "statement"
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "matcher": {
+    "candidate_limit": 8,
+    "method": "deterministic id/title/summary token scoring",
+    "min_score": 20
+  },
+  "matches": [
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:literal-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: literal",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 340,
+          "section": "normal-forms",
+          "summary": "A \\emph{literal} is either a propositional variable \\(P\\) or the negation \\(\\neg P\\) of a propositional variable \\(P\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:negative-literal-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: literal"
+          ],
+          "score": 295,
+          "section": "normal-forms",
+          "summary": "A \\emph{negative literal} is a literal of the form \\(\\neg P\\), where \\(P\\) is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:positive-literal-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: literal"
+          ],
+          "score": 295,
+          "section": "normal-forms",
+          "summary": "A \\emph{positive literal} is a literal of the form \\(P\\), where \\(P\\) is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:complementary-literals-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 275,
+          "section": "normal-forms",
+          "summary": "Two literals are \\emph{complementary} if they are \\(P\\) and \\(\\neg P\\) for the same propositional variable \\(P\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:elementary-conjunction-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 167,
+          "section": "normal-forms",
+          "summary": "An \\emph{elementary conjunction} is a finite conjunction of \\hyperref[def:literal-propositional-logic]{literals}. That is, it is a \\hyperref[def:term-propositional-logic]{term} of the form \\[ L_1\\land L_2\\land\\cdots\\land L_k, \\] where each \\(L_i\\) is a literal. The one-literal case is permitted.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:elementary-disjunction-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 167,
+          "section": "normal-forms",
+          "summary": "An \\emph{elementary disjunction} is a finite disjunction of \\hyperref[def:literal-propositional-logic]{literals}. That is, it is a \\hyperref[def:clause-propositional-logic]{clause} of the form \\[ L_1\\lor L_2\\lor\\cdots\\lor L_k, \\] where each \\(L_i\\) is a literal. The one-literal case is permitted.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:term-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 155,
+          "section": "normal-forms",
+          "summary": "A \\emph{term}, also called a \\emph{conjunction term}, is a finite conjunction of literals.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:clause-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 155,
+          "section": "normal-forms",
+          "summary": "A \\emph{clause} is a finite disjunction of literals.",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "literal",
+      "confidence": "medium",
+      "reason": "The statement refers to literals.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:term-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: term",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: term",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 340,
+          "section": "normal-forms",
+          "summary": "A \\emph{term}, also called a \\emph{conjunction term}, is a finite conjunction of literals.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:term",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: term",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: term",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 325,
+          "section": "syntax",
+          "summary": "The set of \\emph{terms} of a first-order language \\(\\mathcal L\\), denoted \\(\\mathsf{Term}_{\\mathcal L}\\), is the smallest set of strings satisfying: \\begin{enumerate} \\item every variable is a term; \\item every constant symbol is a term; \\item if \\(f\\) is an \\(n\\)-ary function symbol and       \\(t_1,\\ldots,t_n\\) are terms, then \\(f(t_1,\\ldots,t_n)\\) is a term; \\item no string is a term unless it is generated by finitely many applications       of the previous clauses. \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:term-interp",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: term",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: term",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 325,
+          "section": "semantics",
+          "summary": "Let \\(\\mathcal M=\\langle D,I\\rangle\\) be a structure and \\(s\\) a variable assignment. The \\emph{value} of a term \\(t\\), denoted \\(\\llbracket t\\rrbracket_{\\mathcal M,s}\\), is defined recursively by \\[ \\llbracket x\\rrbracket_{\\mathcal M,s}=s(x),\\qquad \\llbracket c\\rrbracket_{\\mathcal M,s}=I(c), \\] and \\[ \\llbracket f(t_1,\\ldots,t_n)\\rrbracket_{\\mathcal M,s} = I(f)\\bigl(\\llbracket t_1\\rrbracket_{\\mathcal M,s},\\ldots, \\llbracket t_n\\rrbracket_{\\mathcal M,s}\\bigr). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "model-theory",
+          "id": "def:term-evaluation",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: term",
+            "definition preferred for concept label",
+            "id token overlap: term",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 320,
+          "section": "l-structures",
+          "summary": "Let $\\mathcal{M}$ be an $\\mathcal{L}$-structure and $s : \\mathrm{Var} \\to M$ a variable assignment. The \\textbf{evaluation} $s(t) \\in M$ of an $\\mathcal{L}$-term $t$ under $s$ is defined inductively: \\begin{enumerate}   \\item If $t = v_i$ is a variable, then $s(t) = s(v_i)$.   \\item If $t = c$ is a constant symbol, then $s(t) = c^{\\mathcal{M}}$.   \\item If $t = f(t_1, \\ldots, t_n)$ for an $n$-ary function symbol $f$,         then $s(t) = f^{\\mathcal{M}}(s(t_1), \\ldots, s(t_n))$. \\end{enumerate}",
+          "title": "",
+          "volume": "viii"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:maxterm-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 275,
+          "section": "normal-forms",
+          "summary": "Let \\(P_1,\\ldots,P_n\\) be a finite list of propositional variables. A \\emph{maxterm} relative to \\(P_1,\\ldots,P_n\\) is an \\hyperref[def:elementary-disjunction-propositional-logic]{elementary disjunction} that contains exactly one of \\(P_i\\) or \\(\\neg P_i\\) for each \\(i=1,\\ldots,n\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:minterm-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 275,
+          "section": "normal-forms",
+          "summary": "Let \\(P_1,\\ldots,P_n\\) be a finite list of propositional variables. A \\emph{minterm} relative to \\(P_1,\\ldots,P_n\\) is an \\hyperref[def:elementary-conjunction-propositional-logic]{elementary conjunction} that contains exactly one of \\(P_i\\) or \\(\\neg P_i\\) for each \\(i=1,\\ldots,n\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "lambda-calculus",
+          "id": "def:lambda-terms",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: term",
+            "definition preferred for concept label"
+          ],
+          "score": 267,
+          "section": "introduction",
+          "summary": "The set $\\Lambda$ of $\\lambda$-terms is defined inductively as follows:  \\begin{enumerate}     \\item Every variable $x$ is a $\\lambda$-term.     \\item If $M$ is a $\\lambda$-term and $x$ is a variable, then     \\[     \\lambda x.\\,M     \\]     is a $\\lambda$-term.     \\item If $M$ and $N$ are $\\lambda$-terms, then     \\[     MN     \\]     is a $\\lambda$-term. \\end{enumerate}",
+          "title": "",
+          "volume": "viii"
+        },
+        {
+          "chapter": "ordinary-differential-equations",
+          "id": "def:ordinary-differential-equations-terminology-linear-differential-equation",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: term",
+            "definition preferred for concept label"
+          ],
+          "score": 267,
+          "section": "differential-equations-models",
+          "summary": "A differential equation is called \\textbf{linear} if the unknown function and its derivatives appear only to the first power and are not multiplied together.  An $n$th-order linear ordinary differential equation for an unknown function $y=y(t)$ has the form \\[ a_n(t)y^{(n)}+a_{n-1}(t)y^{(n-1)}+\\cdots+a_1(t)y'+a_0(t)y=g(t), \\] where the coefficient functions \\[ a_0(t),a_1(t),\\dots,a_n(t) \\] and the forcing term $g(t)$ are given functions of the independent variable $t$.",
+          "title": "",
+          "volume": "vi"
+        }
+      ],
+      "concept": "term",
+      "confidence": "medium",
+      "reason": "The statement refers to conjunction terms.",
+      "source_role": "statement"
+    }
+  ],
+  "node": "def:term-propositional-logic",
+  "schema_version": "concept-match-report-1",
+  "source_concepts": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0081.def-term-propositional-logic.concepts.json"
+}

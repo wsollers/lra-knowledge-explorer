@@ -1,0 +1,40 @@
+{
+  "ambient_environment": [
+    "propositional validity",
+    "argument forms"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "logical connective",
+    "argument form"
+  ],
+  "node": "thm:hypothetical-syllogism-validity-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "The argument form\n\\[\n\\varphi\\to\\psi,\\qquad \\psi\\to\\chi \\quad\\therefore\\quad \\varphi\\to\\chi\n\\]\nis valid."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "argument form",
+      "confidence": "medium",
+      "reason": "The statement refers to argument forms.",
+      "role": "statement"
+    }
+  ]
+}

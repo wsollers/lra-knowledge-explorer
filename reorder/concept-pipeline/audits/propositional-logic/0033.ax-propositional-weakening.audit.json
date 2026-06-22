@@ -1,0 +1,50 @@
+{
+  "audits": [
+    {
+      "bucket": "statement",
+      "concept": "well-formed formula",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": []
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": []
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "candidate_ok_graph_hygiene_only",
+      "source_reason": "The statement refers to propositional formulas.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:well-formed-formula",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: formed, formula, formulas, well, wff",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: formed, formula, formulas, well, wff",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 420,
+        "section": "syntax",
+        "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+        "title": "",
+        "volume": "i"
+      }
+    }
+  ],
+  "node": "ax:propositional-weakening",
+  "schema_version": "concept-graph-audit-1",
+  "source_match_report": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0033.ax-propositional-weakening.concepts.json"
+}

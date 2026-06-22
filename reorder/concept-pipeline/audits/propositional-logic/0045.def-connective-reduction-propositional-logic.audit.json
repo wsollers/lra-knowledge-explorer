@@ -1,0 +1,207 @@
+{
+  "audits": [
+    {
+      "bucket": "statement",
+      "concept": "well-formed formula",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:connective-reduction-propositional-logic",
+          "def:logical-equivalence-propositional-logic",
+          "def:truth-assignment-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:connective-reduction-propositional-logic",
+          "def:logical-equivalence-propositional-logic",
+          "def:truth-assignment-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_redundant_in_cumulative_graph",
+      "source_reason": "The statement refers to propositional formulas.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:well-formed-formula",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: formed, formula, formulas, well, wff",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: formed, formula, formulas, well, wff",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 420,
+        "section": "syntax",
+        "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "logical connective",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:connective-reduction-propositional-logic",
+          "def:connective-basis-propositional-logic",
+          "def:logical-connective"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:connective-reduction-propositional-logic",
+          "def:connective-basis-propositional-logic",
+          "def:logical-connective"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_redundant_in_cumulative_graph",
+      "source_reason": "The statement uses propositional connectives or connective formation.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:logical-connective",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "token overlap: connective, connectives, logical",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: connective, connectives, logical",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 320,
+        "section": "syntax",
+        "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "logical equivalence",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:connective-reduction-propositional-logic",
+          "def:logical-equivalence-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:connective-reduction-propositional-logic",
+          "def:logical-equivalence-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "source_reason": "The statement refers to logical equivalence.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:logical-equivalence-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "token overlap: equivalence, logical",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: equivalence, logical",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 300,
+        "section": "semantics",
+        "summary": "Formulas \\(\\varphi,\\psi\\in\\WFF\\) are logically equivalent, written \\[ \\varphi\\equiv\\psi, \\] if they have the same truth value under every truth assignment.",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "connective basis",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:connective-reduction-propositional-logic",
+          "def:connective-basis-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:connective-reduction-propositional-logic",
+          "def:connective-basis-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "source_reason": "The statement refers to a connective basis.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:connective-basis-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: basis, connective, connectives",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: basis, connective, connectives",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 380,
+        "section": "functional-completeness",
+        "summary": "A \\emph{connective basis} is a specified set \\(B\\) of propositional connectives allowed as primitive connectives for building formulas.",
+        "title": "",
+        "volume": "i"
+      }
+    }
+  ],
+  "node": "def:connective-reduction-propositional-logic",
+  "schema_version": "concept-graph-audit-1",
+  "source_match_report": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0045.def-connective-reduction-propositional-logic.concepts.json"
+}

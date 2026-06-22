@@ -1,0 +1,583 @@
+{
+  "matcher": {
+    "candidate_limit": 8,
+    "method": "deterministic id/title/summary token scoring",
+    "min_score": 20
+  },
+  "matches": [
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:well-formed-formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formed, formula, formulas, well, wff",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 420,
+          "section": "syntax",
+          "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "thm:minimality-of-well-formed-formulas",
+          "kind": "Theorem",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "id token overlap: formed, formula, formulas, well, wff"
+          ],
+          "score": 240,
+          "section": "syntax",
+          "summary": "Let \\(S\\) be a set of strings over the propositional alphabet. Suppose: \\begin{enumerate}   \\item \\(\\Prop\\subseteq S\\);   \\item if \\(\\varphi\\in S\\), then \\(\\neg\\varphi\\in S\\);   \\item if \\(\\varphi,\\psi\\in S\\) and         \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then         \\((\\varphi\\circ\\psi)\\in S\\). \\end{enumerate} Then \\[ \\WFF\\subseteq S. \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:atomic-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "syntax",
+          "summary": "An atomic formula is a well-formed formula that is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:formula-context-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "algebra",
+          "summary": "A formula context \\(C[-]\\) is a well-formed formula with one distinguished placeholder occurrence \\([-]\\). For each well-formed formula \\(\\varphi\\), the expression \\(C[\\varphi]\\) denotes the formula obtained by replacing the placeholder with \\(\\varphi\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nor-only-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "functional-completeness",
+          "summary": "A \\emph{NOR-only formula} is a well-formed formula whose only connective is \\(\\downarrow\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:molecular-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "syntax",
+          "summary": "A molecular formula is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula formed using at least one logical connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nand-only-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "functional-completeness",
+          "summary": "A \\emph{NAND-only formula} is a well-formed formula whose only connective is \\(\\uparrow\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:open-formula-quantifiers",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 224,
+          "section": "quantifiers",
+          "summary": "An \\emph{open formula} is a well-formed formula with at least one free variable.",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:logical-connective",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: connective, connectives, logical",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives, logical",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 320,
+          "section": "syntax",
+          "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:propositional-language",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: connective, connectives, logical",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 191,
+          "section": "syntax",
+          "summary": "A propositional language consists of: \\begin{enumerate} \\item a set \\(\\Prop\\) of propositional variables; \\item logical connectives; \\item punctuation symbols such as parentheses; \\item recursive formation rules specifying the well-formed formulas. \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:molecular-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: connective, connectives, logical",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 191,
+          "section": "syntax",
+          "summary": "A molecular formula is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula formed using at least one logical connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: connective, connectives, logical",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 176,
+          "section": "syntax",
+          "summary": "For a first-order language \\(\\mathcal L\\), a \\emph{formula} is an expression formed by the formula grammar of \\(\\mathcal L\\). The grammar starts from atomic formulas and closes under the logical connectives and quantifiers of the language.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:molecular",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: connective, connectives, logical",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 176,
+          "section": "syntax",
+          "summary": "A \\emph{molecular formula} is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula whose final formation step uses a logical connective or a quantifier.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nor-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "functional-completeness",
+          "summary": "The \\emph{NOR} connective, written \\(\\downarrow\\), is the binary connective defined by \\[ \\varphi\\downarrow\\psi\\equiv\\neg(\\varphi\\lor\\psi). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:main-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "syntax",
+          "summary": "The main connective of a molecular formula is the connective introduced at the final formation step: \\begin{enumerate} \\item for \\(\\neg\\varphi\\), the main connective is \\(\\neg\\); \\item for \\((\\varphi\\circ\\psi)\\), the main connective is \\(\\circ\\). \\end{enumerate} Atomic formulas have no main connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nand-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "functional-completeness",
+          "summary": "The \\emph{NAND} connective, written \\(\\uparrow\\), is the binary connective defined by \\[ \\varphi\\uparrow\\psi\\equiv\\neg(\\varphi\\land\\psi). \\]",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:atomic-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: atomic, formula, formulas, wff",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 400,
+          "section": "syntax",
+          "summary": "An atomic formula is a well-formed formula that is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:atomic-formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: atomic, formula, formulas, wff",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 385,
+          "section": "syntax",
+          "summary": "An \\emph{atomic formula} of a first-order language \\(\\mathcal L\\) is a string of the form \\[ P(t_1,\\ldots,t_n), \\] where \\(P\\) is an \\(n\\)-ary predicate symbol and \\(t_1,\\ldots,t_n\\) are terms.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 212,
+          "section": "syntax",
+          "summary": "For a first-order language \\(\\mathcal L\\), a \\emph{formula} is an expression formed by the formula grammar of \\(\\mathcal L\\). The grammar starts from atomic formulas and closes under the logical connectives and quantifiers of the language.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:main-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 203,
+          "section": "syntax",
+          "summary": "The main connective of a molecular formula is the connective introduced at the final formation step: \\begin{enumerate} \\item for \\(\\neg\\varphi\\), the main connective is \\(\\neg\\); \\item for \\((\\varphi\\circ\\psi)\\), the main connective is \\(\\circ\\). \\end{enumerate} Atomic formulas have no main connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:wff-pred",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: wff"
+          ],
+          "score": 196,
+          "section": "syntax",
+          "summary": "The set of \\emph{well-formed formulas} of a first-order language \\(\\mathcal L\\), denoted \\(\\mathsf{Form}_{\\mathcal L}\\), is the smallest set of strings satisfying: \\begin{enumerate} \\item every atomic formula is a well-formed formula; \\item if \\(\\varphi\\) is a well-formed formula, then       \\(\\neg\\varphi\\) is a well-formed formula; \\item if \\(\\varphi\\) and \\(\\psi\\) are well-formed formulas and       \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then       \\((\\varphi\\circ\\psi)\\) is a well-form",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "axiom-systems",
+          "id": "def:relation-symbol",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 188,
+          "section": "signatures",
+          "summary": "A \\emph{relation symbol}, or predicate symbol, is a non-logical symbol $R\\in\\mathcal{R}$ whose assigned arity determines how many terms it must take as inputs. If $\\operatorname{ar}(R)=n$, then $R$ is an $n$-ary formula constructor: it takes exactly $n$ terms and produces an atomic formula, hence something with a truth value rather than an object.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:fol-satisfaction",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 188,
+          "section": "semantics",
+          "summary": "Let \\(\\mathcal M=\\langle D,I\\rangle\\) be a structure, let \\(s\\) be a variable assignment, and let \\(\\varphi\\) be a well-formed formula. The relation \\(\\mathcal M,s\\models\\varphi\\) is defined recursively by the usual clauses: atomic formulas are evaluated by term values and interpreted predicate relations; equality compares term values; connectives follow the truth conditions for \\(\\neg,\\land,\\lor,\\to,\\leftrightarrow\\); and \\[ \\mathcal M,s\\models\\forall x\\,\\psi \\Longleftrightarrow \\forall d\\in D\\",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:predicate-symbol",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 188,
+          "section": "syntax",
+          "summary": "For a first-order language \\(\\mathcal L\\), an \\(n\\)-ary \\emph{predicate symbol} is a non-logical symbol of arity \\(n\\geq 1\\). If \\(P\\) has arity \\(n\\), then it forms atomic formulas by the pattern \\[ P(t_1,\\ldots,t_n). \\]",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "atomic formula",
+      "confidence": "medium",
+      "reason": "The statement distinguishes atomic formulas.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:molecular-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: formula, formulas, molecular, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, molecular, wff",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 400,
+          "section": "syntax",
+          "summary": "A molecular formula is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula formed using at least one logical connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:main-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formula, formulas, molecular, wff",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 203,
+          "section": "syntax",
+          "summary": "The main connective of a molecular formula is the connective introduced at the final formation step: \\begin{enumerate} \\item for \\(\\neg\\varphi\\), the main connective is \\(\\neg\\); \\item for \\((\\varphi\\circ\\psi)\\), the main connective is \\(\\circ\\). \\end{enumerate} Atomic formulas have no main connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:molecular",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formula, formulas, molecular, wff",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: molecular"
+          ],
+          "score": 196,
+          "section": "syntax",
+          "summary": "A \\emph{molecular formula} is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula whose final formation step uses a logical connective or a quantifier.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:well-formed-formula",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 155,
+          "section": "syntax",
+          "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:formula-depth-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 155,
+          "section": "syntax",
+          "summary": "The depth of a formula \\(\\varphi\\), denoted \\(\\operatorname{depth}(\\varphi)\\), is defined recursively: \\begin{enumerate} \\item if \\(\\varphi\\) is atomic, then \\(\\operatorname{depth}(\\varphi)=0\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{depth}(\\varphi)=\\operatorname{depth}(\\psi)+1\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{depth}(\\varphi)=\\max\\{\\operatorname{depth}(\\psi),\\operatorname{depth}(\\chi)\\}+1. \\] \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:truth-function-induced-by-formula",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 155,
+          "section": "semantics",
+          "summary": "Let \\(\\varphi\\in\\WFF\\), and suppose \\(\\operatorname{Var}(\\varphi)\\subseteq\\{P_1,\\ldots,P_n\\}\\). The truth function induced by \\(\\varphi\\) is the Boolean function \\[ f_\\varphi:\\mathbb{B}^n\\to\\mathbb{B} \\] defined by \\[ f_\\varphi(b_1,\\ldots,b_n)=\\widehat v(\\varphi), \\] where \\(v(P_i)=b_i\\) for each \\(i\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:atomic-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 155,
+          "section": "syntax",
+          "summary": "An atomic formula is a well-formed formula that is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:satisfaction-propositional-formula",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 155,
+          "section": "semantics",
+          "summary": "Let \\(v\\) be a truth assignment and let \\(\\varphi\\in\\WFF\\). We say that \\(v\\) satisfies \\(\\varphi\\), written \\[ v\\models\\varphi, \\] if \\[ \\widehat v(\\varphi)=\\mathrm{True}. \\]",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "molecular formula",
+      "confidence": "medium",
+      "reason": "The statement distinguishes molecular formulas.",
+      "source_role": "statement"
+    }
+  ],
+  "node": "def:molecular-formula-propositional-logic",
+  "schema_version": "concept-match-report-1",
+  "source_concepts": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0115.def-molecular-formula-propositional-logic.concepts.json"
+}

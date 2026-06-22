@@ -1,0 +1,93 @@
+{
+  "ambient_environment": [
+    "propositional logic syntax",
+    "recursive formation of well-formed formulas"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "propositional language",
+      "emit_dependency": false,
+      "reason": "Formula formation is understood inside the propositional language floor.",
+      "source": "definitional_root"
+    }
+  ],
+  "instances": [
+    "formula phi",
+    "subformula psi",
+    "subformula chi",
+    "connective circ",
+    "depth(phi)"
+  ],
+  "mathematical_structures": [
+    "well-formed formula",
+    "atomic formula",
+    "logical connective",
+    "recursive definition",
+    "natural-number-valued syntactic measure"
+  ],
+  "node": "def:formula-depth-propositional-logic",
+  "not_dependencies": [
+    {
+      "concept": "truth assignment",
+      "reason": "Formula depth is a syntactic measure and does not depend on semantic interpretation."
+    },
+    {
+      "concept": "satisfaction",
+      "reason": "The statement only concerns formula shape, not truth under a valuation."
+    }
+  ],
+  "operations_relations_predicates": [
+    "is atomic",
+    "is negation of a formula",
+    "is binary connective formation",
+    "maximum",
+    "addition",
+    "recursive evaluation of depth"
+  ],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "The depth of a formula is recursively defined.",
+    "Atomic formulas have depth 0.",
+    "Negations increase the depth of their subformula by 1.",
+    "Binary connective formulas have depth equal to the maximum subformula depth plus 1."
+  ],
+  "statement_conditions": [
+    "If phi is atomic.",
+    "If phi has the form neg psi.",
+    "If phi has the form psi circ chi."
+  ],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "high",
+      "reason": "Depth is defined on formulas and follows their formation structure.",
+      "role": "statement"
+    },
+    {
+      "concept": "atomic formula",
+      "confidence": "high",
+      "reason": "The base case explicitly uses atomic formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "high",
+      "reason": "The recursive cases distinguish negation and binary connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "maximum of two natural numbers",
+      "confidence": "medium",
+      "reason": "The binary connective case uses max of two subformula depths.",
+      "role": "statement"
+    },
+    {
+      "concept": "recursive definition on formula structure",
+      "confidence": "medium",
+      "reason": "The definition is explicitly recursive over formula formation cases.",
+      "role": "statement"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "ambient_environment": [
+    "truth-functional semantics",
+    "connective bases"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "logical connective",
+    "connective basis",
+    "functional completeness"
+  ],
+  "node": "thm:negation-disjunction-functionally-complete-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "The connective basis\n\\[\n\\{\\neg,\\lor\\}\n\\]\nis functionally complete."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "connective basis",
+      "confidence": "medium",
+      "reason": "The statement refers to a connective basis.",
+      "role": "statement"
+    },
+    {
+      "concept": "functional completeness",
+      "confidence": "medium",
+      "reason": "The statement refers to functional completeness.",
+      "role": "statement"
+    }
+  ]
+}

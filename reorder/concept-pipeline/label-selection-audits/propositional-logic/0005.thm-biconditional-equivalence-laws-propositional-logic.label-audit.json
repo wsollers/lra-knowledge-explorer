@@ -1,0 +1,108 @@
+{
+  "node": "thm:biconditional-equivalence-laws-propositional-logic",
+  "proof_dependency_audits": [],
+  "schema_version": "direct-label-selection-audit-1",
+  "statement_add_audits": [
+    {
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:biconditional-equivalence-laws-propositional-logic",
+          "def:logical-equivalence-propositional-logic",
+          "def:truth-assignment-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:biconditional-equivalence-laws-propositional-logic",
+          "def:logical-equivalence-propositional-logic",
+          "def:truth-assignment-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_redundant_in_cumulative_graph",
+      "selection_confidence": "high",
+      "selection_reason": "The theorem quantifies over formulas phi and psi in WFF.",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:biconditional-equivalence-laws-propositional-logic",
+          "def:logical-equivalence-propositional-logic",
+          "def:truth-assignment-propositional-logic",
+          "def:well-formed-formula",
+          "def:logical-connective"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:biconditional-equivalence-laws-propositional-logic",
+          "def:logical-equivalence-propositional-logic",
+          "def:truth-assignment-propositional-logic",
+          "def:well-formed-formula",
+          "def:logical-connective"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_redundant_in_cumulative_graph",
+      "selection_confidence": "high",
+      "selection_reason": "The displayed equivalences use biconditional, conditional, conjunction, disjunction, and negation connectives.",
+      "target": "def:logical-connective"
+    },
+    {
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:biconditional-equivalence-laws-propositional-logic",
+          "def:logical-equivalence-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:biconditional-equivalence-laws-propositional-logic",
+          "def:logical-equivalence-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "selection_confidence": "high",
+      "selection_reason": "The theorem asserts logical equivalences between formulas.",
+      "target": "def:logical-equivalence-propositional-logic"
+    }
+  ],
+  "statement_remove_audits": [],
+  "uncertain": [
+    {
+      "concept_or_target": "truth-table proof",
+      "reason": "The packet does not name a proof method or prior theorem, so semantic proof support is left uncertain."
+    }
+  ]
+}

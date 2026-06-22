@@ -1,0 +1,47 @@
+{
+  "ambient_environment": [
+    "sets of propositional formulas",
+    "satisfiability semantics"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "finite subset",
+    "set of formulas"
+  ],
+  "node": "def:finite-subset-of-set-of-propositional-formulas",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Let \\(\\Gamma\\subseteq\\WFF\\). A finite subset of \\(\\Gamma\\) is a set\n\\(\\Delta\\subseteq\\Gamma\\) containing only finitely many formulas."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "finite subset",
+      "confidence": "medium",
+      "reason": "The statement refers to finite subsets.",
+      "role": "statement"
+    },
+    {
+      "concept": "set of formulas",
+      "confidence": "medium",
+      "reason": "The statement refers to a set of formulas.",
+      "role": "statement"
+    }
+  ]
+}

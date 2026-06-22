@@ -1,0 +1,47 @@
+{
+  "ambient_environment": [
+    "propositional equivalence algebra",
+    "formula contexts"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "logical connective",
+    "logical equivalence"
+  ],
+  "node": "thm:basic-boolean-equivalence-laws-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "For all formulas \\(\\varphi,\\psi,\\chi\\in\\WFF\\), the following logical equivalences hold.\n\nCommutativity:\n\\[\n\\varphi\\land\\psi\\equiv\\psi\\land\\varphi,\n\\qquad\n\\varphi\\lor\\psi\\equiv\\psi\\lor\\varphi.\n\\]\n\nAssociativity:\n\\[\n(\\varphi\\land\\psi)\\land\\chi\n\\equiv\n\\varphi\\land(\\psi\\land\\chi),\n\\qquad\n(\\varphi\\lor\\psi)\\lor\\chi\n\\equiv\n\\varphi\\lor(\\psi\\lor\\chi).\n\\]\n\nIdempotence:\n\\[\n\\varphi\\land\\varphi\\equiv\\varphi,\n\\qquad\n\\varphi\\lor\\varphi\\equiv\\varphi.\n\\]\n\nDouble negation:\n\\[\n\\neg\\neg\\varphi\\equiv\\varphi.\n\\]"
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical equivalence",
+      "confidence": "medium",
+      "reason": "The statement refers to logical equivalence.",
+      "role": "statement"
+    }
+  ]
+}

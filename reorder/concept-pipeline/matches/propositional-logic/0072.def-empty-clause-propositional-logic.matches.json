@@ -1,0 +1,296 @@
+{
+  "matcher": {
+    "candidate_limit": 8,
+    "method": "deterministic id/title/summary token scoring",
+    "min_score": 20
+  },
+  "matches": [
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:literal-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: literal",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 340,
+          "section": "normal-forms",
+          "summary": "A \\emph{literal} is either a propositional variable \\(P\\) or the negation \\(\\neg P\\) of a propositional variable \\(P\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:negative-literal-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: literal"
+          ],
+          "score": 295,
+          "section": "normal-forms",
+          "summary": "A \\emph{negative literal} is a literal of the form \\(\\neg P\\), where \\(P\\) is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:positive-literal-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: literal"
+          ],
+          "score": 295,
+          "section": "normal-forms",
+          "summary": "A \\emph{positive literal} is a literal of the form \\(P\\), where \\(P\\) is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:complementary-literals-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 275,
+          "section": "normal-forms",
+          "summary": "Two literals are \\emph{complementary} if they are \\(P\\) and \\(\\neg P\\) for the same propositional variable \\(P\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:elementary-conjunction-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 167,
+          "section": "normal-forms",
+          "summary": "An \\emph{elementary conjunction} is a finite conjunction of \\hyperref[def:literal-propositional-logic]{literals}. That is, it is a \\hyperref[def:term-propositional-logic]{term} of the form \\[ L_1\\land L_2\\land\\cdots\\land L_k, \\] where each \\(L_i\\) is a literal. The one-literal case is permitted.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:elementary-disjunction-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: literal",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 167,
+          "section": "normal-forms",
+          "summary": "An \\emph{elementary disjunction} is a finite disjunction of \\hyperref[def:literal-propositional-logic]{literals}. That is, it is a \\hyperref[def:clause-propositional-logic]{clause} of the form \\[ L_1\\lor L_2\\lor\\cdots\\lor L_k, \\] where each \\(L_i\\) is a literal. The one-literal case is permitted.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:term-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 155,
+          "section": "normal-forms",
+          "summary": "A \\emph{term}, also called a \\emph{conjunction term}, is a finite conjunction of literals.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:clause-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 155,
+          "section": "normal-forms",
+          "summary": "A \\emph{clause} is a finite disjunction of literals.",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "literal",
+      "confidence": "medium",
+      "reason": "The statement refers to literals.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:clause-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: clause",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: clause",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 340,
+          "section": "normal-forms",
+          "summary": "A \\emph{clause} is a finite disjunction of literals.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:empty-clause-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: clause",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: clause"
+          ],
+          "score": 295,
+          "section": "normal-forms",
+          "summary": "The \\emph{empty clause} is the empty disjunction of literals. Semantically, it is read as false.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:truth-table-row-clause-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: clause",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: clause"
+          ],
+          "score": 295,
+          "section": "normal-forms",
+          "summary": "Fix a finite variable list \\(P_1,\\ldots,P_n\\) and a row \\(r\\) of the \\hyperref[def:truth-table-propositional-logic]{truth table} for those variables. The \\emph{truth-table row clause} for \\(r\\) is the clause \\[ M_1\\lor M_2\\lor\\cdots\\lor M_n, \\] where \\[ M_i= \\begin{cases} P_i, & \\text{if row }r\\text{ makes }P_i\\text{ false},\\\\ \\neg P_i, & \\text{if row }r\\text{ makes }P_i\\text{ true}. \\end{cases} \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:elementary-disjunction-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: clause",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 167,
+          "section": "normal-forms",
+          "summary": "An \\emph{elementary disjunction} is a finite disjunction of \\hyperref[def:literal-propositional-logic]{literals}. That is, it is a \\hyperref[def:clause-propositional-logic]{clause} of the form \\[ L_1\\lor L_2\\lor\\cdots\\lor L_k, \\] where each \\(L_i\\) is a literal. The one-literal case is permitted.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:conjunctive-normal-form-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: clause",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 167,
+          "section": "normal-forms",
+          "summary": "A formula is in \\emph{conjunctive normal form}, abbreviated \\emph{CNF}, when it is a finite conjunction of \\hyperref[def:clause-propositional-logic]{clauses}. Equivalently, it has the shape \\[ C_1\\land C_2\\land\\cdots\\land C_m, \\] where each \\(C_j\\) is a clause.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:canonical-conjunctive-normal-form-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: clause",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 167,
+          "section": "normal-forms",
+          "summary": "Let \\(\\varphi\\in\\WFF\\), and fix an ordering \\(P_1,\\ldots,P_n\\) of the finite variable set of \\(\\varphi\\). The \\emph{canonical conjunctive normal form} of \\(\\varphi\\) relative to this ordering is the conjunction of the \\hyperref[def:truth-table-row-clause-propositional-logic]{truth-table row clauses} corresponding to the rows on which \\(\\varphi\\) is false.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:well-formed-formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 155,
+          "section": "syntax",
+          "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:term",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 140,
+          "section": "syntax",
+          "summary": "The set of \\emph{terms} of a first-order language \\(\\mathcal L\\), denoted \\(\\mathsf{Term}_{\\mathcal L}\\), is the smallest set of strings satisfying: \\begin{enumerate} \\item every variable is a term; \\item every constant symbol is a term; \\item if \\(f\\) is an \\(n\\)-ary function symbol and       \\(t_1,\\ldots,t_n\\) are terms, then \\(f(t_1,\\ldots,t_n)\\) is a term; \\item no string is a term unless it is generated by finitely many applications       of the previous clauses. \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "clause",
+      "confidence": "medium",
+      "reason": "The statement refers to clauses.",
+      "source_role": "statement"
+    }
+  ],
+  "node": "def:empty-clause-propositional-logic",
+  "schema_version": "concept-match-report-1",
+  "source_concepts": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0072.def-empty-clause-propositional-logic.concepts.json"
+}

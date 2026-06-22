@@ -1,0 +1,567 @@
+{
+  "current_direct_dependencies": [],
+  "definitional_roots": [
+    "def:signature",
+    "def:truth-value-propositional-logic",
+    "def:propositional-language"
+  ],
+  "floor_components": [
+    {
+      "id": "def:atomic-formula-propositional-logic",
+      "section": "syntax",
+      "summary": "An atomic formula is a well-formed formula that is a propositional variable.",
+      "title": ""
+    },
+    {
+      "id": "def:extended-truth-assignment-propositional-logic",
+      "section": "semantics",
+      "summary": "Let \\[ v:\\Prop\\to\\mathbb{B} \\] be a truth assignment. The \\emph{extension} of \\(v\\) to well-formed formulas is the function \\[ \\widehat v:\\WFF\\to\\mathbb{B} \\] defined recursively as follows: \\[ \\widehat v(P)=v(P) \\quad\\text{for every }P\\in\\Prop, \\] \\[ \\widehat v(\\neg\\varphi)=\\True \\Longleftrightarrow \\widehat v(\\varphi)=\\False, \\] \\[ \\widehat v(\\varphi\\land\\psi)=\\True \\Longleftrightarrow \\widehat v(\\varphi)=\\True \\text{ and } \\widehat v(\\psi)=\\True, \\] \\[ \\widehat v(\\varphi\\lor\\psi)=\\True \\Longl",
+      "title": ""
+    },
+    {
+      "id": "def:logical-connective",
+      "section": "syntax",
+      "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+      "title": ""
+    },
+    {
+      "id": "def:propositional-language",
+      "section": "syntax",
+      "summary": "A propositional language consists of: \\begin{enumerate} \\item a set \\(\\Prop\\) of propositional variables; \\item logical connectives; \\item punctuation symbols such as parentheses; \\item recursive formation rules specifying the well-formed formulas. \\end{enumerate}",
+      "title": ""
+    },
+    {
+      "id": "def:propositional-variable",
+      "section": "syntax",
+      "summary": "A propositional variable is an atomic symbol intended to stand for a proposition. A standard supply of variables is \\[ \\Prop=\\{P_1,P_2,P_3,\\ldots\\}. \\] Informally, variables are often written \\(P,Q,R,S,\\ldots\\).",
+      "title": ""
+    },
+    {
+      "id": "def:satisfaction-propositional-formula",
+      "section": "semantics",
+      "summary": "Let \\(v\\) be a truth assignment and let \\(\\varphi\\in\\WFF\\). We say that \\(v\\) satisfies \\(\\varphi\\), written \\[ v\\models\\varphi, \\] if \\[ \\widehat v(\\varphi)=\\mathrm{True}. \\]",
+      "title": ""
+    },
+    {
+      "id": "def:truth-assignment-propositional-logic",
+      "section": "semantics",
+      "summary": "A \\emph{truth assignment} is a function \\[ v:\\Prop\\to\\mathbb{B}. \\] For each propositional variable \\(P\\in\\Prop\\), the value \\(v(P)\\) is the truth value assigned to \\(P\\).",
+      "title": ""
+    },
+    {
+      "id": "def:truth-value-propositional-logic",
+      "section": "syntax",
+      "summary": "The set of truth values is \\[ \\mathbb{B} := \\{\\mathrm{False},\\mathrm{True}\\}. \\] Some sources identify this set with \\(\\{0,1\\}\\), with \\(0\\) read as false and \\(1\\) read as true.",
+      "title": ""
+    },
+    {
+      "id": "def:well-formed-formula",
+      "section": "syntax",
+      "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+      "title": ""
+    }
+  ],
+  "inference_policy": [
+    "First decompose the statement into ambient environment, structures, instances, operations, predicates, conditions, and assertions.",
+    "Then derive statement dependency concepts from the decomposition.",
+    "For theorems, lemmas, propositions, and corollaries, separately infer proof dependency concepts likely needed for proof but not for statement parsing.",
+    "Mark proof dependencies inferred without proof text as low or medium confidence unless the statement directly names the fact.",
+    "Do not emit dependencies for accepted definitional roots unless the reviewed statement is explicitly about that root.",
+    "Prefer nearest mathematical ancestors for shared ambient structure."
+  ],
+  "node": {
+    "chapter": "propositional-logic",
+    "id": "def:literal-propositional-logic",
+    "kind": "Definition",
+    "section": "normal-forms",
+    "source": "notes/normal-forms/literals-clauses.tex",
+    "source_order": null,
+    "statement_display": "A \\emph{literal} is either a propositional variable \\(P\\) or the negation\n\\(\\neg P\\) of a propositional variable \\(P\\).",
+    "statement_tex": "A \\emph{literal} is either a propositional variable \\(P\\) or the negation\n\\(\\neg P\\) of a propositional variable \\(P\\).",
+    "title": "",
+    "volume": "i"
+  },
+  "packet_id": "prop-logic-0074.def:literal-propositional-logic",
+  "prompt": {
+    "output_schema": "concept-decomposition-1",
+    "path": "reorder/concept-pipeline/prompts/concept-decomposition.md"
+  },
+  "schema_version": "concept-invocation-packet-1",
+  "scope": {
+    "chapter": "propositional-logic",
+    "name": "Propositional Logic",
+    "volume": "i"
+  },
+  "scope_match_pool": [
+    {
+      "id": "def:formula-context-propositional-logic",
+      "section": "algebra",
+      "summary": "A formula context \\(C[-]\\) is a well-formed formula with one distinguished placeholder occurrence \\([-]\\). For each well-formed formula \\(\\varphi\\), the expression \\(C[\\varphi]\\) denotes the formula obtained by replacing the placeholder with \\(\\varphi\\).",
+      "title": ""
+    },
+    {
+      "id": "def:propositional-equivalence-law",
+      "section": "algebra",
+      "summary": "A propositional equivalence law is a valid schema of the form \\[ \\varphi\\equiv\\psi, \\] with \\(\\varphi,\\psi\\in\\WFF\\). Each instance of the schema says that the two formulas have the same truth value under every truth assignment.",
+      "title": ""
+    },
+    {
+      "id": "def:argument-form-propositional-logic",
+      "section": "argument-forms",
+      "summary": "An \\emph{argument form} is a schematic pattern consisting of a finite list of premise formulas and one conclusion formula.",
+      "title": ""
+    },
+    {
+      "id": "def:counterexample-assignment-propositional-logic",
+      "section": "argument-forms",
+      "summary": "A \\emph{counterexample assignment} to an argument form \\((\\Gamma,\\varphi)\\) is a truth assignment that satisfies every premise in \\(\\Gamma\\) and does not satisfy \\(\\varphi\\).",
+      "title": ""
+    },
+    {
+      "id": "def:informal-proof-pattern-propositional-logic",
+      "section": "argument-forms",
+      "summary": "An \\emph{informal proof pattern} is a reusable truth-preserving strategy for organizing an ordinary mathematical proof.",
+      "title": ""
+    },
+    {
+      "id": "def:rule-of-replacement-propositional-logic",
+      "section": "argument-forms",
+      "summary": "A \\emph{rule of replacement} is a schematic permission to replace a subformula by a logically equivalent formula inside a formula context.",
+      "title": ""
+    },
+    {
+      "id": "def:valid-argument-form-propositional-logic",
+      "section": "argument-forms",
+      "summary": "An argument form with premises \\(\\Gamma\\) and conclusion \\(\\varphi\\) is \\emph{valid} if every truth assignment that satisfies every formula in \\(\\Gamma\\) also satisfies \\(\\varphi\\).",
+      "title": ""
+    },
+    {
+      "id": "def:finite-subset-of-set-of-propositional-formulas",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). A finite subset of \\(\\Gamma\\) is a set \\(\\Delta\\subseteq\\Gamma\\) containing only finitely many formulas.",
+      "title": ""
+    },
+    {
+      "id": "def:finite-unsatisfiability-witness-propositional-logic",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). A subset \\(\\Delta\\subseteq\\Gamma\\) is a finite unsatisfiability witness for \\(\\Gamma\\) if \\(\\Delta\\) is finite and unsatisfiable. \\[ \\operatorname{FiniteUnsatisfiabilityWitness}(\\Delta,\\Gamma) \\Longleftrightarrow \\Delta\\subseteq\\Gamma\\land \\Delta\\text{ is finite}\\land \\operatorname{UnsatisfiableSet}(\\Delta). \\]",
+      "title": ""
+    },
+    {
+      "id": "def:finitely-satisfiable-set-of-propositional-formulas",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is finitely satisfiable if every finite subset of \\(\\Gamma\\) is satisfiable. \\[ \\operatorname{FinitelySatisfiableSet}(\\Gamma) \\Longleftrightarrow \\forall\\Delta\\,\\Bigl((\\Delta\\subseteq\\Gamma\\land \\Delta\\text{ is finite}) \\Rightarrow \\operatorname{SatisfiableSet}(\\Delta)\\Bigr). \\]",
+      "title": ""
+    },
+    {
+      "id": "def:satisfiable-set-of-propositional-formulas",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is satisfiable if there exists a truth assignment \\(v\\) such that \\(v\\models\\Gamma\\). \\[ \\operatorname{SatisfiableSet}(\\Gamma) \\Longleftrightarrow \\exists v\\,\\bigl(\\operatorname{TruthAssignment}(v)\\land v\\models\\Gamma\\bigr). \\]",
+      "title": ""
+    },
+    {
+      "id": "def:unsatisfiability-witness-propositional-logic",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). A subset \\(\\Delta\\subseteq\\Gamma\\) is an unsatisfiability witness for \\(\\Gamma\\) if \\(\\Delta\\) is unsatisfiable.",
+      "title": ""
+    },
+    {
+      "id": "def:unsatisfiable-set-of-propositional-formulas",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is unsatisfiable if it is not satisfiable. \\[ \\operatorname{UnsatisfiableSet}(\\Gamma) \\Longleftrightarrow \\neg\\operatorname{SatisfiableSet}(\\Gamma). \\]",
+      "title": ""
+    },
+    {
+      "id": "def:boolean-function-representation-propositional-logic",
+      "section": "functional-completeness",
+      "summary": "Let \\(f:\\mathbb{B}^n\\to\\mathbb{B}\\) be a Boolean function. A formula \\(\\varphi\\in\\WFF\\) with variables among \\(P_1,\\ldots,P_n\\) \\emph{represents} \\(f\\) if for every truth assignment \\(v\\), \\[ \\widehat v(\\varphi)=f(v(P_1),\\ldots,v(P_n)). \\]",
+      "title": ""
+    },
+    {
+      "id": "def:connective-basis-propositional-logic",
+      "section": "functional-completeness",
+      "summary": "A \\emph{connective basis} is a specified set \\(B\\) of propositional connectives allowed as primitive connectives for building formulas.",
+      "title": ""
+    },
+    {
+      "id": "def:connective-reduction-propositional-logic",
+      "section": "functional-completeness",
+      "summary": "A \\emph{connective reduction} replaces a formula using one connective basis by a logically equivalent formula using a smaller or different connective basis.",
+      "title": ""
+    },
+    {
+      "id": "def:definable-connective-propositional-logic",
+      "section": "functional-completeness",
+      "summary": "Let \\(B\\) be a connective basis. A connective \\(\\circ\\) is \\emph{definable from} \\(B\\) if there is a formula built using only connectives from \\(B\\) whose truth function agrees with the truth function of \\(\\circ\\).",
+      "title": ""
+    },
+    {
+      "id": "def:expressively-equivalent-connective-sets-propositional-logic",
+      "section": "functional-completeness",
+      "summary": "Two connective bases \\(B\\) and \\(C\\) are \\emph{expressively equivalent} if every connective in \\(B\\) is definable from \\(C\\), and every connective in \\(C\\) is definable from \\(B\\).",
+      "title": ""
+    },
+    {
+      "id": "def:functionally-complete-connective-set-propositional-logic",
+      "section": "functional-completeness",
+      "summary": "A connective basis \\(B\\) is \\emph{functionally complete} if every Boolean function \\(f:\\mathbb{B}^n\\to\\mathbb{B}\\), for every \\(n\\ge 1\\), is represented by some formula using only connectives from \\(B\\).",
+      "title": ""
+    },
+    {
+      "id": "def:incomplete-connective-set-propositional-logic",
+      "section": "functional-completeness",
+      "summary": "A connective basis is \\emph{incomplete} if it is not functionally complete.",
+      "title": ""
+    },
+    {
+      "id": "def:minimal-complete-basis-propositional-logic",
+      "section": "functional-completeness",
+      "summary": "A functionally complete connective basis \\(B\\) is \\emph{minimal complete} if no proper subset of \\(B\\) is functionally complete.",
+      "title": ""
+    },
+    {
+      "id": "def:monotone-boolean-function-propositional-logic",
+      "section": "functional-completeness",
+      "summary": "A Boolean function \\(f:\\mathbb{B}^n\\to\\mathbb{B}\\) is \\emph{monotone} if changing input coordinates from \\(\\False\\) to \\(\\True\\) never changes the output from \\(\\True\\) to \\(\\False\\).",
+      "title": ""
+    },
+    {
+      "id": "def:nand-connective-propositional-logic",
+      "section": "functional-completeness",
+      "summary": "The \\emph{NAND} connective, written \\(\\uparrow\\), is the binary connective defined by \\[ \\varphi\\uparrow\\psi\\equiv\\neg(\\varphi\\land\\psi). \\]",
+      "title": ""
+    },
+    {
+      "id": "def:nand-only-formula-propositional-logic",
+      "section": "functional-completeness",
+      "summary": "A \\emph{NAND-only formula} is a well-formed formula whose only connective is \\(\\uparrow\\).",
+      "title": ""
+    },
+    {
+      "id": "def:nor-connective-propositional-logic",
+      "section": "functional-completeness",
+      "summary": "The \\emph{NOR} connective, written \\(\\downarrow\\), is the binary connective defined by \\[ \\varphi\\downarrow\\psi\\equiv\\neg(\\varphi\\lor\\psi). \\]",
+      "title": ""
+    },
+    {
+      "id": "def:nor-only-formula-propositional-logic",
+      "section": "functional-completeness",
+      "summary": "A \\emph{NOR-only formula} is a well-formed formula whose only connective is \\(\\downarrow\\).",
+      "title": ""
+    },
+    {
+      "id": "def:canonical-conjunctive-normal-form-propositional-logic",
+      "section": "normal-forms",
+      "summary": "Let \\(\\varphi\\in\\WFF\\), and fix an ordering \\(P_1,\\ldots,P_n\\) of the finite variable set of \\(\\varphi\\). The \\emph{canonical conjunctive normal form} of \\(\\varphi\\) relative to this ordering is the conjunction of the \\hyperref[def:truth-table-row-clause-propositional-logic]{truth-table row clauses} corresponding to the rows on which \\(\\varphi\\) is false.",
+      "title": ""
+    },
+    {
+      "id": "def:canonical-disjunctive-normal-form-propositional-logic",
+      "section": "normal-forms",
+      "summary": "Let \\(\\varphi\\in\\WFF\\), and fix an ordering \\(P_1,\\ldots,P_n\\) of the finite variable set of \\(\\varphi\\). The \\emph{canonical disjunctive normal form} of \\(\\varphi\\) relative to this ordering is the disjunction of the \\hyperref[def:truth-table-row-conjunction-propositional-logic]{truth-table row conjunctions} corresponding to the rows on which \\(\\varphi\\) is true.",
+      "title": ""
+    },
+    {
+      "id": "def:clause-propositional-logic",
+      "section": "normal-forms",
+      "summary": "A \\emph{clause} is a finite disjunction of literals.",
+      "title": ""
+    },
+    {
+      "id": "def:complementary-literals-propositional-logic",
+      "section": "normal-forms",
+      "summary": "Two literals are \\emph{complementary} if they are \\(P\\) and \\(\\neg P\\) for the same propositional variable \\(P\\).",
+      "title": ""
+    },
+    {
+      "id": "def:conjunctive-normal-form-propositional-logic",
+      "section": "normal-forms",
+      "summary": "A formula is in \\emph{conjunctive normal form}, abbreviated \\emph{CNF}, when it is a finite conjunction of \\hyperref[def:clause-propositional-logic]{clauses}. Equivalently, it has the shape \\[ C_1\\land C_2\\land\\cdots\\land C_m, \\] where each \\(C_j\\) is a clause.",
+      "title": ""
+    },
+    {
+      "id": "def:disjunctive-normal-form-propositional-logic",
+      "section": "normal-forms",
+      "summary": "A formula is in \\emph{disjunctive normal form}, abbreviated \\emph{DNF}, when it is a finite disjunction of \\hyperref[def:elementary-conjunction-propositional-logic]{elementary conjunctions}. Equivalently, it has the shape \\[ C_1\\lor C_2\\lor\\cdots\\lor C_m, \\] where each \\(C_j\\) is an elementary conjunction.",
+      "title": ""
+    },
+    {
+      "id": "def:elementary-conjunction-propositional-logic",
+      "section": "normal-forms",
+      "summary": "An \\emph{elementary conjunction} is a finite conjunction of \\hyperref[def:literal-propositional-logic]{literals}. That is, it is a \\hyperref[def:term-propositional-logic]{term} of the form \\[ L_1\\land L_2\\land\\cdots\\land L_k, \\] where each \\(L_i\\) is a literal. The one-literal case is permitted.",
+      "title": ""
+    },
+    {
+      "id": "def:elementary-disjunction-propositional-logic",
+      "section": "normal-forms",
+      "summary": "An \\emph{elementary disjunction} is a finite disjunction of \\hyperref[def:literal-propositional-logic]{literals}. That is, it is a \\hyperref[def:clause-propositional-logic]{clause} of the form \\[ L_1\\lor L_2\\lor\\cdots\\lor L_k, \\] where each \\(L_i\\) is a literal. The one-literal case is permitted.",
+      "title": ""
+    },
+    {
+      "id": "def:empty-clause-propositional-logic",
+      "section": "normal-forms",
+      "summary": "The \\emph{empty clause} is the empty disjunction of literals. Semantically, it is read as false.",
+      "title": ""
+    },
+    {
+      "id": "def:empty-conjunction-propositional-logic",
+      "section": "normal-forms",
+      "summary": "The \\emph{empty conjunction} is the conjunction over no literals. Semantically, it is read as true.",
+      "title": ""
+    },
+    {
+      "id": "def:literal-propositional-logic",
+      "section": "normal-forms",
+      "summary": "A \\emph{literal} is either a propositional variable \\(P\\) or the negation \\(\\neg P\\) of a propositional variable \\(P\\).",
+      "title": ""
+    },
+    {
+      "id": "def:maxterm-propositional-logic",
+      "section": "normal-forms",
+      "summary": "Let \\(P_1,\\ldots,P_n\\) be a finite list of propositional variables. A \\emph{maxterm} relative to \\(P_1,\\ldots,P_n\\) is an \\hyperref[def:elementary-disjunction-propositional-logic]{elementary disjunction} that contains exactly one of \\(P_i\\) or \\(\\neg P_i\\) for each \\(i=1,\\ldots,n\\).",
+      "title": ""
+    },
+    {
+      "id": "def:minterm-propositional-logic",
+      "section": "normal-forms",
+      "summary": "Let \\(P_1,\\ldots,P_n\\) be a finite list of propositional variables. A \\emph{minterm} relative to \\(P_1,\\ldots,P_n\\) is an \\hyperref[def:elementary-conjunction-propositional-logic]{elementary conjunction} that contains exactly one of \\(P_i\\) or \\(\\neg P_i\\) for each \\(i=1,\\ldots,n\\).",
+      "title": ""
+    },
+    {
+      "id": "def:negation-normal-form-propositional-logic",
+      "section": "normal-forms",
+      "summary": "A formula is in \\emph{negation normal form} if it uses only propositional variables, negated propositional variables, conjunction, and disjunction, and every negation occurs immediately before a propositional variable.",
+      "title": ""
+    },
+    {
+      "id": "def:negative-literal-propositional-logic",
+      "section": "normal-forms",
+      "summary": "A \\emph{negative literal} is a literal of the form \\(\\neg P\\), where \\(P\\) is a propositional variable.",
+      "title": ""
+    },
+    {
+      "id": "def:nnf-conversion-procedure-propositional-logic",
+      "section": "normal-forms",
+      "summary": "The \\emph{NNF conversion procedure} converts a propositional formula to an equivalent formula in negation normal form by the following steps: \\begin{enumerate} \\item eliminate biconditionals using biconditional equivalence laws; \\item eliminate conditionals using conditional equivalence laws; \\item eliminate double negations; \\item push negations inward using De Morgan laws. \\end{enumerate}",
+      "title": ""
+    },
+    {
+      "id": "def:positive-literal-propositional-logic",
+      "section": "normal-forms",
+      "summary": "A \\emph{positive literal} is a literal of the form \\(P\\), where \\(P\\) is a propositional variable.",
+      "title": ""
+    },
+    {
+      "id": "def:term-propositional-logic",
+      "section": "normal-forms",
+      "summary": "A \\emph{term}, also called a \\emph{conjunction term}, is a finite conjunction of literals.",
+      "title": ""
+    },
+    {
+      "id": "def:truth-table-row-clause-propositional-logic",
+      "section": "normal-forms",
+      "summary": "Fix a finite variable list \\(P_1,\\ldots,P_n\\) and a row \\(r\\) of the \\hyperref[def:truth-table-propositional-logic]{truth table} for those variables. The \\emph{truth-table row clause} for \\(r\\) is the clause \\[ M_1\\lor M_2\\lor\\cdots\\lor M_n, \\] where \\[ M_i= \\begin{cases} P_i, & \\text{if row }r\\text{ makes }P_i\\text{ false},\\\\ \\neg P_i, & \\text{if row }r\\text{ makes }P_i\\text{ true}. \\end{cases} \\]",
+      "title": ""
+    },
+    {
+      "id": "def:truth-table-row-conjunction-propositional-logic",
+      "section": "normal-forms",
+      "summary": "Fix a finite variable list \\(P_1,\\ldots,P_n\\) and a row \\(r\\) of the \\hyperref[def:truth-table-propositional-logic]{truth table} for those variables. The \\emph{truth-table row conjunction} for \\(r\\) is the conjunction \\[ L_1\\land L_2\\land\\cdots\\land L_n, \\] where \\[ L_i= \\begin{cases} P_i, & \\text{if row }r\\text{ makes }P_i\\text{ true},\\\\ \\neg P_i, & \\text{if row }r\\text{ makes }P_i\\text{ false}. \\end{cases} \\]",
+      "title": ""
+    },
+    {
+      "id": "def:boolean-function-propositional-logic",
+      "section": "semantics",
+      "summary": "An \\(n\\)-ary Boolean function is a function \\[ f:\\mathbb{B}^n\\to\\mathbb{B}. \\]",
+      "title": ""
+    },
+    {
+      "id": "def:contingency-propositional-logic",
+      "section": "semantics",
+      "summary": "A formula \\(\\varphi\\in\\WFF\\) is a contingency if it is satisfiable but not a tautology.",
+      "title": ""
+    },
+    {
+      "id": "def:contradiction-propositional-logic",
+      "section": "semantics",
+      "summary": "A formula \\(\\varphi\\in\\WFF\\) is a contradiction if no truth assignment satisfies \\(\\varphi\\).",
+      "title": ""
+    },
+    {
+      "id": "def:extended-truth-assignment-propositional-logic",
+      "section": "semantics",
+      "summary": "Let \\[ v:\\Prop\\to\\mathbb{B} \\] be a truth assignment. The \\emph{extension} of \\(v\\) to well-formed formulas is the function \\[ \\widehat v:\\WFF\\to\\mathbb{B} \\] defined recursively as follows: \\[ \\widehat v(P)=v(P) \\quad\\text{for every }P\\in\\Prop, \\] \\[ \\widehat v(\\neg\\varphi)=\\True \\Longleftrightarrow \\widehat v(\\varphi)=\\False, \\] \\[ \\widehat v(\\varphi\\land\\psi)=\\True \\Longleftrightarrow \\widehat v(\\varphi)=\\True \\text{ and } \\widehat v(\\psi)=\\True, \\] \\[ \\widehat v(\\varphi\\lor\\psi)=\\True \\Longl",
+      "title": ""
+    },
+    {
+      "id": "def:logical-consequence-propositional-logic",
+      "section": "semantics",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\) and \\(\\varphi\\in\\WFF\\). The formula \\(\\varphi\\) is a logical consequence of \\(\\Gamma\\), written \\[ \\Gamma\\models\\varphi, \\] if every truth assignment satisfying \\(\\Gamma\\) also satisfies \\(\\varphi\\).",
+      "title": ""
+    },
+    {
+      "id": "def:logical-equivalence-propositional-logic",
+      "section": "semantics",
+      "summary": "Formulas \\(\\varphi,\\psi\\in\\WFF\\) are logically equivalent, written \\[ \\varphi\\equiv\\psi, \\] if they have the same truth value under every truth assignment.",
+      "title": ""
+    },
+    {
+      "id": "def:satisfaction-propositional-formula",
+      "section": "semantics",
+      "summary": "Let \\(v\\) be a truth assignment and let \\(\\varphi\\in\\WFF\\). We say that \\(v\\) satisfies \\(\\varphi\\), written \\[ v\\models\\varphi, \\] if \\[ \\widehat v(\\varphi)=\\mathrm{True}. \\]",
+      "title": ""
+    },
+    {
+      "id": "def:satisfaction-set-propositional-logic",
+      "section": "semantics",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). A truth assignment \\(v\\) satisfies \\(\\Gamma\\), written \\[ v\\models\\Gamma, \\] if \\(v\\models\\gamma\\) for every \\(\\gamma\\in\\Gamma\\).",
+      "title": ""
+    },
+    {
+      "id": "def:satisfiable-formula-propositional-logic",
+      "section": "semantics",
+      "summary": "A formula \\(\\varphi\\in\\WFF\\) is satisfiable if at least one truth assignment satisfies it.",
+      "title": ""
+    },
+    {
+      "id": "def:tautology-propositional-logic",
+      "section": "semantics",
+      "summary": "A formula \\(\\varphi\\in\\WFF\\) is a tautology, written \\[ \\models\\varphi, \\] if every truth assignment satisfies \\(\\varphi\\).",
+      "title": ""
+    },
+    {
+      "id": "def:truth-assignment-domain-propositional-logic",
+      "section": "semantics",
+      "summary": "The \\emph{domain} of a truth assignment \\[ v:\\Prop\\to\\mathbb{B} \\] is the set \\(\\Prop\\) of propositional variables.",
+      "title": ""
+    },
+    {
+      "id": "def:truth-assignment-propositional-logic",
+      "section": "semantics",
+      "summary": "A \\emph{truth assignment} is a function \\[ v:\\Prop\\to\\mathbb{B}. \\] For each propositional variable \\(P\\in\\Prop\\), the value \\(v(P)\\) is the truth value assigned to \\(P\\).",
+      "title": ""
+    },
+    {
+      "id": "def:truth-function-induced-by-formula",
+      "section": "semantics",
+      "summary": "Let \\(\\varphi\\in\\WFF\\), and suppose \\(\\operatorname{Var}(\\varphi)\\subseteq\\{P_1,\\ldots,P_n\\}\\). The truth function induced by \\(\\varphi\\) is the Boolean function \\[ f_\\varphi:\\mathbb{B}^n\\to\\mathbb{B} \\] defined by \\[ f_\\varphi(b_1,\\ldots,b_n)=\\widehat v(\\varphi), \\] where \\(v(P_i)=b_i\\) for each \\(i\\).",
+      "title": ""
+    },
+    {
+      "id": "def:truth-table-propositional-logic",
+      "section": "semantics",
+      "summary": "Let \\(\\varphi\\in\\WFF\\) and suppose the variables occurring in \\(\\varphi\\) are among \\(P_1,\\ldots,P_n\\). A truth table for \\(\\varphi\\) is a finite table with one row for each assignment \\[ a:\\{P_1,\\ldots,P_n\\}\\to\\mathbb{B} \\] and a final column recording the value of \\(\\widehat v(\\varphi)\\) for any truth assignment \\(v\\) extending \\(a\\).",
+      "title": ""
+    },
+    {
+      "id": "def:atomic-formula-propositional-logic",
+      "section": "syntax",
+      "summary": "An atomic formula is a well-formed formula that is a propositional variable.",
+      "title": ""
+    },
+    {
+      "id": "def:connective-count-propositional-logic",
+      "section": "syntax",
+      "summary": "The connective count of a formula \\(\\varphi\\), denoted \\(\\operatorname{conn}(\\varphi)\\), is defined recursively: \\begin{enumerate} \\item if \\(\\varphi\\) is atomic, then \\(\\operatorname{conn}(\\varphi)=0\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{conn}(\\varphi)=\\operatorname{conn}(\\psi)+1\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{conn}(\\varphi)=\\operatorname{conn}(\\psi)+\\operatorname{conn}(\\chi)+1. \\] \\end{enumerate}",
+      "title": ""
+    },
+    {
+      "id": "def:formula-depth-propositional-logic",
+      "section": "syntax",
+      "summary": "The depth of a formula \\(\\varphi\\), denoted \\(\\operatorname{depth}(\\varphi)\\), is defined recursively: \\begin{enumerate} \\item if \\(\\varphi\\) is atomic, then \\(\\operatorname{depth}(\\varphi)=0\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{depth}(\\varphi)=\\operatorname{depth}(\\psi)+1\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{depth}(\\varphi)=\\max\\{\\operatorname{depth}(\\psi),\\operatorname{depth}(\\chi)\\}+1. \\] \\end{enumerate}",
+      "title": ""
+    },
+    {
+      "id": "def:formula-variable-set-propositional-logic",
+      "section": "syntax",
+      "summary": "The variable set \\(\\operatorname{Var}(\\varphi)\\) of a formula \\(\\varphi\\) is defined recursively: \\begin{enumerate} \\item if \\(\\varphi=P\\in\\Prop\\), then \\(\\operatorname{Var}(\\varphi)=\\{P\\}\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{Var}(\\varphi)=\\operatorname{Var}(\\psi)\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{Var}(\\varphi)=\\operatorname{Var}(\\psi)\\cup\\operatorname{Var}(\\chi). \\] \\end{enumerate}",
+      "title": ""
+    },
+    {
+      "id": "def:logical-connective",
+      "section": "syntax",
+      "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+      "title": ""
+    },
+    {
+      "id": "def:main-connective-propositional-logic",
+      "section": "syntax",
+      "summary": "The main connective of a molecular formula is the connective introduced at the final formation step: \\begin{enumerate} \\item for \\(\\neg\\varphi\\), the main connective is \\(\\neg\\); \\item for \\((\\varphi\\circ\\psi)\\), the main connective is \\(\\circ\\). \\end{enumerate} Atomic formulas have no main connective.",
+      "title": ""
+    },
+    {
+      "id": "def:molecular-formula-propositional-logic",
+      "section": "syntax",
+      "summary": "A molecular formula is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula formed using at least one logical connective.",
+      "title": ""
+    },
+    {
+      "id": "def:parse-tree-propositional-logic",
+      "section": "syntax",
+      "summary": "The parse tree, or syntax tree, of a well-formed formula is the tree representation of its recursive construction: \\begin{enumerate} \\item a propositional variable is represented by a single leaf; \\item a formula \\(\\neg\\varphi\\) is represented by a root labeled \\(\\neg\\) with one child, the parse tree of \\(\\varphi\\); \\item a formula \\((\\varphi\\circ\\psi)\\) is represented by a root labeled \\(\\circ\\) with two children, the parse trees of \\(\\varphi\\) and \\(\\psi\\). \\end{enumerate}",
+      "title": ""
+    },
+    {
+      "id": "def:proper-subformula",
+      "section": "syntax",
+      "summary": "Let \\(\\varphi\\in\\WFF\\). A \\emph{proper subformula} of \\(\\varphi\\) is a formula \\(\\psi\\) such that \\[ \\psi\\in\\operatorname{Sub}(\\varphi) \\quad\\text{and}\\quad \\psi\\neq\\varphi. \\]",
+      "title": ""
+    },
+    {
+      "id": "def:propositional-language",
+      "section": "syntax",
+      "summary": "A propositional language consists of: \\begin{enumerate} \\item a set \\(\\Prop\\) of propositional variables; \\item logical connectives; \\item punctuation symbols such as parentheses; \\item recursive formation rules specifying the well-formed formulas. \\end{enumerate}",
+      "title": ""
+    },
+    {
+      "id": "def:propositional-variable",
+      "section": "syntax",
+      "summary": "A propositional variable is an atomic symbol intended to stand for a proposition. A standard supply of variables is \\[ \\Prop=\\{P_1,P_2,P_3,\\ldots\\}. \\] Informally, variables are often written \\(P,Q,R,S,\\ldots\\).",
+      "title": ""
+    },
+    {
+      "id": "def:subformula-propositional-logic",
+      "section": "syntax",
+      "summary": "The set \\(\\operatorname{Sub}(\\varphi)\\) of subformulas of a formula \\(\\varphi\\) is defined recursively: \\begin{enumerate} \\item if \\(\\varphi\\) is atomic, then \\(\\operatorname{Sub}(\\varphi)=\\{\\varphi\\}\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\[ \\operatorname{Sub}(\\varphi)=\\{\\varphi\\}\\cup\\operatorname{Sub}(\\psi); \\] \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{Sub}(\\varphi)=\\{\\varphi\\}\\cup\\operatorname{Sub}(\\psi)\\cup\\operatorname{Sub}(\\chi). \\] \\end{enumerate}",
+      "title": ""
+    },
+    {
+      "id": "def:truth-value-propositional-logic",
+      "section": "syntax",
+      "summary": "The set of truth values is \\[ \\mathbb{B} := \\{\\mathrm{False},\\mathrm{True}\\}. \\] Some sources identify this set with \\(\\{0,1\\}\\), with \\(0\\) read as false and \\(1\\) read as true.",
+      "title": ""
+    },
+    {
+      "id": "def:well-formed-formula",
+      "section": "syntax",
+      "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+      "title": ""
+    }
+  ],
+  "toc_layer": "formula-shape-and-normalization",
+  "virtual_structures": [
+    {
+      "components": [
+        "def:propositional-language",
+        "def:truth-value-propositional-logic",
+        "def:propositional-variable",
+        "def:logical-connective",
+        "def:atomic-formula-propositional-logic",
+        "def:well-formed-formula",
+        "def:truth-assignment-propositional-logic",
+        "def:extended-truth-assignment-propositional-logic",
+        "def:satisfaction-propositional-formula"
+      ],
+      "dependency_policy": [
+        "This virtual structure is context for semantic decomposition, not a real graph node.",
+        "Do not emit floor:propositional-l-structure as a dependency.",
+        "Emit concrete component concepts only when they are needed to state the reviewed node and are not inherited through a nearer accepted dependency.",
+        "Use satisfaction/truth-assignment concepts for semantic nodes rather than repeatedly emitting every syntax ingredient."
+      ],
+      "description": "A propositional analogue of an L-structure: a classical interpretation for a propositional language, assigning truth values to atoms and extending recursively over formulas according to the connectives.",
+      "id": "floor:propositional-l-structure",
+      "status": "virtual",
+      "title": "Classical propositional L-structure"
+    }
+  ]
+}

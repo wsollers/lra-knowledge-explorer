@@ -1,0 +1,31 @@
+{
+  "node": "thm:absorption-laws-propositional-logic",
+  "proof_dependencies": [],
+  "rejected_candidates": [],
+  "schema_version": "direct-label-selection-1",
+  "statement_dependency_adds": [
+    {
+      "confidence": "high",
+      "reason": "The theorem quantifies over formulas phi and psi in WFF.",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "confidence": "high",
+      "reason": "The displayed identities use conjunction and disjunction connectives.",
+      "target": "def:logical-connective"
+    },
+    {
+      "confidence": "high",
+      "reason": "The theorem asserts equivalences using the logical equivalence relation.",
+      "target": "def:logical-equivalence-propositional-logic"
+    }
+  ],
+  "statement_dependency_removes": [],
+  "unchanged_existing_dependencies": [],
+  "uncertain": [
+    {
+      "concept_or_target": "truth-table proof",
+      "reason": "These laws are plausibly proved semantically, but the packet does not name a proof method or fact."
+    }
+  ]
+}

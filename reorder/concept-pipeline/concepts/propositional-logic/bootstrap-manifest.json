@@ -1,0 +1,542 @@
+{
+  "schema_version": "concept-bootstrap-manifest-1",
+  "scope": "propositional-logic",
+  "skipped_existing": [
+    {
+      "node": "def:atomic-formula-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0109.def-atomic-formula-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:connective-count-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0110.def-connective-count-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:formula-depth-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0111.def-formula-depth-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:formula-variable-set-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0112.def-formula-variable-set-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:logical-connective",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0113.def-logical-connective.concepts.json"
+    }
+  ],
+  "skipped_existing_count": 5,
+  "written": [
+    {
+      "node": "def:formula-context-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0001.def-formula-context-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:propositional-equivalence-law",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0002.def-propositional-equivalence-law.concepts.json"
+    },
+    {
+      "node": "thm:absorption-laws-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0003.thm-absorption-laws-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:basic-boolean-equivalence-laws-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0004.thm-basic-boolean-equivalence-laws-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:biconditional-equivalence-laws-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0005.thm-biconditional-equivalence-laws-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:conditional-equivalence-laws-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0006.thm-conditional-equivalence-laws-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:de-morgan-laws-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0007.thm-de-morgan-laws-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:distributive-laws-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0008.thm-distributive-laws-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:identity-domination-laws-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0009.thm-identity-domination-laws-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:logical-equivalence-equivalence-relation",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0010.thm-logical-equivalence-equivalence-relation.concepts.json"
+    },
+    {
+      "node": "thm:replacement-of-logical-equivalents-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0011.thm-replacement-of-logical-equivalents-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:argument-form-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0012.def-argument-form-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:counterexample-assignment-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0013.def-counterexample-assignment-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:informal-proof-pattern-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0014.def-informal-proof-pattern-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:rule-of-replacement-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0015.def-rule-of-replacement-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:valid-argument-form-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0016.def-valid-argument-form-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:addition-validity-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0017.thm-addition-validity-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:affirming-consequent-invalid-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0018.thm-affirming-consequent-invalid-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:conjunction-introduction-validity-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0019.thm-conjunction-introduction-validity-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:constructive-dilemma-validity-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0020.thm-constructive-dilemma-validity-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:denying-antecedent-invalid-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0021.thm-denying-antecedent-invalid-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:destructive-dilemma-validity-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0022.thm-destructive-dilemma-validity-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:disjunctive-syllogism-validity-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0023.thm-disjunctive-syllogism-validity-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:hypothetical-syllogism-validity-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0024.thm-hypothetical-syllogism-validity-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:modus-ponens-validity-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0025.thm-modus-ponens-validity-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:modus-tollens-validity-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0026.thm-modus-tollens-validity-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:replacement-rules-preserve-logical-equivalence-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0027.thm-replacement-rules-preserve-logical-equivalence-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:simplification-validity-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0028.thm-simplification-validity-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:tautological-implication-valid-argument-form-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0029.thm-tautological-implication-valid-argument-form-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:truth-table-validity-test-argument-forms-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0030.thm-truth-table-validity-test-argument-forms-propositional-logic.concepts.json"
+    },
+    {
+      "node": "ax:propositional-classical-contraposition",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0031.ax-propositional-classical-contraposition.concepts.json"
+    },
+    {
+      "node": "ax:propositional-implication-distribution",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0032.ax-propositional-implication-distribution.concepts.json"
+    },
+    {
+      "node": "ax:propositional-weakening",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0033.ax-propositional-weakening.concepts.json"
+    },
+    {
+      "node": "cor:finite-unsatisfiability-witness-contrapositive-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0034.cor-finite-unsatisfiability-witness-contrapositive-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:finite-subset-of-set-of-propositional-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0035.def-finite-subset-of-set-of-propositional-formulas.concepts.json"
+    },
+    {
+      "node": "def:finite-unsatisfiability-witness-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0036.def-finite-unsatisfiability-witness-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:finitely-satisfiable-set-of-propositional-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0037.def-finitely-satisfiable-set-of-propositional-formulas.concepts.json"
+    },
+    {
+      "node": "def:satisfiable-set-of-propositional-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0038.def-satisfiable-set-of-propositional-formulas.concepts.json"
+    },
+    {
+      "node": "def:unsatisfiability-witness-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0039.def-unsatisfiability-witness-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:unsatisfiable-set-of-propositional-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0040.def-unsatisfiable-set-of-propositional-formulas.concepts.json"
+    },
+    {
+      "node": "thm:finite-unsatisfiability-witness-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0041.thm-finite-unsatisfiability-witness-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:propositional-compactness",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0042.thm-propositional-compactness.concepts.json"
+    },
+    {
+      "node": "def:boolean-function-representation-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0043.def-boolean-function-representation-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:connective-basis-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0044.def-connective-basis-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:connective-reduction-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0045.def-connective-reduction-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:definable-connective-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0046.def-definable-connective-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:expressively-equivalent-connective-sets-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0047.def-expressively-equivalent-connective-sets-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:functionally-complete-connective-set-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0048.def-functionally-complete-connective-set-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:incomplete-connective-set-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0049.def-incomplete-connective-set-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:minimal-complete-basis-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0050.def-minimal-complete-basis-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:monotone-boolean-function-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0051.def-monotone-boolean-function-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:nand-connective-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0052.def-nand-connective-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:nand-only-formula-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0053.def-nand-only-formula-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:nor-connective-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0054.def-nor-connective-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:nor-only-formula-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0055.def-nor-only-formula-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:conjunction-disjunction-not-functionally-complete-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0056.thm-conjunction-disjunction-not-functionally-complete-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:dnf-representation-of-boolean-functions-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0057.thm-dnf-representation-of-boolean-functions-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:nand-functionally-complete-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0058.thm-nand-functionally-complete-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:nand-nor-minimal-complete-bases-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0059.thm-nand-nor-minimal-complete-bases-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:negation-conjunction-functionally-complete-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0060.thm-negation-conjunction-functionally-complete-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:negation-disjunction-functionally-complete-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0061.thm-negation-disjunction-functionally-complete-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:nor-functionally-complete-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0062.thm-nor-functionally-complete-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:standard-connectives-functionally-complete-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0063.thm-standard-connectives-functionally-complete-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:canonical-conjunctive-normal-form-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0064.def-canonical-conjunctive-normal-form-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:canonical-disjunctive-normal-form-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0065.def-canonical-disjunctive-normal-form-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:clause-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0066.def-clause-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:complementary-literals-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0067.def-complementary-literals-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:conjunctive-normal-form-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0068.def-conjunctive-normal-form-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:disjunctive-normal-form-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0069.def-disjunctive-normal-form-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:elementary-conjunction-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0070.def-elementary-conjunction-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:elementary-disjunction-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0071.def-elementary-disjunction-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:empty-clause-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0072.def-empty-clause-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:empty-conjunction-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0073.def-empty-conjunction-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:literal-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0074.def-literal-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:maxterm-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0075.def-maxterm-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:minterm-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0076.def-minterm-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:negation-normal-form-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0077.def-negation-normal-form-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:negative-literal-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0078.def-negative-literal-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:nnf-conversion-procedure-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0079.def-nnf-conversion-procedure-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:positive-literal-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0080.def-positive-literal-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:term-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0081.def-term-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:truth-table-row-clause-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0082.def-truth-table-row-clause-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:truth-table-row-conjunction-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0083.def-truth-table-row-conjunction-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:canonical-conjunctive-normal-form-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0084.thm-canonical-conjunctive-normal-form-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:canonical-disjunctive-normal-form-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0085.thm-canonical-disjunctive-normal-form-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:dnf-satisfiability-criterion-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0086.thm-dnf-satisfiability-criterion-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:existence-conjunctive-normal-form-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0087.thm-existence-conjunctive-normal-form-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:existence-disjunctive-normal-form-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0088.thm-existence-disjunctive-normal-form-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:existence-negation-normal-form-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0089.thm-existence-negation-normal-form-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:normal-form-semantic-classification-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0090.thm-normal-form-semantic-classification-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:boolean-function-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0091.def-boolean-function-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:contingency-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0092.def-contingency-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:contradiction-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0093.def-contradiction-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:extended-truth-assignment-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0094.def-extended-truth-assignment-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:logical-consequence-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0095.def-logical-consequence-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:logical-equivalence-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0096.def-logical-equivalence-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:satisfaction-propositional-formula",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0097.def-satisfaction-propositional-formula.concepts.json"
+    },
+    {
+      "node": "def:satisfaction-set-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0098.def-satisfaction-set-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:satisfiable-formula-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0099.def-satisfiable-formula-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:tautology-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0100.def-tautology-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:truth-assignment-domain-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0101.def-truth-assignment-domain-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:truth-assignment-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0102.def-truth-assignment-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:truth-function-induced-by-formula",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0103.def-truth-function-induced-by-formula.concepts.json"
+    },
+    {
+      "node": "def:truth-table-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0104.def-truth-table-propositional-logic.concepts.json"
+    },
+    {
+      "node": "lem:coincidence-lemma-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0105.lem-coincidence-lemma-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:counting-boolean-functions",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0106.thm-counting-boolean-functions.concepts.json"
+    },
+    {
+      "node": "thm:finite-truth-table-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0107.thm-finite-truth-table-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:unique-extension-truth-assignment-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0108.thm-unique-extension-truth-assignment-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:main-connective-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0114.def-main-connective-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:molecular-formula-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0115.def-molecular-formula-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:parse-tree-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0116.def-parse-tree-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:proper-subformula",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0117.def-proper-subformula.concepts.json"
+    },
+    {
+      "node": "def:propositional-language",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0118.def-propositional-language.concepts.json"
+    },
+    {
+      "node": "def:propositional-variable",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0119.def-propositional-variable.concepts.json"
+    },
+    {
+      "node": "def:subformula-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0120.def-subformula-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:truth-value-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0121.def-truth-value-propositional-logic.concepts.json"
+    },
+    {
+      "node": "def:well-formed-formula",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0122.def-well-formed-formula.concepts.json"
+    },
+    {
+      "node": "lem:closure-under-formation-propositional-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0123.lem-closure-under-formation-propositional-formulas.concepts.json"
+    },
+    {
+      "node": "lem:constructor-disjointness-propositional-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0124.lem-constructor-disjointness-propositional-formulas.concepts.json"
+    },
+    {
+      "node": "lem:constructor-injectivity-propositional-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0125.lem-constructor-injectivity-propositional-formulas.concepts.json"
+    },
+    {
+      "node": "lem:finiteness-of-subformulas-propositional-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0126.lem-finiteness-of-subformulas-propositional-formulas.concepts.json"
+    },
+    {
+      "node": "lem:finiteness-of-variables-propositional-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0127.lem-finiteness-of-variables-propositional-formulas.concepts.json"
+    },
+    {
+      "node": "lem:proper-subformula-depth-propositional-logic",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0128.lem-proper-subformula-depth-propositional-logic.concepts.json"
+    },
+    {
+      "node": "thm:minimality-of-well-formed-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0129.thm-minimality-of-well-formed-formulas.concepts.json"
+    },
+    {
+      "node": "thm:structural-induction-propositional-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0130.thm-structural-induction-propositional-formulas.concepts.json"
+    },
+    {
+      "node": "thm:structural-recursion-propositional-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0131.thm-structural-recursion-propositional-formulas.concepts.json"
+    },
+    {
+      "node": "thm:unique-decomposition-propositional-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0132.thm-unique-decomposition-propositional-formulas.concepts.json"
+    },
+    {
+      "node": "thm:unique-syntax-tree-propositional-formulas",
+      "path": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0133.thm-unique-syntax-tree-propositional-formulas.concepts.json"
+    }
+  ],
+  "written_count": 128
+}

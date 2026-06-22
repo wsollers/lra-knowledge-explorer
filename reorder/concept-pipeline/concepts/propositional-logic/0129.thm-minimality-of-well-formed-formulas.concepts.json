@@ -1,0 +1,63 @@
+{
+  "ambient_environment": [
+    "propositional logic syntax",
+    "propositional language"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "propositional language",
+      "emit_dependency": false,
+      "reason": "Propositional language is an accepted definitional root and ambient context.",
+      "source": "definitional_root"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "propositional variable",
+    "logical connective"
+  ],
+  "node": "thm:minimality-of-well-formed-formulas",
+  "not_dependencies": [
+    {
+      "concept": "truth assignment",
+      "reason": "This syntax-section node can usually be stated without semantic valuation."
+    },
+    {
+      "concept": "satisfaction",
+      "reason": "This syntax-section node can usually be stated without the satisfaction relation."
+    }
+  ],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Let \\(S\\) be a set of strings over the propositional alphabet. Suppose:\n\\begin{enumerate}\n  \\item \\(\\Prop\\subseteq S\\);\n  \\item if \\(\\varphi\\in S\\), then \\(\\neg\\varphi\\in S\\);\n  \\item if \\(\\varphi,\\psi\\in S\\) and\n        \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then\n        \\((\\varphi\\circ\\psi)\\in S\\).\n\\end{enumerate}\nThen\n\\[\n\\WFF\\subseteq S.\n\\]"
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "propositional variable",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional variables.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    }
+  ]
+}

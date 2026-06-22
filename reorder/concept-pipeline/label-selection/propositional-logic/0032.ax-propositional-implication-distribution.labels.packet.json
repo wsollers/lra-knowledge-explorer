@@ -1,0 +1,3591 @@
+{
+  "current_direct_dependencies": [],
+  "definitional_roots": [
+    "def:signature",
+    "def:truth-value-propositional-logic",
+    "def:propositional-language"
+  ],
+  "label_universe": [
+    {
+      "chapter": "axiom-systems",
+      "id": "def:assumption",
+      "kind": "Definition",
+      "section": "axioms",
+      "summary": "An \\emph{assumption} is a statement temporarily accepted for purposes of reasoning.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom",
+      "kind": "Definition",
+      "section": "axioms",
+      "summary": "Let $\\mathcal{L}$ be a first-order language, and let $\\operatorname{Sent}(\\mathcal{L})$ denote the set of sentences of $\\mathcal{L}$. If $T\\subseteq \\operatorname{Sent}(\\mathcal{L})$ is a theory, then an \\emph{axiom of $T$} is an element $\\alpha\\in T$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-system",
+      "kind": "Definition",
+      "section": "axioms",
+      "summary": "An \\emph{axiom system} is a collection of axioms expressed in a common language.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-systems-consistent-axiom-system",
+      "kind": "Definition",
+      "section": "consistency",
+      "summary": "A \\emph{consistent axiom system} is an axiom system that does not lead to contradiction.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-systems-contradiction",
+      "kind": "Definition",
+      "section": "consistency",
+      "summary": "A \\emph{contradiction} is a statement that cannot be true under a given interpretation.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-systems-inconsistent-axiom-system",
+      "kind": "Definition",
+      "section": "consistency",
+      "summary": "An \\emph{inconsistent axiom system} is an axiom system containing or producing contradictory assertions.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-systems-model-existence-criterion",
+      "kind": "Definition",
+      "section": "consistency",
+      "summary": "Informally, if an axiom system has a model, then the axioms are mutually compatible.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-systems-relative-consistency",
+      "kind": "Definition",
+      "section": "consistency",
+      "summary": "Let $T_0$ and $T_1$ be theories. The theory $T_1$ is \\emph{consistent relative to $T_0$} if \\[ \\operatorname{Con}(T_0)\\implies \\operatorname{Con}(T_1). \\] Equivalently, every contradiction in $T_1$ would imply a contradiction in $T_0$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-systems-countermodel",
+      "kind": "Definition",
+      "section": "models",
+      "summary": "Let $\\Gamma\\subseteq\\operatorname{Sent}(\\mathcal{L})$ be a set of premises, let $\\varphi\\in\\operatorname{Sent}(\\mathcal{L})$, and let $\\mathfrak{M}$ be an $\\mathcal{L}$-structure. A \\emph{countermodel to the entailment $\\Gamma\\vDash\\varphi$} is a structure $\\mathfrak{M}$ that satisfies every sentence in $\\Gamma$ but does not satisfy $\\varphi$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-systems-interpretation",
+      "kind": "Definition",
+      "section": "models",
+      "summary": "Let $\\Sigma=(\\mathcal{C},\\mathcal{F},\\mathcal{R},\\operatorname{ar})$ be a first-order signature, and let $M$ be a nonempty set. An \\emph{interpretation of $\\Sigma$ on $M$} is an assignment $\\mathcal{I}$ that maps each symbol of $\\Sigma$ to concrete data over $M$: constants are assigned elements of $M$, function symbols are assigned operations on $M$, and ...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-systems-model",
+      "kind": "Definition",
+      "section": "models",
+      "summary": "Let $\\mathcal{L}$ be a first-order signature, let $T$ be a theory over $\\mathcal{L}$, and let $\\mathfrak{M}=(M,\\mathcal{I})$ be an $\\mathcal{L}$-structure. The structure $\\mathfrak{M}$ is a \\emph{model of $T$}, written $\\mathfrak{M}\\vDash T$, if every sentence in $T$ is true in $\\mathfrak{M}$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-systems-satisfaction",
+      "kind": "Definition",
+      "section": "models",
+      "summary": "Let $\\mathfrak{M}=(M,\\mathcal{I})$ be an $\\mathcal{L}$-structure. A \\emph{variable assignment} is a function $s:\\operatorname{Var}\\to M$. The assignment extends recursively to a term-evaluation map $\\bar{s}$ by \\[ \\bar{s}(x)=s(x),\\qquad \\bar{s}(c)=\\mathcal{I}(c), \\] and \\[ \\bar{s}\\bigl(f(t_1,\\ldots,t_n)\\bigr) = \\mathcal{I}(f)\\bigl(\\bar{s}(t_1),\\ldots,\\bar...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-systems-structure",
+      "kind": "Definition",
+      "section": "models",
+      "summary": "Let $\\mathcal{L}$ be a first-order signature. An \\emph{$\\mathcal{L}$-structure} is a pair \\[ \\mathfrak{M}=(M,\\mathcal{I}), \\] where $M$ is a nonempty domain and $\\mathcal{I}$ is an interpretation of the symbols of $\\mathcal{L}$ on $M$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:arity",
+      "kind": "Definition",
+      "section": "signatures",
+      "summary": "Let $\\Sigma=(\\mathcal{C},\\mathcal{F},\\mathcal{R},\\operatorname{ar})$ be a first-order signature. The \\emph{arity function} is the map \\[ \\operatorname{ar}:\\mathcal{F}\\cup\\mathcal{R}\\to\\mathbb{Z}_{>0} \\] that assigns to each function or relation symbol the number of arguments it requires. When constants are treated as $0$-ary function symbols, the codomain...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:language",
+      "kind": "Definition",
+      "section": "signatures",
+      "summary": "A \\emph{first-order language} has two standard readings. As vocabulary, it is the same data as a signature, \\[ \\mathcal{L}=(\\mathcal{C},\\mathcal{F},\\mathcal{R},\\operatorname{ar}). \\] As a formal language generated by a signature $\\Sigma$, it is the set of well-formed strings built from the alphabet \\[ A=\\Sigma\\cup V\\cup\\Lambda, \\] where $V$ is a countable...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:relation-symbol",
+      "kind": "Definition",
+      "section": "signatures",
+      "summary": "A \\emph{relation symbol}, or predicate symbol, is a non-logical symbol $R\\in\\mathcal{R}$ whose assigned arity determines how many terms it must take as inputs. If $\\operatorname{ar}(R)=n$, then $R$ is an $n$-ary formula constructor: it takes exactly $n$ terms and produces an atomic formula, hence something with a truth value rather than an object.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:signature",
+      "kind": "Definition",
+      "section": "signatures",
+      "summary": "A \\emph{first-order signature} is a tuple \\[ \\Sigma=(\\mathcal{C},\\mathcal{F},\\mathcal{R},\\operatorname{ar}), \\] where $\\mathcal{C}$ is a set of constant symbols, $\\mathcal{F}$ is a set of function symbols, $\\mathcal{R}$ is a set of relation symbols, and \\[ \\operatorname{ar}:\\mathcal{F}\\cup\\mathcal{R}\\to \\mathbb{Z}_{>0} \\] assigns to each function or relat...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:signature-constant-symbol",
+      "kind": "Definition",
+      "section": "signatures",
+      "summary": "A \\emph{constant symbol} is a non-logical symbol that behaves syntactically as a $0$-ary function symbol. In the streamlined convention where constants are included among function symbols, this is the condition \\[ \\operatorname{Constant}(c) \\iff c\\in\\mathcal{F}\\text{ and }\\operatorname{ar}(c)=0. \\] Because its arity is $0$, the symbol $c$ is already a wel...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:signature-function-symbol",
+      "kind": "Definition",
+      "section": "signatures",
+      "summary": "A \\emph{function symbol} is a non-logical symbol $f\\in\\mathcal{F}$ whose assigned arity determines how many terms it must take as inputs. If $\\operatorname{ar}(f)=n$, then $f$ is an $n$-ary term constructor: it takes exactly $n$ terms and produces a new term, not a truth value.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-systems-consequence",
+      "kind": "Definition",
+      "section": "theories",
+      "summary": "A sentence $\\varphi$ is a \\emph{semantic consequence} of a set of premises $\\Gamma$, written $\\Gamma\\vDash\\varphi$, if every model of $\\Gamma$ is also a model of $\\varphi$. Equivalently, there is no structure in which all sentences of $\\Gamma$ are true while $\\varphi$ is false.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-systems-theorem",
+      "kind": "Definition",
+      "section": "theories",
+      "summary": "A \\emph{theorem} of a theory $T$ is a sentence $\\varphi$ for which there is a finite formal derivation from $T$, written \\[ T\\vdash\\varphi. \\] Equivalently, in proof-theoretic terms, $\\varphi$ is a theorem of $T$ exactly when some derivation has leaves drawn from logical axioms or sentences of $T$, uses valid inference rules, and has $\\varphi$ as its root.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:axiom-systems-theory",
+      "kind": "Definition",
+      "section": "theories",
+      "summary": "A \\emph{theory} over a first-order language $\\mathcal{L}$ is a collection of closed sentences in that language: \\[ T\\subseteq\\operatorname{Sentences}(\\mathcal{L}). \\] If $\\Gamma$ is a chosen set of axioms, the theory generated by $\\Gamma$ is the deductive closure \\[ T=\\{\\varphi\\in\\operatorname{Sentences}(\\mathcal{L})\\mid \\Gamma\\vdash\\varphi\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "axiom-systems",
+      "id": "def:deductive-closure",
+      "kind": "Definition",
+      "section": "theories",
+      "summary": "Let $\\Gamma\\subseteq\\operatorname{Sentences}(\\mathcal{L})$ be a set of premises. The \\emph{deductive closure} of $\\Gamma$, denoted $\\operatorname{Cn}(\\Gamma)$, is the set of all sentences derivable from $\\Gamma$: \\[ \\operatorname{Cn}(\\Gamma) = \\{\\varphi\\in\\operatorname{Sentences}(\\mathcal{L})\\mid \\Gamma\\vdash\\varphi\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "ax:predicate-logic-quantifier-distribution",
+      "kind": "Axiom",
+      "section": "axioms",
+      "summary": "For formulas $\\varphi$ and $\\psi(x)$, if $x$ is not free in $\\varphi$, then \\[ \\forall x\\,(\\varphi \\Longrightarrow \\psi(x)) \\Longrightarrow \\bigl(\\varphi \\Longrightarrow \\forall x\\,\\psi(x)\\bigr). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "ax:predicate-logic-universal-instantiation",
+      "kind": "Axiom",
+      "section": "axioms",
+      "summary": "For every formula $\\varphi(x)$ and every term $t$ that is free for $x$ in $\\varphi$, \\[ \\forall x\\,\\varphi(x) \\Longrightarrow \\varphi(t). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:eg",
+      "kind": "Definition",
+      "section": "proof-theory",
+      "summary": "From a formula containing a term, infer an existential statement: \\[ \\varphi[t/x] \\;\\Rightarrow\\; \\exists x\\,\\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:ei",
+      "kind": "Definition",
+      "section": "proof-theory",
+      "summary": "From an existentially quantified statement, infer an instance with a fresh constant (witness): \\[ \\exists x\\,\\varphi \\;\\Rightarrow\\; \\varphi[c/x]. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:eq-elim",
+      "kind": "Definition",
+      "section": "proof-theory",
+      "summary": "From $t_1 = t_2$ and $\\varphi[t_1/x]$, one may infer $\\varphi[t_2/x]$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:eq-refl",
+      "kind": "Definition",
+      "section": "proof-theory",
+      "summary": "For any term $t$, one may infer $t = t$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:fol-completeness",
+      "kind": "Definition",
+      "section": "proof-theory",
+      "summary": "A proof system is \\emph{complete} if every valid formula is provable: \\[ \\Gamma \\models \\varphi \\implies \\Gamma \\vdash \\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:fol-soundness",
+      "kind": "Definition",
+      "section": "proof-theory",
+      "summary": "A proof system is \\emph{sound} if every provable formula is valid: \\[ \\Gamma \\vdash \\varphi \\implies \\Gamma \\models \\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:ug",
+      "kind": "Definition",
+      "section": "proof-theory",
+      "summary": "From a formula, infer a universally quantified statement: \\[ \\varphi \\;\\Rightarrow\\; \\forall x\\,\\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:ui",
+      "kind": "Definition",
+      "section": "proof-theory",
+      "summary": "From a universally quantified statement, infer any instance obtained by substituting a term for the bound variable: \\[ \\forall x\\,\\varphi \\;\\Rightarrow\\; \\varphi[t/x]. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:eq-pred",
+      "kind": "Theorem",
+      "section": "proof-theory",
+      "summary": "If $t_1 = t_2$ and $P$ is an $n$-ary predicate symbol, then $P(\\dots,t_1,\\dots) \\;\\Leftrightarrow\\; P(\\dots,t_2,\\dots)$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:eq-sym",
+      "kind": "Theorem",
+      "section": "proof-theory",
+      "summary": "From $t_1 = t_2$, one may infer $t_2 = t_1$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:eq-term",
+      "kind": "Theorem",
+      "section": "proof-theory",
+      "summary": "If $t_1 = t_2$, then for any function symbol $f$, $f(\\dots,t_1,\\dots) = f(\\dots,t_2,\\dots)$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:eq-trans",
+      "kind": "Theorem",
+      "section": "proof-theory",
+      "summary": "From $t_1 = t_2$ and $t_2 = t_3$, one may infer $t_1 = t_3$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:fol-sound",
+      "kind": "Theorem",
+      "section": "proof-theory",
+      "summary": "The standard inference rules for first-order logic (UI, UG, EI, EG, and the propositional rules) are sound: they preserve truth in all structures. If $\\Gamma \\vdash \\varphi$, then $\\Gamma \\models \\varphi$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:bounded-q",
+      "kind": "Definition",
+      "section": "quantifiers",
+      "summary": "A \\emph{bounded quantifier} is an abbreviation that restricts a quantifier to a specified set or predicate: \\[ \\forall x\\in A\\,\\varphi \\quad\\coloneqq\\quad \\forall x\\,(x\\in A\\to\\varphi), \\] \\[ \\exists x\\in A\\,\\varphi \\quad\\coloneqq\\quad \\exists x\\,(x\\in A\\land\\varphi). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:existential-q",
+      "kind": "Definition",
+      "section": "quantifiers",
+      "summary": "An \\emph{existential formula} is a well-formed formula of the form \\[ \\exists x\\,\\varphi, \\] where \\(x\\) is a variable and \\(\\varphi\\) is a well-formed formula.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:matrix-prenex",
+      "kind": "Definition",
+      "section": "quantifiers",
+      "summary": "In a formula \\(Q_1x_1\\cdots Q_nx_n\\,\\psi\\), the \\emph{matrix} is the trailing formula \\(\\psi\\). For prenex normal form, the matrix is required to be quantifier-free.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:open-formula-quantifiers",
+      "kind": "Definition",
+      "section": "quantifiers",
+      "summary": "An \\emph{open formula} is a well-formed formula with at least one free variable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:pnf",
+      "kind": "Definition",
+      "section": "quantifiers",
+      "summary": "A formula \\(\\psi\\) is a \\emph{prenex normal form} of a formula \\(\\varphi\\) exactly when \\(\\psi\\) is prenex and \\(\\varphi\\equiv\\psi\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:prenex-formula",
+      "kind": "Definition",
+      "section": "quantifiers",
+      "summary": "A \\emph{prenex formula} is a formula of the form \\[ Q_1x_1\\,Q_2x_2\\cdots Q_nx_n\\,\\psi, \\] where \\(Q_1x_1\\cdots Q_nx_n\\) is a quantifier prefix and \\(\\psi\\) is quantifier-free.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:q-alt",
+      "kind": "Definition",
+      "section": "quantifiers",
+      "summary": "The \\emph{quantifier order} of a prenex formula is the ordered list of quantifiers in its prefix. A change of order is significant when it changes which witnesses may depend on earlier variables.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:quantifier-prefix",
+      "kind": "Definition",
+      "section": "quantifiers",
+      "summary": "A \\emph{quantifier prefix} is a finite string \\[ Q_1x_1\\,Q_2x_2\\cdots Q_nx_n, \\] where each \\(Q_i\\in\\{\\forall,\\exists\\}\\) and each \\(x_i\\) is a variable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:quantifier-scope",
+      "kind": "Definition",
+      "section": "quantifiers",
+      "summary": "In a formula \\(Qx\\,\\varphi\\), where \\(Q\\in\\{\\forall,\\exists\\}\\), the \\emph{scope} of the quantifier \\(Qx\\) is the formula \\(\\varphi\\). Occurrences of \\(x\\) inside that scope are bound by the quantifier unless an inner quantifier for \\(x\\) intervenes.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:sentence-predicate-logic",
+      "kind": "Definition",
+      "section": "quantifiers",
+      "summary": "A \\emph{sentence} is a well-formed formula with no free variables.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:strength",
+      "kind": "Definition",
+      "section": "quantifiers",
+      "summary": "A sentence \\(A\\) is \\emph{stronger than} a sentence \\(B\\) exactly when \\[ A\\models B \\quad\\text{and}\\quad B\\not\\models A. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:universal-q",
+      "kind": "Definition",
+      "section": "quantifiers",
+      "summary": "A \\emph{universal formula} is a well-formed formula of the form \\[ \\forall x\\,\\varphi, \\] where \\(x\\) is a variable and \\(\\varphi\\) is a well-formed formula.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:weaker-formula",
+      "kind": "Definition",
+      "section": "quantifiers",
+      "summary": "A sentence \\(B\\) is \\emph{weaker than} a sentence \\(A\\) exactly when \\(A\\) is stronger than \\(B\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:dependent-witness-not-uniform",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "In general, \\[ \\forall x\\,\\exists y\\,\\varphi(x,y) \\not\\models \\exists y\\,\\forall x\\,\\varphi(x,y). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:existential-not-universal",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "In general, \\[ \\exists x\\,\\varphi(x)\\not\\models \\forall x\\,\\varphi(x). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:invalid-quantifier-distribution",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "In general, \\[ \\forall x\\,(\\varphi\\lor\\psi) \\not\\equiv (\\forall x\\,\\varphi)\\lor(\\forall x\\,\\psi), \\] \\[ \\exists x\\,(\\varphi\\land\\psi) \\not\\equiv (\\exists x\\,\\varphi)\\land(\\exists x\\,\\psi). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:mixed-quantifiers-do-not-commute",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "In general, \\[ \\forall x\\,\\exists y\\,\\varphi \\not\\equiv \\exists y\\,\\forall x\\,\\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:neg-bounded",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "Let \\(A\\) be a set and let \\(\\varphi\\) be a formula. Then \\[ \\neg(\\forall x\\in A\\,\\varphi)\\equiv \\exists x\\in A\\,\\neg\\varphi, \\qquad \\neg(\\exists x\\in A\\,\\varphi)\\equiv \\forall x\\in A\\,\\neg\\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:pnf",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "Every first-order formula is logically equivalent to some formula in prenex normal form.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:qcomm",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "Quantifiers of the same type commute: \\[ \\forall x\\,\\forall y\\,\\varphi \\equiv \\forall y\\,\\forall x\\,\\varphi, \\qquad \\exists x\\,\\exists y\\,\\varphi \\equiv \\exists y\\,\\exists x\\,\\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:qdist",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "For all formulas \\(\\varphi,\\psi\\), \\[ \\forall x\\,(\\varphi\\land\\psi) \\equiv (\\forall x\\,\\varphi)\\land(\\forall x\\,\\psi), \\] \\[ \\exists x\\,(\\varphi\\lor\\psi) \\equiv (\\exists x\\,\\varphi)\\lor(\\exists x\\,\\psi). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:qneg",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "For every formula \\(\\varphi\\), \\[ \\neg\\forall x\\,\\varphi \\equiv \\exists x\\,\\neg\\varphi, \\qquad \\neg\\exists x\\,\\varphi \\equiv \\forall x\\,\\neg\\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:quantifier-double-negation",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "For every formula \\(\\varphi\\), \\[ \\neg\\neg\\forall x\\,\\varphi \\equiv \\forall x\\,\\varphi, \\qquad \\neg\\neg\\exists x\\,\\varphi \\equiv \\exists x\\,\\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:rename",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "If \\(y\\) is free for \\(x\\) in \\(\\varphi\\) and no capture is introduced, then \\[ \\forall x\\,\\varphi\\equiv\\forall y\\,\\varphi[y/x], \\qquad \\exists x\\,\\varphi\\equiv\\exists y\\,\\varphi[y/x]. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:uniform-witness-implies-dependent-witness",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "For every formula \\(\\varphi(x,y)\\), \\[ \\exists y\\,\\forall x\\,\\varphi(x,y) \\models \\forall x\\,\\exists y\\,\\varphi(x,y). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:universal-implies-existential",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "Over nonempty domains, \\[ \\forall x\\,\\varphi(x)\\models \\exists x\\,\\varphi(x). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "thm:vacuous",
+      "kind": "Theorem",
+      "section": "quantifiers",
+      "summary": "If \\(x\\) does not occur free in \\(\\varphi\\), then \\[ \\forall x\\,\\varphi\\equiv\\varphi, \\qquad \\exists x\\,\\varphi\\equiv\\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:definable-relation",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(\\mathcal M=\\langle D,I\\rangle\\) be a structure and let \\(\\varphi(x_1,\\ldots,x_n)\\) be an open formula. The \\emph{relation defined by} \\(\\varphi\\) in \\(\\mathcal M\\) is the set \\[ R_{\\varphi}^{\\mathcal M} = \\{(a_1,\\ldots,a_n)\\in D^n: \\mathcal M,s[x_1\\mapsto a_1,\\ldots,x_n\\mapsto a_n]\\models\\varphi\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:fo-language",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "A \\emph{first-order language} \\(\\mathcal L\\) consists of variables, logical symbols, and a signature of non-logical symbols: constant symbols, function symbols with assigned arities, and predicate symbols with assigned arities. Equality may be included as a distinguished logical predicate.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:fol-satisfaction",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(\\mathcal M=\\langle D,I\\rangle\\) be a structure, let \\(s\\) be a variable assignment, and let \\(\\varphi\\) be a well-formed formula. The relation \\(\\mathcal M,s\\models\\varphi\\) is defined recursively by the usual clauses: atomic formulas are evaluated by term values and interpreted predicate relations; equality compares term values; connectives follow ...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:fol-satisfiability",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "A formula \\(\\varphi\\) is \\emph{satisfiable} exactly when there are a structure \\(\\mathcal M\\) and a variable assignment \\(s\\) such that \\(\\mathcal M,s\\models\\varphi\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:log-consequence",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(T\\) be a set of sentences and let \\(\\varphi\\) be a sentence in the same language. The sentence \\(\\varphi\\) is a \\emph{logical consequence} of \\(T\\), written \\(T\\models\\varphi\\), exactly when every model of \\(T\\) is a model of \\(\\varphi\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:log-equiv",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Two sentences \\(\\varphi\\) and \\(\\psi\\) are \\emph{logically equivalent}, written \\(\\varphi\\equiv\\psi\\), exactly when each is a logical consequence of the other: \\[ \\varphi\\models\\psi \\quad\\text{and}\\quad \\psi\\models\\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:mod-assign",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(s:\\mathsf{Var}_{\\mathcal L}\\to D\\), let \\(x\\in\\mathsf{Var}_{\\mathcal L}\\), and let \\(d\\in D\\). The \\emph{modified assignment} \\(s[x\\mapsto d]\\) is the assignment defined by \\[ s[x\\mapsto d](y)= \\begin{cases} d, & y=x,\\\\ s(y), & y\\neq x. \\end{cases} \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:model",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(\\varphi\\) be a sentence and let \\(\\mathcal M\\) be a structure for the language of \\(\\varphi\\). The structure \\(\\mathcal M\\) is a \\emph{model of} \\(\\varphi\\) exactly when \\(\\mathcal M\\models\\varphi\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:model-theory-set",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(T\\) be a set of sentences and let \\(\\mathcal M\\) be a structure for their common language. The structure \\(\\mathcal M\\) is a \\emph{model of} \\(T\\), written \\(\\mathcal M\\models T\\), exactly when \\(\\mathcal M\\models\\theta\\) for every \\(\\theta\\in T\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:predicate",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "An \\emph{open formula} is a well-formed formula with at least one free variable. When the free variables are among \\(x_1,\\ldots,x_n\\), it may be displayed as \\(\\varphi(x_1,\\ldots,x_n)\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:structure",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(\\mathcal L\\) be a first-order language. A \\emph{structure} for \\(\\mathcal L\\) is a pair \\[ \\mathcal M=\\langle D,I\\rangle \\] where \\(D\\) is a nonempty set and \\(I\\) assigns each constant symbol an element of \\(D\\), each \\(n\\)-ary function symbol a function \\(D^n\\to D\\), and each \\(n\\)-ary predicate symbol a relation on \\(D^n\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:term-interp",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(\\mathcal M=\\langle D,I\\rangle\\) be a structure and \\(s\\) a variable assignment. The \\emph{value} of a term \\(t\\), denoted \\(\\llbracket t\\rrbracket_{\\mathcal M,s}\\), is defined recursively by \\[ \\llbracket x\\rrbracket_{\\mathcal M,s}=s(x),\\qquad \\llbracket c\\rrbracket_{\\mathcal M,s}=I(c), \\] and \\[ \\llbracket f(t_1,\\ldots,t_n)\\rrbracket_{\\mathcal M,s}...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:theory",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "In Volume I, a \\emph{theory} is a set of sentences in a fixed first-order language.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:truth-structure",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(\\varphi\\) be a sentence and let \\(\\mathcal M\\) be a structure. The sentence \\(\\varphi\\) is \\emph{true in} \\(\\mathcal M\\), written \\(\\mathcal M\\models\\varphi\\), exactly when \\(\\mathcal M,s\\models\\varphi\\) for every variable assignment \\(s\\) for \\(\\mathcal M\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:validity",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "A formula \\(\\varphi\\) is \\emph{valid}, or \\emph{logically true}, exactly when \\(\\mathcal M,s\\models\\varphi\\) for every structure \\(\\mathcal M\\) for the language of \\(\\varphi\\) and every variable assignment \\(s\\) for \\(\\mathcal M\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:var-assign",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(\\mathcal M=\\langle D,I\\rangle\\) be a structure for \\(\\mathcal L\\). A \\emph{variable assignment} for \\(\\mathcal M\\) is a function \\[ s:\\mathsf{Var}_{\\mathcal L}\\to D. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "lem:subst-formulas",
+      "kind": "Lemma",
+      "section": "semantics",
+      "summary": "Let \\(\\varphi\\) be a formula and let \\(u\\) be a term free for \\(x\\) in \\(\\varphi\\). For every structure \\(\\mathcal M\\) and assignment \\(s\\), \\[ \\mathcal M,s\\models\\varphi[u/x] \\Longleftrightarrow \\mathcal M,s[x\\mapsto\\llbracket u\\rrbracket_{\\mathcal M,s}]\\models\\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "lem:subst-terms",
+      "kind": "Lemma",
+      "section": "semantics",
+      "summary": "Let \\(\\mathcal M\\) be a structure, let \\(s\\) be a variable assignment, let \\(x\\) be a variable, and let \\(t\\) and \\(u\\) be terms. Then \\[ \\llbracket t[u/x]\\rrbracket_{\\mathcal M,s} = \\llbracket t\\rrbracket_{\\mathcal M,\\, s[x\\mapsto\\llbracket u\\rrbracket_{\\mathcal M,s}]}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:alpha-equiv",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "Formulas that differ only by the names of bound variables are logically equivalent. This is called \\emph{alpha-equivalence} (or \\emph{alphabetic variance}): \\[ \\forall x\\,\\varphi \\;\\equiv\\; \\forall y\\,\\varphi[y/x] \\quad\\text{(provided $y$ is not free in $\\varphi$).} \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:atomic-formula",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "An \\emph{atomic formula} of a first-order language \\(\\mathcal L\\) is a string of the form \\[ P(t_1,\\ldots,t_n), \\] where \\(P\\) is an \\(n\\)-ary predicate symbol and \\(t_1,\\ldots,t_n\\) are terms.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:bound-free",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "An occurrence of a variable $x$ in a formula $\\varphi$ is \\emph{bound} if it lies within the scope of a quantifier $\\forall x$ or $\\exists x$. An occurrence of $x$ is \\emph{free} if it is not bound by any quantifier in $\\varphi$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:constant-symbol",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "For a first-order language \\(\\mathcal L\\), a \\emph{constant symbol} is a non-logical symbol of arity \\(0\\). A constant symbol may occur as a term without taking input terms.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:formula",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "For a first-order language \\(\\mathcal L\\), a \\emph{formula} is an expression formed by the formula grammar of \\(\\mathcal L\\). The grammar starts from atomic formulas and closes under the logical connectives and quantifiers of the language.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:formula-depth",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "The \\emph{depth} (or \\emph{complexity}) of a formula $\\varphi$, denoted $\\mathrm{depth}(\\varphi)$, is a natural number defined recursively: \\begin{enumerate} \\item \\textbf{Atomic case.} If $\\varphi$ is atomic, then $\\mathrm{depth}(\\varphi) = 0$. \\item \\textbf{Negation.} If $\\varphi = \\neg \\psi$, then $\\mathrm{depth}(\\varphi) = \\mathrm{depth}(\\psi) + 1$. \\...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:free-for",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "A term $t$ is \\emph{free for} $x$ in $\\varphi$ if no free occurrence of $x$ in $\\varphi$ lies within the scope of a quantifier $\\forall y$ or $\\exists y$ where $y$ is a variable occurring in $t$. Equivalently, $t$ is free for $x$ in $\\varphi$ if the substitution $\\varphi[t/x]$ does not result in any variable in $t$ becoming bound.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:function-symbol",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "For a first-order language \\(\\mathcal L\\), an \\(n\\)-ary \\emph{function symbol} is a non-logical symbol of arity \\(n\\geq 1\\). If \\(f\\) has arity \\(n\\), then it forms terms by the pattern \\[ f(t_1,\\ldots,t_n). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:fv",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "The set $\\mathrm{FV}(\\varphi)$ of \\emph{free variables} of a formula $\\varphi$ is defined recursively: \\begin{enumerate} \\item If $\\varphi = P(t_1,\\dots,t_n)$ is atomic, then $\\mathrm{FV}(\\varphi) = \\bigcup_{i=1}^n \\mathrm{Var}(t_i)$, where $\\mathrm{Var}(t_i)$ is the set of variables in term $t_i$. \\item $\\mathrm{FV}(\\neg \\varphi) = \\mathrm{FV}(\\varphi)$....",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:molecular",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "A \\emph{molecular formula} is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula whose final formation step uses a logical connective or a quantifier.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:predicate-symbol",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "For a first-order language \\(\\mathcal L\\), an \\(n\\)-ary \\emph{predicate symbol} is a non-logical symbol of arity \\(n\\geq 1\\). If \\(P\\) has arity \\(n\\), then it forms atomic formulas by the pattern \\[ P(t_1,\\ldots,t_n). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:scope",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "Let $\\varphi$ be a formula of a first-order language. If $\\varphi$ is of the form $\\forall x\\,\\psi$ or $\\exists x\\,\\psi$, then the formula $\\psi$ is called the \\emph{scope} of the quantifier. The quantifier is said to \\emph{bind} all occurrences of the variable $x$ that appear within its scope.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:sentence",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "A \\emph{sentence} (or \\emph{closed formula}) is a formula with no free variables. Formally, $\\varphi$ is a sentence if and only if $\\mathrm{FV}(\\varphi) = \\varnothing$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:subst-notation",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "Let $\\varphi$ be a formula, $x$ a variable, and $t$ a term. The expression $\\varphi[t/x]$ denotes the formula obtained from $\\varphi$ by replacing every \\emph{free} occurrence of $x$ with the term $t$, leaving bound occurrences of $x$ unchanged.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:term",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "The set of \\emph{terms} of a first-order language \\(\\mathcal L\\), denoted \\(\\mathsf{Term}_{\\mathcal L}\\), is the smallest set of strings satisfying: \\begin{enumerate} \\item every variable is a term; \\item every constant symbol is a term; \\item if \\(f\\) is an \\(n\\)-ary function symbol and \\(t_1,\\ldots,t_n\\) are terms, then \\(f(t_1,\\ldots,t_n)\\) is a term; ...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:variable",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "For a first-order language \\(\\mathcal L\\), a \\emph{variable} is a symbol drawn from the distinguished variable stock of \\(\\mathcal L\\). Variables are usually written \\[ x,y,z,x_0,x_1,x_2,\\ldots . \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:wff-pred",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "The set of \\emph{well-formed formulas} of a first-order language \\(\\mathcal L\\), denoted \\(\\mathsf{Form}_{\\mathcal L}\\), is the smallest set of strings satisfying: \\begin{enumerate} \\item every atomic formula is a well-formed formula; \\item if \\(\\varphi\\) is a well-formed formula, then \\(\\neg\\varphi\\) is a well-formed formula; \\item if \\(\\varphi\\) and \\(\\...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:categorical-a-form-predicate-logic",
+      "kind": "Definition",
+      "section": "translation",
+      "summary": "The \\emph{universal affirmative} categorical form, called \\(A\\), translates ``All \\(A\\) are \\(B\\)'' as \\[ \\forall x\\,(A(x)\\to B(x)). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:categorical-e-form-predicate-logic",
+      "kind": "Definition",
+      "section": "translation",
+      "summary": "The \\emph{universal negative} categorical form, called \\(E\\), translates ``No \\(A\\) are \\(B\\)'' as \\[ \\forall x\\,(A(x)\\to \\neg B(x)). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:categorical-i-form-predicate-logic",
+      "kind": "Definition",
+      "section": "translation",
+      "summary": "The \\emph{particular affirmative} categorical form, called \\(I\\), translates ``Some \\(A\\) are \\(B\\)'' as \\[ \\exists x\\,(A(x)\\land B(x)). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:categorical-o-form-predicate-logic",
+      "kind": "Definition",
+      "section": "translation",
+      "summary": "The \\emph{particular negative} categorical form, called \\(O\\), translates ``Some \\(A\\) are not \\(B\\)'' as \\[ \\exists x\\,(A(x)\\land \\neg B(x)). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:domain-of-discourse-predicate-logic",
+      "kind": "Definition",
+      "section": "translation",
+      "summary": "The \\emph{domain of discourse} for a translation is the collection of objects over which the variables of the translated formulas range.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:scope-ambiguity-translation",
+      "kind": "Definition",
+      "section": "translation",
+      "summary": "A sentence has \\emph{scope ambiguity} when the same ordinary-language wording admits two or more translations with different quantifier nesting or different connective scope.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:translation-constants-variables",
+      "kind": "Definition",
+      "section": "translation",
+      "summary": "A \\emph{constant} names a fixed object from the translation key, while a \\emph{variable} marks a place bound by a quantifier or left open for later binding.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:translation-key-predicate-logic",
+      "kind": "Definition",
+      "section": "translation",
+      "summary": "A \\emph{translation key} is a finite record that fixes a domain of discourse and assigns intended English readings to the constant symbols, predicate symbols, and relation symbols used in a translation.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "def:translation-predicate-relation-symbol",
+      "kind": "Definition",
+      "section": "translation",
+      "summary": "In a translation key, a unary predicate symbol names a property of one object, and an \\(n\\)-ary relation symbol names a relation among \\(n\\) objects.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "prop:a-o-contradictory-predicate-logic",
+      "kind": "Proposition",
+      "section": "translation",
+      "summary": "The \\(A\\)-form \\(\\forall x\\,(A(x)\\to B(x))\\) and the \\(O\\)-form \\(\\exists x\\,(A(x)\\land \\neg B(x))\\) are contradictory: exactly one of them is true.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "prop:conditional-translation-pattern",
+      "kind": "Proposition",
+      "section": "translation",
+      "summary": "An English statement of the form ``If \\(A\\), then \\(B\\)'' is translated by \\[ A\\to B, \\] with quantifiers placed according to the variables occurring in \\(A\\) and \\(B\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "prop:e-i-contradictory-predicate-logic",
+      "kind": "Proposition",
+      "section": "translation",
+      "summary": "The \\(E\\)-form \\(\\forall x\\,(A(x)\\to \\neg B(x))\\) and the \\(I\\)-form \\(\\exists x\\,(A(x)\\land B(x))\\) are contradictory: exactly one of them is true.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "prop:existential-import-contrariety-predicate-logic",
+      "kind": "Proposition",
+      "section": "translation",
+      "summary": "If \\(\\exists x\\,A(x)\\), then the \\(A\\)-form and \\(E\\)-form cannot both be true.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "prop:existential-translation-pattern",
+      "kind": "Proposition",
+      "section": "translation",
+      "summary": "In a broad domain, an English statement of the form ``Some \\(A\\) are \\(B\\)'' is translated by \\[ \\exists x\\,(A(x)\\land B(x)). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "prop:negation-translation-pattern",
+      "kind": "Proposition",
+      "section": "translation",
+      "summary": "The negation of a translated quantified statement is obtained by negating the whole formula and then pushing the negation inward using the quantifier negation laws.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "predicate-logic",
+      "id": "prop:universal-translation-pattern",
+      "kind": "Proposition",
+      "section": "translation",
+      "summary": "In a broad domain, an English statement of the form ``All \\(A\\) are \\(B\\)'' is translated by \\[ \\forall x\\,(A(x)\\to B(x)). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:formula-context-propositional-logic",
+      "kind": "Definition",
+      "section": "algebra",
+      "summary": "A formula context \\(C[-]\\) is a well-formed formula with one distinguished placeholder occurrence \\([-]\\). For each well-formed formula \\(\\varphi\\), the expression \\(C[\\varphi]\\) denotes the formula obtained by replacing the placeholder with \\(\\varphi\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:propositional-equivalence-law",
+      "kind": "Definition",
+      "section": "algebra",
+      "summary": "A propositional equivalence law is a valid schema of the form \\[ \\varphi\\equiv\\psi, \\] with \\(\\varphi,\\psi\\in\\WFF\\). Each instance of the schema says that the two formulas have the same truth value under every truth assignment.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:absorption-laws-propositional-logic",
+      "kind": "Theorem",
+      "section": "algebra",
+      "summary": "For all \\(\\varphi,\\psi\\in\\WFF\\), \\[ \\varphi\\land(\\varphi\\lor\\psi)\\equiv\\varphi, \\] and \\[ \\varphi\\lor(\\varphi\\land\\psi)\\equiv\\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:basic-boolean-equivalence-laws-propositional-logic",
+      "kind": "Theorem",
+      "section": "algebra",
+      "summary": "For all formulas \\(\\varphi,\\psi,\\chi\\in\\WFF\\), the following logical equivalences hold. Commutativity: \\[ \\varphi\\land\\psi\\equiv\\psi\\land\\varphi, \\qquad \\varphi\\lor\\psi\\equiv\\psi\\lor\\varphi. \\] Associativity: \\[ (\\varphi\\land\\psi)\\land\\chi \\equiv \\varphi\\land(\\psi\\land\\chi), \\qquad (\\varphi\\lor\\psi)\\lor\\chi \\equiv \\varphi\\lor(\\psi\\lor\\chi). \\] Idempotence...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:biconditional-equivalence-laws-propositional-logic",
+      "kind": "Theorem",
+      "section": "algebra",
+      "summary": "For all \\(\\varphi,\\psi\\in\\WFF\\), \\[ \\varphi\\leftrightarrow\\psi \\equiv (\\varphi\\to\\psi)\\land(\\psi\\to\\varphi), \\] and \\[ \\varphi\\leftrightarrow\\psi \\equiv (\\varphi\\land\\psi)\\lor(\\neg\\varphi\\land\\neg\\psi). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:conditional-equivalence-laws-propositional-logic",
+      "kind": "Theorem",
+      "section": "algebra",
+      "summary": "For all \\(\\varphi,\\psi\\in\\WFF\\), \\[ \\varphi\\to\\psi \\equiv \\neg\\varphi\\lor\\psi, \\] and \\[ \\neg(\\varphi\\to\\psi) \\equiv \\varphi\\land\\neg\\psi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:de-morgan-laws-propositional-logic",
+      "kind": "Theorem",
+      "section": "algebra",
+      "summary": "For all \\(\\varphi,\\psi\\in\\WFF\\), \\[ \\neg(\\varphi\\land\\psi) \\equiv \\neg\\varphi\\lor\\neg\\psi, \\] and \\[ \\neg(\\varphi\\lor\\psi) \\equiv \\neg\\varphi\\land\\neg\\psi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:distributive-laws-propositional-logic",
+      "kind": "Theorem",
+      "section": "algebra",
+      "summary": "For all \\(\\varphi,\\psi,\\chi\\in\\WFF\\), \\[ \\varphi\\land(\\psi\\lor\\chi) \\equiv (\\varphi\\land\\psi)\\lor(\\varphi\\land\\chi), \\] and \\[ \\varphi\\lor(\\psi\\land\\chi) \\equiv (\\varphi\\lor\\psi)\\land(\\varphi\\lor\\chi). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:identity-domination-laws-propositional-logic",
+      "kind": "Theorem",
+      "section": "algebra",
+      "summary": "Let \\(\\top\\) be any tautological formula and let \\(\\bot\\) be any contradictory formula. Then for every \\(\\varphi\\in\\WFF\\): \\[ \\varphi\\land\\top\\equiv\\varphi, \\qquad \\varphi\\lor\\bot\\equiv\\varphi, \\] and \\[ \\varphi\\land\\bot\\equiv\\bot, \\qquad \\varphi\\lor\\top\\equiv\\top. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:logical-equivalence-equivalence-relation",
+      "kind": "Theorem",
+      "section": "algebra",
+      "summary": "Logical equivalence is reflexive, symmetric, and transitive on \\(\\WFF\\): \\[ \\varphi\\equiv\\varphi, \\qquad \\varphi\\equiv\\psi\\Longrightarrow\\psi\\equiv\\varphi, \\] and \\[ (\\varphi\\equiv\\psi\\land\\psi\\equiv\\chi) \\Longrightarrow \\varphi\\equiv\\chi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:replacement-of-logical-equivalents-propositional-logic",
+      "kind": "Theorem",
+      "section": "algebra",
+      "summary": "Replacing logically equivalent formulas inside a formula context preserves logical equivalence: \\[ \\varphi\\equiv\\psi \\Longrightarrow C[\\varphi]\\equiv C[\\psi]. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:argument-form-propositional-logic",
+      "kind": "Definition",
+      "section": "argument-forms",
+      "summary": "An \\emph{argument form} is a schematic pattern consisting of a finite list of premise formulas and one conclusion formula.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:counterexample-assignment-propositional-logic",
+      "kind": "Definition",
+      "section": "argument-forms",
+      "summary": "A \\emph{counterexample assignment} to an argument form \\((\\Gamma,\\varphi)\\) is a truth assignment that satisfies every premise in \\(\\Gamma\\) and does not satisfy \\(\\varphi\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:informal-proof-pattern-propositional-logic",
+      "kind": "Definition",
+      "section": "argument-forms",
+      "summary": "An \\emph{informal proof pattern} is a reusable truth-preserving strategy for organizing an ordinary mathematical proof.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:rule-of-replacement-propositional-logic",
+      "kind": "Definition",
+      "section": "argument-forms",
+      "summary": "A \\emph{rule of replacement} is a schematic permission to replace a subformula by a logically equivalent formula inside a formula context.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:valid-argument-form-propositional-logic",
+      "kind": "Definition",
+      "section": "argument-forms",
+      "summary": "An argument form with premises \\(\\Gamma\\) and conclusion \\(\\varphi\\) is \\emph{valid} if every truth assignment that satisfies every formula in \\(\\Gamma\\) also satisfies \\(\\varphi\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:addition-validity-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "The argument form \\[ \\varphi \\quad\\therefore\\quad \\varphi\\lor\\psi \\] is valid.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:affirming-consequent-invalid-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "The argument form \\[ \\varphi\\to\\psi,\\qquad \\psi \\quad\\therefore\\quad \\varphi \\] is invalid.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:conjunction-introduction-validity-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "The argument form \\[ \\varphi,\\qquad \\psi \\quad\\therefore\\quad \\varphi\\land\\psi \\] is valid.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:constructive-dilemma-validity-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "The argument form \\[ \\varphi\\to\\chi,\\qquad \\psi\\to\\theta,\\qquad \\varphi\\lor\\psi \\quad\\therefore\\quad \\chi\\lor\\theta \\] is valid.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:denying-antecedent-invalid-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "The argument form \\[ \\varphi\\to\\psi,\\qquad \\neg\\varphi \\quad\\therefore\\quad \\neg\\psi \\] is invalid.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:destructive-dilemma-validity-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "The argument form \\[ \\varphi\\to\\chi,\\qquad \\psi\\to\\theta,\\qquad \\neg\\chi\\lor\\neg\\theta \\quad\\therefore\\quad \\neg\\varphi\\lor\\neg\\psi \\] is valid.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:disjunctive-syllogism-validity-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "The argument form \\[ \\varphi\\lor\\psi,\\qquad \\neg\\varphi \\quad\\therefore\\quad \\psi \\] is valid.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:hypothetical-syllogism-validity-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "The argument form \\[ \\varphi\\to\\psi,\\qquad \\psi\\to\\chi \\quad\\therefore\\quad \\varphi\\to\\chi \\] is valid.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:modus-ponens-validity-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "The argument form \\[ \\varphi,\\qquad \\varphi\\to\\psi \\quad\\therefore\\quad \\psi \\] is valid.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:modus-tollens-validity-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "The argument form \\[ \\varphi\\to\\psi,\\qquad \\neg\\psi \\quad\\therefore\\quad \\neg\\varphi \\] is valid.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:replacement-rules-preserve-logical-equivalence-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "If a formula \\(\\psi\\) is obtained from a formula \\(\\varphi\\) by finitely many applications of rules of replacement, then \\(\\varphi\\equiv\\psi\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:simplification-validity-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "The argument form \\[ \\varphi\\land\\psi \\quad\\therefore\\quad \\varphi \\] is valid.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:tautological-implication-valid-argument-form-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "Let \\(\\Gamma=\\{\\gamma_1,\\ldots,\\gamma_n\\}\\subseteq\\WFF\\) and let \\(\\varphi\\in\\WFF\\). If \\[ (\\gamma_1\\land\\cdots\\land\\gamma_n)\\to\\varphi \\] is a tautology, then the argument form \\((\\Gamma,\\varphi)\\) is valid.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:truth-table-validity-test-argument-forms-propositional-logic",
+      "kind": "Theorem",
+      "section": "argument-forms",
+      "summary": "An argument form \\((\\Gamma,\\varphi)\\) is valid if and only if no row of its truth table makes every formula in \\(\\Gamma\\) true and \\(\\varphi\\) false.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "ax:propositional-classical-contraposition",
+      "kind": "Axiom",
+      "section": "axioms",
+      "summary": "For all formulas $P$ and $Q$, \\[ (\\neg Q \\Longrightarrow \\neg P) \\Longrightarrow (P \\Longrightarrow Q). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "ax:propositional-implication-distribution",
+      "kind": "Axiom",
+      "section": "axioms",
+      "summary": "For all formulas $P$, $Q$, and $R$, \\[ \\bigl(P \\Longrightarrow (Q \\Longrightarrow R)\\bigr) \\Longrightarrow \\bigl((P \\Longrightarrow Q) \\Longrightarrow (P \\Longrightarrow R)\\bigr). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "ax:propositional-weakening",
+      "kind": "Axiom",
+      "section": "axioms",
+      "summary": "For all formulas $P$ and $Q$, \\[ P \\Longrightarrow (Q \\Longrightarrow P). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "cor:finite-unsatisfiability-witness-contrapositive-propositional-logic",
+      "kind": "Corollary",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). If \\(\\Gamma\\) is satisfiable, then every finite subset of \\(\\Gamma\\) is satisfiable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:finite-subset-of-set-of-propositional-formulas",
+      "kind": "Definition",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). A finite subset of \\(\\Gamma\\) is a set \\(\\Delta\\subseteq\\Gamma\\) containing only finitely many formulas.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:finite-unsatisfiability-witness-propositional-logic",
+      "kind": "Definition",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). A subset \\(\\Delta\\subseteq\\Gamma\\) is a finite unsatisfiability witness for \\(\\Gamma\\) if \\(\\Delta\\) is finite and unsatisfiable. \\[ \\operatorname{FiniteUnsatisfiabilityWitness}(\\Delta,\\Gamma) \\Longleftrightarrow \\Delta\\subseteq\\Gamma\\land \\Delta\\text{ is finite}\\land \\operatorname{UnsatisfiableSet}(\\Delta). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:finitely-satisfiable-set-of-propositional-formulas",
+      "kind": "Definition",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is finitely satisfiable if every finite subset of \\(\\Gamma\\) is satisfiable. \\[ \\operatorname{FinitelySatisfiableSet}(\\Gamma) \\Longleftrightarrow \\forall\\Delta\\,\\Bigl((\\Delta\\subseteq\\Gamma\\land \\Delta\\text{ is finite}) \\Rightarrow \\operatorname{SatisfiableSet}(\\Delta)\\Bigr). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:satisfiable-set-of-propositional-formulas",
+      "kind": "Definition",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is satisfiable if there exists a truth assignment \\(v\\) such that \\(v\\models\\Gamma\\). \\[ \\operatorname{SatisfiableSet}(\\Gamma) \\Longleftrightarrow \\exists v\\,\\bigl(\\operatorname{TruthAssignment}(v)\\land v\\models\\Gamma\\bigr). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:unsatisfiability-witness-propositional-logic",
+      "kind": "Definition",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). A subset \\(\\Delta\\subseteq\\Gamma\\) is an unsatisfiability witness for \\(\\Gamma\\) if \\(\\Delta\\) is unsatisfiable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:unsatisfiable-set-of-propositional-formulas",
+      "kind": "Definition",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is unsatisfiable if it is not satisfiable. \\[ \\operatorname{UnsatisfiableSet}(\\Gamma) \\Longleftrightarrow \\neg\\operatorname{SatisfiableSet}(\\Gamma). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:finite-unsatisfiability-witness-propositional-logic",
+      "kind": "Theorem",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). If there exists a finite \\(\\Delta\\subseteq\\Gamma\\) such that \\(\\Delta\\) is unsatisfiable, then \\(\\Gamma\\) is unsatisfiable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:propositional-compactness",
+      "kind": "Theorem",
+      "section": "compactness-preview",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). If every finite subset of \\(\\Gamma\\) is satisfiable, then \\(\\Gamma\\) is satisfiable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:boolean-function-representation-propositional-logic",
+      "kind": "Definition",
+      "section": "functional-completeness",
+      "summary": "Let \\(f:\\mathbb{B}^n\\to\\mathbb{B}\\) be a Boolean function. A formula \\(\\varphi\\in\\WFF\\) with variables among \\(P_1,\\ldots,P_n\\) \\emph{represents} \\(f\\) if for every truth assignment \\(v\\), \\[ \\widehat v(\\varphi)=f(v(P_1),\\ldots,v(P_n)). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:connective-basis-propositional-logic",
+      "kind": "Definition",
+      "section": "functional-completeness",
+      "summary": "A \\emph{connective basis} is a specified set \\(B\\) of propositional connectives allowed as primitive connectives for building formulas.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:connective-reduction-propositional-logic",
+      "kind": "Definition",
+      "section": "functional-completeness",
+      "summary": "A \\emph{connective reduction} replaces a formula using one connective basis by a logically equivalent formula using a smaller or different connective basis.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:definable-connective-propositional-logic",
+      "kind": "Definition",
+      "section": "functional-completeness",
+      "summary": "Let \\(B\\) be a connective basis. A connective \\(\\circ\\) is \\emph{definable from} \\(B\\) if there is a formula built using only connectives from \\(B\\) whose truth function agrees with the truth function of \\(\\circ\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:expressively-equivalent-connective-sets-propositional-logic",
+      "kind": "Definition",
+      "section": "functional-completeness",
+      "summary": "Two connective bases \\(B\\) and \\(C\\) are \\emph{expressively equivalent} if every connective in \\(B\\) is definable from \\(C\\), and every connective in \\(C\\) is definable from \\(B\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:functionally-complete-connective-set-propositional-logic",
+      "kind": "Definition",
+      "section": "functional-completeness",
+      "summary": "A connective basis \\(B\\) is \\emph{functionally complete} if every Boolean function \\(f:\\mathbb{B}^n\\to\\mathbb{B}\\), for every \\(n\\ge 1\\), is represented by some formula using only connectives from \\(B\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:incomplete-connective-set-propositional-logic",
+      "kind": "Definition",
+      "section": "functional-completeness",
+      "summary": "A connective basis is \\emph{incomplete} if it is not functionally complete.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:minimal-complete-basis-propositional-logic",
+      "kind": "Definition",
+      "section": "functional-completeness",
+      "summary": "A functionally complete connective basis \\(B\\) is \\emph{minimal complete} if no proper subset of \\(B\\) is functionally complete.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:monotone-boolean-function-propositional-logic",
+      "kind": "Definition",
+      "section": "functional-completeness",
+      "summary": "A Boolean function \\(f:\\mathbb{B}^n\\to\\mathbb{B}\\) is \\emph{monotone} if changing input coordinates from \\(\\False\\) to \\(\\True\\) never changes the output from \\(\\True\\) to \\(\\False\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:nand-connective-propositional-logic",
+      "kind": "Definition",
+      "section": "functional-completeness",
+      "summary": "The \\emph{NAND} connective, written \\(\\uparrow\\), is the binary connective defined by \\[ \\varphi\\uparrow\\psi\\equiv\\neg(\\varphi\\land\\psi). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:nand-only-formula-propositional-logic",
+      "kind": "Definition",
+      "section": "functional-completeness",
+      "summary": "A \\emph{NAND-only formula} is a well-formed formula whose only connective is \\(\\uparrow\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:nor-connective-propositional-logic",
+      "kind": "Definition",
+      "section": "functional-completeness",
+      "summary": "The \\emph{NOR} connective, written \\(\\downarrow\\), is the binary connective defined by \\[ \\varphi\\downarrow\\psi\\equiv\\neg(\\varphi\\lor\\psi). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:nor-only-formula-propositional-logic",
+      "kind": "Definition",
+      "section": "functional-completeness",
+      "summary": "A \\emph{NOR-only formula} is a well-formed formula whose only connective is \\(\\downarrow\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:conjunction-disjunction-not-functionally-complete-propositional-logic",
+      "kind": "Theorem",
+      "section": "functional-completeness",
+      "summary": "The connective basis \\(\\{\\land,\\lor\\}\\) is not functionally complete.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:dnf-representation-of-boolean-functions-propositional-logic",
+      "kind": "Theorem",
+      "section": "functional-completeness",
+      "summary": "Every Boolean function \\(f:\\mathbb{B}^n\\to\\mathbb{B}\\) is represented by a formula in disjunctive normal form using variables \\(P_1,\\ldots,P_n\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:nand-functionally-complete-propositional-logic",
+      "kind": "Theorem",
+      "section": "functional-completeness",
+      "summary": "The one-connective basis \\(\\{\\uparrow\\}\\) is functionally complete.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:nand-nor-minimal-complete-bases-propositional-logic",
+      "kind": "Theorem",
+      "section": "functional-completeness",
+      "summary": "The one-connective bases \\(\\{\\uparrow\\}\\) and \\(\\{\\downarrow\\}\\) are minimal complete bases.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:negation-conjunction-functionally-complete-propositional-logic",
+      "kind": "Theorem",
+      "section": "functional-completeness",
+      "summary": "The connective basis \\[ \\{\\neg,\\land\\} \\] is functionally complete.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:negation-disjunction-functionally-complete-propositional-logic",
+      "kind": "Theorem",
+      "section": "functional-completeness",
+      "summary": "The connective basis \\[ \\{\\neg,\\lor\\} \\] is functionally complete.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:nor-functionally-complete-propositional-logic",
+      "kind": "Theorem",
+      "section": "functional-completeness",
+      "summary": "The one-connective basis \\(\\{\\downarrow\\}\\) is functionally complete.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:standard-connectives-functionally-complete-propositional-logic",
+      "kind": "Theorem",
+      "section": "functional-completeness",
+      "summary": "The connective basis \\[ \\{\\neg,\\land,\\lor\\} \\] is functionally complete.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:canonical-conjunctive-normal-form-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "Let \\(\\varphi\\in\\WFF\\), and fix an ordering \\(P_1,\\ldots,P_n\\) of the finite variable set of \\(\\varphi\\). The \\emph{canonical conjunctive normal form} of \\(\\varphi\\) relative to this ordering is the conjunction of the \\hyperref[def:truth-table-row-clause-propositional-logic]{truth-table row clauses} corresponding to the rows on which \\(\\varphi\\) is false.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:canonical-disjunctive-normal-form-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "Let \\(\\varphi\\in\\WFF\\), and fix an ordering \\(P_1,\\ldots,P_n\\) of the finite variable set of \\(\\varphi\\). The \\emph{canonical disjunctive normal form} of \\(\\varphi\\) relative to this ordering is the disjunction of the \\hyperref[def:truth-table-row-conjunction-propositional-logic]{truth-table row conjunctions} corresponding to the rows on which \\(\\varphi\\)...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:clause-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "A \\emph{clause} is a finite disjunction of literals.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:complementary-literals-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "Two literals are \\emph{complementary} if they are \\(P\\) and \\(\\neg P\\) for the same propositional variable \\(P\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:conjunctive-normal-form-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "A formula is in \\emph{conjunctive normal form}, abbreviated \\emph{CNF}, when it is a finite conjunction of \\hyperref[def:clause-propositional-logic]{clauses}. Equivalently, it has the shape \\[ C_1\\land C_2\\land\\cdots\\land C_m, \\] where each \\(C_j\\) is a clause.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:disjunctive-normal-form-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "A formula is in \\emph{disjunctive normal form}, abbreviated \\emph{DNF}, when it is a finite disjunction of \\hyperref[def:elementary-conjunction-propositional-logic]{elementary conjunctions}. Equivalently, it has the shape \\[ C_1\\lor C_2\\lor\\cdots\\lor C_m, \\] where each \\(C_j\\) is an elementary conjunction.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:elementary-conjunction-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "An \\emph{elementary conjunction} is a finite conjunction of \\hyperref[def:literal-propositional-logic]{literals}. That is, it is a \\hyperref[def:term-propositional-logic]{term} of the form \\[ L_1\\land L_2\\land\\cdots\\land L_k, \\] where each \\(L_i\\) is a literal. The one-literal case is permitted.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:elementary-disjunction-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "An \\emph{elementary disjunction} is a finite disjunction of \\hyperref[def:literal-propositional-logic]{literals}. That is, it is a \\hyperref[def:clause-propositional-logic]{clause} of the form \\[ L_1\\lor L_2\\lor\\cdots\\lor L_k, \\] where each \\(L_i\\) is a literal. The one-literal case is permitted.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:empty-clause-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "The \\emph{empty clause} is the empty disjunction of literals. Semantically, it is read as false.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:empty-conjunction-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "The \\emph{empty conjunction} is the conjunction over no literals. Semantically, it is read as true.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:literal-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "A \\emph{literal} is either a propositional variable \\(P\\) or the negation \\(\\neg P\\) of a propositional variable \\(P\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:maxterm-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "Let \\(P_1,\\ldots,P_n\\) be a finite list of propositional variables. A \\emph{maxterm} relative to \\(P_1,\\ldots,P_n\\) is an \\hyperref[def:elementary-disjunction-propositional-logic]{elementary disjunction} that contains exactly one of \\(P_i\\) or \\(\\neg P_i\\) for each \\(i=1,\\ldots,n\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:minterm-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "Let \\(P_1,\\ldots,P_n\\) be a finite list of propositional variables. A \\emph{minterm} relative to \\(P_1,\\ldots,P_n\\) is an \\hyperref[def:elementary-conjunction-propositional-logic]{elementary conjunction} that contains exactly one of \\(P_i\\) or \\(\\neg P_i\\) for each \\(i=1,\\ldots,n\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:negation-normal-form-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "A formula is in \\emph{negation normal form} if it uses only propositional variables, negated propositional variables, conjunction, and disjunction, and every negation occurs immediately before a propositional variable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:negative-literal-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "A \\emph{negative literal} is a literal of the form \\(\\neg P\\), where \\(P\\) is a propositional variable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:nnf-conversion-procedure-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "The \\emph{NNF conversion procedure} converts a propositional formula to an equivalent formula in negation normal form by the following steps: \\begin{enumerate} \\item eliminate biconditionals using biconditional equivalence laws; \\item eliminate conditionals using conditional equivalence laws; \\item eliminate double negations; \\item push negations inward u...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:positive-literal-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "A \\emph{positive literal} is a literal of the form \\(P\\), where \\(P\\) is a propositional variable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:term-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "A \\emph{term}, also called a \\emph{conjunction term}, is a finite conjunction of literals.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:truth-table-row-clause-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "Fix a finite variable list \\(P_1,\\ldots,P_n\\) and a row \\(r\\) of the \\hyperref[def:truth-table-propositional-logic]{truth table} for those variables. The \\emph{truth-table row clause} for \\(r\\) is the clause \\[ M_1\\lor M_2\\lor\\cdots\\lor M_n, \\] where \\[ M_i= \\begin{cases} P_i, & \\text{if row }r\\text{ makes }P_i\\text{ false},\\\\ \\neg P_i, & \\text{if row }r\\...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:truth-table-row-conjunction-propositional-logic",
+      "kind": "Definition",
+      "section": "normal-forms",
+      "summary": "Fix a finite variable list \\(P_1,\\ldots,P_n\\) and a row \\(r\\) of the \\hyperref[def:truth-table-propositional-logic]{truth table} for those variables. The \\emph{truth-table row conjunction} for \\(r\\) is the conjunction \\[ L_1\\land L_2\\land\\cdots\\land L_n, \\] where \\[ L_i= \\begin{cases} P_i, & \\text{if row }r\\text{ makes }P_i\\text{ true},\\\\ \\neg P_i, & \\tex...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:canonical-conjunctive-normal-form-propositional-logic",
+      "kind": "Theorem",
+      "section": "normal-forms",
+      "summary": "Every formula \\(\\varphi\\in\\WFF\\) is \\hyperref[def:logical-equivalence-propositional-logic]{logically equivalent} to its \\hyperref[def:canonical-conjunctive-normal-form-propositional-logic]{canonical conjunctive normal form} relative to a fixed ordering of its finitely many variables. \\[ \\varphi\\equiv \\operatorname{CCNF}_{P_1,\\ldots,P_n}(\\varphi). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:canonical-disjunctive-normal-form-propositional-logic",
+      "kind": "Theorem",
+      "section": "normal-forms",
+      "summary": "Every formula \\(\\varphi\\in\\WFF\\) is \\hyperref[def:logical-equivalence-propositional-logic]{logically equivalent} to its \\hyperref[def:canonical-disjunctive-normal-form-propositional-logic]{canonical disjunctive normal form} relative to a fixed ordering of its finitely many variables. \\[ \\varphi\\equiv \\operatorname{CDNF}_{P_1,\\ldots,P_n}(\\varphi). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:dnf-satisfiability-criterion-propositional-logic",
+      "kind": "Theorem",
+      "section": "normal-forms",
+      "summary": "Let \\(\\psi\\) be a formula in \\hyperref[def:disjunctive-normal-form-propositional-logic]{disjunctive normal form}. Then \\(\\psi\\) is \\hyperref[def:satisfiable-formula-propositional-logic]{satisfiable} if and only if at least one conjunction term in \\(\\psi\\) contains no \\hyperref[def:complementary-literals-propositional-logic]{complementary pair of literals}.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:existence-conjunctive-normal-form-propositional-logic",
+      "kind": "Theorem",
+      "section": "normal-forms",
+      "summary": "For every formula \\(\\varphi\\in\\WFF\\), there exists a formula \\(\\psi\\in\\WFF\\) such that \\(\\psi\\) is in \\hyperref[def:conjunctive-normal-form-propositional-logic]{conjunctive normal form} and \\[ \\varphi\\equiv\\psi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:existence-disjunctive-normal-form-propositional-logic",
+      "kind": "Theorem",
+      "section": "normal-forms",
+      "summary": "For every formula \\(\\varphi\\in\\WFF\\), there exists a formula \\(\\psi\\in\\WFF\\) such that \\(\\psi\\) is in \\hyperref[def:disjunctive-normal-form-propositional-logic]{disjunctive normal form} and \\[ \\varphi\\equiv\\psi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:existence-negation-normal-form-propositional-logic",
+      "kind": "Theorem",
+      "section": "normal-forms",
+      "summary": "For every formula \\(\\varphi\\in\\WFF\\), there exists a formula \\(\\psi\\in\\WFF\\) such that \\(\\psi\\) is in negation normal form and \\[ \\varphi\\equiv\\psi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:normal-form-semantic-classification-propositional-logic",
+      "kind": "Theorem",
+      "section": "normal-forms",
+      "summary": "Normal forms give finite certificates for semantic classification. For any formula \\(\\varphi\\in\\WFF\\): \\begin{enumerate} \\item \\(\\varphi\\) is \\hyperref[def:satisfiable-formula-propositional-logic]{satisfiable} if and only if some \\hyperref[def:disjunctive-normal-form-propositional-logic]{DNF} formula equivalent to \\(\\varphi\\) has a satisfiable conjunction...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:boolean-function-propositional-logic",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "An \\(n\\)-ary Boolean function is a function \\[ f:\\mathbb{B}^n\\to\\mathbb{B}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:contingency-propositional-logic",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "A formula \\(\\varphi\\in\\WFF\\) is a contingency if it is satisfiable but not a tautology.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:contradiction-propositional-logic",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "A formula \\(\\varphi\\in\\WFF\\) is a contradiction if no truth assignment satisfies \\(\\varphi\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:extended-truth-assignment-propositional-logic",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\[ v:\\Prop\\to\\mathbb{B} \\] be a truth assignment. The \\emph{extension} of \\(v\\) to well-formed formulas is the function \\[ \\widehat v:\\WFF\\to\\mathbb{B} \\] defined recursively as follows: \\[ \\widehat v(P)=v(P) \\quad\\text{for every }P\\in\\Prop, \\] \\[ \\widehat v(\\neg\\varphi)=\\True \\Longleftrightarrow \\widehat v(\\varphi)=\\False, \\] \\[ \\widehat v(\\varphi\\la...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:logical-consequence-propositional-logic",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\) and \\(\\varphi\\in\\WFF\\). The formula \\(\\varphi\\) is a logical consequence of \\(\\Gamma\\), written \\[ \\Gamma\\models\\varphi, \\] if every truth assignment satisfying \\(\\Gamma\\) also satisfies \\(\\varphi\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:logical-equivalence-propositional-logic",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Formulas \\(\\varphi,\\psi\\in\\WFF\\) are logically equivalent, written \\[ \\varphi\\equiv\\psi, \\] if they have the same truth value under every truth assignment.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:satisfaction-propositional-formula",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(v\\) be a truth assignment and let \\(\\varphi\\in\\WFF\\). We say that \\(v\\) satisfies \\(\\varphi\\), written \\[ v\\models\\varphi, \\] if \\[ \\widehat v(\\varphi)=\\mathrm{True}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:satisfaction-set-propositional-logic",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). A truth assignment \\(v\\) satisfies \\(\\Gamma\\), written \\[ v\\models\\Gamma, \\] if \\(v\\models\\gamma\\) for every \\(\\gamma\\in\\Gamma\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:satisfiable-formula-propositional-logic",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "A formula \\(\\varphi\\in\\WFF\\) is satisfiable if at least one truth assignment satisfies it.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:tautology-propositional-logic",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "A formula \\(\\varphi\\in\\WFF\\) is a tautology, written \\[ \\models\\varphi, \\] if every truth assignment satisfies \\(\\varphi\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:truth-assignment-domain-propositional-logic",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "The \\emph{domain} of a truth assignment \\[ v:\\Prop\\to\\mathbb{B} \\] is the set \\(\\Prop\\) of propositional variables.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:truth-assignment-propositional-logic",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "A \\emph{truth assignment} is a function \\[ v:\\Prop\\to\\mathbb{B}. \\] For each propositional variable \\(P\\in\\Prop\\), the value \\(v(P)\\) is the truth value assigned to \\(P\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:truth-function-induced-by-formula",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(\\varphi\\in\\WFF\\), and suppose \\(\\operatorname{Var}(\\varphi)\\subseteq\\{P_1,\\ldots,P_n\\}\\). The truth function induced by \\(\\varphi\\) is the Boolean function \\[ f_\\varphi:\\mathbb{B}^n\\to\\mathbb{B} \\] defined by \\[ f_\\varphi(b_1,\\ldots,b_n)=\\widehat v(\\varphi), \\] where \\(v(P_i)=b_i\\) for each \\(i\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:truth-table-propositional-logic",
+      "kind": "Definition",
+      "section": "semantics",
+      "summary": "Let \\(\\varphi\\in\\WFF\\) and suppose the variables occurring in \\(\\varphi\\) are among \\(P_1,\\ldots,P_n\\). A truth table for \\(\\varphi\\) is a finite table with one row for each assignment \\[ a:\\{P_1,\\ldots,P_n\\}\\to\\mathbb{B} \\] and a final column recording the value of \\(\\widehat v(\\varphi)\\) for any truth assignment \\(v\\) extending \\(a\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "lem:coincidence-lemma-propositional-logic",
+      "kind": "Lemma",
+      "section": "semantics",
+      "summary": "Let \\(v,w:\\Prop\\to\\mathbb{B}\\) be truth assignments. If \\(v\\) and \\(w\\) agree on every propositional variable occurring in \\(\\varphi\\), then they assign the same truth value to \\(\\varphi\\): \\[ v|_{\\operatorname{Var}(\\varphi)} = w|_{\\operatorname{Var}(\\varphi)} \\Longrightarrow \\widehat v(\\varphi)=\\widehat w(\\varphi). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:counting-boolean-functions",
+      "kind": "Theorem",
+      "section": "semantics",
+      "summary": "There are exactly \\[ 2^{2^n} \\] Boolean functions \\(\\mathbb{B}^n\\to\\mathbb{B}\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:finite-truth-table-propositional-logic",
+      "kind": "Theorem",
+      "section": "semantics",
+      "summary": "Every propositional formula has a finite truth table. More precisely, if \\(\\operatorname{Var}(\\varphi)\\) has \\(n\\) elements, then \\(\\varphi\\) has a truth table with \\(2^n\\) rows.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:unique-extension-truth-assignment-propositional-logic",
+      "kind": "Theorem",
+      "section": "semantics",
+      "summary": "Every truth assignment \\[ v:\\Prop\\to\\mathbb{B} \\] has a unique extension \\[ \\widehat v:\\WFF\\to\\mathbb{B} \\] satisfying the recursive truth clauses for propositional variables and the primitive connectives.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:atomic-formula-propositional-logic",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "An atomic formula is a well-formed formula that is a propositional variable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:connective-count-propositional-logic",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "The connective count of a formula \\(\\varphi\\), denoted \\(\\operatorname{conn}(\\varphi)\\), is defined recursively: \\begin{enumerate} \\item if \\(\\varphi\\) is atomic, then \\(\\operatorname{conn}(\\varphi)=0\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{conn}(\\varphi)=\\operatorname{conn}(\\psi)+1\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operator...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:formula-depth-propositional-logic",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "The depth of a formula \\(\\varphi\\), denoted \\(\\operatorname{depth}(\\varphi)\\), is defined recursively: \\begin{enumerate} \\item if \\(\\varphi\\) is atomic, then \\(\\operatorname{depth}(\\varphi)=0\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{depth}(\\varphi)=\\operatorname{depth}(\\psi)+1\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{de...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:formula-variable-set-propositional-logic",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "The variable set \\(\\operatorname{Var}(\\varphi)\\) of a formula \\(\\varphi\\) is defined recursively: \\begin{enumerate} \\item if \\(\\varphi=P\\in\\Prop\\), then \\(\\operatorname{Var}(\\varphi)=\\{P\\}\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{Var}(\\varphi)=\\operatorname{Var}(\\psi)\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{Var}(\\varph...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:logical-connective",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary. \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:main-connective-propositional-logic",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "The main connective of a molecular formula is the connective introduced at the final formation step: \\begin{enumerate} \\item for \\(\\neg\\varphi\\), the main connective is \\(\\neg\\); \\item for \\((\\varphi\\circ\\psi)\\), the main connective is \\(\\circ\\). \\end{enumerate} Atomic formulas have no main connective.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:molecular-formula-propositional-logic",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "A molecular formula is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula formed using at least one logical connective.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:parse-tree-propositional-logic",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "The parse tree, or syntax tree, of a well-formed formula is the tree representation of its recursive construction: \\begin{enumerate} \\item a propositional variable is represented by a single leaf; \\item a formula \\(\\neg\\varphi\\) is represented by a root labeled \\(\\neg\\) with one child, the parse tree of \\(\\varphi\\); \\item a formula \\((\\varphi\\circ\\psi)\\) ...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:proper-subformula",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "Let \\(\\varphi\\in\\WFF\\). A \\emph{proper subformula} of \\(\\varphi\\) is a formula \\(\\psi\\) such that \\[ \\psi\\in\\operatorname{Sub}(\\varphi) \\quad\\text{and}\\quad \\psi\\neq\\varphi. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:propositional-language",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "A propositional language consists of: \\begin{enumerate} \\item a set \\(\\Prop\\) of propositional variables; \\item logical connectives; \\item punctuation symbols such as parentheses; \\item recursive formation rules specifying the well-formed formulas. \\end{enumerate}",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:propositional-variable",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "A propositional variable is an atomic symbol intended to stand for a proposition. A standard supply of variables is \\[ \\Prop=\\{P_1,P_2,P_3,\\ldots\\}. \\] Informally, variables are often written \\(P,Q,R,S,\\ldots\\).",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:subformula-propositional-logic",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "The set \\(\\operatorname{Sub}(\\varphi)\\) of subformulas of a formula \\(\\varphi\\) is defined recursively: \\begin{enumerate} \\item if \\(\\varphi\\) is atomic, then \\(\\operatorname{Sub}(\\varphi)=\\{\\varphi\\}\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\[ \\operatorname{Sub}(\\varphi)=\\{\\varphi\\}\\cup\\operatorname{Sub}(\\psi); \\] \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:truth-value-propositional-logic",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "The set of truth values is \\[ \\mathbb{B} := \\{\\mathrm{False},\\mathrm{True}\\}. \\] Some sources identify this set with \\(\\{0,1\\}\\), with \\(0\\) read as false and \\(1\\) read as true.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "def:well-formed-formula",
+      "kind": "Definition",
+      "section": "syntax",
+      "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\var...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "lem:closure-under-formation-propositional-formulas",
+      "kind": "Lemma",
+      "section": "syntax",
+      "summary": "The set \\(\\WFF\\) is closed under the propositional formation rules. That is, if \\(\\varphi\\in\\WFF\\), then \\[ \\neg\\varphi\\in\\WFF. \\] If \\(\\varphi,\\psi\\in\\WFF\\) and \\[ \\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}, \\] then \\[ (\\varphi\\circ\\psi)\\in\\WFF. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "lem:constructor-disjointness-propositional-formulas",
+      "kind": "Lemma",
+      "section": "syntax",
+      "summary": "The three outer formation cases for propositional formulas are disjoint: \\begin{enumerate} \\item no propositional variable is a negation formula; \\item no propositional variable is a binary formula; \\item no negation formula is a binary formula. \\end{enumerate}",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "lem:constructor-injectivity-propositional-formulas",
+      "kind": "Lemma",
+      "section": "syntax",
+      "summary": "The propositional formula constructors are injective: \\begin{enumerate} \\item if \\(\\neg\\varphi=\\neg\\psi\\), then \\(\\varphi=\\psi\\); \\item if \\((\\varphi\\circ\\psi)=(\\alpha\\star\\beta)\\), then \\(\\varphi=\\alpha\\), \\(\\psi=\\beta\\), and \\(\\circ=\\star\\). \\end{enumerate}",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "lem:finiteness-of-subformulas-propositional-formulas",
+      "kind": "Lemma",
+      "section": "syntax",
+      "summary": "For every \\(\\varphi\\in\\WFF\\), the set \\(\\operatorname{Sub}(\\varphi)\\) is finite.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "lem:finiteness-of-variables-propositional-formulas",
+      "kind": "Lemma",
+      "section": "syntax",
+      "summary": "For every \\(\\varphi\\in\\WFF\\), the set \\(\\operatorname{Var}(\\varphi)\\) is finite.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "lem:proper-subformula-depth-propositional-logic",
+      "kind": "Lemma",
+      "section": "syntax",
+      "summary": "If \\(\\psi\\) is a proper subformula of \\(\\varphi\\), then \\[ \\operatorname{depth}(\\psi)<\\operatorname{depth}(\\varphi). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:minimality-of-well-formed-formulas",
+      "kind": "Theorem",
+      "section": "syntax",
+      "summary": "Let \\(S\\) be a set of strings over the propositional alphabet. Suppose: \\begin{enumerate} \\item \\(\\Prop\\subseteq S\\); \\item if \\(\\varphi\\in S\\), then \\(\\neg\\varphi\\in S\\); \\item if \\(\\varphi,\\psi\\in S\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in S\\). \\end{enumerate} Then \\[ \\WFF\\subseteq S. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:structural-induction-propositional-formulas",
+      "kind": "Theorem",
+      "section": "syntax",
+      "summary": "Let \\(A(\\varphi)\\) be a property of well-formed formulas. Suppose: \\begin{enumerate} \\item \\(A(P)\\) holds for every \\(P\\in\\Prop\\); \\item if \\(A(\\varphi)\\) holds, then \\(A(\\neg\\varphi)\\) holds; \\item if \\(A(\\varphi)\\) and \\(A(\\psi)\\) hold, then \\(A((\\varphi\\circ\\psi))\\) holds for every \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\). \\end{enumerate} Then \\(...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:structural-recursion-propositional-formulas",
+      "kind": "Theorem",
+      "section": "syntax",
+      "summary": "To define a function \\(F\\) on \\(\\WFF\\), it suffices to specify: \\begin{enumerate} \\item \\(F(P)\\) for every \\(P\\in\\Prop\\); \\item \\(F(\\neg\\varphi)\\) in terms of \\(F(\\varphi)\\); \\item \\(F((\\varphi\\circ\\psi))\\) in terms of \\(F(\\varphi)\\), \\(F(\\psi)\\), and \\(\\circ\\). \\end{enumerate} When these clauses respect the formation rules, they determine a unique functi...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:unique-decomposition-propositional-formulas",
+      "kind": "Theorem",
+      "section": "syntax",
+      "summary": "Every \\(\\varphi\\in\\WFF\\) has exactly one outermost form: \\begin{enumerate} \\item \\(\\varphi=P\\) for a unique \\(P\\in\\Prop\\); \\item \\(\\varphi=\\neg\\psi\\) for a unique \\(\\psi\\in\\WFF\\); \\item \\(\\varphi=(\\psi\\circ\\chi)\\) for unique \\(\\psi,\\chi\\in\\WFF\\) and a unique binary connective \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\). \\end{enumerate}",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "propositional-logic",
+      "id": "thm:unique-syntax-tree-propositional-formulas",
+      "kind": "Theorem",
+      "section": "syntax",
+      "summary": "Every propositional well-formed formula has a unique parse tree.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:cardinality-order",
+      "kind": "Definition",
+      "section": "cardinality",
+      "summary": "Write $|A| \\leq |B|$ if there exists an injection $f : A \\hookrightarrow B$. Write $|A| < |B|$ if $|A| \\leq |B|$ but $A \\not\\sim B$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:countable",
+      "kind": "Definition",
+      "section": "cardinality",
+      "summary": "A set $A$ is \\emph{countably infinite} if $A \\sim \\mathbb{N}$. A set is \\emph{countable} if it is finite or countably infinite. A set is \\emph{uncountable} if it is infinite but not countable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:finite-infinite",
+      "kind": "Definition",
+      "section": "cardinality",
+      "summary": "A set $A$ is \\emph{finite} if $A = \\varnothing$ or $A \\sim \\{1, 2, \\dots, n\\}$ for some $n \\in \\mathbb{N}$. A set is \\emph{infinite} if it is not finite.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:function-space",
+      "kind": "Definition",
+      "section": "cardinality",
+      "summary": "For sets $A$ and $B$, the \\emph{function space} $B^A$ denotes the set of all functions from $A$ to $B$: \\[ B^A \\;:=\\; \\{\\, f : A \\to B \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:same-cardinality",
+      "kind": "Definition",
+      "section": "cardinality",
+      "summary": "Two sets $A$ and $B$ have the \\emph{same cardinality}, written $A \\sim B$, if there exists a bijection $f : A \\to B$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:Q-countable",
+      "kind": "Theorem",
+      "section": "cardinality",
+      "summary": "The set $\\mathbb{Q}$ of rational numbers is countable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:R-uncountable",
+      "kind": "Theorem",
+      "section": "cardinality",
+      "summary": "The set $\\mathbb{R}$ of real numbers is not countable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:cantor",
+      "kind": "Theorem",
+      "section": "cardinality",
+      "summary": "For any set $A$, there is no surjection $A \\to \\mathcal{P}(A)$. In particular, $|A| < |\\mathcal{P}(A)|$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:countable-union",
+      "kind": "Theorem",
+      "section": "cardinality",
+      "summary": "Let $\\{A_n\\}_{n \\in \\mathbb{N}}$ be a countable family of countable sets. Then $\\bigcup_{n=1}^{\\infty} A_n$ is countable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:schroder-bernstein",
+      "kind": "Theorem",
+      "section": "cardinality",
+      "summary": "If $|A| \\leq |B|$ and $|B| \\leq |A|$, then $A \\sim B$. Equivalently: if there exist injections $f : A \\hookrightarrow B$ and $g : B \\hookrightarrow A$, then there exists a bijection $h : A \\to B$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:canonical-surj",
+      "kind": "Definition",
+      "section": "equivalence",
+      "summary": "The \\emph{canonical surjection} (quotient map) is the function \\[ \\pi : A \\to A/R, \\qquad \\pi(a) := [a]. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:equiv-class",
+      "kind": "Definition",
+      "section": "equivalence",
+      "summary": "Let $R$ be an equivalence relation on $A$. For $a \\in A$, the \\emph{equivalence class} of $a$ is: \\[ [a]_R \\;:=\\; \\{\\, x \\in A \\mid (a,x) \\in R \\,\\}. \\] When $R$ is clear from context, we write $[a]$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:index",
+      "kind": "Definition",
+      "section": "equivalence",
+      "summary": "The \\emph{index} of $R$ on $A$ is the cardinality $|A/R|$, i.e.\\ the number of equivalence classes.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:partition",
+      "kind": "Definition",
+      "section": "equivalence",
+      "summary": "A \\emph{partition} of $A$ is a collection $\\mathcal{P}$ of subsets of $A$ such that: \\begin{enumerate}[label=(\\roman*)] \\item every block is nonempty: $\\forall P \\in \\mathcal{P},\\; P \\neq \\varnothing$; \\item distinct blocks are disjoint: $\\forall P,Q \\in \\mathcal{P},\\; P \\neq Q \\rightarrow P \\cap Q = \\varnothing$; \\item the blocks cover $A$: $\\bigcup_{P \\...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:quotient-set",
+      "kind": "Definition",
+      "section": "equivalence",
+      "summary": "The \\emph{quotient set} of $A$ by $R$ is the set of all equivalence classes: \\[ A / R \\;:=\\; \\{\\, [a]_R \\mid a \\in A \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "lem:rep-independence",
+      "kind": "Lemma",
+      "section": "equivalence",
+      "summary": "Let $R$ be an equivalence relation on $A$. For any $a,b \\in A$, \\[ [a] = [b] \\;\\;\\Longleftrightarrow\\;\\; (a,b) \\in R. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:equiv-partition",
+      "kind": "Theorem",
+      "section": "equivalence",
+      "summary": "Let $A$ be a set. \\begin{enumerate}[label=(\\roman*)] \\item If $R$ is an equivalence relation on $A$, then $A/R$ is a partition of $A$. \\item If $\\mathcal{P}$ is a partition of $A$, then the relation $R_{\\mathcal{P}}$ defined by \\[ (a,b) \\in R_{\\mathcal{P}} \\;\\Longleftrightarrow\\; \\exists P \\in \\mathcal{P} \\text{ with } a \\in P \\text{ and } b \\in P \\] is a...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:quotient-universal",
+      "kind": "Theorem",
+      "section": "equivalence",
+      "summary": "Let $R$ be an equivalence relation on $A$, let $\\pi : A \\to A/R$ be the canonical surjection, and let $f : A \\to B$ be any function. Then $f$ is \\emph{constant on equivalence classes} — meaning $(a,b) \\in R$ implies $f(a) = f(b)$ — if and only if there exists a unique function $\\bar{f} : A/R \\to B$ such that \\[ f = \\bar{f} \\circ \\pi. \\] When it exists, $\\...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:arbitrary-product",
+      "kind": "Definition",
+      "section": "families",
+      "summary": "Let $\\{A_i\\}_{i \\in I}$ be an indexed family of sets. The \\emph{Cartesian product} is: \\[ \\prod_{i \\in I} A_i \\;:=\\; \\Bigl\\{ f : I \\to \\bigcup_{i \\in I} A_i \\;\\Bigm|\\; \\forall i \\in I,\\; f(i) \\in A_i \\Bigr\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:cover-full",
+      "kind": "Definition",
+      "section": "families",
+      "summary": "Let $A$ be a set and $\\mathcal{C}$ a collection of sets. $\\mathcal{C}$ is a \\emph{cover} of $A$ if every element of $A$ belongs to at least one member of $\\mathcal{C}$: \\[ A \\;\\subseteq\\; \\bigcup_{C \\in \\mathcal{C}} C. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:finite-cover",
+      "kind": "Definition",
+      "section": "families",
+      "summary": "A cover is \\emph{finite} if it has finitely many members. A \\emph{finite subcover} is a subcover $\\mathcal{C}' \\subseteq \\mathcal{C}$ with $|\\mathcal{C}'| < \\infty$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:fip",
+      "kind": "Definition",
+      "section": "families",
+      "summary": "A collection $\\mathcal{F}$ of sets has the \\emph{finite intersection property} (FIP) if every finite subcollection has nonempty intersection: for all finite $\\mathcal{F}' \\subseteq \\mathcal{F}$, \\[ \\bigcap_{F \\in \\mathcal{F}'} F \\;\\neq\\; \\varnothing. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:indexed-family",
+      "kind": "Definition",
+      "section": "families",
+      "summary": "Let $I$ be a set (the \\emph{index set}) and $U$ a universe. An \\emph{indexed family of sets} is a function \\[ F : I \\to \\mathcal{P}(U), \\] with $F(i)$ typically written $A_i$. The family is denoted $\\{A_i\\}_{i \\in I}$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:indexed-intersection",
+      "kind": "Definition",
+      "section": "families",
+      "summary": "For $I \\neq \\varnothing$, the \\emph{intersection} of $\\{A_i\\}_{i \\in I}$ is: \\[ \\bigcap_{i \\in I} A_i \\;:=\\; \\{\\, x \\mid \\forall i \\in I,\\; x \\in A_i \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:indexed-union",
+      "kind": "Definition",
+      "section": "families",
+      "summary": "The \\emph{union} of the indexed family $\\{A_i\\}_{i \\in I}$ is: \\[ \\bigcup_{i \\in I} A_i \\;:=\\; \\{\\, x \\mid \\exists i \\in I \\text{ such that } x \\in A_i \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:open-cover",
+      "kind": "Definition",
+      "section": "families",
+      "summary": "In a topological space $(X, \\tau)$, an \\emph{open cover} of a subset $A \\subseteq X$ is a cover $\\mathcal{C}$ of $A$ all of whose members are open sets: $\\mathcal{C} \\subseteq \\tau$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:pairwise-disjoint",
+      "kind": "Definition",
+      "section": "families",
+      "summary": "The family $\\{A_i\\}_{i \\in I}$ is \\emph{pairwise disjoint} if \\[ \\forall i,j \\in I,\\; i \\neq j \\rightarrow A_i \\cap A_j = \\varnothing. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:set-cover",
+      "kind": "Definition",
+      "section": "families",
+      "summary": "A collection $\\mathcal{C} \\subseteq \\mathcal{P}(A)$ is a \\emph{cover} of $A$ if \\[ \\bigcup_{C \\in \\mathcal{C}} C = A. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:subcover",
+      "kind": "Definition",
+      "section": "families",
+      "summary": "$\\mathcal{C}'$ is a \\emph{subcover} of $\\mathcal{C}$ if $\\mathcal{C}' \\subseteq \\mathcal{C}$ and $\\mathcal{C}'$ is still a cover of $A$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "prop:fip-duality",
+      "kind": "Proposition",
+      "section": "families",
+      "summary": "Let $X$ be a set, $A \\subseteq X$, and $\\{U_\\alpha\\}_{\\alpha \\in I}$ a family of subsets of $X$. Let $F_\\alpha = U_\\alpha^c = X \\setminus U_\\alpha$. Then: \\[ \\{U_\\alpha\\} \\text{ covers } A \\;\\;\\Longleftrightarrow\\;\\; \\{F_\\alpha \\cap A\\}_{\\alpha \\in I} \\text{ does \\emph{not} have the FIP}. \\] More precisely: the family $\\{U_\\alpha\\}$ does \\emph{not} cover ...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:bijective",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "$f : A \\to B$ is \\emph{bijective} if it is both injective and surjective.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:composition",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "Let $f : A \\to B$ and $g : B \\to C$. The \\emph{composition} $g \\circ f : A \\to C$ is: \\[ (g \\circ f)(a) := g\\bigl(f(a)\\bigr) \\quad\\text{for all } a \\in A. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:constant",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "$f : A \\to B$ is \\emph{constant} if there exists $b_0 \\in B$ with $f(a) = b_0$ for all $a \\in A$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:domain-codomain",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "If $f$ is a function from $A$ to $B$, we write $f : A \\to B$, where $A$ is the \\emph{domain} $\\dom(f)$ and $B$ the \\emph{codomain} $\\cod(f)$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:fiber",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "The \\emph{fiber} of $f$ over $b \\in B$ is the preimage of the singleton: \\[ f^{-1}(\\{b\\}) \\;=\\; \\{\\, a \\in A \\mid f(a) = b \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:function",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "Let $A$ and $B$ be sets. A \\emph{function} from $A$ to $B$ is a relation $f \\subseteq A \\times B$ such that: \\begin{enumerate}[label=(\\roman*)] \\item (\\emph{Existence / left-total}) for every $a \\in A$, there exists $b \\in B$ with $(a,b) \\in f$; \\item (\\emph{Uniqueness / right-unique}) if $(a,b_1) \\in f$ and $(a,b_2) \\in f$ then $b_1 = b_2$. \\end{enumerat...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:graph",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "The \\emph{graph} of $f : A \\to B$ is: \\[ \\operatorname{Graph}(f) \\;:=\\; \\{\\, (a,b) \\in A \\times B \\mid b = f(a) \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:identity",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "The \\emph{identity function} on $A$ is $\\id_A : A \\to A$, $\\id_A(a) = a$. If $A \\subseteq B$, the \\emph{inclusion map} is $\\iota : A \\hookrightarrow B$, $\\iota(a) = a$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:image-function",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "The \\emph{image} (or \\emph{range}) of $f : A \\to B$ is: \\[ \\im(f) \\;:=\\; \\{\\, b \\in B \\mid \\exists a \\in A,\\ f(a)=b \\,\\}. \\] The image may be a proper subset of the codomain.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:image-set",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "For $S \\subseteq A$, the \\emph{image of $S$ under $f$} is: \\[ f(S) \\;:=\\; \\{\\, f(a) \\mid a \\in S \\,\\}. \\] Note $f(A) = \\im(f)$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:injective",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "$f : A \\to B$ is \\emph{injective} (one-to-one) if distinct elements of $A$ have distinct images: \\[ \\forall a_1,a_2 \\in A,\\; f(a_1)=f(a_2) \\;\\Longrightarrow\\; a_1=a_2. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:inverse",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "Let $f : A \\to B$ be bijective. The \\emph{inverse function} is $f^{-1} : B \\to A$ defined by: $f^{-1}(b) = a$ iff $f(a) = b$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:left-right-inverse",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "Let $f : A \\to B$. A \\emph{left inverse} of $f$ is a function $g : B \\to A$ with $g \\circ f = \\id_A$. A \\emph{right inverse} (or \\emph{section}) of $f$ is a function $h : B \\to A$ with $f \\circ h = \\id_B$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:preimage",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "For $T \\subseteq B$, the \\emph{preimage} (inverse image) of $T$ under $f$ is: \\[ f^{-1}(T) \\;:=\\; \\{\\, a \\in A \\mid f(a) \\in T \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:restriction",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "Let $f : A \\to B$ and $C \\subseteq A$. The \\emph{restriction} of $f$ to $C$ is $f|_C : C \\to B$, $f|_C(a) = f(a)$ for all $a \\in C$. Let $A \\subseteq A'$, and let $f : A \\to B$. A function $g : A' \\to B$ is an \\emph{extension} of $f$ if $g|_A = f$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:surjective",
+      "kind": "Definition",
+      "section": "functions",
+      "summary": "$f : A \\to B$ is \\emph{surjective} (onto) if every element of $B$ is achieved: \\[ \\forall b \\in B,\\; \\exists a \\in A \\text{ such that } f(a)=b. \\] Equivalently, $\\im(f) = B$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:comp-assoc",
+      "kind": "Theorem",
+      "section": "functions",
+      "summary": "For $f : A \\to B$, $g : B \\to C$, $h : C \\to D$: \\[ h \\circ (g \\circ f) = (h \\circ g) \\circ f. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:comp-id",
+      "kind": "Theorem",
+      "section": "functions",
+      "summary": "For any $f : A \\to B$: \\[ f \\circ \\id_A = f \\quad\\text{and}\\quad \\id_B \\circ f = f. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:comp-inj-surj",
+      "kind": "Theorem",
+      "section": "functions",
+      "summary": "Let $f : A \\to B$ and $g : B \\to C$. \\begin{enumerate}[label=(\\roman*)] \\item If $f$ and $g$ are injective, then $g \\circ f$ is injective. \\item If $f$ and $g$ are surjective, then $g \\circ f$ is surjective. \\item If $g \\circ f$ is injective, then $f$ is injective. \\item If $g \\circ f$ is surjective, then $g$ is surjective. \\end{enumerate}",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:image-ops",
+      "kind": "Theorem",
+      "section": "functions",
+      "summary": "Let $f : A \\to B$ and $S, T \\subseteq A$. Then \\begin{enumerate}[label=(\\roman*)] \\item $f(S \\cup T) = f(S) \\cup f(T)$, \\item $f(S \\cap T) \\subseteq f(S) \\cap f(T)$, \\item $f(S \\setminus T) \\supseteq f(S) \\setminus f(T)$. \\end{enumerate} Equality holds in (ii) and (iii) for all $S,T$ iff $f$ is injective.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:inverse-char",
+      "kind": "Theorem",
+      "section": "functions",
+      "summary": "Let $f : A \\to B$ be bijective. Then \\[ f^{-1} \\circ f = \\id_A \\quad\\text{and}\\quad f \\circ f^{-1} = \\id_B. \\] Conversely, a function admits an inverse iff it is bijective.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:inverse-comp",
+      "kind": "Theorem",
+      "section": "functions",
+      "summary": "Let $f : A \\to B$ and $g : B \\to C$ be bijective. Then $g \\circ f$ is bijective and \\[ (g \\circ f)^{-1} = f^{-1} \\circ g^{-1}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:one-sided",
+      "kind": "Theorem",
+      "section": "functions",
+      "summary": "Let $f : A \\to B$. \\begin{enumerate}[label=(\\roman*)] \\item $f$ has a left inverse $\\iff$ $f$ is injective (and $A \\neq \\varnothing$ or $A=B=\\varnothing$). \\item $f$ has a right inverse $\\iff$ $f$ is surjective. \\item If $f$ has both a left inverse $g$ and a right inverse $h$, then $g = h$ and $f$ is bijective. \\end{enumerate}",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:preimage-ops",
+      "kind": "Theorem",
+      "section": "functions",
+      "summary": "Let $f : A \\to B$ and $S, T \\subseteq B$. Then \\begin{enumerate}[label=(\\roman*)] \\item $f^{-1}(S \\cup T) = f^{-1}(S) \\cup f^{-1}(T)$, \\item $f^{-1}(S \\cap T) = f^{-1}(S) \\cap f^{-1}(T)$, \\item $f^{-1}(S \\setminus T) = f^{-1}(S) \\setminus f^{-1}(T)$, \\item $f^{-1}(S^c) = (f^{-1}(S))^c$. \\end{enumerate}",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "cor:complete-preorder-extension",
+      "kind": "Corollary",
+      "section": "order",
+      "summary": "For any nonempty set $X$ and preorder $\\succsim$ on $X$, there exists a complete preorder that is an extension of $\\succsim$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:boolean-lattice",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $(L, \\leq)$ be a bounded distributive lattice with top element $\\top$ and bottom element $\\bot$. An element $a' \\in L$ is a \\emph{complement} of $a \\in L$ if \\[ a \\vee a' = \\top \\quad \\text{and} \\quad a \\wedge a' = \\bot. \\] A \\emph{Boolean lattice} (or \\emph{Boolean algebra}) is a bounded distributive lattice in which every element has a complement.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:bounds",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $(A,\\leq)$ be an ordered set and $S \\subseteq A$. An element $u \\in A$ is an \\emph{upper bound} of $S$ if $\\forall s \\in S,\\; s \\leq u$. An element $\\ell \\in A$ is a \\emph{lower bound} of $S$ if $\\forall s \\in S,\\; \\ell \\leq s$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:chain",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "A subset $C \\subseteq A$ of a poset $(A,\\leq)$ is a \\emph{chain} if every pair of elements in $C$ is comparable. It is an \\emph{antichain} if no two distinct elements of $C$ are comparable.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:comparable",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "In an ordered set $(A,\\leq)$, elements $a,b \\in A$ are \\emph{comparable} if $a \\leq b$ or $b \\leq a$; they are \\emph{incomparable} if neither holds.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:complete-lattice",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "A lattice $(L, \\leq)$ is a \\emph{complete lattice} if every subset $S \\subseteq L$ (including the empty set and $L$ itself) has both a supremum and an infimum in $L$: \\[ \\forall S \\subseteq L,\\quad \\sup S \\in L \\;\\text{ and }\\; \\inf S \\in L. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:cover-relation",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $(A, \\leq)$ be a poset and $a, b \\in A$. We say $b$ \\emph{covers} $a$, written $a \\lessdot b$, if $a < b$ and there is no $c \\in A$ with $a < c < b$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:directed-set",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "A preorder $(I, \\leq)$ is \\emph{directed} (or a \\emph{directed set}) if every finite subset of $I$ has an upper bound in $I$: for all $i, j \\in I$ there exists $k \\in I$ with $i \\leq k$ and $j \\leq k$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:distributive-lattice",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "A lattice $(L, \\leq)$ is \\emph{distributive} if for all $a, b, c \\in L$: \\[ a \\wedge (b \\vee c) = (a \\wedge b) \\vee (a \\wedge c). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:dual-poset",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $(A, \\leq)$ be a poset. The \\emph{dual poset} is $(A, \\geq)$, where $a \\geq b$ is defined to mean $b \\leq a$. The dual is also written $(A, \\leq^{\\mathrm{op}})$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:f-indist",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $f : A \\to B$ and $\\leq_f$ be the induced order. Two elements $x, y \\in A$ are \\emph{$f$-indistinguishable}, written $x \\sim_f y$, if both $x \\leq_f y$ and $y \\leq_f x$, i.e.\\ if \\[ f(x) \\leq' f(y) \\quad \\text{and} \\quad f(y) \\leq' f(x). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:hasse",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "The \\emph{Hasse diagram} of a finite poset $(A, \\leq)$ is the directed graph whose vertices are the elements of $A$, with an upward edge from $a$ to $b$ whenever $a \\lessdot b$. Three graphical conventions apply: \\begin{enumerate}[label=(\\roman*)] \\item Reflexive loops ($a \\leq a$) are suppressed. \\item Edges implied by transitivity are suppressed: if $a ...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:induced-order",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $(B, \\leq')$ be a partially ordered set and let $f : A \\to B$ be a function. The \\emph{order induced by $f$} (or \\emph{pullback order along $f$}) is the relation $\\leq_f$ on $A$ defined by: \\[ x \\;\\leq_f\\; y \\;\\;\\Longleftrightarrow\\;\\; f(x) \\;\\leq'\\; f(y). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:initial-segment",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "A subset $I \\subseteq A$ is an \\emph{initial segment} of $(A,\\leq)$ if \\[ a \\in I \\text{ and } b \\leq a \\;\\Rightarrow\\; b \\in I. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:lattice",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "A \\emph{lattice} is a poset $(L, \\leq)$ in which every two-element subset $\\{a, b\\} \\subseteq L$ has both a supremum and an infimum in $L$. The supremum $\\sup\\{a,b\\}$ is called the \\emph{join} of $a$ and $b$, written $a \\vee b$. The infimum $\\inf\\{a,b\\}$ is called the \\emph{meet} of $a$ and $b$, written $a \\wedge b$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:linear-order",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "An ordered set $(A,\\leq)$ is a \\emph{total order} (or \\emph{linear order}) if every pair of elements is comparable: \\[ \\forall a,b \\in A,\\; a \\leq b \\lor b \\leq a. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:maximal-upper",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $\\succsim$ be a binary relation on $X$. \\begin{itemize} \\item The set of \\emph{maximal elements} of $X$ is \\[ \\mathrm{Max}(X, \\succsim) = \\{ x \\in X \\mid y \\succsim x \\text{ for no } y \\in X \\text{ with } y \\neq x \\}. \\] \\item The set of \\emph{upper bounds} of $X$ is \\[ M(X, \\succsim) = \\{ x \\in X \\mid x \\succsim y \\text{ for all } y \\in X \\}. \\] \\end...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:net",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $(I, \\leq)$ be a directed set and $X$ a set. A \\emph{net} in $X$ is a function $x : I \\to X$. The value at $i \\in I$ is written $x_i$, and the net is written $(x_i)_{i \\in I}$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:order-embedding",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $(A, \\leq)$ and $(B, \\leq')$ be partially ordered sets. A function $f : A \\to B$ is an \\emph{order embedding} if for all $x, y \\in A$: \\[ x \\;\\leq\\; y \\;\\;\\Longleftrightarrow\\;\\; f(x) \\;\\leq'\\; f(y). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:ordered-set",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "An \\emph{ordered set} (or \\emph{partially ordered set}, \\emph{poset}) is a pair $(A,\\leq)$ where $\\leq$ is a partial order on $A$: a relation that is reflexive, antisymmetric, and transitive.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:owc",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $\\succsim$ be a binary relation on $X$ with asymmetric part $\\succ$ and transitive closure $T(\\succsim)$. We say $\\succsim$ satisfies \\emph{only weak cycles} (OWC) if \\[ xT(\\succsim)y \\;\\Rightarrow\\; \\lnot(y \\succ x). \\] \\textbf{Proposition.} A binary relation $\\succsim$ on a nonempty set $X$ can be extended to a complete preorder if and only if it sa...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:preorder-extension",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $\\succsim$ be a preorder on $X$. A preorder $\\succsim'$ is an \\emph{extension} of $\\succsim$ if \\[ x \\succsim y \\;\\Rightarrow\\; x \\succsim' y, \\qquad x \\succ y \\;\\Rightarrow\\; x \\succ' y. \\] A \\emph{complete extension} is an extension that is also complete.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:strict-order",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $(A,\\leq)$ be an ordered set. The \\emph{strict order} $<$ is defined by: \\[ a < b \\;\\;\\Longleftrightarrow\\;\\; (a \\leq b \\land a \\neq b). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:suborder",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $(B, \\leq')$ be a partially ordered set and $S \\subseteq B$. The \\emph{suborder} on $S$ (or \\emph{induced order on $S$}) is the relation $\\leq'_S$ defined by: \\[ x \\;\\leq'_S\\; y \\;\\;\\Longleftrightarrow\\;\\; x \\leq' y, \\quad \\text{for } x, y \\in S. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:sup-inf",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "Let $(A, \\leq)$ be a poset and $S \\subseteq A$. The \\emph{supremum} (or \\emph{least upper bound}) of $S$, written $\\sup S$, is an element $u^* \\in A$ satisfying: \\begin{enumerate}[label=(\\roman*)] \\item $u^*$ is an upper bound of $S$: $\\forall s \\in S,\\ s \\leq u^*$; \\item $u^*$ is the \\emph{least} upper bound: if $u$ is \\emph{any} upper bound of $S$, then...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:sym-asym",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "For any binary relation $R$ on $X$, define: \\begin{itemize} \\item the \\emph{symmetric part}: $xIy \\iff xRy \\text{ and } yRx$ \\item the \\emph{asymmetric part}: $xPy \\iff xRy \\text{ but not } yRx$ \\end{itemize} Note that $R = P \\cup I$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:trans-closure",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "The \\emph{transitive closure} $T(R)$ of a binary relation $R$ on $X$ is the smallest transitive relation containing $R$: that is, $T(R)$ is transitive, $xRy \\Rightarrow xT(R)y$, and no strictly smaller relation is both transitive and contains $R$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:well-order",
+      "kind": "Definition",
+      "section": "order",
+      "summary": "An ordered set $(A,<)$ is \\emph{well-ordered} if every nonempty subset $S \\subseteq A$ has a least element: \\[ \\forall S \\subseteq A,\\; \\bigl(S \\neq \\varnothing \\;\\Rightarrow\\; \\exists m \\in S \\text{ s.t.\\ } m \\leq s \\;\\forall s \\in S\\bigr). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "prop:embedding-injective",
+      "kind": "Proposition",
+      "section": "order",
+      "summary": "Every order embedding $f : (A, \\leq) \\to (B, \\leq')$ is injective.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "prop:embedding-iso",
+      "kind": "Proposition",
+      "section": "order",
+      "summary": "If $f : (A, \\leq) \\to (B, \\leq')$ is an order embedding, then $f$ is an order isomorphism from $(A, \\leq)$ to the suborder $(f(A), \\leq'_{f(A)})$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "prop:induced-poset",
+      "kind": "Proposition",
+      "section": "order",
+      "summary": "Let $(B, \\leq')$ be a partially ordered set and $f : A \\to B$. The induced order $\\leq_f$ is a partial order on $A$ if and only if $f$ is injective.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "prop:induced-preorder",
+      "kind": "Proposition",
+      "section": "order",
+      "summary": "For any function $f : A \\to B$ and partial order $(B, \\leq')$, the relation $\\leq_f$ is a preorder on $A$: it is reflexive and transitive.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "prop:order-duality",
+      "kind": "Proposition",
+      "section": "order",
+      "summary": "Let $\\Phi$ be any first-order statement about a poset $(A, \\leq)$ expressed using only the relation $\\leq$. Let $\\Phi^*$ be the statement obtained from $\\Phi$ by replacing every occurrence of $\\leq$ with $\\geq$ (equivalently, working in the dual poset). Then: \\[ (A, \\leq) \\models \\Phi \\;\\;\\Longleftrightarrow\\;\\; (A, \\geq) \\models \\Phi. \\] In particular, i...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "prop:sup-char",
+      "kind": "Proposition",
+      "section": "order",
+      "summary": "Let $(A, \\leq)$ be a poset, $S \\subseteq A$, and $u^* \\in A$. Then $u^* = \\sup S$ if and only if: \\begin{enumerate}[label=(\\roman*)] \\item $u^*$ is an upper bound of $S$; and \\item for every $v \\in A$ with $v < u^*$, there exists $s \\in S$ with $v < s$. \\end{enumerate}",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "prop:sup-inf-duality",
+      "kind": "Proposition",
+      "section": "order",
+      "summary": "Let $(A, \\leq)$ be a poset and $S \\subseteq A$. Then $\\inf_{(A,\\leq)} S = \\sup_{(A,\\geq)} S$, where $(A,\\geq)$ denotes the dual poset. In particular: if every nonempty bounded-above subset of $(A,\\leq)$ has a supremum, then every nonempty bounded-below subset of $(A,\\leq)$ has an infimum.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "prop:sup-unique",
+      "kind": "Proposition",
+      "section": "order",
+      "summary": "Let $(A, \\leq)$ be a poset and $S \\subseteq A$. If $\\sup S$ exists, it is unique. If $\\inf S$ exists, it is unique.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:antisymmetric",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "A binary relation $R\\subseteq A\\times A$ is \\emph{antisymmetric} on $A$ if any two elements related in both directions must be equal: \\[ \\forall a,b\\in A,\\; \\bigl((a,b)\\in R\\land(b,a)\\in R\\bigr)\\rightarrow a=b. \\] In infix notation, this is $\\forall a,b\\in A,\\ ((aRb\\land bRa)\\rightarrow a=b)$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:asymmetric",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "A binary relation $R\\subseteq A\\times A$ is \\emph{asymmetric} on $A$ if every related pair excludes the reverse pair: \\[ \\forall a,b\\in A,\\; (a,b)\\in R \\rightarrow (b,a)\\notin R. \\] In infix notation, this is $\\forall a,b\\in A,\\ (aRb\\rightarrow\\neg(bRa))$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:cartesian-product-rel",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "The \\emph{Cartesian product} of sets $A$ and $B$ is: \\[ A \\times B \\;:=\\; \\{\\, (a,b) \\mid a \\in A \\text{ and } b \\in B \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:equivalence-rel",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "$R$ is an \\emph{equivalence relation} on $A$ if it is reflexive, symmetric, and transitive.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:irreflexive",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "A binary relation $R\\subseteq A\\times A$ is \\emph{irreflexive} on $A$ if no element of the domain is related to itself: \\[ \\forall a\\in A,\\ (a,a)\\notin R. \\] In infix notation, this is the condition $\\forall a\\in A,\\ \\neg(aRa)$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:ordered-pair",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "Let $a$ and $b$ be sets. The \\emph{ordered pair} $(a,b)$ is defined (Kuratowski) as \\[ (a,b) \\;:=\\; \\{\\{a\\}, \\{a,b\\}\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:partial-order",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "$R$ is a \\emph{partial order} on $A$ if it is reflexive, antisymmetric, and transitive.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:preorder",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "$R$ is a \\emph{preorder} on $A$ if it is reflexive and transitive.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:reflexive",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "A binary relation $R\\subseteq A\\times A$ is \\emph{reflexive} on $A$ if every element of the domain is related to itself: \\[ \\forall a\\in A,\\ (a,a)\\in R. \\] In infix notation, this is the condition $\\forall a\\in A,\\ aRa$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:relation",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "A \\emph{relation} from $A$ to $B$ is any subset $R \\subseteq A \\times B$. If $(a,b) \\in R$ we write $a \\, R \\, b$ and say ``$a$ is related to $b$.'' When $A = B$ we say $R$ is a \\emph{relation on $A$}.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:symmetric",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "A binary relation $R\\subseteq A\\times A$ is \\emph{symmetric} on $A$ if every related pair also appears in the reverse order: \\[ \\forall a,b\\in A,\\ (a,b)\\in R \\rightarrow (b,a)\\in R. \\] In infix notation, this is $\\forall a,b\\in A,\\ aRb\\rightarrow bRa$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:total-order",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "$R$ is a \\emph{total order} on $A$ if it is a partial order and is total.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:total-rel",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "$R$ is \\emph{total} (or \\emph{connex}) if every pair is comparable: \\[ \\forall a,b \\in A, \\; (a,b) \\in R \\lor (b,a) \\in R. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:transitive",
+      "kind": "Definition",
+      "section": "relations",
+      "summary": "A binary relation $R\\subseteq A\\times A$ is \\emph{transitive} on $A$ if any two composable related pairs collapse to a direct related pair: \\[ \\forall a,b,c\\in A,\\; \\bigl((a,b)\\in R\\land(b,c)\\in R\\bigr)\\rightarrow(a,c)\\in R. \\] In infix notation, this is $\\forall a,b,c\\in A,\\ ((aRb\\land bRc)\\rightarrow aRc)$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:ordered-pair-unique",
+      "kind": "Theorem",
+      "section": "relations",
+      "summary": "For any sets $a,b,c,d$, \\[ (a,b) = (c,d) \\;\\;\\Longleftrightarrow\\;\\; (a = c \\land b = d). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:algebra-of-sets",
+      "kind": "Definition",
+      "section": "set-systems",
+      "summary": "A collection $\\mathcal{A}$ of subsets of $X$ is an \\emph{algebra of sets} (or \\emph{Boolean algebra of sets}, or \\emph{field of sets}) if: \\begin{enumerate}[label=(\\roman*)] \\item $X \\in \\mathcal{A}$; \\item $A \\in \\mathcal{A}$ implies $A^c = X \\setminus A \\in \\mathcal{A}$; \\item $A, B \\in \\mathcal{A}$ implies $A \\cup B \\in \\mathcal{A}$. \\end{enumerate}",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:borel",
+      "kind": "Definition",
+      "section": "set-systems",
+      "summary": "Let $(X, \\tau)$ be a topological space. The \\emph{Borel $\\sigma$-algebra} on $X$, written $\\mathcal{B}(X)$, is the $\\sigma$-algebra generated by the open sets: \\[ \\mathcal{B}(X) \\;:=\\; \\sigma(\\tau). \\] Members of $\\mathcal{B}(X)$ are called \\emph{Borel sets}.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:generated-sigma",
+      "kind": "Definition",
+      "section": "set-systems",
+      "summary": "Let $\\mathcal{F}$ be any collection of subsets of $X$. The \\emph{$\\sigma$-algebra generated by $\\mathcal{F}$}, written $\\sigma(\\mathcal{F})$, is the smallest $\\sigma$-algebra on $X$ that contains $\\mathcal{F}$: \\[ \\sigma(\\mathcal{F}) \\;:=\\; \\bigcap\\,\\bigl\\{\\, \\mathcal{M} \\;\\bigm|\\; \\mathcal{M} \\text{ is a $\\sigma$-algebra on } X \\text{ and } \\mathcal{F} \\...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:ring-of-setsxxx",
+      "kind": "Definition",
+      "section": "set-systems",
+      "summary": "A collection $\\mathcal{R}$ of subsets of $X$ is a \\emph{ring of sets} if: \\begin{enumerate}[label=(\\roman*)] \\item $\\varnothing \\in \\mathcal{R}$; \\item $A, B \\in \\mathcal{R}$ implies $A \\cup B \\in \\mathcal{R}$; \\item $A, B \\in \\mathcal{R}$ implies $A \\setminus B \\in \\mathcal{R}$. \\end{enumerate}",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:semiring-of-sets",
+      "kind": "Definition",
+      "section": "set-systems",
+      "summary": "A collection $\\mathcal{S}$ of subsets of a set $X$ is a \\emph{semiring} if: \\begin{enumerate}[label=(\\roman*)] \\item $\\varnothing \\in \\mathcal{S}$; \\item $A, B \\in \\mathcal{S}$ implies $A \\cap B \\in \\mathcal{S}$; \\item for any $A, B \\in \\mathcal{S}$, the difference $A \\setminus B$ is a \\emph{finite disjoint union} of members of $\\mathcal{S}$: there exist ...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:sigma-algebra",
+      "kind": "Definition",
+      "section": "set-systems",
+      "summary": "A collection $\\mathcal{M}$ of subsets of $X$ is a \\emph{$\\sigma$-algebra} (or \\emph{$\\sigma$-field}) on $X$ if: \\begin{enumerate}[label=(\\roman*)] \\item $X \\in \\mathcal{M}$; \\item $A \\in \\mathcal{M}$ implies $A^c \\in \\mathcal{M}$; \\item if $\\{A_n\\}_{n \\in \\mathbb{N}}$ is a countable family in $\\mathcal{M}$, then $\\bigcup_{n=1}^{\\infty} A_n \\in \\mathcal{M}...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:topology-defn",
+      "kind": "Definition",
+      "section": "set-systems",
+      "summary": "A \\emph{topology} on a set $X$ is a collection $\\tau$ of subsets of $X$ satisfying: \\begin{enumerate}[label=(\\roman*)] \\item $\\varnothing \\in \\tau$ and $X \\in \\tau$; \\item if $\\{U_\\alpha\\}_{\\alpha \\in I}$ is any family of sets in $\\tau$ (indexed by any set $I$), then $\\bigcup_{\\alpha \\in I} U_\\alpha \\in \\tau$; \\item if $U_1, \\dots, U_n \\in \\tau$ (finitely...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:sigma-intersection",
+      "kind": "Theorem",
+      "section": "set-systems",
+      "summary": "Let $\\{\\mathcal{M}_\\alpha\\}_{\\alpha \\in I}$ be any family of $\\sigma$-algebras on $X$ (indexed by any set $I$). Then \\[ \\mathcal{M} \\;:=\\; \\bigcap_{\\alpha \\in I} \\mathcal{M}_\\alpha \\] is a $\\sigma$-algebra on $X$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "ax:choice",
+      "kind": "Axiom",
+      "section": "sets",
+      "summary": "For any family of nonempty sets, there exists a selection function. \\[ \\forall A \\, \\Bigl( (\\forall B \\in A \\, (B \\neq \\varnothing)) \\rightarrow \\exists f \\, \\forall B \\in A \\, (f(B) \\in B) \\Bigr). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "ax:empty-set",
+      "kind": "Axiom",
+      "section": "sets",
+      "summary": "There exists a set with no elements. \\[ \\exists A \\, \\forall x \\, (x \\notin A). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "ax:extensionality",
+      "kind": "Axiom",
+      "section": "sets",
+      "summary": "Two sets are equal iff they have the same elements. \\[ \\forall A \\, \\forall B \\, \\Bigl( A = B \\iff \\forall x \\, (x \\in A \\leftrightarrow x \\in B) \\Bigr). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "ax:foundation",
+      "kind": "Axiom",
+      "section": "sets",
+      "summary": "Every nonempty set has an $\\in$-minimal element. \\[ \\forall A \\, \\Bigl( A \\neq \\varnothing \\rightarrow \\exists x \\in A \\, (x \\cap A = \\varnothing) \\Bigr). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "ax:infinity",
+      "kind": "Axiom",
+      "section": "sets",
+      "summary": "There exists an infinite set. \\[ \\exists A \\, \\Bigl( \\varnothing \\in A \\land \\forall x \\, (x \\in A \\rightarrow x \\cup \\{x\\} \\in A) \\Bigr). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "ax:pairing",
+      "kind": "Axiom",
+      "section": "sets",
+      "summary": "For any two sets, there exists a set containing exactly those two sets. \\[ \\forall A \\, \\forall B \\, \\exists C \\, \\forall x \\, (x \\in C \\leftrightarrow (x = A \\lor x = B)). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "ax:power-set",
+      "kind": "Axiom",
+      "section": "sets",
+      "summary": "For any set, there exists a set of all its subsets. \\[ \\forall A \\, \\exists P \\, \\forall x \\, (x \\in P \\leftrightarrow x \\subseteq A). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "ax:replacement",
+      "kind": "Axiom",
+      "section": "sets",
+      "summary": "If $\\varphi(x,y)$ defines a functional relation on a set $A$, then the image of $A$ under $\\varphi$ is a set. For any formula $\\varphi(x,y)$, \\[ \\forall A\\, \\Bigl( \\bigl(\\forall x \\in A\\, \\exists! y\\, \\varphi(x,y)\\bigr) \\rightarrow \\exists B\\, \\forall y\\, \\bigl(y \\in B \\leftrightarrow \\exists x \\in A\\, \\varphi(x,y)\\bigr) \\Bigr). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "ax:separation",
+      "kind": "Axiom",
+      "section": "sets",
+      "summary": "Given a set and a property, there exists a subset containing exactly the elements satisfying that property. For any formula $\\varphi(x)$, \\[ \\forall A \\, \\exists B \\, \\forall x \\, (x \\in B \\leftrightarrow (x \\in A \\land \\varphi(x))). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "ax:union",
+      "kind": "Axiom",
+      "section": "sets",
+      "summary": "For any family of sets, there exists a set containing exactly the elements of those sets. \\[ \\forall A \\, \\exists U \\, \\forall x \\, \\bigl( x \\in U \\leftrightarrow \\exists B \\, (B \\in A \\land x \\in B) \\bigr). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "cor:set-duality",
+      "kind": "Corollary",
+      "section": "sets",
+      "summary": "Any identity involving $\\cup$, $\\cap$, $\\varnothing$, and $U$ that holds for all subsets of a universe remains valid when each operation and constant is replaced by its dual.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:cartesian-product",
+      "kind": "Definition",
+      "section": "sets",
+      "summary": "The \\emph{Cartesian product} of sets $A$ and $B$ is: \\[ A \\times B = \\{\\, (a,b) \\mid a \\in A \\text{ and } b \\in B \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:complement",
+      "kind": "Definition",
+      "section": "sets",
+      "summary": "Let $U$ be a fixed universe and $A \\subseteq U$. The \\emph{complement} of $A$ relative to $U$, denoted $A^c$, is: \\[ A^c \\;=\\; U \\setminus A. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:empty-set",
+      "kind": "Definition",
+      "section": "sets",
+      "summary": "The unique set with no elements is called the \\emph{empty set} and is denoted $\\varnothing$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:intersection",
+      "kind": "Definition",
+      "section": "sets",
+      "summary": "The \\emph{intersection} of $A$ and $B$, denoted $A \\cap B$, is the set of all elements common to both: \\[ A \\cap B \\;=\\; \\{\\, x \\mid x \\in A \\land x \\in B \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:power-set",
+      "kind": "Definition",
+      "section": "sets",
+      "summary": "The \\emph{power set} of $A$, denoted $\\mathcal{P}(A)$, is the set of all subsets of $A$: \\[ \\mathcal{P}(A) \\;:=\\; \\{\\, S \\mid S \\subseteq A \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:proper-subset",
+      "kind": "Definition",
+      "section": "sets",
+      "summary": "$A$ is a \\emph{proper subset} of $B$, written $A \\subsetneq B$, if $A \\subseteq B$ and $A \\neq B$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:set-difference",
+      "kind": "Definition",
+      "section": "sets",
+      "summary": "The \\emph{set difference} $A \\setminus B$ is the set of elements in $A$ but not in $B$: \\[ A \\setminus B \\;=\\; \\{\\, x \\mid x \\in A \\land x \\notin B \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:set-duality",
+      "kind": "Definition",
+      "section": "sets",
+      "summary": "Two set-theoretic expressions over a fixed universe $U$ are \\emph{dual} if one is obtained from the other by simultaneously replacing $\\cup \\leftrightarrow \\cap$ and $\\varnothing \\leftrightarrow U$, with complements unchanged.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:set-equality",
+      "kind": "Definition",
+      "section": "sets",
+      "summary": "Two sets $A$ and $B$ are \\emph{equal}, written $A = B$, if they have the same elements: \\[ A = B \\;\\;\\Longleftrightarrow\\;\\; \\forall x \\, (x \\in A \\leftrightarrow x \\in B). \\] Equivalently, $A = B \\iff (A \\subseteq B \\land B \\subseteq A)$.",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:set-membership",
+      "kind": "Definition",
+      "section": "sets",
+      "summary": "In axiomatic set theory, the notions of \\emph{set} and \\emph{membership} are \\emph{primitive}. \\begin{itemize} \\item A \\emph{set} is an object. \\item \\emph{Membership} is a binary relation, denoted by $\\in$, between objects. \\end{itemize} If $x$ is an object and $A$ is a set, the statement $x \\in A$ is read as ``$x$ is an element of $A$.'' No definition o...",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:subset",
+      "kind": "Definition",
+      "section": "sets",
+      "summary": "Let $A$ and $B$ be sets. We say $A$ is a \\emph{subset} of $B$, written $A \\subseteq B$, if every element of $A$ is also an element of $B$: \\[ A \\subseteq B \\;\\;\\Longleftrightarrow\\;\\; \\forall x \\, (x \\in A \\rightarrow x \\in B). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:sym-diff",
+      "kind": "Definition",
+      "section": "sets",
+      "summary": "The \\emph{symmetric difference} $A \\triangle B$ is the set of elements belonging to exactly one of $A$ and $B$: \\[ A \\triangle B \\;=\\; (A \\setminus B) \\cup (B \\setminus A) \\;=\\; \\{\\, x \\mid (x \\in A \\lor x \\in B) \\land x \\notin A \\cap B \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "def:union",
+      "kind": "Definition",
+      "section": "sets",
+      "summary": "The \\emph{union} of $A$ and $B$, denoted $A \\cup B$, is the set of all elements belonging to at least one of the two sets: \\[ A \\cup B \\;=\\; \\{\\, x \\mid x \\in A \\lor x \\in B \\,\\}. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:associativity",
+      "kind": "Theorem",
+      "section": "sets",
+      "summary": "Let $A,B,C$ be sets. Then \\[ (A \\cup B) \\cup C = A \\cup (B \\cup C) \\quad\\text{and}\\quad (A \\cap B) \\cap C = A \\cap (B \\cap C). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:commutativity",
+      "kind": "Theorem",
+      "section": "sets",
+      "summary": "Let $A,B$ be sets. Then \\[ A \\cup B = B \\cup A \\quad\\text{and}\\quad A \\cap B = B \\cap A. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:de-morgan",
+      "kind": "Theorem",
+      "section": "sets",
+      "summary": "Let $U$ be a universe and $A,B \\subseteq U$. Then \\[ (A \\cup B)^c = A^c \\cap B^c \\quad\\text{and}\\quad (A \\cap B)^c = A^c \\cup B^c. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:distributivity",
+      "kind": "Theorem",
+      "section": "sets",
+      "summary": "Let $A,B,C$ be sets. Then \\[ A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C), \\] \\[ A \\cup (B \\cap C) = (A \\cup B) \\cap (A \\cup C). \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:identity-absorption",
+      "kind": "Theorem",
+      "section": "sets",
+      "summary": "Let $A,B$ be sets and $U$ a universe with $A \\subseteq U$. Then \\[ A \\cup \\varnothing = A, \\qquad A \\cap U = A, \\] \\[ A \\cup (A \\cap B) = A, \\qquad A \\cap (A \\cup B) = A. \\]",
+      "title": "",
+      "volume": "i"
+    },
+    {
+      "chapter": "sets-relations-functions",
+      "id": "thm:involution",
+      "kind": "Theorem",
+      "section": "sets",
+      "summary": "For any $A \\subseteq U$, \\[ (A^c)^c = A. \\]",
+      "title": "",
+      "volume": "i"
+    }
+  ],
+  "label_universe_policy": {
+    "allowed_targets": "Only ids listed in label_universe may be used as new statement or proof dependency targets.",
+    "scope": "All Volume I nodes, including propositional logic, predicate logic, axiom systems, and sets-relations-functions."
+  },
+  "node": {
+    "chapter": "propositional-logic",
+    "id": "ax:propositional-implication-distribution",
+    "kind": "Axiom",
+    "section": "axioms",
+    "source": "notes/axioms/notes-axioms.tex",
+    "source_order": null,
+    "statement_display": "For all formulas $P$, $Q$, and $R$,\n\\[\n\\bigl(P \\Longrightarrow (Q \\Longrightarrow R)\\bigr)\n\\Longrightarrow\n\\bigl((P \\Longrightarrow Q) \\Longrightarrow (P \\Longrightarrow R)\\bigr).\n\\]",
+    "statement_tex": "For all formulas $P$, $Q$, and $R$,\n\\[\n\\bigl(P \\Longrightarrow (Q \\Longrightarrow R)\\bigr)\n\\Longrightarrow\n\\bigl((P \\Longrightarrow Q) \\Longrightarrow (P \\Longrightarrow R)\\bigr).\n\\]",
+    "title": "",
+    "volume": "i"
+  },
+  "packet_id": "prop-label-0032.ax:propositional-implication-distribution",
+  "prompt": {
+    "output_schema": "direct-label-selection-1",
+    "path": "reorder/concept-pipeline/prompts/label-selection.md"
+  },
+  "schema_version": "direct-label-selection-packet-1",
+  "scope": {
+    "chapter": "propositional-logic",
+    "name": "Propositional Logic",
+    "volume": "i"
+  },
+  "toc_layer": "proof-system-axioms",
+  "virtual_structures": [
+    {
+      "components": [
+        "def:propositional-language",
+        "def:truth-value-propositional-logic",
+        "def:propositional-variable",
+        "def:logical-connective",
+        "def:atomic-formula-propositional-logic",
+        "def:well-formed-formula",
+        "def:truth-assignment-propositional-logic",
+        "def:extended-truth-assignment-propositional-logic",
+        "def:satisfaction-propositional-formula"
+      ],
+      "dependency_policy": [
+        "This virtual structure is context for semantic decomposition, not a real graph node.",
+        "Do not emit floor:propositional-l-structure as a dependency.",
+        "Emit concrete component concepts only when they are needed to state the reviewed node and are not inherited through a nearer accepted dependency.",
+        "Use satisfaction/truth-assignment concepts for semantic nodes rather than repeatedly emitting every syntax ingredient."
+      ],
+      "description": "A propositional analogue of an L-structure: a classical interpretation for a propositional language, assigning truth values to atoms and extending recursively over formulas according to the connectives.",
+      "id": "floor:propositional-l-structure",
+      "status": "virtual",
+      "title": "Classical propositional L-structure"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "node": "def:propositional-equivalence-law",
+  "proof_dependencies": [],
+  "rejected_candidates": [],
+  "schema_version": "direct-label-selection-1",
+  "statement_dependency_adds": [
+    {
+      "confidence": "high",
+      "reason": "The schema is formed from formulas phi and psi in WFF.",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "confidence": "high",
+      "reason": "The definition uses logical equivalence notation and says instances have the same truth value under every truth assignment.",
+      "target": "def:logical-equivalence-propositional-logic"
+    },
+    {
+      "confidence": "medium",
+      "reason": "The statement explicitly quantifies over every truth assignment when explaining the meaning of an equivalence-law instance.",
+      "target": "def:truth-assignment-propositional-logic"
+    }
+  ],
+  "statement_dependency_removes": [],
+  "unchanged_existing_dependencies": [],
+  "uncertain": []
+}

@@ -1,0 +1,86 @@
+{
+  "ambient_environment": [
+    "propositional logic syntax",
+    "recursive formation of well-formed formulas"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "propositional language",
+      "emit_dependency": false,
+      "reason": "The recursive syntax is understood inside the propositional language floor.",
+      "source": "definitional_root"
+    }
+  ],
+  "instances": [
+    "formula phi",
+    "subformula psi",
+    "subformula chi",
+    "connective circ",
+    "connective count conn(phi)"
+  ],
+  "mathematical_structures": [
+    "well-formed formula",
+    "atomic formula",
+    "logical connective",
+    "recursive definition",
+    "natural-number-valued syntactic measure"
+  ],
+  "node": "def:connective-count-propositional-logic",
+  "not_dependencies": [
+    {
+      "concept": "truth assignment",
+      "reason": "Connective count is purely syntactic and does not use semantic valuation."
+    },
+    {
+      "concept": "satisfaction",
+      "reason": "No truth or satisfaction relation is used to state the recursive count."
+    }
+  ],
+  "operations_relations_predicates": [
+    "is atomic",
+    "is negation of a formula",
+    "is binary connective formation",
+    "addition",
+    "recursive evaluation of conn"
+  ],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "The connective count conn(phi) is recursively defined.",
+    "Atomic formulas have connective count 0.",
+    "Negations add 1 to the connective count of their subformula.",
+    "Binary connective formulas have count equal to the two subformula counts plus 1."
+  ],
+  "statement_conditions": [
+    "If phi is atomic.",
+    "If phi has the form neg psi.",
+    "If phi has the form psi circ chi."
+  ],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "high",
+      "reason": "The function conn is defined on formulas and recurses over formula formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "atomic formula",
+      "confidence": "high",
+      "reason": "The base case explicitly applies when phi is atomic.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "high",
+      "reason": "The definition counts negation and binary connectives in formula formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "recursive definition on formula structure",
+      "confidence": "medium",
+      "reason": "The definition is explicitly recursive over the formation cases of formulas.",
+      "role": "statement"
+    }
+  ]
+}

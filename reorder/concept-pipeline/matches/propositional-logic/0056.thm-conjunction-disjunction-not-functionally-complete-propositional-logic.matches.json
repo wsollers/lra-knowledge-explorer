@@ -1,0 +1,419 @@
+{
+  "matcher": {
+    "candidate_limit": 8,
+    "method": "deterministic id/title/summary token scoring",
+    "min_score": 20
+  },
+  "matches": [
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:logical-connective",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: connective, connectives, logical",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives, logical",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 320,
+          "section": "syntax",
+          "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:propositional-language",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: connective, connectives, logical",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 191,
+          "section": "syntax",
+          "summary": "A propositional language consists of: \\begin{enumerate} \\item a set \\(\\Prop\\) of propositional variables; \\item logical connectives; \\item punctuation symbols such as parentheses; \\item recursive formation rules specifying the well-formed formulas. \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:molecular-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: connective, connectives, logical",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 191,
+          "section": "syntax",
+          "summary": "A molecular formula is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula formed using at least one logical connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: connective, connectives, logical",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 176,
+          "section": "syntax",
+          "summary": "For a first-order language \\(\\mathcal L\\), a \\emph{formula} is an expression formed by the formula grammar of \\(\\mathcal L\\). The grammar starts from atomic formulas and closes under the logical connectives and quantifiers of the language.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:molecular",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: connective, connectives, logical",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 176,
+          "section": "syntax",
+          "summary": "A \\emph{molecular formula} is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula whose final formation step uses a logical connective or a quantifier.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nor-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "functional-completeness",
+          "summary": "The \\emph{NOR} connective, written \\(\\downarrow\\), is the binary connective defined by \\[ \\varphi\\downarrow\\psi\\equiv\\neg(\\varphi\\lor\\psi). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:main-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "syntax",
+          "summary": "The main connective of a molecular formula is the connective introduced at the final formation step: \\begin{enumerate} \\item for \\(\\neg\\varphi\\), the main connective is \\(\\neg\\); \\item for \\((\\varphi\\circ\\psi)\\), the main connective is \\(\\circ\\). \\end{enumerate} Atomic formulas have no main connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nand-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "functional-completeness",
+          "summary": "The \\emph{NAND} connective, written \\(\\uparrow\\), is the binary connective defined by \\[ \\varphi\\uparrow\\psi\\equiv\\neg(\\varphi\\land\\psi). \\]",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:connective-basis-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: basis, connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: basis, connective, connectives",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 380,
+          "section": "functional-completeness",
+          "summary": "A \\emph{connective basis} is a specified set \\(B\\) of propositional connectives allowed as primitive connectives for building formulas.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:connective-reduction-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: basis, connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 207,
+          "section": "functional-completeness",
+          "summary": "A \\emph{connective reduction} replaces a formula using one connective basis by a logically equivalent formula using a smaller or different connective basis.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:definable-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: basis, connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 207,
+          "section": "functional-completeness",
+          "summary": "Let \\(B\\) be a connective basis. A connective \\(\\circ\\) is \\emph{definable from} \\(B\\) if there is a formula built using only connectives from \\(B\\) whose truth function agrees with the truth function of \\(\\circ\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:incomplete-connective-set-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: basis, connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 207,
+          "section": "functional-completeness",
+          "summary": "A connective basis is \\emph{incomplete} if it is not functionally complete.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:functionally-complete-connective-set-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: basis, connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 207,
+          "section": "functional-completeness",
+          "summary": "A connective basis \\(B\\) is \\emph{functionally complete} if every Boolean function \\(f:\\mathbb{B}^n\\to\\mathbb{B}\\), for every \\(n\\ge 1\\), is represented by some formula using only connectives from \\(B\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:minimal-complete-basis-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: basis, connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: basis"
+          ],
+          "score": 199,
+          "section": "functional-completeness",
+          "summary": "A functionally complete connective basis \\(B\\) is \\emph{minimal complete} if no proper subset of \\(B\\) is functionally complete.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:logical-connective",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "syntax",
+          "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nor-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: connective, connectives",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: connective, connectives"
+          ],
+          "score": 135,
+          "section": "functional-completeness",
+          "summary": "The \\emph{NOR} connective, written \\(\\downarrow\\), is the binary connective defined by \\[ \\varphi\\downarrow\\psi\\equiv\\neg(\\varphi\\lor\\psi). \\]",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "connective basis",
+      "confidence": "medium",
+      "reason": "The statement refers to a connective basis.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "predicate-logic",
+          "id": "def:fol-completeness",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: completeness",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: completeness"
+          ],
+          "score": 100,
+          "section": "proof-theory",
+          "summary": "A proof system is \\emph{complete} if every valid formula is provable: \\[ \\Gamma \\models \\varphi \\implies \\Gamma \\vdash \\varphi. \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:proper-subformula",
+          "kind": "Definition",
+          "reasons": [
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 95,
+          "section": "syntax",
+          "summary": "Let \\(\\varphi\\in\\WFF\\). A \\emph{proper subformula} of \\(\\varphi\\) is a formula \\(\\psi\\) such that \\[ \\psi\\in\\operatorname{Sub}(\\varphi) \\quad\\text{and}\\quad \\psi\\neq\\varphi. \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:logical-connective",
+          "kind": "Definition",
+          "reasons": [
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 95,
+          "section": "syntax",
+          "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:well-formed-formula",
+          "kind": "Definition",
+          "reasons": [
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 95,
+          "section": "syntax",
+          "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:propositional-language",
+          "kind": "Definition",
+          "reasons": [
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 95,
+          "section": "syntax",
+          "summary": "A propositional language consists of: \\begin{enumerate} \\item a set \\(\\Prop\\) of propositional variables; \\item logical connectives; \\item punctuation symbols such as parentheses; \\item recursive formation rules specifying the well-formed formulas. \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:propositional-variable",
+          "kind": "Definition",
+          "reasons": [
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 95,
+          "section": "syntax",
+          "summary": "A propositional variable is an atomic symbol intended to stand for a proposition. A standard supply of variables is \\[ \\Prop=\\{P_1,P_2,P_3,\\ldots\\}. \\] Informally, variables are often written \\(P,Q,R,S,\\ldots\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:term-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 95,
+          "section": "normal-forms",
+          "summary": "A \\emph{term}, also called a \\emph{conjunction term}, is a finite conjunction of literals.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:clause-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 95,
+          "section": "normal-forms",
+          "summary": "A \\emph{clause} is a finite disjunction of literals.",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "functional completeness",
+      "confidence": "medium",
+      "reason": "The statement refers to functional completeness.",
+      "source_role": "statement"
+    }
+  ],
+  "node": "thm:conjunction-disjunction-not-functionally-complete-propositional-logic",
+  "schema_version": "concept-match-report-1",
+  "source_concepts": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0056.thm-conjunction-disjunction-not-functionally-complete-propositional-logic.concepts.json"
+}

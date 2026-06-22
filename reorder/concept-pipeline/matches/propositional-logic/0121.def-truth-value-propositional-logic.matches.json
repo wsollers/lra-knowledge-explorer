@@ -1,0 +1,156 @@
+{
+  "matcher": {
+    "candidate_limit": 8,
+    "method": "deterministic id/title/summary token scoring",
+    "min_score": 20
+  },
+  "matches": [
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:satisfaction-propositional-formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 315,
+          "section": "semantics",
+          "summary": "Let \\(v\\) be a truth assignment and let \\(\\varphi\\in\\WFF\\). We say that \\(v\\) satisfies \\(\\varphi\\), written \\[ v\\models\\varphi, \\] if \\[ \\widehat v(\\varphi)=\\mathrm{True}. \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:satisfiable-set-of-propositional-formulas",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 315,
+          "section": "compactness-preview",
+          "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is satisfiable if there exists a truth assignment \\(v\\) such that \\(v\\models\\Gamma\\). \\[ \\operatorname{SatisfiableSet}(\\Gamma) \\Longleftrightarrow \\exists v\\,\\bigl(\\operatorname{TruthAssignment}(v)\\land v\\models\\Gamma\\bigr). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:unsatisfiable-set-of-propositional-formulas",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 315,
+          "section": "compactness-preview",
+          "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is unsatisfiable if it is not satisfiable. \\[ \\operatorname{UnsatisfiableSet}(\\Gamma) \\Longleftrightarrow \\neg\\operatorname{SatisfiableSet}(\\Gamma). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:finite-subset-of-set-of-propositional-formulas",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 315,
+          "section": "compactness-preview",
+          "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). A finite subset of \\(\\Gamma\\) is a set \\(\\Delta\\subseteq\\Gamma\\) containing only finitely many formulas.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:finitely-satisfiable-set-of-propositional-formulas",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 315,
+          "section": "compactness-preview",
+          "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is finitely satisfiable if every finite subset of \\(\\Gamma\\) is satisfiable. \\[ \\operatorname{FinitelySatisfiableSet}(\\Gamma) \\Longleftrightarrow \\forall\\Delta\\,\\Bigl((\\Delta\\subseteq\\Gamma\\land \\Delta\\text{ is finite}) \\Rightarrow \\operatorname{SatisfiableSet}(\\Delta)\\Bigr). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "lem:constructor-injectivity-propositional-formulas",
+          "kind": "Lemma",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 300,
+          "section": "syntax",
+          "summary": "The propositional formula constructors are injective: \\begin{enumerate} \\item if \\(\\neg\\varphi=\\neg\\psi\\), then \\(\\varphi=\\psi\\); \\item if \\((\\varphi\\circ\\psi)=(\\alpha\\star\\beta)\\), then \\(\\varphi=\\alpha\\), \\(\\psi=\\beta\\), and \\(\\circ=\\star\\). \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "lem:constructor-disjointness-propositional-formulas",
+          "kind": "Lemma",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 300,
+          "section": "syntax",
+          "summary": "The three outer formation cases for propositional formulas are disjoint: \\begin{enumerate} \\item no propositional variable is a negation formula; \\item no propositional variable is a binary formula; \\item no negation formula is a binary formula. \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "thm:unique-syntax-tree-propositional-formulas",
+          "kind": "Theorem",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: formula, formulas, prop, propositional, wff",
+            "same chapter",
+            "id token overlap: formula, formulas, prop, propositional, wff"
+          ],
+          "score": 240,
+          "section": "syntax",
+          "summary": "Every propositional well-formed formula has a unique parse tree.",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "propositional formula",
+      "confidence": "low",
+      "reason": "Fallback concept for a propositional-logic node with no keyword match.",
+      "source_role": "statement"
+    }
+  ],
+  "node": "def:truth-value-propositional-logic",
+  "schema_version": "concept-match-report-1",
+  "source_concepts": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0121.def-truth-value-propositional-logic.concepts.json"
+}

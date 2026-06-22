@@ -1,0 +1,47 @@
+{
+  "ambient_environment": [
+    "propositional formula syntax",
+    "normal-form transformations"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "propositional variable",
+    "logical connective",
+    "term"
+  ],
+  "node": "def:maxterm-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Let \\(P_1,\\ldots,P_n\\) be a finite list of propositional variables. A\n\\emph{maxterm} relative to \\(P_1,\\ldots,P_n\\) is an\n\\hyperref[def:elementary-disjunction-propositional-logic]{elementary disjunction}\nthat contains exactly one of \\(P_i\\) or \\(\\neg P_i\\) for each\n\\(i=1,\\ldots,n\\)."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "propositional variable",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional variables.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "term",
+      "confidence": "medium",
+      "reason": "The statement refers to conjunction terms.",
+      "role": "statement"
+    }
+  ]
+}

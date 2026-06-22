@@ -1,0 +1,107 @@
+{
+  "audits": [
+    {
+      "bucket": "statement",
+      "concept": "well-formed formula",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:unique-syntax-tree-propositional-formulas",
+          "def:parse-tree-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:unique-syntax-tree-propositional-formulas",
+          "def:parse-tree-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_redundant_in_cumulative_graph",
+      "source_reason": "The statement refers to propositional formulas.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:well-formed-formula",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: formed, formula, formulas, well, wff",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: formed, formula, formulas, well, wff",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 420,
+        "section": "syntax",
+        "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "parse tree",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:unique-syntax-tree-propositional-formulas",
+          "def:parse-tree-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:unique-syntax-tree-propositional-formulas",
+          "def:parse-tree-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "source_reason": "The statement refers to formula parse trees.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:parse-tree-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: parse, tree",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: parse, tree",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 360,
+        "section": "syntax",
+        "summary": "The parse tree, or syntax tree, of a well-formed formula is the tree representation of its recursive construction: \\begin{enumerate} \\item a propositional variable is represented by a single leaf; \\item a formula \\(\\neg\\varphi\\) is represented by a root labeled \\(\\neg\\) with one child, the parse tree of \\(\\varphi\\); \\item a formula \\((\\varphi\\circ\\psi)\\) is represented by a root labeled \\(\\circ\\) with two children, the parse trees of \\(\\varphi\\) and \\(\\psi\\). \\end{enumerate}",
+        "title": "",
+        "volume": "i"
+      }
+    }
+  ],
+  "node": "thm:unique-syntax-tree-propositional-formulas",
+  "schema_version": "concept-graph-audit-1",
+  "source_match_report": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0133.thm-unique-syntax-tree-propositional-formulas.concepts.json"
+}

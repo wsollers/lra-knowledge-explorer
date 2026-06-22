@@ -1,0 +1,198 @@
+{
+  "audits": [
+    {
+      "bucket": "statement",
+      "concept": "well-formed formula",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "lem:proper-subformula-depth-propositional-logic",
+          "def:formula-depth-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "lem:proper-subformula-depth-propositional-logic",
+          "def:formula-depth-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_redundant_in_cumulative_graph",
+      "source_reason": "The statement refers to propositional formulas.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:well-formed-formula",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: formed, formula, formulas, well, wff",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: formed, formula, formulas, well, wff",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 420,
+        "section": "syntax",
+        "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "subformula",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "lem:proper-subformula-depth-propositional-logic",
+          "def:subformula-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "lem:proper-subformula-depth-propositional-logic",
+          "def:subformula-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "source_reason": "The statement refers to subformulas.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:subformula-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: subformula",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: subformula",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 340,
+        "section": "syntax",
+        "summary": "The set \\(\\operatorname{Sub}(\\varphi)\\) of subformulas of a formula \\(\\varphi\\) is defined recursively: \\begin{enumerate} \\item if \\(\\varphi\\) is atomic, then \\(\\operatorname{Sub}(\\varphi)=\\{\\varphi\\}\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\[ \\operatorname{Sub}(\\varphi)=\\{\\varphi\\}\\cup\\operatorname{Sub}(\\psi); \\] \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{Sub}(\\varphi)=\\{\\varphi\\}\\cup\\operatorname{Sub}(\\psi)\\cup\\operatorname{Sub}(\\chi). \\] \\end{enumerate}",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "proper subformula",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": []
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": []
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "candidate_ok_graph_hygiene_only",
+      "source_reason": "The statement refers to proper subformulas.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:proper-subformula",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: proper, subformula",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: proper, subformula",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 360,
+        "section": "syntax",
+        "summary": "Let \\(\\varphi\\in\\WFF\\). A \\emph{proper subformula} of \\(\\varphi\\) is a formula \\(\\psi\\) such that \\[ \\psi\\in\\operatorname{Sub}(\\varphi) \\quad\\text{and}\\quad \\psi\\neq\\varphi. \\]",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "formula depth",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "lem:proper-subformula-depth-propositional-logic",
+          "def:formula-depth-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "lem:proper-subformula-depth-propositional-logic",
+          "def:formula-depth-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "source_reason": "The statement refers to formula depth.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:formula-depth-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "token overlap: depth, formula, formulas, wff",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: depth, formula, formulas, wff",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 340,
+        "section": "syntax",
+        "summary": "The depth of a formula \\(\\varphi\\), denoted \\(\\operatorname{depth}(\\varphi)\\), is defined recursively: \\begin{enumerate} \\item if \\(\\varphi\\) is atomic, then \\(\\operatorname{depth}(\\varphi)=0\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{depth}(\\varphi)=\\operatorname{depth}(\\psi)+1\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{depth}(\\varphi)=\\max\\{\\operatorname{depth}(\\psi),\\operatorname{depth}(\\chi)\\}+1. \\] \\end{enumerate}",
+        "title": "",
+        "volume": "i"
+      }
+    }
+  ],
+  "node": "lem:proper-subformula-depth-propositional-logic",
+  "schema_version": "concept-graph-audit-1",
+  "source_match_report": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0128.lem-proper-subformula-depth-propositional-logic.concepts.json"
+}

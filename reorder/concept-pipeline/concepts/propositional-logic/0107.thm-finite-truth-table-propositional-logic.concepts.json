@@ -1,0 +1,54 @@
+{
+  "ambient_environment": [
+    "propositional logic semantics",
+    "classical propositional L-structure"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "classical propositional L-structure",
+      "emit_dependency": false,
+      "reason": "The virtual structure supplies semantic context but is not a graph node.",
+      "source": "virtual_structure"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "formula variable set",
+    "truth table"
+  ],
+  "node": "thm:finite-truth-table-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Every propositional formula has a finite truth table. More precisely, if \\(\\operatorname{Var}(\\varphi)\\) has \\(n\\) elements, then \\(\\varphi\\) has a truth table with \\(2^n\\) rows."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "formula variable set",
+      "confidence": "medium",
+      "reason": "The statement refers to the variable set of a formula.",
+      "role": "statement"
+    },
+    {
+      "concept": "truth table",
+      "confidence": "medium",
+      "reason": "The statement refers to truth tables.",
+      "role": "statement"
+    }
+  ]
+}

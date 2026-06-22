@@ -1,0 +1,50 @@
+{
+  "ambient_environment": [
+    "propositional logic syntax",
+    "propositional language"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "propositional language",
+      "emit_dependency": false,
+      "reason": "This is an accepted definitional root and ambient context for the syntax section.",
+      "source": "definitional_root"
+    }
+  ],
+  "instances": [
+    "atomic formula",
+    "well-formed formula",
+    "propositional variable"
+  ],
+  "mathematical_structures": [
+    "well-formed formula",
+    "propositional variable"
+  ],
+  "node": "def:atomic-formula-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [
+    "is a well-formed formula",
+    "is a propositional variable"
+  ],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "An atomic formula is exactly a well-formed formula that is a propositional variable."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "high",
+      "reason": "The definition states that an atomic formula is a kind of well-formed formula.",
+      "role": "statement"
+    },
+    {
+      "concept": "propositional variable",
+      "confidence": "high",
+      "reason": "The definition identifies atomic formulas with propositional variables.",
+      "role": "statement"
+    }
+  ]
+}

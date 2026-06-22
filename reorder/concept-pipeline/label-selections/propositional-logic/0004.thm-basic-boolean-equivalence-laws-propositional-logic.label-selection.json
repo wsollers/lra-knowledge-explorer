@@ -1,0 +1,31 @@
+{
+  "node": "thm:basic-boolean-equivalence-laws-propositional-logic",
+  "proof_dependencies": [],
+  "rejected_candidates": [],
+  "schema_version": "direct-label-selection-1",
+  "statement_dependency_adds": [
+    {
+      "confidence": "high",
+      "reason": "The theorem quantifies over formulas phi, psi, and chi in WFF.",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "confidence": "high",
+      "reason": "The listed laws use conjunction, disjunction, and negation connectives.",
+      "target": "def:logical-connective"
+    },
+    {
+      "confidence": "high",
+      "reason": "The theorem asserts that several pairs of formulas are logically equivalent.",
+      "target": "def:logical-equivalence-propositional-logic"
+    }
+  ],
+  "statement_dependency_removes": [],
+  "unchanged_existing_dependencies": [],
+  "uncertain": [
+    {
+      "concept_or_target": "truth-table proof",
+      "reason": "The packet does not name a proof method or prior theorem, so semantic proof support is left uncertain."
+    }
+  ]
+}

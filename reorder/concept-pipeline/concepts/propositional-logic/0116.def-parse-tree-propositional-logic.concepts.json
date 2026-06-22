@@ -1,0 +1,77 @@
+{
+  "ambient_environment": [
+    "propositional logic syntax",
+    "propositional language"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "propositional language",
+      "emit_dependency": false,
+      "reason": "Propositional language is an accepted definitional root and ambient context.",
+      "source": "definitional_root"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "propositional variable",
+    "logical connective",
+    "parse tree",
+    "recursive definition on formula structure"
+  ],
+  "node": "def:parse-tree-propositional-logic",
+  "not_dependencies": [
+    {
+      "concept": "truth assignment",
+      "reason": "This syntax-section node can usually be stated without semantic valuation."
+    },
+    {
+      "concept": "satisfaction",
+      "reason": "This syntax-section node can usually be stated without the satisfaction relation."
+    }
+  ],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "The parse tree, or syntax tree, of a well-formed formula is the tree representation of its recursive construction:\n\\begin{enumerate}\n\\item a propositional variable is represented by a single leaf;\n\\item a formula \\(\\neg\\varphi\\) is represented by a root labeled \\(\\neg\\) with one child, the parse tree of \\(\\varphi\\);\n\\item a formula \\((\\varphi\\circ\\psi)\\) is represented by a root labeled \\(\\circ\\) with two children, the parse trees of \\(\\varphi\\) and \\(\\psi\\).\n\\end{enumerate}"
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "propositional variable",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional variables.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "parse tree",
+      "confidence": "medium",
+      "reason": "The statement refers to formula parse trees.",
+      "role": "statement"
+    },
+    {
+      "concept": "recursive definition on formula structure",
+      "confidence": "medium",
+      "reason": "The statement is recursive over formula structure.",
+      "role": "statement"
+    }
+  ]
+}

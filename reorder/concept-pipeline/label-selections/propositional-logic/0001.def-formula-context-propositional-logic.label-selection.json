@@ -1,0 +1,21 @@
+{
+  "node": "def:formula-context-propositional-logic",
+  "proof_dependencies": [],
+  "rejected_candidates": [],
+  "schema_version": "direct-label-selection-1",
+  "statement_dependency_adds": [
+    {
+      "confidence": "high",
+      "reason": "The statement defines a formula context as a well-formed formula and substitutes well-formed formulas into it.",
+      "target": "def:well-formed-formula"
+    }
+  ],
+  "statement_dependency_removes": [],
+  "unchanged_existing_dependencies": [],
+  "uncertain": [
+    {
+      "concept_or_target": "placeholder occurrence",
+      "reason": "The statement uses placeholder notation, but no exact label for placeholders or contexts beyond this node appears in the supplied universe."
+    }
+  ]
+}

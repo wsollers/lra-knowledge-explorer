@@ -1,0 +1,159 @@
+{
+  "audits": [
+    {
+      "bucket": "statement",
+      "concept": "propositional variable",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:literal-propositional-logic",
+          "def:propositional-variable"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:literal-propositional-logic",
+          "def:propositional-variable"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "source_reason": "The statement refers to propositional variables.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:propositional-variable",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: prop, propositional, variable, variables",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: prop, propositional, variable, variables",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 400,
+        "section": "syntax",
+        "summary": "A propositional variable is an atomic symbol intended to stand for a proposition. A standard supply of variables is \\[ \\Prop=\\{P_1,P_2,P_3,\\ldots\\}. \\] Informally, variables are often written \\(P,Q,R,S,\\ldots\\).",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "logical connective",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:literal-propositional-logic",
+          "def:logical-connective"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:literal-propositional-logic",
+          "def:logical-connective"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "source_reason": "The statement uses propositional connectives or connective formation.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:logical-connective",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "token overlap: connective, connectives, logical",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: connective, connectives, logical",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 320,
+        "section": "syntax",
+        "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "literal",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": true,
+        "cycle_path_if_added": [
+          "def:literal-propositional-logic",
+          "def:literal-propositional-logic",
+          "def:literal-propositional-logic"
+        ],
+        "transitive_path": [
+          "def:literal-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": true,
+        "cycle_path_if_added": [
+          "def:literal-propositional-logic",
+          "def:literal-propositional-logic",
+          "def:literal-propositional-logic"
+        ],
+        "transitive_path": [
+          "def:literal-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_self_dependency",
+      "source_reason": "The statement refers to literals.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:literal-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: literal",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: literal",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 340,
+        "section": "normal-forms",
+        "summary": "A \\emph{literal} is either a propositional variable \\(P\\) or the negation \\(\\neg P\\) of a propositional variable \\(P\\).",
+        "title": "",
+        "volume": "i"
+      }
+    }
+  ],
+  "node": "def:literal-propositional-logic",
+  "schema_version": "concept-graph-audit-1",
+  "source_match_report": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0074.def-literal-propositional-logic.concepts.json"
+}

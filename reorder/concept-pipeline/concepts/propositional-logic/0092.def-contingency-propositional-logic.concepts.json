@@ -1,0 +1,61 @@
+{
+  "ambient_environment": [
+    "propositional logic semantics",
+    "classical propositional L-structure"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "classical propositional L-structure",
+      "emit_dependency": false,
+      "reason": "The virtual structure supplies semantic context but is not a graph node.",
+      "source": "virtual_structure"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "satisfaction",
+    "tautology",
+    "contingency"
+  ],
+  "node": "def:contingency-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "A formula \\(\\varphi\\in\\WFF\\) is a contingency if it is satisfiable but not a tautology."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "satisfaction",
+      "confidence": "medium",
+      "reason": "The statement uses semantic satisfaction.",
+      "role": "statement"
+    },
+    {
+      "concept": "tautology",
+      "confidence": "medium",
+      "reason": "The statement refers to tautologies.",
+      "role": "statement"
+    },
+    {
+      "concept": "contingency",
+      "confidence": "medium",
+      "reason": "The statement refers to contingencies.",
+      "role": "statement"
+    }
+  ]
+}

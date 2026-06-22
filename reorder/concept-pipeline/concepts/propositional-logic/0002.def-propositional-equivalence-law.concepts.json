@@ -1,0 +1,54 @@
+{
+  "ambient_environment": [
+    "propositional equivalence algebra",
+    "formula contexts"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "classical propositional L-structure",
+      "emit_dependency": false,
+      "reason": "The virtual structure supplies semantic context but is not a graph node.",
+      "source": "virtual_structure"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "truth assignment",
+    "logical equivalence"
+  ],
+  "node": "def:propositional-equivalence-law",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "A propositional equivalence law is a valid schema of the form\n\\[\n\\varphi\\equiv\\psi,\n\\]\nwith \\(\\varphi,\\psi\\in\\WFF\\). Each instance of the schema says that the two formulas have the same truth value under every truth assignment."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "truth assignment",
+      "confidence": "medium",
+      "reason": "The statement uses truth assignments or semantic evaluation.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical equivalence",
+      "confidence": "medium",
+      "reason": "The statement refers to logical equivalence.",
+      "role": "statement"
+    }
+  ]
+}

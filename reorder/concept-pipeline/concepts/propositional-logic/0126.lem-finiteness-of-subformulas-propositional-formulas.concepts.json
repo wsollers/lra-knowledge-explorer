@@ -1,0 +1,56 @@
+{
+  "ambient_environment": [
+    "propositional logic syntax",
+    "propositional language"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "propositional language",
+      "emit_dependency": false,
+      "reason": "Propositional language is an accepted definitional root and ambient context.",
+      "source": "definitional_root"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "subformula"
+  ],
+  "node": "lem:finiteness-of-subformulas-propositional-formulas",
+  "not_dependencies": [
+    {
+      "concept": "truth assignment",
+      "reason": "This syntax-section node can usually be stated without semantic valuation."
+    },
+    {
+      "concept": "satisfaction",
+      "reason": "This syntax-section node can usually be stated without the satisfaction relation."
+    }
+  ],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "For every \\(\\varphi\\in\\WFF\\), the set \\(\\operatorname{Sub}(\\varphi)\\) is finite."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "subformula",
+      "confidence": "medium",
+      "reason": "The statement refers to subformulas.",
+      "role": "statement"
+    }
+  ]
+}

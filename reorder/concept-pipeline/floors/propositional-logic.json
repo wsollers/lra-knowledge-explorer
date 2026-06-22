@@ -1,0 +1,52 @@
+{
+  "schema_version": "concept-pipeline-floor-1",
+  "scope": {
+    "volume": "i",
+    "chapter": "propositional-logic",
+    "name": "Propositional Logic"
+  },
+  "definitional_roots_policy": "Read from reorder/policy.json; do not treat scope floor entries as definitional roots.",
+  "virtual_structures": [
+    {
+      "id": "floor:propositional-l-structure",
+      "title": "Classical propositional L-structure",
+      "status": "virtual",
+      "description": "A propositional analogue of an L-structure: a classical interpretation for a propositional language, assigning truth values to atoms and extending recursively over formulas according to the connectives.",
+      "components": [
+        "def:propositional-language",
+        "def:truth-value-propositional-logic",
+        "def:propositional-variable",
+        "def:logical-connective",
+        "def:atomic-formula-propositional-logic",
+        "def:well-formed-formula",
+        "def:truth-assignment-propositional-logic",
+        "def:extended-truth-assignment-propositional-logic",
+        "def:satisfaction-propositional-formula"
+      ],
+      "dependency_policy": [
+        "This virtual structure is context for semantic decomposition, not a real graph node.",
+        "Do not emit floor:propositional-l-structure as a dependency.",
+        "Emit concrete component concepts only when they are needed to state the reviewed node and are not inherited through a nearer accepted dependency.",
+        "Use satisfaction/truth-assignment concepts for semantic nodes rather than repeatedly emitting every syntax ingredient."
+      ]
+    }
+  ],
+  "toc_layers": {
+    "syntax": "language-and-formula-formation",
+    "semantics": "propositional-l-structure-and-satisfaction",
+    "axioms": "proof-system-axioms",
+    "algebra": "equivalence-and-context-algebra",
+    "normal-forms": "formula-shape-and-normalization",
+    "functional-completeness": "truth-functions-and-expressive-power",
+    "argument-forms": "validity-rules-and-counterexamples",
+    "compactness-preview": "sets-of-formulas-and-finite-satisfiability"
+  },
+  "inference_policy": [
+    "First decompose the statement into ambient environment, structures, instances, operations, predicates, conditions, and assertions.",
+    "Then derive statement dependency concepts from the decomposition.",
+    "For theorems, lemmas, propositions, and corollaries, separately infer proof dependency concepts likely needed for proof but not for statement parsing.",
+    "Mark proof dependencies inferred without proof text as low or medium confidence unless the statement directly names the fact.",
+    "Do not emit dependencies for accepted definitional roots unless the reviewed statement is explicitly about that root.",
+    "Prefer nearest mathematical ancestors for shared ambient structure."
+  ]
+}

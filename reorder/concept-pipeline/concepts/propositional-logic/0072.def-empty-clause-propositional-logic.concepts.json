@@ -1,0 +1,40 @@
+{
+  "ambient_environment": [
+    "propositional formula syntax",
+    "normal-form transformations"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "literal",
+    "clause"
+  ],
+  "node": "def:empty-clause-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "The \\emph{empty clause} is the empty disjunction of literals. Semantically, it\nis read as false."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "literal",
+      "confidence": "medium",
+      "reason": "The statement refers to literals.",
+      "role": "statement"
+    },
+    {
+      "concept": "clause",
+      "confidence": "medium",
+      "reason": "The statement refers to clauses.",
+      "role": "statement"
+    }
+  ]
+}

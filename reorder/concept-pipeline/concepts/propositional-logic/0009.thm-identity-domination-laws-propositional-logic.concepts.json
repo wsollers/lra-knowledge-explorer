@@ -1,0 +1,47 @@
+{
+  "ambient_environment": [
+    "propositional equivalence algebra",
+    "formula contexts"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "logical connective",
+    "logical equivalence"
+  ],
+  "node": "thm:identity-domination-laws-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Let \\(\\top\\) be any tautological formula and let \\(\\bot\\) be any contradictory formula. Then for every \\(\\varphi\\in\\WFF\\):\n\\[\n\\varphi\\land\\top\\equiv\\varphi,\n\\qquad\n\\varphi\\lor\\bot\\equiv\\varphi,\n\\]\nand\n\\[\n\\varphi\\land\\bot\\equiv\\bot,\n\\qquad\n\\varphi\\lor\\top\\equiv\\top.\n\\]"
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical equivalence",
+      "confidence": "medium",
+      "reason": "The statement refers to logical equivalence.",
+      "role": "statement"
+    }
+  ]
+}

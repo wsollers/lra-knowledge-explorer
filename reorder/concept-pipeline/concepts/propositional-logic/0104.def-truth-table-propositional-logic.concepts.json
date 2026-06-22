@@ -1,0 +1,68 @@
+{
+  "ambient_environment": [
+    "propositional logic semantics",
+    "classical propositional L-structure"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "classical propositional L-structure",
+      "emit_dependency": false,
+      "reason": "The virtual structure supplies semantic context but is not a graph node.",
+      "source": "virtual_structure"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "propositional variable",
+    "logical connective",
+    "truth assignment",
+    "truth table"
+  ],
+  "node": "def:truth-table-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Let \\(\\varphi\\in\\WFF\\) and suppose the variables occurring in \\(\\varphi\\) are among \\(P_1,\\ldots,P_n\\). A truth table for \\(\\varphi\\) is a finite table with one row for each assignment\n\\[\na:\\{P_1,\\ldots,P_n\\}\\to\\mathbb{B}\n\\]\nand a final column recording the value of \\(\\widehat v(\\varphi)\\) for any truth assignment \\(v\\) extending \\(a\\)."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "propositional variable",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional variables.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "truth assignment",
+      "confidence": "medium",
+      "reason": "The statement uses truth assignments or semantic evaluation.",
+      "role": "statement"
+    },
+    {
+      "concept": "truth table",
+      "confidence": "medium",
+      "reason": "The statement refers to truth tables.",
+      "role": "statement"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "ambient_environment": [
+    "propositional formula syntax",
+    "normal-form transformations"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "logical equivalence",
+    "NOR connective",
+    "negation normal form"
+  ],
+  "node": "thm:existence-negation-normal-form-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "For every formula \\(\\varphi\\in\\WFF\\), there exists a formula \\(\\psi\\in\\WFF\\)\nsuch that \\(\\psi\\) is in negation normal form and\n\\[\n\\varphi\\equiv\\psi.\n\\]"
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical equivalence",
+      "confidence": "medium",
+      "reason": "The statement refers to logical equivalence.",
+      "role": "statement"
+    },
+    {
+      "concept": "NOR connective",
+      "confidence": "medium",
+      "reason": "The statement refers to NOR.",
+      "role": "statement"
+    },
+    {
+      "concept": "negation normal form",
+      "confidence": "medium",
+      "reason": "The statement refers to NNF.",
+      "role": "statement"
+    }
+  ]
+}

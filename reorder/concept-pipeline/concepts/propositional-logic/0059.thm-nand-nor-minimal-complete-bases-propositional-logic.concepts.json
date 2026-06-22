@@ -1,0 +1,47 @@
+{
+  "ambient_environment": [
+    "truth-functional semantics",
+    "connective bases"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "logical connective",
+    "NAND connective",
+    "NOR connective"
+  ],
+  "node": "thm:nand-nor-minimal-complete-bases-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "The one-connective bases \\(\\{\\uparrow\\}\\) and \\(\\{\\downarrow\\}\\) are minimal\ncomplete bases."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "NAND connective",
+      "confidence": "medium",
+      "reason": "The statement refers to NAND.",
+      "role": "statement"
+    },
+    {
+      "concept": "NOR connective",
+      "confidence": "medium",
+      "reason": "The statement refers to NOR.",
+      "role": "statement"
+    }
+  ]
+}

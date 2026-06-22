@@ -1,0 +1,54 @@
+{
+  "ambient_environment": [
+    "propositional validity",
+    "argument forms"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "classical propositional L-structure",
+      "emit_dependency": false,
+      "reason": "The virtual structure supplies semantic context but is not a graph node.",
+      "source": "virtual_structure"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "argument form",
+    "set of formulas"
+  ],
+  "node": "thm:truth-table-validity-test-argument-forms-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "An argument form \\((\\Gamma,\\varphi)\\) is valid if and only if no row of its truth\ntable makes every formula in \\(\\Gamma\\) true and \\(\\varphi\\) false."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "argument form",
+      "confidence": "medium",
+      "reason": "The statement refers to argument forms.",
+      "role": "statement"
+    },
+    {
+      "concept": "set of formulas",
+      "confidence": "medium",
+      "reason": "The statement refers to a set of formulas.",
+      "role": "statement"
+    }
+  ]
+}

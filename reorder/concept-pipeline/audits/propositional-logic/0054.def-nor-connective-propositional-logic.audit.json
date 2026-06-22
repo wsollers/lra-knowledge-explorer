@@ -1,0 +1,152 @@
+{
+  "audits": [
+    {
+      "bucket": "statement",
+      "concept": "logical connective",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:nor-connective-propositional-logic",
+          "def:logical-connective"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:nor-connective-propositional-logic",
+          "def:logical-connective"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "source_reason": "The statement uses propositional connectives or connective formation.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:logical-connective",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "token overlap: connective, connectives, logical",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: connective, connectives, logical",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 320,
+        "section": "syntax",
+        "summary": "The standard primitive propositional connectives are \\[ \\neg,\\qquad \\land,\\qquad \\lor,\\qquad \\to,\\qquad \\leftrightarrow. \\] The connective \\(\\neg\\) is unary. The connectives \\(\\land,\\lor,\\to,\\leftrightarrow\\) are binary.  \\[ \\begin{array}{c|c|c|c|c} \\text{Symbol} & \\text{Name} & \\text{Arity} & \\text{Formation pattern} & \\text{Reading}\\\\ \\hline \\neg & \\text{negation} & \\text{unary} & \\neg\\varphi & \\text{not }\\varphi\\\\ \\land & \\text{conjunction} & \\text{binary} & (\\varphi\\land\\psi) & \\varphi\\text{",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "logical equivalence",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": []
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": []
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "candidate_ok_graph_hygiene_only",
+      "source_reason": "The statement refers to logical equivalence.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:logical-equivalence-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "token overlap: equivalence, logical",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: equivalence, logical",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 300,
+        "section": "semantics",
+        "summary": "Formulas \\(\\varphi,\\psi\\in\\WFF\\) are logically equivalent, written \\[ \\varphi\\equiv\\psi, \\] if they have the same truth value under every truth assignment.",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "NOR connective",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": true,
+        "cycle_path_if_added": [
+          "def:nor-connective-propositional-logic",
+          "def:nor-connective-propositional-logic",
+          "def:nor-connective-propositional-logic"
+        ],
+        "transitive_path": [
+          "def:nor-connective-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": true,
+        "cycle_path_if_added": [
+          "def:nor-connective-propositional-logic",
+          "def:nor-connective-propositional-logic",
+          "def:nor-connective-propositional-logic"
+        ],
+        "transitive_path": [
+          "def:nor-connective-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_self_dependency",
+      "source_reason": "The statement refers to NOR.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:nor-connective-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: connective, connectives, nor",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: connective, connectives, nor",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 380,
+        "section": "functional-completeness",
+        "summary": "The \\emph{NOR} connective, written \\(\\downarrow\\), is the binary connective defined by \\[ \\varphi\\downarrow\\psi\\equiv\\neg(\\varphi\\lor\\psi). \\]",
+        "title": "",
+        "volume": "i"
+      }
+    }
+  ],
+  "node": "def:nor-connective-propositional-logic",
+  "schema_version": "concept-graph-audit-1",
+  "source_match_report": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0054.def-nor-connective-propositional-logic.concepts.json"
+}

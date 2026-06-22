@@ -1,0 +1,95 @@
+{
+  "node": "def:propositional-equivalence-law",
+  "proof_dependency_audits": [],
+  "schema_version": "direct-label-selection-audit-1",
+  "statement_add_audits": [
+    {
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:propositional-equivalence-law",
+          "def:well-formed-formula"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:propositional-equivalence-law",
+          "def:well-formed-formula"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "selection_confidence": "high",
+      "selection_reason": "The schema is formed from formulas phi and psi in WFF.",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:propositional-equivalence-law",
+          "def:logical-equivalence-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:propositional-equivalence-law",
+          "def:logical-equivalence-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "selection_confidence": "high",
+      "selection_reason": "The definition uses logical equivalence notation and says instances have the same truth value under every truth assignment.",
+      "target": "def:logical-equivalence-propositional-logic"
+    },
+    {
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:propositional-equivalence-law",
+          "def:logical-equivalence-propositional-logic",
+          "def:truth-assignment-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:propositional-equivalence-law",
+          "def:logical-equivalence-propositional-logic",
+          "def:truth-assignment-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_redundant_in_cumulative_graph",
+      "selection_confidence": "medium",
+      "selection_reason": "The statement explicitly quantifies over every truth assignment when explaining the meaning of an equivalence-law instance.",
+      "target": "def:truth-assignment-propositional-logic"
+    }
+  ],
+  "statement_remove_audits": [],
+  "uncertain": []
+}

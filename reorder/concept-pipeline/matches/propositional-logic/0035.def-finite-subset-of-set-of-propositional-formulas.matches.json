@@ -1,0 +1,432 @@
+{
+  "matcher": {
+    "candidate_limit": 8,
+    "method": "deterministic id/title/summary token scoring",
+    "min_score": 20
+  },
+  "matches": [
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:well-formed-formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formed, formula, formulas, well, wff",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 420,
+          "section": "syntax",
+          "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "thm:minimality-of-well-formed-formulas",
+          "kind": "Theorem",
+          "reasons": [
+            "concept phrase appears in id",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "id token overlap: formed, formula, formulas, well, wff"
+          ],
+          "score": 240,
+          "section": "syntax",
+          "summary": "Let \\(S\\) be a set of strings over the propositional alphabet. Suppose: \\begin{enumerate}   \\item \\(\\Prop\\subseteq S\\);   \\item if \\(\\varphi\\in S\\), then \\(\\neg\\varphi\\in S\\);   \\item if \\(\\varphi,\\psi\\in S\\) and         \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then         \\((\\varphi\\circ\\psi)\\in S\\). \\end{enumerate} Then \\[ \\WFF\\subseteq S. \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:atomic-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "syntax",
+          "summary": "An atomic formula is a well-formed formula that is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:formula-context-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "algebra",
+          "summary": "A formula context \\(C[-]\\) is a well-formed formula with one distinguished placeholder occurrence \\([-]\\). For each well-formed formula \\(\\varphi\\), the expression \\(C[\\varphi]\\) denotes the formula obtained by replacing the placeholder with \\(\\varphi\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nor-only-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "functional-completeness",
+          "summary": "A \\emph{NOR-only formula} is a well-formed formula whose only connective is \\(\\downarrow\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:molecular-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "syntax",
+          "summary": "A molecular formula is a well-formed formula that is not atomic. Equivalently, it is a well-formed formula formed using at least one logical connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:nand-only-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 239,
+          "section": "functional-completeness",
+          "summary": "A \\emph{NAND-only formula} is a well-formed formula whose only connective is \\(\\uparrow\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:open-formula-quantifiers",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: formed, formula, formulas, well, wff",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 224,
+          "section": "quantifiers",
+          "summary": "An \\emph{open formula} is a well-formed formula with at least one free variable.",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:finite-subset-of-set-of-propositional-formulas",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: finite, subset",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: finite, subset",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 360,
+          "section": "compactness-preview",
+          "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). A finite subset of \\(\\Gamma\\) is a set \\(\\Delta\\subseteq\\Gamma\\) containing only finitely many formulas.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:finitely-satisfiable-set-of-propositional-formulas",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: finite, subset",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 179,
+          "section": "compactness-preview",
+          "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is finitely satisfiable if every finite subset of \\(\\Gamma\\) is satisfiable. \\[ \\operatorname{FinitelySatisfiableSet}(\\Gamma) \\Longleftrightarrow \\forall\\Delta\\,\\Bigl((\\Delta\\subseteq\\Gamma\\land \\Delta\\text{ is finite}) \\Rightarrow \\operatorname{SatisfiableSet}(\\Delta)\\Bigr). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "sets-relations-functions",
+          "id": "def:directed-set",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: finite, subset",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 164,
+          "section": "order",
+          "summary": "A preorder $(I, \\leq)$ is \\emph{directed} (or a \\emph{directed set}) if every finite subset of $I$ has an upper bound in $I$: for all $i, j \\in I$ there exists $k \\in I$ with $i \\leq k$ and $j \\leq k$.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:finite-unsatisfiability-witness-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: finite, subset",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: finite"
+          ],
+          "score": 127,
+          "section": "compactness-preview",
+          "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). A subset \\(\\Delta\\subseteq\\Gamma\\) is a finite unsatisfiability witness for \\(\\Gamma\\) if \\(\\Delta\\) is finite and unsatisfiable. \\[ \\operatorname{FiniteUnsatisfiabilityWitness}(\\Delta,\\Gamma) \\Longleftrightarrow \\Delta\\subseteq\\Gamma\\land \\Delta\\text{ is finite}\\land \\operatorname{UnsatisfiableSet}(\\Delta). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "cor:finite-unsatisfiability-witness-contrapositive-propositional-logic",
+          "kind": "Corollary",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: finite, subset",
+            "same chapter",
+            "id token overlap: finite"
+          ],
+          "score": 112,
+          "section": "compactness-preview",
+          "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). If \\(\\Gamma\\) is satisfiable, then every finite subset of \\(\\Gamma\\) is satisfiable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:term-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: finite",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 107,
+          "section": "normal-forms",
+          "summary": "A \\emph{term}, also called a \\emph{conjunction term}, is a finite conjunction of literals.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:clause-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: finite",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 107,
+          "section": "normal-forms",
+          "summary": "A \\emph{clause} is a finite disjunction of literals.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:maxterm-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: finite",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 107,
+          "section": "normal-forms",
+          "summary": "Let \\(P_1,\\ldots,P_n\\) be a finite list of propositional variables. A \\emph{maxterm} relative to \\(P_1,\\ldots,P_n\\) is an \\hyperref[def:elementary-disjunction-propositional-logic]{elementary disjunction} that contains exactly one of \\(P_i\\) or \\(\\neg P_i\\) for each \\(i=1,\\ldots,n\\).",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "finite subset",
+      "confidence": "medium",
+      "reason": "The statement refers to finite subsets.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:formula-variable-set-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, set, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, set, wff"
+          ],
+          "score": 175,
+          "section": "syntax",
+          "summary": "The variable set \\(\\operatorname{Var}(\\varphi)\\) of a formula \\(\\varphi\\) is defined recursively: \\begin{enumerate} \\item if \\(\\varphi=P\\in\\Prop\\), then \\(\\operatorname{Var}(\\varphi)=\\{P\\}\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{Var}(\\varphi)=\\operatorname{Var}(\\psi)\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{Var}(\\varphi)=\\operatorname{Var}(\\psi)\\cup\\operatorname{Var}(\\chi). \\] \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:satisfiable-set-of-propositional-formulas",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, set, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, set, wff"
+          ],
+          "score": 175,
+          "section": "compactness-preview",
+          "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is satisfiable if there exists a truth assignment \\(v\\) such that \\(v\\models\\Gamma\\). \\[ \\operatorname{SatisfiableSet}(\\Gamma) \\Longleftrightarrow \\exists v\\,\\bigl(\\operatorname{TruthAssignment}(v)\\land v\\models\\Gamma\\bigr). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:unsatisfiable-set-of-propositional-formulas",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, set, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, set, wff"
+          ],
+          "score": 175,
+          "section": "compactness-preview",
+          "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is unsatisfiable if it is not satisfiable. \\[ \\operatorname{UnsatisfiableSet}(\\Gamma) \\Longleftrightarrow \\neg\\operatorname{SatisfiableSet}(\\Gamma). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:finite-subset-of-set-of-propositional-formulas",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, set, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, set, wff"
+          ],
+          "score": 175,
+          "section": "compactness-preview",
+          "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). A finite subset of \\(\\Gamma\\) is a set \\(\\Delta\\subseteq\\Gamma\\) containing only finitely many formulas.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:finitely-satisfiable-set-of-propositional-formulas",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, set, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, set, wff"
+          ],
+          "score": 175,
+          "section": "compactness-preview",
+          "summary": "Let \\(\\Gamma\\subseteq\\WFF\\). The set \\(\\Gamma\\) is finitely satisfiable if every finite subset of \\(\\Gamma\\) is satisfiable. \\[ \\operatorname{FinitelySatisfiableSet}(\\Gamma) \\Longleftrightarrow \\forall\\Delta\\,\\Bigl((\\Delta\\subseteq\\Gamma\\land \\Delta\\text{ is finite}) \\Rightarrow \\operatorname{SatisfiableSet}(\\Delta)\\Bigr). \\]",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:well-formed-formula",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, set, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 167,
+          "section": "syntax",
+          "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:formula-depth-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 155,
+          "section": "syntax",
+          "summary": "The depth of a formula \\(\\varphi\\), denoted \\(\\operatorname{depth}(\\varphi)\\), is defined recursively: \\begin{enumerate} \\item if \\(\\varphi\\) is atomic, then \\(\\operatorname{depth}(\\varphi)=0\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{depth}(\\varphi)=\\operatorname{depth}(\\psi)+1\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{depth}(\\varphi)=\\max\\{\\operatorname{depth}(\\psi),\\operatorname{depth}(\\chi)\\}+1. \\] \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:truth-function-induced-by-formula",
+          "kind": "Definition",
+          "reasons": [
+            "token overlap: formula, formulas, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 155,
+          "section": "semantics",
+          "summary": "Let \\(\\varphi\\in\\WFF\\), and suppose \\(\\operatorname{Var}(\\varphi)\\subseteq\\{P_1,\\ldots,P_n\\}\\). The truth function induced by \\(\\varphi\\) is the Boolean function \\[ f_\\varphi:\\mathbb{B}^n\\to\\mathbb{B} \\] defined by \\[ f_\\varphi(b_1,\\ldots,b_n)=\\widehat v(\\varphi), \\] where \\(v(P_i)=b_i\\) for each \\(i\\).",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "set of formulas",
+      "confidence": "medium",
+      "reason": "The statement refers to a set of formulas.",
+      "source_role": "statement"
+    }
+  ],
+  "node": "def:finite-subset-of-set-of-propositional-formulas",
+  "schema_version": "concept-match-report-1",
+  "source_concepts": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0035.def-finite-subset-of-set-of-propositional-formulas.concepts.json"
+}

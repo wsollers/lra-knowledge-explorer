@@ -1,0 +1,42 @@
+{
+  "node": "def:formula-context-propositional-logic",
+  "proof_dependency_audits": [],
+  "schema_version": "direct-label-selection-audit-1",
+  "statement_add_audits": [
+    {
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:formula-context-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:formula-context-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "selection_confidence": "high",
+      "selection_reason": "The statement defines a formula context as a well-formed formula and substitutes well-formed formulas into it.",
+      "target": "def:well-formed-formula"
+    }
+  ],
+  "statement_remove_audits": [],
+  "uncertain": [
+    {
+      "concept_or_target": "placeholder occurrence",
+      "reason": "The statement uses placeholder notation, but no exact label for placeholders or contexts beyond this node appears in the supplied universe."
+    }
+  ]
+}

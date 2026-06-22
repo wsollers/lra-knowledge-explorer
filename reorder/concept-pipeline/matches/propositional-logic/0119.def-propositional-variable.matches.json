@@ -1,0 +1,304 @@
+{
+  "matcher": {
+    "candidate_limit": 8,
+    "method": "deterministic id/title/summary token scoring",
+    "min_score": 20
+  },
+  "matches": [
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:propositional-variable",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: prop, propositional, variable, variables",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: prop, propositional, variable, variables",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 400,
+          "section": "syntax",
+          "summary": "A propositional variable is an atomic symbol intended to stand for a proposition. A standard supply of variables is \\[ \\Prop=\\{P_1,P_2,P_3,\\ldots\\}. \\] Informally, variables are often written \\(P,Q,R,S,\\ldots\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:propositional-language",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: prop, propositional, variable, variables",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: prop, propositional"
+          ],
+          "score": 219,
+          "section": "syntax",
+          "summary": "A propositional language consists of: \\begin{enumerate} \\item a set \\(\\Prop\\) of propositional variables; \\item logical connectives; \\item punctuation symbols such as parentheses; \\item recursive formation rules specifying the well-formed formulas. \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:literal-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: prop, propositional, variable, variables",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: prop, propositional"
+          ],
+          "score": 219,
+          "section": "normal-forms",
+          "summary": "A \\emph{literal} is either a propositional variable \\(P\\) or the negation \\(\\neg P\\) of a propositional variable \\(P\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:maxterm-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: prop, propositional, variable, variables",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: prop, propositional"
+          ],
+          "score": 219,
+          "section": "normal-forms",
+          "summary": "Let \\(P_1,\\ldots,P_n\\) be a finite list of propositional variables. A \\emph{maxterm} relative to \\(P_1,\\ldots,P_n\\) is an \\hyperref[def:elementary-disjunction-propositional-logic]{elementary disjunction} that contains exactly one of \\(P_i\\) or \\(\\neg P_i\\) for each \\(i=1,\\ldots,n\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:minterm-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: prop, propositional, variable, variables",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: prop, propositional"
+          ],
+          "score": 219,
+          "section": "normal-forms",
+          "summary": "Let \\(P_1,\\ldots,P_n\\) be a finite list of propositional variables. A \\emph{minterm} relative to \\(P_1,\\ldots,P_n\\) is an \\hyperref[def:elementary-conjunction-propositional-logic]{elementary conjunction} that contains exactly one of \\(P_i\\) or \\(\\neg P_i\\) for each \\(i=1,\\ldots,n\\).",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:parse-tree-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: prop, propositional, variable, variables",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: prop, propositional"
+          ],
+          "score": 219,
+          "section": "syntax",
+          "summary": "The parse tree, or syntax tree, of a well-formed formula is the tree representation of its recursive construction: \\begin{enumerate} \\item a propositional variable is represented by a single leaf; \\item a formula \\(\\neg\\varphi\\) is represented by a root labeled \\(\\neg\\) with one child, the parse tree of \\(\\varphi\\); \\item a formula \\((\\varphi\\circ\\psi)\\) is represented by a root labeled \\(\\circ\\) with two children, the parse trees of \\(\\varphi\\) and \\(\\psi\\). \\end{enumerate}",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:atomic-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: prop, propositional, variable, variables",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: prop, propositional"
+          ],
+          "score": 219,
+          "section": "syntax",
+          "summary": "An atomic formula is a well-formed formula that is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:negative-literal-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: prop, propositional, variable, variables",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: prop, propositional"
+          ],
+          "score": 219,
+          "section": "normal-forms",
+          "summary": "A \\emph{negative literal} is a literal of the form \\(\\neg P\\), where \\(P\\) is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "propositional variable",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional variables.",
+      "source_role": "statement"
+    },
+    {
+      "bucket": "statement",
+      "candidates": [
+        {
+          "chapter": "propositional-logic",
+          "id": "def:atomic-formula-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same chapter",
+            "definition preferred for concept label",
+            "id token overlap: atomic, formula, formulas, wff",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 400,
+          "section": "syntax",
+          "summary": "An atomic formula is a well-formed formula that is a propositional variable.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:atomic-formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in id",
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: atomic, formula, formulas, wff",
+            "id begins with concept phrase after kind prefix"
+          ],
+          "score": 385,
+          "section": "syntax",
+          "summary": "An \\emph{atomic formula} of a first-order language \\(\\mathcal L\\) is a string of the form \\[ P(t_1,\\ldots,t_n), \\] where \\(P\\) is an \\(n\\)-ary predicate symbol and \\(t_1,\\ldots,t_n\\) are terms.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:formula",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: formula, formulas, wff"
+          ],
+          "score": 212,
+          "section": "syntax",
+          "summary": "For a first-order language \\(\\mathcal L\\), a \\emph{formula} is an expression formed by the formula grammar of \\(\\mathcal L\\). The grammar starts from atomic formulas and closes under the logical connectives and quantifiers of the language.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "propositional-logic",
+          "id": "def:main-connective-propositional-logic",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same chapter",
+            "definition preferred for concept label"
+          ],
+          "score": 203,
+          "section": "syntax",
+          "summary": "The main connective of a molecular formula is the connective introduced at the final formation step: \\begin{enumerate} \\item for \\(\\neg\\varphi\\), the main connective is \\(\\neg\\); \\item for \\((\\varphi\\circ\\psi)\\), the main connective is \\(\\circ\\). \\end{enumerate} Atomic formulas have no main connective.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:wff-pred",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same volume",
+            "definition preferred for concept label",
+            "id token overlap: wff"
+          ],
+          "score": 196,
+          "section": "syntax",
+          "summary": "The set of \\emph{well-formed formulas} of a first-order language \\(\\mathcal L\\), denoted \\(\\mathsf{Form}_{\\mathcal L}\\), is the smallest set of strings satisfying: \\begin{enumerate} \\item every atomic formula is a well-formed formula; \\item if \\(\\varphi\\) is a well-formed formula, then       \\(\\neg\\varphi\\) is a well-formed formula; \\item if \\(\\varphi\\) and \\(\\psi\\) are well-formed formulas and       \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then       \\((\\varphi\\circ\\psi)\\) is a well-form",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "axiom-systems",
+          "id": "def:relation-symbol",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 188,
+          "section": "signatures",
+          "summary": "A \\emph{relation symbol}, or predicate symbol, is a non-logical symbol $R\\in\\mathcal{R}$ whose assigned arity determines how many terms it must take as inputs. If $\\operatorname{ar}(R)=n$, then $R$ is an $n$-ary formula constructor: it takes exactly $n$ terms and produces an atomic formula, hence something with a truth value rather than an object.",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:fol-satisfaction",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 188,
+          "section": "semantics",
+          "summary": "Let \\(\\mathcal M=\\langle D,I\\rangle\\) be a structure, let \\(s\\) be a variable assignment, and let \\(\\varphi\\) be a well-formed formula. The relation \\(\\mathcal M,s\\models\\varphi\\) is defined recursively by the usual clauses: atomic formulas are evaluated by term values and interpreted predicate relations; equality compares term values; connectives follow the truth conditions for \\(\\neg,\\land,\\lor,\\to,\\leftrightarrow\\); and \\[ \\mathcal M,s\\models\\forall x\\,\\psi \\Longleftrightarrow \\forall d\\in D\\",
+          "title": "",
+          "volume": "i"
+        },
+        {
+          "chapter": "predicate-logic",
+          "id": "def:predicate-symbol",
+          "kind": "Definition",
+          "reasons": [
+            "concept phrase appears in summary",
+            "token overlap: atomic, formula, formulas, wff",
+            "same volume",
+            "definition preferred for concept label"
+          ],
+          "score": 188,
+          "section": "syntax",
+          "summary": "For a first-order language \\(\\mathcal L\\), an \\(n\\)-ary \\emph{predicate symbol} is a non-logical symbol of arity \\(n\\geq 1\\). If \\(P\\) has arity \\(n\\), then it forms atomic formulas by the pattern \\[ P(t_1,\\ldots,t_n). \\]",
+          "title": "",
+          "volume": "i"
+        }
+      ],
+      "concept": "atomic formula",
+      "confidence": "medium",
+      "reason": "The statement distinguishes atomic formulas.",
+      "source_role": "statement"
+    }
+  ],
+  "node": "def:propositional-variable",
+  "schema_version": "concept-match-report-1",
+  "source_concepts": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0119.def-propositional-variable.concepts.json"
+}

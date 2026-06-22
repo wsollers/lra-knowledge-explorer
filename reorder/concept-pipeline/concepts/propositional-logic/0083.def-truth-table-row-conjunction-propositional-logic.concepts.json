@@ -1,0 +1,54 @@
+{
+  "ambient_environment": [
+    "propositional formula syntax",
+    "normal-form transformations"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "classical propositional L-structure",
+      "emit_dependency": false,
+      "reason": "The virtual structure supplies semantic context but is not a graph node.",
+      "source": "virtual_structure"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "propositional variable",
+    "logical connective",
+    "truth table"
+  ],
+  "node": "def:truth-table-row-conjunction-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Fix a finite variable list \\(P_1,\\ldots,P_n\\) and a row \\(r\\) of the\n\\hyperref[def:truth-table-propositional-logic]{truth table} for those\nvariables. The \\emph{truth-table row conjunction} for \\(r\\) is the conjunction\n\\[\nL_1\\land L_2\\land\\cdots\\land L_n,\n\\]\nwhere\n\\[\nL_i=\n\\begin{cases}\nP_i, & \\text{if row }r\\text{ makes }P_i\\text{ true},\\\\\n\\neg P_i, & \\text{if row }r\\text{ makes }P_i\\text{ false}.\n\\end{cases}\n\\]"
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "propositional variable",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional variables.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "truth table",
+      "confidence": "medium",
+      "reason": "The statement refers to truth tables.",
+      "role": "statement"
+    }
+  ]
+}

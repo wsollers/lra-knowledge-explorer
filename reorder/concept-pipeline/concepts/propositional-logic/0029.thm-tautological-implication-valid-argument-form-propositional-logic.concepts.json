@@ -1,0 +1,61 @@
+{
+  "ambient_environment": [
+    "propositional validity",
+    "argument forms"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "logical connective",
+    "tautology",
+    "argument form",
+    "set of formulas"
+  ],
+  "node": "thm:tautological-implication-valid-argument-form-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "Let \\(\\Gamma=\\{\\gamma_1,\\ldots,\\gamma_n\\}\\subseteq\\WFF\\) and let\n\\(\\varphi\\in\\WFF\\). If\n\\[\n(\\gamma_1\\land\\cdots\\land\\gamma_n)\\to\\varphi\n\\]\nis a tautology, then the argument form \\((\\Gamma,\\varphi)\\) is valid."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "tautology",
+      "confidence": "medium",
+      "reason": "The statement refers to tautologies.",
+      "role": "statement"
+    },
+    {
+      "concept": "argument form",
+      "confidence": "medium",
+      "reason": "The statement refers to argument forms.",
+      "role": "statement"
+    },
+    {
+      "concept": "set of formulas",
+      "confidence": "medium",
+      "reason": "The statement refers to a set of formulas.",
+      "role": "statement"
+    }
+  ]
+}

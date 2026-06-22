@@ -1,0 +1,68 @@
+{
+  "ambient_environment": [
+    "propositional validity",
+    "argument forms"
+  ],
+  "floor_mentions": [
+    {
+      "concept": "classical propositional L-structure",
+      "emit_dependency": false,
+      "reason": "The virtual structure supplies semantic context but is not a graph node.",
+      "source": "virtual_structure"
+    }
+  ],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "truth assignment",
+    "satisfaction",
+    "argument form",
+    "counterexample assignment",
+    "set of formulas"
+  ],
+  "node": "def:counterexample-assignment-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "A \\emph{counterexample assignment} to an argument form \\((\\Gamma,\\varphi)\\) is a\ntruth assignment that satisfies every premise in \\(\\Gamma\\) and does not satisfy\n\\(\\varphi\\)."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "truth assignment",
+      "confidence": "medium",
+      "reason": "The statement uses truth assignments or semantic evaluation.",
+      "role": "statement"
+    },
+    {
+      "concept": "satisfaction",
+      "confidence": "medium",
+      "reason": "The statement uses semantic satisfaction.",
+      "role": "statement"
+    },
+    {
+      "concept": "argument form",
+      "confidence": "medium",
+      "reason": "The statement refers to argument forms.",
+      "role": "statement"
+    },
+    {
+      "concept": "counterexample assignment",
+      "confidence": "medium",
+      "reason": "The statement refers to counterexample assignments.",
+      "role": "statement"
+    },
+    {
+      "concept": "set of formulas",
+      "confidence": "medium",
+      "reason": "The statement refers to a set of formulas.",
+      "role": "statement"
+    }
+  ]
+}

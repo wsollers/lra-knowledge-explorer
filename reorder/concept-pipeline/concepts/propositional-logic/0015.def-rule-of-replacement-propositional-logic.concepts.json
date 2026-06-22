@@ -1,0 +1,54 @@
+{
+  "ambient_environment": [
+    "propositional validity",
+    "argument forms"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "well-formed formula",
+    "subformula",
+    "logical equivalence",
+    "rule of replacement"
+  ],
+  "node": "def:rule-of-replacement-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "A \\emph{rule of replacement} is a schematic permission to replace a subformula\nby a logically equivalent formula inside a formula context."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "well-formed formula",
+      "confidence": "medium",
+      "reason": "The statement refers to propositional formulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "subformula",
+      "confidence": "medium",
+      "reason": "The statement refers to subformulas.",
+      "role": "statement"
+    },
+    {
+      "concept": "logical equivalence",
+      "confidence": "medium",
+      "reason": "The statement refers to logical equivalence.",
+      "role": "statement"
+    },
+    {
+      "concept": "rule of replacement",
+      "confidence": "medium",
+      "reason": "The statement refers to replacement rules.",
+      "role": "statement"
+    }
+  ]
+}

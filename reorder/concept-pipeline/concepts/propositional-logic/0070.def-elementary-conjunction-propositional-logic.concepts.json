@@ -1,0 +1,47 @@
+{
+  "ambient_environment": [
+    "propositional formula syntax",
+    "normal-form transformations"
+  ],
+  "floor_mentions": [],
+  "generator": {
+    "method": "deterministic bootstrap from statement keywords and current direct dependencies",
+    "preserves_existing_by_default": true
+  },
+  "instances": [],
+  "mathematical_structures": [
+    "logical connective",
+    "literal",
+    "term"
+  ],
+  "node": "def:elementary-conjunction-propositional-logic",
+  "not_dependencies": [],
+  "operations_relations_predicates": [],
+  "proof_dependency_concepts": [],
+  "questions": [],
+  "schema_version": "concept-decomposition-1",
+  "statement_assertions": [
+    "An \\emph{elementary conjunction} is a finite conjunction of\n\\hyperref[def:literal-propositional-logic]{literals}. That is, it is a\n\\hyperref[def:term-propositional-logic]{term} of the form\n\\[\nL_1\\land L_2\\land\\cdots\\land L_k,\n\\]\nwhere each \\(L_i\\) is a literal. The one-literal case is permitted."
+  ],
+  "statement_conditions": [],
+  "statement_dependency_concepts": [
+    {
+      "concept": "logical connective",
+      "confidence": "medium",
+      "reason": "The statement uses propositional connectives or connective formation.",
+      "role": "statement"
+    },
+    {
+      "concept": "literal",
+      "confidence": "medium",
+      "reason": "The statement refers to literals.",
+      "role": "statement"
+    },
+    {
+      "concept": "term",
+      "confidence": "medium",
+      "reason": "The statement refers to conjunction terms.",
+      "role": "statement"
+    }
+  ]
+}

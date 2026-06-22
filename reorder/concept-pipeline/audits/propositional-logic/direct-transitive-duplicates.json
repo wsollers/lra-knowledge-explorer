@@ -1,0 +1,1008 @@
+{
+  "duplicate_count": 109,
+  "duplicates": [
+    {
+      "alternate_path": [
+        "cor:finite-unsatisfiability-witness-contrapositive-propositional-logic",
+        "def:finitely-satisfiable-set-of-propositional-formulas",
+        "def:satisfiable-set-of-propositional-formulas"
+      ],
+      "source": "cor:finite-unsatisfiability-witness-contrapositive-propositional-logic",
+      "target": "def:satisfiable-set-of-propositional-formulas"
+    },
+    {
+      "alternate_path": [
+        "def:atomic-formula-propositional-logic",
+        "def:well-formed-formula",
+        "def:propositional-variable"
+      ],
+      "source": "def:atomic-formula-propositional-logic",
+      "target": "def:propositional-variable"
+    },
+    {
+      "alternate_path": [
+        "def:boolean-function-representation-propositional-logic",
+        "def:truth-function-induced-by-formula",
+        "def:boolean-function-propositional-logic"
+      ],
+      "source": "def:boolean-function-representation-propositional-logic",
+      "target": "def:boolean-function-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:boolean-function-representation-propositional-logic",
+        "def:truth-function-induced-by-formula",
+        "thm:unique-extension-truth-assignment-propositional-logic",
+        "def:truth-assignment-propositional-logic"
+      ],
+      "source": "def:boolean-function-representation-propositional-logic",
+      "target": "def:truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:canonical-conjunctive-normal-form-propositional-logic",
+        "def:truth-table-row-clause-propositional-logic",
+        "def:truth-table-propositional-logic"
+      ],
+      "source": "def:canonical-conjunctive-normal-form-propositional-logic",
+      "target": "def:truth-table-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:canonical-disjunctive-normal-form-propositional-logic",
+        "def:truth-table-row-conjunction-propositional-logic",
+        "def:truth-table-propositional-logic"
+      ],
+      "source": "def:canonical-disjunctive-normal-form-propositional-logic",
+      "target": "def:truth-table-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:connective-basis-propositional-logic",
+        "def:logical-connective",
+        "def:propositional-language"
+      ],
+      "source": "def:connective-basis-propositional-logic",
+      "target": "def:propositional-language"
+    },
+    {
+      "alternate_path": [
+        "def:connective-count-propositional-logic",
+        "def:parse-tree-propositional-logic",
+        "def:well-formed-formula"
+      ],
+      "source": "def:connective-count-propositional-logic",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:connective-reduction-propositional-logic",
+        "def:definable-connective-propositional-logic",
+        "def:connective-basis-propositional-logic"
+      ],
+      "source": "def:connective-reduction-propositional-logic",
+      "target": "def:connective-basis-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:contradiction-propositional-logic",
+        "def:satisfaction-propositional-formula",
+        "def:truth-assignment-propositional-logic"
+      ],
+      "source": "def:contradiction-propositional-logic",
+      "target": "def:truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:counterexample-assignment-propositional-logic",
+        "def:valid-argument-form-propositional-logic",
+        "def:satisfaction-propositional-formula",
+        "def:truth-assignment-propositional-logic"
+      ],
+      "source": "def:counterexample-assignment-propositional-logic",
+      "target": "def:truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:definable-connective-propositional-logic",
+        "def:truth-function-induced-by-formula",
+        "def:boolean-function-propositional-logic"
+      ],
+      "source": "def:definable-connective-propositional-logic",
+      "target": "def:boolean-function-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:elementary-conjunction-propositional-logic",
+        "def:term-propositional-logic",
+        "def:literal-propositional-logic"
+      ],
+      "source": "def:elementary-conjunction-propositional-logic",
+      "target": "def:literal-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:elementary-disjunction-propositional-logic",
+        "def:clause-propositional-logic",
+        "def:literal-propositional-logic"
+      ],
+      "source": "def:elementary-disjunction-propositional-logic",
+      "target": "def:literal-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:expressively-equivalent-connective-sets-propositional-logic",
+        "def:definable-connective-propositional-logic",
+        "def:connective-basis-propositional-logic"
+      ],
+      "source": "def:expressively-equivalent-connective-sets-propositional-logic",
+      "target": "def:connective-basis-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:extended-truth-assignment-propositional-logic",
+        "def:truth-assignment-propositional-logic",
+        "def:well-formed-formula"
+      ],
+      "source": "def:extended-truth-assignment-propositional-logic",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:finitely-satisfiable-set-of-propositional-formulas",
+        "def:satisfiable-set-of-propositional-formulas",
+        "def:truth-assignment-propositional-logic"
+      ],
+      "source": "def:finitely-satisfiable-set-of-propositional-formulas",
+      "target": "def:truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:formula-context-propositional-logic",
+        "def:subformula-propositional-logic",
+        "def:well-formed-formula"
+      ],
+      "source": "def:formula-context-propositional-logic",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:formula-depth-propositional-logic",
+        "def:parse-tree-propositional-logic",
+        "def:well-formed-formula"
+      ],
+      "source": "def:formula-depth-propositional-logic",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:formula-variable-set-propositional-logic",
+        "thm:structural-recursion-propositional-formulas",
+        "def:well-formed-formula"
+      ],
+      "source": "def:formula-variable-set-propositional-logic",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:functionally-complete-connective-set-propositional-logic",
+        "def:boolean-function-representation-propositional-logic",
+        "def:boolean-function-propositional-logic"
+      ],
+      "source": "def:functionally-complete-connective-set-propositional-logic",
+      "target": "def:boolean-function-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:incomplete-connective-set-propositional-logic",
+        "def:functionally-complete-connective-set-propositional-logic",
+        "def:boolean-function-propositional-logic"
+      ],
+      "source": "def:incomplete-connective-set-propositional-logic",
+      "target": "def:boolean-function-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:informal-proof-pattern-propositional-logic",
+        "def:valid-argument-form-propositional-logic",
+        "def:logical-consequence-propositional-logic"
+      ],
+      "source": "def:informal-proof-pattern-propositional-logic",
+      "target": "def:logical-consequence-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:logical-consequence-propositional-logic",
+        "def:satisfaction-set-propositional-logic",
+        "def:satisfaction-propositional-formula"
+      ],
+      "source": "def:logical-consequence-propositional-logic",
+      "target": "def:satisfaction-propositional-formula"
+    },
+    {
+      "alternate_path": [
+        "def:logical-equivalence-propositional-logic",
+        "thm:unique-extension-truth-assignment-propositional-logic",
+        "def:truth-assignment-propositional-logic"
+      ],
+      "source": "def:logical-equivalence-propositional-logic",
+      "target": "def:truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:main-connective-propositional-logic",
+        "def:molecular-formula-propositional-logic",
+        "def:logical-connective"
+      ],
+      "source": "def:main-connective-propositional-logic",
+      "target": "def:logical-connective"
+    },
+    {
+      "alternate_path": [
+        "def:main-connective-propositional-logic",
+        "def:molecular-formula-propositional-logic",
+        "def:well-formed-formula"
+      ],
+      "source": "def:main-connective-propositional-logic",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:minimal-complete-basis-propositional-logic",
+        "def:functionally-complete-connective-set-propositional-logic",
+        "def:connective-basis-propositional-logic"
+      ],
+      "source": "def:minimal-complete-basis-propositional-logic",
+      "target": "def:connective-basis-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:molecular-formula-propositional-logic",
+        "def:well-formed-formula",
+        "def:logical-connective"
+      ],
+      "source": "def:molecular-formula-propositional-logic",
+      "target": "def:logical-connective"
+    },
+    {
+      "alternate_path": [
+        "def:molecular-formula-propositional-logic",
+        "def:atomic-formula-propositional-logic",
+        "def:well-formed-formula"
+      ],
+      "source": "def:molecular-formula-propositional-logic",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:nand-connective-propositional-logic",
+        "def:truth-assignment-propositional-logic",
+        "def:well-formed-formula",
+        "def:logical-connective"
+      ],
+      "source": "def:nand-connective-propositional-logic",
+      "target": "def:logical-connective"
+    },
+    {
+      "alternate_path": [
+        "def:nand-only-formula-propositional-logic",
+        "def:nand-connective-propositional-logic",
+        "def:truth-assignment-propositional-logic",
+        "def:well-formed-formula"
+      ],
+      "source": "def:nand-only-formula-propositional-logic",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:negation-normal-form-propositional-logic",
+        "def:logical-equivalence-propositional-logic",
+        "def:truth-assignment-propositional-logic",
+        "def:well-formed-formula"
+      ],
+      "source": "def:negation-normal-form-propositional-logic",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:nnf-conversion-procedure-propositional-logic",
+        "thm:biconditional-equivalence-laws-propositional-logic",
+        "thm:conditional-equivalence-laws-propositional-logic"
+      ],
+      "source": "def:nnf-conversion-procedure-propositional-logic",
+      "target": "thm:conditional-equivalence-laws-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:nor-connective-propositional-logic",
+        "def:truth-assignment-propositional-logic",
+        "def:well-formed-formula",
+        "def:logical-connective"
+      ],
+      "source": "def:nor-connective-propositional-logic",
+      "target": "def:logical-connective"
+    },
+    {
+      "alternate_path": [
+        "def:nor-only-formula-propositional-logic",
+        "def:nor-connective-propositional-logic",
+        "def:truth-assignment-propositional-logic",
+        "def:well-formed-formula"
+      ],
+      "source": "def:nor-only-formula-propositional-logic",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:parse-tree-propositional-logic",
+        "thm:unique-decomposition-propositional-formulas",
+        "def:well-formed-formula"
+      ],
+      "source": "def:parse-tree-propositional-logic",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:proper-subformula",
+        "def:subformula-propositional-logic",
+        "def:well-formed-formula"
+      ],
+      "source": "def:proper-subformula",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:propositional-equivalence-law",
+        "def:logical-equivalence-propositional-logic",
+        "def:truth-assignment-propositional-logic",
+        "def:well-formed-formula"
+      ],
+      "source": "def:propositional-equivalence-law",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:rule-of-replacement-propositional-logic",
+        "thm:replacement-of-logical-equivalents-propositional-logic",
+        "def:formula-context-propositional-logic"
+      ],
+      "source": "def:rule-of-replacement-propositional-logic",
+      "target": "def:formula-context-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:rule-of-replacement-propositional-logic",
+        "thm:replacement-of-logical-equivalents-propositional-logic",
+        "def:logical-equivalence-propositional-logic"
+      ],
+      "source": "def:rule-of-replacement-propositional-logic",
+      "target": "def:logical-equivalence-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:satisfaction-propositional-formula",
+        "thm:unique-extension-truth-assignment-propositional-logic",
+        "def:truth-assignment-propositional-logic"
+      ],
+      "source": "def:satisfaction-propositional-formula",
+      "target": "def:truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:satisfaction-propositional-formula",
+        "def:truth-assignment-propositional-logic",
+        "def:well-formed-formula"
+      ],
+      "source": "def:satisfaction-propositional-formula",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:satisfaction-set-propositional-logic",
+        "def:satisfaction-propositional-formula",
+        "def:truth-assignment-propositional-logic"
+      ],
+      "source": "def:satisfaction-set-propositional-logic",
+      "target": "def:truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:satisfiable-formula-propositional-logic",
+        "def:satisfaction-propositional-formula",
+        "def:truth-assignment-propositional-logic"
+      ],
+      "source": "def:satisfiable-formula-propositional-logic",
+      "target": "def:truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:satisfiable-set-of-propositional-formulas",
+        "def:satisfaction-set-propositional-logic",
+        "def:truth-assignment-propositional-logic"
+      ],
+      "source": "def:satisfiable-set-of-propositional-formulas",
+      "target": "def:truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:subformula-propositional-logic",
+        "thm:unique-decomposition-propositional-formulas",
+        "def:well-formed-formula"
+      ],
+      "source": "def:subformula-propositional-logic",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "def:tautology-propositional-logic",
+        "def:satisfaction-propositional-formula",
+        "def:truth-assignment-propositional-logic"
+      ],
+      "source": "def:tautology-propositional-logic",
+      "target": "def:truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:truth-assignment-propositional-logic",
+        "def:well-formed-formula",
+        "def:propositional-variable"
+      ],
+      "source": "def:truth-assignment-propositional-logic",
+      "target": "def:propositional-variable"
+    },
+    {
+      "alternate_path": [
+        "def:truth-function-induced-by-formula",
+        "lem:coincidence-lemma-propositional-logic",
+        "def:formula-variable-set-propositional-logic"
+      ],
+      "source": "def:truth-function-induced-by-formula",
+      "target": "def:formula-variable-set-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:truth-function-induced-by-formula",
+        "lem:coincidence-lemma-propositional-logic",
+        "thm:unique-extension-truth-assignment-propositional-logic"
+      ],
+      "source": "def:truth-function-induced-by-formula",
+      "target": "thm:unique-extension-truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:truth-table-propositional-logic",
+        "lem:finiteness-of-variables-propositional-formulas",
+        "def:formula-variable-set-propositional-logic"
+      ],
+      "source": "def:truth-table-propositional-logic",
+      "target": "def:formula-variable-set-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:truth-table-row-clause-propositional-logic",
+        "def:truth-table-propositional-logic",
+        "def:formula-variable-set-propositional-logic"
+      ],
+      "source": "def:truth-table-row-clause-propositional-logic",
+      "target": "def:formula-variable-set-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:truth-table-row-conjunction-propositional-logic",
+        "def:truth-table-propositional-logic",
+        "def:formula-variable-set-propositional-logic"
+      ],
+      "source": "def:truth-table-row-conjunction-propositional-logic",
+      "target": "def:formula-variable-set-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "def:valid-argument-form-propositional-logic",
+        "def:logical-consequence-propositional-logic",
+        "def:satisfaction-propositional-formula"
+      ],
+      "source": "def:valid-argument-form-propositional-logic",
+      "target": "def:satisfaction-propositional-formula"
+    },
+    {
+      "alternate_path": [
+        "lem:coincidence-lemma-propositional-logic",
+        "def:formula-variable-set-propositional-logic",
+        "thm:structural-recursion-propositional-formulas",
+        "thm:structural-induction-propositional-formulas"
+      ],
+      "source": "lem:coincidence-lemma-propositional-logic",
+      "target": "thm:structural-induction-propositional-formulas"
+    },
+    {
+      "alternate_path": [
+        "lem:constructor-disjointness-propositional-formulas",
+        "def:main-connective-propositional-logic",
+        "def:molecular-formula-propositional-logic",
+        "def:atomic-formula-propositional-logic"
+      ],
+      "source": "lem:constructor-disjointness-propositional-formulas",
+      "target": "def:atomic-formula-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "lem:constructor-disjointness-propositional-formulas",
+        "def:atomic-formula-propositional-logic",
+        "def:well-formed-formula"
+      ],
+      "source": "lem:constructor-disjointness-propositional-formulas",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "lem:constructor-injectivity-propositional-formulas",
+        "def:well-formed-formula",
+        "def:logical-connective"
+      ],
+      "source": "lem:constructor-injectivity-propositional-formulas",
+      "target": "def:logical-connective"
+    },
+    {
+      "alternate_path": [
+        "lem:finiteness-of-variables-propositional-formulas",
+        "def:formula-variable-set-propositional-logic",
+        "thm:structural-recursion-propositional-formulas",
+        "thm:structural-induction-propositional-formulas"
+      ],
+      "source": "lem:finiteness-of-variables-propositional-formulas",
+      "target": "thm:structural-induction-propositional-formulas"
+    },
+    {
+      "alternate_path": [
+        "thm:absorption-laws-propositional-logic",
+        "thm:basic-boolean-equivalence-laws-propositional-logic",
+        "def:logical-equivalence-propositional-logic"
+      ],
+      "source": "thm:absorption-laws-propositional-logic",
+      "target": "def:logical-equivalence-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:affirming-consequent-invalid-propositional-logic",
+        "def:counterexample-assignment-propositional-logic",
+        "def:valid-argument-form-propositional-logic"
+      ],
+      "source": "thm:affirming-consequent-invalid-propositional-logic",
+      "target": "def:valid-argument-form-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:basic-boolean-equivalence-laws-propositional-logic",
+        "def:logical-equivalence-propositional-logic",
+        "thm:unique-extension-truth-assignment-propositional-logic"
+      ],
+      "source": "thm:basic-boolean-equivalence-laws-propositional-logic",
+      "target": "thm:unique-extension-truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:biconditional-equivalence-laws-propositional-logic",
+        "thm:conditional-equivalence-laws-propositional-logic",
+        "def:logical-equivalence-propositional-logic"
+      ],
+      "source": "thm:biconditional-equivalence-laws-propositional-logic",
+      "target": "def:logical-equivalence-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:canonical-conjunctive-normal-form-propositional-logic",
+        "def:canonical-conjunctive-normal-form-propositional-logic",
+        "def:conjunctive-normal-form-propositional-logic",
+        "def:logical-equivalence-propositional-logic"
+      ],
+      "source": "thm:canonical-conjunctive-normal-form-propositional-logic",
+      "target": "def:logical-equivalence-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:canonical-disjunctive-normal-form-propositional-logic",
+        "def:canonical-disjunctive-normal-form-propositional-logic",
+        "def:disjunctive-normal-form-propositional-logic",
+        "def:logical-equivalence-propositional-logic"
+      ],
+      "source": "thm:canonical-disjunctive-normal-form-propositional-logic",
+      "target": "def:logical-equivalence-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:conditional-equivalence-laws-propositional-logic",
+        "def:logical-equivalence-propositional-logic",
+        "thm:unique-extension-truth-assignment-propositional-logic"
+      ],
+      "source": "thm:conditional-equivalence-laws-propositional-logic",
+      "target": "thm:unique-extension-truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:conjunction-disjunction-not-functionally-complete-propositional-logic",
+        "def:incomplete-connective-set-propositional-logic",
+        "def:functionally-complete-connective-set-propositional-logic"
+      ],
+      "source": "thm:conjunction-disjunction-not-functionally-complete-propositional-logic",
+      "target": "def:functionally-complete-connective-set-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:constructive-dilemma-validity-propositional-logic",
+        "thm:disjunctive-syllogism-validity-propositional-logic",
+        "def:valid-argument-form-propositional-logic"
+      ],
+      "source": "thm:constructive-dilemma-validity-propositional-logic",
+      "target": "def:valid-argument-form-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:de-morgan-laws-propositional-logic",
+        "def:logical-equivalence-propositional-logic",
+        "thm:unique-extension-truth-assignment-propositional-logic"
+      ],
+      "source": "thm:de-morgan-laws-propositional-logic",
+      "target": "thm:unique-extension-truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:denying-antecedent-invalid-propositional-logic",
+        "def:counterexample-assignment-propositional-logic",
+        "def:valid-argument-form-propositional-logic"
+      ],
+      "source": "thm:denying-antecedent-invalid-propositional-logic",
+      "target": "def:valid-argument-form-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:destructive-dilemma-validity-propositional-logic",
+        "thm:modus-tollens-validity-propositional-logic",
+        "def:valid-argument-form-propositional-logic"
+      ],
+      "source": "thm:destructive-dilemma-validity-propositional-logic",
+      "target": "def:valid-argument-form-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:disjunctive-syllogism-validity-propositional-logic",
+        "def:valid-argument-form-propositional-logic",
+        "def:satisfaction-propositional-formula",
+        "def:truth-assignment-propositional-logic"
+      ],
+      "source": "thm:disjunctive-syllogism-validity-propositional-logic",
+      "target": "def:truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:distributive-laws-propositional-logic",
+        "def:logical-equivalence-propositional-logic",
+        "thm:unique-extension-truth-assignment-propositional-logic"
+      ],
+      "source": "thm:distributive-laws-propositional-logic",
+      "target": "thm:unique-extension-truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:dnf-representation-of-boolean-functions-propositional-logic",
+        "thm:canonical-disjunctive-normal-form-propositional-logic",
+        "def:canonical-disjunctive-normal-form-propositional-logic"
+      ],
+      "source": "thm:dnf-representation-of-boolean-functions-propositional-logic",
+      "target": "def:canonical-disjunctive-normal-form-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:dnf-representation-of-boolean-functions-propositional-logic",
+        "def:canonical-disjunctive-normal-form-propositional-logic",
+        "def:disjunctive-normal-form-propositional-logic"
+      ],
+      "source": "thm:dnf-representation-of-boolean-functions-propositional-logic",
+      "target": "def:disjunctive-normal-form-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:dnf-satisfiability-criterion-propositional-logic",
+        "def:disjunctive-normal-form-propositional-logic",
+        "def:satisfiable-formula-propositional-logic"
+      ],
+      "source": "thm:dnf-satisfiability-criterion-propositional-logic",
+      "target": "def:satisfiable-formula-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:existence-conjunctive-normal-form-propositional-logic",
+        "thm:existence-negation-normal-form-propositional-logic",
+        "def:negation-normal-form-propositional-logic"
+      ],
+      "source": "thm:existence-conjunctive-normal-form-propositional-logic",
+      "target": "def:negation-normal-form-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:existence-conjunctive-normal-form-propositional-logic",
+        "thm:existence-negation-normal-form-propositional-logic",
+        "thm:replacement-of-logical-equivalents-propositional-logic"
+      ],
+      "source": "thm:existence-conjunctive-normal-form-propositional-logic",
+      "target": "thm:replacement-of-logical-equivalents-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:existence-disjunctive-normal-form-propositional-logic",
+        "thm:existence-negation-normal-form-propositional-logic",
+        "def:negation-normal-form-propositional-logic"
+      ],
+      "source": "thm:existence-disjunctive-normal-form-propositional-logic",
+      "target": "def:negation-normal-form-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:existence-disjunctive-normal-form-propositional-logic",
+        "thm:existence-negation-normal-form-propositional-logic",
+        "thm:replacement-of-logical-equivalents-propositional-logic"
+      ],
+      "source": "thm:existence-disjunctive-normal-form-propositional-logic",
+      "target": "thm:replacement-of-logical-equivalents-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:existence-negation-normal-form-propositional-logic",
+        "thm:replacement-of-logical-equivalents-propositional-logic",
+        "lem:coincidence-lemma-propositional-logic",
+        "thm:structural-induction-propositional-formulas"
+      ],
+      "source": "thm:existence-negation-normal-form-propositional-logic",
+      "target": "thm:structural-induction-propositional-formulas"
+    },
+    {
+      "alternate_path": [
+        "thm:finite-truth-table-propositional-logic",
+        "def:truth-table-propositional-logic",
+        "lem:finiteness-of-variables-propositional-formulas"
+      ],
+      "source": "thm:finite-truth-table-propositional-logic",
+      "target": "lem:finiteness-of-variables-propositional-formulas"
+    },
+    {
+      "alternate_path": [
+        "thm:finite-unsatisfiability-witness-propositional-logic",
+        "def:unsatisfiable-set-of-propositional-formulas",
+        "def:satisfiable-set-of-propositional-formulas",
+        "def:satisfaction-set-propositional-logic"
+      ],
+      "source": "thm:finite-unsatisfiability-witness-propositional-logic",
+      "target": "def:satisfaction-set-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:finite-unsatisfiability-witness-propositional-logic",
+        "def:finite-unsatisfiability-witness-propositional-logic",
+        "def:unsatisfiable-set-of-propositional-formulas"
+      ],
+      "source": "thm:finite-unsatisfiability-witness-propositional-logic",
+      "target": "def:unsatisfiable-set-of-propositional-formulas"
+    },
+    {
+      "alternate_path": [
+        "thm:hypothetical-syllogism-validity-propositional-logic",
+        "def:valid-argument-form-propositional-logic",
+        "def:logical-consequence-propositional-logic"
+      ],
+      "source": "thm:hypothetical-syllogism-validity-propositional-logic",
+      "target": "def:logical-consequence-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:modus-ponens-validity-propositional-logic",
+        "def:valid-argument-form-propositional-logic",
+        "def:satisfaction-propositional-formula",
+        "def:truth-assignment-propositional-logic"
+      ],
+      "source": "thm:modus-ponens-validity-propositional-logic",
+      "target": "def:truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:nand-functionally-complete-propositional-logic",
+        "thm:negation-conjunction-functionally-complete-propositional-logic",
+        "thm:standard-connectives-functionally-complete-propositional-logic",
+        "def:functionally-complete-connective-set-propositional-logic"
+      ],
+      "source": "thm:nand-functionally-complete-propositional-logic",
+      "target": "def:functionally-complete-connective-set-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:nand-functionally-complete-propositional-logic",
+        "def:nand-only-formula-propositional-logic",
+        "def:nand-connective-propositional-logic"
+      ],
+      "source": "thm:nand-functionally-complete-propositional-logic",
+      "target": "def:nand-connective-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:nor-functionally-complete-propositional-logic",
+        "thm:negation-disjunction-functionally-complete-propositional-logic",
+        "thm:standard-connectives-functionally-complete-propositional-logic",
+        "def:functionally-complete-connective-set-propositional-logic"
+      ],
+      "source": "thm:nor-functionally-complete-propositional-logic",
+      "target": "def:functionally-complete-connective-set-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:nor-functionally-complete-propositional-logic",
+        "def:nor-only-formula-propositional-logic",
+        "def:nor-connective-propositional-logic"
+      ],
+      "source": "thm:nor-functionally-complete-propositional-logic",
+      "target": "def:nor-connective-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:normal-form-semantic-classification-propositional-logic",
+        "thm:canonical-conjunctive-normal-form-propositional-logic",
+        "def:canonical-conjunctive-normal-form-propositional-logic",
+        "def:conjunctive-normal-form-propositional-logic"
+      ],
+      "source": "thm:normal-form-semantic-classification-propositional-logic",
+      "target": "def:conjunctive-normal-form-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:normal-form-semantic-classification-propositional-logic",
+        "def:conjunctive-normal-form-propositional-logic",
+        "def:contradiction-propositional-logic"
+      ],
+      "source": "thm:normal-form-semantic-classification-propositional-logic",
+      "target": "def:contradiction-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:normal-form-semantic-classification-propositional-logic",
+        "thm:dnf-satisfiability-criterion-propositional-logic",
+        "def:disjunctive-normal-form-propositional-logic"
+      ],
+      "source": "thm:normal-form-semantic-classification-propositional-logic",
+      "target": "def:disjunctive-normal-form-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:normal-form-semantic-classification-propositional-logic",
+        "def:contingency-propositional-logic",
+        "def:satisfiable-formula-propositional-logic"
+      ],
+      "source": "thm:normal-form-semantic-classification-propositional-logic",
+      "target": "def:satisfiable-formula-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:normal-form-semantic-classification-propositional-logic",
+        "def:contingency-propositional-logic",
+        "def:tautology-propositional-logic"
+      ],
+      "source": "thm:normal-form-semantic-classification-propositional-logic",
+      "target": "def:tautology-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:propositional-compactness",
+        "def:finitely-satisfiable-set-of-propositional-formulas",
+        "def:satisfiable-set-of-propositional-formulas"
+      ],
+      "source": "thm:propositional-compactness",
+      "target": "def:satisfiable-set-of-propositional-formulas"
+    },
+    {
+      "alternate_path": [
+        "thm:replacement-of-logical-equivalents-propositional-logic",
+        "def:logical-equivalence-propositional-logic",
+        "thm:unique-extension-truth-assignment-propositional-logic"
+      ],
+      "source": "thm:replacement-of-logical-equivalents-propositional-logic",
+      "target": "thm:unique-extension-truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:replacement-rules-preserve-logical-equivalence-propositional-logic",
+        "def:rule-of-replacement-propositional-logic",
+        "thm:replacement-of-logical-equivalents-propositional-logic"
+      ],
+      "source": "thm:replacement-rules-preserve-logical-equivalence-propositional-logic",
+      "target": "thm:replacement-of-logical-equivalents-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:standard-connectives-functionally-complete-propositional-logic",
+        "thm:dnf-representation-of-boolean-functions-propositional-logic",
+        "def:disjunctive-normal-form-propositional-logic"
+      ],
+      "source": "thm:standard-connectives-functionally-complete-propositional-logic",
+      "target": "def:disjunctive-normal-form-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:structural-recursion-propositional-formulas",
+        "thm:structural-induction-propositional-formulas",
+        "def:well-formed-formula"
+      ],
+      "source": "thm:structural-recursion-propositional-formulas",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "thm:tautological-implication-valid-argument-form-propositional-logic",
+        "def:valid-argument-form-propositional-logic",
+        "def:logical-consequence-propositional-logic"
+      ],
+      "source": "thm:tautological-implication-valid-argument-form-propositional-logic",
+      "target": "def:logical-consequence-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:truth-table-validity-test-argument-forms-propositional-logic",
+        "thm:finite-truth-table-propositional-logic",
+        "def:truth-table-propositional-logic"
+      ],
+      "source": "thm:truth-table-validity-test-argument-forms-propositional-logic",
+      "target": "def:truth-table-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:truth-table-validity-test-argument-forms-propositional-logic",
+        "def:counterexample-assignment-propositional-logic",
+        "def:valid-argument-form-propositional-logic"
+      ],
+      "source": "thm:truth-table-validity-test-argument-forms-propositional-logic",
+      "target": "def:valid-argument-form-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:unique-decomposition-propositional-formulas",
+        "lem:constructor-disjointness-propositional-formulas",
+        "def:well-formed-formula"
+      ],
+      "source": "thm:unique-decomposition-propositional-formulas",
+      "target": "def:well-formed-formula"
+    },
+    {
+      "alternate_path": [
+        "thm:unique-extension-truth-assignment-propositional-logic",
+        "def:extended-truth-assignment-propositional-logic",
+        "def:truth-assignment-propositional-logic"
+      ],
+      "source": "thm:unique-extension-truth-assignment-propositional-logic",
+      "target": "def:truth-assignment-propositional-logic"
+    },
+    {
+      "alternate_path": [
+        "thm:unique-extension-truth-assignment-propositional-logic",
+        "def:extended-truth-assignment-propositional-logic",
+        "thm:structural-recursion-propositional-formulas"
+      ],
+      "source": "thm:unique-extension-truth-assignment-propositional-logic",
+      "target": "thm:structural-recursion-propositional-formulas"
+    },
+    {
+      "alternate_path": [
+        "thm:unique-extension-truth-assignment-propositional-logic",
+        "def:extended-truth-assignment-propositional-logic",
+        "thm:unique-decomposition-propositional-formulas"
+      ],
+      "source": "thm:unique-extension-truth-assignment-propositional-logic",
+      "target": "thm:unique-decomposition-propositional-formulas"
+    },
+    {
+      "alternate_path": [
+        "thm:unique-syntax-tree-propositional-formulas",
+        "def:parse-tree-propositional-logic",
+        "thm:unique-decomposition-propositional-formulas"
+      ],
+      "source": "thm:unique-syntax-tree-propositional-formulas",
+      "target": "thm:unique-decomposition-propositional-formulas"
+    }
+  ],
+  "schema_version": "concept-direct-duplicate-audit-1",
+  "scope": "propositional-logic"
+}

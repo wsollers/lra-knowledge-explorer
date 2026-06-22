@@ -1,0 +1,159 @@
+{
+  "audits": [
+    {
+      "bucket": "statement",
+      "concept": "well-formed formula",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:finite-truth-table-propositional-logic",
+          "def:truth-table-propositional-logic",
+          "def:formula-variable-set-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:finite-truth-table-propositional-logic",
+          "def:truth-table-propositional-logic",
+          "def:formula-variable-set-propositional-logic",
+          "def:well-formed-formula"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_redundant_in_cumulative_graph",
+      "source_reason": "The statement refers to propositional formulas.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:well-formed-formula",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: formed, formula, formulas, well, wff",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: formed, formula, formulas, well, wff",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 420,
+        "section": "syntax",
+        "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "formula variable set",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:finite-truth-table-propositional-logic",
+          "def:truth-table-propositional-logic",
+          "def:formula-variable-set-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:finite-truth-table-propositional-logic",
+          "def:truth-table-propositional-logic",
+          "def:formula-variable-set-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_redundant_in_cumulative_graph",
+      "source_reason": "The statement refers to the variable set of a formula.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:formula-variable-set-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "token overlap: formula, formulas, set, variable, variables, wff",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: formula, formulas, set, variable, variables, wff",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 380,
+        "section": "syntax",
+        "summary": "The variable set \\(\\operatorname{Var}(\\varphi)\\) of a formula \\(\\varphi\\) is defined recursively: \\begin{enumerate} \\item if \\(\\varphi=P\\in\\Prop\\), then \\(\\operatorname{Var}(\\varphi)=\\{P\\}\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{Var}(\\varphi)=\\operatorname{Var}(\\psi)\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{Var}(\\varphi)=\\operatorname{Var}(\\psi)\\cup\\operatorname{Var}(\\chi). \\] \\end{enumerate}",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "truth table",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:finite-truth-table-propositional-logic",
+          "def:truth-table-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "thm:finite-truth-table-propositional-logic",
+          "def:truth-table-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "source_reason": "The statement refers to truth tables.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:truth-table-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: boolean, table, truth",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: boolean, table, truth",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 380,
+        "section": "semantics",
+        "summary": "Let \\(\\varphi\\in\\WFF\\) and suppose the variables occurring in \\(\\varphi\\) are among \\(P_1,\\ldots,P_n\\). A truth table for \\(\\varphi\\) is a finite table with one row for each assignment \\[ a:\\{P_1,\\ldots,P_n\\}\\to\\mathbb{B} \\] and a final column recording the value of \\(\\widehat v(\\varphi)\\) for any truth assignment \\(v\\) extending \\(a\\).",
+        "title": "",
+        "volume": "i"
+      }
+    }
+  ],
+  "node": "thm:finite-truth-table-propositional-logic",
+  "schema_version": "concept-graph-audit-1",
+  "source_match_report": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0107.thm-finite-truth-table-propositional-logic.concepts.json"
+}

@@ -1,0 +1,151 @@
+{
+  "audits": [
+    {
+      "bucket": "statement",
+      "concept": "well-formed formula",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": true,
+        "cycle_path_if_added": [
+          "def:logical-connective",
+          "def:well-formed-formula",
+          "def:logical-connective"
+        ],
+        "transitive_path": []
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": true,
+        "cycle_path_if_added": [
+          "def:logical-connective",
+          "def:well-formed-formula",
+          "def:logical-connective"
+        ],
+        "transitive_path": []
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_cycle",
+      "source_reason": "The formation patterns use formulas phi and psi as inputs to build formulas.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:well-formed-formula",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: formed, formula, formulas, well, wff",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: formed, formula, formulas, well, wff",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 420,
+        "section": "syntax",
+        "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "arity",
+      "concept_confidence": "high",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": []
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": []
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "candidate_ok_graph_hygiene_only",
+      "source_reason": "The statement classifies each connective by unary or binary arity.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "axiom-systems",
+        "id": "def:arity",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: arity",
+          "same volume",
+          "definition preferred for concept label",
+          "id token overlap: arity",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 325,
+        "section": "signatures",
+        "summary": "Let $\\Sigma=(\\mathcal{C},\\mathcal{F},\\mathcal{R},\\operatorname{ar})$ be a first-order signature. The \\emph{arity function} is the map \\[   \\operatorname{ar}:\\mathcal{F}\\cup\\mathcal{R}\\to\\mathbb{Z}_{>0} \\] that assigns to each function or relation symbol the number of arguments it requires. When constants are treated as $0$-ary function symbols, the codomain is enlarged to include $0$.",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "propositional formula formation pattern",
+      "concept_confidence": "high",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": true,
+        "cycle_path_if_added": [
+          "def:logical-connective",
+          "def:formula-depth-propositional-logic",
+          "def:well-formed-formula",
+          "def:logical-connective"
+        ],
+        "transitive_path": []
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": true,
+        "cycle_path_if_added": [
+          "def:logical-connective",
+          "def:formula-depth-propositional-logic",
+          "def:well-formed-formula",
+          "def:logical-connective"
+        ],
+        "transitive_path": []
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_cycle",
+      "source_reason": "The table explicitly lists formation patterns for each connective.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:formula-depth-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "token overlap: formula, formulas, prop, propositional, wff",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: formula, formulas, prop, propositional, wff"
+        ],
+        "score": 195,
+        "section": "syntax",
+        "summary": "The depth of a formula \\(\\varphi\\), denoted \\(\\operatorname{depth}(\\varphi)\\), is defined recursively: \\begin{enumerate} \\item if \\(\\varphi\\) is atomic, then \\(\\operatorname{depth}(\\varphi)=0\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{depth}(\\varphi)=\\operatorname{depth}(\\psi)+1\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{depth}(\\varphi)=\\max\\{\\operatorname{depth}(\\psi),\\operatorname{depth}(\\chi)\\}+1. \\] \\end{enumerate}",
+        "title": "",
+        "volume": "i"
+      }
+    }
+  ],
+  "node": "def:logical-connective",
+  "schema_version": "concept-graph-audit-1",
+  "source_match_report": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0113.def-logical-connective.concepts.json"
+}

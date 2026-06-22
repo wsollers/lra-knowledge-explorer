@@ -1,0 +1,252 @@
+{
+  "audits": [
+    {
+      "bucket": "statement",
+      "concept": "well-formed formula",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:logical-consequence-propositional-logic",
+          "def:satisfaction-propositional-formula",
+          "def:well-formed-formula"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:logical-consequence-propositional-logic",
+          "def:satisfaction-propositional-formula",
+          "def:well-formed-formula"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_redundant_in_cumulative_graph",
+      "source_reason": "The statement refers to propositional formulas.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:well-formed-formula",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: formed, formula, formulas, well, wff",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: formed, formula, formulas, well, wff",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 420,
+        "section": "syntax",
+        "summary": "The set \\(\\WFF\\) of well-formed formulas is the smallest set of strings satisfying the following formation rules: \\begin{enumerate} \\item Every propositional variable \\(P\\in\\Prop\\) belongs to \\(\\WFF\\). \\item If \\(\\varphi\\in\\WFF\\), then \\(\\neg\\varphi\\in\\WFF\\). \\item If \\(\\varphi,\\psi\\in\\WFF\\) and \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then \\((\\varphi\\circ\\psi)\\in\\WFF\\). \\item No string is a well-formed formula unless it is obtained by finitely many applications of the previous clauses. \\",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "truth assignment",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:logical-consequence-propositional-logic",
+          "def:satisfaction-propositional-formula",
+          "def:truth-assignment-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:logical-consequence-propositional-logic",
+          "def:satisfaction-propositional-formula",
+          "def:truth-assignment-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_redundant_in_cumulative_graph",
+      "source_reason": "The statement uses truth assignments or semantic evaluation.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:truth-assignment-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: assignment, boolean, truth",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: assignment, boolean, truth",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 380,
+        "section": "semantics",
+        "summary": "A \\emph{truth assignment} is a function \\[ v:\\Prop\\to\\mathbb{B}. \\] For each propositional variable \\(P\\in\\Prop\\), the value \\(v(P)\\) is the truth value assigned to \\(P\\).",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "satisfaction",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:logical-consequence-propositional-logic",
+          "def:satisfaction-propositional-formula"
+        ]
+      },
+      "current": {
+        "already_direct": true,
+        "already_transitive": true,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": [
+          "def:logical-consequence-propositional-logic",
+          "def:satisfaction-propositional-formula"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_already_direct_in_cumulative_graph",
+      "source_reason": "The statement uses semantic satisfaction.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:satisfaction-propositional-formula",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "token overlap: satisfaction",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: satisfaction",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 280,
+        "section": "semantics",
+        "summary": "Let \\(v\\) be a truth assignment and let \\(\\varphi\\in\\WFF\\). We say that \\(v\\) satisfies \\(\\varphi\\), written \\[ v\\models\\varphi, \\] if \\[ \\widehat v(\\varphi)=\\mathrm{True}. \\]",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "logical consequence",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": true,
+        "cycle_path_if_added": [
+          "def:logical-consequence-propositional-logic",
+          "def:logical-consequence-propositional-logic",
+          "def:logical-consequence-propositional-logic"
+        ],
+        "transitive_path": [
+          "def:logical-consequence-propositional-logic"
+        ]
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": true,
+        "creates_cycle": true,
+        "cycle_path_if_added": [
+          "def:logical-consequence-propositional-logic",
+          "def:logical-consequence-propositional-logic",
+          "def:logical-consequence-propositional-logic"
+        ],
+        "transitive_path": [
+          "def:logical-consequence-propositional-logic"
+        ]
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "reject_self_dependency",
+      "source_reason": "The statement refers to logical consequence.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:logical-consequence-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "concept phrase appears in id",
+          "concept phrase appears in summary",
+          "token overlap: consequence, logical",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: consequence, logical",
+          "id begins with concept phrase after kind prefix"
+        ],
+        "score": 360,
+        "section": "semantics",
+        "summary": "Let \\(\\Gamma\\subseteq\\WFF\\) and \\(\\varphi\\in\\WFF\\). The formula \\(\\varphi\\) is a logical consequence of \\(\\Gamma\\), written \\[ \\Gamma\\models\\varphi, \\] if every truth assignment satisfying \\(\\Gamma\\) also satisfies \\(\\varphi\\).",
+        "title": "",
+        "volume": "i"
+      }
+    },
+    {
+      "bucket": "statement",
+      "concept": "set of formulas",
+      "concept_confidence": "medium",
+      "cumulative": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": []
+      },
+      "current": {
+        "already_direct": false,
+        "already_transitive": false,
+        "creates_cycle": false,
+        "cycle_path_if_added": [],
+        "transitive_path": []
+      },
+      "missing_source": false,
+      "missing_target": false,
+      "recommendation": "candidate_ok_graph_hygiene_only",
+      "source_reason": "The statement refers to a set of formulas.",
+      "source_role": "statement",
+      "top_candidate": {
+        "chapter": "propositional-logic",
+        "id": "def:formula-variable-set-propositional-logic",
+        "kind": "Definition",
+        "reasons": [
+          "token overlap: formula, formulas, set, wff",
+          "same chapter",
+          "definition preferred for concept label",
+          "id token overlap: formula, formulas, set, wff"
+        ],
+        "score": 175,
+        "section": "syntax",
+        "summary": "The variable set \\(\\operatorname{Var}(\\varphi)\\) of a formula \\(\\varphi\\) is defined recursively: \\begin{enumerate} \\item if \\(\\varphi=P\\in\\Prop\\), then \\(\\operatorname{Var}(\\varphi)=\\{P\\}\\); \\item if \\(\\varphi=\\neg\\psi\\), then \\(\\operatorname{Var}(\\varphi)=\\operatorname{Var}(\\psi)\\); \\item if \\(\\varphi=(\\psi\\circ\\chi)\\), then \\[ \\operatorname{Var}(\\varphi)=\\operatorname{Var}(\\psi)\\cup\\operatorname{Var}(\\chi). \\] \\end{enumerate}",
+        "title": "",
+        "volume": "i"
+      }
+    }
+  ],
+  "node": "def:logical-consequence-propositional-logic",
+  "schema_version": "concept-graph-audit-1",
+  "source_match_report": "F:/repos/lra-knowledge-explorer/reorder/concept-pipeline/concepts/propositional-logic/0095.def-logical-consequence-propositional-logic.concepts.json"
+}
