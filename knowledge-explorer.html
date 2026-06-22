@@ -632,7 +632,18 @@ function usedByTree(nodes,edges,sel){
   return{nodes:[...seen].map(id=>byId.get(id)).filter(Boolean),edges:te};
 }
 
-function chooseAnchor(nodes,edges){const ids=new Set(nodes.map(n=>n.id));const deg=new Map(nodes.map(n=>[n.id,0]));edges.forEach(e=>{if(!ids.has(e.from)||!ids.has(e.to))return;deg.set(e.from,(deg.get(e.from)||0)+1);deg.set(e.to,(deg.get(e.to)||0)+1);});return[...nodes].sort((a,b)=>(deg.get(b.id)||0)-(deg.get(a.id)||0))[0]?.id;}
+function chooseAnchor(nodes,edges){
+  const ids=new Set(nodes.map(n=>n.id));
+  const deg=new Map(nodes.map(n=>[n.id,0]));
+  edges.forEach(e=>{if(!ids.has(e.from)||!ids.has(e.to))return;deg.set(e.from,(deg.get(e.from)||0)+1);deg.set(e.to,(deg.get(e.to)||0)+1);});
+  const kindWeight=n=>{const k=String(n.kind||'').toLowerCase();if(n.is_root||n.root_kind)return 120;if(k==='definition')return 80;if(k==='axiom')return 70;if(k==='theorem')return 50;if(k==='lemma'||k==='proposition')return 40;return 0;};
+  return [...nodes].sort((a,b)=>
+    ((deg.get(b.id)||0)+kindWeight(b))-((deg.get(a.id)||0)+kindWeight(a))||
+    String(nodeDeck(a)).localeCompare(String(nodeDeck(b)))||
+    String(nodeTitle(a)).localeCompare(String(nodeTitle(b)))||
+    String(a.id).localeCompare(String(b.id))
+  )[0]?.id;
+}
 function layers(nodes,edges){const ids=new Set(nodes.map(n=>n.id));const out=new Map(nodes.map(n=>[n.id,[]]));const inc=new Map(nodes.map(n=>[n.id,[]]));edges.forEach(e=>{if(!ids.has(e.from)||!ids.has(e.to))return;out.get(e.from).push(e.to);inc.get(e.to).push(e.from);});const layer=new Map();const tm=state.filters.treeMode;const anchor=(tm!=='off'&&state.selectedId&&ids.has(state.selectedId))?state.selectedId:(chooseAnchor(nodes,edges)||nodes[0]?.id);const seeds=[anchor,...nodes.map(n=>n.id).filter(id=>id!==anchor)];let first=true;for(const seed of seeds){if(!seed||layer.has(seed))continue;layer.set(seed,first?0:-2);first=false;const q=[seed];while(q.length){const id=q.shift();const base=layer.get(id)||0;for(const to of out.get(id)||[])if(!layer.has(to)){layer.set(to,base+1);q.push(to);}for(const fr of inc.get(id)||[])if(!layer.has(fr)){layer.set(fr,base-1);q.push(fr);}}}return{layer,anchor};}
 function topoLayers(nodes,edges){
   const byId=new Map(nodes.map(n=>[n.id,n]));
@@ -702,6 +713,23 @@ function applyInitialView(){
   if(target){renderDetails(target);}
   else{els.detailEmpty.style.display='block';els.detailContent.style.display='none';}
   requestAnimationFrame(()=>requestAnimationFrame(()=>{if(anchor)centerOnNode(anchor);}));
+}
+
+function focusFilteredGraph(){
+  state.filters.treeMode='off';
+  els.treeMode.value='off';
+  state.nodePositions={};
+  state.zoom=INITIAL_ZOOM;
+  const graph=visibleGraph();
+  const visibleIds=new Set(graph.nodes.map(n=>n.id));
+  let anchor=state.selectedId&&visibleIds.has(state.selectedId)?state.selectedId:null;
+  if(!anchor)anchor=chooseAnchor(graph.nodes,graph.edges)||(graph.nodes[0]&&graph.nodes[0].id)||null;
+  state.selectedId=anchor;
+  render();
+  const target=(state.knowledge.nodes||[]).find(n=>n.id===anchor);
+  if(target)renderDetails(target);
+  else{els.detailEmpty.style.display='block';els.detailContent.style.display='none';}
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{if(anchor)centerOnNode(anchor);else{els.graphWrap.scrollLeft=0;els.graphWrap.scrollTop=0;}}));
 }
 
 function drawEdges(g=state.renderedGraph){if(!g)return;els.edgeLayer.querySelectorAll('path.edge').forEach(p=>p.remove());const nm=new Map(g.nodes.map(n=>[n.id,n]));const flowDeps=state.filters.layoutMode==='topo';for(const e of g.edges){let a=nm.get(e.from),b=nm.get(e.to);if(!a||!b)continue;if(flowDeps&&isDependencyKind(e.kind)){a=nm.get(e.to);b=nm.get(e.from);}const aB=nodeBox(a),bB=nodeBox(b);const aC={x:aB.x+aB.w/2,y:aB.y+aB.h/2},bC={x:bB.x+bB.w/2,y:bB.y+bB.h/2};const s=rectPt(aB,bC,0),en=rectPt(bB,aC,1);const dir=Math.sign(en.x-s.x)||1,bend=Math.max(80,Math.abs(en.x-s.x)*.45);const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.classList.add('edge');p.setAttribute('d',`M ${s.x} ${s.y} C ${s.x+dir*bend} ${s.y}, ${en.x-dir*bend} ${en.y}, ${en.x} ${en.y}`);p.setAttribute('fill','none');const v=edgeVisual(e.kind);p.setAttribute('stroke',v.color);p.setAttribute('stroke-width',v.width);p.setAttribute('opacity',v.opacity);p.setAttribute('marker-end',v.marker);els.edgeLayer.appendChild(p);}}
@@ -1056,10 +1084,10 @@ els.showDepends.onchange=e=>{state.filters.showDepends=e.target.checked;render()
 els.showImplies.onchange=e=>{state.filters.showImplies=e.target.checked;render();};
 els.layoutMode.onchange=e=>{state.filters.layoutMode=e.target.value;state.nodePositions={};render();};
 els.treeMode.onchange=e=>{state.filters.treeMode=e.target.value;state.nodePositions={};render();};
-// When chapter changes, reset section to All and re-render (syncFilters will narrow the section list)
-els.volumeFilter.onchange=e=>{state.filters.volume=e.target.value;state.filters.chapter='All';state.filters.deck='All';els.chapterFilter.value='All';els.deckFilter.value='All';render();};
-els.chapterFilter.onchange=e=>{state.filters.chapter=e.target.value;state.filters.deck='All';els.deckFilter.value='All';render();};
-els.deckFilter.onchange=e=>{state.filters.deck=e.target.value;render();};
+// Treat TOC filters as navigation: redraw the scoped graph and center a visible default node.
+els.volumeFilter.onchange=e=>{state.filters.volume=e.target.value;state.filters.chapter='All';state.filters.deck='All';els.chapterFilter.value='All';els.deckFilter.value='All';focusFilteredGraph();};
+els.chapterFilter.onchange=e=>{state.filters.chapter=e.target.value;state.filters.deck='All';els.deckFilter.value='All';focusFilteredGraph();};
+els.deckFilter.onchange=e=>{state.filters.deck=e.target.value;focusFilteredGraph();};
 els.zoomInBtn.onclick=()=>{state.zoom=Math.min(2.4,+(state.zoom+0.1).toFixed(2));render();};
 els.zoomOutBtn.onclick=()=>{state.zoom=Math.max(0.45,+(state.zoom-0.1).toFixed(2));render();};
 els.resetBtn.onclick=()=>{setExplorerTab('knowledge');state.nodePositions={};render();applyInitialView();};
