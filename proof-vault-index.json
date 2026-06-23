@@ -1,12 +1,50 @@
 {
   "schema": "lra.proof_vault_index",
   "schema_version": 1,
-  "generated_at": "2026-06-23T12:13:28.895841+00:00",
+  "generated_at": "2026-06-23T16:01:00.760868+00:00",
   "source": "lra-proof-vault",
-  "record_count": 3,
+  "record_count": 7,
   "warning_count": 0,
   "warnings": [],
   "records": {
+    "lem:closure-under-formation-propositional-formulas": [
+      {
+        "title": "Closure Under Formation (proof-2026-06-23-001)",
+        "path": "volume-i/chapter-01-propositional-logic/lem-closure-under-formation-propositional-formulas/metadata.yaml",
+        "vault_record": "volume-i/chapter-01-propositional-logic/lem-closure-under-formation-propositional-formulas",
+        "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-i/chapter-01-propositional-logic/lem-closure-under-formation-propositional-formulas",
+        "attempt_id": "proof-2026-06-23-001",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-i/chapter-01-propositional-logic/lem-closure-under-formation-propositional-formulas/attempts/proof-2026-06-23-001.jpg"
+        ],
+        "body": "Correct handwritten attempt; proof verified and incorporated into Volume I.\n\nTags: corrected-attempt, verified",
+        "ocr_text": "Machine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.",
+        "markdown": "# Closure Under Formation\n\nCanonical theorem label: `lem:closure-under-formation-propositional-formulas`\n\n## OCR Text\n\nMachine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.\n\n## Polished Markdown\n\nBy the recursive definition of $\\WFF$, the negation formation rule says\nthat whenever $\\varphi\\in\\WFF$, the formula $\\neg\\varphi$ also belongs\nto $\\WFF$. Hence\n$$\n\\varphi\\in\\WFF\n\\quad\\Longrightarrow\\quad\n\\neg\\varphi\\in\\WFF.\n$$\nThe same definition includes the binary connective formation rule: if\n$\\varphi,\\psi\\in\\WFF$ and\n$$\n\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\},\n$$\nthen the composite formula $(\\varphi\\circ\\psi)$ belongs to $\\WFF$.\nThese are exactly the two closure assertions, so $\\WFF$ is closed under\nthe propositional formation rules.\n\n## Polished TeX\n\n```latex\nBy the recursive definition of \\(\\WFF\\), the negation formation rule says\nthat whenever \\(\\varphi\\in\\WFF\\), the formula \\(\\neg\\varphi\\) also belongs\nto \\(\\WFF\\). Hence\n\\[\n\\varphi\\in\\WFF\n\\quad\\Longrightarrow\\quad\n\\neg\\varphi\\in\\WFF.\n\\]\nThe same definition includes the binary connective formation rule: if\n\\(\\varphi,\\psi\\in\\WFF\\) and\n\\[\n\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\},\n\\]\nthen the composite formula \\((\\varphi\\circ\\psi)\\) belongs to \\(\\WFF\\).\nThese are exactly the two closure assertions, so \\(\\WFF\\) is closed under\nthe propositional formation rules.\n```\n\n## Provenance\n\nPolished text was reconstructed from the accepted canonical proof `lra-volume-i/volume-i/propositional-logic/proofs/syntax/prf-closure-under-formation-propositional-formulas.tex`.",
+        "tex": "By the recursive definition of \\(\\WFF\\), the negation formation rule says\nthat whenever \\(\\varphi\\in\\WFF\\), the formula \\(\\neg\\varphi\\) also belongs\nto \\(\\WFF\\). Hence\n\\[\n\\varphi\\in\\WFF\n\\quad\\Longrightarrow\\quad\n\\neg\\varphi\\in\\WFF.\n\\]\nThe same definition includes the binary connective formation rule: if\n\\(\\varphi,\\psi\\in\\WFF\\) and\n\\[\n\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\},\n\\]\nthen the composite formula \\((\\varphi\\circ\\psi)\\) belongs to \\(\\WFF\\).\nThese are exactly the two closure assertions, so \\(\\WFF\\) is closed under\nthe propositional formation rules.",
+        "text_source": "canonical-proof-reconstruction",
+        "text_review_status": "accepted"
+      }
+    ],
+    "prop:every-element-lies-below-the-supremum": [
+      {
+        "title": "Every Element Lies Below the Supremum (proof-2026-06-23-001)",
+        "path": "volume-iii/bounding/prop-every-element-lies-below-the-supremum/metadata.yaml",
+        "vault_record": "volume-iii/bounding/prop-every-element-lies-below-the-supremum",
+        "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/bounding/prop-every-element-lies-below-the-supremum",
+        "attempt_id": "proof-2026-06-23-001",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/prop-every-element-lies-below-the-supremum/attempts/proof-2026-06-23-001.jpg"
+        ],
+        "body": "Correct handwritten attempt; proof verified and incorporated into Volume III.\n\nTags: corrected-attempt, verified",
+        "ocr_text": "Machine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.",
+        "markdown": "# Every Element Lies Below the Supremum\n\nCanonical theorem label: `prop:every-element-lies-below-the-supremum`\n\n## OCR Text\n\nMachine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.\n\n## Polished Markdown\n\nSince $s=\\sup A$, the definition of supremum says, in particular, that\n$s$ is an upper bound of $A$. Hence every element of $A$ lies below\n$s$: for every $x\\in A$,\n$$\nx\\le s.\n$$\n\n## Polished TeX\n\n```latex\nSince \\(s=\\sup A\\), the definition of supremum says, in particular, that\n\\(s\\) is an upper bound of \\(A\\). Hence every element of \\(A\\) lies below\n\\(s\\): for every \\(x\\in A\\),\n\\[\nx\\le s.\n\\]\n```\n\n## Provenance\n\nPolished text was reconstructed from the accepted canonical proof `lra-volume-iii/volume-iii/analysis/bounding/proofs/bounds-algebra/prf-every-element-lies-below-the-supremum.tex`.",
+        "tex": "Since \\(s=\\sup A\\), the definition of supremum says, in particular, that\n\\(s\\) is an upper bound of \\(A\\). Hence every element of \\(A\\) lies below\n\\(s\\): for every \\(x\\in A\\),\n\\[\nx\\le s.\n\\]",
+        "text_source": "canonical-proof-reconstruction",
+        "text_review_status": "accepted"
+      }
+    ],
     "prop:maximum-implies-supremum": [
       {
         "title": "Maximum Implies Supremum (proof-2026-06-22-001)",
@@ -22,6 +60,44 @@
         "ocr_text": "Machine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.",
         "markdown": "# Maximum Implies Supremum\n\nCanonical theorem label: `prop:maximum-implies-supremum`\n\n## OCR Text\n\nMachine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.\n\n## Polished Markdown\n\nSuppose $m$ is a maximum of $A$. Then $m\\in A$ and\n$$\nx\\le m\n$$\nfor every $x\\in A$. Hence $m$ is an upper bound of $A$.\n\nNow let $u$ be any upper bound of $A$. Since $m\\in A$, the upper-bound\nproperty of $u$ gives $m\\le u$. Thus every upper bound $u$ of $A$\nsatisfies $m\\le u$. Therefore $m$ is the least upper bound of $A$, so\n$$\nm=\\sup A.\n$$\n\n## Polished TeX\n\n```latex\nSuppose \\(m\\) is a maximum of \\(A\\). Then \\(m\\in A\\) and\n\\[\nx\\le m\n\\]\nfor every \\(x\\in A\\). Hence \\(m\\) is an upper bound of \\(A\\).\n\nNow let \\(u\\) be any upper bound of \\(A\\). Since \\(m\\in A\\), the upper-bound\nproperty of \\(u\\) gives \\(m\\le u\\). Thus every upper bound \\(u\\) of \\(A\\)\nsatisfies \\(m\\le u\\). Therefore \\(m\\) is the least upper bound of \\(A\\), so\n\\[\nm=\\sup A.\n\\]\n```\n\n## Provenance\n\nPolished text was reconstructed from the accepted canonical proof `lra-volume-iii/volume-iii/analysis/bounding/proofs/bounds-algebra/prf-maximum-implies-supremum.tex`.",
         "tex": "Suppose \\(m\\) is a maximum of \\(A\\). Then \\(m\\in A\\) and\n\\[\nx\\le m\n\\]\nfor every \\(x\\in A\\). Hence \\(m\\) is an upper bound of \\(A\\).\n\nNow let \\(u\\) be any upper bound of \\(A\\). Since \\(m\\in A\\), the upper-bound\nproperty of \\(u\\) gives \\(m\\le u\\). Thus every upper bound \\(u\\) of \\(A\\)\nsatisfies \\(m\\le u\\). Therefore \\(m\\) is the least upper bound of \\(A\\), so\n\\[\nm=\\sup A.\n\\]",
+        "text_source": "canonical-proof-reconstruction",
+        "text_review_status": "accepted"
+      }
+    ],
+    "thm:infimum-less-than-supremum": [
+      {
+        "title": "Infimum Is Less Than or Equal to the Supremum (proof-2026-06-23-001)",
+        "path": "volume-iii/bounding/thm-infimum-less-than-supremum/metadata.yaml",
+        "vault_record": "volume-iii/bounding/thm-infimum-less-than-supremum",
+        "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/bounding/thm-infimum-less-than-supremum",
+        "attempt_id": "proof-2026-06-23-001",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/thm-infimum-less-than-supremum/attempts/proof-2026-06-23-001.jpg"
+        ],
+        "body": "Correct handwritten attempt; proof verified and incorporated into Volume III.\n\nTags: corrected-attempt, verified",
+        "ocr_text": "Machine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.",
+        "markdown": "# Infimum Is Less Than or Equal to the Supremum\n\nCanonical theorem label: `thm:infimum-less-than-supremum`\n\n## OCR Text\n\nMachine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.\n\n## Polished Markdown\n\nBecause $A$ is nonempty, choose $x\\in A$. Since $\\inf A$ is a lower\nbound of $A$, we have\n$$\n\\inf A\\le x.\n$$\nSince $\\sup A$ is an upper bound of $A$, we have\n$$\nx\\le \\sup A.\n$$\nBy transitivity of the order on $\\mathbb{R}$,\n$$\n\\inf A\\le \\sup A.\n$$\n\n## Polished TeX\n\n```latex\nBecause \\(A\\) is nonempty, choose \\(x\\in A\\). Since \\(\\inf A\\) is a lower\nbound of \\(A\\), we have\n\\[\n\\inf A\\le x.\n\\]\nSince \\(\\sup A\\) is an upper bound of \\(A\\), we have\n\\[\nx\\le \\sup A.\n\\]\nBy transitivity of the order on \\(\\mathbb{R}\\),\n\\[\n\\inf A\\le \\sup A.\n\\]\n```\n\n## Provenance\n\nPolished text was reconstructed from the accepted canonical proof `lra-volume-iii/volume-iii/analysis/bounding/proofs/bounds-algebra/prf-infimum-less-than-supremum.tex`.",
+        "tex": "Because \\(A\\) is nonempty, choose \\(x\\in A\\). Since \\(\\inf A\\) is a lower\nbound of \\(A\\), we have\n\\[\n\\inf A\\le x.\n\\]\nSince \\(\\sup A\\) is an upper bound of \\(A\\), we have\n\\[\nx\\le \\sup A.\n\\]\nBy transitivity of the order on \\(\\mathbb{R}\\),\n\\[\n\\inf A\\le \\sup A.\n\\]",
+        "text_source": "canonical-proof-reconstruction",
+        "text_review_status": "accepted"
+      }
+    ],
+    "thm:minimality-of-well-formed-formulas": [
+      {
+        "title": "Minimality of Well-Formed Formulas (proof-2026-06-23-001)",
+        "path": "volume-i/chapter-01-propositional-logic/thm-minimality-of-well-formed-formulas/metadata.yaml",
+        "vault_record": "volume-i/chapter-01-propositional-logic/thm-minimality-of-well-formed-formulas",
+        "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-i/chapter-01-propositional-logic/thm-minimality-of-well-formed-formulas",
+        "attempt_id": "proof-2026-06-23-001",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-i/chapter-01-propositional-logic/thm-minimality-of-well-formed-formulas/attempts/proof-2026-06-23-001.jpg"
+        ],
+        "body": "Correct handwritten attempt; proof verified and incorporated into Volume I.\n\nTags: corrected-attempt, verified",
+        "ocr_text": "Machine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.",
+        "markdown": "# Minimality of Well-Formed Formulas\n\nCanonical theorem label: `thm:minimality-of-well-formed-formulas`\n\n## OCR Text\n\nMachine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.\n\n## Polished Markdown\n\nWe prove by structural induction on $\\varphi\\in\\WFF$ that\n$\\varphi\\in S$.\n\nIf $\\varphi$ is atomic, then $\\varphi=P$ for some\n$P\\in\\Prop$. Since $\\Prop\\subseteq S$, it follows that\n$\\varphi=P\\in S$.\n\nSuppose $\\varphi=\\neg\\theta$, where $\\theta\\in\\WFF$. By the induction\nhypothesis, $\\theta\\in S$. By the second hypothesis on $S$,\n$\\neg\\theta\\in S$. Hence $\\varphi\\in S$.\n\nSuppose $\\varphi=(\\theta\\circ\\psi)$, where\n$\\theta,\\psi\\in\\WFF$ and\n$$\n\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}.\n$$\nBy the induction hypothesis, $\\theta\\in S$ and $\\psi\\in S$. By the\nthird hypothesis on $S$, $(\\theta\\circ\\psi)\\in S$. Hence\n$\\varphi\\in S$.\n\nTherefore every $\\varphi\\in\\WFF$ belongs to $S$, and so\n$$\n\\WFF\\subseteq S.\n$$\n\n## Polished TeX\n\n```latex\nWe prove by structural induction on \\(\\varphi\\in\\WFF\\) that\n\\(\\varphi\\in S\\).\n\nIf \\(\\varphi\\) is atomic, then \\(\\varphi=P\\) for some\n\\(P\\in\\Prop\\). Since \\(\\Prop\\subseteq S\\), it follows that\n\\(\\varphi=P\\in S\\).\n\nSuppose \\(\\varphi=\\neg\\theta\\), where \\(\\theta\\in\\WFF\\). By the induction\nhypothesis, \\(\\theta\\in S\\). By the second hypothesis on \\(S\\),\n\\(\\neg\\theta\\in S\\). Hence \\(\\varphi\\in S\\).\n\nSuppose \\(\\varphi=(\\theta\\circ\\psi)\\), where\n\\(\\theta,\\psi\\in\\WFF\\) and\n\\[\n\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}.\n\\]\nBy the induction hypothesis, \\(\\theta\\in S\\) and \\(\\psi\\in S\\). By the\nthird hypothesis on \\(S\\), \\((\\theta\\circ\\psi)\\in S\\). Hence\n\\(\\varphi\\in S\\).\n\nTherefore every \\(\\varphi\\in\\WFF\\) belongs to \\(S\\), and so\n\\[\n\\WFF\\subseteq S.\n\\]\n```\n\n## Provenance\n\nPolished text was reconstructed from the accepted canonical proof `lra-volume-i/volume-i/propositional-logic/proofs/syntax/prf-minimality-of-well-formed-formulas.tex`.",
+        "tex": "We prove by structural induction on \\(\\varphi\\in\\WFF\\) that\n\\(\\varphi\\in S\\).\n\nIf \\(\\varphi\\) is atomic, then \\(\\varphi=P\\) for some\n\\(P\\in\\Prop\\). Since \\(\\Prop\\subseteq S\\), it follows that\n\\(\\varphi=P\\in S\\).\n\nSuppose \\(\\varphi=\\neg\\theta\\), where \\(\\theta\\in\\WFF\\). By the induction\nhypothesis, \\(\\theta\\in S\\). By the second hypothesis on \\(S\\),\n\\(\\neg\\theta\\in S\\). Hence \\(\\varphi\\in S\\).\n\nSuppose \\(\\varphi=(\\theta\\circ\\psi)\\), where\n\\(\\theta,\\psi\\in\\WFF\\) and\n\\[\n\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}.\n\\]\nBy the induction hypothesis, \\(\\theta\\in S\\) and \\(\\psi\\in S\\). By the\nthird hypothesis on \\(S\\), \\((\\theta\\circ\\psi)\\in S\\). Hence\n\\(\\varphi\\in S\\).\n\nTherefore every \\(\\varphi\\in\\WFF\\) belongs to \\(S\\), and so\n\\[\n\\WFF\\subseteq S.\n\\]",
         "text_source": "canonical-proof-reconstruction",
         "text_review_status": "accepted"
       }
