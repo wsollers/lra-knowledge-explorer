@@ -1,7 +1,7 @@
 {
   "schema": "lra.proof_vault_index",
   "schema_version": 1,
-  "generated_at": "2026-06-23T11:51:18.955099+00:00",
+  "generated_at": "2026-06-23T12:13:28.895841+00:00",
   "source": "lra-proof-vault",
   "record_count": 3,
   "warning_count": 0,
@@ -18,7 +18,12 @@
         "images": [
           "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/prop-maximum-implies-supremum/attempts/proof-2026-06-22-001.jpg"
         ],
-        "body": "Second corrected attempt; proof verified and incorporated into Volume III.\n\nTags: corrected-attempt, verified"
+        "body": "Second corrected attempt; proof verified and incorporated into Volume III.\n\nTags: corrected-attempt, verified",
+        "ocr_text": "Machine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.",
+        "markdown": "# Maximum Implies Supremum\n\nCanonical theorem label: `prop:maximum-implies-supremum`\n\n## OCR Text\n\nMachine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.\n\n## Polished Markdown\n\nSuppose $m$ is a maximum of $A$. Then $m\\in A$ and\n$$\nx\\le m\n$$\nfor every $x\\in A$. Hence $m$ is an upper bound of $A$.\n\nNow let $u$ be any upper bound of $A$. Since $m\\in A$, the upper-bound\nproperty of $u$ gives $m\\le u$. Thus every upper bound $u$ of $A$\nsatisfies $m\\le u$. Therefore $m$ is the least upper bound of $A$, so\n$$\nm=\\sup A.\n$$\n\n## Polished TeX\n\n```latex\nSuppose \\(m\\) is a maximum of \\(A\\). Then \\(m\\in A\\) and\n\\[\nx\\le m\n\\]\nfor every \\(x\\in A\\). Hence \\(m\\) is an upper bound of \\(A\\).\n\nNow let \\(u\\) be any upper bound of \\(A\\). Since \\(m\\in A\\), the upper-bound\nproperty of \\(u\\) gives \\(m\\le u\\). Thus every upper bound \\(u\\) of \\(A\\)\nsatisfies \\(m\\le u\\). Therefore \\(m\\) is the least upper bound of \\(A\\), so\n\\[\nm=\\sup A.\n\\]\n```\n\n## Provenance\n\nPolished text was reconstructed from the accepted canonical proof `lra-volume-iii/volume-iii/analysis/bounding/proofs/bounds-algebra/prf-maximum-implies-supremum.tex`.",
+        "tex": "Suppose \\(m\\) is a maximum of \\(A\\). Then \\(m\\in A\\) and\n\\[\nx\\le m\n\\]\nfor every \\(x\\in A\\). Hence \\(m\\) is an upper bound of \\(A\\).\n\nNow let \\(u\\) be any upper bound of \\(A\\). Since \\(m\\in A\\), the upper-bound\nproperty of \\(u\\) gives \\(m\\le u\\). Thus every upper bound \\(u\\) of \\(A\\)\nsatisfies \\(m\\le u\\). Therefore \\(m\\) is the least upper bound of \\(A\\), so\n\\[\nm=\\sup A.\n\\]",
+        "text_source": "canonical-proof-reconstruction",
+        "text_review_status": "accepted"
       }
     ],
     "thm:negation-exchange-sup-inf": [
@@ -32,7 +37,12 @@
         "images": [
           "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/thm-negation-exchange-sup-inf/attempts/proof-2026-06-22-001.jpg"
         ],
-        "body": "Incorrect attempt: least-upper-bound contradiction uses non-strict inequalities, so it does not force a lower bound strictly greater than inf A.\n\nTags: incorrect-attempt, needs-strict-inequality"
+        "body": "Incorrect attempt: least-upper-bound contradiction uses non-strict inequalities, so it does not force a lower bound strictly greater than inf A.\n\nTags: incorrect-attempt, needs-strict-inequality",
+        "ocr_text": "",
+        "markdown": "",
+        "tex": "",
+        "text_source": "",
+        "text_review_status": ""
       },
       {
         "title": "Negation Exchanges Supremum and Infimum (proof-2026-06-22-002)",
@@ -44,7 +54,12 @@
         "images": [
           "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/thm-negation-exchange-sup-inf/attempts/proof-2026-06-22-002.jpg"
         ],
-        "body": "Corrected attempt: strict inequality in leastness argument forces a lower bound strictly greater than inf A; proof incorporated into Volume III.\n\nTags: corrected-attempt, verified"
+        "body": "Corrected attempt: strict inequality in leastness argument forces a lower bound strictly greater than inf A; proof incorporated into Volume III.\n\nTags: corrected-attempt, verified",
+        "ocr_text": "Machine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.",
+        "markdown": "# Negation Exchanges Supremum and Infimum\n\nCanonical theorem label: `thm:negation-exchange-sup-inf`\n\n## OCR Text\n\nMachine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.\n\n## Polished Markdown\n\nLet $i=\\inf A$. We prove that $-i$ is the supremum of $-A$.\n\nFirst let $y\\in -A$. Then $y=-x$ for some $x\\in A$. Since $i$ is a\nlower bound of $A$, we have $i\\le x$. Multiplying by $-1$ reverses the\ninequality, so\n$$\ny=-x\\le -i.\n$$\nThus $-i$ is an upper bound of $-A$. In particular, $-A$ is bounded\nabove.\n\nNow let $u$ be any upper bound of $-A$. For every $x\\in A$, the element\n$-x$ belongs to $-A$, so\n$$\n-x\\le u.\n$$\nMultiplying by $-1$ gives\n$$\n-u\\le x\n$$\nfor every $x\\in A$. Hence $-u$ is a lower bound of $A$. Since $i=\\inf A$\nis the greatest lower bound of $A$, we have $-u\\le i$. Multiplying by\n$-1$ again gives\n$$\n-i\\le u.\n$$\nTherefore every upper bound $u$ of $-A$ lies above $-i$. Since $-i$ is\nitself an upper bound of $-A$, it is the least upper bound of $-A$. Hence\n$$\n\\sup(-A)=-i=-\\inf A.\n$$\n\n## Polished TeX\n\n```latex\nLet \\(i=\\inf A\\). We prove that \\(-i\\) is the supremum of \\(-A\\).\n\nFirst let \\(y\\in -A\\). Then \\(y=-x\\) for some \\(x\\in A\\). Since \\(i\\) is a\nlower bound of \\(A\\), we have \\(i\\le x\\). Multiplying by \\(-1\\) reverses the\ninequality, so\n\\[\ny=-x\\le -i.\n\\]\nThus \\(-i\\) is an upper bound of \\(-A\\). In particular, \\(-A\\) is bounded\nabove.\n\nNow let \\(u\\) be any upper bound of \\(-A\\). For every \\(x\\in A\\), the element\n\\(-x\\) belongs to \\(-A\\), so\n\\[\n-x\\le u.\n\\]\nMultiplying by \\(-1\\) gives\n\\[\n-u\\le x\n\\]\nfor every \\(x\\in A\\). Hence \\(-u\\) is a lower bound of \\(A\\). Since \\(i=\\inf A\\)\nis the greatest lower bound of \\(A\\), we have \\(-u\\le i\\). Multiplying by\n\\(-1\\) again gives\n\\[\n-i\\le u.\n\\]\nTherefore every upper bound \\(u\\) of \\(-A\\) lies above \\(-i\\). Since \\(-i\\) is\nitself an upper bound of \\(-A\\), it is the least upper bound of \\(-A\\). Hence\n\\[\n\\sup(-A)=-i=-\\inf A.\n\\]\n```\n\n## Provenance\n\nPolished text was reconstructed from the accepted canonical proof `lra-volume-iii/volume-iii/analysis/bounding/proofs/bounds-algebra/prf-negation-exchange-sup-inf.tex`.",
+        "tex": "Let \\(i=\\inf A\\). We prove that \\(-i\\) is the supremum of \\(-A\\).\n\nFirst let \\(y\\in -A\\). Then \\(y=-x\\) for some \\(x\\in A\\). Since \\(i\\) is a\nlower bound of \\(A\\), we have \\(i\\le x\\). Multiplying by \\(-1\\) reverses the\ninequality, so\n\\[\ny=-x\\le -i.\n\\]\nThus \\(-i\\) is an upper bound of \\(-A\\). In particular, \\(-A\\) is bounded\nabove.\n\nNow let \\(u\\) be any upper bound of \\(-A\\). For every \\(x\\in A\\), the element\n\\(-x\\) belongs to \\(-A\\), so\n\\[\n-x\\le u.\n\\]\nMultiplying by \\(-1\\) gives\n\\[\n-u\\le x\n\\]\nfor every \\(x\\in A\\). Hence \\(-u\\) is a lower bound of \\(A\\). Since \\(i=\\inf A\\)\nis the greatest lower bound of \\(A\\), we have \\(-u\\le i\\). Multiplying by\n\\(-1\\) again gives\n\\[\n-i\\le u.\n\\]\nTherefore every upper bound \\(u\\) of \\(-A\\) lies above \\(-i\\). Since \\(-i\\) is\nitself an upper bound of \\(-A\\), it is the least upper bound of \\(-A\\). Hence\n\\[\n\\sup(-A)=-i=-\\inf A.\n\\]",
+        "text_source": "canonical-proof-reconstruction",
+        "text_review_status": "accepted"
       }
     ]
   }

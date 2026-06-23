@@ -44,6 +44,17 @@ def body_for(text: str) -> str:
     return text.strip()
 
 
+def read_sibling_text(md_path: Path, suffix: str) -> str:
+    name = md_path.name
+    if name.endswith(".proof.md"):
+        path = md_path.with_name(name[: -len(".proof.md")] + suffix)
+    else:
+        path = md_path.with_suffix(suffix)
+    if not path.exists():
+        return ""
+    return path.read_text(encoding="utf-8", errors="replace").strip()
+
+
 def build(vault_root: Path) -> dict:
     records: dict[str, list[dict]] = {}
     md_paths = [
@@ -74,6 +85,9 @@ def build(vault_root: Path) -> dict:
             "review_status": status_match.group(1).strip() if status_match else "",
             "images": image_links,
             "body": body_for(text),
+            "ocr_text": read_sibling_text(md_path, ".ocr.txt"),
+            "markdown": text.strip(),
+            "tex": read_sibling_text(md_path, ".tex"),
         }
         records.setdefault(label, []).append(rec)
 
