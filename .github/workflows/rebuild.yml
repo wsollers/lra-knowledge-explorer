@@ -22,11 +22,32 @@ jobs:
           path: explorer
           token: ${{ secrets.SYNC_PAT }}
 
-      - name: Checkout monorepo
+      - name: Checkout Volume I
         uses: actions/checkout@v4
         with:
-          repository: wsollers/Learning-Real-Analysis
-          path: monorepo
+          repository: wsollers/lra-volume-i
+          path: lra-volume-i
+          token: ${{ secrets.SYNC_PAT }}
+
+      - name: Checkout Volume II
+        uses: actions/checkout@v4
+        with:
+          repository: wsollers/lra-volume-ii
+          path: lra-volume-ii
+          token: ${{ secrets.SYNC_PAT }}
+
+      - name: Checkout Volume III
+        uses: actions/checkout@v4
+        with:
+          repository: wsollers/lra-volume-iii
+          path: lra-volume-iii
+          token: ${{ secrets.SYNC_PAT }}
+
+      - name: Checkout proof vault
+        uses: actions/checkout@v4
+        with:
+          repository: wsollers/lra-proof-vault
+          path: lra-proof-vault
           token: ${{ secrets.SYNC_PAT }}
 
       - name: Set up Python
@@ -37,16 +58,13 @@ jobs:
       - name: Install extraction dependencies
         run: python -m pip install --upgrade pyyaml
 
-      - name: Run monorepo extraction
-        working-directory: monorepo
-        run: python theorem-explorer/run_extraction.py
+      - name: Run split-volume extraction
+        working-directory: explorer
+        run: python scripts/run_extraction.py --repos-root "$GITHUB_WORKSPACE"
 
-      - name: Copy generated explorer data
-        run: |
-          cp monorepo/theorem-explorer/knowledge.json explorer/knowledge.json
-          cp monorepo/theorem-explorer/graph-edges.json explorer/graph-edges.json
-          cp monorepo/theorem-explorer/proof-errors.json explorer/proof-errors.json
-          cp monorepo/theorem-explorer/graph-edge-errors.json explorer/graph-edge-errors.json
+      - name: Build proof vault index
+        working-directory: explorer
+        run: python scripts/build_proof_vault_index.py
 
       - name: Validate generated JSON
         working-directory: explorer
@@ -61,7 +79,7 @@ jobs:
         run: |
           git config user.name "lra-explorer-bot"
           git config user.email "explorer-bot@noreply.github.com"
-          git add knowledge.json graph-edges.json proof-errors.json graph-edge-errors.json
+          git add knowledge.json graph-edges.json proof-errors.json graph-edge-errors.json proof-vault-index.json
           if git diff --cached --quiet; then
             echo "No explorer data changes."
             exit 0

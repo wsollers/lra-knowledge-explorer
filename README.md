@@ -23,13 +23,20 @@ graph-edges.json              — dependency graph edges
 ## Running the extractor
 
 ```bash
-pip install pyyaml
-python run_extraction.py --repo-dir /path/to/Learning-Real-Analysis
+python scripts/run_extraction.py --repos-root /path/to/workspace-containing-lra-volume-repos
+python scripts/build_proof_vault_index.py --vault-root /path/to/lra-proof-vault
 ```
 
 ## Relationship to monorepo
 
-The extraction scripts expect the LaTeX volumes to live in `Learning-Real-Analysis`. Point `--repo-dir` at your local clone of the monorepo.
+The extraction scripts do not use the `Learning-Real-Analysis` monorepo as a
+TeX source. They require local split volume checkouts (`lra-volume-i`,
+`lra-volume-ii`, and `lra-volume-iii`) and hard fail if an expected volume,
+chapter, `notes/index.tex`, or `proofs/index.tex` is missing.
+
+Extraction reads live TeX files through the same volume governance inventory
+provider used by validators, so validation and explorer publication operate on
+the same canonical source set.
 
 The HTML viewers are self-contained and load `knowledge.json` and `graph-edges.json` from the same directory.
 

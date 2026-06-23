@@ -3,9 +3,9 @@
 ## Overview
 
 The knowledge explorer is rebuilt automatically whenever any `lra-*` repository
-pushes to `main`. The pipeline runs in GitHub Actions, extracts structured
-knowledge from the LaTeX source in `Learning-Real-Analysis`, and publishes the
-result to GitHub Pages at:
+pushes to `main`. The pipeline runs in GitHub Actions, checks out the split
+`lra-volume-*` repositories, extracts structured knowledge from their live
+LaTeX source, and publishes the result to GitHub Pages at:
 
 ```
 https://wsollers.github.io/lra-knowledge-explorer/
@@ -39,7 +39,8 @@ when it pushes to `main`. Add this step to any repo's CI workflow:
 
 **Pass 1** — `scripts/extract_lra_chapter.py`
 
-Walks each chapter's `notes/` and `proofs/notes/` trees, extracts every
+Walks each chapter's live `notes/index.tex` and `proofs/index.tex` closures,
+extracts every
 `definition`, `theorem`, `lemma`, `proposition`, `corollary`, and `axiom`
 environment (including those nested inside `tcolorbox`), captures all trailing
 `remark*` blocks, and matches each theorem to its proof file. Writes per-chapter
@@ -54,12 +55,15 @@ and writes explorer-ready JSON.
 **Merge** — `scripts/run_extraction.py`
 
 Combines per-chapter outputs into `knowledge.json` and `graph-edges.json`.
+The runner fails hard if an expected split volume repository, chapter,
+`notes/index.tex`, or `proofs/index.tex` is missing.
 
 ---
 
 ## Chapters extracted
 
 ```
+volume-i/propositional-logic
 volume-ii/natural-numbers
 volume-ii/rationals
 volume-iii/analysis/bounding
