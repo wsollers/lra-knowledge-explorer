@@ -12,6 +12,7 @@ on:
       - "model-artifacts.json"
       - "graph-edges.json"
       - "proof-errors.json"
+      - "proof-vault-index.json"
       - "graph-edge-errors.json"
   workflow_dispatch:
 

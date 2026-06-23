@@ -1,8 +1,51 @@
 {
   "schema": "lra.proof_vault_index",
   "schema_version": 1,
-  "generated_at": "2026-06-22T16:44:02.298429+00:00",
+  "generated_at": "2026-06-23T04:42:06.576208+00:00",
   "source": "lra-proof-vault",
-  "record_count": 0,
-  "records": {}
+  "record_count": 3,
+  "warning_count": 0,
+  "warnings": [],
+  "records": {
+    "prop:maximum-implies-supremum": [
+      {
+        "title": "Maximum Implies Supremum (proof-2026-06-22-001)",
+        "path": "volume-iii/bounding/prop-maximum-implies-supremum/metadata.yaml",
+        "vault_record": "volume-iii/bounding/prop-maximum-implies-supremum",
+        "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/bounding/prop-maximum-implies-supremum",
+        "attempt_id": "proof-2026-06-22-001",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/prop-maximum-implies-supremum/attempts/proof-2026-06-22-001.jpg"
+        ],
+        "body": "Second corrected attempt; proof verified and incorporated into Volume III.\n\nTags: corrected-attempt, verified"
+      }
+    ],
+    "thm:negation-exchange-sup-inf": [
+      {
+        "title": "Negation Exchanges Supremum and Infimum (proof-2026-06-22-001)",
+        "path": "volume-iii/bounding/thm-negation-exchange-sup-inf/metadata.yaml",
+        "vault_record": "volume-iii/bounding/thm-negation-exchange-sup-inf",
+        "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/bounding/thm-negation-exchange-sup-inf",
+        "attempt_id": "proof-2026-06-22-001",
+        "review_status": "reviewed-needs-revision",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/thm-negation-exchange-sup-inf/attempts/proof-2026-06-22-001.jpg"
+        ],
+        "body": "Incorrect attempt: least-upper-bound contradiction uses non-strict inequalities, so it does not force a lower bound strictly greater than inf A.\n\nTags: incorrect-attempt, needs-strict-inequality"
+      },
+      {
+        "title": "Negation Exchanges Supremum and Infimum (proof-2026-06-22-002)",
+        "path": "volume-iii/bounding/thm-negation-exchange-sup-inf/metadata.yaml",
+        "vault_record": "volume-iii/bounding/thm-negation-exchange-sup-inf",
+        "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/bounding/thm-negation-exchange-sup-inf",
+        "attempt_id": "proof-2026-06-22-002",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/thm-negation-exchange-sup-inf/attempts/proof-2026-06-22-002.jpg"
+        ],
+        "body": "Corrected attempt: strict inequality in leastness argument forces a lower bound strictly greater than inf A; proof incorporated into Volume III.\n\nTags: corrected-attempt, verified"
+      }
+    ]
+  }
 }

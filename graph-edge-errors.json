@@ -1,25 +1,22 @@
 {
-  "generated_at": "2026-06-21T10:38:49.312710+00:00",
+  "generated_at": "2026-06-23T04:42:06.576208+00:00",
   "chapters": [
     "axiom-systems",
     "cardinality",
+    "functions",
     "orderings",
     "predicate-logic",
-    "proof-techniques",
     "propositional-logic",
-    "relations-functions",
+    "relations",
     "set-theory",
     "arithmetic-operations-relations",
     "complex-numbers",
     "constructing-number-systems",
     "embedding-number-systems",
-    "formalizing-number-systems",
     "identity-equality-equivalence",
     "integers",
-    "lean",
     "natural-numbers",
     "number-lines",
-    "numbers-summary",
     "peano-systems",
     "rationals",
     "reals",
@@ -29,317 +26,22 @@
     "continuity",
     "differentiation",
     "elementary-functions",
-    "function-sequences",
-    "functions",
-    "real-analysis",
-    "riemann-integration",
     "sequences",
-    "series",
-    "complex-analysis",
-    "foundations",
-    "summation-algebra",
-    "functional-analysis",
-    "measure-theory",
-    "elementary-number-theory",
-    "probability-theory",
-    "quantum-calculus",
-    "abstract-algebra",
+    "discrete-calculus",
     "algebraic-geometry",
     "algebraic-structures",
     "lattice-order",
     "linear-algebra",
     "set-algebra",
     "analytical-geometry",
-    "differential-geometry",
     "euclidean-geometry",
-    "non-euclidean-geometry",
-    "riemannian-geometry",
-    "topology",
-    "trigonometry",
-    "calculus",
     "computational-geometry",
-    "computational-linear-algebra",
-    "computational-probability",
-    "fourier-analysis",
-    "geometric-modeling",
     "ordinary-differential-equations",
-    "partial-differential-equations",
     "numerical-analysis",
-    "numerical-pde",
     "algebras-of-sets",
-    "category-theory",
     "lambda-calculus",
-    "model-theory",
-    "proof-theory",
-    "type-theory"
+    "model-theory"
   ],
-  "error_count": 38,
-  "errors": [
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:nested-interval-theorem",
-      "missing_target_id": "thm:infimum-supremum-comparison",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "cor:archimedean-reciprocal",
-      "missing_target_id": "ax:ordered-field-multiplication-law",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "prop:uniqueness-of-the-maximum",
-      "missing_target_id": "ax:ordered-field-trichotomy",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "prop:order-comparison-of-suprema",
-      "missing_target_id": "thm:ordered-field-transitivity",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:negation-exchange-sup-inf",
-      "missing_target_id": "thm:ordered-field-negative-multiplication-reverses-order",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:boundedness-theorem",
-      "missing_target_id": "def:continuity-on-a-set",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:boundedness-theorem",
-      "missing_target_id": "prop:closed-sets-contain-limits",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:boundedness-theorem",
-      "missing_target_id": "thm:convergent-implies-bounded",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:location-of-roots",
-      "missing_target_id": "def:continuity",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:location-of-roots",
-      "missing_target_id": "thm:sign-preservation",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:bolzano-intermediate-value",
-      "missing_target_id": "def:continuous-function",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:bolzano-intermediate-value",
-      "missing_target_id": "thm:algebra-continuous-functions",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:image-of-closed-bounded-interval",
-      "missing_target_id": "def:closed-bounded-interval",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:image-of-closed-bounded-interval",
-      "missing_target_id": "def:continuous-function",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:preservation-of-intervals",
-      "missing_target_id": "def:continuous-function",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:preservation-of-intervals",
-      "missing_target_id": "def:interval",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:preservation-of-intervals",
-      "missing_target_id": "thm:characterization-of-intervals",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:darboux-property",
-      "missing_target_id": "def:continuous-function",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "prop:sequential-uniform-continuity",
-      "missing_target_id": "prop:non-uniform-continuity-criteria",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:heine-cantor",
-      "missing_target_id": "def:continuity",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:heine-cantor",
-      "missing_target_id": "thm:limits-preserve-inequalities",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:heine-cantor",
-      "missing_target_id": "thm:sequential-continuity",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:monotone-one-sided-limits",
-      "missing_target_id": "def:one-sided-limit",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:monotone-discontinuities-countable",
-      "missing_target_id": "thm:countable-injection",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "cor:monotone-continuous-on-dense-set",
-      "missing_target_id": "thm:intervals-are-uncountable",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:derivative-equivalence",
-      "missing_target_id": "thm:equivalence-of-function-limit-definitions",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:differentiable-implies-continuous",
-      "missing_target_id": "def:continuity",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:differentiable-implies-continuous",
-      "missing_target_id": "prop:identity-limit",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:differentiable-implies-continuous",
-      "missing_target_id": "prop:limit-product-rule",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:interior-extremum-theorem",
-      "missing_target_id": "thm:order-preservation-limits",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:nondecreasing-iff-nonneg-derivative",
-      "missing_target_id": "thm:order-preservation-limits",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:ineq-multiply-positive",
-      "missing_target_id": "thm:ordered-field-positive-multiplication-preserves-order",
-      "relationship_kind": "depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:ineq-multiply-negative",
-      "missing_target_id": "thm:ordered-field-negative-multiplication-reverses-order",
-      "relationship_kind": "depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:absolute-value-symmetric",
-      "missing_target_id": "thm:ring-double-negation",
-      "relationship_kind": "depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:absolute-value-product",
-      "missing_target_id": "thm:ring-negation-of-product",
-      "relationship_kind": "depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:absolute-value-product",
-      "missing_target_id": "thm:ring-product-of-negatives",
-      "relationship_kind": "depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:self-additive-inverse",
-      "missing_target_id": "def:ring",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:self-negation",
-      "missing_target_id": "def:ring",
-      "relationship_kind": "proof_depends_on",
-      "message": "Edge target not found among ANY extracted node IDs (global check); edge skipped."
-    }
-  ]
+  "error_count": 0,
+  "errors": []
 }
