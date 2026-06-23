@@ -870,6 +870,96 @@
     "kind": "depends_on"
   },
   {
+    "from": "prop:bijection-unique-both-directions",
+    "to": "def:bijective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:bijection-unique-both-directions",
+    "to": "def:injective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:bijection-unique-both-directions",
+    "to": "def:surjective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:function-total-functional-characterization",
+    "to": "def:function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:function-total-functional-characterization",
+    "to": "def:functional-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:function-total-functional-characterization",
+    "to": "def:total-relation-on-domain",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:image-preimage-adjunction",
+    "to": "def:image-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:image-preimage-adjunction",
+    "to": "def:preimage",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:image-preimage-adjunction",
+    "to": "def:injective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:image-preimage-adjunction",
+    "to": "def:surjective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:one-to-many-not-functional",
+    "to": "def:one-to-many-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:one-to-many-not-functional",
+    "to": "def:functional-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:one-to-many-not-functional",
+    "to": "def:function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:one-to-one-converse-functional",
+    "to": "def:injective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:one-to-one-converse-functional",
+    "to": "def:converse-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:one-to-one-converse-functional",
+    "to": "def:functional-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:partial-function-functional-relation",
+    "to": "def:partial-function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:partial-function-functional-relation",
+    "to": "def:functional-relation",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "def:sym-asym",
     "to": "def:relation",
     "kind": "depends_on"
@@ -2308,6 +2398,256 @@
     "from": "prop:existential-import-contrariety-predicate-logic",
     "to": "def:existential-q",
     "kind": "depends_on"
+  },
+  {
+    "from": "thm:dependent-witness-not-uniform",
+    "to": "thm:uniform-witness-implies-dependent-witness",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existential-not-universal",
+    "to": "thm:universal-implies-existential",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:invalid-quantifier-distribution",
+    "to": "thm:qdist",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:mixed-quantifiers-do-not-commute",
+    "to": "thm:qcomm",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:neg-bounded",
+    "to": "def:bounded-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:neg-bounded",
+    "to": "thm:qneg",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:pnf",
+    "to": "def:pnf",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:pnf",
+    "to": "thm:qneg",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:pnf",
+    "to": "thm:rename",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:pnf",
+    "to": "thm:qdist",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:qcomm",
+    "to": "def:universal-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:qcomm",
+    "to": "def:existential-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:qdist",
+    "to": "def:log-equiv",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:qdist",
+    "to": "def:universal-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:qdist",
+    "to": "def:existential-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:qneg",
+    "to": "def:universal-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:qneg",
+    "to": "def:existential-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:qneg",
+    "to": "def:log-equiv",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:quantifier-double-negation",
+    "to": "thm:qneg",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:rename",
+    "to": "def:free-for",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:rename",
+    "to": "def:subst-notation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:uniform-witness-implies-dependent-witness",
+    "to": "def:q-alt",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:uniform-witness-implies-dependent-witness",
+    "to": "def:log-consequence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:universal-implies-existential",
+    "to": "def:structure",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:universal-implies-existential",
+    "to": "def:log-consequence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:vacuous",
+    "to": "def:quantifier-scope",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:subst-formulas",
+    "to": "def:subst-notation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:subst-formulas",
+    "to": "def:free-for",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:subst-formulas",
+    "to": "def:fol-satisfaction",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:subst-formulas",
+    "to": "lem:subst-terms",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:subst-terms",
+    "to": "def:subst-notation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:subst-terms",
+    "to": "def:free-for",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:subst-terms",
+    "to": "def:term-interp",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:a-o-contradictory-predicate-logic",
+    "to": "def:categorical-a-form-predicate-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:a-o-contradictory-predicate-logic",
+    "to": "def:categorical-o-form-predicate-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:a-o-contradictory-predicate-logic",
+    "to": "thm:qneg",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:conditional-translation-pattern",
+    "to": "prop:universal-translation-pattern",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:e-i-contradictory-predicate-logic",
+    "to": "def:categorical-e-form-predicate-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:e-i-contradictory-predicate-logic",
+    "to": "def:categorical-i-form-predicate-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:e-i-contradictory-predicate-logic",
+    "to": "thm:qneg",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:existential-import-contrariety-predicate-logic",
+    "to": "def:categorical-a-form-predicate-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:existential-import-contrariety-predicate-logic",
+    "to": "def:categorical-e-form-predicate-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:existential-import-contrariety-predicate-logic",
+    "to": "def:existential-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:existential-translation-pattern",
+    "to": "def:existential-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:existential-translation-pattern",
+    "to": "def:molecular",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:negation-translation-pattern",
+    "to": "thm:qneg",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:negation-translation-pattern",
+    "to": "prop:universal-translation-pattern",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:negation-translation-pattern",
+    "to": "prop:existential-translation-pattern",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:universal-translation-pattern",
+    "to": "def:universal-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:universal-translation-pattern",
+    "to": "def:molecular",
+    "kind": "proof_depends_on"
   },
   {
     "from": "def:propositional-equivalence-law",
@@ -3880,6 +4220,776 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:absorption-laws-propositional-logic",
+    "to": "def:logical-equivalence-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:absorption-laws-propositional-logic",
+    "to": "thm:basic-boolean-equivalence-laws-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:absorption-laws-propositional-logic",
+    "to": "thm:distributive-laws-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:basic-boolean-equivalence-laws-propositional-logic",
+    "to": "def:logical-equivalence-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:basic-boolean-equivalence-laws-propositional-logic",
+    "to": "thm:unique-extension-truth-assignment-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:biconditional-equivalence-laws-propositional-logic",
+    "to": "def:logical-equivalence-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:biconditional-equivalence-laws-propositional-logic",
+    "to": "thm:conditional-equivalence-laws-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:conditional-equivalence-laws-propositional-logic",
+    "to": "def:logical-equivalence-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:conditional-equivalence-laws-propositional-logic",
+    "to": "thm:unique-extension-truth-assignment-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:de-morgan-laws-propositional-logic",
+    "to": "def:logical-equivalence-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:de-morgan-laws-propositional-logic",
+    "to": "thm:unique-extension-truth-assignment-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:distributive-laws-propositional-logic",
+    "to": "def:logical-equivalence-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:distributive-laws-propositional-logic",
+    "to": "thm:unique-extension-truth-assignment-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:identity-domination-laws-propositional-logic",
+    "to": "def:tautology-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:identity-domination-laws-propositional-logic",
+    "to": "def:contradiction-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:identity-domination-laws-propositional-logic",
+    "to": "def:logical-equivalence-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:logical-equivalence-equivalence-relation",
+    "to": "def:logical-equivalence-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:replacement-of-logical-equivalents-propositional-logic",
+    "to": "def:formula-context-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:replacement-of-logical-equivalents-propositional-logic",
+    "to": "def:logical-equivalence-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:replacement-of-logical-equivalents-propositional-logic",
+    "to": "lem:coincidence-lemma-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:replacement-of-logical-equivalents-propositional-logic",
+    "to": "thm:unique-extension-truth-assignment-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:replacement-of-logical-equivalents-propositional-logic",
+    "to": "thm:replacement-of-logical-equivalents-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-validity-propositional-logic",
+    "to": "def:valid-argument-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:affirming-consequent-invalid-propositional-logic",
+    "to": "def:counterexample-assignment-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:affirming-consequent-invalid-propositional-logic",
+    "to": "def:valid-argument-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:conjunction-introduction-validity-propositional-logic",
+    "to": "def:valid-argument-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:constructive-dilemma-validity-propositional-logic",
+    "to": "def:valid-argument-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:constructive-dilemma-validity-propositional-logic",
+    "to": "thm:disjunctive-syllogism-validity-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:denying-antecedent-invalid-propositional-logic",
+    "to": "def:counterexample-assignment-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:denying-antecedent-invalid-propositional-logic",
+    "to": "def:valid-argument-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:destructive-dilemma-validity-propositional-logic",
+    "to": "def:valid-argument-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:destructive-dilemma-validity-propositional-logic",
+    "to": "thm:modus-tollens-validity-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:disjunctive-syllogism-validity-propositional-logic",
+    "to": "def:valid-argument-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:disjunctive-syllogism-validity-propositional-logic",
+    "to": "def:truth-assignment-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:hypothetical-syllogism-validity-propositional-logic",
+    "to": "def:valid-argument-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:hypothetical-syllogism-validity-propositional-logic",
+    "to": "def:logical-consequence-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:modus-ponens-validity-propositional-logic",
+    "to": "def:valid-argument-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:modus-ponens-validity-propositional-logic",
+    "to": "def:truth-assignment-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:modus-tollens-validity-propositional-logic",
+    "to": "def:valid-argument-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:modus-tollens-validity-propositional-logic",
+    "to": "thm:conditional-equivalence-laws-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:replacement-rules-preserve-logical-equivalence-propositional-logic",
+    "to": "def:rule-of-replacement-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:replacement-rules-preserve-logical-equivalence-propositional-logic",
+    "to": "thm:replacement-of-logical-equivalents-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:replacement-rules-preserve-logical-equivalence-propositional-logic",
+    "to": "thm:logical-equivalence-equivalence-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:simplification-validity-propositional-logic",
+    "to": "def:valid-argument-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:tautological-implication-valid-argument-form-propositional-logic",
+    "to": "def:tautology-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:tautological-implication-valid-argument-form-propositional-logic",
+    "to": "def:valid-argument-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:tautological-implication-valid-argument-form-propositional-logic",
+    "to": "def:logical-consequence-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:truth-table-validity-test-argument-forms-propositional-logic",
+    "to": "def:valid-argument-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:truth-table-validity-test-argument-forms-propositional-logic",
+    "to": "def:counterexample-assignment-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:truth-table-validity-test-argument-forms-propositional-logic",
+    "to": "def:truth-table-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:truth-table-validity-test-argument-forms-propositional-logic",
+    "to": "thm:finite-truth-table-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:finite-unsatisfiability-witness-contrapositive-propositional-logic",
+    "to": "thm:finite-unsatisfiability-witness-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:finite-unsatisfiability-witness-contrapositive-propositional-logic",
+    "to": "def:finitely-satisfiable-set-of-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:finite-unsatisfiability-witness-contrapositive-propositional-logic",
+    "to": "def:satisfiable-set-of-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:finite-unsatisfiability-witness-propositional-logic",
+    "to": "def:finite-unsatisfiability-witness-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:finite-unsatisfiability-witness-propositional-logic",
+    "to": "def:unsatisfiable-set-of-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:finite-unsatisfiability-witness-propositional-logic",
+    "to": "def:satisfaction-set-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:propositional-compactness",
+    "to": "def:finitely-satisfiable-set-of-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:propositional-compactness",
+    "to": "def:satisfiable-set-of-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:propositional-compactness",
+    "to": "def:finite-unsatisfiability-witness-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:conjunction-disjunction-not-functionally-complete-propositional-logic",
+    "to": "def:incomplete-connective-set-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:conjunction-disjunction-not-functionally-complete-propositional-logic",
+    "to": "def:monotone-boolean-function-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:conjunction-disjunction-not-functionally-complete-propositional-logic",
+    "to": "def:functionally-complete-connective-set-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:dnf-representation-of-boolean-functions-propositional-logic",
+    "to": "def:boolean-function-representation-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:dnf-representation-of-boolean-functions-propositional-logic",
+    "to": "def:canonical-disjunctive-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:dnf-representation-of-boolean-functions-propositional-logic",
+    "to": "thm:canonical-disjunctive-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:dnf-representation-of-boolean-functions-propositional-logic",
+    "to": "def:disjunctive-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:nand-functionally-complete-propositional-logic",
+    "to": "def:nand-connective-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:nand-functionally-complete-propositional-logic",
+    "to": "def:nand-only-formula-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:nand-functionally-complete-propositional-logic",
+    "to": "def:functionally-complete-connective-set-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:nand-functionally-complete-propositional-logic",
+    "to": "thm:negation-conjunction-functionally-complete-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:nand-nor-minimal-complete-bases-propositional-logic",
+    "to": "def:minimal-complete-basis-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:nand-nor-minimal-complete-bases-propositional-logic",
+    "to": "thm:nand-functionally-complete-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:nand-nor-minimal-complete-bases-propositional-logic",
+    "to": "thm:nor-functionally-complete-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:nand-nor-minimal-complete-bases-propositional-logic",
+    "to": "def:incomplete-connective-set-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-conjunction-functionally-complete-propositional-logic",
+    "to": "thm:standard-connectives-functionally-complete-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-conjunction-functionally-complete-propositional-logic",
+    "to": "thm:de-morgan-laws-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-conjunction-functionally-complete-propositional-logic",
+    "to": "thm:replacement-of-logical-equivalents-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-disjunction-functionally-complete-propositional-logic",
+    "to": "thm:standard-connectives-functionally-complete-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-disjunction-functionally-complete-propositional-logic",
+    "to": "thm:de-morgan-laws-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-disjunction-functionally-complete-propositional-logic",
+    "to": "thm:replacement-of-logical-equivalents-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:nor-functionally-complete-propositional-logic",
+    "to": "def:nor-connective-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:nor-functionally-complete-propositional-logic",
+    "to": "def:nor-only-formula-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:nor-functionally-complete-propositional-logic",
+    "to": "def:functionally-complete-connective-set-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:nor-functionally-complete-propositional-logic",
+    "to": "thm:negation-disjunction-functionally-complete-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:standard-connectives-functionally-complete-propositional-logic",
+    "to": "def:functionally-complete-connective-set-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:standard-connectives-functionally-complete-propositional-logic",
+    "to": "thm:dnf-representation-of-boolean-functions-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:standard-connectives-functionally-complete-propositional-logic",
+    "to": "def:disjunctive-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:canonical-conjunctive-normal-form-propositional-logic",
+    "to": "def:canonical-conjunctive-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:canonical-conjunctive-normal-form-propositional-logic",
+    "to": "thm:finite-truth-table-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:canonical-conjunctive-normal-form-propositional-logic",
+    "to": "lem:coincidence-lemma-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:canonical-conjunctive-normal-form-propositional-logic",
+    "to": "def:logical-equivalence-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:canonical-disjunctive-normal-form-propositional-logic",
+    "to": "def:canonical-disjunctive-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:canonical-disjunctive-normal-form-propositional-logic",
+    "to": "thm:finite-truth-table-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:canonical-disjunctive-normal-form-propositional-logic",
+    "to": "lem:coincidence-lemma-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:canonical-disjunctive-normal-form-propositional-logic",
+    "to": "def:logical-equivalence-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:dnf-satisfiability-criterion-propositional-logic",
+    "to": "def:disjunctive-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:dnf-satisfiability-criterion-propositional-logic",
+    "to": "def:complementary-literals-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:dnf-satisfiability-criterion-propositional-logic",
+    "to": "def:satisfiable-formula-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-conjunctive-normal-form-propositional-logic",
+    "to": "def:conjunctive-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-conjunctive-normal-form-propositional-logic",
+    "to": "def:negation-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-conjunctive-normal-form-propositional-logic",
+    "to": "thm:distributive-laws-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-conjunctive-normal-form-propositional-logic",
+    "to": "thm:replacement-of-logical-equivalents-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-conjunctive-normal-form-propositional-logic",
+    "to": "thm:existence-negation-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-disjunctive-normal-form-propositional-logic",
+    "to": "def:disjunctive-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-disjunctive-normal-form-propositional-logic",
+    "to": "def:negation-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-disjunctive-normal-form-propositional-logic",
+    "to": "thm:distributive-laws-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-disjunctive-normal-form-propositional-logic",
+    "to": "thm:replacement-of-logical-equivalents-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-disjunctive-normal-form-propositional-logic",
+    "to": "thm:existence-negation-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-negation-normal-form-propositional-logic",
+    "to": "def:negation-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-negation-normal-form-propositional-logic",
+    "to": "def:nnf-conversion-procedure-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-negation-normal-form-propositional-logic",
+    "to": "thm:replacement-of-logical-equivalents-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-negation-normal-form-propositional-logic",
+    "to": "thm:structural-induction-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "def:disjunctive-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "def:conjunctive-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "def:satisfiable-formula-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "def:contradiction-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "def:tautology-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "def:contingency-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "thm:dnf-satisfiability-criterion-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "thm:canonical-disjunctive-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:normal-form-semantic-classification-propositional-logic",
+    "to": "thm:canonical-conjunctive-normal-form-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:coincidence-lemma-propositional-logic",
+    "to": "def:formula-variable-set-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:coincidence-lemma-propositional-logic",
+    "to": "thm:unique-extension-truth-assignment-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:coincidence-lemma-propositional-logic",
+    "to": "thm:structural-induction-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:counting-boolean-functions",
+    "to": "def:boolean-function-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:finite-truth-table-propositional-logic",
+    "to": "def:truth-table-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:finite-truth-table-propositional-logic",
+    "to": "lem:finiteness-of-variables-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:unique-extension-truth-assignment-propositional-logic",
+    "to": "def:truth-assignment-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:unique-extension-truth-assignment-propositional-logic",
+    "to": "def:extended-truth-assignment-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:unique-extension-truth-assignment-propositional-logic",
+    "to": "thm:structural-recursion-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:unique-extension-truth-assignment-propositional-logic",
+    "to": "thm:unique-decomposition-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:closure-under-formation-propositional-formulas",
+    "to": "def:well-formed-formula",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:constructor-disjointness-propositional-formulas",
+    "to": "def:well-formed-formula",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:constructor-disjointness-propositional-formulas",
+    "to": "def:atomic-formula-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:constructor-disjointness-propositional-formulas",
+    "to": "def:main-connective-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:constructor-injectivity-propositional-formulas",
+    "to": "def:well-formed-formula",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:constructor-injectivity-propositional-formulas",
+    "to": "def:logical-connective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:finiteness-of-subformulas-propositional-formulas",
+    "to": "def:subformula-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:finiteness-of-subformulas-propositional-formulas",
+    "to": "thm:structural-induction-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:finiteness-of-variables-propositional-formulas",
+    "to": "def:formula-variable-set-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:finiteness-of-variables-propositional-formulas",
+    "to": "thm:structural-induction-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:minimality-of-well-formed-formulas",
+    "to": "def:well-formed-formula",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:minimality-of-well-formed-formulas",
+    "to": "thm:structural-induction-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:proper-subformula-depth-propositional-logic",
+    "to": "def:subformula-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:proper-subformula-depth-propositional-logic",
+    "to": "def:formula-depth-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:structural-induction-propositional-formulas",
+    "to": "def:well-formed-formula",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:structural-recursion-propositional-formulas",
+    "to": "def:well-formed-formula",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:structural-recursion-propositional-formulas",
+    "to": "thm:structural-induction-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:unique-decomposition-propositional-formulas",
+    "to": "def:well-formed-formula",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:unique-decomposition-propositional-formulas",
+    "to": "lem:constructor-disjointness-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:unique-decomposition-propositional-formulas",
+    "to": "lem:constructor-injectivity-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:unique-syntax-tree-propositional-formulas",
+    "to": "def:parse-tree-propositional-logic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:unique-syntax-tree-propositional-formulas",
+    "to": "thm:unique-decomposition-propositional-formulas",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "def:equiv-class",
     "to": "def:equivalence-rel",
     "kind": "depends_on"
@@ -4450,6 +5560,71 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:relation-composition-assoc",
+    "to": "def:relation-composition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:relation-composition-assoc",
+    "to": "def:relation-equality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:relation-composition-boolean",
+    "to": "def:relation-composition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:relation-composition-boolean",
+    "to": "def:relation-union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:relation-composition-boolean",
+    "to": "def:relation-intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:relation-composition-id",
+    "to": "def:relation-identity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:relation-composition-id",
+    "to": "def:relation-composition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:relation-converse-laws",
+    "to": "def:converse-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:relation-converse-laws",
+    "to": "def:relation-composition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:relation-converse-laws",
+    "to": "def:relation-union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:relation-converse-laws",
+    "to": "def:relation-intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:relation-converse-laws",
+    "to": "def:relation-difference",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:relation-converse-laws",
+    "to": "def:relation-complement",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "def:cover-full",
     "to": "def:subset",
     "kind": "depends_on"
@@ -4883,6 +6058,36 @@
     "from": "cor:set-duality",
     "to": "ax:extensionality",
     "kind": "depends_on"
+  },
+  {
+    "from": "thm:indexed-de-morgan",
+    "to": "def:indexed-union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:indexed-de-morgan",
+    "to": "def:indexed-intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:indexed-de-morgan",
+    "to": "def:complement",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:de-morgan",
+    "to": "def:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:de-morgan",
+    "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:de-morgan",
+    "to": "def:complement",
+    "kind": "proof_depends_on"
   },
   {
     "from": "def:associativity",
@@ -5605,6 +6810,281 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:general-associativity",
+    "to": "def:associativity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:general-commutativity",
+    "to": "def:associativity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:general-commutativity",
+    "to": "def:commutativity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:invertibility-implies-cancellation",
+    "to": "prop:invertibility-implies-left-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:invertibility-implies-cancellation",
+    "to": "prop:invertibility-implies-right-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:invertibility-implies-cancellation",
+    "to": "def:two-sided-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:invertibility-implies-left-cancellation",
+    "to": "def:associativity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:invertibility-implies-left-cancellation",
+    "to": "def:two-sided-identity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:invertibility-implies-left-cancellation",
+    "to": "def:two-sided-inverse",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:invertibility-implies-right-cancellation",
+    "to": "def:associativity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:invertibility-implies-right-cancellation",
+    "to": "def:two-sided-identity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:invertibility-implies-right-cancellation",
+    "to": "def:two-sided-inverse",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-operation-well-defined",
+    "to": "def:quotient-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-operation-well-defined",
+    "to": "def:operation-well-definedness",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:operation-left-respect",
+    "to": "def:operation-well-definedness",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:operation-right-respect",
+    "to": "def:operation-well-definedness",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:left-sign-rule",
+    "to": "def:two-sided-distributivity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:left-sign-rule",
+    "to": "prop:left-zero-absorption",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:left-zero-absorption",
+    "to": "def:two-sided-distributivity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:negative-one-rule",
+    "to": "prop:left-sign-rule",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-zero-divisors",
+    "to": "def:zero-divisor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:product-of-negatives",
+    "to": "prop:left-sign-rule",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:product-of-negatives",
+    "to": "prop:right-sign-rule",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:right-sign-rule",
+    "to": "def:two-sided-distributivity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:right-sign-rule",
+    "to": "prop:right-zero-absorption",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:right-zero-absorption",
+    "to": "def:two-sided-distributivity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:sign-rule",
+    "to": "prop:left-sign-rule",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:sign-rule",
+    "to": "prop:right-sign-rule",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:zero-absorption",
+    "to": "prop:left-zero-absorption",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:zero-absorption",
+    "to": "prop:right-zero-absorption",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:left-right-identities-coincide",
+    "to": "def:left-identity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:left-right-identities-coincide",
+    "to": "def:right-identity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:uniqueness-of-identity",
+    "to": "lem:left-right-identities-coincide",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:left-right-inverses-coincide",
+    "to": "def:associativity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:left-right-inverses-coincide",
+    "to": "def:two-sided-identity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:left-right-inverses-coincide",
+    "to": "def:left-inverse",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:left-right-inverses-coincide",
+    "to": "def:right-inverse",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:solvability-iff-inverses",
+    "to": "def:two-sided-identity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:solvability-iff-inverses",
+    "to": "def:two-sided-inverse",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:solvability-iff-inverses",
+    "to": "def:right-solvability",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:solvability-iff-inverses",
+    "to": "def:left-solvability",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:solvability-iff-inverses",
+    "to": "def:two-sided-solvability",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:uniqueness-of-inverse",
+    "to": "lem:left-right-inverses-coincide",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:addition-order-compatibility-left",
+    "to": "def:right-monotony",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:addition-order-compatibility-right",
+    "to": "def:left-monotony",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:addition-order-compatibility",
+    "to": "prop:addition-order-compatibility-left",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:addition-order-compatibility",
+    "to": "prop:addition-order-compatibility-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:multiplication-order-compatibility-left",
+    "to": "def:right-monotony",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:multiplication-order-compatibility-left",
+    "to": "def:strict-total-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:multiplication-order-compatibility-right",
+    "to": "def:left-monotony",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:multiplication-order-compatibility-right",
+    "to": "def:strict-total-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:multiplication-order-compatibility",
+    "to": "prop:multiplication-order-compatibility-left",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:multiplication-order-compatibility",
+    "to": "prop:multiplication-order-compatibility-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:composition-of-homomorphisms",
+    "to": "def:homomorphism",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:identity-map-is-homomorphism",
+    "to": "def:homomorphism",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "def:complex-prepair",
     "to": "def:ordered-pair",
     "kind": "depends_on"
@@ -5843,6 +7323,146 @@
     "from": "thm:inversion-on-c-well-defined",
     "to": "lem:complex-product-with-conjugate",
     "kind": "depends_on"
+  },
+  {
+    "from": "thm:complex-coordinate-equivalence-relation",
+    "to": "def:equivalence-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complex-coordinate-equivalence-relation",
+    "to": "def:complex-coordinate-equivalence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complex-coordinate-equivalence-relation",
+    "to": "lem:complex-coordinate-equivalence-reflexive",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complex-coordinate-equivalence-relation",
+    "to": "lem:complex-coordinate-equivalence-symmetric",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complex-coordinate-equivalence-relation",
+    "to": "lem:complex-coordinate-equivalence-transitive",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:c-is-a-field",
+    "to": "thm:addition-on-c-well-defined",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:c-is-a-field",
+    "to": "thm:multiplication-on-c-well-defined",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:c-is-a-field",
+    "to": "thm:every-nonzero-complex-has-inverse",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:addition-on-c-respects-equivalence",
+    "to": "def:addition-on-c-classes",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:addition-on-c-respects-equivalence",
+    "to": "def:complex-coordinate-equivalence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-c-well-defined",
+    "to": "def:function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-c-well-defined",
+    "to": "def:addition-on-c-classes",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-c-well-defined",
+    "to": "lem:addition-on-c-respects-equivalence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complex-conjugation-well-defined",
+    "to": "def:function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complex-conjugation-well-defined",
+    "to": "def:complex-conjugation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:inversion-on-c-well-defined",
+    "to": "def:function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:inversion-on-c-well-defined",
+    "to": "def:multiplicative-inverse-on-c",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:inversion-on-c-well-defined",
+    "to": "lem:complex-product-with-conjugate",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-c-well-defined",
+    "to": "def:function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-c-well-defined",
+    "to": "def:multiplication-on-c-classes",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-c-well-defined",
+    "to": "lem:multiplication-on-c-respects-equivalence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-on-c-well-defined",
+    "to": "def:function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-on-c-well-defined",
+    "to": "def:negation-on-c-classes",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-on-c-well-defined",
+    "to": "lem:negation-on-c-respects-equivalence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:subtraction-on-c-well-defined",
+    "to": "def:function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:subtraction-on-c-well-defined",
+    "to": "def:subtraction-on-c",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:subtraction-on-c-well-defined",
+    "to": "thm:addition-on-c-well-defined",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:subtraction-on-c-well-defined",
+    "to": "thm:negation-on-c-well-defined",
+    "kind": "proof_depends_on"
   },
   {
     "from": "def:congruence-modulo-integer",
@@ -6125,6 +7745,91 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:congruence-modulo-integer-equivalence",
+    "to": "def:equivalence-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:congruence-modulo-integer-equivalence",
+    "to": "def:congruence-modulo-integer",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:congruence-modulo-integer-equivalence",
+    "to": "def:divisibility-in-z",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:modular-operations-well-defined",
+    "to": "def:operation-well-definedness",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:modular-operations-well-defined",
+    "to": "def:addition-modulo-n",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:modular-operations-well-defined",
+    "to": "def:multiplication-modulo-n",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:modular-operations-well-defined",
+    "to": "def:congruence-modulo-integer",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-mod-four-has-zero-divisors",
+    "to": "def:finite-modular-number-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-mod-four-has-zero-divisors",
+    "to": "def:multiplication-modulo-n",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-mod-four-has-zero-divisors",
+    "to": "def:two-sided-inverse",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:two-element-system-is-field",
+    "to": "def:two-element-number-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:two-element-system-is-field",
+    "to": "def:two-sided-inverse",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:two-element-system-not-ordered-field",
+    "to": "thm:two-element-system-is-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:two-element-system-not-ordered-field",
+    "to": "def:strict-total-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-mod-two-is-two-element-system",
+    "to": "def:finite-modular-number-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-mod-two-is-two-element-system",
+    "to": "def:two-element-number-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-mod-two-is-two-element-system",
+    "to": "thm:modular-operations-well-defined",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "thm:embedding-chain-compatibility",
     "to": "thm:n-embeds-into-w-as-positive-part",
     "kind": "depends_on"
@@ -6278,6 +7983,81 @@
     "from": "thm:embedding-identifies-with-image",
     "to": "def:image-of-embedding",
     "kind": "depends_on"
+  },
+  {
+    "from": "thm:embedding-chain-compatibility",
+    "to": "thm:n-embeds-into-w-as-positive-part",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:embedding-chain-compatibility",
+    "to": "thm:w-embeds-in-z",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:embedding-chain-compatibility",
+    "to": "thm:z-embeds-in-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:embedding-chain-compatibility",
+    "to": "thm:q-embeds-in-r",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-embeds-in-w",
+    "to": "def:whole-numbers",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-embeds-in-w",
+    "to": "def:embedding-n-into-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-embeds-in-w",
+    "to": "thm:n-embeds-into-w-as-positive-part",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:q-embeds-in-r",
+    "to": "def:embedding-q-into-r",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:q-embeds-in-r",
+    "to": "thm:embedding-identifies-with-image",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-embeds-in-z",
+    "to": "def:embedding-w-into-z",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-embeds-in-z",
+    "to": "thm:embedding-identifies-with-image",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-embeds-in-q",
+    "to": "def:embedding-z-into-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-embeds-in-q",
+    "to": "thm:embedding-identifies-with-image",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:embedding-identifies-with-image",
+    "to": "def:number-system-embedding",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:embedding-identifies-with-image",
+    "to": "def:image-of-embedding",
+    "kind": "proof_depends_on"
   },
   {
     "from": "def:identity-relation",
@@ -6638,6 +8418,276 @@
     "from": "prop:congruence-with-respect-to-equality-is-automatic",
     "to": "prop:substitution-preserves-operations-full",
     "kind": "depends_on"
+  },
+  {
+    "from": "lem:distinct-equivalence-classes-are-disjoint",
+    "to": "thm:equivalence-classes-partition-domain",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:equality-is-finest-equivalence",
+    "to": "def:equivalence-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:equality-is-finest-equivalence",
+    "to": "ax:equality-reflexivity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:equivalence-classes-partition-domain",
+    "to": "def:equivalence-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:equivalence-classes-partition-domain",
+    "to": "def:equivalence-class",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-of-a-quotient",
+    "to": "def:equivalence-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-of-a-quotient",
+    "to": "def:quotient-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:existence-of-a-quotient",
+    "to": "def:canonical-projection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-map-out-of-quotient",
+    "to": "def:canonical-projection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-map-out-of-quotient",
+    "to": "prop:projection-identifies-equivalent-elements",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-map-out-of-quotient",
+    "to": "prop:projection-is-surjective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-operation-on-quotient",
+    "to": "def:operation-respects-equivalence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-operation-on-quotient",
+    "to": "prop:representatives-related-iff-classes-equal",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-operation-on-quotient",
+    "to": "thm:existence-of-a-quotient",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-partial-operation-on-quotient",
+    "to": "thm:induced-unary-operation-on-quotient",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-partial-operation-on-quotient",
+    "to": "thm:induced-predicate-on-quotient",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-predicate-on-quotient",
+    "to": "def:predicate-respects-equivalence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-predicate-on-quotient",
+    "to": "prop:representatives-related-iff-classes-equal",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-relation-on-quotient",
+    "to": "def:relation-respects-equivalence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-relation-on-quotient",
+    "to": "prop:representatives-related-iff-classes-equal",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-unary-operation-on-quotient",
+    "to": "prop:representatives-related-iff-classes-equal",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induced-unary-operation-on-quotient",
+    "to": "thm:existence-of-a-quotient",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:projection-identifies-equivalent-elements",
+    "to": "def:canonical-projection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:projection-identifies-equivalent-elements",
+    "to": "prop:representatives-related-iff-classes-equal",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:projection-is-surjective",
+    "to": "def:canonical-projection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:projection-is-surjective",
+    "to": "def:quotient-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:representative-independence-is-necessary",
+    "to": "def:operation-respects-equivalence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:representative-independence-is-necessary",
+    "to": "prop:projection-identifies-equivalent-elements",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:representative-independence-is-necessary",
+    "to": "thm:induced-operation-on-quotient",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:representatives-related-iff-classes-equal",
+    "to": "thm:equivalence-classes-partition-domain",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:respect-splits",
+    "to": "def:operation-respects-equivalence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:respect-splits",
+    "to": "def:left-right-respect-equivalence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:equality-is-equivalence-relation",
+    "to": "ax:equality-reflexivity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:equality-is-equivalence-relation",
+    "to": "thm:equality-symmetry",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:equality-is-equivalence-relation",
+    "to": "thm:equality-transitivity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:equality-symmetry",
+    "to": "ax:leibniz-law",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:equality-symmetry",
+    "to": "ax:equality-reflexivity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:equality-transitivity",
+    "to": "ax:leibniz-law",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:equality-transitivity",
+    "to": "ax:equality-reflexivity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:equality-transitivity",
+    "to": "thm:equality-symmetry",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:congruence-with-respect-to-equality-is-automatic",
+    "to": "prop:substitution-preserves-predicates",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:congruence-with-respect-to-equality-is-automatic",
+    "to": "prop:substitution-preserves-relations-full",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:congruence-with-respect-to-equality-is-automatic",
+    "to": "prop:substitution-preserves-functions",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:congruence-with-respect-to-equality-is-automatic",
+    "to": "prop:substitution-preserves-operations-full",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:substitution-preserves-functions",
+    "to": "ax:equality-substitution",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:substitution-preserves-operations-full",
+    "to": "prop:substitution-preserves-operations-left",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:substitution-preserves-operations-full",
+    "to": "prop:substitution-preserves-operations-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:substitution-preserves-operations-left",
+    "to": "prop:substitution-preserves-functions",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:substitution-preserves-operations-right",
+    "to": "prop:substitution-preserves-functions",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:substitution-preserves-predicates",
+    "to": "ax:equality-substitution",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:substitution-preserves-relations-full",
+    "to": "prop:substitution-preserves-relations-left",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:substitution-preserves-relations-full",
+    "to": "prop:substitution-preserves-relations-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:substitution-preserves-relations-left",
+    "to": "ax:equality-substitution",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:substitution-preserves-relations-right",
+    "to": "ax:equality-substitution",
+    "kind": "proof_depends_on"
   },
   {
     "from": "thm:z-has-no-zero-divisors",
@@ -8330,6 +10380,86 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:z-has-no-zero-divisors",
+    "to": "thm:order-on-w-total",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-integral-domain",
+    "to": "thm:z-commutative-ring",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-integral-domain",
+    "to": "thm:zero-not-one-in-z",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-integral-domain",
+    "to": "thm:z-has-no-zero-divisors",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:formal-difference-equivalence-transitive",
+    "to": "thm:addition-on-w-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:zero-not-one-in-z",
+    "to": "thm:zero-not-in-n",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:bezout-identity-on-z",
+    "to": "thm:well-ordering-principle",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:division-algorithm-on-z",
+    "to": "thm:well-ordering-principle",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:division-algorithm-on-z",
+    "to": "cor:multiplicative-cancellation-on-z",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:division-algorithm-on-z",
+    "to": "thm:z-is-not-well-ordered",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:multiplication-on-z-classes-respects-left-equivalence",
+    "to": "thm:addition-on-w-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:multiplication-on-z-classes-respects-left-equivalence",
+    "to": "thm:order-on-w-total",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:positivity-respects-equivalence",
+    "to": "thm:addition-on-w-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:positivity-respects-equivalence",
+    "to": "thm:order-on-w-total",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sign-trichotomy-on-z",
+    "to": "thm:canonical-form-of-integers",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sign-trichotomy-on-z",
+    "to": "thm:order-on-w-total",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "def:addition-on-peano-system",
     "to": "def:peano-system",
     "kind": "depends_on"
@@ -9130,6 +11260,766 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:addition-associative",
+    "to": "thm:addition-with-one",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-associative",
+    "to": "thm:addition-successor-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-associative",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-cancellation",
+    "to": "thm:addition-left-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-cancellation",
+    "to": "thm:addition-right-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-commutative",
+    "to": "thm:addition-with-one",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-commutative",
+    "to": "thm:addition-successor-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-commutative",
+    "to": "thm:one-plus-n",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-commutative",
+    "to": "thm:addition-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-commutative",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-left-cancellation",
+    "to": "ax:peano-successor-injective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-left-cancellation",
+    "to": "thm:addition-with-one",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-left-cancellation",
+    "to": "thm:addition-successor-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-left-cancellation",
+    "to": "thm:one-plus-n",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-left-cancellation",
+    "to": "thm:addition-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-left-cancellation",
+    "to": "thm:addition-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-left-cancellation",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-right-cancellation",
+    "to": "thm:addition-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-right-cancellation",
+    "to": "thm:addition-left-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-successor-on-right",
+    "to": "def:addition-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-well-defined-on-peano-system",
+    "to": "def:peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-well-defined-on-peano-system",
+    "to": "ax:peano-successor-closure",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-well-defined-on-peano-system",
+    "to": "def:iterator-data-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-well-defined-on-peano-system",
+    "to": "def:addition-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-well-defined-on-peano-system",
+    "to": "thm:peano-iterator-theorem",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-with-one",
+    "to": "def:addition-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-natural-number-equals-itself-plus-a-natural-number",
+    "to": "thm:addition-with-one",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-natural-number-equals-itself-plus-a-natural-number",
+    "to": "thm:addition-successor-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-natural-number-equals-itself-plus-a-natural-number",
+    "to": "thm:no-object-is-its-own-successor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-natural-number-equals-itself-plus-a-natural-number",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:one-plus-n",
+    "to": "thm:addition-with-one",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:one-plus-n",
+    "to": "thm:addition-successor-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:one-plus-n",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-additive-structure",
+    "to": "thm:addition-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-additive-structure",
+    "to": "thm:addition-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-additive-structure",
+    "to": "thm:addition-left-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-additive-structure",
+    "to": "thm:addition-right-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-is-semiring",
+    "to": "thm:n-additive-structure",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-is-semiring",
+    "to": "thm:n-multiplicative-monoid",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-is-semiring",
+    "to": "thm:multiplication-distributes-over-addition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-multiplicative-monoid",
+    "to": "thm:multiplication-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-multiplicative-monoid",
+    "to": "thm:multiplication-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-multiplicative-monoid",
+    "to": "thm:multiplication-with-one",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-multiplicative-monoid",
+    "to": "thm:one-times-n",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induction-from-arbitrary-base",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induction-from-arbitrary-base",
+    "to": "def:less-than-or-equal-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:left-distributivity-of-multiplication-over-addition",
+    "to": "thm:multiplication-distributes-over-addition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:left-distributivity-of-multiplication-over-addition",
+    "to": "thm:multiplication-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:left-distributivity-of-multiplication-over-addition",
+    "to": "thm:addition-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-associative",
+    "to": "thm:multiplication-distributes-over-addition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-associative",
+    "to": "thm:multiplication-with-one",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-associative",
+    "to": "thm:multiplication-successor-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-associative",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-cancellation",
+    "to": "thm:multiplication-left-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-cancellation",
+    "to": "thm:multiplication-right-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-commutative",
+    "to": "thm:one-times-n",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-commutative",
+    "to": "thm:multiplication-successor-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-commutative",
+    "to": "thm:multiplication-distributes-over-addition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-commutative",
+    "to": "thm:addition-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-commutative",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-distributes-over-addition-both-sides",
+    "to": "thm:multiplication-distributes-over-addition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-distributes-over-addition-both-sides",
+    "to": "thm:left-distributivity-of-multiplication-over-addition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-distributes-over-addition",
+    "to": "thm:multiplication-successor-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-distributes-over-addition",
+    "to": "thm:addition-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-distributes-over-addition",
+    "to": "thm:addition-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-distributes-over-addition",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-left-cancellation",
+    "to": "thm:multiplication-preserves-and-reflects-strict-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-left-cancellation",
+    "to": "thm:trichotomy-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-right-cancellation",
+    "to": "thm:multiplication-left-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-right-cancellation",
+    "to": "thm:multiplication-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-successor-on-right",
+    "to": "def:multiplication-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-successor-on-right",
+    "to": "def:addition-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-well-defined-on-peano-system",
+    "to": "def:multiplication-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-well-defined-on-peano-system",
+    "to": "thm:general-recursion-theorem-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-well-defined-on-peano-system",
+    "to": "def:addition-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-with-one",
+    "to": "def:multiplication-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:one-times-n",
+    "to": "thm:multiplication-with-one",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:one-times-n",
+    "to": "thm:multiplication-successor-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:one-times-n",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-preserves-order-on-left",
+    "to": "thm:addition-preserves-order-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-preserves-order-on-left",
+    "to": "thm:addition-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-preserves-order-on-right",
+    "to": "def:strict-less-than-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-preserves-order-on-right",
+    "to": "def:less-than-or-equal-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-preserves-order-on-right",
+    "to": "thm:addition-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-preserves-order",
+    "to": "thm:addition-preserves-order-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-preserves-order",
+    "to": "thm:addition-preserves-order-on-left",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-preserves-and-reflects-strict-order",
+    "to": "def:strict-less-than-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-preserves-and-reflects-strict-order",
+    "to": "def:multiplication-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-preserves-and-reflects-strict-order",
+    "to": "thm:multiplication-distributes-over-addition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-preserves-and-reflects-strict-order",
+    "to": "thm:multiplication-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-preserves-and-reflects-strict-order",
+    "to": "thm:addition-preserves-order-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-preserves-and-reflects-strict-order",
+    "to": "thm:addition-left-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:natural-number-order-is-total",
+    "to": "def:less-than-or-equal-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:natural-number-order-is-total",
+    "to": "thm:trichotomy-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:natural-number-order-is-total",
+    "to": "thm:order-reflexive-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:natural-number-order-is-total",
+    "to": "thm:order-transitive-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:natural-number-order-is-total",
+    "to": "thm:order-antisymmetric-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-antisymmetric-on-peano-system",
+    "to": "def:strict-less-than-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-antisymmetric-on-peano-system",
+    "to": "def:less-than-or-equal-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-antisymmetric-on-peano-system",
+    "to": "thm:addition-left-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-antisymmetric-on-peano-system",
+    "to": "thm:addition-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-antisymmetric-on-peano-system",
+    "to": "thm:no-object-is-its-own-successor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-reflexive-on-peano-system",
+    "to": "def:less-than-or-equal-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-transitive-on-peano-system",
+    "to": "def:strict-less-than-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-transitive-on-peano-system",
+    "to": "def:less-than-or-equal-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-transitive-on-peano-system",
+    "to": "thm:addition-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:strict-order-successor-characterization",
+    "to": "def:strict-less-than-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:strict-order-successor-characterization",
+    "to": "def:less-than-or-equal-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:strict-order-successor-characterization",
+    "to": "thm:addition-with-one",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:strict-order-successor-characterization",
+    "to": "thm:addition-successor-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:strict-order-successor-characterization",
+    "to": "thm:addition-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:strict-order-successor-characterization",
+    "to": "thm:addition-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:strict-order-successor-characterization",
+    "to": "thm:every-element-is-one-or-a-successor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:trichotomy-on-peano-system",
+    "to": "def:strict-less-than-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:trichotomy-on-peano-system",
+    "to": "def:less-than-or-equal-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:trichotomy-on-peano-system",
+    "to": "thm:order-reflexive-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:trichotomy-on-peano-system",
+    "to": "thm:order-transitive-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:trichotomy-on-peano-system",
+    "to": "thm:order-antisymmetric-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:trichotomy-on-peano-system",
+    "to": "thm:strict-order-successor-characterization",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:trichotomy-on-peano-system",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:exponent-power-law",
+    "to": "def:exponentiation-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:exponent-power-law",
+    "to": "thm:exponent-sum-law",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:exponent-power-law",
+    "to": "thm:multiplication-successor-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:exponent-power-law",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:exponent-product-law",
+    "to": "def:exponentiation-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:exponent-product-law",
+    "to": "thm:multiplication-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:exponent-product-law",
+    "to": "thm:multiplication-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:exponent-product-law",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:exponent-sum-law",
+    "to": "def:exponentiation-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:exponent-sum-law",
+    "to": "thm:multiplication-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:exponent-sum-law",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:exponentiation-well-defined-on-peano-system",
+    "to": "thm:general-recursion-theorem-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:exponentiation-well-defined-on-peano-system",
+    "to": "def:multiplication-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-less-than-2-to-n",
+    "to": "def:exponentiation-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-less-than-2-to-n",
+    "to": "def:strict-less-than-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-less-than-2-to-n",
+    "to": "thm:multiplication-distributes-over-addition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-less-than-2-to-n",
+    "to": "thm:addition-preserves-order-on-right",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-less-than-2-to-n",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:powers-with-common-base-preserve-strict-order",
+    "to": "def:exponentiation-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:powers-with-common-base-preserve-strict-order",
+    "to": "thm:multiplication-preserves-and-reflects-strict-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:powers-with-common-base-preserve-strict-order",
+    "to": "thm:exponent-sum-law",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:powers-with-common-base-preserve-strict-order",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:powers-with-common-exponent-preserve-strict-order",
+    "to": "def:exponentiation-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:powers-with-common-exponent-preserve-strict-order",
+    "to": "thm:multiplication-preserves-and-reflects-strict-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:powers-with-common-exponent-preserve-strict-order",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induction-well-ordering-equivalence",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induction-well-ordering-equivalence",
+    "to": "thm:strong-induction-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induction-well-ordering-equivalence",
+    "to": "thm:well-ordering-principle",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:well-ordering-principle",
+    "to": "def:peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:well-ordering-principle",
+    "to": "def:less-than-or-equal-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:well-ordering-principle",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:well-ordering-principle",
+    "to": "thm:trichotomy-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "def:open-interval",
     "to": "def:strict-total-order",
     "kind": "depends_on"
@@ -9473,6 +12363,266 @@
     "from": "thm:uniqueness-of-peano-systems-up-to-isomorphism",
     "to": "thm:general-recursion-theorem-for-peano-system",
     "kind": "depends_on"
+  },
+  {
+    "from": "thm:every-element-is-one-or-a-successor",
+    "to": "def:peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:every-element-is-one-or-a-successor",
+    "to": "ax:peano-base-in-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:every-element-is-one-or-a-successor",
+    "to": "ax:peano-successor-closure",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:every-element-is-one-or-a-successor",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induction-principle-for-peano-system",
+    "to": "def:peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induction-principle-for-peano-system",
+    "to": "ax:peano-induction",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:induction-principle-for-peano-system",
+    "to": "def:inductive-subset-of-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-object-is-its-own-successor",
+    "to": "ax:peano-base-not-successor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-object-is-its-own-successor",
+    "to": "ax:peano-successor-injective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-object-is-its-own-successor",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:non-one-elements-have-a-predecessor",
+    "to": "def:peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:non-one-elements-have-a-predecessor",
+    "to": "thm:every-element-is-one-or-a-successor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:one-is-unique-non-successor",
+    "to": "ax:peano-base-not-successor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:one-is-unique-non-successor",
+    "to": "thm:every-element-is-one-or-a-successor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:peano-minimality",
+    "to": "ax:peano-induction",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:peano-minimality",
+    "to": "def:inductive-subset-of-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:predecessor-exists-unique-away-from-one",
+    "to": "def:peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:predecessor-exists-unique-away-from-one",
+    "to": "thm:every-element-is-one-or-a-successor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:predecessor-exists-unique-away-from-one",
+    "to": "ax:peano-successor-injective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:strong-induction-on-peano-system",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:strong-induction-on-peano-system",
+    "to": "def:strict-less-than-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:strong-induction-on-peano-system",
+    "to": "thm:trichotomy-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:successor-inequality-reflection",
+    "to": "def:peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:successor-inequality-reflection",
+    "to": "ax:peano-successor-injective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:unique-predecessor-characterization-away-from-one",
+    "to": "def:peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:unique-predecessor-characterization-away-from-one",
+    "to": "ax:peano-base-not-successor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:unique-predecessor-characterization-away-from-one",
+    "to": "cor:predecessor-exists-unique-away-from-one",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:existence-of-iterator-function",
+    "to": "lem:minimal-iterator-relation-deterministic",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:existence-of-iterator-function",
+    "to": "lem:minimal-iterator-relation-complete",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:forced-values-are-unique",
+    "to": "lem:iterator-relation-consistency",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:general-recursion-by-state-encoding",
+    "to": "thm:peano-iterator-theorem",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:general-recursion-by-state-encoding",
+    "to": "def:stage-dependent-step-rule",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:general-recursion-theorem-for-peano-system",
+    "to": "lem:uniqueness-of-general-recursive-functions",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:general-recursion-theorem-for-peano-system",
+    "to": "thm:general-recursion-by-state-encoding",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:iterator-base-value",
+    "to": "def:iterator-generated-function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:iterator-relation-consistency",
+    "to": "def:peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:iterator-relation-consistency",
+    "to": "def:iterator-data-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:iterator-relation-consistency",
+    "to": "def:iterator-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:iterator-relation-consistency",
+    "to": "def:minimal-iterator-relation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:iterator-successor-step",
+    "to": "def:iterator-generated-function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:minimal-iterator-relation-complete",
+    "to": "lem:iterator-relation-consistency",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:minimal-iterator-relation-complete",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:minimal-iterator-relation-deterministic",
+    "to": "lem:forced-values-are-unique",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:peano-iterator-theorem",
+    "to": "lem:uniqueness-of-iterator-functions",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:peano-iterator-theorem",
+    "to": "lem:existence-of-iterator-function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:uniqueness-of-binary-iterator-operations",
+    "to": "lem:uniqueness-of-iterator-functions",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:uniqueness-of-general-recursive-functions",
+    "to": "def:general-recursive-function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:uniqueness-of-general-recursive-functions",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:uniqueness-of-iterator-functions",
+    "to": "def:iterator-data-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:uniqueness-of-iterator-functions",
+    "to": "thm:induction-principle-for-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:uniqueness-of-peano-systems-up-to-isomorphism",
+    "to": "def:peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:uniqueness-of-peano-systems-up-to-isomorphism",
+    "to": "thm:general-recursion-theorem-for-peano-system",
+    "kind": "proof_depends_on"
   },
   {
     "from": "def:two-in-q",
@@ -11550,6 +14700,336 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:archimedean-property-of-q",
+    "to": "thm:well-ordering-principle",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:archimedean-property-of-q",
+    "to": "thm:division-algorithm-on-z",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:archimedean-property-of-q",
+    "to": "thm:z-totally-ordered-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:midpoint-between-q",
+    "to": "thm:q-is-an-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:midpoint-between-q",
+    "to": "lem:two-nonzero-in-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:no-least-positive-rational",
+    "to": "thm:density-of-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:one-sided-rational-approximation",
+    "to": "thm:q-has-arbitrarily-close-distinct-points",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:one-sided-rational-approximation",
+    "to": "thm:density-of-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:q-has-arbitrarily-close-distinct-points",
+    "to": "cor:reciprocals-arbitrarily-small-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:q-has-arbitrarily-close-distinct-points",
+    "to": "thm:addition-preserves-strict-order-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:q-has-no-adjacent-points",
+    "to": "thm:density-of-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:reciprocals-arbitrarily-small-q",
+    "to": "thm:archimedean-property-of-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:reciprocals-arbitrarily-small-q",
+    "to": "thm:sign-of-reciprocal-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:two-nonzero-in-q",
+    "to": "cor:one-positive-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:two-nonzero-in-q",
+    "to": "thm:trichotomy-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:fraction-equivalence-transitive",
+    "to": "cor:multiplicative-cancellation-on-z",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:zero-not-one-in-q",
+    "to": "thm:zero-not-one-in-z",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:embedding-z-into-q-injective",
+    "to": "prop:equality-criterion-for-rational-classes",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:embedding-z-into-q-injective",
+    "to": "thm:one-multiplicative-identity-on-z",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:embedding-z-into-q-not-surjective",
+    "to": "thm:density-of-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:embedding-z-into-q-not-surjective",
+    "to": "thm:embedding-z-into-q-preserves-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:embedding-z-into-q-preserves-order",
+    "to": "def:addition-on-q-classes",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:embedding-z-into-q-preserves-order",
+    "to": "def:multiplication-on-q-classes",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:embedding-z-into-q-preserves-order",
+    "to": "def:order-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:embedding-z-into-q-preserves-order",
+    "to": "thm:z-totally-ordered-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:q-is-field-of-fractions-of-z",
+    "to": "def:rational-class-notation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:q-is-field-of-fractions-of-z",
+    "to": "thm:every-nonzero-rational-has-multiplicative-inverse",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:q-is-field-of-fractions-of-z",
+    "to": "lem:vanishing-criterion-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-embeds-into-q",
+    "to": "thm:embedding-z-into-q-preserves-zero",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-embeds-into-q",
+    "to": "thm:embedding-z-into-q-preserves-one",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-embeds-into-q",
+    "to": "thm:embedding-z-into-q-injective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-embeds-into-q",
+    "to": "thm:embedding-z-into-q-preserves-addition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-embeds-into-q",
+    "to": "thm:embedding-z-into-q-preserves-multiplication",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:z-embeds-into-q",
+    "to": "thm:embedding-z-into-q-preserves-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:inverse-of-inverse-on-q",
+    "to": "def:two-sided-inverse",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:power-of-product-on-q",
+    "to": "def:integer-power-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:power-of-product-on-q",
+    "to": "cor:inverse-of-product-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:zero-product-on-q",
+    "to": "thm:q-is-a-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:zero-product-on-q",
+    "to": "def:zero-divisor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:addition-denominator-nonzero-q",
+    "to": "thm:z-has-no-zero-divisors",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:multiplication-denominator-nonzero-q",
+    "to": "thm:z-has-no-zero-divisors",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:q-is-a-field",
+    "to": "thm:zero-not-one-in-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:positivity-respects-equivalence-q",
+    "to": "thm:z-totally-ordered-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:positivity-respects-equivalence-q",
+    "to": "thm:z-has-no-zero-divisors",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:fraction-comparison-on-q",
+    "to": "thm:q-is-an-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:fraction-comparison-on-q",
+    "to": "prop:product-of-positives-is-positive-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:fraction-comparison-on-q",
+    "to": "def:one-in-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:fraction-comparison-on-q",
+    "to": "thm:reciprocal-reverses-order-on-positives-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:fraction-comparison-on-q",
+    "to": "thm:positive-multiplication-preserves-order-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:ordered-field-laws-on-q",
+    "to": "thm:q-is-an-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:ordered-field-laws-on-q",
+    "to": "def:strict-total-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:q-is-an-ordered-field",
+    "to": "thm:q-is-a-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:q-is-an-ordered-field",
+    "to": "thm:q-totally-ordered-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:q-is-an-ordered-field",
+    "to": "thm:addition-preserves-order-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:q-is-an-ordered-field",
+    "to": "thm:positive-multiplication-preserves-order-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:gap-set-bounded-above-q",
+    "to": "thm:q-is-an-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:gap-set-bounded-above-q",
+    "to": "cor:natural-numbers-positive-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:gap-set-no-rational-supremum-q",
+    "to": "thm:no-rational-square-root-of-two",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:gap-set-no-rational-supremum-q",
+    "to": "thm:density-of-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:gap-set-no-rational-supremum-q",
+    "to": "thm:q-is-an-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-rational-square-root-of-two",
+    "to": "thm:q-is-a-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-rational-square-root-of-two",
+    "to": "thm:z-integral-domain",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:q-order-incomplete",
+    "to": "prop:gap-set-bounded-above-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:q-order-incomplete",
+    "to": "thm:gap-set-no-rational-supremum-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:rational-limit-unique",
+    "to": "thm:triangle-inequality-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:rational-limit-unique",
+    "to": "thm:q-is-an-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "def:addition-on-r",
     "to": "def:reals",
     "kind": "depends_on"
@@ -12675,6 +16155,91 @@
     "kind": "depends_on"
   },
   {
+    "from": "cor:glb-property-r",
+    "to": "thm:lub-property-r",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:rational-cut-is-a-cut",
+    "to": "thm:density-of-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:rational-cut-is-a-cut",
+    "to": "prop:no-least-positive-rational",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:zero-not-one-in-r",
+    "to": "def:zero-in-r",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:zero-not-one-in-r",
+    "to": "def:one-in-r",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:zero-not-one-in-r",
+    "to": "cor:one-positive-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:archimedean-property-of-r",
+    "to": "thm:lub-property-r",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:field-laws-on-r",
+    "to": "def:two-sided-inverse",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:ordered-field-laws-on-r",
+    "to": "def:strict-total-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:r-is-a-field",
+    "to": "thm:zero-not-one-in-r",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:r-is-complete-ordered-field",
+    "to": "thm:r-is-an-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:r-is-complete-ordered-field",
+    "to": "thm:lub-property-r",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:triangle-inequality",
+    "to": "def:real-chapter-absolute-value-on-r",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:triangle-inequality",
+    "to": "thm:r-is-an-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:r-fills-the-gap",
+    "to": "def:gap-set-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:r-fills-the-gap",
+    "to": "thm:gap-set-no-rational-supremum-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:sqrt-two-is-a-cut",
+    "to": "thm:density-of-q",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "prop:abs-value-is-distance-to-zero",
     "to": "def:distance-on-real-line",
     "kind": "depends_on"
@@ -12938,6 +16503,86 @@
     "from": "thm:closed-set-closure-operations",
     "to": "thm:open-set-closure-operations",
     "kind": "depends_on"
+  },
+  {
+    "from": "prop:abs-value-is-distance-to-zero",
+    "to": "def:distance-on-real-line",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:closed-iff-contains-limit-points",
+    "to": "def:closed-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:closed-iff-contains-limit-points",
+    "to": "def:limit-point",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:compact-implies-closed-bounded",
+    "to": "def:compact-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:compact-implies-closed-bounded",
+    "to": "def:closed-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:compact-implies-closed-bounded",
+    "to": "def:bounded-subset-of-r",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:closed-bounded-interval-compact",
+    "to": "def:compact-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:closed-bounded-interval-compact",
+    "to": "def:closed-interval",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:heine-borel",
+    "to": "thm:compact-implies-closed-bounded",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:heine-borel",
+    "to": "thm:closed-bounded-interval-compact",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:open-interval-is-open",
+    "to": "def:open-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:open-interval-is-open",
+    "to": "def:open-interval",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:open-set-closure-operations",
+    "to": "def:open-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:distance-is-a-metric",
+    "to": "def:distance-on-real-line",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:closed-set-closure-operations",
+    "to": "def:closed-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:closed-set-closure-operations",
+    "to": "thm:open-set-closure-operations",
+    "kind": "proof_depends_on"
   },
   {
     "from": "thm:w-additive-commutative-monoid",
@@ -13413,6 +17058,426 @@
     "from": "thm:well-ordering-principle-for-w",
     "to": "thm:well-ordering-principle",
     "kind": "depends_on"
+  },
+  {
+    "from": "thm:n-embeds-into-w-as-positive-part",
+    "to": "def:whole-numbers",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-embeds-into-w-as-positive-part",
+    "to": "thm:addition-on-w-extends-addition-on-n",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-embeds-into-w-as-positive-part",
+    "to": "thm:multiplication-on-w-extends-multiplication-on-n",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:n-embeds-into-w-as-positive-part",
+    "to": "thm:order-on-w-extends-order-on-n",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-additive-commutative-monoid",
+    "to": "thm:zero-additive-identity-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-additive-commutative-monoid",
+    "to": "thm:addition-on-w-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-additive-commutative-monoid",
+    "to": "thm:addition-on-w-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-commutative-ordered-semiring",
+    "to": "thm:w-commutative-semiring",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-commutative-ordered-semiring",
+    "to": "thm:order-on-w-total",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-commutative-ordered-semiring",
+    "to": "thm:zero-least-element-of-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-commutative-ordered-semiring",
+    "to": "thm:order-on-w-extends-order-on-n",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-commutative-semiring",
+    "to": "thm:w-additive-commutative-monoid",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-commutative-semiring",
+    "to": "thm:w-multiplicative-commutative-monoid",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-commutative-semiring",
+    "to": "thm:multiplication-distributes-over-addition-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-commutative-semiring",
+    "to": "thm:zero-absorbing-for-multiplication-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-has-no-additive-inverses-except-zero",
+    "to": "def:addition-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-has-no-additive-inverses-except-zero",
+    "to": "thm:zero-least-element-of-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-has-no-additive-inverses-except-zero",
+    "to": "thm:no-natural-number-equals-itself-plus-a-natural-number",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-is-not-a-ring",
+    "to": "thm:w-commutative-semiring",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-is-not-a-ring",
+    "to": "thm:w-has-no-additive-inverses-except-zero",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-multiplicative-commutative-monoid",
+    "to": "thm:one-multiplicative-identity-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-multiplicative-commutative-monoid",
+    "to": "thm:multiplication-on-w-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-multiplicative-commutative-monoid",
+    "to": "thm:multiplication-on-w-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:zero-not-in-n",
+    "to": "def:whole-numbers",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-w-associative",
+    "to": "thm:zero-additive-identity-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-w-associative",
+    "to": "thm:addition-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-w-cancellation",
+    "to": "thm:zero-additive-identity-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-w-cancellation",
+    "to": "thm:addition-left-cancellation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-w-commutative",
+    "to": "def:addition-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-w-commutative",
+    "to": "thm:addition-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-w-extends-addition-on-n",
+    "to": "def:addition-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-w-extends-addition-on-n",
+    "to": "def:addition-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-w-well-defined",
+    "to": "def:whole-numbers",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-w-well-defined",
+    "to": "def:addition-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:addition-on-w-well-defined",
+    "to": "thm:addition-well-defined-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:left-additive-identity-on-w",
+    "to": "thm:zero-additive-identity-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:right-additive-identity-on-w",
+    "to": "thm:zero-additive-identity-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:zero-additive-identity-on-w",
+    "to": "def:addition-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:left-zero-absorption-on-w",
+    "to": "thm:zero-absorbing-for-multiplication-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-distributes-over-addition-on-w",
+    "to": "def:addition-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-distributes-over-addition-on-w",
+    "to": "def:multiplication-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-distributes-over-addition-on-w",
+    "to": "thm:multiplication-distributes-over-addition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-w-associative",
+    "to": "thm:zero-absorbing-for-multiplication-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-w-associative",
+    "to": "thm:multiplication-associative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-w-commutative",
+    "to": "def:multiplication-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-w-commutative",
+    "to": "thm:multiplication-commutative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-w-extends-multiplication-on-n",
+    "to": "def:multiplication-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-w-extends-multiplication-on-n",
+    "to": "def:multiplication-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-w-well-defined",
+    "to": "def:multiplication-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-w-well-defined",
+    "to": "thm:multiplication-well-defined-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:one-multiplicative-identity-on-w",
+    "to": "def:multiplication-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:one-multiplicative-identity-on-w",
+    "to": "thm:multiplication-with-one",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:one-multiplicative-identity-on-w",
+    "to": "thm:one-times-n",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:right-zero-absorption-on-w",
+    "to": "thm:zero-absorbing-for-multiplication-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:zero-absorbing-for-multiplication-on-w",
+    "to": "def:multiplication-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:every-nonzero-w-is-successor",
+    "to": "def:whole-numbers",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:every-nonzero-w-is-successor",
+    "to": "def:successor-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:every-nonzero-w-is-successor",
+    "to": "ax:peano-induction",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:successor-on-w-injective",
+    "to": "def:successor-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:successor-on-w-injective",
+    "to": "ax:peano-successor-injective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:successor-on-w-injective",
+    "to": "ax:peano-base-not-successor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:successor-on-w-well-defined",
+    "to": "def:whole-numbers",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:successor-on-w-well-defined",
+    "to": "def:successor-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-successor-system-properties",
+    "to": "def:whole-numbers",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-successor-system-properties",
+    "to": "def:successor-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-successor-system-properties",
+    "to": "thm:successor-on-w-well-defined",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-successor-system-properties",
+    "to": "thm:zero-is-not-successor-in-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:w-successor-system-properties",
+    "to": "thm:successor-on-w-injective",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:zero-is-not-successor-in-w",
+    "to": "def:successor-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:zero-is-not-successor-in-w",
+    "to": "ax:peano-base-not-successor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-on-w-antisymmetric",
+    "to": "def:order-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-on-w-antisymmetric",
+    "to": "thm:order-antisymmetric-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-on-w-extends-order-on-n",
+    "to": "def:order-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-on-w-extends-order-on-n",
+    "to": "def:strict-order-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-on-w-reflexive",
+    "to": "def:order-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-on-w-reflexive",
+    "to": "thm:order-reflexive-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-on-w-total",
+    "to": "def:order-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-on-w-total",
+    "to": "thm:trichotomy-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-on-w-transitive",
+    "to": "def:order-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:order-on-w-transitive",
+    "to": "thm:order-transitive-on-peano-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:well-ordering-principle-for-w",
+    "to": "def:order-on-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:well-ordering-principle-for-w",
+    "to": "thm:zero-least-element-of-w",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:well-ordering-principle-for-w",
+    "to": "thm:well-ordering-principle",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:zero-least-element-of-w",
+    "to": "def:order-on-w",
+    "kind": "proof_depends_on"
   },
   {
     "from": "prop:uniqueness-of-the-maximum",
@@ -13988,6 +18053,81 @@
     "from": "thm:nested-interval-theorem",
     "to": "ax:completeness-of-reals",
     "kind": "depends_on"
+  },
+  {
+    "from": "prop:every-element-lies-below-the-supremum",
+    "to": "def:upper-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:every-element-lies-below-the-supremum",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-less-than-supremum",
+    "to": "def:lower-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-less-than-supremum",
+    "to": "def:upper-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-less-than-supremum",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-less-than-supremum",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-less-than-supremum",
+    "to": "def:real-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:maximum-implies-supremum",
+    "to": "def:maximum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:maximum-implies-supremum",
+    "to": "def:upper-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:maximum-implies-supremum",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-exchange-sup-inf",
+    "to": "def:lower-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-exchange-sup-inf",
+    "to": "def:upper-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-exchange-sup-inf",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-exchange-sup-inf",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-exchange-sup-inf",
+    "to": "def:real-ordered-field",
+    "kind": "proof_depends_on"
   },
   {
     "from": "thm:step-function-approximation",
@@ -19780,6 +23920,106 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:euclid-i-1",
+    "to": "def:euclid-point",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-1",
+    "to": "def:euclid-straight-line",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-1",
+    "to": "def:euclid-circle",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-1",
+    "to": "def:euclid-triangle-side-classes",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-1",
+    "to": "ax:euclid-postulate-draw-straight-line",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-1",
+    "to": "ax:euclid-postulate-describe-circle",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-1",
+    "to": "ax:euclid-common-notion-things-equal-to-same",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-2",
+    "to": "def:euclid-point",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-2",
+    "to": "def:euclid-straight-line",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-2",
+    "to": "def:euclid-circle",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-2",
+    "to": "thm:euclid-i-1",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-2",
+    "to": "ax:euclid-postulate-draw-straight-line",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-2",
+    "to": "ax:euclid-postulate-produce-straight-line",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-2",
+    "to": "ax:euclid-postulate-describe-circle",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-2",
+    "to": "ax:euclid-common-notion-things-equal-to-same",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-3",
+    "to": "def:euclid-straight-line",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-3",
+    "to": "def:euclid-circle",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-3",
+    "to": "thm:euclid-i-2",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-3",
+    "to": "ax:euclid-postulate-describe-circle",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:euclid-i-3",
+    "to": "ax:euclid-common-notion-things-equal-to-same",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "lem:computational-geometry-convex-hull-smallest-convex-set",
     "to": "def:computational-geometry-convex-set",
     "kind": "depends_on"
@@ -19878,6 +24118,61 @@
     "from": "thm:computational-geometry-greedy-slope-upper-hull",
     "to": "thm:computational-geometry-monotone-slope-upper-hull",
     "kind": "depends_on"
+  },
+  {
+    "from": "lem:computational-geometry-convex-hull-smallest-convex-set",
+    "to": "def:computational-geometry-convex-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:computational-geometry-convex-hull-smallest-convex-set",
+    "to": "def:computational-geometry-convex-combination",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:computational-geometry-convex-hull-smallest-convex-set",
+    "to": "def:computational-geometry-convex-hull",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:computational-geometry-greedy-slope-upper-hull",
+    "to": "def:computational-geometry-convex-hull",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:computational-geometry-greedy-slope-upper-hull",
+    "to": "def:computational-geometry-supporting-line",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:computational-geometry-greedy-slope-upper-hull",
+    "to": "lem:computational-geometry-linear-functionals-convex-combinations",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:computational-geometry-greedy-slope-upper-hull",
+    "to": "thm:computational-geometry-supporting-functional-hull-vertices",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:computational-geometry-supporting-functional-hull-vertices",
+    "to": "def:computational-geometry-convex-hull",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:computational-geometry-supporting-functional-hull-vertices",
+    "to": "def:computational-geometry-extreme-point",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:computational-geometry-supporting-functional-hull-vertices",
+    "to": "def:computational-geometry-supporting-line",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:computational-geometry-supporting-functional-hull-vertices",
+    "to": "lem:computational-geometry-linear-functionals-convex-combinations",
+    "kind": "proof_depends_on"
   },
   {
     "from": "def:numerical-analysis-ieee-754-infinity-encoding",
@@ -20048,6 +24343,31 @@
     "from": "lem:self-negation",
     "to": "lem:self-additive-inverse",
     "kind": "depends_on"
+  },
+  {
+    "from": "lem:self-additive-inverse",
+    "to": "def:algebraic-ring",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:self-additive-inverse",
+    "to": "def:boolean-ring",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:self-additive-inverse",
+    "to": "def:idempotent-element",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:self-negation",
+    "to": "lem:self-additive-inverse",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:self-negation",
+    "to": "def:algebraic-ring",
+    "kind": "proof_depends_on"
   },
   {
     "from": "def:first-order-language",
