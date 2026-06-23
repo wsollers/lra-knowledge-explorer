@@ -396,7 +396,7 @@ function renderMine(records){
     const notes=r.body?`<div class="proof-attempt-section"><div class="label">Review Notes</div><pre class="proof-pre">${esc(r.body)}</pre></div>`:'';
     const rendered=r.tex?`<div class="proof-attempt-section"><div class="label">Polished TeX</div><div class="proof-rendered">${texToHtml(r.tex)}</div></div>`:'';
     const markdown=r.markdown?`<div class="proof-attempt-section"><div class="label">Markdown Artifact</div><pre class="proof-pre">${esc(r.markdown)}</pre></div>`:'';
-    const ocr=r.ocr_text?`<div class="proof-attempt-section"><div class="label">OCR Text</div><pre class="proof-pre">${esc(r.ocr_text)}</pre></div>`:'';
+    const ocr=r.ocr_text?`<div class="proof-attempt-section"><div class="label">Transcription / OCR Text</div><pre class="proof-pre">${esc(r.ocr_text)}</pre></div>`:'';
     const body=rendered||markdown||ocr||notes?`${rendered}${notes}${ocr}${markdown}`:'<div class="proof-empty">This attempt has no transcription yet.</div>';
     return`<div class="proof-attempt"><h3>${esc(title)}</h3>${status}${textStatus}${path}${images?`<div style="margin:8px 0">${images}</div>`:''}${body}</div>`;
   }).join('');

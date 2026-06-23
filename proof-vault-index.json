@@ -1,7 +1,7 @@
 {
   "schema": "lra.proof_vault_index",
   "schema_version": 1,
-  "generated_at": "2026-06-23T16:01:00.760868+00:00",
+  "generated_at": "2026-06-23T16:14:34.451357+00:00",
   "source": "lra-proof-vault",
   "record_count": 7,
   "warning_count": 0,
@@ -76,10 +76,10 @@
           "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/thm-infimum-less-than-supremum/attempts/proof-2026-06-23-001.jpg"
         ],
         "body": "Correct handwritten attempt; proof verified and incorporated into Volume III.\n\nTags: corrected-attempt, verified",
-        "ocr_text": "Machine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.",
-        "markdown": "# Infimum Is Less Than or Equal to the Supremum\n\nCanonical theorem label: `thm:infimum-less-than-supremum`\n\n## OCR Text\n\nMachine OCR was not available for this backfill. The displayed TeX and Markdown are reconstructed from the accepted canonical proof.\n\n## Polished Markdown\n\nBecause $A$ is nonempty, choose $x\\in A$. Since $\\inf A$ is a lower\nbound of $A$, we have\n$$\n\\inf A\\le x.\n$$\nSince $\\sup A$ is an upper bound of $A$, we have\n$$\nx\\le \\sup A.\n$$\nBy transitivity of the order on $\\mathbb{R}$,\n$$\n\\inf A\\le \\sup A.\n$$\n\n## Polished TeX\n\n```latex\nBecause \\(A\\) is nonempty, choose \\(x\\in A\\). Since \\(\\inf A\\) is a lower\nbound of \\(A\\), we have\n\\[\n\\inf A\\le x.\n\\]\nSince \\(\\sup A\\) is an upper bound of \\(A\\), we have\n\\[\nx\\le \\sup A.\n\\]\nBy transitivity of the order on \\(\\mathbb{R}\\),\n\\[\n\\inf A\\le \\sup A.\n\\]\n```\n\n## Provenance\n\nPolished text was reconstructed from the accepted canonical proof `lra-volume-iii/volume-iii/analysis/bounding/proofs/bounds-algebra/prf-infimum-less-than-supremum.tex`.",
+        "ocr_text": "Manual transcription from the handwritten proof image:\n\nThm: Infimum <= Supremum\nLet A subset R be nonempty, bounded below and bounded above. Then inf A <= sup A.\n\nProof:\nLet x in A be arbitrary. Then by definition of the infimum and supremum:\ninf A <= x,\nx <= sup A.\nHence inf A <= sup A.",
+        "markdown": "# Infimum Is Less Than or Equal to the Supremum\n\nCanonical theorem label: `thm:infimum-less-than-supremum`\n\n## Transcription / OCR Text\n\nManual transcription from the handwritten proof image:\n\nThm: Infimum <= Supremum\nLet A subset R be nonempty, bounded below and bounded above. Then inf A <= sup A.\n\nProof:\nLet x in A be arbitrary. Then by definition of the infimum and supremum:\ninf A <= x,\nx <= sup A.\nHence inf A <= sup A.\n\n## Polished Markdown\n\nBecause $A$ is nonempty, choose $x\\in A$. Since $\\inf A$ is a lower\nbound of $A$, we have\n$$\n\\inf A\\le x.\n$$\nSince $\\sup A$ is an upper bound of $A$, we have\n$$\nx\\le \\sup A.\n$$\nBy transitivity of the order on $\\mathbb{R}$,\n$$\n\\inf A\\le \\sup A.\n$$\n\n## Polished TeX\n\n```latex\nBecause \\(A\\) is nonempty, choose \\(x\\in A\\). Since \\(\\inf A\\) is a lower\nbound of \\(A\\), we have\n\\[\n\\inf A\\le x.\n\\]\nSince \\(\\sup A\\) is an upper bound of \\(A\\), we have\n\\[\nx\\le \\sup A.\n\\]\nBy transitivity of the order on \\(\\mathbb{R}\\),\n\\[\n\\inf A\\le \\sup A.\n\\]\n```\n\n## Provenance\n\nPolished text was reconstructed from the accepted canonical proof `lra-volume-iii/volume-iii/analysis/bounding/proofs/bounds-algebra/prf-infimum-less-than-supremum.tex`.",
         "tex": "Because \\(A\\) is nonempty, choose \\(x\\in A\\). Since \\(\\inf A\\) is a lower\nbound of \\(A\\), we have\n\\[\n\\inf A\\le x.\n\\]\nSince \\(\\sup A\\) is an upper bound of \\(A\\), we have\n\\[\nx\\le \\sup A.\n\\]\nBy transitivity of the order on \\(\\mathbb{R}\\),\n\\[\n\\inf A\\le \\sup A.\n\\]",
-        "text_source": "canonical-proof-reconstruction",
+        "text_source": "canonical-proof-with-manual-transcription",
         "text_review_status": "accepted"
       }
     ],
