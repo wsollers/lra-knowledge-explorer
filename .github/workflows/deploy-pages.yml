@@ -10,6 +10,7 @@ on:
       - "real-analysis-explorer.html"
       - "knowledge.json"
       - "model-artifacts.json"
+      - "to-prove.json"
       - "graph-edges.json"
       - "proof-errors.json"
       - "proof-vault-index.json"

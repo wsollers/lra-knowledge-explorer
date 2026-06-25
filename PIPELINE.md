@@ -67,6 +67,13 @@ Reads the same book registry, scans registered chapter note trees for model
 cards, enriches artifacts with volume/book/chapter metadata, and writes
 `model-artifacts.json`.
 
+**Proof todo data** — `scripts/build_to_prove.py`
+
+Reads `knowledge.json`, preserves existing `(✅)` marks from volume
+`proofs-to-do.md` trackers, dependency-sorts active proof TODOs, and writes
+`to-prove.json`. With `--write-volume-trackers`, it also refreshes each
+`lra-volume-*` repository's root `proofs-to-do.md`.
+
 ---
 
 ## Chapters extracted
@@ -85,9 +92,12 @@ scripts/
   seed_to_knowledge_json_v3_fixed6.py  — Pass 2: seed → explorer JSON
   run_extraction.py             — orchestrator
   extract_model_artifacts.py    — model-card extraction
+  build_to_prove.py             — proof todo JSON + tracker generation
 knowledge-explorer.html         — main interactive explorer
 real-analysis-explorer.html     — alternate explorer UI
 index.html                      — redirect → knowledge-explorer.html
 knowledge.json                  — generated (auto-committed by CI)
 graph-edges.json                — generated (auto-committed by CI)
+model-artifacts.json            — generated model cards
+to-prove.json                   — generated proof todo data
 ```

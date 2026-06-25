@@ -108,6 +108,10 @@ jobs:
         working-directory: explorer
         run: python scripts/extract_model_artifacts.py --source-root "$GITHUB_WORKSPACE"
 
+      - name: Build proof todo data
+        working-directory: explorer
+        run: python scripts/build_to_prove.py --repos-root "$GITHUB_WORKSPACE"
+
       - name: Build proof vault index
         working-directory: explorer
         run: python scripts/build_proof_vault_index.py
@@ -120,13 +124,14 @@ jobs:
           python -m json.tool proof-errors.json >/dev/null
           python -m json.tool graph-edge-errors.json >/dev/null
           python -m json.tool model-artifacts.json >/dev/null
+          python -m json.tool to-prove.json >/dev/null
 
       - name: Commit and push if changed
         working-directory: explorer
         run: |
           git config user.name "lra-explorer-bot"
           git config user.email "explorer-bot@noreply.github.com"
-          git add knowledge.json graph-edges.json proof-errors.json graph-edge-errors.json proof-vault-index.json model-artifacts.json
+          git add knowledge.json graph-edges.json proof-errors.json graph-edge-errors.json proof-vault-index.json model-artifacts.json to-prove.json
           if git diff --cached --quiet; then
             echo "No explorer data changes."
             exit 0

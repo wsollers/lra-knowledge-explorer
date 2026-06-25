@@ -90,7 +90,7 @@ a{color:#93c5fd}
 .proof-attempt{margin-bottom:16px}
 .proof-attempt h3{font-size:.95rem;margin:0 0 8px;color:#e2e8f0}
 .example-select{width:auto;min-width:min(420px,100%);border-radius:8px;padding:8px 10px}
-.tab-switch{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tab-switch{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
 .tab-button{border-radius:8px;color:#cbd5e1;background:#0b1220}
 .tab-button.active{background:rgba(244,114,182,.18);border-color:rgba(244,114,182,.65);color:#fbcfe8}
 .tab-panel.hidden{display:none}
@@ -108,6 +108,10 @@ a{color:#93c5fd}
 .model-list-card.active{outline:2px solid rgba(244,114,182,.75);background:rgba(244,114,182,.11)}
 .model-list-title{font-weight:800;line-height:1.25;margin:8px 0}
 .model-list-meta{font-size:.78rem;color:#cbd5e1;line-height:1.45}
+.todo-list-card{cursor:pointer;border-color:rgba(56,189,248,.18);background:rgba(255,255,255,.035);border-radius:8px;min-height:122px}
+.todo-list-card:hover{border-color:rgba(56,189,248,.55);background:rgba(56,189,248,.08)}
+.todo-list-card.active{outline:2px solid rgba(56,189,248,.75);background:rgba(56,189,248,.11)}
+.todo-pill{display:inline-flex;align-items:center;width:auto;padding:3px 8px;border-radius:999px;border:1px solid rgba(56,189,248,.45);background:rgba(56,189,248,.12);color:#bae6fd;font-size:.76rem;font-weight:800;text-transform:uppercase}
 .pdf-controls{display:grid;grid-template-columns:1fr 170px;gap:10px;padding:12px;border-bottom:1px solid #243041;background:#0f172a}
 .pdf-controls select{border-radius:8px}
 .pdf-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
@@ -127,7 +131,18 @@ a{color:#93c5fd}
     <div class="tab-switch">
       <button id="knowledgeTabBtn" class="tab-button active" type="button">Knowledge</button>
       <button id="modelTabBtn" class="tab-button" type="button">Models</button>
+      <button id="toProveTabBtn" class="tab-button" type="button">To Prove</button>
     </div>
+  </div>
+  <div class="section tab-panel to-prove-panel hidden">
+    <h2>To Prove</h2>
+    <div class="tiny" id="toProveStatus">No proof todos loaded.</div>
+    <div class="tiny" style="margin:10px 0 4px">Volume</div>
+    <select id="toProveVolumeFilter"><option value="All">All volumes</option></select>
+    <div class="tiny" style="margin:10px 0 4px">Proof</div>
+    <select id="toProveSelect" disabled>
+      <option value="">Select a proof</option>
+    </select>
   </div>
   <div class="section tab-panel model-panel hidden">
     <h2>Model Cards</h2>
@@ -208,6 +223,16 @@ a{color:#93c5fd}
     </div>
     <div id="modelBoardList" class="model-grid"></div>
   </div>
+  <div id="toProveBoard" class="model-board">
+    <div class="model-board-head">
+      <div>
+        <div class="model-board-title">To Prove</div>
+        <div class="tiny" id="toProveBoardStatus">No proof todos loaded.</div>
+      </div>
+      <button id="toProveGraphBtn" class="link-button" type="button">Knowledge Explorer</button>
+    </div>
+    <div id="toProveList" class="model-grid"></div>
+  </div>
 </main>
 <aside class="detail">
   <div class="section">
@@ -286,8 +311,8 @@ const VOLUME_NUMBER_BY_ID={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
 const CHAPTER_TO_VOLUME={'propositional-logic':1,'predicate-logic':1,'sets-relations-functions':1,'relations-functions':1,'set-theory':1,'cardinality':1,'orderings':1,'axiom-systems':1,'proof-techniques':1,'identity-equality-equivalence':2,'arithmetic-operations-relations':2,'peano-systems':2,'natural-numbers':2,'whole-numbers':2,'integers':2,'rationals':2,'reals':2,'numbers-summary':2,'embedding-number-systems':2,'constructing-number-systems':2,'number-lines':2,'structure-of-real-line':2,'formalizing-number-systems':2,'lean':2,'complex-numbers':2,'real-analysis':3,'bounding':3,'sequences':3,'elementary-functions':3,'functions':3,'continuity':3,'differentiation':3,'riemann-integration':3,'measure-theory':3,'probability-theory':3,'functional-analysis':3,'complex-analysis':3,'series':3,'function-sequences':3,'foundations':3,'discrete-calculus':3,'algebraic-structures':4,'abstract-algebra':4,'linear-algebra':4,'lattice-order':4,'set-algebra':4,'algebraic-geometry':4,'summation-algebra':4,'euclidean-geometry':5,'analytical-geometry':5,'trigonometry':5,'non-euclidean-geometry':5,'differential-geometry':5,'riemannian-geometry':5,'topology':5,'calculus':6,'geometric-modeling':6,'computational-geometry':6,'computational-linear-algebra':6,'computational-probability':6,'ordinary-differential-equations':6,'partial-differential-equations':6,'fourier-analysis':6,'numerical-analysis':7,'numerical-pde':7,'category-theory':8,'model-theory':8,'proof-theory':8,'type-theory':8,'lambda-calculus':8,'algebras-of-sets':8};
 function nodeVolume(n){return CHAPTER_TO_VOLUME[n&&n.chapter]||0;}
 
-const state={knowledge:{metadata:{},nodes:[]},edges:[],modelArtifacts:{metadata:{},artifacts:[],errors:[]},proofVault:{records:{}},activeTab:'knowledge',modelBoardSearch:'',modelVolume:'All',modelBook:'All',modelChapter:'All',modelTopic:'All',activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,pdfVolume:'',pdfEdition:'digital',zoom:1,selectedId:null,selectedModelArtifactId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showProofDepends:false,showImplies:true,volume:'All',book:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
-const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),knowledgeTabBtn:document.getElementById('knowledgeTabBtn'),modelTabBtn:document.getElementById('modelTabBtn'),knowledgePanels:Array.from(document.querySelectorAll('.knowledge-panel')),modelPanels:Array.from(document.querySelectorAll('.model-panel')),modelBoard:document.getElementById('modelBoard'),modelBoardStatus:document.getElementById('modelBoardStatus'),modelBoardList:document.getElementById('modelBoardList'),modelBoardSearch:document.getElementById('modelBoardSearch'),modelVolumeFilter:document.getElementById('modelVolumeFilter'),modelBookFilter:document.getElementById('modelBookFilter'),modelChapterFilter:document.getElementById('modelChapterFilter'),modelTopicFilter:document.getElementById('modelTopicFilter'),modelBoardGraphBtn:document.getElementById('modelBoardGraphBtn'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showProofDepends:document.getElementById('showProofDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),bookFilter:document.getElementById('bookFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailTitle:document.getElementById('detailTitle'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),modelArtifactStatus:document.getElementById('modelArtifactStatus'),modelArtifactSelect:document.getElementById('modelArtifactSelect'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect'),pdfModal:document.getElementById('pdfModal'),pdfModalClose:document.getElementById('pdfModalClose'),pdfModalBody:document.getElementById('pdfModalBody'),pdfVolumeSelect:document.getElementById('pdfVolumeSelect'),pdfEditionSelect:document.getElementById('pdfEditionSelect')};
+const state={knowledge:{metadata:{},nodes:[]},edges:[],modelArtifacts:{metadata:{},artifacts:[],errors:[]},toProve:{metadata:{},volumes:[],items:[]},proofVault:{records:{}},activeTab:'knowledge',modelBoardSearch:'',modelVolume:'All',modelBook:'All',modelChapter:'All',modelTopic:'All',toProveVolume:'All',selectedToProveId:null,activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,pdfVolume:'',pdfEdition:'digital',zoom:1,selectedId:null,selectedModelArtifactId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showProofDepends:false,showImplies:true,volume:'All',book:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
+const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),knowledgeTabBtn:document.getElementById('knowledgeTabBtn'),modelTabBtn:document.getElementById('modelTabBtn'),toProveTabBtn:document.getElementById('toProveTabBtn'),knowledgePanels:Array.from(document.querySelectorAll('.knowledge-panel')),modelPanels:Array.from(document.querySelectorAll('.model-panel')),toProvePanels:Array.from(document.querySelectorAll('.to-prove-panel')),modelBoard:document.getElementById('modelBoard'),modelBoardStatus:document.getElementById('modelBoardStatus'),modelBoardList:document.getElementById('modelBoardList'),modelBoardSearch:document.getElementById('modelBoardSearch'),modelVolumeFilter:document.getElementById('modelVolumeFilter'),modelBookFilter:document.getElementById('modelBookFilter'),modelChapterFilter:document.getElementById('modelChapterFilter'),modelTopicFilter:document.getElementById('modelTopicFilter'),modelBoardGraphBtn:document.getElementById('modelBoardGraphBtn'),toProveBoard:document.getElementById('toProveBoard'),toProveBoardStatus:document.getElementById('toProveBoardStatus'),toProveList:document.getElementById('toProveList'),toProveStatus:document.getElementById('toProveStatus'),toProveVolumeFilter:document.getElementById('toProveVolumeFilter'),toProveSelect:document.getElementById('toProveSelect'),toProveGraphBtn:document.getElementById('toProveGraphBtn'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showProofDepends:document.getElementById('showProofDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),bookFilter:document.getElementById('bookFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailTitle:document.getElementById('detailTitle'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),modelArtifactStatus:document.getElementById('modelArtifactStatus'),modelArtifactSelect:document.getElementById('modelArtifactSelect'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect'),pdfModal:document.getElementById('pdfModal'),pdfModalClose:document.getElementById('pdfModalClose'),pdfModalBody:document.getElementById('pdfModalBody'),pdfVolumeSelect:document.getElementById('pdfVolumeSelect'),pdfEditionSelect:document.getElementById('pdfEditionSelect')};
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function decodeB64(s){if(!s)return'';try{return decodeURIComponent(escape(atob(s)));}catch(e){try{return atob(s);}catch(_){return'';}}}
@@ -882,19 +907,30 @@ function modelTopic(artifact){
   return artifact.layer||artifact.kind||'shared';
 }
 function setExplorerTab(tab){
-  state.activeTab=tab==='models'?'models':'knowledge';
+  state.activeTab=tab==='models'?'models':(tab==='to-prove'?'to-prove':'knowledge');
   const showingModels=state.activeTab==='models';
-  els.knowledgeTabBtn.classList.toggle('active',!showingModels);
+  const showingToProve=state.activeTab==='to-prove';
+  els.knowledgeTabBtn.classList.toggle('active',!showingModels&&!showingToProve);
   els.modelTabBtn.classList.toggle('active',showingModels);
-  els.knowledgePanels.forEach(panel=>panel.classList.toggle('hidden',showingModels));
+  els.toProveTabBtn.classList.toggle('active',showingToProve);
+  els.knowledgePanels.forEach(panel=>panel.classList.toggle('hidden',showingModels||showingToProve));
   els.modelPanels.forEach(panel=>panel.classList.toggle('hidden',!showingModels));
-  els.graphInner.style.display=showingModels?'none':'block';
+  els.toProvePanels.forEach(panel=>panel.classList.toggle('hidden',!showingToProve));
+  els.graphInner.style.display=(showingModels||showingToProve)?'none':'block';
   els.modelBoard.classList.toggle('visible',showingModels);
-  els.detailTitle.textContent=showingModels?'Model details':'Node details';
+  els.toProveBoard.classList.toggle('visible',showingToProve);
+  els.detailTitle.textContent=showingModels?'Model details':(showingToProve?'Proof to prove':'Node details');
   if(showingModels){
     renderModelBoard();
     if(!state.selectedModelArtifactId){
       els.detailEmpty.textContent='Select a model card to inspect its extracted fields.';
+      els.detailEmpty.style.display='block';
+      els.detailContent.style.display='none';
+    }
+  }else if(showingToProve){
+    renderToProveBoard();
+    if(!state.selectedToProveId){
+      els.detailEmpty.textContent='Select a proof to inspect its statement and dependency graph.';
       els.detailEmpty.style.display='block';
       els.detailContent.style.display='none';
     }
@@ -1038,6 +1074,98 @@ function openModelArtifact(id){
   renderModelBoard();
 }
 
+function toProveItems(){return (state.toProve&&state.toProve.items)||[];}
+function toProveVolumes(){return (state.toProve&&state.toProve.volumes)||[];}
+function toProveItemById(id){return toProveItems().find(item=>item.id===id)||null;}
+function renderToProveSelector(){
+  const items=toProveItems();
+  const count=items.length;
+  const open=(state.toProve.metadata&&state.toProve.metadata.open_count)||items.filter(i=>i.status==='open').length;
+  els.toProveStatus.textContent=count?`Loaded ${count} proof tracker item${count===1?'':'s'} · ${open} open.`:'No proof todos loaded.';
+  renderToProveBoard();
+}
+function renderToProveBoard(){
+  const items=toProveItems();
+  const volumes=toProveVolumes().filter(v=>(v.items||[]).length);
+  const volumeOptions=[{value:'All',label:'All volumes'},...volumes.map(v=>({value:String(v.id),label:`Volume ${String(v.roman||'').toUpperCase()} — ${v.title||''}`}))];
+  optionSet(els.toProveVolumeFilter,volumeOptions,state.toProveVolume);
+  if(state.toProveVolume!=='All'&&!volumeOptions.some(o=>o.value===state.toProveVolume))state.toProveVolume='All';
+  els.toProveVolumeFilter.value=state.toProveVolume;
+  const filtered=items.filter(item=>state.toProveVolume==='All'||String(item.volume)===String(state.toProveVolume));
+  els.toProveSelect.disabled=!filtered.length;
+  const selected=state.selectedToProveId&&filtered.some(item=>item.id===state.selectedToProveId)?state.selectedToProveId:'';
+  const selectOptions=['<option value="">Select a proof</option>'].concat(filtered.map(item=>`<option value="${esc(item.id)}">${item.status==='completed'?'✓ ':'□ '}${esc(item.title||item.id)}</option>`));
+  els.toProveSelect.innerHTML=selectOptions.join('');
+  els.toProveSelect.value=selected;
+  els.toProveBoardStatus.textContent=items.length?`${filtered.length} of ${items.length} proof tracker items shown.`:'No proof todos loaded.';
+  if(!items.length){
+    els.toProveList.innerHTML='<div class="card"><div class="value">No proof todo data loaded.</div></div>';
+    return;
+  }
+  els.toProveList.innerHTML=filtered.map(item=>{
+    const deps=(item.graph_dependency_ids||[]).slice(0,3).map(id=>`<span class="node-chip">${esc(id)}</span>`).join(' ');
+    return `<button type="button" class="card todo-list-card${item.id===state.selectedToProveId?' active':''}" data-to-prove-id="${esc(item.id)}">
+      <span class="todo-pill">${item.status==='completed'?'completed':'to prove'}</span>
+      <div class="model-list-title">${texToHtml(item.title||item.id)}</div>
+      <div class="model-list-meta">${esc(item.id)}<br>${esc(item.book_title||'')} · ${esc(item.chapter_title||item.chapter||'')}</div>
+      ${deps?`<div style="margin-top:8px;line-height:1.9">${deps}</div>`:''}
+    </button>`;
+  }).join('')||'<div class="card"><div class="value">No proofs match the current filter.</div></div>';
+  els.toProveList.querySelectorAll('[data-to-prove-id]').forEach(card=>{
+    card.addEventListener('click',()=>openToProveItem(card.dataset.toProveId));
+  });
+}
+function renderToProveDetails(item){
+  if(!item)return;
+  state.selectedModelArtifactId=null;
+  state.selectedToProveId=item.id;
+  els.detailTitle.textContent='Proof to prove';
+  els.detailEmpty.style.display='none';
+  els.detailContent.style.display='block';
+  const location=[item.volume_title?`Volume ${String(item.volume_roman||item.volume||'').toUpperCase()}: ${item.volume_title}`:'',item.book_title,item.chapter_title,item.section_title].filter(Boolean).join(' · ');
+  const graphButton=`<button class="link-button" data-open-proof-graph="${esc(item.id)}" type="button">Dependency graph</button>`;
+  const blocks=[
+    `<div class="card proof-panel"><div class="label">Proof</div><div class="value"><span class="todo-pill">${esc(item.status==='completed'?'completed':'to prove')}</span><br><strong>${texToHtml(item.title||item.id)}</strong></div><div class="tiny" style="margin-top:8px">${esc(item.id)} · ${esc(location)}</div></div>`,
+    `<div class="card"><div class="label">Statement</div><div class="value">${texToHtml(item.statement||'')}</div></div>`,
+    `<div class="card"><div class="label">Graph</div><div class="value">${graphButton}</div></div>`
+  ];
+  const theoremDeps=item.theorem_dependency_ids||[];
+  const proofDeps=item.proof_dependency_ids||[];
+  if(theoremDeps.length)blocks.push(`<div class="card"><div class="label">Theorem dependencies</div><div class="value" style="line-height:2">${chipList(theoremDeps,'dep')}</div></div>`);
+  if(proofDeps.length)blocks.push(`<div class="card"><div class="label">Proof dependencies</div><div class="value" style="line-height:2">${chipList(proofDeps,'dep')}</div></div>`);
+  if(item.proof_source)blocks.push(`<div class="card"><div class="label">Proof source</div><div class="value">${esc(item.proof_source)}</div></div>`);
+  els.detailContent.innerHTML=blocks.join('');
+  els.detailContent.querySelectorAll('.node-chip').forEach(chip=>{
+    chip.addEventListener('click',()=>navigateToNode(chip.dataset.nodeId,chip.dataset.tree||undefined));
+  });
+  els.detailContent.querySelectorAll('[data-open-proof-graph]').forEach(btn=>{
+    btn.addEventListener('click',()=>openProofDependencyGraph(btn.dataset.openProofGraph));
+  });
+}
+function openProofDependencyGraph(id){
+  const item=toProveItemById(id);
+  if(!item)return;
+  setExplorerTab('knowledge');
+  state.filters.volume=String(item.volume||'All');
+  state.filters.book=item.book||'All';
+  state.filters.chapter=item.chapter||'All';
+  state.filters.deck='All';
+  state.filters.showProofDepends=true;
+  els.showProofDepends.checked=true;
+  if(els.volumeFilter)els.volumeFilter.value=state.filters.volume;
+  if(els.bookFilter)els.bookFilter.value=state.filters.book;
+  if(els.chapterFilter)els.chapterFilter.value=state.filters.chapter;
+  if(els.deckFilter)els.deckFilter.value='All';
+  navigateToNode(id,'dep');
+}
+function openToProveItem(id){
+  const item=toProveItemById(id);
+  if(!item)return;
+  setExplorerTab('to-prove');
+  renderToProveDetails(item);
+  renderToProveBoard();
+}
+
 function renderDetails(n){
   state.selectedModelArtifactId=null;
   els.detailTitle.textContent='Node details';
@@ -1108,27 +1236,35 @@ async function tryAutoLoad(){
       }
       return r.json();
     });
-    const[k,e,pv,ma]=await Promise.all([
+    const[k,e,pv,ma,tp]=await Promise.all([
       loadJson('knowledge.json'),
       loadJson('graph-edges.json'),
       loadJson('proof-vault-index.json',false).then(payload=>payload||{records:{}}).catch(()=>({records:{}})),
-      loadJson('model-artifacts.json',false).then(payload=>payload||{metadata:{},artifacts:[],errors:[]}).catch(()=>({metadata:{},artifacts:[],errors:[]}))
+      loadJson('model-artifacts.json',false).then(payload=>payload||{metadata:{},artifacts:[],errors:[]}).catch(()=>({metadata:{},artifacts:[],errors:[]})),
+      loadJson('to-prove.json',false).then(payload=>payload||{metadata:{},volumes:[],items:[]}).catch(()=>({metadata:{},volumes:[],items:[]}))
     ]);
     state.proofVault=pv||{records:{}};
     state.modelArtifacts=ma||{metadata:{},artifacts:[],errors:[]};
+    state.toProve=tp||{metadata:{},volumes:[],items:[]};
     state.knowledge=k;state.edges=normalizeEdges(state.knowledge,e);state.nodePositions={};
     renderModelArtifactSelector();
+    renderToProveSelector();
     renderDataMeta();
     els.status.textContent=`Loaded ${(k.nodes||[]).length} nodes, ${state.edges.length} edges.`;
     if(state.activeTab==='knowledge')applyInitialView();
-    else renderModelBoard();
+    else if(state.activeTab==='models')renderModelBoard();
+    else renderToProveBoard();
   }catch(err){els.status.textContent='Auto-load failed: '+err.message;}
 }
 
 els.modelArtifactSelect.onchange=e=>{if(e.target.value)openModelArtifact(e.target.value);};
 els.knowledgeTabBtn.onclick=()=>setExplorerTab('knowledge');
 els.modelTabBtn.onclick=()=>setExplorerTab('models');
+els.toProveTabBtn.onclick=()=>setExplorerTab('to-prove');
 els.modelBoardGraphBtn.onclick=()=>setExplorerTab('knowledge');
+els.toProveGraphBtn.onclick=()=>setExplorerTab('knowledge');
+els.toProveVolumeFilter.onchange=e=>{state.toProveVolume=e.target.value;state.selectedToProveId=null;renderToProveBoard();};
+els.toProveSelect.onchange=e=>{if(e.target.value)openToProveItem(e.target.value);};
 els.modelBoardSearch.oninput=e=>{state.modelBoardSearch=e.target.value;renderModelBoard();};
 els.modelVolumeFilter.onchange=e=>{state.modelVolume=e.target.value;state.modelBook='All';state.modelChapter='All';state.modelTopic='All';renderModelBoard();};
 els.modelBookFilter.onchange=e=>{state.modelBook=e.target.value;state.modelChapter='All';state.modelTopic='All';renderModelBoard();};
@@ -1171,6 +1307,7 @@ document.addEventListener('keydown',e=>{
 });
 tryAutoLoad();
 if(location.hash==='#models')setExplorerTab('models');
+if(location.hash==='#to-prove')setExplorerTab('to-prove');
 </script>
 </body>
 </html>
