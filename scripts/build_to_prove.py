@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import re
 from datetime import datetime, timezone
@@ -42,6 +43,63 @@ def volume_title(volume: dict[str, Any]) -> str:
     roman = str(volume.get("roman") or "").upper()
     title = str(volume.get("title") or "")
     return f"Volume {roman} - {title}".strip()
+
+
+def decode_b64(value: str | None) -> str:
+    if not value:
+        return ""
+    return base64.b64decode(value).decode("utf-8", errors="replace").strip()
+
+
+def braced_group(value: str, start: int) -> tuple[str, int] | None:
+    if start >= len(value) or value[start] != "{":
+        return None
+    depth = 0
+    chars: list[str] = []
+    i = start
+    while i < len(value):
+        char = value[i]
+        if char == "\\" and i + 1 < len(value):
+            if depth > 0:
+                chars.append(char)
+                chars.append(value[i + 1])
+            i += 2
+            continue
+        if char == "{":
+            depth += 1
+            if depth > 1:
+                chars.append(char)
+        elif char == "}":
+            depth -= 1
+            if depth == 0:
+                return "".join(chars), i + 1
+            chars.append(char)
+        elif depth > 0:
+            chars.append(char)
+        i += 1
+    return None
+
+
+def clean_display_title(title: str) -> str:
+    title = title.strip()
+    if title.startswith(r"\texorpdfstring"):
+        first = braced_group(title, len(r"\texorpdfstring"))
+        if first:
+            second = braced_group(title, first[1])
+            if second:
+                title = second[0].strip()
+    return re.sub(r"\\hyperref\[[^\]]+\]\{([^{}]+)\}", r"\1", title).strip()
+
+
+def display_title(node: dict[str, Any]) -> str:
+    raw = decode_b64(node.get("title_latex_b64")) or str(node.get("name") or node.get("title") or node.get("id") or "")
+    return clean_display_title(raw)
+
+
+def github_blob_url(repo: str, path: str) -> str:
+    if not repo or not path:
+        return ""
+    return f"https://github.com/wsollers/{repo}/blob/main/{path}"
 
 
 def blockquote_statement(statement: str, *, indent: str = "") -> list[str]:
@@ -154,23 +212,35 @@ def build_items(knowledge: dict[str, Any], repos_root: Path) -> tuple[list[dict[
             continue
         theorem_dependency_ids = sorted(theorem_deps.get(node_id, set()), key=lambda dep: order.get(dep, 10**9))
         proof_dependency_ids = sorted(proof_deps.get(node_id, set()), key=lambda dep: order.get(dep, 10**9))
+        repo = VOLUME_REPOS.get(volume, "")
+        chapter_root = Path(str(node.get("book_dir") or "")) / str(node.get("chapter") or "")
+        proof_source = str(node.get("proof_source") or "")
+        source = str(node.get("source") or "")
+        proof_path = (chapter_root / proof_source).as_posix() if proof_source else ""
+        source_path = (chapter_root / source).as_posix() if source else ""
         item = {
             "id": node_id,
             "status": "completed" if is_completed else "open",
-            "title": node.get("name") or node.get("title") or node_id,
+            "title": display_title(node),
             "kind": node.get("kind") or "",
             "statement": node.get("statement_display") or node.get("statement_tex") or "",
             "volume": volume,
             "volume_roman": node.get("volume_roman") or "",
             "volume_title": node.get("volume_title") or "",
+            "repo": repo,
             "book": node.get("book") or "",
             "book_title": node.get("book_title") or "",
+            "book_dir": node.get("book_dir") or "",
             "chapter": node.get("chapter") or "",
             "chapter_title": node.get("chapter_title") or "",
             "section": node.get("section") or "",
             "section_title": node.get("section_title") or node.get("deck") or "",
-            "source": node.get("source") or "",
-            "proof_source": node.get("proof_source") or "",
+            "source": source,
+            "source_path": source_path,
+            "source_url": github_blob_url(repo, source_path),
+            "proof_source": proof_source,
+            "proof_path": proof_path,
+            "proof_url": github_blob_url(repo, proof_path),
             "theorem_dependency_ids": theorem_dependency_ids,
             "proof_dependency_ids": proof_dependency_ids,
             "graph_dependency_ids": sorted(set(theorem_dependency_ids) | set(proof_dependency_ids), key=lambda dep: order.get(dep, 10**9)),

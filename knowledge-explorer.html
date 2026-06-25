@@ -139,6 +139,22 @@ a{color:#93c5fd}
     <div class="tiny" id="toProveStatus">No proof todos loaded.</div>
     <div class="tiny" style="margin:10px 0 4px">Volume</div>
     <select id="toProveVolumeFilter"><option value="All">All volumes</option></select>
+    <div class="tiny" style="margin:10px 0 4px">Book</div>
+    <select id="toProveBookFilter"><option value="All">All books</option></select>
+    <div class="tiny" style="margin:10px 0 4px">Chapter</div>
+    <select id="toProveChapterFilter"><option value="All">All chapters</option></select>
+    <div class="tiny" style="margin:10px 0 4px">Status</div>
+    <select id="toProveStatusFilter">
+      <option value="open">Open</option>
+      <option value="All">Open and completed</option>
+      <option value="completed">Completed</option>
+    </select>
+    <div class="tiny" style="margin:10px 0 4px">Graph</div>
+    <select id="toProveGraphMode">
+      <option value="union">Theorem and proof</option>
+      <option value="theorem">Theorem only</option>
+      <option value="proof">Proof only</option>
+    </select>
     <div class="tiny" style="margin:10px 0 4px">Proof</div>
     <select id="toProveSelect" disabled>
       <option value="">Select a proof</option>
@@ -311,8 +327,8 @@ const VOLUME_NUMBER_BY_ID={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
 const CHAPTER_TO_VOLUME={'propositional-logic':1,'predicate-logic':1,'sets-relations-functions':1,'relations-functions':1,'set-theory':1,'cardinality':1,'orderings':1,'axiom-systems':1,'proof-techniques':1,'identity-equality-equivalence':2,'arithmetic-operations-relations':2,'peano-systems':2,'natural-numbers':2,'whole-numbers':2,'integers':2,'rationals':2,'reals':2,'numbers-summary':2,'embedding-number-systems':2,'constructing-number-systems':2,'number-lines':2,'structure-of-real-line':2,'formalizing-number-systems':2,'lean':2,'complex-numbers':2,'real-analysis':3,'bounding':3,'sequences':3,'elementary-functions':3,'functions':3,'continuity':3,'differentiation':3,'riemann-integration':3,'measure-theory':3,'probability-theory':3,'functional-analysis':3,'complex-analysis':3,'series':3,'function-sequences':3,'foundations':3,'discrete-calculus':3,'algebraic-structures':4,'abstract-algebra':4,'linear-algebra':4,'lattice-order':4,'set-algebra':4,'algebraic-geometry':4,'summation-algebra':4,'euclidean-geometry':5,'analytical-geometry':5,'trigonometry':5,'non-euclidean-geometry':5,'differential-geometry':5,'riemannian-geometry':5,'topology':5,'calculus':6,'geometric-modeling':6,'computational-geometry':6,'computational-linear-algebra':6,'computational-probability':6,'ordinary-differential-equations':6,'partial-differential-equations':6,'fourier-analysis':6,'numerical-analysis':7,'numerical-pde':7,'category-theory':8,'model-theory':8,'proof-theory':8,'type-theory':8,'lambda-calculus':8,'algebras-of-sets':8};
 function nodeVolume(n){return CHAPTER_TO_VOLUME[n&&n.chapter]||0;}
 
-const state={knowledge:{metadata:{},nodes:[]},edges:[],modelArtifacts:{metadata:{},artifacts:[],errors:[]},toProve:{metadata:{},volumes:[],items:[]},proofVault:{records:{}},activeTab:'knowledge',modelBoardSearch:'',modelVolume:'All',modelBook:'All',modelChapter:'All',modelTopic:'All',toProveVolume:'All',selectedToProveId:null,activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,pdfVolume:'',pdfEdition:'digital',zoom:1,selectedId:null,selectedModelArtifactId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showProofDepends:false,showImplies:true,volume:'All',book:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
-const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),knowledgeTabBtn:document.getElementById('knowledgeTabBtn'),modelTabBtn:document.getElementById('modelTabBtn'),toProveTabBtn:document.getElementById('toProveTabBtn'),knowledgePanels:Array.from(document.querySelectorAll('.knowledge-panel')),modelPanels:Array.from(document.querySelectorAll('.model-panel')),toProvePanels:Array.from(document.querySelectorAll('.to-prove-panel')),modelBoard:document.getElementById('modelBoard'),modelBoardStatus:document.getElementById('modelBoardStatus'),modelBoardList:document.getElementById('modelBoardList'),modelBoardSearch:document.getElementById('modelBoardSearch'),modelVolumeFilter:document.getElementById('modelVolumeFilter'),modelBookFilter:document.getElementById('modelBookFilter'),modelChapterFilter:document.getElementById('modelChapterFilter'),modelTopicFilter:document.getElementById('modelTopicFilter'),modelBoardGraphBtn:document.getElementById('modelBoardGraphBtn'),toProveBoard:document.getElementById('toProveBoard'),toProveBoardStatus:document.getElementById('toProveBoardStatus'),toProveList:document.getElementById('toProveList'),toProveStatus:document.getElementById('toProveStatus'),toProveVolumeFilter:document.getElementById('toProveVolumeFilter'),toProveSelect:document.getElementById('toProveSelect'),toProveGraphBtn:document.getElementById('toProveGraphBtn'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showProofDepends:document.getElementById('showProofDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),bookFilter:document.getElementById('bookFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailTitle:document.getElementById('detailTitle'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),modelArtifactStatus:document.getElementById('modelArtifactStatus'),modelArtifactSelect:document.getElementById('modelArtifactSelect'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect'),pdfModal:document.getElementById('pdfModal'),pdfModalClose:document.getElementById('pdfModalClose'),pdfModalBody:document.getElementById('pdfModalBody'),pdfVolumeSelect:document.getElementById('pdfVolumeSelect'),pdfEditionSelect:document.getElementById('pdfEditionSelect')};
+const state={knowledge:{metadata:{},nodes:[]},edges:[],modelArtifacts:{metadata:{},artifacts:[],errors:[]},toProve:{metadata:{},volumes:[],items:[]},proofVault:{records:{}},activeTab:'knowledge',modelBoardSearch:'',modelVolume:'All',modelBook:'All',modelChapter:'All',modelTopic:'All',toProveVolume:'All',toProveBook:'All',toProveChapter:'All',toProveStatusFilter:'open',toProveGraphMode:'union',activeDependencyGraphMode:'union',selectedToProveId:null,activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,pdfVolume:'',pdfEdition:'digital',zoom:1,selectedId:null,selectedModelArtifactId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showProofDepends:false,showImplies:true,volume:'All',book:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
+const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),knowledgeTabBtn:document.getElementById('knowledgeTabBtn'),modelTabBtn:document.getElementById('modelTabBtn'),toProveTabBtn:document.getElementById('toProveTabBtn'),knowledgePanels:Array.from(document.querySelectorAll('.knowledge-panel')),modelPanels:Array.from(document.querySelectorAll('.model-panel')),toProvePanels:Array.from(document.querySelectorAll('.to-prove-panel')),modelBoard:document.getElementById('modelBoard'),modelBoardStatus:document.getElementById('modelBoardStatus'),modelBoardList:document.getElementById('modelBoardList'),modelBoardSearch:document.getElementById('modelBoardSearch'),modelVolumeFilter:document.getElementById('modelVolumeFilter'),modelBookFilter:document.getElementById('modelBookFilter'),modelChapterFilter:document.getElementById('modelChapterFilter'),modelTopicFilter:document.getElementById('modelTopicFilter'),modelBoardGraphBtn:document.getElementById('modelBoardGraphBtn'),toProveBoard:document.getElementById('toProveBoard'),toProveBoardStatus:document.getElementById('toProveBoardStatus'),toProveList:document.getElementById('toProveList'),toProveStatus:document.getElementById('toProveStatus'),toProveVolumeFilter:document.getElementById('toProveVolumeFilter'),toProveBookFilter:document.getElementById('toProveBookFilter'),toProveChapterFilter:document.getElementById('toProveChapterFilter'),toProveStatusFilter:document.getElementById('toProveStatusFilter'),toProveGraphMode:document.getElementById('toProveGraphMode'),toProveSelect:document.getElementById('toProveSelect'),toProveGraphBtn:document.getElementById('toProveGraphBtn'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showProofDepends:document.getElementById('showProofDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),bookFilter:document.getElementById('bookFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailTitle:document.getElementById('detailTitle'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),modelArtifactStatus:document.getElementById('modelArtifactStatus'),modelArtifactSelect:document.getElementById('modelArtifactSelect'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect'),pdfModal:document.getElementById('pdfModal'),pdfModalClose:document.getElementById('pdfModalClose'),pdfModalBody:document.getElementById('pdfModalBody'),pdfVolumeSelect:document.getElementById('pdfVolumeSelect'),pdfEditionSelect:document.getElementById('pdfEditionSelect')};
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function decodeB64(s){if(!s)return'';try{return decodeURIComponent(escape(atob(s)));}catch(e){try{return atob(s);}catch(_){return'';}}}
@@ -678,7 +694,8 @@ function visibleGraph(){
 function depTree(nodes,edges,sel){
   const byId=new Map(nodes.map(n=>[n.id,n]));
   if(!byId.has(sel))return{nodes:[],edges:[]};
-  const depEdges=edges.filter(e=>isDependencyKind(e.kind)||(state.filters.showProofDepends&&isProofDependencyKind(e.kind)));
+  const mode=state.activeDependencyGraphMode||'union';
+  const depEdges=edges.filter(e=>(mode!=='proof'&&isDependencyKind(e.kind))||(mode!=='theorem'&&state.filters.showProofDepends&&isProofDependencyKind(e.kind)));
   const out=new Map(nodes.map(n=>[n.id,[]]));
   depEdges.forEach(e=>{if(byId.has(e.from)&&byId.has(e.to))out.get(e.from).push(e);});
   const seen=new Set([sel]);const te=[];const q=[sel];
@@ -689,7 +706,8 @@ function depTree(nodes,edges,sel){
 function usedByTree(nodes,edges,sel){
   const byId=new Map(nodes.map(n=>[n.id,n]));
   if(!byId.has(sel))return{nodes:[],edges:[]};
-  const depEdges=edges.filter(e=>{const k=normalizeEdgeKind(e.kind);return isDependencyKind(k)||(state.filters.showProofDepends&&isProofDependencyKind(k))||k==='used_by';});
+  const mode=state.activeDependencyGraphMode||'union';
+  const depEdges=edges.filter(e=>{const k=normalizeEdgeKind(e.kind);return (mode!=='proof'&&isDependencyKind(k))||(mode!=='theorem'&&state.filters.showProofDepends&&isProofDependencyKind(k))||k==='used_by';});
   const inc=new Map(nodes.map(n=>[n.id,[]]));
   depEdges.forEach(e=>{if(byId.has(e.from)&&byId.has(e.to))inc.get(e.to).push(e);});
   const seen=new Set([sel]);const te=[];const q=[sel];
@@ -814,8 +832,9 @@ function showTooltip(ev,n){els.tooltip.innerHTML=cardHtml(n);els.tooltip.style.d
 function moveTooltip(ev){const pad=16,x=Math.min(window.innerWidth-els.tooltip.offsetWidth-pad,ev.clientX+18),y=Math.min(window.innerHeight-els.tooltip.offsetHeight-pad,ev.clientY+18);els.tooltip.style.left=x+'px';els.tooltip.style.top=y+'px';}
 function hideTooltip(){els.tooltip.style.display='none';}
 
-function navigateToNode(id,treeMode){
+function navigateToNode(id,treeMode,graphMode){
   state.selectedId=id;
+  state.activeDependencyGraphMode=graphMode||'union';
   if(treeMode){state.filters.treeMode=treeMode;els.treeMode.value=treeMode;}
   state.nodePositions={};render();
   const byId=new Map((state.knowledge.nodes||[]).map(n=>[n.id,n]));
@@ -1091,7 +1110,22 @@ function renderToProveBoard(){
   optionSet(els.toProveVolumeFilter,volumeOptions,state.toProveVolume);
   if(state.toProveVolume!=='All'&&!volumeOptions.some(o=>o.value===state.toProveVolume))state.toProveVolume='All';
   els.toProveVolumeFilter.value=state.toProveVolume;
-  const filtered=items.filter(item=>state.toProveVolume==='All'||String(item.volume)===String(state.toProveVolume));
+  els.toProveStatusFilter.value=state.toProveStatusFilter;
+  els.toProveGraphMode.value=state.toProveGraphMode;
+  const volumeFiltered=items.filter(item=>state.toProveVolume==='All'||String(item.volume)===String(state.toProveVolume));
+  const statusFiltered=volumeFiltered.filter(item=>state.toProveStatusFilter==='All'||item.status===state.toProveStatusFilter);
+  const bookMap=new Map();
+  statusFiltered.forEach(item=>{if(item.book&&!bookMap.has(item.book))bookMap.set(item.book,item.book_title||fallbackTitle(item.book));});
+  const bookOptions=[{value:'All',label:'All books'},...[...bookMap.entries()].map(([value,label])=>({value,label:plainOptionLabel(label)})).sort((a,b)=>a.label.localeCompare(b.label))];
+  if(state.toProveBook!=='All'&&!bookOptions.some(o=>o.value===state.toProveBook))state.toProveBook='All';
+  optionSet(els.toProveBookFilter,bookOptions,state.toProveBook);
+  const bookFiltered=statusFiltered.filter(item=>state.toProveBook==='All'||item.book===state.toProveBook);
+  const chapterMap=new Map();
+  bookFiltered.forEach(item=>{if(item.chapter&&!chapterMap.has(item.chapter))chapterMap.set(item.chapter,item.chapter_title||fallbackTitle(item.chapter));});
+  const chapterOptions=[{value:'All',label:'All chapters'},...[...chapterMap.entries()].map(([value,label])=>({value,label:plainOptionLabel(label)})).sort((a,b)=>a.label.localeCompare(b.label))];
+  if(state.toProveChapter!=='All'&&!chapterOptions.some(o=>o.value===state.toProveChapter))state.toProveChapter='All';
+  optionSet(els.toProveChapterFilter,chapterOptions,state.toProveChapter);
+  const filtered=bookFiltered.filter(item=>state.toProveChapter==='All'||item.chapter===state.toProveChapter);
   els.toProveSelect.disabled=!filtered.length;
   const selected=state.selectedToProveId&&filtered.some(item=>item.id===state.selectedToProveId)?state.selectedToProveId:'';
   const selectOptions=['<option value="">Select a proof</option>'].concat(filtered.map(item=>`<option value="${esc(item.id)}">${item.status==='completed'?'✓ ':'□ '}${esc(item.title||item.id)}</option>`));
@@ -1123,7 +1157,9 @@ function renderToProveDetails(item){
   els.detailEmpty.style.display='none';
   els.detailContent.style.display='block';
   const location=[item.volume_title?`Volume ${String(item.volume_roman||item.volume||'').toUpperCase()}: ${item.volume_title}`:'',item.book_title,item.chapter_title,item.section_title].filter(Boolean).join(' · ');
-  const graphButton=`<button class="link-button" data-open-proof-graph="${esc(item.id)}" type="button">Dependency graph</button>`;
+  const graphLabel=state.toProveGraphMode==='theorem'?'Theorem graph':(state.toProveGraphMode==='proof'?'Proof graph':'Union graph');
+  const graphButton=`<button class="link-button" data-open-proof-graph="${esc(item.id)}" type="button">${esc(graphLabel)}</button>`;
+  const proofLink=item.proof_url?`<a class="link-button" href="${esc(item.proof_url)}" target="_blank" rel="noopener">Open source</a>`:'';
   const blocks=[
     `<div class="card proof-panel"><div class="label">Proof</div><div class="value"><span class="todo-pill">${esc(item.status==='completed'?'completed':'to prove')}</span><br><strong>${texToHtml(item.title||item.id)}</strong></div><div class="tiny" style="margin-top:8px">${esc(item.id)} · ${esc(location)}</div></div>`,
     `<div class="card"><div class="label">Statement</div><div class="value">${texToHtml(item.statement||'')}</div></div>`,
@@ -1133,7 +1169,7 @@ function renderToProveDetails(item){
   const proofDeps=item.proof_dependency_ids||[];
   if(theoremDeps.length)blocks.push(`<div class="card"><div class="label">Theorem dependencies</div><div class="value" style="line-height:2">${chipList(theoremDeps,'dep')}</div></div>`);
   if(proofDeps.length)blocks.push(`<div class="card"><div class="label">Proof dependencies</div><div class="value" style="line-height:2">${chipList(proofDeps,'dep')}</div></div>`);
-  if(item.proof_source)blocks.push(`<div class="card"><div class="label">Proof source</div><div class="value">${esc(item.proof_source)}</div></div>`);
+  if(item.proof_source)blocks.push(`<div class="card"><div class="label">Proof source</div><div class="value">${proofLink}${proofLink?'<div style="margin-top:8px"></div>':''}${esc(item.proof_path||item.proof_source)}</div></div>`);
   els.detailContent.innerHTML=blocks.join('');
   els.detailContent.querySelectorAll('.node-chip').forEach(chip=>{
     chip.addEventListener('click',()=>navigateToNode(chip.dataset.nodeId,chip.dataset.tree||undefined));
@@ -1145,18 +1181,22 @@ function renderToProveDetails(item){
 function openProofDependencyGraph(id){
   const item=toProveItemById(id);
   if(!item)return;
+  const mode=state.toProveGraphMode||'union';
   setExplorerTab('knowledge');
   state.filters.volume=String(item.volume||'All');
   state.filters.book=item.book||'All';
   state.filters.chapter=item.chapter||'All';
   state.filters.deck='All';
-  state.filters.showProofDepends=true;
-  els.showProofDepends.checked=true;
+  state.activeDependencyGraphMode=mode;
+  state.filters.showDepends=mode!=='proof';
+  state.filters.showProofDepends=mode!=='theorem';
+  els.showDepends.checked=state.filters.showDepends;
+  els.showProofDepends.checked=state.filters.showProofDepends;
   if(els.volumeFilter)els.volumeFilter.value=state.filters.volume;
   if(els.bookFilter)els.bookFilter.value=state.filters.book;
   if(els.chapterFilter)els.chapterFilter.value=state.filters.chapter;
   if(els.deckFilter)els.deckFilter.value='All';
-  navigateToNode(id,'dep');
+  navigateToNode(id,'dep',mode);
 }
 function openToProveItem(id){
   const item=toProveItemById(id);
@@ -1263,7 +1303,11 @@ els.modelTabBtn.onclick=()=>setExplorerTab('models');
 els.toProveTabBtn.onclick=()=>setExplorerTab('to-prove');
 els.modelBoardGraphBtn.onclick=()=>setExplorerTab('knowledge');
 els.toProveGraphBtn.onclick=()=>setExplorerTab('knowledge');
-els.toProveVolumeFilter.onchange=e=>{state.toProveVolume=e.target.value;state.selectedToProveId=null;renderToProveBoard();};
+els.toProveVolumeFilter.onchange=e=>{state.toProveVolume=e.target.value;state.toProveBook='All';state.toProveChapter='All';state.selectedToProveId=null;renderToProveBoard();};
+els.toProveBookFilter.onchange=e=>{state.toProveBook=e.target.value;state.toProveChapter='All';state.selectedToProveId=null;renderToProveBoard();};
+els.toProveChapterFilter.onchange=e=>{state.toProveChapter=e.target.value;state.selectedToProveId=null;renderToProveBoard();};
+els.toProveStatusFilter.onchange=e=>{state.toProveStatusFilter=e.target.value;state.selectedToProveId=null;renderToProveBoard();};
+els.toProveGraphMode.onchange=e=>{state.toProveGraphMode=e.target.value;if(state.selectedToProveId){const item=toProveItemById(state.selectedToProveId);if(item)renderToProveDetails(item);}};
 els.toProveSelect.onchange=e=>{if(e.target.value)openToProveItem(e.target.value);};
 els.modelBoardSearch.oninput=e=>{state.modelBoardSearch=e.target.value;renderModelBoard();};
 els.modelVolumeFilter.onchange=e=>{state.modelVolume=e.target.value;state.modelBook='All';state.modelChapter='All';state.modelTopic='All';renderModelBoard();};
