@@ -134,6 +134,8 @@ a{color:#93c5fd}
     <div class="tiny" id="modelArtifactStatus">No model artifacts loaded.</div>
     <div class="tiny" style="margin:10px 0 4px">Volume</div>
     <select id="modelVolumeFilter"><option value="All">All volumes</option></select>
+    <div class="tiny" style="margin:10px 0 4px">Book</div>
+    <select id="modelBookFilter"><option value="All">All books</option></select>
     <div class="tiny" style="margin:10px 0 4px">Chapter</div>
     <select id="modelChapterFilter"><option value="All">All chapters</option></select>
     <div class="tiny" style="margin:10px 0 4px">Topic</div>
@@ -161,6 +163,8 @@ a{color:#93c5fd}
     </div>
     <div class="tiny" style="margin:10px 0 4px">Volume</div>
     <select id="volumeFilter"><option value="All">All volumes</option></select>
+    <div class="tiny" style="margin:10px 0 4px">Book</div>
+    <select id="bookFilter"><option value="All">All books</option></select>
     <div class="tiny" style="margin:10px 0 4px">Chapter</div>
     <select id="chapterFilter"><option value="All">All chapters</option></select>
     <div class="tiny" style="margin:10px 0 4px">Section</div>
@@ -276,14 +280,14 @@ a{color:#93c5fd}
 const INITIAL_ZOOM      = 0.45;
 const INITIAL_ANCHOR_ID = 'def:supremum';
 const PDF_BASE_URL      = 'https://wsollers.github.io/lra-volumes-output';
-const VOLUME_TITLES={1:'Logic, Sets, and Proof',2:'Foundations of Formal Number Systems',3:'Analysis',4:'Algebra and Abstract Structures',5:'Topology and Geometry',6:'Computational Mathematics',7:'Numerical and Approximation Mathematics',8:'Mathematical Logic and Foundations'};
+const VOLUME_TITLES={1:'Logic, Sets, and Proof',2:'Origins of Numbers',3:'Classical Analysis',4:'Mathematical Spaces',5:'Modern Analysis',6:'Algebra',7:'Logic and Computation',8:'Applied and Computational Mathematics'};
 const VOLUME_ROMAN={1:'I',2:'II',3:'III',4:'IV',5:'V',6:'VI',7:'VII',8:'VIII'};
 const VOLUME_NUMBER_BY_ID={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
 const CHAPTER_TO_VOLUME={'propositional-logic':1,'predicate-logic':1,'sets-relations-functions':1,'relations-functions':1,'set-theory':1,'cardinality':1,'orderings':1,'axiom-systems':1,'proof-techniques':1,'identity-equality-equivalence':2,'arithmetic-operations-relations':2,'peano-systems':2,'natural-numbers':2,'whole-numbers':2,'integers':2,'rationals':2,'reals':2,'numbers-summary':2,'embedding-number-systems':2,'constructing-number-systems':2,'number-lines':2,'structure-of-real-line':2,'formalizing-number-systems':2,'lean':2,'complex-numbers':2,'real-analysis':3,'bounding':3,'sequences':3,'elementary-functions':3,'functions':3,'continuity':3,'differentiation':3,'riemann-integration':3,'measure-theory':3,'probability-theory':3,'functional-analysis':3,'complex-analysis':3,'series':3,'function-sequences':3,'foundations':3,'discrete-calculus':3,'algebraic-structures':4,'abstract-algebra':4,'linear-algebra':4,'lattice-order':4,'set-algebra':4,'algebraic-geometry':4,'summation-algebra':4,'euclidean-geometry':5,'analytical-geometry':5,'trigonometry':5,'non-euclidean-geometry':5,'differential-geometry':5,'riemannian-geometry':5,'topology':5,'calculus':6,'geometric-modeling':6,'computational-geometry':6,'computational-linear-algebra':6,'computational-probability':6,'ordinary-differential-equations':6,'partial-differential-equations':6,'fourier-analysis':6,'numerical-analysis':7,'numerical-pde':7,'category-theory':8,'model-theory':8,'proof-theory':8,'type-theory':8,'lambda-calculus':8,'algebras-of-sets':8};
 function nodeVolume(n){return CHAPTER_TO_VOLUME[n&&n.chapter]||0;}
 
-const state={knowledge:{metadata:{},nodes:[]},edges:[],modelArtifacts:{metadata:{},artifacts:[],errors:[]},proofVault:{records:{}},activeTab:'knowledge',modelBoardSearch:'',modelVolume:'All',modelChapter:'All',modelTopic:'All',activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,pdfVolume:'',pdfEdition:'digital',zoom:1,selectedId:null,selectedModelArtifactId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showProofDepends:false,showImplies:true,volume:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
-const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),knowledgeTabBtn:document.getElementById('knowledgeTabBtn'),modelTabBtn:document.getElementById('modelTabBtn'),knowledgePanels:Array.from(document.querySelectorAll('.knowledge-panel')),modelPanels:Array.from(document.querySelectorAll('.model-panel')),modelBoard:document.getElementById('modelBoard'),modelBoardStatus:document.getElementById('modelBoardStatus'),modelBoardList:document.getElementById('modelBoardList'),modelBoardSearch:document.getElementById('modelBoardSearch'),modelVolumeFilter:document.getElementById('modelVolumeFilter'),modelChapterFilter:document.getElementById('modelChapterFilter'),modelTopicFilter:document.getElementById('modelTopicFilter'),modelBoardGraphBtn:document.getElementById('modelBoardGraphBtn'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showProofDepends:document.getElementById('showProofDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailTitle:document.getElementById('detailTitle'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),modelArtifactStatus:document.getElementById('modelArtifactStatus'),modelArtifactSelect:document.getElementById('modelArtifactSelect'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect'),pdfModal:document.getElementById('pdfModal'),pdfModalClose:document.getElementById('pdfModalClose'),pdfModalBody:document.getElementById('pdfModalBody'),pdfVolumeSelect:document.getElementById('pdfVolumeSelect'),pdfEditionSelect:document.getElementById('pdfEditionSelect')};
+const state={knowledge:{metadata:{},nodes:[]},edges:[],modelArtifacts:{metadata:{},artifacts:[],errors:[]},proofVault:{records:{}},activeTab:'knowledge',modelBoardSearch:'',modelVolume:'All',modelBook:'All',modelChapter:'All',modelTopic:'All',activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,pdfVolume:'',pdfEdition:'digital',zoom:1,selectedId:null,selectedModelArtifactId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showProofDepends:false,showImplies:true,volume:'All',book:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
+const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),knowledgeTabBtn:document.getElementById('knowledgeTabBtn'),modelTabBtn:document.getElementById('modelTabBtn'),knowledgePanels:Array.from(document.querySelectorAll('.knowledge-panel')),modelPanels:Array.from(document.querySelectorAll('.model-panel')),modelBoard:document.getElementById('modelBoard'),modelBoardStatus:document.getElementById('modelBoardStatus'),modelBoardList:document.getElementById('modelBoardList'),modelBoardSearch:document.getElementById('modelBoardSearch'),modelVolumeFilter:document.getElementById('modelVolumeFilter'),modelBookFilter:document.getElementById('modelBookFilter'),modelChapterFilter:document.getElementById('modelChapterFilter'),modelTopicFilter:document.getElementById('modelTopicFilter'),modelBoardGraphBtn:document.getElementById('modelBoardGraphBtn'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showProofDepends:document.getElementById('showProofDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),bookFilter:document.getElementById('bookFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailTitle:document.getElementById('detailTitle'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),modelArtifactStatus:document.getElementById('modelArtifactStatus'),modelArtifactSelect:document.getElementById('modelArtifactSelect'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect'),pdfModal:document.getElementById('pdfModal'),pdfModalClose:document.getElementById('pdfModalClose'),pdfModalBody:document.getElementById('pdfModalBody'),pdfVolumeSelect:document.getElementById('pdfVolumeSelect'),pdfEditionSelect:document.getElementById('pdfEditionSelect')};
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function decodeB64(s){if(!s)return'';try{return decodeURIComponent(escape(atob(s)));}catch(e){try{return atob(s);}catch(_){return'';}}}
@@ -461,6 +465,7 @@ function closeExamplesModal(){els.examplesModal.style.display='none';state.activ
 function nodeDeck(n){return n.section_title||n.deck||n.section||'';}
 // nodeChapter: top-level chapter title. Governance exports preserve the chapter key in n.chapter and TOC title in n.chapter_title.
 function nodeChapter(n){return n.chapter_title||n.chapter||'';}
+function nodeBook(n){return n.book_title||n.book||'';}
 // nodeTitle: old yaml nodes use `name`, new extractor nodes use `title`.
 function nodeTitle(n){return n.name||n.title||'';}
 
@@ -486,8 +491,9 @@ function tocVolumes(){
   const toc=(state.knowledge&&state.knowledge.metadata&&state.knowledge.metadata.toc)||[];
   return Array.isArray(toc)?toc:[];
 }
+function tocVolumeById(id){return tocVolumes().find(v=>String(v.id)===String(id)||String(v.roman).toLowerCase()===String(id).toLowerCase())||null;}
 function volumeNumber(v){const s=String(v||'').toLowerCase();return VOLUME_NUMBER_BY_ID[s]||Number(s)||0;}
-function volumeTitle(v){const n=volumeNumber(v);return n?('Volume '+VOLUME_ROMAN[n]+' \u2014 '+VOLUME_TITLES[n]):('Volume '+String(v||''));}
+function volumeTitle(v){const tv=tocVolumeById(v);if(tv)return 'Volume '+String(tv.roman||VOLUME_ROMAN[tv.id]||tv.id).toUpperCase()+' \u2014 '+(tv.title||VOLUME_TITLES[tv.id]||'');const n=volumeNumber(v);return n?('Volume '+VOLUME_ROMAN[n]+' \u2014 '+VOLUME_TITLES[n]):('Volume '+String(v||''));}
 function volumePdfSlug(v){const n=volumeNumber(v);return n?String(VOLUME_ROMAN[n]).toLowerCase():String(v||'').toLowerCase();}
 function pdfUrl(){return `${PDF_BASE_URL}/${state.pdfEdition}/lra-volume-${volumePdfSlug(state.pdfVolume)}.pdf`;}
 function pdfVolumeOptions(){
@@ -554,14 +560,15 @@ function uniqueNodeOptions(nodes,key,labelKey,preferredOrder=[]){
     ? out.sort((a,b)=>(order.get(a.value)??9999)-(order.get(b.value)??9999))
     : out;
 }
-// syncFilters: populates Volume, Chapter, and Section from exported TOC metadata.
-// Filters keep slug keys internally but display the same chapter/section titles and order as the source indexes.
+// syncFilters: populates Volume, Book, Chapter, and Section from exported TOC metadata.
+// Filters keep slug keys internally but display the same book/chapter/section titles and order as the source indexes.
 function syncFilters(nodes){
   const selVolume=state.filters.volume;
+  const selBook=state.filters.book;
   const selChapter=state.filters.chapter;
   const selDeck=state.filters.deck;
   const nodeVols=new Set(nodes.map(n=>String(n.volume||nodeVolume(n))).filter(Boolean));
-  const toc=tocVolumes().filter(v=>nodeVols.has(String(v.id))||((v.chapters||[]).length));
+  const toc=tocVolumes().filter(v=>nodeVols.has(String(v.id))||((v.books||[]).length)||((v.chapters||[]).length));
   const tocVolumeOptions=toc.map(v=>({value:String(v.id),label:volumeTitle(v.id)}));
   const fallbackVolumeOptions=[...nodeVols].sort((a,b)=>Number(a)-Number(b)).map(v=>({value:v,label:volumeTitle(v)}));
   const volumeOptions=[{value:'All',label:'All volumes'},...(tocVolumeOptions.length?tocVolumeOptions:fallbackVolumeOptions)];
@@ -570,20 +577,36 @@ function syncFilters(nodes){
 
   const selectedNodes=nodes.filter(n=>state.filters.volume==='All'||String(n.volume||nodeVolume(n))===String(state.filters.volume));
   const activeVolumes=state.filters.volume==='All'?toc:toc.filter(v=>String(v.id)===String(state.filters.volume));
+  const activeBooks=[];
+  activeVolumes.forEach(v=>{
+    const books=(v.books&&v.books.length)?v.books:[{id:'',title:'',chapters:v.chapters||[]}];
+    books.forEach(b=>activeBooks.push({...b,volume:String(v.id)}));
+  });
+  const bookOptions=[{value:'All',label:'All books'}];
+  if(activeBooks.some(b=>b.id)){
+    activeBooks.forEach(b=>{if(b.id)bookOptions.push({value:b.id,label:plainOptionLabel(b.title||fallbackTitle(b.id))});});
+  }else{
+    bookOptions.push(...uniqueNodeOptions(selectedNodes,'book','book_title'));
+  }
+  if(selBook!=='All'&&!bookOptions.some(o=>o.value===selBook))state.filters.book='All';
+  optionSet(els.bookFilter,bookOptions,state.filters.book);
+
+  const selectedBookNodes=selectedNodes.filter(n=>state.filters.book==='All'||n.book===state.filters.book);
+  const activeBookSet=state.filters.book==='All'?activeBooks:activeBooks.filter(b=>b.id===state.filters.book);
   const chapterOptions=[{value:'All',label:'All chapters'}];
-  if(activeVolumes.length){
-    activeVolumes.forEach(v=>(v.chapters||[]).forEach(c=>chapterOptions.push({value:c.id,label:plainOptionLabel(c.title||fallbackTitle(c.id))})));
+  if(activeBookSet.length){
+    activeBookSet.forEach(b=>(b.chapters||[]).forEach(c=>chapterOptions.push({value:c.id,label:plainOptionLabel(c.title||fallbackTitle(c.id))})));
   }else{
     const chapterOrder=((state.knowledge&&state.knowledge.metadata&&state.knowledge.metadata.chapters)||[]).filter(Boolean);
-    chapterOptions.push(...uniqueNodeOptions(selectedNodes,'chapter','chapter_title',chapterOrder));
+    chapterOptions.push(...uniqueNodeOptions(selectedBookNodes,'chapter','chapter_title',chapterOrder));
   }
   if(state.filters.chapter!=='All'&&!chapterOptions.some(o=>o.value===state.filters.chapter))state.filters.chapter='All';
   optionSet(els.chapterFilter,chapterOptions,state.filters.chapter);
 
-  const selectedChapterNodes=selectedNodes.filter(n=>state.filters.chapter==='All'||n.chapter===state.filters.chapter);
+  const selectedChapterNodes=selectedBookNodes.filter(n=>state.filters.chapter==='All'||n.chapter===state.filters.chapter);
   const sectionOptions=[{value:'All',label:'All sections'}];
-  if(activeVolumes.length){
-    activeVolumes.forEach(v=>(v.chapters||[]).forEach(c=>{
+  if(activeBookSet.length){
+    activeBookSet.forEach(b=>(b.chapters||[]).forEach(c=>{
       if(state.filters.chapter!=='All'&&c.id!==state.filters.chapter)return;
       (c.sections||[]).forEach(s=>sectionOptions.push({value:s.id,label:plainOptionLabel(s.title||fallbackTitle(s.id))}));
     }));
@@ -607,6 +630,7 @@ function visibleGraph(){
   const selCh=state.filters.chapter;
   const selDeck=state.filters.deck;
   const selVol=state.filters.volume;
+  const selBook=state.filters.book;
   const vis=new Map();
   for(const n of nodes){
     const cls=nodeClass(n);
@@ -616,8 +640,9 @@ function visibleGraph(){
     // Section filter: match the source section key or pass if 'All'
     const byDeck=selDeck==='All'||n.section===selDeck||n.deck===selDeck;
     const byVolume=selVol==='All'||String(n.volume||nodeVolume(n))===String(selVol);
+    const byBook=selBook==='All'||n.book===selBook;
     const blob=JSON.stringify(n).toLowerCase();
-    vis.set(n.id,byType&&byChapter&&byDeck&&byVolume&&(!q||blob.includes(q)));
+    vis.set(n.id,byType&&byChapter&&byDeck&&byVolume&&byBook&&(!q||blob.includes(q)));
   }
   const outNodes=nodes.filter(n=>vis.get(n.id));
   const ids=new Set(outNodes.map(n=>n.id));
@@ -834,12 +859,22 @@ function orderedModelArtifacts(){
 }
 function modelArtifactById(id){return modelArtifacts().find(a=>a.id===id)||null;}
 function modelVolume(artifact){
+  if(artifact.volume_title)return `Volume ${String(artifact.volume_roman||artifact.volume||'').toUpperCase()} \u2014 ${artifact.volume_title}`;
   const source=String(artifact.source_file||'');
   const match=source.match(/volume-([^/\\]+)/);
   return match?`Volume ${match[1].toUpperCase()}`:'Shared';
 }
-function modelChapter(artifact){
+function modelBook(artifact){
+  if(artifact.book_title)return artifact.book_title;
   const parts=String(artifact.source_file||'').split(/[\\/]/);
+  const idx=parts.findIndex(p=>/^book-/i.test(p));
+  return idx>=0?fallbackTitle(parts[idx].replace(/^book-/i,'')):'Shared';
+}
+function modelChapter(artifact){
+  if(artifact.chapter_title)return artifact.chapter_title;
+  const parts=String(artifact.source_file||'').split(/[\\/]/);
+  const bookIdx=parts.findIndex(p=>/^book-/i.test(p));
+  if(bookIdx>=0&&parts[bookIdx+1])return parts[bookIdx+1];
   const idx=parts.findIndex(p=>/^volume-/i.test(p));
   return idx>=0&&parts[idx+1]?parts[idx+1]:(artifact.layer||'shared');
 }
@@ -886,6 +921,7 @@ function modelSearchBlob(artifact){
     artifact.kind,
     artifact.layer,
     modelVolume(artifact),
+    modelBook(artifact),
     modelChapter(artifact),
     modelTopic(artifact),
     artifact.source_file,
@@ -900,11 +936,16 @@ function renderModelBoard(){
   els.modelVolumeFilter.value=volumes.includes(state.modelVolume)?state.modelVolume:'All';
   state.modelVolume=els.modelVolumeFilter.value;
   const volumeFiltered=artifacts.filter(a=>state.modelVolume==='All'||modelVolume(a)===state.modelVolume);
-  const chapters=[...new Set(volumeFiltered.map(modelChapter))].sort();
+  const books=[...new Set(volumeFiltered.map(modelBook))].sort();
+  els.modelBookFilter.innerHTML=['<option value="All">All books</option>'].concat(books.map(b=>`<option value="${esc(b)}">${esc(b)}</option>`)).join('');
+  els.modelBookFilter.value=books.includes(state.modelBook)?state.modelBook:'All';
+  state.modelBook=els.modelBookFilter.value;
+  const bookFiltered=volumeFiltered.filter(a=>state.modelBook==='All'||modelBook(a)===state.modelBook);
+  const chapters=[...new Set(bookFiltered.map(modelChapter))].sort();
   els.modelChapterFilter.innerHTML=['<option value="All">All chapters</option>'].concat(chapters.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`)).join('');
   els.modelChapterFilter.value=chapters.includes(state.modelChapter)?state.modelChapter:'All';
   state.modelChapter=els.modelChapterFilter.value;
-  const chapterFiltered=volumeFiltered.filter(a=>state.modelChapter==='All'||modelChapter(a)===state.modelChapter);
+  const chapterFiltered=bookFiltered.filter(a=>state.modelChapter==='All'||modelChapter(a)===state.modelChapter);
   const topics=[...new Set(chapterFiltered.map(modelTopic))].sort();
   els.modelTopicFilter.innerHTML=['<option value="All">All topics</option>'].concat(topics.map(t=>`<option value="${esc(t)}">${esc(t)}</option>`)).join('');
   els.modelTopicFilter.value=topics.includes(state.modelTopic)?state.modelTopic:'All';
@@ -912,10 +953,11 @@ function renderModelBoard(){
   const q=state.modelBoardSearch.trim().toLowerCase();
   const filtered=artifacts.filter(a=>{
     const volumeOk=state.modelVolume==='All'||modelVolume(a)===state.modelVolume;
+    const bookOk=state.modelBook==='All'||modelBook(a)===state.modelBook;
     const chapterOk=state.modelChapter==='All'||modelChapter(a)===state.modelChapter;
     const topicOk=state.modelTopic==='All'||modelTopic(a)===state.modelTopic;
     const searchOk=!q||modelSearchBlob(a).includes(q);
-    return volumeOk&&chapterOk&&topicOk&&searchOk;
+    return volumeOk&&bookOk&&chapterOk&&topicOk&&searchOk;
   });
   const errs=(state.modelArtifacts&&state.modelArtifacts.errors||[]).length;
   els.modelBoardStatus.textContent=artifacts.length?`${filtered.length} of ${artifacts.length} model cards shown${errs?` · ${errs} validation issue${errs===1?'':'s'}`:''}.`:'No model artifacts loaded.';
@@ -928,7 +970,7 @@ function renderModelBoard(){
     return `<button type="button" class="card model-list-card${a.id===state.selectedModelArtifactId?' active':''}" data-model-artifact-id="${esc(a.id)}">
       <span class="model-pill">${esc(a.kind||'model-artifact')}</span>
       <div class="model-list-title">${texToHtml(a.title||a.id)}</div>
-      <div class="model-list-meta">${esc(a.id)}<br>${esc(modelVolume(a))} · ${esc(modelChapter(a))} · ${esc(modelTopic(a))}</div>
+      <div class="model-list-meta">${esc(a.id)}<br>${esc(modelVolume(a))} · ${esc(modelBook(a))} · ${esc(modelChapter(a))} · ${esc(modelTopic(a))}</div>
       ${depends?`<div style="margin-top:8px;line-height:1.9">${depends}</div>`:''}
     </button>`;
   }).join('')||'<div class="card"><div class="value">No model cards match the current filters.</div></div>';
@@ -969,7 +1011,7 @@ function renderModelArtifactDetails(artifact){
   els.detailContent.style.display='block';
   const blocks=[];
   const kind=artifact.kind||'model-artifact';
-  blocks.push(`<div class="card model-component"><div class="label">Model Card</div><div class="value"><span class="model-pill">${esc(kind)}</span><br><strong>${texToHtml(artifact.title||artifact.id)}</strong></div><div class="tiny model-source" style="margin-top:8px">${esc(artifact.id)} · ${esc(artifact.layer||'layer unknown')} · ${esc(artifact.source_file||'')}</div></div>`);
+  blocks.push(`<div class="card model-component"><div class="label">Model Card</div><div class="value"><span class="model-pill">${esc(kind)}</span><br><strong>${texToHtml(artifact.title||artifact.id)}</strong></div><div class="tiny model-source" style="margin-top:8px">${esc(artifact.id)} · ${esc(modelBook(artifact))} · ${esc(artifact.layer||'layer unknown')} · ${esc(artifact.source_file||'')}</div></div>`);
   const deps=modelDependencyChips(artifact.depends_on||[]);
   if(deps)blocks.push(`<div class="card"><div class="label">Depends on</div><div class="value" style="line-height:2">${deps}</div></div>`);
   if(Array.isArray(artifact.labels)&&artifact.labels.length)blocks.push(`<div class="card"><div class="label">Labels</div><div class="value">${artifact.labels.map(esc).join('<br>')}</div></div>`);
@@ -1005,7 +1047,8 @@ function renderDetails(n){
   function addProof(t,v){const cleaned=cleanProofText(v);if(!cleaned)return;blocks.push(`<div class="card"><div class="label">${esc(t)}</div><div class="value">${texToHtml(cleaned)}</div></div>`);}
   function addChips(label,ids,treeMode){if(!ids||!ids.length)return;const html=chipList(ids,treeMode);if(!html)return;blocks.push(`<div class="card"><div class="label">${esc(label)}</div><div class="value" style="line-height:2">${html}</div></div>`);}
   const rootTag=(function(){const rk=String(n.root_kind||'').toLowerCase();if(rk==='primitive')return' · <strong style="color:#c7d2fe">policy</strong>';if(rk==='axiom')return' · <strong style="color:#c7d2fe">axiom · root</strong>';return'';})();
-  blocks.push(`<div class="card"><div class="label">Title</div><div class="value"><strong>${texToHtml(nodeTitle(n))}</strong></div><div class="tiny" style="margin-top:8px">${esc(kindLabel(n))} · ${esc(nodeDeck(n)||nodeChapter(n))} · ${esc(n.id)}${rootTag}</div></div>`);
+  const location=[n.volume_title?`Volume ${String(n.volume_roman||n.volume||'').toUpperCase()}: ${n.volume_title}`:'',nodeBook(n),nodeChapter(n),nodeDeck(n)].filter(Boolean).join(' · ');
+  blocks.push(`<div class="card"><div class="label">Title</div><div class="value"><strong>${texToHtml(nodeTitle(n))}</strong></div><div class="tiny" style="margin-top:8px">${esc(kindLabel(n))} · ${esc(location)} · ${esc(n.id)}${rootTag}</div></div>`);
   const fm=n.fully_quantified_form||n.formal||'';
   const pred=n.formal&&n.fully_quantified_form&&n.formal!==n.fully_quantified_form?n.formal:(n.proposition||'');
   add('Statement',n.statement_display);
@@ -1053,7 +1096,7 @@ function renderDetails(n){
   });
 }
 
-function render(){const g=visibleGraph();const dims=layout(g.nodes,g.edges);state.renderedGraph=g;els.graphInner.style.width=dims.width+'px';els.graphInner.style.height=dims.height+'px';els.graphInner.style.transform=`scale(${state.zoom})`;els.edgeLayer.setAttribute('width',dims.width);els.edgeLayer.setAttribute('height',dims.height);els.edgeLayer.setAttribute('viewBox',`0 0 ${dims.width} ${dims.height}`);els.edgeLayer.innerHTML=`<defs><marker id="arrowDep" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#94a3b8"/></marker><marker id="arrowProofDep" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#38bdf8"/></marker><marker id="arrowUse" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#a78bfa"/></marker><marker id="arrowImp" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#f59e0b"/></marker><marker id="arrowEquiv" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#22c55e"/></marker></defs>`;els.nodeLayer.innerHTML='';state.nodeElements=new Map();for(const n of g.nodes){const d=document.createElement('div');d.className=`node ${nodeClass(n)}`+(state.selectedId===n.id?' selected':'');d.style.left=n.x+'px';d.style.top=n.y+'px';d.dataset.nodeId=n.id;d.innerHTML=`<div class="type">${esc(kindLabel(n))}</div><div class="title">${texToHtml(nodeTitle(n))}</div><div class="meta"><span>${esc(nodeDeck(n)||nodeChapter(n))}</span><span>${esc(n.id)}</span></div>`;d.addEventListener('mouseenter',ev=>showTooltip(ev,n));d.addEventListener('mousemove',moveTooltip);d.addEventListener('mouseleave',hideTooltip);d.addEventListener('click',()=>{if(state.suppressNextClick){state.suppressNextClick=false;return;}state.selectedId=n.id;render();renderDetails(n);});attachDrag(d,n);els.nodeLayer.appendChild(d);state.nodeElements.set(n.id,d);}drawEdges(g);}
+function render(){const g=visibleGraph();const dims=layout(g.nodes,g.edges);state.renderedGraph=g;els.graphInner.style.width=dims.width+'px';els.graphInner.style.height=dims.height+'px';els.graphInner.style.transform=`scale(${state.zoom})`;els.edgeLayer.setAttribute('width',dims.width);els.edgeLayer.setAttribute('height',dims.height);els.edgeLayer.setAttribute('viewBox',`0 0 ${dims.width} ${dims.height}`);els.edgeLayer.innerHTML=`<defs><marker id="arrowDep" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#94a3b8"/></marker><marker id="arrowProofDep" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#38bdf8"/></marker><marker id="arrowUse" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#a78bfa"/></marker><marker id="arrowImp" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#f59e0b"/></marker><marker id="arrowEquiv" viewBox="0 0 12 12" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L12,6 L0,12 z" fill="#22c55e"/></marker></defs>`;els.nodeLayer.innerHTML='';state.nodeElements=new Map();for(const n of g.nodes){const d=document.createElement('div');d.className=`node ${nodeClass(n)}`+(state.selectedId===n.id?' selected':'');d.style.left=n.x+'px';d.style.top=n.y+'px';d.dataset.nodeId=n.id;d.innerHTML=`<div class="type">${esc(kindLabel(n))}</div><div class="title">${texToHtml(nodeTitle(n))}</div><div class="meta"><span>${esc(nodeBook(n)||nodeChapter(n)||nodeDeck(n))}</span><span>${esc(n.id)}</span></div>`;d.addEventListener('mouseenter',ev=>showTooltip(ev,n));d.addEventListener('mousemove',moveTooltip);d.addEventListener('mouseleave',hideTooltip);d.addEventListener('click',()=>{if(state.suppressNextClick){state.suppressNextClick=false;return;}state.selectedId=n.id;render();renderDetails(n);});attachDrag(d,n);els.nodeLayer.appendChild(d);state.nodeElements.set(n.id,d);}drawEdges(g);}
 
 async function tryAutoLoad(){
   try{
@@ -1087,7 +1130,8 @@ els.knowledgeTabBtn.onclick=()=>setExplorerTab('knowledge');
 els.modelTabBtn.onclick=()=>setExplorerTab('models');
 els.modelBoardGraphBtn.onclick=()=>setExplorerTab('knowledge');
 els.modelBoardSearch.oninput=e=>{state.modelBoardSearch=e.target.value;renderModelBoard();};
-els.modelVolumeFilter.onchange=e=>{state.modelVolume=e.target.value;state.modelChapter='All';state.modelTopic='All';renderModelBoard();};
+els.modelVolumeFilter.onchange=e=>{state.modelVolume=e.target.value;state.modelBook='All';state.modelChapter='All';state.modelTopic='All';renderModelBoard();};
+els.modelBookFilter.onchange=e=>{state.modelBook=e.target.value;state.modelChapter='All';state.modelTopic='All';renderModelBoard();};
 els.modelChapterFilter.onchange=e=>{state.modelChapter=e.target.value;state.modelTopic='All';renderModelBoard();};
 els.modelTopicFilter.onchange=e=>{state.modelTopic=e.target.value;renderModelBoard();};
 els.searchBox.oninput=e=>{state.filters.search=e.target.value;render();};
@@ -1101,7 +1145,8 @@ els.showImplies.onchange=e=>{state.filters.showImplies=e.target.checked;render()
 els.layoutMode.onchange=e=>{state.filters.layoutMode=e.target.value;state.nodePositions={};render();};
 els.treeMode.onchange=e=>{state.filters.treeMode=e.target.value;state.nodePositions={};render();};
 // Treat TOC filters as navigation: redraw the scoped graph and center a visible default node.
-els.volumeFilter.onchange=e=>{state.filters.volume=e.target.value;state.filters.chapter='All';state.filters.deck='All';els.chapterFilter.value='All';els.deckFilter.value='All';focusFilteredGraph();};
+els.volumeFilter.onchange=e=>{state.filters.volume=e.target.value;state.filters.book='All';state.filters.chapter='All';state.filters.deck='All';els.bookFilter.value='All';els.chapterFilter.value='All';els.deckFilter.value='All';focusFilteredGraph();};
+els.bookFilter.onchange=e=>{state.filters.book=e.target.value;state.filters.chapter='All';state.filters.deck='All';els.chapterFilter.value='All';els.deckFilter.value='All';focusFilteredGraph();};
 els.chapterFilter.onchange=e=>{state.filters.chapter=e.target.value;state.filters.deck='All';els.deckFilter.value='All';focusFilteredGraph();};
 els.deckFilter.onchange=e=>{state.filters.deck=e.target.value;focusFilteredGraph();};
 els.zoomInBtn.onclick=()=>{state.zoom=Math.min(2.4,+(state.zoom+0.1).toFixed(2));render();};

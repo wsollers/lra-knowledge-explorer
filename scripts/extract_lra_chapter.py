@@ -81,7 +81,7 @@ SECTIONING_ENVS = {
     "subparagraph",
 }
 
-BEGIN_END_RE = re.compile(r"\\(begin|end)\{([A-Za-z*]+)\}")
+BEGIN_END_RE = re.compile(r"\\(begin|end)\{([A-Za-z*_-]+)\}")
 LABEL_RE = re.compile(r"\\label\{([^{}]+)\}")
 HYPERREF_RE = re.compile(r"\\hyperref\[([^\]]+)\]")
 INPUT_RE = re.compile(r"\\(?:input|include)\{([^{}]+)\}")
@@ -93,6 +93,7 @@ SECTION_RE = re.compile(r"\\(?:section|subsection|subsubsection)\{([^{}]+)\}")
 # on a word boundary, and the trailing window is bounded by the next formal
 # environment / structural wrapper or the next sectioning command.
 DEFINITIONAL_ROOT_RE = re.compile(r"\\DefinitionalRoot\b")
+NO_LOCAL_DEPENDENCIES_RE = re.compile(r"\\NoLocalDependencies\b")
 DEFROOT_BOUNDARY_RE = re.compile(r"\\(?:chapter|section|subsection|subsubsection)\*?\{")
 STRIP_CMD_RE = re.compile(r"\\[A-Za-z@]+\*?(?:\[[^\]]*\])?(?:\{[^{}]*\})?")
 WHITESPACE_RE = re.compile(r"\s+")
@@ -137,6 +138,8 @@ class ExtractedItem:
     theorem_refs: list[str]
     dependency_refs: list[str]
     remark_blocks: list[dict[str, Any]]
+    dependency_blocks: list[dict[str, Any]] = field(default_factory=list)
+    no_local_dependencies: bool = False
     expositions: list[dict[str, Any]] = field(default_factory=list)
     proof_source_path: str | None = None
     proof_labels: list[str] = field(default_factory=list)
@@ -340,24 +343,32 @@ def relative_posix(path: Path, root: Path) -> str:
     return path.relative_to(root).as_posix()
 
 
-def find_volume_repo_root(path: Path) -> Path:
-    """Return the split-volume repo root that owns ``path``.
+def find_governance_tools_root(path: Path) -> Path | None:
+    """Return the governance checkout that provides the file inventory.
 
     Extraction intentionally uses the same live TeX inventory provider as the
-    volume validators: ``tools/governance/core/file_inventory.py``. If this
-    provider is absent, the checkout is not a valid extraction source.
+    volume validators: ``tools/governance/core/file_inventory.py``. Split-volume
+    checkouts keep that provider in the sibling ``lra-governance`` repository.
     """
     start = path.resolve()
     for candidate in (start, *start.parents):
         provider = candidate / "tools" / "governance" / "core" / "file_inventory.py"
         if provider.is_file():
             return candidate
-    raise SystemExit(f"Missing validator file inventory provider for extraction source: {path}")
+        sibling = candidate / "lra-governance" / "tools" / "governance" / "core" / "file_inventory.py"
+        if sibling.is_file():
+            return candidate / "lra-governance"
+    return None
 
 
-def validator_live_tex_files(root: Path) -> list[Path]:
+def validator_live_tex_files(root: Path, *, allow_empty: bool = False) -> list[Path]:
     """Return live TeX files exactly as the volume validator inventory sees them."""
-    repo_root = find_volume_repo_root(root)
+    repo_root = find_governance_tools_root(root)
+    if repo_root is None:
+        entry = root / "index.tex"
+        if entry.is_file():
+            return live_tex_closure(entry, root.parent)
+        return sorted(path.resolve() for path in root.rglob("*.tex"))
     governance_tools = repo_root / "tools" / "governance"
     governance_tools_s = str(governance_tools)
     if governance_tools_s not in sys.path:
@@ -365,8 +376,8 @@ def validator_live_tex_files(root: Path) -> list[Path]:
 
     from core.file_inventory import files_to_validate  # type: ignore
 
-    files = [Path(p).resolve() for p in files_to_validate([root], only_reachable=True)]
-    if not files:
+    files = [Path(p).resolve() for p in files_to_validate([root], only_reachable=True, include_excluded=True)]
+    if not files and not allow_empty:
         raise SystemExit(f"No live TeX files found by validator inventory: {root}")
     return files
 
@@ -478,7 +489,7 @@ def collect_proof_catalog(chapter_root: Path) -> tuple[dict[str, dict[str, Any]]
 
     proof_root_resolved = proof_root.resolve()
     proof_files = [
-        p for p in validator_live_tex_files(proof_root)
+        p for p in validator_live_tex_files(proof_root, allow_empty=True)
         if p == proof_root_resolved / "index.tex" or proof_root_resolved in p.parents
     ]
 
@@ -571,10 +582,38 @@ def collect_trailing_remarks(text: str, envs: list[EnvBlock], idx: int) -> list[
     return out
 
 
-def collect_dependencies(text: str, envs: list[EnvBlock], idx: int) -> list[str]:
-    """Return the sorted list of hyperref labels found inside the first
-    \\begin{dependencies}...\\end{dependencies} block that belongs to the
-    theorem-like item at envs[idx].
+def dependency_block_json(text: str, env: EnvBlock, *, hidden: bool) -> dict[str, Any]:
+    refs = sorted({h for h in HYPERREF_RE.findall(env.raw(text)) if ":" in h})
+    return {
+        "env_name": env.name,
+        "hidden": hidden,
+        "refs": refs,
+        "raw_latex_b64": b64(env.raw(text)),
+        "body_latex_b64": b64(env.content(text).strip()),
+        "body_preview": clean_preview(env.content(text)),
+        "source_line_start": line_number(text, env.begin_start),
+        "source_line_end": line_number(text, env.end_end),
+    }
+
+
+def dependency_info_from_hidden(text: str, envs: list[EnvBlock], hidden_idx: int) -> tuple[list[str], list[dict[str, Any]], bool]:
+    hidden = envs[hidden_idx]
+    raw = hidden.raw(text)
+    no_local = bool(NO_LOCAL_DEPENDENCIES_RE.search(strip_comments_keep_length(raw)))
+    blocks: list[dict[str, Any]] = []
+    refs: list[str] = []
+    for child_idx in hidden.children:
+        child = envs[child_idx]
+        if child.name != "dependencies":
+            continue
+        block = dependency_block_json(text, child, hidden=True)
+        blocks.append(block)
+        refs.extend(block["refs"])
+    return sorted(set(refs)), blocks, no_local
+
+
+def collect_dependency_info(text: str, envs: list[EnvBlock], idx: int) -> tuple[list[str], list[dict[str, Any]], bool]:
+    """Return dependency refs, serialized blocks, and no-local flag for an item.
 
     Search strategy
     ---------------
@@ -611,13 +650,13 @@ def collect_dependencies(text: str, envs: list[EnvBlock], idx: int) -> list[str]
         # Hard fence: a new theorem-like env or structural wrapper is beginning.
         # This item has no dependencies block — bail out immediately.
         if nxt.name in LOOKAHEAD_FENCE_ENVS:
-            return []
+            return [], [], False
 
         # Gap check: if there is non-whitespace text between scan_from and the
         # next env, something unexpected is in the way — stop safely.
         between = text[scan_from : nxt.begin_start]
         if between.strip():
-            return []
+            return [], [], False
 
         # remark* blocks are allowed between tcolorbox and dependencies — skip.
         if nxt.name == REMARK_ENV:
@@ -625,19 +664,24 @@ def collect_dependencies(text: str, envs: list[EnvBlock], idx: int) -> list[str]
             j += 1
             continue
 
+        if nxt.name == "lra-not-visible":
+            refs, blocks, no_local = dependency_info_from_hidden(text, envs, j)
+            return refs, blocks, no_local
+
         # Found the dependencies block.
         if nxt.name == "dependencies":
-            raw = nxt.raw(text)
-            refs = [
-                h for h in HYPERREF_RE.findall(raw)
-                if ":" in h
-            ]
-            return sorted(set(refs))
+            block = dependency_block_json(text, nxt, hidden=False)
+            return block["refs"], [block], False
 
         # Anything else (itemize, enumerate, etc.) — not expected here, stop.
-        return []
+        return [], [], False
 
-    return []
+    return [], [], False
+
+
+def collect_dependencies(text: str, envs: list[EnvBlock], idx: int) -> list[str]:
+    refs, _blocks, _no_local = collect_dependency_info(text, envs, idx)
+    return refs
 
 
 def collect_definitional_root(text: str, envs: list[EnvBlock], idx: int) -> bool:
@@ -752,7 +796,7 @@ def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
             proof_refs = sorted({h for h in HYPERREF_RE.findall(raw) if h.startswith("prf:")})
             theorem_refs = sorted({h for h in HYPERREF_RE.findall(raw) if h.startswith(("def:", "thm:", "lem:", "prop:", "cor:", "ax:"))})
             remarks = collect_trailing_remarks(text, envs, idx)
-            dependency_refs = collect_dependencies(text, envs, idx)
+            dependency_refs, dependency_blocks, no_local_dependencies = collect_dependency_info(text, envs, idx)
             definitional_root = collect_definitional_root(text, envs, idx)
             source_path = relative_posix(path, chapter_root)
             section_slug = find_section_slug(path, chapter_root)
@@ -775,6 +819,8 @@ def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
                 proof_refs=proof_refs,
                 theorem_refs=theorem_refs,
                 dependency_refs=dependency_refs,
+                dependency_blocks=dependency_blocks,
+                no_local_dependencies=no_local_dependencies,
                 remark_blocks=remarks,
                 expositions=expositions,
                 text_preview=clean_preview(raw),
@@ -855,6 +901,8 @@ def item_to_json(item: ExtractedItem) -> dict[str, Any]:
         "proof_refs": item.proof_refs,
         "theorem_refs": item.theorem_refs,
         "dependency_refs": item.dependency_refs,
+        "dependency_blocks": item.dependency_blocks,
+        "no_local_dependencies": item.no_local_dependencies,
         "proof_return_targets": item.proof_return_targets,
         "raw_latex_b64": item.raw_latex_b64,
         "body_latex_b64": item.body_latex_b64,

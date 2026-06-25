@@ -24,15 +24,22 @@ graph-edges.json              — dependency graph edges
 
 ```bash
 python scripts/run_extraction.py --repos-root /path/to/workspace-containing-lra-volume-repos
+python scripts/extract_model_artifacts.py --source-root /path/to/workspace-containing-lra-volume-repos
 python scripts/build_proof_vault_index.py --vault-root /path/to/lra-proof-vault
 ```
 
 ## Relationship to monorepo
 
 The extraction scripts do not use the `Learning-Real-Analysis` monorepo as a
-TeX source. They require local split volume checkouts (`lra-volume-i`,
-`lra-volume-ii`, and `lra-volume-iii`) and hard fail if an expected volume,
-chapter, `notes/index.tex`, or `proofs/index.tex` is missing.
+TeX source. They require local split volume checkouts (`lra-volume-i` through
+`lra-volume-viii`) plus `lra-governance`. The canonical chapter and book list is
+`lra-governance/docs/architecture/book-registry.json`; extraction hard fails if
+an expected volume, chapter, `notes/index.tex`, or `proofs/index.tex` is
+missing.
+
+Generated explorer records include volume, book, chapter, and section metadata.
+The browser UI uses that schema for the Volume → Book → Chapter → Section
+filters.
 
 Extraction reads live TeX files through the same volume governance inventory
 provider used by validators, so validation and explorer publication operate on

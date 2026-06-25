@@ -26,18 +26,19 @@ COMBINED_EDGE_ERRORS = REPO_ROOT / "graph-edge-errors.json"
 class ChapterSpec:
     repo: str
     path: str
+    volume_number: int
+    volume_roman: str
+    volume_title: str
+    series_title: str
+    book_slug: str
+    book_title: str
+    book_order: int
+    book_dir: str
+    chapter: str
+    expected_notes: tuple[str, ...]
 
 
-CHAPTERS = [
-    ChapterSpec("lra-volume-i", "volume-i/propositional-logic"),
-    ChapterSpec("lra-volume-ii", "volume-ii/peano-systems"),
-    ChapterSpec("lra-volume-ii", "volume-ii/natural-numbers"),
-    ChapterSpec("lra-volume-ii", "volume-ii/rationals"),
-    ChapterSpec("lra-volume-iii", "volume-iii/analysis/bounding"),
-    ChapterSpec("lra-volume-iii", "volume-iii/analysis/functions"),
-    ChapterSpec("lra-volume-iii", "volume-iii/analysis/continuity"),
-    ChapterSpec("lra-volume-iii", "volume-iii/analysis/differentiation"),
-]
+DEFAULT_BOOK_REGISTRY = REPO_ROOT.parent / "lra-governance" / "docs" / "architecture" / "book-registry.json"
 
 
 def run(cmd: list[str], label: str) -> None:
@@ -52,6 +53,43 @@ def run(cmd: list[str], label: str) -> None:
 def require_file(path: Path, label: str) -> None:
     if not path.is_file():
         raise SystemExit(f"Missing {label}: {path}")
+
+
+def load_book_registry(path: Path) -> dict:
+    if not path.is_file():
+        raise SystemExit(f"Missing book registry: {path}")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def specs_from_registry(registry: dict) -> list[ChapterSpec]:
+    specs: list[ChapterSpec] = []
+    for volume in registry.get("volumes", []):
+        roman = str(volume["roman"])
+        for book in volume.get("books", []):
+            for chapter in book.get("expected_toc", []):
+                expected_notes = tuple(str(note) for note in chapter.get("notes", []))
+                if not expected_notes:
+                    continue
+                chapter_slug = str(chapter["chapter"])
+                specs.append(
+                    ChapterSpec(
+                        repo=f"lra-volume-{roman}",
+                        path=str(Path(book["book_dir"]) / chapter_slug).replace("\\", "/"),
+                        volume_number=int(volume["volume_number"]),
+                        volume_roman=roman,
+                        volume_title=str(volume["display_title"]),
+                        series_title=str(volume.get("series_title", "")),
+                        book_slug=str(book["slug"]),
+                        book_title=str(book["title"]),
+                        book_order=int(book["order"]),
+                        book_dir=str(book["book_dir"]),
+                        chapter=chapter_slug,
+                        expected_notes=expected_notes,
+                    )
+                )
+    if not specs:
+        raise SystemExit("Book registry did not contain any chapters.")
+    return specs
 
 
 def require_chapter(repos_root: Path, spec: ChapterSpec) -> Path:
@@ -107,14 +145,75 @@ def load_json(path: Path) -> dict | list:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def merge_knowledge(chapter_roots: list[Path]) -> None:
+def chapter_title(slug: str) -> str:
+    return slug.replace("-", " ").replace("_", " ").title()
+
+
+def section_title(slug: str) -> str:
+    return chapter_title(slug)
+
+
+def registry_toc(registry: dict) -> list[dict]:
+    toc: list[dict] = []
+    for volume in registry.get("volumes", []):
+        toc_books: list[dict] = []
+        for book in volume.get("books", []):
+            toc_chapters: list[dict] = []
+            for chapter in book.get("expected_toc", []):
+                chapter_slug = str(chapter["chapter"])
+                toc_chapters.append(
+                    {
+                        "id": chapter_slug,
+                        "title": chapter_title(chapter_slug),
+                        "sections": [
+                            {"id": str(note), "title": section_title(str(note))}
+                            for note in chapter.get("notes", [])
+                        ],
+                    }
+                )
+            toc_books.append(
+                {
+                    "id": str(book["slug"]),
+                    "title": str(book["title"]),
+                    "order": int(book["order"]),
+                    "book_dir": str(book["book_dir"]),
+                    "chapters": toc_chapters,
+                }
+            )
+        toc.append(
+            {
+                "id": int(volume["volume_number"]),
+                "roman": str(volume["roman"]),
+                "title": str(volume["display_title"]),
+                "series_title": str(volume.get("series_title", "")),
+                "books": toc_books,
+            }
+        )
+    return toc
+
+
+def enrich_node(node: dict, spec: ChapterSpec) -> dict:
+    node["volume"] = spec.volume_number
+    node["volume_roman"] = spec.volume_roman
+    node["volume_title"] = spec.volume_title
+    node["series_title"] = spec.series_title
+    node["book"] = spec.book_slug
+    node["book_title"] = spec.book_title
+    node["book_order"] = spec.book_order
+    node["book_dir"] = spec.book_dir
+    node["chapter"] = spec.chapter
+    node.setdefault("chapter_title", chapter_title(spec.chapter))
+    return node
+
+
+def merge_knowledge(chapters: list[tuple[ChapterSpec, Path]], registry: dict) -> None:
     all_nodes: list[dict] = []
     all_edges: list[dict] = []
     all_errors: list[dict] = []
     all_edge_errors: list[dict] = []
     chapter_names: list[str] = []
 
-    for chapter_root in chapter_roots:
+    for spec, chapter_root in chapters:
         exp = chapter_root / ".explorer"
         k = load_json(exp / "knowledge.json")
         e = load_json(exp / "graph-edges.json")
@@ -130,8 +229,8 @@ def merge_knowledge(chapter_roots: list[Path]) -> None:
         if not isinstance(ge, dict) or "errors" not in ge:
             raise SystemExit(f"Malformed graph edge error JSON: {exp / 'graph-edge-errors.json'}")
 
-        all_nodes.extend(k["nodes"])
-        chapter_names.append(k.get("metadata", {}).get("chapter", chapter_root.name))
+        all_nodes.extend(enrich_node(node, spec) for node in k["nodes"])
+        chapter_names.append(spec.chapter)
         all_edges.extend(e)
         all_errors.extend(pe["errors"])
         all_edge_errors.extend(ge["errors"])
@@ -151,9 +250,11 @@ def merge_knowledge(chapter_roots: list[Path]) -> None:
             "node_count": len(all_nodes),
             "edge_count": len(deduped_edges),
             "error_count": len(all_errors) + len(all_edge_errors),
-            "schema_version": "0.4",
+            "schema_version": "0.5",
             "script": "scripts/run_extraction.py",
             "source": "split-volume-repositories",
+            "source_registry": "lra-governance/docs/architecture/book-registry.json",
+            "toc": registry_toc(registry),
         },
         "nodes": all_nodes,
         "edges": deduped_edges,
@@ -197,6 +298,12 @@ def parse_args() -> argparse.Namespace:
         default=REPO_ROOT.parent,
         help="Workspace containing lra-volume-* repositories.",
     )
+    parser.add_argument(
+        "--book-registry",
+        type=Path,
+        default=DEFAULT_BOOK_REGISTRY,
+        help="Canonical lra-governance book registry JSON.",
+    )
     return parser.parse_args()
 
 
@@ -205,14 +312,15 @@ def main() -> int:
     repos_root = args.repos_root.resolve()
     require_file(PASS1_SCRIPT, "pass 1 extractor")
     require_file(PASS2_SCRIPT, "pass 2 compiler")
+    registry = load_book_registry(args.book_registry.resolve())
 
-    chapters = [require_chapter(repos_root, spec) for spec in CHAPTERS]
-    for chapter in chapters:
+    chapters = [(spec, require_chapter(repos_root, spec)) for spec in specs_from_registry(registry)]
+    for _spec, chapter in chapters:
         explorer_dir = extract_chapter(chapter)
         compile_chapter(chapter, explorer_dir)
 
     print("\n[INFO] Merging split-volume chapter outputs into explorer JSON ...")
-    merge_knowledge(chapters)
+    merge_knowledge(chapters, registry)
     print(f"[INFO] Wrote {COMBINED_KNOWLEDGE}")
     return 0
 

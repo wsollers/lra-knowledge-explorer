@@ -771,6 +771,8 @@ def build_node(seed_node: dict[str, Any], chapter_name: str, primitive_definitio
     node["title_latex_b64"] = seed_node.get("title_latex_b64", "")
     node["proof_raw_latex_b64"] = seed_node.get("proof_raw_latex_b64", "")
     node["remark_blocks"] = seed_node.get("remark_blocks", [])
+    node["dependency_blocks"] = seed_node.get("dependency_blocks", [])
+    node["no_local_dependencies"] = bool(seed_node.get("no_local_dependencies", False))
     node["expositions"] = seed_node.get("expositions", [])
     node["proof_file_blocks"] = seed_node.get("proof_file_blocks", [])
     node["seed_labels"] = seed_node.get("labels", [])

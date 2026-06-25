@@ -1,8 +1,9 @@
 {
   "metadata": {
     "schema_version": "0.1",
-    "generated_at": "2026-06-22T16:25:41.152623+00:00",
-    "source_root": "lra-volume-i",
+    "generated_at": "2026-06-25T06:25:35.806577+00:00",
+    "source_root": "repos",
+    "source_registry": "lra-governance/docs/architecture/book-registry.json",
     "artifact_count": 11,
     "error_count": 0,
     "katex_macro_count": 49,
@@ -350,7 +351,7 @@
       "title": "Free \\(\\Sigma\\)-Algebra and Evaluation",
       "kind": "bridge",
       "layer": "shared",
-      "source_file": "volume-i/axiom-systems/notes/models/free-sigma-algebra-evaluation.tex",
+      "source_file": "lra-volume-i/volume-i/book-logic/axiom-systems/notes/models/free-sigma-algebra-evaluation.tex",
       "labels": [],
       "depends_on": [
         {
@@ -531,14 +532,24 @@
           }
         ]
       },
-      "tex": "\\modelid{bridge:free-sigma-algebra-evaluation}\n\\modelkind{bridge}\n\\modellayer{shared}\n\\modeldepends{Signature; inductively generated set; unique readability}\n\n\\begin{modelparameterblock}\nShared bridge machinery. Parameter: a signature \\(\\Sigma\\). This card is\ninstantiated by connective evaluation, term evaluation, parsing, and later by\ninitial-algebra presentations such as \\(\\mathbb N\\).\n\\end{modelparameterblock}\n\n\\begin{modelstructureblock}\n\\[\n  \\Sigma\\text{ is a set of operation symbols},\n  \\qquad\n  \\operatorname{ar}:\\Sigma\\to\\mathbb N.\n\\]\nA \\(\\Sigma\\)-algebra is a carrier \\(\\lvert\\mathcal A\\rvert\\) with operations\n\\[\n  f^{\\mathcal A}:\\lvert\\mathcal A\\rvert^{\\operatorname{ar}(f)}\n  \\to \\lvert\\mathcal A\\rvert\n  \\qquad(f\\in\\Sigma).\n\\]\nSeeds land in the carrier; homomorphisms are maps of algebras.\n\\end{modelstructureblock}\n\n\\begin{modelstructureblock}\n\\[\n  T_{\\Sigma}(X),\n  \\qquad\n  f^{T}(t_1,\\ldots,t_n):=f(t_1,\\ldots,t_n),\n  \\qquad\n  \\eta:X\\to T_{\\Sigma}(X).\n\\]\n\\end{modelstructureblock}\n\n\\begin{modelsemanticbridgeblock}\n\\[\n  \\operatorname{Hom}(h,\\mathcal A,\\mathcal B)\n  \\quad:\\Longleftrightarrow\\quad\n  h(f^{\\mathcal A}(\\bar a))\n  =\n  f^{\\mathcal B}(h(a_1),\\ldots,h(a_n))\n\\]\nfor every \\(f\\in\\Sigma\\) and \\(\\bar a\\in\\lvert\\mathcal A\\rvert^n\\).\n\\end{modelsemanticbridgeblock}\n\n\\begin{modelaxiomsblock}\n\\textbf{No junk.}\n\\[\n  t\\in T_{\\Sigma}(X)\n  \\Longrightarrow\n  t\\in X\\ \\vee\\\n  \\exists f\\in\\Sigma\\,\\exists\\bar t\\,\\bigl(t=f(\\bar t)\\bigr).\n\\]\n\\textbf{No confusion.}\n\\[\n  x\\neq f(\\bar t),\n  \\qquad\n  f(\\bar s)=g(\\bar t)\\Longrightarrow f=g\\wedge \\bar s=\\bar t.\n\\]\n\\end{modelaxiomsblock}\n\n\\begin{modelconsequences}\n  \\modelconsequence{\\textbf{Universal property.}\n  \\[\n    \\forall\\mathcal A\\;\\forall\\sigma:X\\to\\lvert\\mathcal A\\rvert\\;\n    \\exists!\\widehat\\sigma:T_{\\Sigma}(X)\\to\\lvert\\mathcal A\\rvert\n  \\]\n  \\[\n    \\operatorname{Hom}(\\widehat\\sigma,T_{\\Sigma}(X),\\mathcal A)\n    \\wedge\n    \\widehat\\sigma\\circ\\eta=\\sigma.\n  \\]}\n  \\modelconsequence{\\[\n    \\operatorname{eval}(\\mathcal A)(\\sigma):=\\widehat\\sigma.\n  \\]}\n\\end{modelconsequences}\n\n\\begin{modelinstancesblock}\n\\begin{center}\n\\begin{tabularx}{\\linewidth}{@{}lXXXX@{}}\n\\toprule\nuse & \\(\\Sigma\\) & \\(X\\) & target \\(\\mathcal A\\) & seed \\(\\sigma\\) \\\\\n\\midrule\nformula eval &\n\\(\\Omega\\) &\natoms &\n\\(\\mathbf 2\\) &\natom truth values \\\\\nparse &\n\\(\\Omega\\) &\n\\(X\\) &\n\\(T_{\\Omega}(X)\\) &\n\\(\\eta\\) \\\\\nterm eval &\n\\(\\Sigma_{\\mathrm{term}}\\) &\n\\(\\mathsf{Var}\\) &\n\\(\\mathcal A_{\\mathrm{term}}\\) &\nassignment \\(s\\) \\\\\n\\(\\mathbb N\\) preview &\n\\(\\{0^{(0)},S^{(1)}\\}\\) &\n\\(\\varnothing\\) &\n\\((C,c_0,\\operatorname{succ})\\) &\nnone \\\\\n\\bottomrule\n\\end{tabularx}\n\\end{center}\n\\end{modelinstancesblock}\n\n\\begin{modelinstancesblock}\n\\[\n  \\Omega=\\{\\neg^{(1)},\\wedge^{(2)},\\vee^{(2)},\\to^{(2)},\\leftrightarrow^{(2)}\\},\n\\]\n\\[\n  \\mathbf 2=(\\{0,1\\},\\neg^{\\mathbf 2},\\wedge^{\\mathbf 2},\n  \\vee^{\\mathbf 2},\\to^{\\mathbf 2},\\leftrightarrow^{\\mathbf 2}).\n\\]\n\\end{modelinstancesblock}\n\n\\begin{modelboundaryblock}\nThe machine fixes one seed. Connective and term evaluation are exact\ninstances. FOL quantifiers range over the assignment-indexed family\n\\((\\sigma_s)_s\\):\n\\[\n  \\mathcal A,s\\models\\exists x\\,\\varphi\n  \\Longleftrightarrow\n  \\exists a\\in A,\\;\\mathcal A,s[x\\mapsto a]\\models\\varphi.\n\\]\nThat is the downstream cylindric/polyadic layer. The absolutely free\n\\(T_{\\Sigma}(X)\\) is also distinct from the Lindenbaum--Tarski quotient by\n\\(\\vdash\\)-equivalence.\n\\end{modelboundaryblock}"
+      "tex": "\\modelid{bridge:free-sigma-algebra-evaluation}\n\\modelkind{bridge}\n\\modellayer{shared}\n\\modeldepends{Signature; inductively generated set; unique readability}\n\n\\begin{modelparameterblock}\nShared bridge machinery. Parameter: a signature \\(\\Sigma\\). This card is\ninstantiated by connective evaluation, term evaluation, parsing, and later by\ninitial-algebra presentations such as \\(\\mathbb N\\).\n\\end{modelparameterblock}\n\n\\begin{modelstructureblock}\n\\[\n  \\Sigma\\text{ is a set of operation symbols},\n  \\qquad\n  \\operatorname{ar}:\\Sigma\\to\\mathbb N.\n\\]\nA \\(\\Sigma\\)-algebra is a carrier \\(\\lvert\\mathcal A\\rvert\\) with operations\n\\[\n  f^{\\mathcal A}:\\lvert\\mathcal A\\rvert^{\\operatorname{ar}(f)}\n  \\to \\lvert\\mathcal A\\rvert\n  \\qquad(f\\in\\Sigma).\n\\]\nSeeds land in the carrier; homomorphisms are maps of algebras.\n\\end{modelstructureblock}\n\n\\begin{modelstructureblock}\n\\[\n  T_{\\Sigma}(X),\n  \\qquad\n  f^{T}(t_1,\\ldots,t_n):=f(t_1,\\ldots,t_n),\n  \\qquad\n  \\eta:X\\to T_{\\Sigma}(X).\n\\]\n\\end{modelstructureblock}\n\n\\begin{modelsemanticbridgeblock}\n\\[\n  \\operatorname{Hom}(h,\\mathcal A,\\mathcal B)\n  \\quad:\\Longleftrightarrow\\quad\n  h(f^{\\mathcal A}(\\bar a))\n  =\n  f^{\\mathcal B}(h(a_1),\\ldots,h(a_n))\n\\]\nfor every \\(f\\in\\Sigma\\) and \\(\\bar a\\in\\lvert\\mathcal A\\rvert^n\\).\n\\end{modelsemanticbridgeblock}\n\n\\begin{modelaxiomsblock}\n\\textbf{No junk.}\n\\[\n  t\\in T_{\\Sigma}(X)\n  \\Longrightarrow\n  t\\in X\\ \\vee\\\n  \\exists f\\in\\Sigma\\,\\exists\\bar t\\,\\bigl(t=f(\\bar t)\\bigr).\n\\]\n\\textbf{No confusion.}\n\\[\n  x\\neq f(\\bar t),\n  \\qquad\n  f(\\bar s)=g(\\bar t)\\Longrightarrow f=g\\wedge \\bar s=\\bar t.\n\\]\n\\end{modelaxiomsblock}\n\n\\begin{modelconsequences}\n  \\modelconsequence{\\textbf{Universal property.}\n  \\[\n    \\forall\\mathcal A\\;\\forall\\sigma:X\\to\\lvert\\mathcal A\\rvert\\;\n    \\exists!\\widehat\\sigma:T_{\\Sigma}(X)\\to\\lvert\\mathcal A\\rvert\n  \\]\n  \\[\n    \\operatorname{Hom}(\\widehat\\sigma,T_{\\Sigma}(X),\\mathcal A)\n    \\wedge\n    \\widehat\\sigma\\circ\\eta=\\sigma.\n  \\]}\n  \\modelconsequence{\\[\n    \\operatorname{eval}(\\mathcal A)(\\sigma):=\\widehat\\sigma.\n  \\]}\n\\end{modelconsequences}\n\n\\begin{modelinstancesblock}\n\\begin{center}\n\\begin{tabularx}{\\linewidth}{@{}lXXXX@{}}\n\\toprule\nuse & \\(\\Sigma\\) & \\(X\\) & target \\(\\mathcal A\\) & seed \\(\\sigma\\) \\\\\n\\midrule\nformula eval &\n\\(\\Omega\\) &\natoms &\n\\(\\mathbf 2\\) &\natom truth values \\\\\nparse &\n\\(\\Omega\\) &\n\\(X\\) &\n\\(T_{\\Omega}(X)\\) &\n\\(\\eta\\) \\\\\nterm eval &\n\\(\\Sigma_{\\mathrm{term}}\\) &\n\\(\\mathsf{Var}\\) &\n\\(\\mathcal A_{\\mathrm{term}}\\) &\nassignment \\(s\\) \\\\\n\\(\\mathbb N\\) preview &\n\\(\\{0^{(0)},S^{(1)}\\}\\) &\n\\(\\varnothing\\) &\n\\((C,c_0,\\operatorname{succ})\\) &\nnone \\\\\n\\bottomrule\n\\end{tabularx}\n\\end{center}\n\\end{modelinstancesblock}\n\n\\begin{modelinstancesblock}\n\\[\n  \\Omega=\\{\\neg^{(1)},\\wedge^{(2)},\\vee^{(2)},\\to^{(2)},\\leftrightarrow^{(2)}\\},\n\\]\n\\[\n  \\mathbf 2=(\\{0,1\\},\\neg^{\\mathbf 2},\\wedge^{\\mathbf 2},\n  \\vee^{\\mathbf 2},\\to^{\\mathbf 2},\\leftrightarrow^{\\mathbf 2}).\n\\]\n\\end{modelinstancesblock}\n\n\\begin{modelboundaryblock}\nThe machine fixes one seed. Connective and term evaluation are exact\ninstances. FOL quantifiers range over the assignment-indexed family\n\\((\\sigma_s)_s\\):\n\\[\n  \\mathcal A,s\\models\\exists x\\,\\varphi\n  \\Longleftrightarrow\n  \\exists a\\in A,\\;\\mathcal A,s[x\\mapsto a]\\models\\varphi.\n\\]\nThat is the downstream cylindric/polyadic layer. The absolutely free\n\\(T_{\\Sigma}(X)\\) is also distinct from the Lindenbaum--Tarski quotient by\n\\(\\vdash\\)-equivalence.\n\\end{modelboundaryblock}",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "mathematical-logic-and-proof",
+      "book_title": "Mathematical Logic and Proof",
+      "book_order": 1,
+      "book_dir": "volume-i/book-logic",
+      "chapter": "axiom-systems",
+      "chapter_title": "Axiom Systems"
     },
     {
       "id": "bridge:consequence",
       "title": "Consequence",
       "kind": "bridge",
       "layer": "shared",
-      "source_file": "volume-i/axiom-systems/notes/models/consequence-card.tex",
+      "source_file": "lra-volume-i/volume-i/book-logic/axiom-systems/notes/models/consequence-card.tex",
       "labels": [],
       "depends_on": [
         {
@@ -595,14 +606,24 @@
           }
         ]
       },
-      "tex": "\\modelid{bridge:consequence}\n\\modelkind{bridge}\n\\modellayer{shared}\n\\modeldepends{Satisfaction relation \\(\\models\\subseteq\\mathsf{Mod}\\times\\mathsf{Form}\\)}\n\n\\modelparameter{\nA class of models \\(\\mathsf{Mod}\\) and a satisfaction relation\n\\[\n  m\\models\\varphi\n  \\qquad(m\\in\\mathsf{Mod}).\n\\]\n}\n\n\\modelsemanticbridge{\n\\[\n  \\Gamma\\models\\varphi\n  \\quad:\\Longleftrightarrow\\quad\n  \\forall m\\in\\mathsf{Mod}\\,\n  \\bigl((\\forall\\gamma\\in\\Gamma,\\;m\\models\\gamma)\\to m\\models\\varphi\\bigr).\n\\]\n\\[\n  \\mathrm{Cn}_{\\models}(\\Gamma):=\\{\\varphi:\\Gamma\\models\\varphi\\},\n  \\qquad\n  \\models\\varphi:\\Longleftrightarrow \\varnothing\\models\\varphi.\n\\]\n\\[\n  \\mathrm{Th}(m):=\\{\\varphi:m\\models\\varphi\\}.\n\\]\n}\n\n\\begin{modelbindingblock}\n\\begin{center}\n\\begin{tabularx}{\\linewidth}{@{}lXX@{}}\n\\toprule\nlogic & \\(\\mathsf{Mod}\\) & \\(m\\models\\varphi\\) \\\\\n\\midrule\nprop & valuations \\(v\\) & \\(\\widehat v(\\varphi)=1\\) \\\\\nFOL open & pairs \\((\\mathcal A,s)\\) & \\(\\mathcal A,s\\models\\varphi\\) \\\\\nFOL sentences & structures \\(\\mathcal A\\) & \\(\\mathcal A\\models\\sigma\\) \\\\\n\\bottomrule\n\\end{tabularx}\n\\end{center}\n\\end{modelbindingblock}"
+      "tex": "\\modelid{bridge:consequence}\n\\modelkind{bridge}\n\\modellayer{shared}\n\\modeldepends{Satisfaction relation \\(\\models\\subseteq\\mathsf{Mod}\\times\\mathsf{Form}\\)}\n\n\\modelparameter{\nA class of models \\(\\mathsf{Mod}\\) and a satisfaction relation\n\\[\n  m\\models\\varphi\n  \\qquad(m\\in\\mathsf{Mod}).\n\\]\n}\n\n\\modelsemanticbridge{\n\\[\n  \\Gamma\\models\\varphi\n  \\quad:\\Longleftrightarrow\\quad\n  \\forall m\\in\\mathsf{Mod}\\,\n  \\bigl((\\forall\\gamma\\in\\Gamma,\\;m\\models\\gamma)\\to m\\models\\varphi\\bigr).\n\\]\n\\[\n  \\mathrm{Cn}_{\\models}(\\Gamma):=\\{\\varphi:\\Gamma\\models\\varphi\\},\n  \\qquad\n  \\models\\varphi:\\Longleftrightarrow \\varnothing\\models\\varphi.\n\\]\n\\[\n  \\mathrm{Th}(m):=\\{\\varphi:m\\models\\varphi\\}.\n\\]\n}\n\n\\begin{modelbindingblock}\n\\begin{center}\n\\begin{tabularx}{\\linewidth}{@{}lXX@{}}\n\\toprule\nlogic & \\(\\mathsf{Mod}\\) & \\(m\\models\\varphi\\) \\\\\n\\midrule\nprop & valuations \\(v\\) & \\(\\widehat v(\\varphi)=1\\) \\\\\nFOL open & pairs \\((\\mathcal A,s)\\) & \\(\\mathcal A,s\\models\\varphi\\) \\\\\nFOL sentences & structures \\(\\mathcal A\\) & \\(\\mathcal A\\models\\sigma\\) \\\\\n\\bottomrule\n\\end{tabularx}\n\\end{center}\n\\end{modelbindingblock}",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "mathematical-logic-and-proof",
+      "book_title": "Mathematical Logic and Proof",
+      "book_order": 1,
+      "book_dir": "volume-i/book-logic",
+      "chapter": "axiom-systems",
+      "chapter_title": "Axiom Systems"
     },
     {
       "id": "theory:propositional-logic",
       "title": "Theory (Propositional Logic)",
       "kind": "theory",
       "layer": "propositional-logic",
-      "source_file": "volume-i/propositional-logic/notes/model/theory-propositional-logic.tex",
+      "source_file": "lra-volume-i/volume-i/book-logic/propositional-logic/notes/model/theory-propositional-logic.tex",
       "labels": [],
       "depends_on": [
         {
@@ -687,14 +708,24 @@
           }
         ]
       },
-      "tex": "\\modelid{theory:propositional-logic}\n\\modelkind{theory}\n\\modellayer{propositional-logic}\n\\modeldepends{Propositional language; formula; bridge:consequence; \\(\\mathrm{Cn}_{\\vdash}\\)}\n\n\\modellanguage{\n\\[\n  \\mathcal L_{\\mathsf P}\n  =\n  (\\mathsf P,\\neg,\\wedge,\\vee,\\to,\\leftrightarrow),\n  \\qquad\n  \\mathsf{Form}_{\\mathsf P}.\n\\]\n}\n\n\\modelpresentation{\n\\[\n  T:=\\mathrm{Cn}_{\\vdash}(\\Sigma),\n  \\qquad\n  \\Sigma\\subseteq\\mathsf{Form}_{\\mathsf P},\n  \\qquad\n  \\mathrm{CPL}:=\\mathrm{Cn}_{\\vdash}(\\varnothing).\n\\]\n}\n\n\\begin{modelconsequences}\n  \\modelconsequence{\\[\n    \\Gamma\\vdash_{\\mathrm{CPL}}\\varphi\n    \\quad\\Longleftrightarrow\\quad\n    \\Gamma\\models_{\\mathrm{CPL}}\\varphi\n    \\qquad(\\text{completeness}).\n  \\]}\n\\end{modelconsequences}"
+      "tex": "\\modelid{theory:propositional-logic}\n\\modelkind{theory}\n\\modellayer{propositional-logic}\n\\modeldepends{Propositional language; formula; bridge:consequence; \\(\\mathrm{Cn}_{\\vdash}\\)}\n\n\\modellanguage{\n\\[\n  \\mathcal L_{\\mathsf P}\n  =\n  (\\mathsf P,\\neg,\\wedge,\\vee,\\to,\\leftrightarrow),\n  \\qquad\n  \\mathsf{Form}_{\\mathsf P}.\n\\]\n}\n\n\\modelpresentation{\n\\[\n  T:=\\mathrm{Cn}_{\\vdash}(\\Sigma),\n  \\qquad\n  \\Sigma\\subseteq\\mathsf{Form}_{\\mathsf P},\n  \\qquad\n  \\mathrm{CPL}:=\\mathrm{Cn}_{\\vdash}(\\varnothing).\n\\]\n}\n\n\\begin{modelconsequences}\n  \\modelconsequence{\\[\n    \\Gamma\\vdash_{\\mathrm{CPL}}\\varphi\n    \\quad\\Longleftrightarrow\\quad\n    \\Gamma\\models_{\\mathrm{CPL}}\\varphi\n    \\qquad(\\text{completeness}).\n  \\]}\n\\end{modelconsequences}",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "mathematical-logic-and-proof",
+      "book_title": "Mathematical Logic and Proof",
+      "book_order": 1,
+      "book_dir": "volume-i/book-logic",
+      "chapter": "propositional-logic",
+      "chapter_title": "Propositional Logic"
     },
     {
       "id": "model:classical-propositional-logic",
       "title": "Model (Classical Propositional Logic)",
       "kind": "model",
       "layer": "propositional-logic",
-      "source_file": "volume-i/propositional-logic/notes/model/model-propositional-logic.tex",
+      "source_file": "lra-volume-i/volume-i/book-logic/propositional-logic/notes/model/model-propositional-logic.tex",
       "labels": [
         "model:classical-propositional-logic"
       ],
@@ -826,14 +857,24 @@
           }
         ]
       },
-      "tex": "\\modelid{model:classical-propositional-logic}\n\\modelkind{model}\n\\modellayer{propositional-logic}\n\\begin{model}[Classical Propositional Logic]\\label{model:classical-propositional-logic}\n\\modeldepends{Propositional language; valuation; bridge:free-sigma-algebra-evaluation; bridge:consequence}\n\n\\modelnote{\nThe seed is the model datum itself.\n\\[\n  v:\\mathsf P\\to\\lvert\\mathbf 2\\rvert,\n  \\qquad\n  \\lvert\\mathbf 2\\rvert=\\{0,1\\}.\n\\]\n}\n\n\\modelbinding{\n\\[\n  \\Sigma:=\\Omega,\n  \\qquad\n  X:=\\mathsf P,\n  \\qquad\n  \\text{target}:=\\mathbf 2,\n  \\qquad\n  \\sigma:=v,\n  \\qquad\n  \\widehat v:=\\operatorname{eval}(\\mathbf 2)(v).\n\\]\n}\n\n\\begin{modelbridge}\n  \\bridgeclause{\\[\n    v\\models\\varphi\n    \\quad:\\Longleftrightarrow\\quad\n    \\widehat v(\\varphi)=1.\n  \\]}\n\\end{modelbridge}\n\n\\begin{modelconsequences}\n  \\modelconsequence{Connective recursion is inherited from\n  \\emph{Free \\(\\Sigma\\)-Algebra and Evaluation}.}\n  \\modelconsequence{Semantic consequence, validity, and \\(\\mathrm{Th}(v)\\) are\n  inherited from \\emph{Consequence}.}\n\\end{modelconsequences}\n\\end{model}"
+      "tex": "\\modelid{model:classical-propositional-logic}\n\\modelkind{model}\n\\modellayer{propositional-logic}\n\\begin{model}[Classical Propositional Logic]\\label{model:classical-propositional-logic}\n\\modeldepends{Propositional language; valuation; bridge:free-sigma-algebra-evaluation; bridge:consequence}\n\n\\modelnote{\nThe seed is the model datum itself.\n\\[\n  v:\\mathsf P\\to\\lvert\\mathbf 2\\rvert,\n  \\qquad\n  \\lvert\\mathbf 2\\rvert=\\{0,1\\}.\n\\]\n}\n\n\\modelbinding{\n\\[\n  \\Sigma:=\\Omega,\n  \\qquad\n  X:=\\mathsf P,\n  \\qquad\n  \\text{target}:=\\mathbf 2,\n  \\qquad\n  \\sigma:=v,\n  \\qquad\n  \\widehat v:=\\operatorname{eval}(\\mathbf 2)(v).\n\\]\n}\n\n\\begin{modelbridge}\n  \\bridgeclause{\\[\n    v\\models\\varphi\n    \\quad:\\Longleftrightarrow\\quad\n    \\widehat v(\\varphi)=1.\n  \\]}\n\\end{modelbridge}\n\n\\begin{modelconsequences}\n  \\modelconsequence{Connective recursion is inherited from\n  \\emph{Free \\(\\Sigma\\)-Algebra and Evaluation}.}\n  \\modelconsequence{Semantic consequence, validity, and \\(\\mathrm{Th}(v)\\) are\n  inherited from \\emph{Consequence}.}\n\\end{modelconsequences}\n\\end{model}",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "mathematical-logic-and-proof",
+      "book_title": "Mathematical Logic and Proof",
+      "book_order": 1,
+      "book_dir": "volume-i/book-logic",
+      "chapter": "propositional-logic",
+      "chapter_title": "Propositional Logic"
     },
     {
       "id": "defext:propositional-logic",
       "title": "Definitional Extension (Propositional Logic)",
       "kind": "definitional-extension",
       "layer": "propositional-logic",
-      "source_file": "volume-i/propositional-logic/notes/model/definitional-extension-propositional-logic.tex",
+      "source_file": "lra-volume-i/volume-i/book-logic/propositional-logic/notes/model/definitional-extension-propositional-logic.tex",
       "labels": [],
       "depends_on": [
         {
@@ -928,14 +969,24 @@
           }
         ]
       },
-      "tex": "\\modelid{defext:propositional-logic}\n\\modelkind{definitional-extension}\n\\modellayer{propositional-logic}\n\\modeldepends{theory:propositional-logic; truth-function; conservative extension}\n\n\\modeladmissibility{\nA connective \\(\\star\\) of arity \\(n\\) is admissible by a defining equivalence:\n\\[\n  \\star(\\bar\\varphi)\\leftrightarrow\\theta(\\bar\\varphi),\n  \\qquad\n  \\widehat v(\\star(\\bar\\varphi))\n  =\n  F_{\\star}(\\widehat v(\\varphi_1),\\ldots,\\widehat v(\\varphi_n)).\n\\]\nThere is no \\(\\exists!\\) obligation because formulas already evaluate to truth\nvalues.\n}\n\n\\modelinstances{\n\\[\n  \\top:\\equiv(p_0\\to p_0),\n  \\qquad\n  \\bot:\\equiv\\neg\\top,\n\\]\n\\[\n  \\varphi\\oplus\\psi\n  :\\equiv\n  ((\\varphi\\vee\\psi)\\wedge\\neg(\\varphi\\wedge\\psi)).\n\\]\n}\n\n\\begin{modelconsequences}\n  \\modelconsequence{\\[\n    \\mathrm{CPL}^{+}\\vdash\\sigma\n    \\quad\\Longleftrightarrow\\quad\n    \\mathrm{CPL}\\vdash\\sigma\n    \\qquad(\\sigma\\in\\mathcal L_{\\mathsf P}).\n  \\]}\n  \\modelconsequence{Every extended formula has a base-language equivalent.}\n\\end{modelconsequences}"
+      "tex": "\\modelid{defext:propositional-logic}\n\\modelkind{definitional-extension}\n\\modellayer{propositional-logic}\n\\modeldepends{theory:propositional-logic; truth-function; conservative extension}\n\n\\modeladmissibility{\nA connective \\(\\star\\) of arity \\(n\\) is admissible by a defining equivalence:\n\\[\n  \\star(\\bar\\varphi)\\leftrightarrow\\theta(\\bar\\varphi),\n  \\qquad\n  \\widehat v(\\star(\\bar\\varphi))\n  =\n  F_{\\star}(\\widehat v(\\varphi_1),\\ldots,\\widehat v(\\varphi_n)).\n\\]\nThere is no \\(\\exists!\\) obligation because formulas already evaluate to truth\nvalues.\n}\n\n\\modelinstances{\n\\[\n  \\top:\\equiv(p_0\\to p_0),\n  \\qquad\n  \\bot:\\equiv\\neg\\top,\n\\]\n\\[\n  \\varphi\\oplus\\psi\n  :\\equiv\n  ((\\varphi\\vee\\psi)\\wedge\\neg(\\varphi\\wedge\\psi)).\n\\]\n}\n\n\\begin{modelconsequences}\n  \\modelconsequence{\\[\n    \\mathrm{CPL}^{+}\\vdash\\sigma\n    \\quad\\Longleftrightarrow\\quad\n    \\mathrm{CPL}\\vdash\\sigma\n    \\qquad(\\sigma\\in\\mathcal L_{\\mathsf P}).\n  \\]}\n  \\modelconsequence{Every extended formula has a base-language equivalent.}\n\\end{modelconsequences}",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "mathematical-logic-and-proof",
+      "book_title": "Mathematical Logic and Proof",
+      "book_order": 1,
+      "book_dir": "volume-i/book-logic",
+      "chapter": "propositional-logic",
+      "chapter_title": "Propositional Logic"
     },
     {
       "id": "theory:first-order-logic",
       "title": "Theory (First-Order Logic)",
       "kind": "theory",
       "layer": "first-order-logic",
-      "source_file": "volume-i/predicate-logic/notes/model/theory-first-order-logic.tex",
+      "source_file": "lra-volume-i/volume-i/book-logic/predicate-logic/notes/model/theory-first-order-logic.tex",
       "labels": [],
       "depends_on": [
         {
@@ -1028,14 +1079,24 @@
           }
         ]
       },
-      "tex": "\\modelid{theory:first-order-logic}\n\\modelkind{theory}\n\\modellayer{first-order-logic}\n\\modeldepends{Signature; term; formula; sentence; bridge:consequence; \\(\\mathrm{Cn}_{\\vdash}\\)}\n\n\\modellanguage{\n\\[\n  \\mathcal L=(\\mathsf{Const}_{\\mathcal L},\n  \\mathsf{Func}_{\\mathcal L},\n  \\mathsf{Rel}_{\\mathcal L},=).\n\\]\n\\[\n  \\mathsf{Term}_{\\mathcal L},\n  \\qquad\n  \\mathsf{Form}_{\\mathcal L},\n  \\qquad\n  \\mathsf{Sent}_{\\mathcal L}.\n\\]\n}\n\n\\modelpresentation{\n\\[\n  T:=\\mathrm{Cn}_{\\vdash}(\\Sigma),\n  \\qquad\n  \\Sigma\\subseteq\\mathsf{Sent}_{\\mathcal L}.\n\\]\n}\n\n\\begin{modelconsequences}\n  \\modelconsequence{\\[\n    \\Gamma\\vdash_{\\mathrm{FOL}}\\varphi\n    \\quad\\Longleftrightarrow\\quad\n    \\Gamma\\models_{\\mathrm{FOL}}\\varphi\n    \\qquad(\\text{completeness}).\n  \\]}\n\\end{modelconsequences}"
+      "tex": "\\modelid{theory:first-order-logic}\n\\modelkind{theory}\n\\modellayer{first-order-logic}\n\\modeldepends{Signature; term; formula; sentence; bridge:consequence; \\(\\mathrm{Cn}_{\\vdash}\\)}\n\n\\modellanguage{\n\\[\n  \\mathcal L=(\\mathsf{Const}_{\\mathcal L},\n  \\mathsf{Func}_{\\mathcal L},\n  \\mathsf{Rel}_{\\mathcal L},=).\n\\]\n\\[\n  \\mathsf{Term}_{\\mathcal L},\n  \\qquad\n  \\mathsf{Form}_{\\mathcal L},\n  \\qquad\n  \\mathsf{Sent}_{\\mathcal L}.\n\\]\n}\n\n\\modelpresentation{\n\\[\n  T:=\\mathrm{Cn}_{\\vdash}(\\Sigma),\n  \\qquad\n  \\Sigma\\subseteq\\mathsf{Sent}_{\\mathcal L}.\n\\]\n}\n\n\\begin{modelconsequences}\n  \\modelconsequence{\\[\n    \\Gamma\\vdash_{\\mathrm{FOL}}\\varphi\n    \\quad\\Longleftrightarrow\\quad\n    \\Gamma\\models_{\\mathrm{FOL}}\\varphi\n    \\qquad(\\text{completeness}).\n  \\]}\n\\end{modelconsequences}",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "mathematical-logic-and-proof",
+      "book_title": "Mathematical Logic and Proof",
+      "book_order": 1,
+      "book_dir": "volume-i/book-logic",
+      "chapter": "predicate-logic",
+      "chapter_title": "Predicate Logic"
     },
     {
       "id": "model:first-order-logic",
       "title": "Model (First-Order Logic)",
       "kind": "model",
       "layer": "first-order-logic",
-      "source_file": "volume-i/predicate-logic/notes/model/model-first-order-logic.tex",
+      "source_file": "lra-volume-i/volume-i/book-logic/predicate-logic/notes/model/model-first-order-logic.tex",
       "labels": [
         "model:first-order-logic"
       ],
@@ -1222,14 +1283,24 @@
           }
         ]
       },
-      "tex": "\\modelid{model:first-order-logic}\n\\modelkind{model}\n\\modellayer{first-order-logic}\n\\begin{model}[First-Order Logic]\\label{model:first-order-logic}\n\\modeldepends{\\(\\mathcal L\\)-structure; interpretation; assignment; bridge:free-sigma-algebra-evaluation; bridge:consequence}\n\n\\modelnote{\nFOL runs the shared machine twice: once for terms, then once for quantifier-free\nformulas. Quantifiers sit above that fixed-seed machine.\n}\n\n\\modelstructure{\n\\[\n  \\mathcal A=\\langle A,I\\rangle,\n  \\qquad\n  A\\neq\\varnothing.\n\\]\n\\[\n  I(c)\\in A,\n  \\qquad\n  I(f):A^n\\to A,\n  \\qquad\n  I(R)\\subseteq A^n,\n  \\qquad\n  =\\text{ is logical equality on }A.\n\\]\n}\n\n\\modelbinding{\n\\[\n  s:\\mathsf{Var}\\to A\n  \\xrightarrow{\\operatorname{eval}(\\mathcal A_{\\mathrm{term}})}\n  \\llbracket\\cdot\\rrbracket_{\\mathcal A,s}\n  \\xrightarrow{\\text{relation/equality tests}}\n  \\sigma_s\n  \\xrightarrow{\\operatorname{eval}(\\mathbf 2)}\n  \\models_{\\mathrm{qf}}.\n\\]\n}\n\n\\modelbinding{\n\\[\n  \\Sigma_{\\mathrm{term}}\n  :=\n  \\mathsf{Const}_{\\mathcal L}\\cup\\mathsf{Func}_{\\mathcal L},\n  \\qquad\n  \\mathcal A_{\\mathrm{term}}\n  :=\n  (A,(I f)_{f\\in\\mathsf{Func}},(I c)_{c\\in\\mathsf{Const}}).\n\\]\n\\[\n  \\llbracket\\cdot\\rrbracket_{\\mathcal A,s}\n  :=\n  \\operatorname{eval}(\\mathcal A_{\\mathrm{term}})(s).\n\\]\n}\n\n\\modelbinding{\n\\[\n  \\sigma_s\\bigl(R(\\bar t)\\bigr)\n  :=\n  \\bigl[\n    (\\llbracket t_1\\rrbracket_{\\mathcal A,s},\\ldots,\n    \\llbracket t_n\\rrbracket_{\\mathcal A,s})\n    \\in I(R)\n  \\bigr],\n\\]\n\\[\n  \\sigma_s(t_1=t_2)\n  :=\n  \\bigl[\n    \\llbracket t_1\\rrbracket_{\\mathcal A,s}\n    =\n    \\llbracket t_2\\rrbracket_{\\mathcal A,s}\n  \\bigr].\n\\]\n}\n\n\\modelsemanticbridge{\n\\[\n  \\mathcal A,s\\models\\varphi\n  \\quad:\\Longleftrightarrow\\quad\n  \\operatorname{eval}(\\mathbf 2)(\\sigma_s)(\\varphi)=1\n  \\qquad(\\varphi\\text{ quantifier-free}).\n\\]\n}\n\n\\modelsemanticbridge{\n\\[\n  \\mathcal A,s\\models\\exists x\\,\\varphi\n  \\quad\\Longleftrightarrow\\quad\n  \\exists a\\in A,\\;\\mathcal A,s[x\\mapsto a]\\models\\varphi.\n\\]\n\\[\n  \\mathcal A,s\\models\\forall x\\,\\varphi\n  \\quad\\Longleftrightarrow\\quad\n  \\forall a\\in A,\\;\\mathcal A,s[x\\mapsto a]\\models\\varphi.\n\\]\n}\n\n\\modelsemanticbridge{\nFor \\(\\sigma\\in\\mathsf{Sent}_{\\mathcal L}\\), \\(\\mathcal A,s\\models\\sigma\\) is\nindependent of \\(s\\) by the coincidence lemma, so\n\\[\n  \\mathcal A\\models\\sigma\n  :=\n  \\mathcal A,s\\models\\sigma\n  \\qquad(s\\text{ arbitrary}).\n\\]\n}\n\n\\begin{modelconsequences}\n  \\modelconsequence{Semantic consequence, \\(\\mathcal A\\models T\\), and\n  \\(\\mathrm{Th}(\\mathcal A)\\) are inherited from \\emph{Consequence}.}\n  \\modelconsequence{Prop is the base case: seed \\(=v\\). FOL is the inductive\n  case: \\(s\\) is evaluated into term values, then relation tests compute\n  \\(\\sigma_s\\).}\n\\end{modelconsequences}\n\\end{model}"
+      "tex": "\\modelid{model:first-order-logic}\n\\modelkind{model}\n\\modellayer{first-order-logic}\n\\begin{model}[First-Order Logic]\\label{model:first-order-logic}\n\\modeldepends{\\(\\mathcal L\\)-structure; interpretation; assignment; bridge:free-sigma-algebra-evaluation; bridge:consequence}\n\n\\modelnote{\nFOL runs the shared machine twice: once for terms, then once for quantifier-free\nformulas. Quantifiers sit above that fixed-seed machine.\n}\n\n\\modelstructure{\n\\[\n  \\mathcal A=\\langle A,I\\rangle,\n  \\qquad\n  A\\neq\\varnothing.\n\\]\n\\[\n  I(c)\\in A,\n  \\qquad\n  I(f):A^n\\to A,\n  \\qquad\n  I(R)\\subseteq A^n,\n  \\qquad\n  =\\text{ is logical equality on }A.\n\\]\n}\n\n\\modelbinding{\n\\[\n  s:\\mathsf{Var}\\to A\n  \\xrightarrow{\\operatorname{eval}(\\mathcal A_{\\mathrm{term}})}\n  \\llbracket\\cdot\\rrbracket_{\\mathcal A,s}\n  \\xrightarrow{\\text{relation/equality tests}}\n  \\sigma_s\n  \\xrightarrow{\\operatorname{eval}(\\mathbf 2)}\n  \\models_{\\mathrm{qf}}.\n\\]\n}\n\n\\modelbinding{\n\\[\n  \\Sigma_{\\mathrm{term}}\n  :=\n  \\mathsf{Const}_{\\mathcal L}\\cup\\mathsf{Func}_{\\mathcal L},\n  \\qquad\n  \\mathcal A_{\\mathrm{term}}\n  :=\n  (A,(I f)_{f\\in\\mathsf{Func}},(I c)_{c\\in\\mathsf{Const}}).\n\\]\n\\[\n  \\llbracket\\cdot\\rrbracket_{\\mathcal A,s}\n  :=\n  \\operatorname{eval}(\\mathcal A_{\\mathrm{term}})(s).\n\\]\n}\n\n\\modelbinding{\n\\[\n  \\sigma_s\\bigl(R(\\bar t)\\bigr)\n  :=\n  \\bigl[\n    (\\llbracket t_1\\rrbracket_{\\mathcal A,s},\\ldots,\n    \\llbracket t_n\\rrbracket_{\\mathcal A,s})\n    \\in I(R)\n  \\bigr],\n\\]\n\\[\n  \\sigma_s(t_1=t_2)\n  :=\n  \\bigl[\n    \\llbracket t_1\\rrbracket_{\\mathcal A,s}\n    =\n    \\llbracket t_2\\rrbracket_{\\mathcal A,s}\n  \\bigr].\n\\]\n}\n\n\\modelsemanticbridge{\n\\[\n  \\mathcal A,s\\models\\varphi\n  \\quad:\\Longleftrightarrow\\quad\n  \\operatorname{eval}(\\mathbf 2)(\\sigma_s)(\\varphi)=1\n  \\qquad(\\varphi\\text{ quantifier-free}).\n\\]\n}\n\n\\modelsemanticbridge{\n\\[\n  \\mathcal A,s\\models\\exists x\\,\\varphi\n  \\quad\\Longleftrightarrow\\quad\n  \\exists a\\in A,\\;\\mathcal A,s[x\\mapsto a]\\models\\varphi.\n\\]\n\\[\n  \\mathcal A,s\\models\\forall x\\,\\varphi\n  \\quad\\Longleftrightarrow\\quad\n  \\forall a\\in A,\\;\\mathcal A,s[x\\mapsto a]\\models\\varphi.\n\\]\n}\n\n\\modelsemanticbridge{\nFor \\(\\sigma\\in\\mathsf{Sent}_{\\mathcal L}\\), \\(\\mathcal A,s\\models\\sigma\\) is\nindependent of \\(s\\) by the coincidence lemma, so\n\\[\n  \\mathcal A\\models\\sigma\n  :=\n  \\mathcal A,s\\models\\sigma\n  \\qquad(s\\text{ arbitrary}).\n\\]\n}\n\n\\begin{modelconsequences}\n  \\modelconsequence{Semantic consequence, \\(\\mathcal A\\models T\\), and\n  \\(\\mathrm{Th}(\\mathcal A)\\) are inherited from \\emph{Consequence}.}\n  \\modelconsequence{Prop is the base case: seed \\(=v\\). FOL is the inductive\n  case: \\(s\\) is evaluated into term values, then relation tests compute\n  \\(\\sigma_s\\).}\n\\end{modelconsequences}\n\\end{model}",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "mathematical-logic-and-proof",
+      "book_title": "Mathematical Logic and Proof",
+      "book_order": 1,
+      "book_dir": "volume-i/book-logic",
+      "chapter": "predicate-logic",
+      "chapter_title": "Predicate Logic"
     },
     {
       "id": "defext:first-order-logic",
       "title": "Definitional Extension (First-Order Logic)",
       "kind": "definitional-extension",
       "layer": "first-order-logic",
-      "source_file": "volume-i/predicate-logic/notes/model/definitional-extension-first-order-logic.tex",
+      "source_file": "lra-volume-i/volume-i/book-logic/predicate-logic/notes/model/definitional-extension-first-order-logic.tex",
       "labels": [],
       "depends_on": [
         {
@@ -1332,14 +1403,24 @@
           }
         ]
       },
-      "tex": "\\modelid{defext:first-order-logic}\n\\modelkind{definitional-extension}\n\\modellayer{first-order-logic}\n\\modeldepends{theory:first-order-logic; expansion; reduct; conservativity; unique existence}\n\n\\modelnote{\n\\[\n  \\exists!y\\,\\varphi(y)\n  \\;:\\equiv\\;\n  \\exists y\\bigl(\\varphi(y)\\wedge\n  \\forall y'(\\varphi(y')\\to y'=y)\\bigr).\n\\]\n}\n\n\\modeladmissibility{\n\\textbf{Relation symbol \\(R\\), arity \\(n\\):}\n\\[\n  \\forall\\bar x\\,(R(\\bar x)\\leftrightarrow\\varphi(\\bar x)).\n\\]\n\\textbf{Function symbol \\(f\\), arity \\(n\\):}\n\\[\n  T\\vdash \\forall\\bar x\\,\\exists!y\\,\\psi(\\bar x,y),\n  \\qquad\n  \\forall\\bar x\\,\\forall y\\,(f(\\bar x)=y\\leftrightarrow\\psi(\\bar x,y)).\n\\]\n\\textbf{Constant symbol \\(c\\):}\n\\[\n  T\\vdash \\exists!y\\,\\psi(y),\n  \\qquad\n  \\forall y\\,(c=y\\leftrightarrow\\psi(y)).\n\\]\n}\n\n\\begin{modelconsequences}\n  \\modelconsequence{\\[\n    T^{+}\\vdash\\sigma\n    \\quad\\Longleftrightarrow\\quad\n    T\\vdash\\sigma\n    \\qquad(\\sigma\\in\\mathcal L).\n  \\]}\n  \\modelconsequence{\\[\n    \\mathcal A\\models T\n    \\Longrightarrow\n    \\exists!\\mathcal A^{+}\\,\n    (\\mathcal A^{+}\\!\\upharpoonright\\mathcal L=\\mathcal A).\n  \\]}\n\\end{modelconsequences}"
+      "tex": "\\modelid{defext:first-order-logic}\n\\modelkind{definitional-extension}\n\\modellayer{first-order-logic}\n\\modeldepends{theory:first-order-logic; expansion; reduct; conservativity; unique existence}\n\n\\modelnote{\n\\[\n  \\exists!y\\,\\varphi(y)\n  \\;:\\equiv\\;\n  \\exists y\\bigl(\\varphi(y)\\wedge\n  \\forall y'(\\varphi(y')\\to y'=y)\\bigr).\n\\]\n}\n\n\\modeladmissibility{\n\\textbf{Relation symbol \\(R\\), arity \\(n\\):}\n\\[\n  \\forall\\bar x\\,(R(\\bar x)\\leftrightarrow\\varphi(\\bar x)).\n\\]\n\\textbf{Function symbol \\(f\\), arity \\(n\\):}\n\\[\n  T\\vdash \\forall\\bar x\\,\\exists!y\\,\\psi(\\bar x,y),\n  \\qquad\n  \\forall\\bar x\\,\\forall y\\,(f(\\bar x)=y\\leftrightarrow\\psi(\\bar x,y)).\n\\]\n\\textbf{Constant symbol \\(c\\):}\n\\[\n  T\\vdash \\exists!y\\,\\psi(y),\n  \\qquad\n  \\forall y\\,(c=y\\leftrightarrow\\psi(y)).\n\\]\n}\n\n\\begin{modelconsequences}\n  \\modelconsequence{\\[\n    T^{+}\\vdash\\sigma\n    \\quad\\Longleftrightarrow\\quad\n    T\\vdash\\sigma\n    \\qquad(\\sigma\\in\\mathcal L).\n  \\]}\n  \\modelconsequence{\\[\n    \\mathcal A\\models T\n    \\Longrightarrow\n    \\exists!\\mathcal A^{+}\\,\n    (\\mathcal A^{+}\\!\\upharpoonright\\mathcal L=\\mathcal A).\n  \\]}\n\\end{modelconsequences}",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "mathematical-logic-and-proof",
+      "book_title": "Mathematical Logic and Proof",
+      "book_order": 1,
+      "book_dir": "volume-i/book-logic",
+      "chapter": "predicate-logic",
+      "chapter_title": "Predicate Logic"
     },
     {
       "id": "theory:set-theory",
       "title": "Theory (ZF, ZFC)",
       "kind": "theory",
       "layer": "set-theory",
-      "source_file": "volume-i/set-theory/notes/model/theory-set-theory.tex",
+      "source_file": "lra-volume-i/volume-i/book-sets/set-theory/notes/model/theory-set-theory.tex",
       "labels": [],
       "depends_on": [
         {
@@ -1411,14 +1492,24 @@
           }
         ]
       },
-      "tex": "\\modelid{theory:set-theory}\n\\modelkind{theory}\n\\modellayer{set-theory}\n\\modeldepends{theory:first-order-logic}\n\n\\modellanguage{\n\\[\n  \\mathcal L_{\\in}=\\{\\in\\}\n\\]\nFirst-order language with equality. The symbol \\(\\in\\) is binary. Equality is\nlogical.\n}\n\n\\modelpresentation{\n\\[\n  \\mathrm{ZF}:=\\mathrm{Cn}_{\\vdash}(\\Sigma_{\\mathrm{ZF}}),\n  \\qquad\n  \\mathrm{ZFC}:=\\mathrm{Cn}_{\\vdash}\\bigl(\\Sigma_{\\mathrm{ZF}}\\cup\\{\\mathrm{AC}\\}\\bigr).\n\\]\n}\n\n\\begin{modelaxiomsblock}\n\\begin{enumerate}[leftmargin=1.6em,itemsep=2pt]\n  \\item \\textbf{1. Extensionality}\n  \\[\n  \\forall x\\,\\forall y\\,\n  \\bigl[\\forall z\\,(z\\in x\\leftrightarrow z\\in y)\\to x=y\\bigr].\n  \\]\n\n  \\item \\textbf{2. Empty Set}\n  \\[\n  \\exists x\\,\\forall y\\,\\neg(y\\in x).\n  \\]\n\n  \\item \\textbf{3. Pairing}\n  \\[\n  \\forall x\\,\\forall y\\,\\exists z\\,\\forall w\\,\n  \\bigl(w\\in z\\leftrightarrow (w=x\\vee w=y)\\bigr).\n  \\]\n\n  \\item \\textbf{4. Union}\n  \\[\n  \\forall x\\,\\exists y\\,\\forall z\\,\n  \\bigl[z\\in y\\leftrightarrow \\exists w\\,(w\\in x\\wedge z\\in w)\\bigr].\n  \\]\n\n  \\item \\textbf{5. Power Set}\n  \\[\n  \\forall x\\,\\exists y\\,\\forall z\\,\n  \\bigl[z\\in y\\leftrightarrow \\forall w\\,(w\\in z\\to w\\in x)\\bigr].\n  \\]\n\n  \\item \\textbf{6. Infinity}\n  \\[\n  \\begin{aligned}\n  \\exists x\\,\\Big[&\n    \\exists y\\bigl(y\\in x\\wedge \\forall w\\,\\neg(w\\in y)\\bigr)\\\\\n    &{}\\wedge\n    \\forall y\\bigl(y\\in x\\to\n      \\exists z\\,(z\\in x\\wedge\n        \\forall w\\,(w\\in z\\leftrightarrow (w\\in y\\vee w=y)))\\bigr)\n  \\Big].\n  \\end{aligned}\n  \\]\n\n  \\item \\textbf{7. Separation Schema}\n  For each formula \\(\\varphi(z,\\bar w)\\) in which \\(y\\) is not free:\n  \\[\n  \\forall \\bar w\\,\\forall x\\,\\exists y\\,\\forall z\\,\n  \\bigl[z\\in y\\leftrightarrow (z\\in x\\wedge \\varphi(z,\\bar w))\\bigr].\n  \\]\n\n  \\item \\textbf{8. Replacement Schema}\n  For each formula \\(\\varphi(x,y,\\bar w)\\) in which \\(B\\) is not free:\n  \\[\n  \\begin{aligned}\n  \\forall \\bar w\\,\\forall A\\,\\Big[&\n    \\forall x\\bigl(x\\in A\\to \\exists!y\\,\\varphi(x,y,\\bar w)\\bigr)\\\\\n    &{}\\to\n    \\exists B\\,\\forall y\\bigl(y\\in B\\leftrightarrow\n      \\exists x\\,(x\\in A\\wedge \\varphi(x,y,\\bar w))\\bigr)\n  \\Big].\n  \\end{aligned}\n  \\]\n\n  \\item \\textbf{9. Foundation}\n  \\[\n  \\forall x\\,\\Bigl[\n    \\exists y\\,(y\\in x)\\to\n    \\exists y\\bigl(y\\in x\\wedge\n      \\neg\\exists z\\,(z\\in x\\wedge z\\in y)\\bigr)\n  \\Bigr].\n  \\]\n\\end{enumerate}\n\\end{modelaxiomsblock}\n\n\\begin{modeldeltablock}\n\\textbf{AC}\n\\[\n\\begin{aligned}\n\\forall x\\,\\Big[&\n  \\bigl(\\forall y\\,(y\\in x\\to \\exists z\\,z\\in y)\\\\\n  &{}\\wedge\n  \\forall y\\,\\forall y'\\,\n    ((y\\in x\\wedge y'\\in x\\wedge y\\neq y')\\to\n      \\neg\\exists z\\,(z\\in y\\wedge z\\in y'))\\bigr)\\\\\n  &{}\\to\n  \\exists c\\,\\forall y\\,(y\\in x\\to\n    \\exists!z\\,(z\\in y\\wedge z\\in c))\n\\Big].\n\\end{aligned}\n\\]\n\\end{modeldeltablock}"
+      "tex": "\\modelid{theory:set-theory}\n\\modelkind{theory}\n\\modellayer{set-theory}\n\\modeldepends{theory:first-order-logic}\n\n\\modellanguage{\n\\[\n  \\mathcal L_{\\in}=\\{\\in\\}\n\\]\nFirst-order language with equality. The symbol \\(\\in\\) is binary. Equality is\nlogical.\n}\n\n\\modelpresentation{\n\\[\n  \\mathrm{ZF}:=\\mathrm{Cn}_{\\vdash}(\\Sigma_{\\mathrm{ZF}}),\n  \\qquad\n  \\mathrm{ZFC}:=\\mathrm{Cn}_{\\vdash}\\bigl(\\Sigma_{\\mathrm{ZF}}\\cup\\{\\mathrm{AC}\\}\\bigr).\n\\]\n}\n\n\\begin{modelaxiomsblock}\n\\begin{enumerate}[leftmargin=1.6em,itemsep=2pt]\n  \\item \\textbf{1. Extensionality}\n  \\[\n  \\forall x\\,\\forall y\\,\n  \\bigl[\\forall z\\,(z\\in x\\leftrightarrow z\\in y)\\to x=y\\bigr].\n  \\]\n\n  \\item \\textbf{2. Empty Set}\n  \\[\n  \\exists x\\,\\forall y\\,\\neg(y\\in x).\n  \\]\n\n  \\item \\textbf{3. Pairing}\n  \\[\n  \\forall x\\,\\forall y\\,\\exists z\\,\\forall w\\,\n  \\bigl(w\\in z\\leftrightarrow (w=x\\vee w=y)\\bigr).\n  \\]\n\n  \\item \\textbf{4. Union}\n  \\[\n  \\forall x\\,\\exists y\\,\\forall z\\,\n  \\bigl[z\\in y\\leftrightarrow \\exists w\\,(w\\in x\\wedge z\\in w)\\bigr].\n  \\]\n\n  \\item \\textbf{5. Power Set}\n  \\[\n  \\forall x\\,\\exists y\\,\\forall z\\,\n  \\bigl[z\\in y\\leftrightarrow \\forall w\\,(w\\in z\\to w\\in x)\\bigr].\n  \\]\n\n  \\item \\textbf{6. Infinity}\n  \\[\n  \\begin{aligned}\n  \\exists x\\,\\Big[&\n    \\exists y\\bigl(y\\in x\\wedge \\forall w\\,\\neg(w\\in y)\\bigr)\\\\\n    &{}\\wedge\n    \\forall y\\bigl(y\\in x\\to\n      \\exists z\\,(z\\in x\\wedge\n        \\forall w\\,(w\\in z\\leftrightarrow (w\\in y\\vee w=y)))\\bigr)\n  \\Big].\n  \\end{aligned}\n  \\]\n\n  \\item \\textbf{7. Separation Schema}\n  For each formula \\(\\varphi(z,\\bar w)\\) in which \\(y\\) is not free:\n  \\[\n  \\forall \\bar w\\,\\forall x\\,\\exists y\\,\\forall z\\,\n  \\bigl[z\\in y\\leftrightarrow (z\\in x\\wedge \\varphi(z,\\bar w))\\bigr].\n  \\]\n\n  \\item \\textbf{8. Replacement Schema}\n  For each formula \\(\\varphi(x,y,\\bar w)\\) in which \\(B\\) is not free:\n  \\[\n  \\begin{aligned}\n  \\forall \\bar w\\,\\forall A\\,\\Big[&\n    \\forall x\\bigl(x\\in A\\to \\exists!y\\,\\varphi(x,y,\\bar w)\\bigr)\\\\\n    &{}\\to\n    \\exists B\\,\\forall y\\bigl(y\\in B\\leftrightarrow\n      \\exists x\\,(x\\in A\\wedge \\varphi(x,y,\\bar w))\\bigr)\n  \\Big].\n  \\end{aligned}\n  \\]\n\n  \\item \\textbf{9. Foundation}\n  \\[\n  \\forall x\\,\\Bigl[\n    \\exists y\\,(y\\in x)\\to\n    \\exists y\\bigl(y\\in x\\wedge\n      \\neg\\exists z\\,(z\\in x\\wedge z\\in y)\\bigr)\n  \\Bigr].\n  \\]\n\\end{enumerate}\n\\end{modelaxiomsblock}\n\n\\begin{modeldeltablock}\n\\textbf{AC}\n\\[\n\\begin{aligned}\n\\forall x\\,\\Big[&\n  \\bigl(\\forall y\\,(y\\in x\\to \\exists z\\,z\\in y)\\\\\n  &{}\\wedge\n  \\forall y\\,\\forall y'\\,\n    ((y\\in x\\wedge y'\\in x\\wedge y\\neq y')\\to\n      \\neg\\exists z\\,(z\\in y\\wedge z\\in y'))\\bigr)\\\\\n  &{}\\to\n  \\exists c\\,\\forall y\\,(y\\in x\\to\n    \\exists!z\\,(z\\in y\\wedge z\\in c))\n\\Big].\n\\end{aligned}\n\\]\n\\end{modeldeltablock}",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "set-theory",
+      "book_title": "Set Theory",
+      "book_order": 2,
+      "book_dir": "volume-i/book-sets",
+      "chapter": "set-theory",
+      "chapter_title": "Set Theory"
     },
     {
       "id": "model:set-theory",
       "title": "Model (Set Theory)",
       "kind": "model",
       "layer": "set-theory",
-      "source_file": "volume-i/set-theory/notes/model/model-set-theory.tex",
+      "source_file": "lra-volume-i/volume-i/book-sets/set-theory/notes/model/model-set-theory.tex",
       "labels": [
         "model:set-theory"
       ],
@@ -1655,14 +1746,24 @@
           }
         ]
       },
-      "tex": "\\modelid{model:set-theory}\n\\modelkind{model}\n\\modellayer{set-theory}\n\\begin{model}[Set Theory Model]\\label{model:set-theory}\n\\modeldepends{model:first-order-logic; bridge:free-sigma-algebra-evaluation; theory:set-theory; bridge:consequence}\n\n\\modelstructure{\n\\[\n  \\mathcal A=(A,E),\n  \\qquad\n  A\\neq\\varnothing,\n  \\qquad\n  E\\subseteq A\\times A.\n\\]\n\\[\n  a\\mathrel E b\n  \\quad:\\Longleftrightarrow\\quad\n  (a,b)\\in E.\n\\]\n\\[\n  \\mathcal A=\\langle A,I\\rangle,\n  \\qquad\n  I(\\in)=E.\n\\]\n}\n\n\\begin{modelsorts}\n  \\modelsort{A}{\\text{universe}}{}\n\\end{modelsorts}\n\n\\modelinterpretation{\n\\textbf{Constants.}\nNone.\n}\n\n\\modelinterpretation{\n\\textbf{Functions.}\nNone.\n}\n\n\\begin{modelrelations}\n  \\modelrelation{E}{E\\subseteq A\\times A}{Interpretation of \\(\\in\\).}\n\\end{modelrelations}\n\n\\modeldelta{\nNo constant or function symbols occur in \\(\\mathcal L_{\\in}\\), so every term is\na variable and FOL term evaluation reduces to\n\\(\\llbracket x\\rrbracket_{\\mathcal A,s}=s(x)\\).\n}\n\n\\modelsemanticbridge{\n\\[\n  \\mathcal A,s\\models x\\in y\n  \\quad\\Longleftrightarrow\\quad\n  (s(x),s(y))\\in E.\n\\]\n}\n\n\\modeltheorymodels{\n\\[\n  \\mathcal A\\models\\mathrm{ZF}\n  \\quad:\\Longleftrightarrow\\quad\n  \\forall\\varphi\\,(\\varphi\\in\\mathrm{ZF}\\to\\mathcal A\\models\\varphi).\n\\]\n\\[\n  \\mathcal A\\models\\mathrm{ZFC}\n  \\quad:\\Longleftrightarrow\\quad\n  \\mathcal A\\models\\mathrm{ZF}\\wedge\\mathcal A\\models\\mathrm{AC}.\n\\]\n}\n\n\\begin{modelconsequences}\n  \\modelconsequence{One nonlogical symbol is interpreted: \\(I(\\in)=E\\).}\n  \\modelconsequence{\\(\\mathrm{Th}(\\mathcal A)\\) is inherited from\n  \\emph{Consequence}.}\n\\end{modelconsequences}\n\\end{model}"
+      "tex": "\\modelid{model:set-theory}\n\\modelkind{model}\n\\modellayer{set-theory}\n\\begin{model}[Set Theory Model]\\label{model:set-theory}\n\\modeldepends{model:first-order-logic; bridge:free-sigma-algebra-evaluation; theory:set-theory; bridge:consequence}\n\n\\modelstructure{\n\\[\n  \\mathcal A=(A,E),\n  \\qquad\n  A\\neq\\varnothing,\n  \\qquad\n  E\\subseteq A\\times A.\n\\]\n\\[\n  a\\mathrel E b\n  \\quad:\\Longleftrightarrow\\quad\n  (a,b)\\in E.\n\\]\n\\[\n  \\mathcal A=\\langle A,I\\rangle,\n  \\qquad\n  I(\\in)=E.\n\\]\n}\n\n\\begin{modelsorts}\n  \\modelsort{A}{\\text{universe}}{}\n\\end{modelsorts}\n\n\\modelinterpretation{\n\\textbf{Constants.}\nNone.\n}\n\n\\modelinterpretation{\n\\textbf{Functions.}\nNone.\n}\n\n\\begin{modelrelations}\n  \\modelrelation{E}{E\\subseteq A\\times A}{Interpretation of \\(\\in\\).}\n\\end{modelrelations}\n\n\\modeldelta{\nNo constant or function symbols occur in \\(\\mathcal L_{\\in}\\), so every term is\na variable and FOL term evaluation reduces to\n\\(\\llbracket x\\rrbracket_{\\mathcal A,s}=s(x)\\).\n}\n\n\\modelsemanticbridge{\n\\[\n  \\mathcal A,s\\models x\\in y\n  \\quad\\Longleftrightarrow\\quad\n  (s(x),s(y))\\in E.\n\\]\n}\n\n\\modeltheorymodels{\n\\[\n  \\mathcal A\\models\\mathrm{ZF}\n  \\quad:\\Longleftrightarrow\\quad\n  \\forall\\varphi\\,(\\varphi\\in\\mathrm{ZF}\\to\\mathcal A\\models\\varphi).\n\\]\n\\[\n  \\mathcal A\\models\\mathrm{ZFC}\n  \\quad:\\Longleftrightarrow\\quad\n  \\mathcal A\\models\\mathrm{ZF}\\wedge\\mathcal A\\models\\mathrm{AC}.\n\\]\n}\n\n\\begin{modelconsequences}\n  \\modelconsequence{One nonlogical symbol is interpreted: \\(I(\\in)=E\\).}\n  \\modelconsequence{\\(\\mathrm{Th}(\\mathcal A)\\) is inherited from\n  \\emph{Consequence}.}\n\\end{modelconsequences}\n\\end{model}",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "set-theory",
+      "book_title": "Set Theory",
+      "book_order": 2,
+      "book_dir": "volume-i/book-sets",
+      "chapter": "set-theory",
+      "chapter_title": "Set Theory"
     },
     {
       "id": "defext:set-theory",
       "title": "Definitional Extension (Set Theory)",
       "kind": "definitional-extension",
       "layer": "set-theory",
-      "source_file": "volume-i/set-theory/notes/model/definitional-extension-set-theory.tex",
+      "source_file": "lra-volume-i/volume-i/book-sets/set-theory/notes/model/definitional-extension-set-theory.tex",
       "labels": [],
       "depends_on": [
         {
@@ -1712,7 +1813,17 @@
           }
         ]
       },
-      "tex": "\\modelid{defext:set-theory}\n\\modelkind{definitional-extension}\n\\modellayer{set-theory}\n\\modeldepends{defext:first-order-logic; theory:set-theory; model:set-theory}\n\n\\begin{modeldeltablock}\n\\begin{align*}\n  \\text{existence} &\\leftarrow\n  \\begin{gathered}[t]\n    \\text{Empty Set, Pairing, Union, Power Set,}\\\\\n    \\text{Infinity, Separation, Replacement};\n  \\end{gathered}\\\\\n  \\text{uniqueness} &\\leftarrow \\text{Extensionality};\\\\\n  \\text{default value} &\\leftarrow \\varnothing.\n\\end{align*}\nRepresentative-independence is delegated to quotient-specific extensions.\n\\end{modeldeltablock}\n\n\\begin{modelinstancesblock}\n\\textbf{\\(\\subseteq\\)} relation\n\\[\n\\forall x\\,\\forall y\\,\n\\bigl(x\\subseteq y\\leftrightarrow\n  \\forall w\\,(w\\in x\\to w\\in y)\\bigr).\n\\]\nNo unique-existence obligation.\n\n\\textbf{\\(\\varnothing\\)} constant\n\\[\n\\psi_{\\varnothing}(y):\\equiv \\forall w\\,\\neg(w\\in y),\n\\qquad\n\\exists!\\text{ receipt: Empty Set + Extensionality}.\n\\]\n\\[\n\\forall y\\,\n\\bigl(\\varnothing=y\\leftrightarrow \\forall w\\,\\neg(w\\in y)\\bigr).\n\\]\n\n\\textbf{\\(\\{\\cdot,\\cdot\\}\\)} binary function\n\\[\n\\psi(x_1,x_2,y):\\equiv\n\\forall w\\,(w\\in y\\leftrightarrow (w=x_1\\vee w=x_2)).\n\\]\n\\[\n\\exists!\\text{ receipt: Pairing + Extensionality}.\n\\]\n\\[\n\\forall x_1\\,\\forall x_2\\,\\forall y\\,\n\\bigl(\\{x_1,x_2\\}=y\\leftrightarrow\\psi(x_1,x_2,y)\\bigr).\n\\]\n\n\\textbf{\\(\\bigcup\\)} unary function\n\\[\n\\psi(x,y):\\equiv\n\\forall z\\,(z\\in y\\leftrightarrow\\exists w\\,(w\\in x\\wedge z\\in w)).\n\\]\n\\[\n\\exists!\\text{ receipt: Union + Extensionality}.\n\\]\n\\[\n\\forall x\\,\\forall y\\,\n\\bigl(\\textstyle\\bigcup x=y\\leftrightarrow\\psi(x,y)\\bigr).\n\\]\n\n\\textbf{\\(\\mathcal P\\)} unary function\n\\[\n\\psi(x,y):\\equiv\n\\forall z\\,(z\\in y\\leftrightarrow\\forall w\\,(w\\in z\\to w\\in x)).\n\\]\n\\[\n\\exists!\\text{ receipt: Power Set + Extensionality}.\n\\]\n\\[\n\\forall x\\,\\forall y\\,\n\\bigl(\\mathcal P(x)=y\\leftrightarrow\\psi(x,y)\\bigr).\n\\]\n\\end{modelinstancesblock}"
+      "tex": "\\modelid{defext:set-theory}\n\\modelkind{definitional-extension}\n\\modellayer{set-theory}\n\\modeldepends{defext:first-order-logic; theory:set-theory; model:set-theory}\n\n\\begin{modeldeltablock}\n\\begin{align*}\n  \\text{existence} &\\leftarrow\n  \\begin{gathered}[t]\n    \\text{Empty Set, Pairing, Union, Power Set,}\\\\\n    \\text{Infinity, Separation, Replacement};\n  \\end{gathered}\\\\\n  \\text{uniqueness} &\\leftarrow \\text{Extensionality};\\\\\n  \\text{default value} &\\leftarrow \\varnothing.\n\\end{align*}\nRepresentative-independence is delegated to quotient-specific extensions.\n\\end{modeldeltablock}\n\n\\begin{modelinstancesblock}\n\\textbf{\\(\\subseteq\\)} relation\n\\[\n\\forall x\\,\\forall y\\,\n\\bigl(x\\subseteq y\\leftrightarrow\n  \\forall w\\,(w\\in x\\to w\\in y)\\bigr).\n\\]\nNo unique-existence obligation.\n\n\\textbf{\\(\\varnothing\\)} constant\n\\[\n\\psi_{\\varnothing}(y):\\equiv \\forall w\\,\\neg(w\\in y),\n\\qquad\n\\exists!\\text{ receipt: Empty Set + Extensionality}.\n\\]\n\\[\n\\forall y\\,\n\\bigl(\\varnothing=y\\leftrightarrow \\forall w\\,\\neg(w\\in y)\\bigr).\n\\]\n\n\\textbf{\\(\\{\\cdot,\\cdot\\}\\)} binary function\n\\[\n\\psi(x_1,x_2,y):\\equiv\n\\forall w\\,(w\\in y\\leftrightarrow (w=x_1\\vee w=x_2)).\n\\]\n\\[\n\\exists!\\text{ receipt: Pairing + Extensionality}.\n\\]\n\\[\n\\forall x_1\\,\\forall x_2\\,\\forall y\\,\n\\bigl(\\{x_1,x_2\\}=y\\leftrightarrow\\psi(x_1,x_2,y)\\bigr).\n\\]\n\n\\textbf{\\(\\bigcup\\)} unary function\n\\[\n\\psi(x,y):\\equiv\n\\forall z\\,(z\\in y\\leftrightarrow\\exists w\\,(w\\in x\\wedge z\\in w)).\n\\]\n\\[\n\\exists!\\text{ receipt: Union + Extensionality}.\n\\]\n\\[\n\\forall x\\,\\forall y\\,\n\\bigl(\\textstyle\\bigcup x=y\\leftrightarrow\\psi(x,y)\\bigr).\n\\]\n\n\\textbf{\\(\\mathcal P\\)} unary function\n\\[\n\\psi(x,y):\\equiv\n\\forall z\\,(z\\in y\\leftrightarrow\\forall w\\,(w\\in z\\to w\\in x)).\n\\]\n\\[\n\\exists!\\text{ receipt: Power Set + Extensionality}.\n\\]\n\\[\n\\forall x\\,\\forall y\\,\n\\bigl(\\mathcal P(x)=y\\leftrightarrow\\psi(x,y)\\bigr).\n\\]\n\\end{modelinstancesblock}",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "set-theory",
+      "book_title": "Set Theory",
+      "book_order": 2,
+      "book_dir": "volume-i/book-sets",
+      "chapter": "set-theory",
+      "chapter_title": "Set Theory"
     }
   ],
   "errors": []

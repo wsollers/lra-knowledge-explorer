@@ -10,6 +10,7 @@ import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
 
 MODELBOX_RE = re.compile(r"\\begin\{modelbox\}\{")
@@ -117,6 +118,8 @@ KNOWN_DEPENDENCY_NAMES = {
     "Model (Set Theory)": "model:set-theory",
     "CPL": "theory:propositional-logic",
 }
+
+DEFAULT_BOOK_REGISTRY = Path(__file__).resolve().parents[2] / "lra-governance" / "docs" / "architecture" / "book-registry.json"
 
 
 @dataclass
@@ -444,7 +447,7 @@ def infer_layer(path: Path, model_id: str) -> str:
     return ""
 
 
-def extract_file(path: Path, root: Path, errors: list[ExtractionError]) -> list[dict]:
+def extract_file(path: Path, root: Path, errors: list[ExtractionError], metadata: dict[str, Any] | None = None) -> list[dict]:
     text = read_text(path)
     rel = path.relative_to(root).as_posix()
     artifacts = []
@@ -472,6 +475,8 @@ def extract_file(path: Path, root: Path, errors: list[ExtractionError]) -> list[
             "fields": normalized_fields(components),
             "tex": clean_tex(body),
         }
+        if metadata:
+            artifact.update(metadata)
         artifacts.append(artifact)
     return artifacts
 
@@ -564,14 +569,55 @@ def order_artifacts(artifacts: list[dict]) -> list[dict]:
 
 def default_source_root() -> Path:
     here = Path(__file__).resolve()
-    sibling = here.parents[2] / "lra-volume-i"
-    return sibling if sibling.exists() else Path.cwd()
+    return here.parents[2] if (here.parents[2] / "lra-governance").exists() else Path.cwd()
+
+
+def load_book_registry(path: Path) -> dict | None:
+    if not path.is_file():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def chapter_title(slug: str) -> str:
+    return slug.replace("-", " ").replace("_", " ").title()
+
+
+def registry_note_files(source_root: Path, registry: dict | None) -> list[tuple[Path, dict[str, Any]]]:
+    if not registry:
+        return []
+    files: list[tuple[Path, dict[str, Any]]] = []
+    for volume in registry.get("volumes", []):
+        roman = str(volume["roman"])
+        repo = source_root if source_root.name == f"lra-volume-{roman}" else source_root / f"lra-volume-{roman}"
+        if not repo.is_dir():
+            continue
+        for book in volume.get("books", []):
+            for chapter in book.get("expected_toc", []):
+                chapter_slug = str(chapter["chapter"])
+                notes_root = repo / book["book_dir"] / chapter_slug / "notes"
+                if not notes_root.is_dir():
+                    continue
+                metadata = {
+                    "volume": int(volume["volume_number"]),
+                    "volume_roman": roman,
+                    "volume_title": str(volume["display_title"]),
+                    "series_title": str(volume.get("series_title", "")),
+                    "book": str(book["slug"]),
+                    "book_title": str(book["title"]),
+                    "book_order": int(book["order"]),
+                    "book_dir": str(book["book_dir"]),
+                    "chapter": chapter_slug,
+                    "chapter_title": chapter_title(chapter_slug),
+                }
+                files.extend((path, metadata) for path in sorted(notes_root.rglob("*.tex")))
+    return files
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-root", type=Path, default=default_source_root())
     parser.add_argument("--output", type=Path, default=Path(__file__).resolve().parents[1] / "model-artifacts.json")
+    parser.add_argument("--book-registry", type=Path, default=DEFAULT_BOOK_REGISTRY, help="Canonical lra-governance book registry JSON.")
     parser.add_argument("--macro-file", type=Path, default=None, help="TeX macro file used to seed frontend KaTeX macros.")
     parser.add_argument("--strict", action="store_true", help="Exit nonzero when validation errors are present.")
     args = parser.parse_args()
@@ -581,21 +627,27 @@ def main() -> int:
         print(f"[ERROR] source root not found: {root}", file=sys.stderr)
         return 2
 
-    search_roots = [
-        root / "volume-i" / "axiom-systems" / "notes" / "models",
-        root / "volume-i" / "propositional-logic" / "notes" / "model",
-        root / "volume-i" / "predicate-logic" / "notes" / "model",
-        root / "volume-i" / "set-theory" / "notes" / "model",
-    ]
-    files: list[Path] = []
-    for search_root in search_roots:
-        if search_root.exists():
-            files.extend(sorted(search_root.glob("*.tex")))
+    registry = load_book_registry(args.book_registry.resolve())
+    registry_files = registry_note_files(root, registry)
+    if registry_files:
+        files_with_metadata = registry_files
+    else:
+        search_roots = [
+            root / "volume-i" / "axiom-systems" / "notes" / "models",
+            root / "volume-i" / "propositional-logic" / "notes" / "model",
+            root / "volume-i" / "predicate-logic" / "notes" / "model",
+            root / "volume-i" / "set-theory" / "notes" / "model",
+        ]
+        files: list[Path] = []
+        for search_root in search_roots:
+            if search_root.exists():
+                files.extend(sorted(search_root.glob("*.tex")))
+        files_with_metadata = [(path, None) for path in files]
 
     errors: list[ExtractionError] = []
     artifacts: list[dict] = []
-    for path in files:
-        artifacts.extend(extract_file(path, root, errors))
+    for path, metadata in files_with_metadata:
+        artifacts.extend(extract_file(path, root, errors, metadata))
     artifacts = order_artifacts(artifacts)
     validate(artifacts, errors, forbid_generic_components=args.strict)
     macro_file = args.macro_file.resolve() if args.macro_file else default_macro_file(root)
@@ -606,6 +658,7 @@ def main() -> int:
             "schema_version": "0.1",
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "source_root": root.name,
+            "source_registry": "lra-governance/docs/architecture/book-registry.json" if registry_files else "",
             "artifact_count": len(artifacts),
             "error_count": len(errors),
             "katex_macro_count": len(katex_macros["macros"]),

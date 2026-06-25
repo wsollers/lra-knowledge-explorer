@@ -3,9 +3,10 @@
 ## Overview
 
 The knowledge explorer is rebuilt automatically whenever any `lra-*` repository
-pushes to `main`. The pipeline runs in GitHub Actions, checks out the split
-`lra-volume-*` repositories, extracts structured knowledge from their live
-LaTeX source, and publishes the result to GitHub Pages at:
+pushes to `main`. The pipeline runs in GitHub Actions, checks out
+`lra-governance` plus the split `lra-volume-*` repositories, extracts structured
+knowledge from their live LaTeX source, and publishes the result to GitHub Pages
+at:
 
 ```
 https://wsollers.github.io/lra-knowledge-explorer/
@@ -54,25 +55,24 @@ and writes explorer-ready JSON.
 
 **Merge** — `scripts/run_extraction.py`
 
-Combines per-chapter outputs into `knowledge.json` and `graph-edges.json`.
+Reads `lra-governance/docs/architecture/book-registry.json`, extracts every
+registered chapter, enriches nodes with volume/book/chapter metadata, and
+combines per-chapter outputs into `knowledge.json` and `graph-edges.json`.
 The runner fails hard if an expected split volume repository, chapter,
 `notes/index.tex`, or `proofs/index.tex` is missing.
+
+**Model artifacts** — `scripts/extract_model_artifacts.py`
+
+Reads the same book registry, scans registered chapter note trees for model
+cards, enriches artifacts with volume/book/chapter metadata, and writes
+`model-artifacts.json`.
 
 ---
 
 ## Chapters extracted
 
-```
-volume-i/propositional-logic
-volume-ii/natural-numbers
-volume-ii/rationals
-volume-iii/analysis/bounding
-volume-iii/analysis/functions
-volume-iii/analysis/continuity
-volume-iii/analysis/differentiation
-```
-
-To add more chapters, edit the `CHAPTERS` list in `scripts/run_extraction.py`.
+The chapter list is no longer hand-coded. To add, remove, or rename explorer
+inputs, update `lra-governance/docs/architecture/book-registry.json`.
 
 ---
 
@@ -84,6 +84,7 @@ scripts/
   extract_lra_chapter.py        — Pass 1: LaTeX → seed JSON
   seed_to_knowledge_json_v3_fixed6.py  — Pass 2: seed → explorer JSON
   run_extraction.py             — orchestrator
+  extract_model_artifacts.py    — model-card extraction
 knowledge-explorer.html         — main interactive explorer
 real-analysis-explorer.html     — alternate explorer UI
 index.html                      — redirect → knowledge-explorer.html
