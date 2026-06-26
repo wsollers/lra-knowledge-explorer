@@ -2,14 +2,14 @@
 GENERATED FILE — DO NOT EDIT BY HAND.
 
 Source repo: wsollers/lra-governance
-Source commit: d98bb51fc80e683b38a9d1e76f4a0c91037ede0a
+Source commit: 36fd69ac2e23b406e522c0c753400ce7f3938ff0
 Generated from:
 - docs/governance/...
 - docs/architecture/...
 - docs/governance/repo-overlays/lra-knowledge-explorer.md
 
 Regenerate from lra-governance.
-Emergency downstream edits must be ported upstream before the next sync.
+Emergency downstream edits must be ported upstream before regeneration.
 -->
 
 # LRA Repository Instructions
@@ -23,7 +23,7 @@ concise and refer to canonical governance docs rather than copying large docs.
 - Follow the owning repository boundary for every task.
 - Do not include secrets, credentials, tokens, or machine-local private values.
 - Do not modify mathematical content during governance or wrapper-generation tasks.
-- Do not touch `Learning-Real-Analysis/scripts/`.
+- Do not touch the retired `Learning-Real-Analysis` monorepo.
 - Port emergency downstream instruction repairs back to `lra-governance`.
 
 ## Repo Overlay
@@ -37,15 +37,31 @@ Owned concerns:
 - extraction pipeline implementation,
 - knowledge graph and edge generation,
 - explorer UI,
-- rebuild dispatch expectations.
+- rebuild refresh expectations.
 
 ## Agent Scope
 
-Extraction implementation and UI changes belong here. Monorepo changes may
-trigger rebuild dispatch, but extractor code ownership remains with
-`lra-knowledge-explorer`.
+Extraction implementation and UI changes belong here. The rebuild is
+orchestrated from `lra-governance` over the independent volume repos, but
+extractor code ownership remains with `lra-knowledge-explorer`.
 
 Do not duplicate canonical YAML ownership here.
+
+## Formal Verification Surface
+
+When explorer records include formal verification metadata, the UI should show
+it as a first-class proof companion rather than as ordinary prose. The proof
+modal should include a `Verification` tab that displays:
+
+- the verification system,
+- status,
+- module and declaration when known,
+- source path when known,
+- well-formatted formal code when available.
+
+The UI must not present pending or incomplete targets as checked. Missing code
+or missing metadata should render as an explicit empty state, not as a broken
+panel.
 
 ## Provider Notes
 
