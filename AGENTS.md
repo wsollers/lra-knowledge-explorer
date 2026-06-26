@@ -2,7 +2,7 @@
 GENERATED FILE — DO NOT EDIT BY HAND.
 
 Source repo: wsollers/lra-governance
-Source commit: b08b957f5a70a9b4bc4db167be8f5fa6e5a94aae
+Source commit: 0fe121116f1f6aa98359774a72c5fac67236e6a5
 Generated from:
 - docs/governance/...
 - docs/architecture/...
