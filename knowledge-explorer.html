@@ -601,6 +601,48 @@ function uniqueNodeOptions(nodes,key,labelKey,preferredOrder=[]){
     ? out.sort((a,b)=>(order.get(a.value)??9999)-(order.get(b.value)??9999))
     : out;
 }
+function appendMissingOptions(options,available){
+  const seen=new Set(options.map(o=>o.value));
+  [...available].filter(Boolean).sort((a,b)=>String(a).localeCompare(String(b))).forEach(value=>{
+    if(!seen.has(value))options.push({value,label:plainOptionLabel(value)});
+  });
+  return options;
+}
+function tocBooksForVolumeFilter(volumeFilter){
+  const volumes=tocVolumes().filter(v=>volumeFilter==='All'||String(v.id)===String(volumeFilter)||volumeTitle(v.id)===volumeFilter);
+  const books=[];
+  volumes.forEach(v=>(v.books||[]).forEach(b=>books.push({...b,volume:String(v.id)})));
+  return books;
+}
+function orderedModelVolumeOptions(artifacts){
+  const available=new Set(artifacts.map(modelVolume));
+  const options=tocVolumes().map(v=>({value:volumeTitle(v.id),label:volumeTitle(v.id)})).filter(o=>available.has(o.value));
+  return appendMissingOptions(options,available);
+}
+function orderedModelBookOptions(artifacts,volumeFilter){
+  const available=new Set(artifacts.map(modelBook));
+  const options=tocBooksForVolumeFilter(volumeFilter).map(b=>({value:plainOptionLabel(b.title||fallbackTitle(b.id)),label:plainOptionLabel(b.title||fallbackTitle(b.id))})).filter(o=>available.has(o.value));
+  return appendMissingOptions(options,available);
+}
+function orderedModelChapterOptions(artifacts,volumeFilter,bookFilter){
+  const available=new Set(artifacts.map(modelChapter));
+  const books=tocBooksForVolumeFilter(volumeFilter).filter(b=>bookFilter==='All'||plainOptionLabel(b.title||fallbackTitle(b.id))===bookFilter);
+  const options=[];
+  books.forEach(b=>(b.chapters||[]).forEach(c=>options.push({value:plainOptionLabel(c.title||fallbackTitle(c.id)),label:plainOptionLabel(c.title||fallbackTitle(c.id))})));
+  return appendMissingOptions(options.filter(o=>available.has(o.value)),available);
+}
+function orderedToProveBookOptions(items,volumeFilter){
+  const available=new Set(items.map(item=>item.book).filter(Boolean));
+  const books=tocBooksForVolumeFilter(volumeFilter).map(b=>({value:b.id,label:plainOptionLabel(b.title||fallbackTitle(b.id))})).filter(o=>available.has(o.value));
+  return appendMissingOptions(books,[...available].filter(value=>!books.some(o=>o.value===value)));
+}
+function orderedToProveChapterOptions(items,volumeFilter,bookFilter){
+  const available=new Set(items.map(item=>item.chapter).filter(Boolean));
+  const books=tocBooksForVolumeFilter(volumeFilter).filter(b=>bookFilter==='All'||b.id===bookFilter);
+  const chapters=[];
+  books.forEach(b=>(b.chapters||[]).forEach(c=>chapters.push({value:c.id,label:plainOptionLabel(c.title||fallbackTitle(c.id))})));
+  return appendMissingOptions(chapters.filter(o=>available.has(o.value)),[...available].filter(value=>!chapters.some(o=>o.value===value)));
+}
 // syncFilters: populates Volume, Book, Chapter, and Section from exported TOC metadata.
 // Filters keep slug keys internally but display the same book/chapter/section titles and order as the source indexes.
 function syncFilters(nodes){
@@ -986,19 +1028,19 @@ function modelSearchBlob(artifact){
 }
 function renderModelBoard(){
   const artifacts=orderedModelArtifacts();
-  const volumes=[...new Set(artifacts.map(modelVolume))].sort();
-  els.modelVolumeFilter.innerHTML=['<option value="All">All volumes</option>'].concat(volumes.map(v=>`<option value="${esc(v)}">${esc(v)}</option>`)).join('');
-  els.modelVolumeFilter.value=volumes.includes(state.modelVolume)?state.modelVolume:'All';
+  const volumeOptions=orderedModelVolumeOptions(artifacts);
+  optionSet(els.modelVolumeFilter,[{value:'All',label:'All volumes'},...volumeOptions],state.modelVolume);
+  els.modelVolumeFilter.value=volumeOptions.some(o=>o.value===state.modelVolume)?state.modelVolume:'All';
   state.modelVolume=els.modelVolumeFilter.value;
   const volumeFiltered=artifacts.filter(a=>state.modelVolume==='All'||modelVolume(a)===state.modelVolume);
-  const books=[...new Set(volumeFiltered.map(modelBook))].sort();
-  els.modelBookFilter.innerHTML=['<option value="All">All books</option>'].concat(books.map(b=>`<option value="${esc(b)}">${esc(b)}</option>`)).join('');
-  els.modelBookFilter.value=books.includes(state.modelBook)?state.modelBook:'All';
+  const bookOptions=orderedModelBookOptions(volumeFiltered,state.modelVolume);
+  optionSet(els.modelBookFilter,[{value:'All',label:'All books'},...bookOptions],state.modelBook);
+  els.modelBookFilter.value=bookOptions.some(o=>o.value===state.modelBook)?state.modelBook:'All';
   state.modelBook=els.modelBookFilter.value;
   const bookFiltered=volumeFiltered.filter(a=>state.modelBook==='All'||modelBook(a)===state.modelBook);
-  const chapters=[...new Set(bookFiltered.map(modelChapter))].sort();
-  els.modelChapterFilter.innerHTML=['<option value="All">All chapters</option>'].concat(chapters.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`)).join('');
-  els.modelChapterFilter.value=chapters.includes(state.modelChapter)?state.modelChapter:'All';
+  const chapterOptions=orderedModelChapterOptions(bookFiltered,state.modelVolume,state.modelBook);
+  optionSet(els.modelChapterFilter,[{value:'All',label:'All chapters'},...chapterOptions],state.modelChapter);
+  els.modelChapterFilter.value=chapterOptions.some(o=>o.value===state.modelChapter)?state.modelChapter:'All';
   state.modelChapter=els.modelChapterFilter.value;
   const chapterFiltered=bookFiltered.filter(a=>state.modelChapter==='All'||modelChapter(a)===state.modelChapter);
   const topics=[...new Set(chapterFiltered.map(modelTopic))].sort();
@@ -1114,15 +1156,11 @@ function renderToProveBoard(){
   els.toProveGraphMode.value=state.toProveGraphMode;
   const volumeFiltered=items.filter(item=>state.toProveVolume==='All'||String(item.volume)===String(state.toProveVolume));
   const statusFiltered=volumeFiltered.filter(item=>state.toProveStatusFilter==='All'||item.status===state.toProveStatusFilter);
-  const bookMap=new Map();
-  statusFiltered.forEach(item=>{if(item.book&&!bookMap.has(item.book))bookMap.set(item.book,item.book_title||fallbackTitle(item.book));});
-  const bookOptions=[{value:'All',label:'All books'},...[...bookMap.entries()].map(([value,label])=>({value,label:plainOptionLabel(label)})).sort((a,b)=>a.label.localeCompare(b.label))];
+  const bookOptions=[{value:'All',label:'All books'},...orderedToProveBookOptions(statusFiltered,state.toProveVolume)];
   if(state.toProveBook!=='All'&&!bookOptions.some(o=>o.value===state.toProveBook))state.toProveBook='All';
   optionSet(els.toProveBookFilter,bookOptions,state.toProveBook);
   const bookFiltered=statusFiltered.filter(item=>state.toProveBook==='All'||item.book===state.toProveBook);
-  const chapterMap=new Map();
-  bookFiltered.forEach(item=>{if(item.chapter&&!chapterMap.has(item.chapter))chapterMap.set(item.chapter,item.chapter_title||fallbackTitle(item.chapter));});
-  const chapterOptions=[{value:'All',label:'All chapters'},...[...chapterMap.entries()].map(([value,label])=>({value,label:plainOptionLabel(label)})).sort((a,b)=>a.label.localeCompare(b.label))];
+  const chapterOptions=[{value:'All',label:'All chapters'},...orderedToProveChapterOptions(bookFiltered,state.toProveVolume,state.toProveBook)];
   if(state.toProveChapter!=='All'&&!chapterOptions.some(o=>o.value===state.toProveChapter))state.toProveChapter='All';
   optionSet(els.toProveChapterFilter,chapterOptions,state.toProveChapter);
   const filtered=bookFiltered.filter(item=>state.toProveChapter==='All'||item.chapter===state.toProveChapter);
