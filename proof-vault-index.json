@@ -1,9 +1,9 @@
 {
   "schema": "lra.proof_vault_index",
   "schema_version": 1,
-  "generated_at": "2026-06-26T04:42:35.714582+00:00",
+  "generated_at": "2026-06-29T19:57:40.233996+00:00",
   "source": "lra-proof-vault",
-  "record_count": 8,
+  "record_count": 9,
   "warning_count": 0,
   "warnings": [],
   "records": {
@@ -42,6 +42,25 @@
         "markdown": "# Minimality of Well-Formed Formulas\n\nCanonical theorem label: `thm:minimality-of-well-formed-formulas`\n\n## OCR Text\n\nBese Cue,\nENP SS Aton, Yan? foe fh\n& ra Pe fo\n\nANte Prop ¢ $, ees,\n\nNesa Hons tee:\n\nSuppose T=318 whe Bin WEE.\n\nB thee induction |r\n2 Lf QinS Sea €tiaetn Pee\n\nBi oe strep ;\n\natthe S YES. ro\n\nQe 1s =\n\ntake, Megedilon 1 od by ray Cees\n\n“pail Bee\n\n## Polished Markdown\n\nWe prove by structural induction on $\\varphi\\in\\WFF$ that\n$\\varphi\\in S$.\n\nIf $\\varphi$ is atomic, then $\\varphi=P$ for some\n$P\\in\\Prop$. Since $\\Prop\\subseteq S$, it follows that\n$\\varphi=P\\in S$.\n\nSuppose $\\varphi=\\neg\\theta$, where $\\theta\\in\\WFF$. By the induction\nhypothesis, $\\theta\\in S$. By the second hypothesis on $S$,\n$\\neg\\theta\\in S$. Hence $\\varphi\\in S$.\n\nSuppose $\\varphi=(\\theta\\circ\\psi)$, where\n$\\theta,\\psi\\in\\WFF$ and\n$$\n\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}.\n$$\nBy the induction hypothesis, $\\theta\\in S$ and $\\psi\\in S$. By the\nthird hypothesis on $S$, $(\\theta\\circ\\psi)\\in S$. Hence\n$\\varphi\\in S$.\n\nTherefore every $\\varphi\\in\\WFF$ belongs to $S$, and so\n$$\n\\WFF\\subseteq S.\n$$\n\n## Polished TeX\n\n```latex\nWe prove by structural induction on \\(\\varphi\\in\\WFF\\) that\n\\(\\varphi\\in S\\).\n\nIf \\(\\varphi\\) is atomic, then \\(\\varphi=P\\) for some\n\\(P\\in\\Prop\\). Since \\(\\Prop\\subseteq S\\), it follows that\n\\(\\varphi=P\\in S\\).\n\nSuppose \\(\\varphi=\\neg\\theta\\), where \\(\\theta\\in\\WFF\\). By the induction\nhypothesis, \\(\\theta\\in S\\). By the second hypothesis on \\(S\\),\n\\(\\neg\\theta\\in S\\). Hence \\(\\varphi\\in S\\).\n\nSuppose \\(\\varphi=(\\theta\\circ\\psi)\\), where\n\\(\\theta,\\psi\\in\\WFF\\) and\n\\[\n\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}.\n\\]\nBy the induction hypothesis, \\(\\theta\\in S\\) and \\(\\psi\\in S\\). By the\nthird hypothesis on \\(S\\), \\((\\theta\\circ\\psi)\\in S\\). Hence\n\\(\\varphi\\in S\\).\n\nTherefore every \\(\\varphi\\in\\WFF\\) belongs to \\(S\\), and so\n\\[\n\\WFF\\subseteq S.\n\\]\n```\n\n## Provenance\n\nPolished text was reconstructed from the accepted canonical proof `lra-volume-i/volume-i/propositional-logic/proofs/syntax/prf-minimality-of-well-formed-formulas.tex`.",
         "tex": "We prove by structural induction on \\(\\varphi\\in\\WFF\\) that\n\\(\\varphi\\in S\\).\n\nIf \\(\\varphi\\) is atomic, then \\(\\varphi=P\\) for some\n\\(P\\in\\Prop\\). Since \\(\\Prop\\subseteq S\\), it follows that\n\\(\\varphi=P\\in S\\).\n\nSuppose \\(\\varphi=\\neg\\theta\\), where \\(\\theta\\in\\WFF\\). By the induction\nhypothesis, \\(\\theta\\in S\\). By the second hypothesis on \\(S\\),\n\\(\\neg\\theta\\in S\\). Hence \\(\\varphi\\in S\\).\n\nSuppose \\(\\varphi=(\\theta\\circ\\psi)\\), where\n\\(\\theta,\\psi\\in\\WFF\\) and\n\\[\n\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}.\n\\]\nBy the induction hypothesis, \\(\\theta\\in S\\) and \\(\\psi\\in S\\). By the\nthird hypothesis on \\(S\\), \\((\\theta\\circ\\psi)\\in S\\). Hence\n\\(\\varphi\\in S\\).\n\nTherefore every \\(\\varphi\\in\\WFF\\) belongs to \\(S\\), and so\n\\[\n\\WFF\\subseteq S.\n\\]",
         "text_source": "canonical-proof-with-ocr",
+        "text_review_status": "accepted"
+      }
+    ],
+    "cor:archimedean-reciprocal": [
+      {
+        "title": "Archimedean Reciprocal Corollary (proof-2026-06-29-001)",
+        "path": "volume-iii/bounding/cor-archimedean-reciprocal/metadata.yaml",
+        "vault_record": "volume-iii/bounding/cor-archimedean-reciprocal",
+        "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/bounding/cor-archimedean-reciprocal",
+        "attempt_id": "proof-2026-06-29-001",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-iii/bounding/cor-archimedean-reciprocal/attempts/proof-2026-06-29-001.jpg"
+        ],
+        "body": "Correct handwritten attempt; proof verified and memorialized for Volume III.\n\nTags: verified, handwritten-proof",
+        "ocr_text": "Cor: (hebinde Reeyeticol a ae\nCae rae X20 gud every yEIR, theediths —\neo TheN Gt avs 2y }\nk tens DeGie Ce HK, thn Ne nee sid) im\nos | abe Y) > /, 4x Moy Lente 17% ae\nSe\nJ\n. ,\n~ é <- ian",
+        "markdown": "# Archimedean Reciprocal Corollary\n\nCanonical theorem label: `cor:archimedean-reciprocal`\n\n## OCR Text\n\n```text\nCor: (hebinde Reeyeticol a ae\nCae rae X20 gud every yEIR, theediths —\neo TheN Gt avs 2y }\nk tens DeGie Ce HK, thn Ne nee sid) im\nos | abe Y) > /, 4x Moy Lente 17% ae\nSe\nJ\n. ,\n~ é <- ian\n```\n\n## Polished Markdown\n\nLet $x>0$ and $y\\in\\mathbb{R}$. Define\n$$\nr=\\frac{y}{x}.\n$$\nSince $x>0$, this is a real number. By the Archimedean property, there exists\n$n\\in\\mathbb{N}$ such that $n>r$. Multiplying by the positive number $x$\npreserves the inequality, so\n$$\nnx>rx=\\frac{y}{x}x=y.\n$$\nTherefore there exists $n\\in\\mathbb{N}$ such that $nx>y$.\n\n## Polished TeX\n\n```latex\nLet \\(x>0\\) and \\(y\\in\\mathbb{R}\\). Define\n\\[\n  r=\\frac{y}{x}.\n\\]\nSince \\(x>0\\), this is a real number. By the Archimedean property, there exists\n\\(n\\in\\mathbb{N}\\) such that \\(n>r\\). Multiplying by the positive number \\(x\\)\npreserves the inequality, so\n\\[\n  nx>rx=\\frac{y}{x}x=y.\n\\]\nTherefore there exists \\(n\\in\\mathbb{N}\\) such that \\(nx>y\\).\n```\n\n## Provenance\n\nMachine OCR was attempted with Tesseract; display text is a manual transcription\nof the reviewed handwritten proof.",
+        "tex": "Let \\(x>0\\) and \\(y\\in\\mathbb{R}\\). Define\n\\[\n  r=\\frac{y}{x}.\n\\]\nSince \\(x>0\\), this is a real number. By the Archimedean property, there exists\n\\(n\\in\\mathbb{N}\\) such that \\(n>r\\). Multiplying by the positive number \\(x\\)\npreserves the inequality, so\n\\[\n  nx>rx=\\frac{y}{x}x=y.\n\\]\nTherefore there exists \\(n\\in\\mathbb{N}\\) such that \\(nx>y\\).",
+        "text_source": "machine-ocr-with-manual-transcription",
         "text_review_status": "accepted"
       }
     ],
