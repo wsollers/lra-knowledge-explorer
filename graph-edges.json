@@ -700,26 +700,6 @@
     "kind": "proof_depends_on"
   },
   {
-    "from": "def:right-triangle-cosecant",
-    "to": "def:euclid-triangle-angle-classes",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:right-triangle-cosecant",
-    "to": "def:euclid-right-angle-and-perpendicular",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:acute-angle-cosine",
-    "to": "def:right-triangle-sine",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:acute-angle-cosine",
-    "to": "def:right-triangle-cosine",
-    "kind": "depends_on"
-  },
-  {
     "from": "thm:trig-ratios-similarity-invariant",
     "to": "thm:euclid-i-32",
     "kind": "depends_on"
@@ -741,46 +721,21 @@
   },
   {
     "from": "thm:six-trig-functions",
-    "to": "def:right-triangle-sine",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:six-trig-functions",
-    "to": "def:right-triangle-cosine",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:six-trig-functions",
-    "to": "thm:sine-cosine-well-defined",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:unit-circle-sine",
     "to": "def:euclid-circle",
     "kind": "depends_on"
   },
   {
-    "from": "def:unit-circle-sine",
+    "from": "thm:six-trig-functions",
     "to": "def:cartesian-product",
     "kind": "depends_on"
   },
   {
-    "from": "def:unit-circle-sine",
+    "from": "thm:six-trig-functions",
     "to": "thm:sine-cosine-well-defined",
     "kind": "depends_on"
   },
   {
     "from": "thm:unit-circle-agrees-with-right-triangle-trig",
-    "to": "def:acute-angle-sine",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:unit-circle-agrees-with-right-triangle-trig",
-    "to": "def:acute-angle-cosine",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:unit-circle-agrees-with-right-triangle-trig",
     "to": "def:unit-circle-cosine",
     "kind": "depends_on"
   },
@@ -790,17 +745,7 @@
     "kind": "depends_on"
   },
   {
-    "from": "def:extended-cosecant",
-    "to": "def:unit-circle-cosine",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:extended-cosecant",
-    "to": "def:unit-circle-sine",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:extended-cosecant",
+    "from": "thm:unit-circle-agrees-with-right-triangle-trig",
     "to": "thm:unit-circle-agrees-with-right-triangle-trig",
     "kind": "depends_on"
   },
@@ -922,6 +867,496 @@
   {
     "from": "thm:trig-sum-to-product-identities",
     "to": "thm:trig-product-to-sum-identities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-cosecant",
+    "to": "def:extended-cosecant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-cosecant",
+    "to": "def:radian-measure",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-cosecant-identities",
+    "to": "def:inverse-cosecant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-cosine",
+    "to": "def:unit-circle-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-cosine",
+    "to": "def:radian-measure",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-cosine-identities",
+    "to": "def:inverse-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-cotangent",
+    "to": "def:extended-cotangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-cotangent",
+    "to": "def:radian-measure",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-cotangent-identities",
+    "to": "def:inverse-cotangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-trig-cofunction-identities",
+    "to": "def:inverse-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-trig-cofunction-identities",
+    "to": "def:inverse-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-trig-reciprocal-identities",
+    "to": "def:inverse-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-trig-reciprocal-identities",
+    "to": "def:inverse-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-trig-reciprocal-identities",
+    "to": "def:inverse-secant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-trig-reciprocal-identities",
+    "to": "def:inverse-cosecant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-cotangent-reciprocal-identity",
+    "to": "def:inverse-tangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-cotangent-reciprocal-identity",
+    "to": "def:inverse-cotangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-secant",
+    "to": "def:extended-secant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-secant",
+    "to": "def:radian-measure",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-secant-identities",
+    "to": "def:inverse-secant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-sine",
+    "to": "def:unit-circle-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-sine",
+    "to": "def:radian-measure",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-sine-identities",
+    "to": "def:inverse-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-tangent",
+    "to": "def:extended-tangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-tangent",
+    "to": "def:radian-measure",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-tangent-identities",
+    "to": "def:inverse-tangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-sinh-cosh-continuous",
+    "to": "thm:hyperbolic-exponential-form",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:derived-hyperbolic-functions-continuous",
+    "to": "def:hyperbolic-tangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:derived-hyperbolic-functions-continuous",
+    "to": "def:hyperbolic-secant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:derived-hyperbolic-functions-continuous",
+    "to": "thm:hyperbolic-sinh-cosh-continuous",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-sinh-cosh-derivatives",
+    "to": "thm:hyperbolic-exponential-form",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-tangent-derivative",
+    "to": "def:hyperbolic-tangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-tangent-derivative",
+    "to": "def:hyperbolic-secant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-tangent-derivative",
+    "to": "thm:hyperbolic-sinh-cosh-derivatives",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-tangent-derivative",
+    "to": "thm:hyperbolic-pythagorean-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-cotangent-derivative",
+    "to": "def:hyperbolic-cotangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-cotangent-derivative",
+    "to": "def:hyperbolic-cosecant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-cotangent-derivative",
+    "to": "thm:hyperbolic-sinh-cosh-derivatives",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-cotangent-derivative",
+    "to": "thm:hyperbolic-pythagorean-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-secant-derivative",
+    "to": "def:hyperbolic-secant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-secant-derivative",
+    "to": "def:hyperbolic-tangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-secant-derivative",
+    "to": "thm:hyperbolic-sinh-cosh-derivatives",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-cosecant-derivative",
+    "to": "def:hyperbolic-cosecant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-cosecant-derivative",
+    "to": "def:hyperbolic-cotangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-cosecant-derivative",
+    "to": "thm:hyperbolic-sinh-cosh-derivatives",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:hyperbolic-cosine",
+    "to": "def:swept-hyperbola-point",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:hyperbolic-cotangent",
+    "to": "def:hyperbolic-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:hyperbolic-cotangent",
+    "to": "def:hyperbolic-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:hyperbolic-cosecant",
+    "to": "def:hyperbolic-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:hyperbolic-sector",
+    "to": "def:cartesian-product",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:swept-hyperbola-point",
+    "to": "def:hyperbolic-sector",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-pythagorean-identity",
+    "to": "thm:fundamental-hyperbolic-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-exponential-form",
+    "to": "def:hyperbolic-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-exponential-form",
+    "to": "def:hyperbolic-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-exponential-form",
+    "to": "thm:fundamental-hyperbolic-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-sum-formulas",
+    "to": "thm:hyperbolic-exponential-form",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-double-angle-formulas",
+    "to": "thm:hyperbolic-sum-formulas",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-double-angle-formulas",
+    "to": "thm:hyperbolic-pythagorean-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-tangent-sum-formula",
+    "to": "def:hyperbolic-tangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-tangent-sum-formula",
+    "to": "thm:hyperbolic-sum-formulas",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-hyperbolic-cosine",
+    "to": "def:hyperbolic-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-hyperbolic-cosine",
+    "to": "thm:hyperbolic-sector-existence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-hyperbolic-cosine",
+    "to": "thm:hyperbolic-sector-uniqueness",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-cosine-identities",
+    "to": "def:inverse-hyperbolic-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-hyperbolic-cotangent",
+    "to": "def:hyperbolic-cotangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-cotangent-identities",
+    "to": "def:inverse-hyperbolic-cotangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-hyperbolic-cosecant",
+    "to": "def:hyperbolic-cosecant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-cosecant-identities",
+    "to": "def:inverse-hyperbolic-cosecant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-sine-log-form",
+    "to": "def:inverse-hyperbolic-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-sine-log-form",
+    "to": "thm:hyperbolic-exponential-form",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-cosine-log-form",
+    "to": "def:inverse-hyperbolic-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-cosine-log-form",
+    "to": "thm:hyperbolic-exponential-form",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-tangent-log-form",
+    "to": "def:inverse-hyperbolic-tangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-tangent-log-form",
+    "to": "thm:hyperbolic-exponential-form",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-cotangent-log-form",
+    "to": "def:inverse-hyperbolic-cotangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-cotangent-log-form",
+    "to": "thm:hyperbolic-exponential-form",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-secant-reciprocal-form",
+    "to": "def:inverse-hyperbolic-secant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-secant-reciprocal-form",
+    "to": "def:inverse-hyperbolic-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-cosecant-reciprocal-form",
+    "to": "def:inverse-hyperbolic-cosecant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-cosecant-reciprocal-form",
+    "to": "def:inverse-hyperbolic-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-hyperbolic-secant",
+    "to": "def:hyperbolic-secant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-secant-identities",
+    "to": "def:inverse-hyperbolic-secant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-hyperbolic-sine",
+    "to": "def:hyperbolic-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-hyperbolic-sine",
+    "to": "thm:hyperbolic-sector-existence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-hyperbolic-sine",
+    "to": "thm:hyperbolic-sector-uniqueness",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-sine-identities",
+    "to": "def:inverse-hyperbolic-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse-hyperbolic-tangent",
+    "to": "def:hyperbolic-tangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:inverse-hyperbolic-tangent-identities",
+    "to": "def:inverse-hyperbolic-tangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:hyperbolic-secant",
+    "to": "def:hyperbolic-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:hyperbolic-sine",
+    "to": "def:swept-hyperbola-point",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:hyperbolic-tangent",
+    "to": "def:hyperbolic-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:hyperbolic-tangent",
+    "to": "def:hyperbolic-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-sector-existence",
+    "to": "def:hyperbolic-sector",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hyperbolic-sector-uniqueness",
+    "to": "thm:hyperbolic-sector-existence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:hyperbolic-sine-cosine-well-defined",
+    "to": "thm:hyperbolic-sector-existence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:hyperbolic-sine-cosine-well-defined",
+    "to": "thm:hyperbolic-sector-uniqueness",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:fundamental-hyperbolic-identity",
+    "to": "def:hyperbolic-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:fundamental-hyperbolic-identity",
+    "to": "def:hyperbolic-cosine",
     "kind": "depends_on"
   },
   {
