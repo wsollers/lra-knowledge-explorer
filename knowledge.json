@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-07-01T17:03:01.755812+00:00",
-    "version_id": 23,
+    "generated_at": "2026-07-02T00:46:32.739229+00:00",
+    "version_id": 24,
     "chapters": [
       "analytical-geometry",
       "euclidean-geometry",
@@ -49,12 +49,12 @@
       "ordinary-differential-equations",
       "numerical-analysis"
     ],
-    "node_count": 2076,
-    "edge_count": 5309,
+    "node_count": 2094,
+    "edge_count": 5337,
     "error_count": 0,
     "schema_version": "governance-export-1",
     "script": "lra-governance/tools/governance/extraction_pipeline/export_knowledge_explorer.py",
-    "source_run": "F:\\repos\\lra-governance\\runs\\extraction-20260701-152518",
+    "source_run": "F:\\repos\\lra-governance\\runs\\extraction-20260702-004606",
     "toc": [
       {
         "id": 1,
@@ -2210,7 +2210,8 @@
       "proof_sketch_source": "",
       "depends_on_ids": [
         "def:general-linear-form",
-        "def:sine-cosine",
+        "def:acute-angle-sine",
+        "def:acute-angle-cosine",
         "def:order-on-r"
       ],
       "used_by_ids": [],
@@ -2221,7 +2222,8 @@
       "implies_ids": [],
       "depends_on_titles": [
         "General linear form",
-        "Sine and Cosine via Power Series",
+        "Acute-angle sine",
+        "Acute-angle cosine",
         "Order on $\\mathbb{R}$"
       ],
       "used_by_titles": [],
@@ -2229,7 +2231,8 @@
       "proof_used_by_titles": [],
       "dependencies": [
         "def:general-linear-form",
-        "def:sine-cosine",
+        "def:acute-angle-sine",
+        "def:acute-angle-cosine",
         "def:order-on-r"
       ],
       "proof_dependencies": [],
@@ -2267,7 +2270,8 @@
       "proof_sketch_source": "",
       "depends_on_ids": [
         "def:vector-parametric-form",
-        "def:sine-cosine",
+        "def:acute-angle-sine",
+        "def:acute-angle-cosine",
         "thm:r-is-a-field"
       ],
       "used_by_ids": [],
@@ -2278,7 +2282,8 @@
       "implies_ids": [],
       "depends_on_titles": [
         "Vector parametric form",
-        "Sine and Cosine via Power Series",
+        "Acute-angle sine",
+        "Acute-angle cosine",
         "$\\mathbb{R}$ Is a Field"
       ],
       "used_by_titles": [],
@@ -2286,7 +2291,8 @@
       "proof_used_by_titles": [],
       "dependencies": [
         "def:vector-parametric-form",
-        "def:sine-cosine",
+        "def:acute-angle-sine",
+        "def:acute-angle-cosine",
         "thm:r-is-a-field"
       ],
       "proof_dependencies": [],
@@ -3496,7 +3502,7 @@
         "def:euclid-acute-angle",
         "def:euclid-triangle-angle-classes",
         "def:euclid-quadrilateral-classes",
-        "def:right-triangle-trig-ratios"
+        "def:right-triangle-cosecant"
       ],
       "proof_depends_on_ids": [],
       "proof_used_by_ids": [
@@ -3514,7 +3520,7 @@
         "Acute angle",
         "Right-angled, obtuse-angled, and acute-angled triangles",
         "Quadrilateral classes",
-        "Right-triangle trigonometric ratios"
+        "Right-triangle cosecant"
       ],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
@@ -3790,7 +3796,7 @@
         "def:euclid-center-of-a-circle",
         "def:euclid-diameter",
         "def:euclid-semicircle",
-        "def:unit-circle-sine-cosine",
+        "def:unit-circle-sine",
         "def:radian-measure"
       ],
       "proof_depends_on_ids": [],
@@ -3813,7 +3819,7 @@
         "Center of a circle",
         "Diameter",
         "Semicircle",
-        "Unit-circle sine and cosine",
+        "Unit-circle sine",
         "Radian measure"
       ],
       "proof_depends_on_titles": [],
@@ -4169,7 +4175,7 @@
       ],
       "used_by_ids": [
         "thm:euclid-i-32",
-        "def:right-triangle-trig-ratios"
+        "def:right-triangle-cosecant"
       ],
       "proof_depends_on_ids": [],
       "proof_used_by_ids": [
@@ -4187,7 +4193,7 @@
       ],
       "used_by_titles": [
         "Euclid I.32: Triangle angle sum",
-        "Right-triangle trigonometric ratios"
+        "Right-triangle cosecant"
       ],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [
@@ -4623,9 +4629,9 @@
       "text_preview": "Let it have been postulated that, if a straight line falling on two straight lines makes the interior angles on the same side less than two right angles, the two straight lines, if produced indefinitely, meet on that side on which are the a"
     },
     {
-      "id": "def:right-triangle-trig-ratios",
+      "id": "def:right-triangle-sine",
       "kind": "Definition",
-      "name": "Right-triangle trigonometric ratios",
+      "name": "Right-triangle sine",
       "deck": "",
       "chapter": "trigonometry",
       "chapter_title": "Trigonometry",
@@ -4638,20 +4644,17 @@
       "book_order": 3,
       "book_dir": "volume-i/book-geometry",
       "source": "foundations/trig-foundations.tex",
-      "statement_display": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Write\n\\[\n  \\operatorname{opp}(T,\\theta),\\qquad\n  \\operatorname{adj}(T,\\theta),\\qquad\n  \\operatorname{hyp}(T)\n\\]\nfor the side lengths opposite $\\theta$, adjacent to $\\theta$, and opposite the\nright angle, respectively. Define\n\\[\n\\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)},\\quad\n\\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)},\\quad\n\\tan\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{adj}(T,\\theta)},\n\\]\n\\[\n\\cot\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{opp}(T,\\theta)},\\quad\n\\sec\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{adj}(T,\\theta)},\\quad\n\\csc\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{opp}(T,\\theta)}.\n\\]",
-      "statement_tex": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Write\n\\[\n  \\operatorname{opp}(T,\\theta),\\qquad\n  \\operatorname{adj}(T,\\theta),\\qquad\n  \\operatorname{hyp}(T)\n\\]\nfor the side lengths opposite $\\theta$, adjacent to $\\theta$, and opposite the\nright angle, respectively. Define\n\\[\n\\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)},\\quad\n\\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)},\\quad\n\\tan\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{adj}(T,\\theta)},\n\\]\n\\[\n\\cot\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{opp}(T,\\theta)},\\quad\n\\sec\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{adj}(T,\\theta)},\\quad\n\\csc\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{opp}(T,\\theta)}.\n\\]",
-      "source_text": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Write\n\\[\n  \\operatorname{opp}(T,\\theta),\\qquad\n  \\operatorname{adj}(T,\\theta),\\qquad\n  \\operatorname{hyp}(T)\n\\]\nfor the side lengths opposite $\\theta$, adjacent to $\\theta$, and opposite the\nright angle, respectively. Define\n\\[\n\\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)},\\quad\n\\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)},\\quad\n\\tan\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{adj}(T,\\theta)},\n\\]\n\\[\n\\cot\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{opp}(T,\\theta)},\\quad\n\\sec\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{adj}(T,\\theta)},\\quad\n\\csc\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{opp}(T,\\theta)}.\n\\]",
+      "statement_display": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Write\n\\[\n  \\operatorname{opp}(T,\\theta),\\qquad\n  \\operatorname{adj}(T,\\theta),\\qquad\n  \\operatorname{hyp}(T)\n\\]\nfor the side lengths opposite $\\theta$, adjacent to $\\theta$, and opposite the\nright angle, respectively. Define\n\\[\n\\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
+      "statement_tex": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Write\n\\[\n  \\operatorname{opp}(T,\\theta),\\qquad\n  \\operatorname{adj}(T,\\theta),\\qquad\n  \\operatorname{hyp}(T)\n\\]\nfor the side lengths opposite $\\theta$, adjacent to $\\theta$, and opposite the\nright angle, respectively. Define\n\\[\n\\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
+      "source_text": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Write\n\\[\n  \\operatorname{opp}(T,\\theta),\\qquad\n  \\operatorname{adj}(T,\\theta),\\qquad\n  \\operatorname{hyp}(T)\n\\]\nfor the side lengths opposite $\\theta$, adjacent to $\\theta$, and opposite the\nright angle, respectively. Define\n\\[\n\\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
       "section": "",
       "section_title": "",
       "has_proof_file": false,
       "proof_source": "",
       "proof_sketch_source": "",
-      "depends_on_ids": [
-        "def:euclid-triangle-angle-classes",
-        "def:euclid-right-angle-and-perpendicular"
-      ],
+      "depends_on_ids": [],
       "used_by_ids": [
-        "def:sine-cosine",
+        "def:acute-angle-cosine",
         "thm:six-trig-functions"
       ],
       "proof_depends_on_ids": [],
@@ -4659,20 +4662,14 @@
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [
-        "Right-angled, obtuse-angled, and acute-angled triangles",
-        "Right angle and perpendicular"
-      ],
+      "depends_on_titles": [],
       "used_by_titles": [
-        "Sine and Cosine via Power Series",
+        "Acute-angle cosine",
         "Six trigonometric functions"
       ],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
-      "dependencies": [
-        "def:euclid-triangle-angle-classes",
-        "def:euclid-right-angle-and-perpendicular"
-      ],
+      "dependencies": [],
       "proof_dependencies": [],
       "ignored": false,
       "is_theorem_like": false,
@@ -4683,9 +4680,9 @@
       "text_preview": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Write \\[ \\operatorname{opp}(T,\\theta),\\qquad \\operatorname{adj}(T,\\theta),\\qquad \\operatorname{hyp}(T) \\] for the side lengths opposite $\\theta$, adjacent to $\\theta$,"
     },
     {
-      "id": "def:sine-cosine",
+      "id": "def:right-triangle-cosine",
       "kind": "Definition",
-      "name": "Sine and cosine",
+      "name": "Right-triangle cosine",
       "deck": "",
       "chapter": "trigonometry",
       "chapter_title": "Trigonometry",
@@ -4698,51 +4695,220 @@
       "book_order": 3,
       "book_dir": "volume-i/book-geometry",
       "source": "foundations/trig-foundations.tex",
-      "statement_display": "For an acute Euclidean angle $\\theta$, choose any right triangle $T$ having\n$\\theta$ as an acute angle and set\n\\[\n  \\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)},\n  \\qquad\n  \\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
-      "statement_tex": "For an acute Euclidean angle $\\theta$, choose any right triangle $T$ having\n$\\theta$ as an acute angle and set\n\\[\n  \\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)},\n  \\qquad\n  \\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
-      "source_text": "For an acute Euclidean angle $\\theta$, choose any right triangle $T$ having\n$\\theta$ as an acute angle and set\n\\[\n  \\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)},\n  \\qquad\n  \\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
+      "statement_display": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
+      "statement_tex": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
+      "source_text": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
       "section": "",
       "section_title": "",
       "has_proof_file": false,
       "proof_source": "",
       "proof_sketch_source": "",
-      "depends_on_ids": [
-        "def:right-triangle-trig-ratios"
-      ],
+      "depends_on_ids": [],
       "used_by_ids": [
-        "def:normal-form-line",
-        "def:symmetric-form-line",
-        "thm:sine-cosine-well-defined",
-        "thm:unit-circle-agrees-with-right-triangle-trig",
-        "prop:trig-addition-formulas",
-        "def:other-trig",
-        "def:inverse-trig",
-        "thm:fundamental-trig-limit",
-        "prop:limit-one-minus-cos"
+        "def:acute-angle-cosine",
+        "thm:six-trig-functions"
       ],
       "proof_depends_on_ids": [],
       "proof_used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [
-        "Right-triangle trigonometric ratios"
-      ],
+      "depends_on_titles": [],
       "used_by_titles": [
-        "Normal form",
-        "Symmetric form",
-        "Well-definedness of sine and cosine",
-        "Unit-circle agreement with right-triangle trigonometry",
-        "Addition Formulas",
-        "Tangent, Cotangent, Secant, Cosecant",
-        "Inverse Trigonometric Functions",
-        "Fundamental Trigonometric Limit",
-        "Second Fundamental Trigonometric Limit"
+        "Acute-angle cosine",
+        "Six trigonometric functions"
       ],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
+      "dependencies": [],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define \\[ \\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)}. \\]"
+    },
+    {
+      "id": "def:right-triangle-tangent",
+      "kind": "Definition",
+      "name": "Right-triangle tangent",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\tan\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{adj}(T,\\theta)}.\n\\]",
+      "statement_tex": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\tan\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{adj}(T,\\theta)}.\n\\]",
+      "source_text": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\tan\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{adj}(T,\\theta)}.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": false,
+      "proof_source": "",
+      "proof_sketch_source": "",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define \\[ \\tan\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{adj}(T,\\theta)}. \\]"
+    },
+    {
+      "id": "def:right-triangle-cotangent",
+      "kind": "Definition",
+      "name": "Right-triangle cotangent",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\cot\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{opp}(T,\\theta)}.\n\\]",
+      "statement_tex": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\cot\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{opp}(T,\\theta)}.\n\\]",
+      "source_text": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\cot\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{opp}(T,\\theta)}.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": false,
+      "proof_source": "",
+      "proof_sketch_source": "",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define \\[ \\cot\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{opp}(T,\\theta)}. \\]"
+    },
+    {
+      "id": "def:right-triangle-secant",
+      "kind": "Definition",
+      "name": "Right-triangle secant",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\sec\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{adj}(T,\\theta)}.\n\\]",
+      "statement_tex": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\sec\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{adj}(T,\\theta)}.\n\\]",
+      "source_text": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\sec\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{adj}(T,\\theta)}.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": false,
+      "proof_source": "",
+      "proof_sketch_source": "",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define \\[ \\sec\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{adj}(T,\\theta)}. \\]"
+    },
+    {
+      "id": "def:right-triangle-cosecant",
+      "kind": "Definition",
+      "name": "Right-triangle cosecant",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\csc\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{opp}(T,\\theta)}.\n\\]",
+      "statement_tex": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\csc\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{opp}(T,\\theta)}.\n\\]",
+      "source_text": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define\n\\[\n\\csc\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{opp}(T,\\theta)}.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": false,
+      "proof_source": "",
+      "proof_sketch_source": "",
+      "depends_on_ids": [
+        "def:euclid-triangle-angle-classes",
+        "def:euclid-right-angle-and-perpendicular"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Right-angled, obtuse-angled, and acute-angled triangles",
+        "Right angle and perpendicular"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
       "dependencies": [
-        "def:right-triangle-trig-ratios"
+        "def:euclid-triangle-angle-classes",
+        "def:euclid-right-angle-and-perpendicular"
       ],
       "proof_dependencies": [],
       "ignored": false,
@@ -4751,7 +4917,126 @@
       "is_root": false,
       "root_kind": "",
       "env_name": "definition",
-      "text_preview": "For an acute Euclidean angle $\\theta$, choose any right triangle $T$ having $\\theta$ as an acute angle and set \\[ \\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)}, \\qquad \\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\"
+      "text_preview": "Let $T$ be a right triangle and let $\\theta$ be one of its acute angles. Define \\[ \\csc\\theta=\\frac{\\operatorname{hyp}(T)}{\\operatorname{opp}(T,\\theta)}. \\]"
+    },
+    {
+      "id": "def:acute-angle-sine",
+      "kind": "Definition",
+      "name": "Acute-angle sine",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "For an acute Euclidean angle $\\theta$, choose any right triangle $T$ having\n$\\theta$ as an acute angle and set\n\\[\n  \\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
+      "statement_tex": "For an acute Euclidean angle $\\theta$, choose any right triangle $T$ having\n$\\theta$ as an acute angle and set\n\\[\n  \\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
+      "source_text": "For an acute Euclidean angle $\\theta$, choose any right triangle $T$ having\n$\\theta$ as an acute angle and set\n\\[\n  \\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": false,
+      "proof_source": "",
+      "proof_sketch_source": "",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "def:normal-form-line",
+        "def:symmetric-form-line",
+        "thm:sine-cosine-well-defined",
+        "thm:unit-circle-agrees-with-right-triangle-trig"
+      ],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Normal form",
+        "Symmetric form",
+        "Well-definedness of sine and cosine",
+        "Unit-circle agreement with right-triangle trigonometry"
+      ],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "For an acute Euclidean angle $\\theta$, choose any right triangle $T$ having $\\theta$ as an acute angle and set \\[ \\sin\\theta=\\frac{\\operatorname{opp}(T,\\theta)}{\\operatorname{hyp}(T)}. \\]"
+    },
+    {
+      "id": "def:acute-angle-cosine",
+      "kind": "Definition",
+      "name": "Acute-angle cosine",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "For an acute Euclidean angle $\\theta$, choose any right triangle $T$ having\n$\\theta$ as an acute angle and set\n\\[\n  \\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
+      "statement_tex": "For an acute Euclidean angle $\\theta$, choose any right triangle $T$ having\n$\\theta$ as an acute angle and set\n\\[\n  \\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
+      "source_text": "For an acute Euclidean angle $\\theta$, choose any right triangle $T$ having\n$\\theta$ as an acute angle and set\n\\[\n  \\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)}.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": false,
+      "proof_source": "",
+      "proof_sketch_source": "",
+      "depends_on_ids": [
+        "def:right-triangle-sine",
+        "def:right-triangle-cosine"
+      ],
+      "used_by_ids": [
+        "def:normal-form-line",
+        "def:symmetric-form-line",
+        "thm:sine-cosine-well-defined",
+        "thm:unit-circle-agrees-with-right-triangle-trig"
+      ],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Right-triangle sine",
+        "Right-triangle cosine"
+      ],
+      "used_by_titles": [
+        "Normal form",
+        "Symmetric form",
+        "Well-definedness of sine and cosine",
+        "Unit-circle agreement with right-triangle trigonometry"
+      ],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:right-triangle-sine",
+        "def:right-triangle-cosine"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "For an acute Euclidean angle $\\theta$, choose any right triangle $T$ having $\\theta$ as an acute angle and set \\[ \\cos\\theta=\\frac{\\operatorname{adj}(T,\\theta)}{\\operatorname{hyp}(T)}. \\]"
     },
     {
       "id": "thm:trig-ratios-similarity-invariant",
@@ -4833,12 +5118,13 @@
       "proof_source": "foundations/proofs/prf-sine-cosine-well-defined.tex",
       "proof_sketch_source": "todo_stub_skipped",
       "depends_on_ids": [
-        "def:sine-cosine",
+        "def:acute-angle-sine",
+        "def:acute-angle-cosine",
         "thm:trig-ratios-similarity-invariant"
       ],
       "used_by_ids": [
         "thm:six-trig-functions",
-        "def:unit-circle-sine-cosine"
+        "def:unit-circle-sine"
       ],
       "proof_depends_on_ids": [],
       "proof_used_by_ids": [],
@@ -4846,17 +5132,19 @@
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Sine and Cosine via Power Series",
+        "Acute-angle sine",
+        "Acute-angle cosine",
         "Similarity invariance of trigonometric ratios"
       ],
       "used_by_titles": [
         "Six trigonometric functions",
-        "Unit-circle sine and cosine"
+        "Unit-circle sine"
       ],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
       "dependencies": [
-        "def:sine-cosine",
+        "def:acute-angle-sine",
+        "def:acute-angle-cosine",
         "thm:trig-ratios-similarity-invariant"
       ],
       "proof_dependencies": [],
@@ -4893,7 +5181,8 @@
       "proof_source": "foundations/proofs/prf-six-trig-functions.tex",
       "proof_sketch_source": "todo_stub_skipped",
       "depends_on_ids": [
-        "def:right-triangle-trig-ratios",
+        "def:right-triangle-sine",
+        "def:right-triangle-cosine",
         "thm:sine-cosine-well-defined"
       ],
       "used_by_ids": [],
@@ -4903,14 +5192,16 @@
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Right-triangle trigonometric ratios",
+        "Right-triangle sine",
+        "Right-triangle cosine",
         "Well-definedness of sine and cosine"
       ],
       "used_by_titles": [],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
       "dependencies": [
-        "def:right-triangle-trig-ratios",
+        "def:right-triangle-sine",
+        "def:right-triangle-cosine",
         "thm:sine-cosine-well-defined"
       ],
       "proof_dependencies": [],
@@ -4923,9 +5214,9 @@
       "text_preview": "The six right-triangle trigonometric ratios define functions of an acute Euclidean angle, subject to the denominator restrictions in their defining quotients."
     },
     {
-      "id": "def:unit-circle-sine-cosine",
+      "id": "def:unit-circle-cosine",
       "kind": "Definition",
-      "name": "Unit-circle sine and cosine",
+      "name": "Unit-circle cosine",
       "deck": "",
       "chapter": "trigonometry",
       "chapter_title": "Trigonometry",
@@ -4938,9 +5229,64 @@
       "book_order": 3,
       "book_dir": "volume-i/book-geometry",
       "source": "foundations/trig-foundations.tex",
-      "statement_display": "Let $\\theta$ be an angle in standard position, and let $P(\\theta)=(x_\\theta,\ny_\\theta)$ be the point where its terminal ray meets the unit circle. Define\n\\[\n  \\cos\\theta=x_\\theta,\\qquad \\sin\\theta=y_\\theta.\n\\]",
-      "statement_tex": "Let $\\theta$ be an angle in standard position, and let $P(\\theta)=(x_\\theta,\ny_\\theta)$ be the point where its terminal ray meets the unit circle. Define\n\\[\n  \\cos\\theta=x_\\theta,\\qquad \\sin\\theta=y_\\theta.\n\\]",
-      "source_text": "Let $\\theta$ be an angle in standard position, and let $P(\\theta)=(x_\\theta,\ny_\\theta)$ be the point where its terminal ray meets the unit circle. Define\n\\[\n  \\cos\\theta=x_\\theta,\\qquad \\sin\\theta=y_\\theta.\n\\]",
+      "statement_display": "Let $\\theta$ be an angle in standard position, and let $P(\\theta)=(x_\\theta,\ny_\\theta)$ be the point where its terminal ray meets the unit circle. Define\n\\[\n  \\cos\\theta=x_\\theta.\n\\]",
+      "statement_tex": "Let $\\theta$ be an angle in standard position, and let $P(\\theta)=(x_\\theta,\ny_\\theta)$ be the point where its terminal ray meets the unit circle. Define\n\\[\n  \\cos\\theta=x_\\theta.\n\\]",
+      "source_text": "Let $\\theta$ be an angle in standard position, and let $P(\\theta)=(x_\\theta,\ny_\\theta)$ be the point where its terminal ray meets the unit circle. Define\n\\[\n  \\cos\\theta=x_\\theta.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": false,
+      "proof_source": "",
+      "proof_sketch_source": "",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:unit-circle-agrees-with-right-triangle-trig",
+        "def:extended-cosecant",
+        "def:radian-measure",
+        "thm:pythagorean-trig-identity"
+      ],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Unit-circle agreement with right-triangle trigonometry",
+        "Extended cosecant",
+        "Radian measure",
+        "Pythagorean identity"
+      ],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Let $\\theta$ be an angle in standard position, and let $P(\\theta)=(x_\\theta, y_\\theta)$ be the point where its terminal ray meets the unit circle. Define \\[ \\cos\\theta=x_\\theta. \\]"
+    },
+    {
+      "id": "def:unit-circle-sine",
+      "kind": "Definition",
+      "name": "Unit-circle sine",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "Let $\\theta$ be an angle in standard position, and let $P(\\theta)=(x_\\theta,\ny_\\theta)$ be the point where its terminal ray meets the unit circle. Define\n\\[\n  \\sin\\theta=y_\\theta.\n\\]",
+      "statement_tex": "Let $\\theta$ be an angle in standard position, and let $P(\\theta)=(x_\\theta,\ny_\\theta)$ be the point where its terminal ray meets the unit circle. Define\n\\[\n  \\sin\\theta=y_\\theta.\n\\]",
+      "source_text": "Let $\\theta$ be an angle in standard position, and let $P(\\theta)=(x_\\theta,\ny_\\theta)$ be the point where its terminal ray meets the unit circle. Define\n\\[\n  \\sin\\theta=y_\\theta.\n\\]",
       "section": "",
       "section_title": "",
       "has_proof_file": false,
@@ -4953,7 +5299,7 @@
       ],
       "used_by_ids": [
         "thm:unit-circle-agrees-with-right-triangle-trig",
-        "def:extended-trig-functions",
+        "def:extended-cosecant",
         "def:radian-measure",
         "thm:pythagorean-trig-identity"
       ],
@@ -4969,7 +5315,7 @@
       ],
       "used_by_titles": [
         "Unit-circle agreement with right-triangle trigonometry",
-        "Extended tangent, cotangent, secant, and cosecant",
+        "Extended cosecant",
         "Radian measure",
         "Pythagorean identity"
       ],
@@ -4987,7 +5333,7 @@
       "is_root": false,
       "root_kind": "",
       "env_name": "definition",
-      "text_preview": "Let $\\theta$ be an angle in standard position, and let $P(\\theta)=(x_\\theta, y_\\theta)$ be the point where its terminal ray meets the unit circle. Define \\[ \\cos\\theta=x_\\theta,\\qquad \\sin\\theta=y_\\theta. \\]"
+      "text_preview": "Let $\\theta$ be an angle in standard position, and let $P(\\theta)=(x_\\theta, y_\\theta)$ be the point where its terminal ray meets the unit circle. Define \\[ \\sin\\theta=y_\\theta. \\]"
     },
     {
       "id": "thm:unit-circle-agrees-with-right-triangle-trig",
@@ -5014,11 +5360,13 @@
       "proof_source": "foundations/proofs/prf-unit-circle-agrees-with-right-triangle-trig.tex",
       "proof_sketch_source": "todo_stub_skipped",
       "depends_on_ids": [
-        "def:sine-cosine",
-        "def:unit-circle-sine-cosine"
+        "def:acute-angle-sine",
+        "def:acute-angle-cosine",
+        "def:unit-circle-cosine",
+        "def:unit-circle-sine"
       ],
       "used_by_ids": [
-        "def:extended-trig-functions"
+        "def:extended-cosecant"
       ],
       "proof_depends_on_ids": [],
       "proof_used_by_ids": [],
@@ -5026,17 +5374,21 @@
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Sine and Cosine via Power Series",
-        "Unit-circle sine and cosine"
+        "Acute-angle sine",
+        "Acute-angle cosine",
+        "Unit-circle cosine",
+        "Unit-circle sine"
       ],
       "used_by_titles": [
-        "Extended tangent, cotangent, secant, and cosecant"
+        "Extended cosecant"
       ],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
       "dependencies": [
-        "def:sine-cosine",
-        "def:unit-circle-sine-cosine"
+        "def:acute-angle-sine",
+        "def:acute-angle-cosine",
+        "def:unit-circle-cosine",
+        "def:unit-circle-sine"
       ],
       "proof_dependencies": [],
       "ignored": false,
@@ -5048,9 +5400,9 @@
       "text_preview": "For $0<\\theta<90^\\circ$, the unit-circle definitions of sine and cosine agree with the right-triangle definitions."
     },
     {
-      "id": "def:extended-trig-functions",
+      "id": "def:extended-tangent",
       "kind": "Definition",
-      "name": "Extended tangent, cotangent, secant, and cosecant",
+      "name": "Extended tangent",
       "deck": "",
       "chapter": "trigonometry",
       "chapter_title": "Trigonometry",
@@ -5063,33 +5415,191 @@
       "book_order": 3,
       "book_dir": "volume-i/book-geometry",
       "source": "foundations/trig-foundations.tex",
-      "statement_display": "Where the displayed denominators are nonzero, define\n\\[\n  \\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta},\\quad\n  \\cot\\theta=\\frac{\\cos\\theta}{\\sin\\theta},\\quad\n  \\sec\\theta=\\frac{1}{\\cos\\theta},\\quad\n  \\csc\\theta=\\frac{1}{\\sin\\theta}.\n\\]",
-      "statement_tex": "Where the displayed denominators are nonzero, define\n\\[\n  \\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta},\\quad\n  \\cot\\theta=\\frac{\\cos\\theta}{\\sin\\theta},\\quad\n  \\sec\\theta=\\frac{1}{\\cos\\theta},\\quad\n  \\csc\\theta=\\frac{1}{\\sin\\theta}.\n\\]",
-      "source_text": "Where the displayed denominators are nonzero, define\n\\[\n  \\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta},\\quad\n  \\cot\\theta=\\frac{\\cos\\theta}{\\sin\\theta},\\quad\n  \\sec\\theta=\\frac{1}{\\cos\\theta},\\quad\n  \\csc\\theta=\\frac{1}{\\sin\\theta}.\n\\]",
+      "statement_display": "Where $\\cos\\theta\\neq 0$, define\n\\[\n  \\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}.\n\\]",
+      "statement_tex": "Where $\\cos\\theta\\neq 0$, define\n\\[\n  \\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}.\n\\]",
+      "source_text": "Where $\\cos\\theta\\neq 0$, define\n\\[\n  \\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": false,
+      "proof_source": "",
+      "proof_sketch_source": "",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:trig-reciprocal-identities",
+        "thm:trig-quotient-identities"
+      ],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Reciprocal identities",
+        "Quotient identities"
+      ],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Where $\\cos\\theta\\neq 0$, define \\[ \\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}. \\]"
+    },
+    {
+      "id": "def:extended-cotangent",
+      "kind": "Definition",
+      "name": "Extended cotangent",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "Where $\\sin\\theta\\neq 0$, define\n\\[\n  \\cot\\theta=\\frac{\\cos\\theta}{\\sin\\theta}.\n\\]",
+      "statement_tex": "Where $\\sin\\theta\\neq 0$, define\n\\[\n  \\cot\\theta=\\frac{\\cos\\theta}{\\sin\\theta}.\n\\]",
+      "source_text": "Where $\\sin\\theta\\neq 0$, define\n\\[\n  \\cot\\theta=\\frac{\\cos\\theta}{\\sin\\theta}.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": false,
+      "proof_source": "",
+      "proof_sketch_source": "",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:trig-reciprocal-identities",
+        "thm:trig-quotient-identities"
+      ],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Reciprocal identities",
+        "Quotient identities"
+      ],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Where $\\sin\\theta\\neq 0$, define \\[ \\cot\\theta=\\frac{\\cos\\theta}{\\sin\\theta}. \\]"
+    },
+    {
+      "id": "def:extended-secant",
+      "kind": "Definition",
+      "name": "Extended secant",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "Where $\\cos\\theta\\neq 0$, define\n\\[\n  \\sec\\theta=\\frac{1}{\\cos\\theta}.\n\\]",
+      "statement_tex": "Where $\\cos\\theta\\neq 0$, define\n\\[\n  \\sec\\theta=\\frac{1}{\\cos\\theta}.\n\\]",
+      "source_text": "Where $\\cos\\theta\\neq 0$, define\n\\[\n  \\sec\\theta=\\frac{1}{\\cos\\theta}.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": false,
+      "proof_source": "",
+      "proof_sketch_source": "",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "thm:trig-reciprocal-identities"
+      ],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Reciprocal identities"
+      ],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": false,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "definition",
+      "text_preview": "Where $\\cos\\theta\\neq 0$, define \\[ \\sec\\theta=\\frac{1}{\\cos\\theta}. \\]"
+    },
+    {
+      "id": "def:extended-cosecant",
+      "kind": "Definition",
+      "name": "Extended cosecant",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "Where $\\sin\\theta\\neq 0$, define\n\\[\n  \\csc\\theta=\\frac{1}{\\sin\\theta}.\n\\]",
+      "statement_tex": "Where $\\sin\\theta\\neq 0$, define\n\\[\n  \\csc\\theta=\\frac{1}{\\sin\\theta}.\n\\]",
+      "source_text": "Where $\\sin\\theta\\neq 0$, define\n\\[\n  \\csc\\theta=\\frac{1}{\\sin\\theta}.\n\\]",
       "section": "",
       "section_title": "",
       "has_proof_file": false,
       "proof_source": "",
       "proof_sketch_source": "",
       "depends_on_ids": [
-        "def:unit-circle-sine-cosine",
+        "def:unit-circle-cosine",
+        "def:unit-circle-sine",
         "thm:unit-circle-agrees-with-right-triangle-trig"
       ],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:trig-reciprocal-identities"
+      ],
       "proof_depends_on_ids": [],
       "proof_used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Unit-circle sine and cosine",
+        "Unit-circle cosine",
+        "Unit-circle sine",
         "Unit-circle agreement with right-triangle trigonometry"
       ],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Reciprocal identities"
+      ],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
       "dependencies": [
-        "def:unit-circle-sine-cosine",
+        "def:unit-circle-cosine",
+        "def:unit-circle-sine",
         "thm:unit-circle-agrees-with-right-triangle-trig"
       ],
       "proof_dependencies": [],
@@ -5099,7 +5609,7 @@
       "is_root": false,
       "root_kind": "",
       "env_name": "definition",
-      "text_preview": "Where the displayed denominators are nonzero, define \\[ \\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta},\\quad \\cot\\theta=\\frac{\\cos\\theta}{\\sin\\theta},\\quad \\sec\\theta=\\frac{1}{\\cos\\theta},\\quad \\csc\\theta=\\frac{1}{\\sin\\theta}. \\]"
+      "text_preview": "Where $\\sin\\theta\\neq 0$, define \\[ \\csc\\theta=\\frac{1}{\\sin\\theta}. \\]"
     },
     {
       "id": "def:radian-measure",
@@ -5126,7 +5636,8 @@
       "proof_source": "",
       "proof_sketch_source": "",
       "depends_on_ids": [
-        "def:unit-circle-sine-cosine",
+        "def:unit-circle-cosine",
+        "def:unit-circle-sine",
         "def:euclid-circle"
       ],
       "used_by_ids": [],
@@ -5136,14 +5647,16 @@
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Unit-circle sine and cosine",
+        "Unit-circle cosine",
+        "Unit-circle sine",
         "Circle"
       ],
       "used_by_titles": [],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
       "dependencies": [
-        "def:unit-circle-sine-cosine",
+        "def:unit-circle-cosine",
+        "def:unit-circle-sine",
         "def:euclid-circle"
       ],
       "proof_dependencies": [],
@@ -5180,14 +5693,18 @@
       "proof_source": "foundations/proofs/prf-trig-symmetry-periodicity.tex",
       "proof_sketch_source": "todo_stub_skipped",
       "depends_on_ids": [],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:trig-angle-difference-identities"
+      ],
       "proof_depends_on_ids": [],
       "proof_used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Angle-difference identities"
+      ],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
       "dependencies": [],
@@ -5226,23 +5743,34 @@
       "proof_sketch_source": "todo_stub_skipped",
       "depends_on_ids": [
         "thm:euclid-i-47",
-        "def:unit-circle-sine-cosine"
+        "def:unit-circle-cosine",
+        "def:unit-circle-sine"
       ],
-      "used_by_ids": [],
+      "used_by_ids": [
+        "thm:trig-tangent-pythagorean-identities",
+        "thm:trig-angle-sum-identities",
+        "thm:trig-double-angle-identities"
+      ],
       "proof_depends_on_ids": [],
       "proof_used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Unit-circle sine and cosine"
+        "Unit-circle cosine",
+        "Unit-circle sine"
       ],
-      "used_by_titles": [],
+      "used_by_titles": [
+        "Tangent and secant Pythagorean identities",
+        "Angle-sum identities",
+        "Double-angle identities"
+      ],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
       "dependencies": [
         "thm:euclid-i-47",
-        "def:unit-circle-sine-cosine"
+        "def:unit-circle-cosine",
+        "def:unit-circle-sine"
       ],
       "proof_dependencies": [],
       "ignored": false,
@@ -5254,9 +5782,9 @@
       "text_preview": "For every angle in the unit-circle domain, \\[ \\cos^2\\theta+\\sin^2\\theta=1. \\]"
     },
     {
-      "id": "thm:trig-angle-sum-difference",
+      "id": "thm:trig-reciprocal-identities",
       "kind": "Theorem",
-      "name": "Angle-sum and difference identities",
+      "name": "Reciprocal identities",
       "deck": "",
       "chapter": "trigonometry",
       "chapter_title": "Trigonometry",
@@ -5269,26 +5797,45 @@
       "book_order": 3,
       "book_dir": "volume-i/book-geometry",
       "source": "foundations/trig-foundations.tex",
-      "statement_display": "The sine and cosine of a sum or difference of angles are determined by the\nstandard angle-sum and angle-difference formulas.",
-      "statement_tex": "The sine and cosine of a sum or difference of angles are determined by the\nstandard angle-sum and angle-difference formulas.",
-      "source_text": "The sine and cosine of a sum or difference of angles are determined by the\nstandard angle-sum and angle-difference formulas.",
+      "statement_display": "Where both sides are defined,\n\\[\n  \\sec\\theta=\\frac{1}{\\cos\\theta},\\qquad\n  \\csc\\theta=\\frac{1}{\\sin\\theta},\\qquad\n  \\cot\\theta=\\frac{1}{\\tan\\theta}.\n\\]",
+      "statement_tex": "Where both sides are defined,\n\\[\n  \\sec\\theta=\\frac{1}{\\cos\\theta},\\qquad\n  \\csc\\theta=\\frac{1}{\\sin\\theta},\\qquad\n  \\cot\\theta=\\frac{1}{\\tan\\theta}.\n\\]",
+      "source_text": "Where both sides are defined,\n\\[\n  \\sec\\theta=\\frac{1}{\\cos\\theta},\\qquad\n  \\csc\\theta=\\frac{1}{\\sin\\theta},\\qquad\n  \\cot\\theta=\\frac{1}{\\tan\\theta}.\n\\]",
       "section": "",
       "section_title": "",
       "has_proof_file": true,
-      "proof_source": "foundations/proofs/prf-trig-angle-sum-difference.tex",
+      "proof_source": "foundations/proofs/prf-trig-reciprocal-identities.tex",
       "proof_sketch_source": "todo_stub_skipped",
-      "depends_on_ids": [],
-      "used_by_ids": [],
+      "depends_on_ids": [
+        "def:extended-tangent",
+        "def:extended-cotangent",
+        "def:extended-secant",
+        "def:extended-cosecant"
+      ],
+      "used_by_ids": [
+        "thm:trig-tangent-pythagorean-identities"
+      ],
       "proof_depends_on_ids": [],
       "proof_used_by_ids": [],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [],
-      "used_by_titles": [],
+      "depends_on_titles": [
+        "Extended tangent",
+        "Extended cotangent",
+        "Extended secant",
+        "Extended cosecant"
+      ],
+      "used_by_titles": [
+        "Tangent and secant Pythagorean identities"
+      ],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
-      "dependencies": [],
+      "dependencies": [
+        "def:extended-tangent",
+        "def:extended-cotangent",
+        "def:extended-secant",
+        "def:extended-cosecant"
+      ],
       "proof_dependencies": [],
       "ignored": false,
       "is_theorem_like": true,
@@ -5296,7 +5843,457 @@
       "is_root": false,
       "root_kind": "",
       "env_name": "theorem",
-      "text_preview": "The sine and cosine of a sum or difference of angles are determined by the standard angle-sum and angle-difference formulas."
+      "text_preview": "Where both sides are defined, \\[ \\sec\\theta=\\frac{1}{\\cos\\theta},\\qquad \\csc\\theta=\\frac{1}{\\sin\\theta},\\qquad \\cot\\theta=\\frac{1}{\\tan\\theta}. \\]"
+    },
+    {
+      "id": "thm:trig-quotient-identities",
+      "kind": "Theorem",
+      "name": "Quotient identities",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "Where both sides are defined,\n\\[\n  \\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta},\\qquad\n  \\cot\\theta=\\frac{\\cos\\theta}{\\sin\\theta}.\n\\]",
+      "statement_tex": "Where both sides are defined,\n\\[\n  \\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta},\\qquad\n  \\cot\\theta=\\frac{\\cos\\theta}{\\sin\\theta}.\n\\]",
+      "source_text": "Where both sides are defined,\n\\[\n  \\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta},\\qquad\n  \\cot\\theta=\\frac{\\cos\\theta}{\\sin\\theta}.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": true,
+      "proof_source": "foundations/proofs/prf-trig-quotient-identities.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "def:extended-tangent",
+        "def:extended-cotangent"
+      ],
+      "used_by_ids": [
+        "thm:trig-tangent-pythagorean-identities"
+      ],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Extended tangent",
+        "Extended cotangent"
+      ],
+      "used_by_titles": [
+        "Tangent and secant Pythagorean identities"
+      ],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:extended-tangent",
+        "def:extended-cotangent"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "Where both sides are defined, \\[ \\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta},\\qquad \\cot\\theta=\\frac{\\cos\\theta}{\\sin\\theta}. \\]"
+    },
+    {
+      "id": "thm:trig-tangent-pythagorean-identities",
+      "kind": "Theorem",
+      "name": "Tangent and secant Pythagorean identities",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "Where both sides are defined,\n\\[\n  1+\\tan^2\\theta=\\sec^2\\theta,\n  \\qquad\n  1+\\cot^2\\theta=\\csc^2\\theta.\n\\]",
+      "statement_tex": "Where both sides are defined,\n\\[\n  1+\\tan^2\\theta=\\sec^2\\theta,\n  \\qquad\n  1+\\cot^2\\theta=\\csc^2\\theta.\n\\]",
+      "source_text": "Where both sides are defined,\n\\[\n  1+\\tan^2\\theta=\\sec^2\\theta,\n  \\qquad\n  1+\\cot^2\\theta=\\csc^2\\theta.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": true,
+      "proof_source": "foundations/proofs/prf-trig-tangent-pythagorean-identities.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "thm:pythagorean-trig-identity",
+        "thm:trig-quotient-identities",
+        "thm:trig-reciprocal-identities"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Pythagorean identity",
+        "Quotient identities",
+        "Reciprocal identities"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "thm:pythagorean-trig-identity",
+        "thm:trig-quotient-identities",
+        "thm:trig-reciprocal-identities"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "Where both sides are defined, \\[ 1+\\tan^2\\theta=\\sec^2\\theta, \\qquad 1+\\cot^2\\theta=\\csc^2\\theta. \\]"
+    },
+    {
+      "id": "thm:trig-angle-sum-identities",
+      "kind": "Theorem",
+      "name": "Angle-sum identities",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "For angles in the unit-circle domain,\n\\[\n  \\cos(\\alpha+\\beta)=\\cos\\alpha\\cos\\beta-\\sin\\alpha\\sin\\beta,\n\\]\n\\[\n  \\sin(\\alpha+\\beta)=\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta.\n\\]",
+      "statement_tex": "For angles in the unit-circle domain,\n\\[\n  \\cos(\\alpha+\\beta)=\\cos\\alpha\\cos\\beta-\\sin\\alpha\\sin\\beta,\n\\]\n\\[\n  \\sin(\\alpha+\\beta)=\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta.\n\\]",
+      "source_text": "For angles in the unit-circle domain,\n\\[\n  \\cos(\\alpha+\\beta)=\\cos\\alpha\\cos\\beta-\\sin\\alpha\\sin\\beta,\n\\]\n\\[\n  \\sin(\\alpha+\\beta)=\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": true,
+      "proof_source": "foundations/proofs/prf-trig-angle-sum-identities.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "thm:pythagorean-trig-identity"
+      ],
+      "used_by_ids": [
+        "thm:trig-angle-difference-identities",
+        "thm:trig-double-angle-identities",
+        "thm:trig-product-to-sum-identities"
+      ],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Pythagorean identity"
+      ],
+      "used_by_titles": [
+        "Angle-difference identities",
+        "Double-angle identities",
+        "Product-to-sum identities"
+      ],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "thm:pythagorean-trig-identity"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For angles in the unit-circle domain, \\[ \\cos(\\alpha+\\beta)=\\cos\\alpha\\cos\\beta-\\sin\\alpha\\sin\\beta, \\] \\[ \\sin(\\alpha+\\beta)=\\sin\\alpha\\cos\\beta+\\cos\\alpha\\sin\\beta. \\]"
+    },
+    {
+      "id": "thm:trig-angle-difference-identities",
+      "kind": "Theorem",
+      "name": "Angle-difference identities",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "For angles in the unit-circle domain,\n\\[\n  \\cos(\\alpha-\\beta)=\\cos\\alpha\\cos\\beta+\\sin\\alpha\\sin\\beta,\n\\]\n\\[\n  \\sin(\\alpha-\\beta)=\\sin\\alpha\\cos\\beta-\\cos\\alpha\\sin\\beta.\n\\]",
+      "statement_tex": "For angles in the unit-circle domain,\n\\[\n  \\cos(\\alpha-\\beta)=\\cos\\alpha\\cos\\beta+\\sin\\alpha\\sin\\beta,\n\\]\n\\[\n  \\sin(\\alpha-\\beta)=\\sin\\alpha\\cos\\beta-\\cos\\alpha\\sin\\beta.\n\\]",
+      "source_text": "For angles in the unit-circle domain,\n\\[\n  \\cos(\\alpha-\\beta)=\\cos\\alpha\\cos\\beta+\\sin\\alpha\\sin\\beta,\n\\]\n\\[\n  \\sin(\\alpha-\\beta)=\\sin\\alpha\\cos\\beta-\\cos\\alpha\\sin\\beta.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": true,
+      "proof_source": "foundations/proofs/prf-trig-angle-difference-identities.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "thm:trig-angle-sum-identities",
+        "thm:trig-symmetry-periodicity"
+      ],
+      "used_by_ids": [
+        "thm:trig-product-to-sum-identities"
+      ],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Angle-sum identities",
+        "Symmetry and periodicity of sine and cosine"
+      ],
+      "used_by_titles": [
+        "Product-to-sum identities"
+      ],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "thm:trig-angle-sum-identities",
+        "thm:trig-symmetry-periodicity"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For angles in the unit-circle domain, \\[ \\cos(\\alpha-\\beta)=\\cos\\alpha\\cos\\beta+\\sin\\alpha\\sin\\beta, \\] \\[ \\sin(\\alpha-\\beta)=\\sin\\alpha\\cos\\beta-\\cos\\alpha\\sin\\beta. \\]"
+    },
+    {
+      "id": "thm:trig-double-angle-identities",
+      "kind": "Theorem",
+      "name": "Double-angle identities",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "For angles in the unit-circle domain,\n\\[\n  \\sin(2\\theta)=2\\sin\\theta\\cos\\theta,\n\\]\n\\[\n  \\cos(2\\theta)=\\cos^2\\theta-\\sin^2\\theta\n  =2\\cos^2\\theta-1\n  =1-2\\sin^2\\theta.\n\\]",
+      "statement_tex": "For angles in the unit-circle domain,\n\\[\n  \\sin(2\\theta)=2\\sin\\theta\\cos\\theta,\n\\]\n\\[\n  \\cos(2\\theta)=\\cos^2\\theta-\\sin^2\\theta\n  =2\\cos^2\\theta-1\n  =1-2\\sin^2\\theta.\n\\]",
+      "source_text": "For angles in the unit-circle domain,\n\\[\n  \\sin(2\\theta)=2\\sin\\theta\\cos\\theta,\n\\]\n\\[\n  \\cos(2\\theta)=\\cos^2\\theta-\\sin^2\\theta\n  =2\\cos^2\\theta-1\n  =1-2\\sin^2\\theta.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": true,
+      "proof_source": "foundations/proofs/prf-trig-double-angle-identities.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "thm:trig-angle-sum-identities",
+        "thm:pythagorean-trig-identity"
+      ],
+      "used_by_ids": [
+        "thm:trig-half-angle-identities"
+      ],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Angle-sum identities",
+        "Pythagorean identity"
+      ],
+      "used_by_titles": [
+        "Half-angle identities"
+      ],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "thm:trig-angle-sum-identities",
+        "thm:pythagorean-trig-identity"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For angles in the unit-circle domain, \\[ \\sin(2\\theta)=2\\sin\\theta\\cos\\theta, \\] \\[ \\cos(2\\theta)=\\cos^2\\theta-\\sin^2\\theta =2\\cos^2\\theta-1 =1-2\\sin^2\\theta. \\]"
+    },
+    {
+      "id": "thm:trig-half-angle-identities",
+      "kind": "Theorem",
+      "name": "Half-angle identities",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "Where the signs are chosen according to the quadrant of $\\theta/2$,\n\\[\n  \\sin\\frac{\\theta}{2}=\\pm\\sqrt{\\frac{1-\\cos\\theta}{2}},\n  \\qquad\n  \\cos\\frac{\\theta}{2}=\\pm\\sqrt{\\frac{1+\\cos\\theta}{2}}.\n\\]",
+      "statement_tex": "Where the signs are chosen according to the quadrant of $\\theta/2$,\n\\[\n  \\sin\\frac{\\theta}{2}=\\pm\\sqrt{\\frac{1-\\cos\\theta}{2}},\n  \\qquad\n  \\cos\\frac{\\theta}{2}=\\pm\\sqrt{\\frac{1+\\cos\\theta}{2}}.\n\\]",
+      "source_text": "Where the signs are chosen according to the quadrant of $\\theta/2$,\n\\[\n  \\sin\\frac{\\theta}{2}=\\pm\\sqrt{\\frac{1-\\cos\\theta}{2}},\n  \\qquad\n  \\cos\\frac{\\theta}{2}=\\pm\\sqrt{\\frac{1+\\cos\\theta}{2}}.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": true,
+      "proof_source": "foundations/proofs/prf-trig-half-angle-identities.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "thm:trig-double-angle-identities"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Double-angle identities"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "thm:trig-double-angle-identities"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "Where the signs are chosen according to the quadrant of $\\theta/2$, \\[ \\sin\\frac{\\theta}{2}=\\pm\\sqrt{\\frac{1-\\cos\\theta}{2}}, \\qquad \\cos\\frac{\\theta}{2}=\\pm\\sqrt{\\frac{1+\\cos\\theta}{2}}. \\]"
+    },
+    {
+      "id": "thm:trig-product-to-sum-identities",
+      "kind": "Theorem",
+      "name": "Product-to-sum identities",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "For angles in the unit-circle domain,\n\\[\n\\sin\\alpha\\cos\\beta\n=\\frac{\\sin(\\alpha+\\beta)+\\sin(\\alpha-\\beta)}{2},\n\\]\n\\[\n\\cos\\alpha\\cos\\beta\n=\\frac{\\cos(\\alpha+\\beta)+\\cos(\\alpha-\\beta)}{2},\n\\]\n\\[\n\\sin\\alpha\\sin\\beta\n=\\frac{\\cos(\\alpha-\\beta)-\\cos(\\alpha+\\beta)}{2}.\n\\]",
+      "statement_tex": "For angles in the unit-circle domain,\n\\[\n\\sin\\alpha\\cos\\beta\n=\\frac{\\sin(\\alpha+\\beta)+\\sin(\\alpha-\\beta)}{2},\n\\]\n\\[\n\\cos\\alpha\\cos\\beta\n=\\frac{\\cos(\\alpha+\\beta)+\\cos(\\alpha-\\beta)}{2},\n\\]\n\\[\n\\sin\\alpha\\sin\\beta\n=\\frac{\\cos(\\alpha-\\beta)-\\cos(\\alpha+\\beta)}{2}.\n\\]",
+      "source_text": "For angles in the unit-circle domain,\n\\[\n\\sin\\alpha\\cos\\beta\n=\\frac{\\sin(\\alpha+\\beta)+\\sin(\\alpha-\\beta)}{2},\n\\]\n\\[\n\\cos\\alpha\\cos\\beta\n=\\frac{\\cos(\\alpha+\\beta)+\\cos(\\alpha-\\beta)}{2},\n\\]\n\\[\n\\sin\\alpha\\sin\\beta\n=\\frac{\\cos(\\alpha-\\beta)-\\cos(\\alpha+\\beta)}{2}.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": true,
+      "proof_source": "foundations/proofs/prf-trig-product-to-sum-identities.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "thm:trig-angle-sum-identities",
+        "thm:trig-angle-difference-identities"
+      ],
+      "used_by_ids": [
+        "thm:trig-sum-to-product-identities"
+      ],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Angle-sum identities",
+        "Angle-difference identities"
+      ],
+      "used_by_titles": [
+        "Sum-to-product identities"
+      ],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "thm:trig-angle-sum-identities",
+        "thm:trig-angle-difference-identities"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For angles in the unit-circle domain, \\[ \\sin\\alpha\\cos\\beta =\\frac{\\sin(\\alpha+\\beta)+\\sin(\\alpha-\\beta)}{2}, \\] \\[ \\cos\\alpha\\cos\\beta =\\frac{\\cos(\\alpha+\\beta)+\\cos(\\alpha-\\beta)}{2}, \\] \\[ \\sin\\alpha\\sin\\beta =\\frac{\\cos(\\alpha-\\beta)-\\"
+    },
+    {
+      "id": "thm:trig-sum-to-product-identities",
+      "kind": "Theorem",
+      "name": "Sum-to-product identities",
+      "deck": "",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "series_title": "From Cantor to Ito",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_order": 3,
+      "book_dir": "volume-i/book-geometry",
+      "source": "foundations/trig-foundations.tex",
+      "statement_display": "For angles in the unit-circle domain,\n\\[\n\\sin u+\\sin v\n=2\\sin\\frac{u+v}{2}\\cos\\frac{u-v}{2},\n\\]\n\\[\n\\cos u+\\cos v\n=2\\cos\\frac{u+v}{2}\\cos\\frac{u-v}{2},\n\\]\n\\[\n\\cos u-\\cos v\n=-2\\sin\\frac{u+v}{2}\\sin\\frac{u-v}{2}.\n\\]",
+      "statement_tex": "For angles in the unit-circle domain,\n\\[\n\\sin u+\\sin v\n=2\\sin\\frac{u+v}{2}\\cos\\frac{u-v}{2},\n\\]\n\\[\n\\cos u+\\cos v\n=2\\cos\\frac{u+v}{2}\\cos\\frac{u-v}{2},\n\\]\n\\[\n\\cos u-\\cos v\n=-2\\sin\\frac{u+v}{2}\\sin\\frac{u-v}{2}.\n\\]",
+      "source_text": "For angles in the unit-circle domain,\n\\[\n\\sin u+\\sin v\n=2\\sin\\frac{u+v}{2}\\cos\\frac{u-v}{2},\n\\]\n\\[\n\\cos u+\\cos v\n=2\\cos\\frac{u+v}{2}\\cos\\frac{u-v}{2},\n\\]\n\\[\n\\cos u-\\cos v\n=-2\\sin\\frac{u+v}{2}\\sin\\frac{u-v}{2}.\n\\]",
+      "section": "",
+      "section_title": "",
+      "has_proof_file": true,
+      "proof_source": "foundations/proofs/prf-trig-sum-to-product-identities.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "thm:trig-product-to-sum-identities"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Product-to-sum identities"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "thm:trig-product-to-sum-identities"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "For angles in the unit-circle domain, \\[ \\sin u+\\sin v =2\\sin\\frac{u+v}{2}\\cos\\frac{u-v}{2}, \\] \\[ \\cos u+\\cos v =2\\cos\\frac{u+v}{2}\\cos\\frac{u-v}{2}, \\] \\[ \\cos u-\\cos v =-2\\sin\\frac{u+v}{2}\\sin\\frac{u-v}{2}. \\]"
     },
     {
       "id": "def:axiom",
@@ -32886,7 +33883,7 @@
         "def:point-slope-form",
         "def:vector-parametric-form",
         "def:affine-parametric-line",
-        "def:unit-circle-sine-cosine",
+        "def:unit-circle-sine",
         "def:graph",
         "def:l-structure",
         "def:box"
@@ -32906,7 +33903,7 @@
         "Point-slope form",
         "Vector parametric form",
         "Affine parametric line in $\\mathbb{R}^n$",
-        "Unit-circle sine and cosine",
+        "Unit-circle sine",
         "Graph of a Function",
         "$\\mathcal{L}$-Structure",
         "Box / Product Interval"
@@ -112460,14 +113457,8 @@
       "has_proof_file": false,
       "proof_source": "",
       "proof_sketch_source": "",
-      "depends_on_ids": [
-        "def:right-triangle-trig-ratios"
-      ],
+      "depends_on_ids": [],
       "used_by_ids": [
-        "def:normal-form-line",
-        "def:symmetric-form-line",
-        "thm:sine-cosine-well-defined",
-        "thm:unit-circle-agrees-with-right-triangle-trig",
         "prop:trig-addition-formulas",
         "def:other-trig",
         "def:inverse-trig",
@@ -112479,14 +113470,8 @@
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
-      "depends_on_titles": [
-        "Right-triangle trigonometric ratios"
-      ],
+      "depends_on_titles": [],
       "used_by_titles": [
-        "Normal form",
-        "Symmetric form",
-        "Well-definedness of sine and cosine",
-        "Unit-circle agreement with right-triangle trigonometry",
         "Addition Formulas",
         "Tangent, Cotangent, Secant, Cosecant",
         "Inverse Trigonometric Functions",
@@ -112495,9 +113480,7 @@
       ],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
-      "dependencies": [
-        "def:right-triangle-trig-ratios"
-      ],
+      "dependencies": [],
       "proof_dependencies": [],
       "ignored": false,
       "is_theorem_like": false,
@@ -131782,7 +132765,12 @@
     },
     {
       "from": "def:normal-form-line",
-      "to": "def:sine-cosine",
+      "to": "def:acute-angle-sine",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:normal-form-line",
+      "to": "def:acute-angle-cosine",
       "kind": "depends_on"
     },
     {
@@ -131797,7 +132785,12 @@
     },
     {
       "from": "def:symmetric-form-line",
-      "to": "def:sine-cosine",
+      "to": "def:acute-angle-sine",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:symmetric-form-line",
+      "to": "def:acute-angle-cosine",
       "kind": "depends_on"
     },
     {
@@ -132351,18 +133344,23 @@
       "kind": "proof_depends_on"
     },
     {
-      "from": "def:right-triangle-trig-ratios",
+      "from": "def:right-triangle-cosecant",
       "to": "def:euclid-triangle-angle-classes",
       "kind": "depends_on"
     },
     {
-      "from": "def:right-triangle-trig-ratios",
+      "from": "def:right-triangle-cosecant",
       "to": "def:euclid-right-angle-and-perpendicular",
       "kind": "depends_on"
     },
     {
-      "from": "def:sine-cosine",
-      "to": "def:right-triangle-trig-ratios",
+      "from": "def:acute-angle-cosine",
+      "to": "def:right-triangle-sine",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:acute-angle-cosine",
+      "to": "def:right-triangle-cosine",
       "kind": "depends_on"
     },
     {
@@ -132372,7 +133370,12 @@
     },
     {
       "from": "thm:sine-cosine-well-defined",
-      "to": "def:sine-cosine",
+      "to": "def:acute-angle-sine",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:sine-cosine-well-defined",
+      "to": "def:acute-angle-cosine",
       "kind": "depends_on"
     },
     {
@@ -132382,7 +133385,12 @@
     },
     {
       "from": "thm:six-trig-functions",
-      "to": "def:right-triangle-trig-ratios",
+      "to": "def:right-triangle-sine",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:six-trig-functions",
+      "to": "def:right-triangle-cosine",
       "kind": "depends_on"
     },
     {
@@ -132391,43 +133399,63 @@
       "kind": "depends_on"
     },
     {
-      "from": "def:unit-circle-sine-cosine",
+      "from": "def:unit-circle-sine",
       "to": "def:euclid-circle",
       "kind": "depends_on"
     },
     {
-      "from": "def:unit-circle-sine-cosine",
+      "from": "def:unit-circle-sine",
       "to": "def:cartesian-product",
       "kind": "depends_on"
     },
     {
-      "from": "def:unit-circle-sine-cosine",
+      "from": "def:unit-circle-sine",
       "to": "thm:sine-cosine-well-defined",
       "kind": "depends_on"
     },
     {
       "from": "thm:unit-circle-agrees-with-right-triangle-trig",
-      "to": "def:sine-cosine",
+      "to": "def:acute-angle-sine",
       "kind": "depends_on"
     },
     {
       "from": "thm:unit-circle-agrees-with-right-triangle-trig",
-      "to": "def:unit-circle-sine-cosine",
+      "to": "def:acute-angle-cosine",
       "kind": "depends_on"
     },
     {
-      "from": "def:extended-trig-functions",
-      "to": "def:unit-circle-sine-cosine",
+      "from": "thm:unit-circle-agrees-with-right-triangle-trig",
+      "to": "def:unit-circle-cosine",
       "kind": "depends_on"
     },
     {
-      "from": "def:extended-trig-functions",
+      "from": "thm:unit-circle-agrees-with-right-triangle-trig",
+      "to": "def:unit-circle-sine",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:extended-cosecant",
+      "to": "def:unit-circle-cosine",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:extended-cosecant",
+      "to": "def:unit-circle-sine",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:extended-cosecant",
       "to": "thm:unit-circle-agrees-with-right-triangle-trig",
       "kind": "depends_on"
     },
     {
       "from": "def:radian-measure",
-      "to": "def:unit-circle-sine-cosine",
+      "to": "def:unit-circle-cosine",
+      "kind": "depends_on"
+    },
+    {
+      "from": "def:radian-measure",
+      "to": "def:unit-circle-sine",
       "kind": "depends_on"
     },
     {
@@ -132442,7 +133470,102 @@
     },
     {
       "from": "thm:pythagorean-trig-identity",
-      "to": "def:unit-circle-sine-cosine",
+      "to": "def:unit-circle-cosine",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:pythagorean-trig-identity",
+      "to": "def:unit-circle-sine",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-reciprocal-identities",
+      "to": "def:extended-tangent",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-reciprocal-identities",
+      "to": "def:extended-cotangent",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-reciprocal-identities",
+      "to": "def:extended-secant",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-reciprocal-identities",
+      "to": "def:extended-cosecant",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-quotient-identities",
+      "to": "def:extended-tangent",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-quotient-identities",
+      "to": "def:extended-cotangent",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-tangent-pythagorean-identities",
+      "to": "thm:pythagorean-trig-identity",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-tangent-pythagorean-identities",
+      "to": "thm:trig-quotient-identities",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-tangent-pythagorean-identities",
+      "to": "thm:trig-reciprocal-identities",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-angle-sum-identities",
+      "to": "thm:pythagorean-trig-identity",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-angle-difference-identities",
+      "to": "thm:trig-angle-sum-identities",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-angle-difference-identities",
+      "to": "thm:trig-symmetry-periodicity",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-double-angle-identities",
+      "to": "thm:trig-angle-sum-identities",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-double-angle-identities",
+      "to": "thm:pythagorean-trig-identity",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-half-angle-identities",
+      "to": "thm:trig-double-angle-identities",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-product-to-sum-identities",
+      "to": "thm:trig-angle-sum-identities",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-product-to-sum-identities",
+      "to": "thm:trig-angle-difference-identities",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:trig-sum-to-product-identities",
+      "to": "thm:trig-product-to-sum-identities",
       "kind": "depends_on"
     },
     {

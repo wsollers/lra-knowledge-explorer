@@ -121,7 +121,12 @@
   },
   {
     "from": "def:normal-form-line",
-    "to": "def:sine-cosine",
+    "to": "def:acute-angle-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:normal-form-line",
+    "to": "def:acute-angle-cosine",
     "kind": "depends_on"
   },
   {
@@ -136,7 +141,12 @@
   },
   {
     "from": "def:symmetric-form-line",
-    "to": "def:sine-cosine",
+    "to": "def:acute-angle-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:symmetric-form-line",
+    "to": "def:acute-angle-cosine",
     "kind": "depends_on"
   },
   {
@@ -690,18 +700,23 @@
     "kind": "proof_depends_on"
   },
   {
-    "from": "def:right-triangle-trig-ratios",
+    "from": "def:right-triangle-cosecant",
     "to": "def:euclid-triangle-angle-classes",
     "kind": "depends_on"
   },
   {
-    "from": "def:right-triangle-trig-ratios",
+    "from": "def:right-triangle-cosecant",
     "to": "def:euclid-right-angle-and-perpendicular",
     "kind": "depends_on"
   },
   {
-    "from": "def:sine-cosine",
-    "to": "def:right-triangle-trig-ratios",
+    "from": "def:acute-angle-cosine",
+    "to": "def:right-triangle-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:acute-angle-cosine",
+    "to": "def:right-triangle-cosine",
     "kind": "depends_on"
   },
   {
@@ -711,7 +726,12 @@
   },
   {
     "from": "thm:sine-cosine-well-defined",
-    "to": "def:sine-cosine",
+    "to": "def:acute-angle-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sine-cosine-well-defined",
+    "to": "def:acute-angle-cosine",
     "kind": "depends_on"
   },
   {
@@ -721,7 +741,12 @@
   },
   {
     "from": "thm:six-trig-functions",
-    "to": "def:right-triangle-trig-ratios",
+    "to": "def:right-triangle-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:six-trig-functions",
+    "to": "def:right-triangle-cosine",
     "kind": "depends_on"
   },
   {
@@ -730,43 +755,63 @@
     "kind": "depends_on"
   },
   {
-    "from": "def:unit-circle-sine-cosine",
+    "from": "def:unit-circle-sine",
     "to": "def:euclid-circle",
     "kind": "depends_on"
   },
   {
-    "from": "def:unit-circle-sine-cosine",
+    "from": "def:unit-circle-sine",
     "to": "def:cartesian-product",
     "kind": "depends_on"
   },
   {
-    "from": "def:unit-circle-sine-cosine",
+    "from": "def:unit-circle-sine",
     "to": "thm:sine-cosine-well-defined",
     "kind": "depends_on"
   },
   {
     "from": "thm:unit-circle-agrees-with-right-triangle-trig",
-    "to": "def:sine-cosine",
+    "to": "def:acute-angle-sine",
     "kind": "depends_on"
   },
   {
     "from": "thm:unit-circle-agrees-with-right-triangle-trig",
-    "to": "def:unit-circle-sine-cosine",
+    "to": "def:acute-angle-cosine",
     "kind": "depends_on"
   },
   {
-    "from": "def:extended-trig-functions",
-    "to": "def:unit-circle-sine-cosine",
+    "from": "thm:unit-circle-agrees-with-right-triangle-trig",
+    "to": "def:unit-circle-cosine",
     "kind": "depends_on"
   },
   {
-    "from": "def:extended-trig-functions",
+    "from": "thm:unit-circle-agrees-with-right-triangle-trig",
+    "to": "def:unit-circle-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:extended-cosecant",
+    "to": "def:unit-circle-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:extended-cosecant",
+    "to": "def:unit-circle-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:extended-cosecant",
     "to": "thm:unit-circle-agrees-with-right-triangle-trig",
     "kind": "depends_on"
   },
   {
     "from": "def:radian-measure",
-    "to": "def:unit-circle-sine-cosine",
+    "to": "def:unit-circle-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:radian-measure",
+    "to": "def:unit-circle-sine",
     "kind": "depends_on"
   },
   {
@@ -781,7 +826,102 @@
   },
   {
     "from": "thm:pythagorean-trig-identity",
-    "to": "def:unit-circle-sine-cosine",
+    "to": "def:unit-circle-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:pythagorean-trig-identity",
+    "to": "def:unit-circle-sine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-reciprocal-identities",
+    "to": "def:extended-tangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-reciprocal-identities",
+    "to": "def:extended-cotangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-reciprocal-identities",
+    "to": "def:extended-secant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-reciprocal-identities",
+    "to": "def:extended-cosecant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-quotient-identities",
+    "to": "def:extended-tangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-quotient-identities",
+    "to": "def:extended-cotangent",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-tangent-pythagorean-identities",
+    "to": "thm:pythagorean-trig-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-tangent-pythagorean-identities",
+    "to": "thm:trig-quotient-identities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-tangent-pythagorean-identities",
+    "to": "thm:trig-reciprocal-identities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-angle-sum-identities",
+    "to": "thm:pythagorean-trig-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-angle-difference-identities",
+    "to": "thm:trig-angle-sum-identities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-angle-difference-identities",
+    "to": "thm:trig-symmetry-periodicity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-double-angle-identities",
+    "to": "thm:trig-angle-sum-identities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-double-angle-identities",
+    "to": "thm:pythagorean-trig-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-half-angle-identities",
+    "to": "thm:trig-double-angle-identities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-product-to-sum-identities",
+    "to": "thm:trig-angle-sum-identities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-product-to-sum-identities",
+    "to": "thm:trig-angle-difference-identities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:trig-sum-to-product-identities",
+    "to": "thm:trig-product-to-sum-identities",
     "kind": "depends_on"
   },
   {
