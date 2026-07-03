@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-07-02T06:44:54.702890+00:00",
-    "version_id": 25,
+    "generated_at": "2026-07-03T21:41:01.909150+00:00",
+    "version_id": 26,
     "chapters": [
       "analytical-geometry",
       "euclidean-geometry",
@@ -49,12 +49,12 @@
       "ordinary-differential-equations",
       "numerical-analysis"
     ],
-    "node_count": 2151,
-    "edge_count": 5424,
+    "node_count": 2181,
+    "edge_count": 5481,
     "error_count": 0,
     "schema_version": "governance-export-1",
     "script": "lra-governance/tools/governance/extraction_pipeline/export_knowledge_explorer.py",
-    "source_run": "F:\\repos\\lra-governance\\runs\\extraction-20260702-064438",
+    "source_run": "F:\\repos\\lra-governance\\runs\\extraction-20260703-214046",
     "toc": [
       {
         "id": 1,
@@ -910,16 +910,16 @@
                 "title": "Bounding",
                 "sections": [
                   {
-                    "id": "completeness",
-                    "title": "Completeness"
-                  },
-                  {
                     "id": "bounds-extremals",
                     "title": "Bounds Extremals"
                   },
                   {
                     "id": "bounds-algebra",
                     "title": "Bounds Algebra"
+                  },
+                  {
+                    "id": "completeness",
+                    "title": "Completeness"
                   }
                 ]
               },
@@ -40743,6 +40743,8 @@
       "proof_sketch_source": "",
       "depends_on_ids": [],
       "used_by_ids": [
+        "prop:open-nested-intervals-need-not-have-nonempty-intersection",
+        "prop:closedness-is-necessary-in-nested-interval-theorem",
         "def:union-of-intervals",
         "def:intersection-of-intervals",
         "def:complement-of-interval",
@@ -40760,6 +40762,8 @@
       "implies_ids": [],
       "depends_on_titles": [],
       "used_by_titles": [
+        "Open Nested Intervals Need Not Have Nonempty Intersection",
+        "Closedness Is Necessary in the Nested Interval Theorem",
         "Union of Intervals",
         "Intersection of Intervals",
         "Complement of an Interval",
@@ -40808,6 +40812,18 @@
       "proof_sketch_source": "",
       "depends_on_ids": [],
       "used_by_ids": [
+        "lem:nested-closed-intervals-have-ordered-endpoints",
+        "lem:left-endpoints-nested-intervals-increasing",
+        "lem:right-endpoints-nested-intervals-decreasing",
+        "lem:left-endpoints-bounded-above-by-right-endpoints",
+        "lem:endpoint-supremum-infimum-inequality",
+        "thm:nested-interval-theorem",
+        "cor:nested-interval-intersection-contains-endpoint-supremum",
+        "cor:nested-interval-intersection-contains-endpoint-infimum",
+        "cor:nested-intervals-vanishing-length-have-unique-point",
+        "cor:nested-intervals-vanishing-length-have-equal-endpoint-limits",
+        "cor:unique-point-in-nested-intervals-is-endpoint-limit",
+        "prop:boundedness-is-necessary-in-nested-interval-theorem",
         "thm:closed-bounded-interval-compact",
         "def:bounded-subset-of-r",
         "def:union-of-intervals",
@@ -40834,6 +40850,18 @@
       "implies_ids": [],
       "depends_on_titles": [],
       "used_by_titles": [
+        "Nested Closed Intervals Have Ordered Endpoints",
+        "Left Endpoints of Nested Intervals Are Increasing",
+        "Right Endpoints of Nested Intervals Are Decreasing",
+        "Left Endpoints Are Bounded Above by Right Endpoints",
+        "Endpoint Supremum Infimum Inequality",
+        "Nested Interval Theorem",
+        "Nested Interval Intersection Contains the Endpoint Supremum",
+        "Nested Interval Intersection Contains the Endpoint Infimum",
+        "Nested Intervals with Vanishing Length Have Unique Point",
+        "Nested Intervals with Vanishing Length Have Equal Endpoint Limits",
+        "Unique Point in Nested Intervals Is Endpoint Limit",
+        "Boundedness Is Necessary in the Nested Interval Theorem",
         "Closed Bounded Intervals Are Compact",
         "Bounded Subset of the Real Line",
         "Union of Intervals",
@@ -87334,6 +87362,9 @@
         "thm:supremum-pointwise-minimum-set",
         "thm:archimedean-property",
         "def:least-upper-bound-property",
+        "lem:endpoint-supremum-infimum-inequality",
+        "thm:nested-interval-theorem",
+        "cor:nested-interval-intersection-contains-endpoint-supremum",
         "def:function-supremum-on-set",
         "def:tail-supremum-sequence",
         "thm:monotone-convergence-theorem",
@@ -87381,6 +87412,9 @@
         "Supremum of the Pointwise Minimum Set",
         "Archimedean Property",
         "Least Upper Bound Property",
+        "Endpoint Supremum Infimum Inequality",
+        "Nested Interval Theorem",
+        "Nested Interval Intersection Contains the Endpoint Supremum",
         "Supremum of a Function on a Set",
         "Tail Supremum Sequence",
         "Monotone Convergence Theorem",
@@ -87454,6 +87488,8 @@
         "thm:decreasing-image-supremum-to-infimum",
         "thm:infimum-pointwise-maximum-set",
         "thm:infimum-pointwise-minimum-set",
+        "lem:endpoint-supremum-infimum-inequality",
+        "cor:nested-interval-intersection-contains-endpoint-infimum",
         "def:function-infimum-on-set",
         "def:tail-infimum-sequence",
         "thm:tail-infima-are-increasing",
@@ -87493,6 +87529,8 @@
         "Decreasing Image Sends Supremum to Infimum",
         "Infimum of the Pointwise Maximum Set",
         "Infimum of the Pointwise Minimum Set",
+        "Endpoint Supremum Infimum Inequality",
+        "Nested Interval Intersection Contains the Endpoint Infimum",
         "Infimum of a Function on a Set",
         "Tail Infimum Sequence",
         "Tail Infima Are Increasing",
@@ -88675,11 +88713,16 @@
         "def:supremum"
       ],
       "used_by_ids": [
+        "cor:archimedean-reciprocal-form",
         "cor:archimedean-reciprocal",
+        "lem:integer-part-lemma",
         "thm:density-of-rationals-in-reals"
       ],
       "proof_depends_on_ids": [],
-      "proof_used_by_ids": [],
+      "proof_used_by_ids": [
+        "cor:archimedean-reciprocal-form",
+        "lem:integer-part-lemma"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -88688,11 +88731,16 @@
         "Supremum"
       ],
       "used_by_titles": [
-        "Archimedean Reciprocal Corollary",
-        "Density of the Rational Numbers in $\\mathbb{R}$"
+        "Archimedean Reciprocal Form",
+        "Archimedean Scaling Form",
+        "Integer Part Lemma",
+        "Density of the Rationals"
       ],
       "proof_depends_on_titles": [],
-      "proof_used_by_titles": [],
+      "proof_used_by_titles": [
+        "Archimedean Reciprocal Form",
+        "Integer Part Lemma"
+      ],
       "dependencies": [
         "ax:completeness-of-reals",
         "def:supremum"
@@ -88707,9 +88755,70 @@
       "text_preview": "For every real number $x$, there exists a natural number $n$ such that $n>x$."
     },
     {
+      "id": "cor:archimedean-reciprocal-form",
+      "kind": "Corollary",
+      "name": "Archimedean Reciprocal Form",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-archimedean-property.tex",
+      "statement_display": "For every real number $\\varepsilon>0$, there exists a natural number\n$n\\in\\mathbb{N}$ such that\n\\[\n0<\\frac{1}{n}<\\varepsilon.\n\\]",
+      "statement_tex": "For every real number $\\varepsilon>0$, there exists a natural number\n$n\\in\\mathbb{N}$ such that\n\\[\n0<\\frac{1}{n}<\\varepsilon.\n\\]",
+      "source_text": "For every real number $\\varepsilon>0$, there exists a natural number\n$n\\in\\mathbb{N}$ such that\n\\[\n0<\\frac{1}{n}<\\varepsilon.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-archimedean-reciprocal-form.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "thm:archimedean-property"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [
+        "thm:archimedean-property"
+      ],
+      "proof_used_by_ids": [
+        "thm:density-of-rationals-in-reals"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Archimedean Property"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [
+        "Archimedean Property"
+      ],
+      "proof_used_by_titles": [
+        "Density of the Rationals"
+      ],
+      "dependencies": [
+        "thm:archimedean-property"
+      ],
+      "proof_dependencies": [
+        "thm:archimedean-property"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "corollary",
+      "text_preview": "For every real number $\\varepsilon>0$, there exists a natural number $n\\in\\mathbb{N}$ such that \\[ 0<\\frac{1}{n}<\\varepsilon. \\]"
+    },
+    {
       "id": "cor:archimedean-reciprocal",
       "kind": "Corollary",
-      "name": "Archimedean Reciprocal Corollary",
+      "name": "Archimedean Scaling Form",
       "deck": "",
       "chapter": "bounding",
       "chapter_title": "Bounding",
@@ -88756,6 +88865,326 @@
       "root_kind": "",
       "env_name": "corollary",
       "text_preview": "For every $x>0$ and every $y\\in\\mathbb{R}$, there exists $n\\in\\mathbb{N}$ such that $nx>y$."
+    },
+    {
+      "id": "lem:integer-part-lemma",
+      "kind": "Lemma",
+      "name": "Integer Part Lemma",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-archimedean-property.tex",
+      "statement_display": "For every real number $x\\in\\mathbb{R}$, there exists an integer\n$m\\in\\mathbb{Z}$ such that\n\\[\nm\\le x<m+1.\n\\]",
+      "statement_tex": "For every real number $x\\in\\mathbb{R}$, there exists an integer\n$m\\in\\mathbb{Z}$ such that\n\\[\nm\\le x<m+1.\n\\]",
+      "source_text": "For every real number $x\\in\\mathbb{R}$, there exists an integer\n$m\\in\\mathbb{Z}$ such that\n\\[\nm\\le x<m+1.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-integer-part-lemma.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "thm:archimedean-property"
+      ],
+      "used_by_ids": [
+        "lem:archimedean-integer-part-lemma"
+      ],
+      "proof_depends_on_ids": [
+        "thm:archimedean-property",
+        "prop:integer-interval-finite-set-summation"
+      ],
+      "proof_used_by_ids": [
+        "lem:archimedean-integer-part-lemma"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Archimedean Property"
+      ],
+      "used_by_titles": [
+        "Archimedean Integer Part Lemma"
+      ],
+      "proof_depends_on_titles": [
+        "Archimedean Property",
+        "Integer Interval as a Finite Set"
+      ],
+      "proof_used_by_titles": [
+        "Archimedean Integer Part Lemma"
+      ],
+      "dependencies": [
+        "thm:archimedean-property"
+      ],
+      "proof_dependencies": [
+        "thm:archimedean-property",
+        "prop:integer-interval-finite-set-summation"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "For every real number $x\\in\\mathbb{R}$, there exists an integer $m\\in\\mathbb{Z}$ such that \\[ m\\le x<m+1. \\]"
+    },
+    {
+      "id": "lem:archimedean-integer-part-lemma",
+      "kind": "Lemma",
+      "name": "Archimedean Integer Part Lemma",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-archimedean-property.tex",
+      "statement_display": "For every $x\\in\\mathbb{R}$, there exists $m\\in\\mathbb{Z}$ such that\n\\[\nm-1\\le x<m.\n\\]",
+      "statement_tex": "For every $x\\in\\mathbb{R}$, there exists $m\\in\\mathbb{Z}$ such that\n\\[\nm-1\\le x<m.\n\\]",
+      "source_text": "For every $x\\in\\mathbb{R}$, there exists $m\\in\\mathbb{Z}$ such that\n\\[\nm-1\\le x<m.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-archimedean-integer-part-lemma.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "lem:integer-part-lemma"
+      ],
+      "used_by_ids": [
+        "lem:integer-ceiling-lemma"
+      ],
+      "proof_depends_on_ids": [
+        "lem:integer-part-lemma"
+      ],
+      "proof_used_by_ids": [
+        "lem:integer-ceiling-lemma"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Integer Part Lemma"
+      ],
+      "used_by_titles": [
+        "Integer Ceiling Lemma"
+      ],
+      "proof_depends_on_titles": [
+        "Integer Part Lemma"
+      ],
+      "proof_used_by_titles": [
+        "Integer Ceiling Lemma"
+      ],
+      "dependencies": [
+        "lem:integer-part-lemma"
+      ],
+      "proof_dependencies": [
+        "lem:integer-part-lemma"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "For every $x\\in\\mathbb{R}$, there exists $m\\in\\mathbb{Z}$ such that \\[ m-1\\le x<m. \\]"
+    },
+    {
+      "id": "lem:integer-ceiling-lemma",
+      "kind": "Lemma",
+      "name": "Integer Ceiling Lemma",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-archimedean-property.tex",
+      "statement_display": "For every $x\\in\\mathbb{R}$, there exists $m\\in\\mathbb{Z}$ such that\n\\[\nx<m\\le x+1.\n\\]",
+      "statement_tex": "For every $x\\in\\mathbb{R}$, there exists $m\\in\\mathbb{Z}$ such that\n\\[\nx<m\\le x+1.\n\\]",
+      "source_text": "For every $x\\in\\mathbb{R}$, there exists $m\\in\\mathbb{Z}$ such that\n\\[\nx<m\\le x+1.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-integer-ceiling-lemma.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "lem:archimedean-integer-part-lemma"
+      ],
+      "used_by_ids": [
+        "lem:integer-above-lemma",
+        "lem:unit-length-interval-contains-integer"
+      ],
+      "proof_depends_on_ids": [
+        "lem:archimedean-integer-part-lemma"
+      ],
+      "proof_used_by_ids": [
+        "lem:integer-above-lemma",
+        "lem:unit-length-interval-contains-integer"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Archimedean Integer Part Lemma"
+      ],
+      "used_by_titles": [
+        "Integer Above Lemma",
+        "Unit-Length Interval Contains an Integer"
+      ],
+      "proof_depends_on_titles": [
+        "Archimedean Integer Part Lemma"
+      ],
+      "proof_used_by_titles": [
+        "Integer Above Lemma",
+        "Unit-Length Interval Contains an Integer"
+      ],
+      "dependencies": [
+        "lem:archimedean-integer-part-lemma"
+      ],
+      "proof_dependencies": [
+        "lem:archimedean-integer-part-lemma"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "For every $x\\in\\mathbb{R}$, there exists $m\\in\\mathbb{Z}$ such that \\[ x<m\\le x+1. \\]"
+    },
+    {
+      "id": "lem:integer-above-lemma",
+      "kind": "Lemma",
+      "name": "Integer Above Lemma",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-archimedean-property.tex",
+      "statement_display": "For every $x\\in\\mathbb{R}$, there exists an integer $m\\in\\mathbb{Z}$ such\nthat\n\\[\nx<m.\n\\]",
+      "statement_tex": "For every $x\\in\\mathbb{R}$, there exists an integer $m\\in\\mathbb{Z}$ such\nthat\n\\[\nx<m.\n\\]",
+      "source_text": "For every $x\\in\\mathbb{R}$, there exists an integer $m\\in\\mathbb{Z}$ such\nthat\n\\[\nx<m.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-integer-above-lemma.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "lem:integer-ceiling-lemma"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [
+        "lem:integer-ceiling-lemma"
+      ],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Integer Ceiling Lemma"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [
+        "Integer Ceiling Lemma"
+      ],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "lem:integer-ceiling-lemma"
+      ],
+      "proof_dependencies": [
+        "lem:integer-ceiling-lemma"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "For every $x\\in\\mathbb{R}$, there exists an integer $m\\in\\mathbb{Z}$ such that \\[ x<m. \\]"
+    },
+    {
+      "id": "lem:unit-length-interval-contains-integer",
+      "kind": "Lemma",
+      "name": "Unit-Length Interval Contains an Integer",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-archimedean-property.tex",
+      "statement_display": "If $\\alpha,\\beta\\in\\mathbb{R}$ and $\\beta-\\alpha>1$, then there exists\n$m\\in\\mathbb{Z}$ such that\n\\[\n\\alpha<m<\\beta.\n\\]",
+      "statement_tex": "If $\\alpha,\\beta\\in\\mathbb{R}$ and $\\beta-\\alpha>1$, then there exists\n$m\\in\\mathbb{Z}$ such that\n\\[\n\\alpha<m<\\beta.\n\\]",
+      "source_text": "If $\\alpha,\\beta\\in\\mathbb{R}$ and $\\beta-\\alpha>1$, then there exists\n$m\\in\\mathbb{Z}$ such that\n\\[\n\\alpha<m<\\beta.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-unit-length-interval-contains-integer.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "lem:integer-ceiling-lemma"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [
+        "lem:integer-ceiling-lemma"
+      ],
+      "proof_used_by_ids": [
+        "thm:density-of-rationals-in-reals"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Integer Ceiling Lemma"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [
+        "Integer Ceiling Lemma"
+      ],
+      "proof_used_by_titles": [
+        "Density of the Rationals"
+      ],
+      "dependencies": [
+        "lem:integer-ceiling-lemma"
+      ],
+      "proof_dependencies": [
+        "lem:integer-ceiling-lemma"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "If $\\alpha,\\beta\\in\\mathbb{R}$ and $\\beta-\\alpha>1$, then there exists $m\\in\\mathbb{Z}$ such that \\[ \\alpha<m<\\beta. \\]"
     },
     {
       "id": "def:least-upper-bound-property",
@@ -88867,7 +89296,7 @@
       ],
       "used_by_titles": [
         "Archimedean Property",
-        "Nested Interval Property",
+        "Nested Interval Theorem",
         "One-Sided Limits of Monotone Functions"
       ],
       "proof_depends_on_titles": [],
@@ -88973,8 +89402,8 @@
         "Subset"
       ],
       "used_by_titles": [
-        "Density of the Rational Numbers in $\\mathbb{R}$",
-        "Density of the Irrational Numbers in $\\mathbb{R}$"
+        "Density of the Rationals",
+        "Density of the Irrationals"
       ],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
@@ -88994,7 +89423,7 @@
     {
       "id": "thm:density-of-rationals-in-reals",
       "kind": "Theorem",
-      "name": "Density of the Rational Numbers in $\\mathbb{R}$",
+      "name": "Density of the Rationals",
       "deck": "",
       "chapter": "bounding",
       "chapter_title": "Bounding",
@@ -89014,17 +89443,23 @@
       "section_title": "Completeness",
       "has_proof_file": true,
       "proof_source": "proofs/completeness/prf-density-of-rationals-in-reals.tex",
-      "proof_sketch_source": "todo_stub_skipped",
+      "proof_sketch_source": "completed",
       "depends_on_ids": [
         "def:order-dense-subset",
         "thm:archimedean-property"
       ],
       "used_by_ids": [
         "thm:density-of-irrationals-in-reals",
+        "thm:rational-between-any-two-irrationals",
         "cor:every-open-interval-contains-rational-and-irrational"
       ],
-      "proof_depends_on_ids": [],
-      "proof_used_by_ids": [],
+      "proof_depends_on_ids": [
+        "cor:archimedean-reciprocal-form",
+        "lem:unit-length-interval-contains-integer"
+      ],
+      "proof_used_by_ids": [
+        "thm:rational-between-any-two-irrationals"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -89033,16 +89468,25 @@
         "Archimedean Property"
       ],
       "used_by_titles": [
-        "Density of the Irrational Numbers in $\\mathbb{R}$",
+        "Density of the Irrationals",
+        "A Rational Between Any Two Irrationals",
         "Rational and Irrational Points in Every Open Interval"
       ],
-      "proof_depends_on_titles": [],
-      "proof_used_by_titles": [],
+      "proof_depends_on_titles": [
+        "Archimedean Reciprocal Form",
+        "Unit-Length Interval Contains an Integer"
+      ],
+      "proof_used_by_titles": [
+        "A Rational Between Any Two Irrationals"
+      ],
       "dependencies": [
         "def:order-dense-subset",
         "thm:archimedean-property"
       ],
-      "proof_dependencies": [],
+      "proof_dependencies": [
+        "cor:archimedean-reciprocal-form",
+        "lem:unit-length-interval-contains-integer"
+      ],
       "ignored": false,
       "is_theorem_like": true,
       "definitional_root": false,
@@ -89052,9 +89496,453 @@
       "text_preview": "For every $a,b\\in\\mathbb{R}$ with $a<b$, there exists $q\\in\\mathbb{Q}$ such that $a<q<b$."
     },
     {
+      "id": "lem:rational-translation-preserves-rationality",
+      "kind": "Lemma",
+      "name": "Rational Translation Preserves Rationality",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-density.tex",
+      "statement_display": "If $r,q\\in\\mathbb{Q}$, then\n\\[\nr+q\\in\\mathbb{Q}.\n\\]",
+      "statement_tex": "If $r,q\\in\\mathbb{Q}$, then\n\\[\nr+q\\in\\mathbb{Q}.\n\\]",
+      "source_text": "If $r,q\\in\\mathbb{Q}$, then\n\\[\nr+q\\in\\mathbb{Q}.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-rational-translation-preserves-rationality.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [
+        "lem:rational-difference-preserves-rationality"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [
+        "Rational Difference Preserves Rationality"
+      ],
+      "dependencies": [],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "If $r,q\\in\\mathbb{Q}$, then \\[ r+q\\in\\mathbb{Q}. \\]"
+    },
+    {
+      "id": "lem:rational-difference-preserves-rationality",
+      "kind": "Lemma",
+      "name": "Rational Difference Preserves Rationality",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-density.tex",
+      "statement_display": "If $r,q\\in\\mathbb{Q}$, then\n\\[\nr-q\\in\\mathbb{Q}.\n\\]",
+      "statement_tex": "If $r,q\\in\\mathbb{Q}$, then\n\\[\nr-q\\in\\mathbb{Q}.\n\\]",
+      "source_text": "If $r,q\\in\\mathbb{Q}$, then\n\\[\nr-q\\in\\mathbb{Q}.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-rational-difference-preserves-rationality.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [],
+      "used_by_ids": [
+        "lem:rational-translation-preserves-irrationality",
+        "lem:rational-minus-irrational-is-irrational"
+      ],
+      "proof_depends_on_ids": [
+        "lem:rational-translation-preserves-rationality"
+      ],
+      "proof_used_by_ids": [
+        "lem:rational-minus-irrational-is-irrational",
+        "lem:rational-translation-preserves-irrationality"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [
+        "Rational Translation Preserves Irrationality",
+        "Rational Minus Irrational Is Irrational"
+      ],
+      "proof_depends_on_titles": [
+        "Rational Translation Preserves Rationality"
+      ],
+      "proof_used_by_titles": [
+        "Rational Minus Irrational Is Irrational",
+        "Rational Translation Preserves Irrationality"
+      ],
+      "dependencies": [],
+      "proof_dependencies": [
+        "lem:rational-translation-preserves-rationality"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "If $r,q\\in\\mathbb{Q}$, then \\[ r-q\\in\\mathbb{Q}. \\]"
+    },
+    {
+      "id": "lem:nonzero-rational-product-preserves-irrationality",
+      "kind": "Lemma",
+      "name": "Nonzero Rational Product Preserves Irrationality",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-density.tex",
+      "statement_display": "If $q\\in\\mathbb{Q}\\setminus\\{0\\}$ and\n$x\\in\\mathbb{R}\\setminus\\mathbb{Q}$, then\n\\[\nqx\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "statement_tex": "If $q\\in\\mathbb{Q}\\setminus\\{0\\}$ and\n$x\\in\\mathbb{R}\\setminus\\mathbb{Q}$, then\n\\[\nqx\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "source_text": "If $q\\in\\mathbb{Q}\\setminus\\{0\\}$ and\n$x\\in\\mathbb{R}\\setminus\\mathbb{Q}$, then\n\\[\nqx\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-nonzero-rational-product-preserves-irrationality.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "If $q\\in\\mathbb{Q}\\setminus\\{0\\}$ and $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$, then \\[ qx\\in\\mathbb{R}\\setminus\\mathbb{Q}. \\]"
+    },
+    {
+      "id": "lem:rational-translation-preserves-irrationality",
+      "kind": "Lemma",
+      "name": "Rational Translation Preserves Irrationality",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-density.tex",
+      "statement_display": "If $q\\in\\mathbb{Q}$ and $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$, then\n\\[\nq+x\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "statement_tex": "If $q\\in\\mathbb{Q}$ and $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$, then\n\\[\nq+x\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "source_text": "If $q\\in\\mathbb{Q}$ and $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$, then\n\\[\nq+x\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-rational-translation-preserves-irrationality.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "lem:rational-difference-preserves-rationality"
+      ],
+      "used_by_ids": [
+        "lem:irrational-plus-rational-is-irrational",
+        "lem:irrational-minus-rational-is-irrational"
+      ],
+      "proof_depends_on_ids": [
+        "lem:rational-difference-preserves-rationality"
+      ],
+      "proof_used_by_ids": [
+        "lem:irrational-plus-rational-is-irrational"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Rational Difference Preserves Rationality"
+      ],
+      "used_by_titles": [
+        "Irrational Plus Rational Is Irrational",
+        "Irrational Minus Rational Is Irrational"
+      ],
+      "proof_depends_on_titles": [
+        "Rational Difference Preserves Rationality"
+      ],
+      "proof_used_by_titles": [
+        "Irrational Plus Rational Is Irrational"
+      ],
+      "dependencies": [
+        "lem:rational-difference-preserves-rationality"
+      ],
+      "proof_dependencies": [
+        "lem:rational-difference-preserves-rationality"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "If $q\\in\\mathbb{Q}$ and $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$, then \\[ q+x\\in\\mathbb{R}\\setminus\\mathbb{Q}. \\]"
+    },
+    {
+      "id": "lem:irrational-minus-irrational-need-not-be-irrational",
+      "kind": "Lemma",
+      "name": "Irrational Minus Irrational Need Not Be Irrational",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-density.tex",
+      "statement_display": "There exist irrational numbers $x,y\\in\\mathbb{R}\\setminus\\mathbb{Q}$ such\nthat\n\\[\nx-y\\in\\mathbb{Q}.\n\\]",
+      "statement_tex": "There exist irrational numbers $x,y\\in\\mathbb{R}\\setminus\\mathbb{Q}$ such\nthat\n\\[\nx-y\\in\\mathbb{Q}.\n\\]",
+      "source_text": "There exist irrational numbers $x,y\\in\\mathbb{R}\\setminus\\mathbb{Q}$ such\nthat\n\\[\nx-y\\in\\mathbb{Q}.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-irrational-minus-irrational-need-not-be-irrational.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "There exist irrational numbers $x,y\\in\\mathbb{R}\\setminus\\mathbb{Q}$ such that \\[ x-y\\in\\mathbb{Q}. \\]"
+    },
+    {
+      "id": "lem:rational-minus-irrational-is-irrational",
+      "kind": "Lemma",
+      "name": "Rational Minus Irrational Is Irrational",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-density.tex",
+      "statement_display": "If $q\\in\\mathbb{Q}$ and $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$, then\n\\[\nq-x\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "statement_tex": "If $q\\in\\mathbb{Q}$ and $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$, then\n\\[\nq-x\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "source_text": "If $q\\in\\mathbb{Q}$ and $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$, then\n\\[\nq-x\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-rational-minus-irrational-is-irrational.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "lem:rational-difference-preserves-rationality"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [
+        "lem:rational-difference-preserves-rationality"
+      ],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Rational Difference Preserves Rationality"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [
+        "Rational Difference Preserves Rationality"
+      ],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "lem:rational-difference-preserves-rationality"
+      ],
+      "proof_dependencies": [
+        "lem:rational-difference-preserves-rationality"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "If $q\\in\\mathbb{Q}$ and $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$, then \\[ q-x\\in\\mathbb{R}\\setminus\\mathbb{Q}. \\]"
+    },
+    {
+      "id": "lem:irrational-plus-rational-is-irrational",
+      "kind": "Lemma",
+      "name": "Irrational Plus Rational Is Irrational",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-density.tex",
+      "statement_display": "If $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$ and $q\\in\\mathbb{Q}$, then\n\\[\nx+q\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "statement_tex": "If $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$ and $q\\in\\mathbb{Q}$, then\n\\[\nx+q\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "source_text": "If $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$ and $q\\in\\mathbb{Q}$, then\n\\[\nx+q\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-irrational-plus-rational-is-irrational.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "lem:rational-translation-preserves-irrationality"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [
+        "lem:rational-translation-preserves-irrationality"
+      ],
+      "proof_used_by_ids": [
+        "lem:irrational-minus-rational-is-irrational"
+      ],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Rational Translation Preserves Irrationality"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [
+        "Rational Translation Preserves Irrationality"
+      ],
+      "proof_used_by_titles": [
+        "Irrational Minus Rational Is Irrational"
+      ],
+      "dependencies": [
+        "lem:rational-translation-preserves-irrationality"
+      ],
+      "proof_dependencies": [
+        "lem:rational-translation-preserves-irrationality"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "If $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$ and $q\\in\\mathbb{Q}$, then \\[ x+q\\in\\mathbb{R}\\setminus\\mathbb{Q}. \\]"
+    },
+    {
+      "id": "lem:irrational-minus-rational-is-irrational",
+      "kind": "Lemma",
+      "name": "Irrational Minus Rational Is Irrational",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-density.tex",
+      "statement_display": "If $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$ and $q\\in\\mathbb{Q}$, then\n\\[\nx-q\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "statement_tex": "If $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$ and $q\\in\\mathbb{Q}$, then\n\\[\nx-q\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "source_text": "If $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$ and $q\\in\\mathbb{Q}$, then\n\\[\nx-q\\in\\mathbb{R}\\setminus\\mathbb{Q}.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-irrational-minus-rational-is-irrational.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "lem:rational-translation-preserves-irrationality"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [
+        "lem:irrational-plus-rational-is-irrational"
+      ],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Rational Translation Preserves Irrationality"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [
+        "Irrational Plus Rational Is Irrational"
+      ],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "lem:rational-translation-preserves-irrationality"
+      ],
+      "proof_dependencies": [
+        "lem:irrational-plus-rational-is-irrational"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "If $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$ and $q\\in\\mathbb{Q}$, then \\[ x-q\\in\\mathbb{R}\\setminus\\mathbb{Q}. \\]"
+    },
+    {
       "id": "thm:density-of-irrationals-in-reals",
       "kind": "Theorem",
-      "name": "Density of the Irrational Numbers in $\\mathbb{R}$",
+      "name": "Density of the Irrationals",
       "deck": "",
       "chapter": "bounding",
       "chapter_title": "Bounding",
@@ -89080,22 +89968,32 @@
         "thm:density-of-rationals-in-reals"
       ],
       "used_by_ids": [
+        "thm:irrational-between-any-two-rationals",
+        "lem:small-irrational-positive-number",
         "cor:every-open-interval-contains-rational-and-irrational"
       ],
       "proof_depends_on_ids": [],
-      "proof_used_by_ids": [],
+      "proof_used_by_ids": [
+        "thm:irrational-between-any-two-rationals",
+        "lem:small-irrational-positive-number"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
         "Order Dense Subset",
-        "Density of the Rational Numbers in $\\mathbb{R}$"
+        "Density of the Rationals"
       ],
       "used_by_titles": [
+        "An Irrational Between Any Two Rationals",
+        "Small Irrational Positive Number",
         "Rational and Irrational Points in Every Open Interval"
       ],
       "proof_depends_on_titles": [],
-      "proof_used_by_titles": [],
+      "proof_used_by_titles": [
+        "An Irrational Between Any Two Rationals",
+        "Small Irrational Positive Number"
+      ],
       "dependencies": [
         "def:order-dense-subset",
         "thm:density-of-rationals-in-reals"
@@ -89108,6 +90006,177 @@
       "root_kind": "",
       "env_name": "theorem",
       "text_preview": "For every $a,b\\in\\mathbb{R}$ with $a<b$, there exists $s\\in\\mathbb{R}\\setminus\\mathbb{Q}$ such that $a<s<b$."
+    },
+    {
+      "id": "thm:irrational-between-any-two-rationals",
+      "kind": "Theorem",
+      "name": "An Irrational Between Any Two Rationals",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-density.tex",
+      "statement_display": "If $r,s\\in\\mathbb{Q}$ and $r<s$, then there exists\n$x\\in\\mathbb{R}\\setminus\\mathbb{Q}$ such that\n\\[\nr<x<s.\n\\]",
+      "statement_tex": "If $r,s\\in\\mathbb{Q}$ and $r<s$, then there exists\n$x\\in\\mathbb{R}\\setminus\\mathbb{Q}$ such that\n\\[\nr<x<s.\n\\]",
+      "source_text": "If $r,s\\in\\mathbb{Q}$ and $r<s$, then there exists\n$x\\in\\mathbb{R}\\setminus\\mathbb{Q}$ such that\n\\[\nr<x<s.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-irrational-between-any-two-rationals.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "thm:density-of-irrationals-in-reals"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [
+        "thm:density-of-irrationals-in-reals"
+      ],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Density of the Irrationals"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [
+        "Density of the Irrationals"
+      ],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "thm:density-of-irrationals-in-reals"
+      ],
+      "proof_dependencies": [
+        "thm:density-of-irrationals-in-reals"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "If $r,s\\in\\mathbb{Q}$ and $r<s$, then there exists $x\\in\\mathbb{R}\\setminus\\mathbb{Q}$ such that \\[ r<x<s. \\]"
+    },
+    {
+      "id": "thm:rational-between-any-two-irrationals",
+      "kind": "Theorem",
+      "name": "A Rational Between Any Two Irrationals",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-density.tex",
+      "statement_display": "If $x,y\\in\\mathbb{R}\\setminus\\mathbb{Q}$ and $x<y$, then there exists\n$q\\in\\mathbb{Q}$ such that\n\\[\nx<q<y.\n\\]",
+      "statement_tex": "If $x,y\\in\\mathbb{R}\\setminus\\mathbb{Q}$ and $x<y$, then there exists\n$q\\in\\mathbb{Q}$ such that\n\\[\nx<q<y.\n\\]",
+      "source_text": "If $x,y\\in\\mathbb{R}\\setminus\\mathbb{Q}$ and $x<y$, then there exists\n$q\\in\\mathbb{Q}$ such that\n\\[\nx<q<y.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-rational-between-any-two-irrationals.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "thm:density-of-rationals-in-reals"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [
+        "thm:density-of-rationals-in-reals"
+      ],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Density of the Rationals"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [
+        "Density of the Rationals"
+      ],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "thm:density-of-rationals-in-reals"
+      ],
+      "proof_dependencies": [
+        "thm:density-of-rationals-in-reals"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "theorem",
+      "text_preview": "If $x,y\\in\\mathbb{R}\\setminus\\mathbb{Q}$ and $x<y$, then there exists $q\\in\\mathbb{Q}$ such that \\[ x<q<y. \\]"
+    },
+    {
+      "id": "lem:small-irrational-positive-number",
+      "kind": "Lemma",
+      "name": "Small Irrational Positive Number",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-density.tex",
+      "statement_display": "For every $\\varepsilon>0$, there exists\n$\\eta\\in\\mathbb{R}\\setminus\\mathbb{Q}$ such that\n\\[\n0<\\eta<\\varepsilon.\n\\]",
+      "statement_tex": "For every $\\varepsilon>0$, there exists\n$\\eta\\in\\mathbb{R}\\setminus\\mathbb{Q}$ such that\n\\[\n0<\\eta<\\varepsilon.\n\\]",
+      "source_text": "For every $\\varepsilon>0$, there exists\n$\\eta\\in\\mathbb{R}\\setminus\\mathbb{Q}$ such that\n\\[\n0<\\eta<\\varepsilon.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-small-irrational-positive-number.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "thm:density-of-irrationals-in-reals"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [
+        "thm:density-of-irrationals-in-reals"
+      ],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Density of the Irrationals"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [
+        "Density of the Irrationals"
+      ],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "thm:density-of-irrationals-in-reals"
+      ],
+      "proof_dependencies": [
+        "thm:density-of-irrationals-in-reals"
+      ],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "For every $\\varepsilon>0$, there exists $\\eta\\in\\mathbb{R}\\setminus\\mathbb{Q}$ such that \\[ 0<\\eta<\\varepsilon. \\]"
     },
     {
       "id": "cor:every-open-interval-contains-rational-and-irrational",
@@ -89144,8 +90213,8 @@
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Density of the Rational Numbers in $\\mathbb{R}$",
-        "Density of the Irrational Numbers in $\\mathbb{R}$"
+        "Density of the Rationals",
+        "Density of the Irrationals"
       ],
       "used_by_titles": [],
       "proof_depends_on_titles": [],
@@ -89164,9 +90233,9 @@
       "text_preview": "Every open interval in $\\mathbb{R}$ contains both a rational number and an irrational number."
     },
     {
-      "id": "thm:nested-interval-theorem",
-      "kind": "Theorem",
-      "name": "Nested Interval Property",
+      "id": "lem:nested-closed-intervals-have-ordered-endpoints",
+      "kind": "Lemma",
+      "name": "Nested Closed Intervals Have Ordered Endpoints",
       "deck": "",
       "chapter": "bounding",
       "chapter_title": "Bounding",
@@ -89179,16 +90248,16 @@
       "book_order": 1,
       "book_dir": "volume-iii/book-analysis-i",
       "source": "notes/completeness/notes-nested-interval-property.tex",
-      "statement_display": "Let $(I_n)$ be a sequence of nonempty closed intervals in $\\mathbb{R}$. If $I_{n+1}\\subseteq I_n$ for every $n\\in\\mathbb{N}$, then\n\\[\n  \\bigcap_{n=1}^{\\infty} I_n\\neq\\varnothing.\n\\]",
-      "statement_tex": "Let $(I_n)$ be a sequence of nonempty closed intervals in $\\mathbb{R}$. If $I_{n+1}\\subseteq I_n$ for every $n\\in\\mathbb{N}$, then\n\\[\n  \\bigcap_{n=1}^{\\infty} I_n\\neq\\varnothing.\n\\]",
-      "source_text": "Let $(I_n)$ be a sequence of nonempty closed intervals in $\\mathbb{R}$. If $I_{n+1}\\subseteq I_n$ for every $n\\in\\mathbb{N}$, then\n\\[\n  \\bigcap_{n=1}^{\\infty} I_n\\neq\\varnothing.\n\\]",
+      "statement_display": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a sequence of closed intervals such that\n\\[\n  [a_{n+1},b_{n+1}]\\subseteq [a_n,b_n]\n\\]\nfor every $n\\in\\mathbb N$. Then\n\\[\n  a_n\\le a_{n+1}\\le b_{n+1}\\le b_n\n\\]\nfor every $n\\in\\mathbb N$.",
+      "statement_tex": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a sequence of closed intervals such that\n\\[\n  [a_{n+1},b_{n+1}]\\subseteq [a_n,b_n]\n\\]\nfor every $n\\in\\mathbb N$. Then\n\\[\n  a_n\\le a_{n+1}\\le b_{n+1}\\le b_n\n\\]\nfor every $n\\in\\mathbb N$.",
+      "source_text": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a sequence of closed intervals such that\n\\[\n  [a_{n+1},b_{n+1}]\\subseteq [a_n,b_n]\n\\]\nfor every $n\\in\\mathbb N$. Then\n\\[\n  a_n\\le a_{n+1}\\le b_{n+1}\\le b_n\n\\]\nfor every $n\\in\\mathbb N$.",
       "section": "completeness",
       "section_title": "Completeness",
       "has_proof_file": true,
-      "proof_source": "proofs/completeness/prf-nested-interval-theorem.tex",
+      "proof_source": "proofs/completeness/prf-nested-closed-intervals-have-ordered-endpoints.tex",
       "proof_sketch_source": "todo_stub_skipped",
       "depends_on_ids": [
-        "ax:completeness-of-reals"
+        "def:closed-interval"
       ],
       "used_by_ids": [],
       "proof_depends_on_ids": [],
@@ -89197,13 +90266,283 @@
       "equivalent_to_ids": [],
       "implies_ids": [],
       "depends_on_titles": [
-        "Completeness of $\\mathbb{R}$"
+        "Closed Interval"
       ],
       "used_by_titles": [],
       "proof_depends_on_titles": [],
       "proof_used_by_titles": [],
       "dependencies": [
-        "ax:completeness-of-reals"
+        "def:closed-interval"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a sequence of closed intervals such that \\[ [a_{n+1},b_{n+1}]\\subseteq [a_n,b_n] \\] for every $n\\in\\mathbb N$. Then \\[ a_n\\le a_{n+1}\\le b_{n+1}\\le b_n \\] for every $n\\in\\mathbb N$."
+    },
+    {
+      "id": "lem:left-endpoints-nested-intervals-increasing",
+      "kind": "Lemma",
+      "name": "Left Endpoints of Nested Intervals Are Increasing",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "statement_display": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals.\nThen the sequence $(a_n)$ is monotone increasing.",
+      "statement_tex": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals.\nThen the sequence $(a_n)$ is monotone increasing.",
+      "source_text": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals.\nThen the sequence $(a_n)$ is monotone increasing.",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-left-endpoints-nested-intervals-increasing.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "def:closed-interval"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Closed Interval"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:closed-interval"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals. Then the sequence $(a_n)$ is monotone increasing."
+    },
+    {
+      "id": "lem:right-endpoints-nested-intervals-decreasing",
+      "kind": "Lemma",
+      "name": "Right Endpoints of Nested Intervals Are Decreasing",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "statement_display": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals.\nThen the sequence $(b_n)$ is monotone decreasing.",
+      "statement_tex": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals.\nThen the sequence $(b_n)$ is monotone decreasing.",
+      "source_text": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals.\nThen the sequence $(b_n)$ is monotone decreasing.",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-right-endpoints-nested-intervals-decreasing.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "def:closed-interval"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Closed Interval"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:closed-interval"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals. Then the sequence $(b_n)$ is monotone decreasing."
+    },
+    {
+      "id": "lem:left-endpoints-bounded-above-by-right-endpoints",
+      "kind": "Lemma",
+      "name": "Left Endpoints Are Bounded Above by Right Endpoints",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "statement_display": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals.\nThen for all $m,n\\in\\mathbb N$,\n\\[\n  a_n\\le b_m.\n\\]",
+      "statement_tex": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals.\nThen for all $m,n\\in\\mathbb N$,\n\\[\n  a_n\\le b_m.\n\\]",
+      "source_text": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals.\nThen for all $m,n\\in\\mathbb N$,\n\\[\n  a_n\\le b_m.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-left-endpoints-bounded-above-by-right-endpoints.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "def:closed-interval"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Closed Interval"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:closed-interval"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals. Then for all $m,n\\in\\mathbb N$, \\[ a_n\\le b_m. \\]"
+    },
+    {
+      "id": "lem:endpoint-supremum-infimum-inequality",
+      "kind": "Lemma",
+      "name": "Endpoint Supremum Infimum Inequality",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "statement_display": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals. If\n\\[\n  \\alpha=\\sup\\{a_n:n\\in\\mathbb N\\}\n  \\quad\\text{and}\\quad\n  \\beta=\\inf\\{b_n:n\\in\\mathbb N\\},\n\\]\nthen\n\\[\n  \\alpha\\le \\beta.\n\\]",
+      "statement_tex": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals. If\n\\[\n  \\alpha=\\sup\\{a_n:n\\in\\mathbb N\\}\n  \\quad\\text{and}\\quad\n  \\beta=\\inf\\{b_n:n\\in\\mathbb N\\},\n\\]\nthen\n\\[\n  \\alpha\\le \\beta.\n\\]",
+      "source_text": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals. If\n\\[\n  \\alpha=\\sup\\{a_n:n\\in\\mathbb N\\}\n  \\quad\\text{and}\\quad\n  \\beta=\\inf\\{b_n:n\\in\\mathbb N\\},\n\\]\nthen\n\\[\n  \\alpha\\le \\beta.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-endpoint-supremum-infimum-inequality.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "def:supremum",
+        "def:infimum",
+        "def:closed-interval"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Supremum",
+        "Infimum",
+        "Closed Interval"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:supremum",
+        "def:infimum",
+        "def:closed-interval"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "lemma",
+      "text_preview": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of closed intervals. If \\[ \\alpha=\\sup\\{a_n:n\\in\\mathbb N\\} \\quad\\text{and}\\quad \\beta=\\inf\\{b_n:n\\in\\mathbb N\\}, \\] then \\[ \\alpha\\le \\beta. \\]"
+    },
+    {
+      "id": "thm:nested-interval-theorem",
+      "kind": "Theorem",
+      "name": "Nested Interval Theorem",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "statement_display": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a sequence of nonempty closed bounded\nintervals in $\\mathbb R$ such that\n\\[\n  [a_{n+1},b_{n+1}]\\subseteq [a_n,b_n]\n\\]\nfor every $n\\in\\mathbb N$. Then\n\\[\n  \\bigcap_{n=1}^{\\infty}[a_n,b_n]\\neq\\varnothing.\n\\]",
+      "statement_tex": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a sequence of nonempty closed bounded\nintervals in $\\mathbb R$ such that\n\\[\n  [a_{n+1},b_{n+1}]\\subseteq [a_n,b_n]\n\\]\nfor every $n\\in\\mathbb N$. Then\n\\[\n  \\bigcap_{n=1}^{\\infty}[a_n,b_n]\\neq\\varnothing.\n\\]",
+      "source_text": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a sequence of nonempty closed bounded\nintervals in $\\mathbb R$ such that\n\\[\n  [a_{n+1},b_{n+1}]\\subseteq [a_n,b_n]\n\\]\nfor every $n\\in\\mathbb N$. Then\n\\[\n  \\bigcap_{n=1}^{\\infty}[a_n,b_n]\\neq\\varnothing.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-nested-interval-theorem.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "ax:completeness-of-reals",
+        "def:supremum",
+        "def:closed-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Completeness of $\\mathbb{R}$",
+        "Supremum",
+        "Closed Interval",
+        "Bounded Subset of the Real Line"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "ax:completeness-of-reals",
+        "def:supremum",
+        "def:closed-interval",
+        "def:bounded-subset-of-r"
       ],
       "proof_dependencies": [],
       "ignored": false,
@@ -89212,7 +90551,442 @@
       "is_root": false,
       "root_kind": "",
       "env_name": "theorem",
-      "text_preview": "Let $(I_n)$ be a sequence of nonempty closed intervals in $\\mathbb{R}$. If $I_{n+1}\\subseteq I_n$ for every $n\\in\\mathbb{N}$, then \\[ \\bigcap_{n=1}^{\\infty} I_n\\neq\\varnothing. \\]"
+      "text_preview": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a sequence of nonempty closed bounded intervals in $\\mathbb R$ such that \\[ [a_{n+1},b_{n+1}]\\subseteq [a_n,b_n] \\] for every $n\\in\\mathbb N$. Then \\[ \\bigcap_{n=1}^{\\infty}[a_n,b_n]\\neq\\varnothing. \\]"
+    },
+    {
+      "id": "cor:nested-interval-intersection-contains-endpoint-supremum",
+      "kind": "Corollary",
+      "name": "Nested Interval Intersection Contains the Endpoint Supremum",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "statement_display": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\alpha=\\sup\\{a_n:n\\in\\mathbb N\\},\n\\]\nthen\n\\[\n  \\alpha\\in \\bigcap_{n=1}^{\\infty}[a_n,b_n].\n\\]",
+      "statement_tex": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\alpha=\\sup\\{a_n:n\\in\\mathbb N\\},\n\\]\nthen\n\\[\n  \\alpha\\in \\bigcap_{n=1}^{\\infty}[a_n,b_n].\n\\]",
+      "source_text": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\alpha=\\sup\\{a_n:n\\in\\mathbb N\\},\n\\]\nthen\n\\[\n  \\alpha\\in \\bigcap_{n=1}^{\\infty}[a_n,b_n].\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-nested-interval-intersection-contains-endpoint-supremum.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "def:supremum",
+        "def:closed-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Supremum",
+        "Closed Interval",
+        "Bounded Subset of the Real Line"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:supremum",
+        "def:closed-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "corollary",
+      "text_preview": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed bounded intervals. If \\[ \\alpha=\\sup\\{a_n:n\\in\\mathbb N\\}, \\] then \\[ \\alpha\\in \\bigcap_{n=1}^{\\infty}[a_n,b_n]. \\]"
+    },
+    {
+      "id": "cor:nested-interval-intersection-contains-endpoint-infimum",
+      "kind": "Corollary",
+      "name": "Nested Interval Intersection Contains the Endpoint Infimum",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "statement_display": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\beta=\\inf\\{b_n:n\\in\\mathbb N\\},\n\\]\nthen\n\\[\n  \\beta\\in \\bigcap_{n=1}^{\\infty}[a_n,b_n].\n\\]",
+      "statement_tex": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\beta=\\inf\\{b_n:n\\in\\mathbb N\\},\n\\]\nthen\n\\[\n  \\beta\\in \\bigcap_{n=1}^{\\infty}[a_n,b_n].\n\\]",
+      "source_text": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\beta=\\inf\\{b_n:n\\in\\mathbb N\\},\n\\]\nthen\n\\[\n  \\beta\\in \\bigcap_{n=1}^{\\infty}[a_n,b_n].\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-nested-interval-intersection-contains-endpoint-infimum.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "def:infimum",
+        "def:closed-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Infimum",
+        "Closed Interval",
+        "Bounded Subset of the Real Line"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:infimum",
+        "def:closed-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "corollary",
+      "text_preview": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed bounded intervals. If \\[ \\beta=\\inf\\{b_n:n\\in\\mathbb N\\}, \\] then \\[ \\beta\\in \\bigcap_{n=1}^{\\infty}[a_n,b_n]. \\]"
+    },
+    {
+      "id": "cor:nested-intervals-vanishing-length-have-unique-point",
+      "kind": "Corollary",
+      "name": "Nested Intervals with Vanishing Length Have Unique Point",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "statement_display": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\lim_{n\\to\\infty}(b_n-a_n)=0,\n\\]\nthen there exists a unique $x\\in\\mathbb R$ such that\n\\[\n  \\bigcap_{n=1}^{\\infty}[a_n,b_n]=\\{x\\}.\n\\]",
+      "statement_tex": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\lim_{n\\to\\infty}(b_n-a_n)=0,\n\\]\nthen there exists a unique $x\\in\\mathbb R$ such that\n\\[\n  \\bigcap_{n=1}^{\\infty}[a_n,b_n]=\\{x\\}.\n\\]",
+      "source_text": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\lim_{n\\to\\infty}(b_n-a_n)=0,\n\\]\nthen there exists a unique $x\\in\\mathbb R$ such that\n\\[\n  \\bigcap_{n=1}^{\\infty}[a_n,b_n]=\\{x\\}.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-nested-intervals-vanishing-length-have-unique-point.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "def:closed-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Closed Interval",
+        "Bounded Subset of the Real Line"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:closed-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "corollary",
+      "text_preview": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed bounded intervals. If \\[ \\lim_{n\\to\\infty}(b_n-a_n)=0, \\] then there exists a unique $x\\in\\mathbb R$ such that \\[ \\bigcap_{n=1}^{\\infty}[a_n,b_n]=\\{x\\}. \\]"
+    },
+    {
+      "id": "cor:nested-intervals-vanishing-length-have-equal-endpoint-limits",
+      "kind": "Corollary",
+      "name": "Nested Intervals with Vanishing Length Have Equal Endpoint Limits",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "statement_display": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\lim_{n\\to\\infty}(b_n-a_n)=0,\n\\]\nthen $(a_n)$ and $(b_n)$ converge and\n\\[\n  \\lim_{n\\to\\infty}a_n=\\lim_{n\\to\\infty}b_n.\n\\]",
+      "statement_tex": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\lim_{n\\to\\infty}(b_n-a_n)=0,\n\\]\nthen $(a_n)$ and $(b_n)$ converge and\n\\[\n  \\lim_{n\\to\\infty}a_n=\\lim_{n\\to\\infty}b_n.\n\\]",
+      "source_text": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\lim_{n\\to\\infty}(b_n-a_n)=0,\n\\]\nthen $(a_n)$ and $(b_n)$ converge and\n\\[\n  \\lim_{n\\to\\infty}a_n=\\lim_{n\\to\\infty}b_n.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-nested-intervals-vanishing-length-have-equal-endpoint-limits.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "def:closed-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Closed Interval",
+        "Bounded Subset of the Real Line"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:closed-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "corollary",
+      "text_preview": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed bounded intervals. If \\[ \\lim_{n\\to\\infty}(b_n-a_n)=0, \\] then $(a_n)$ and $(b_n)$ converge and \\[ \\lim_{n\\to\\infty}a_n=\\lim_{n\\to\\infty}b_n. \\]"
+    },
+    {
+      "id": "cor:unique-point-in-nested-intervals-is-endpoint-limit",
+      "kind": "Corollary",
+      "name": "Unique Point in Nested Intervals Is Endpoint Limit",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "statement_display": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\lim_{n\\to\\infty}(b_n-a_n)=0\n\\]\nand\n\\[\n  \\bigcap_{n=1}^{\\infty}[a_n,b_n]=\\{x\\},\n\\]\nthen\n\\[\n  \\lim_{n\\to\\infty}a_n=x\n  \\quad\\text{and}\\quad\n  \\lim_{n\\to\\infty}b_n=x.\n\\]",
+      "statement_tex": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\lim_{n\\to\\infty}(b_n-a_n)=0\n\\]\nand\n\\[\n  \\bigcap_{n=1}^{\\infty}[a_n,b_n]=\\{x\\},\n\\]\nthen\n\\[\n  \\lim_{n\\to\\infty}a_n=x\n  \\quad\\text{and}\\quad\n  \\lim_{n\\to\\infty}b_n=x.\n\\]",
+      "source_text": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed\nbounded intervals. If\n\\[\n  \\lim_{n\\to\\infty}(b_n-a_n)=0\n\\]\nand\n\\[\n  \\bigcap_{n=1}^{\\infty}[a_n,b_n]=\\{x\\},\n\\]\nthen\n\\[\n  \\lim_{n\\to\\infty}a_n=x\n  \\quad\\text{and}\\quad\n  \\lim_{n\\to\\infty}b_n=x.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-unique-point-in-nested-intervals-is-endpoint-limit.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "def:closed-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Closed Interval",
+        "Bounded Subset of the Real Line"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:closed-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "corollary",
+      "text_preview": "Let $\\{[a_n,b_n]\\}_{n\\in\\mathbb N}$ be a nested sequence of nonempty closed bounded intervals. If \\[ \\lim_{n\\to\\infty}(b_n-a_n)=0 \\] and \\[ \\bigcap_{n=1}^{\\infty}[a_n,b_n]=\\{x\\}, \\] then \\[ \\lim_{n\\to\\infty}a_n=x \\quad\\text{and}\\quad \\lim_{"
+    },
+    {
+      "id": "prop:open-nested-intervals-need-not-have-nonempty-intersection",
+      "kind": "Proposition",
+      "name": "Open Nested Intervals Need Not Have Nonempty Intersection",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "statement_display": "There exists a nested sequence of nonempty open bounded intervals $(a_n,b_n)$\nsuch that\n\\[\n  (a_{n+1},b_{n+1})\\subseteq (a_n,b_n)\n\\]\nfor every $n\\in\\mathbb N$, but\n\\[\n  \\bigcap_{n=1}^{\\infty}(a_n,b_n)=\\varnothing.\n\\]",
+      "statement_tex": "There exists a nested sequence of nonempty open bounded intervals $(a_n,b_n)$\nsuch that\n\\[\n  (a_{n+1},b_{n+1})\\subseteq (a_n,b_n)\n\\]\nfor every $n\\in\\mathbb N$, but\n\\[\n  \\bigcap_{n=1}^{\\infty}(a_n,b_n)=\\varnothing.\n\\]",
+      "source_text": "There exists a nested sequence of nonempty open bounded intervals $(a_n,b_n)$\nsuch that\n\\[\n  (a_{n+1},b_{n+1})\\subseteq (a_n,b_n)\n\\]\nfor every $n\\in\\mathbb N$, but\n\\[\n  \\bigcap_{n=1}^{\\infty}(a_n,b_n)=\\varnothing.\n\\]",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-open-nested-intervals-need-not-have-nonempty-intersection.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "def:open-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Open Interval",
+        "Bounded Subset of the Real Line"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:open-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "proposition",
+      "text_preview": "There exists a nested sequence of nonempty open bounded intervals $(a_n,b_n)$ such that \\[ (a_{n+1},b_{n+1})\\subseteq (a_n,b_n) \\] for every $n\\in\\mathbb N$, but \\[ \\bigcap_{n=1}^{\\infty}(a_n,b_n)=\\varnothing. \\]"
+    },
+    {
+      "id": "prop:closedness-is-necessary-in-nested-interval-theorem",
+      "kind": "Proposition",
+      "name": "Closedness Is Necessary in the Nested Interval Theorem",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "statement_display": "The conclusion of the Nested Interval Theorem can fail if the intervals are\nnot closed.",
+      "statement_tex": "The conclusion of the Nested Interval Theorem can fail if the intervals are\nnot closed.",
+      "source_text": "The conclusion of the Nested Interval Theorem can fail if the intervals are\nnot closed.",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-closedness-is-necessary-in-nested-interval-theorem.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "def:open-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Open Interval",
+        "Bounded Subset of the Real Line"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:open-interval",
+        "def:bounded-subset-of-r"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "proposition",
+      "text_preview": "The conclusion of the Nested Interval Theorem can fail if the intervals are not closed."
+    },
+    {
+      "id": "prop:boundedness-is-necessary-in-nested-interval-theorem",
+      "kind": "Proposition",
+      "name": "Boundedness Is Necessary in the Nested Interval Theorem",
+      "deck": "",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "series_title": "From Cantor to Ito",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_order": 1,
+      "book_dir": "volume-iii/book-analysis-i",
+      "source": "notes/completeness/notes-nested-interval-property.tex",
+      "statement_display": "The conclusion of the Nested Interval Theorem can fail for nested nonempty\nclosed intervals that are not bounded.",
+      "statement_tex": "The conclusion of the Nested Interval Theorem can fail for nested nonempty\nclosed intervals that are not bounded.",
+      "source_text": "The conclusion of the Nested Interval Theorem can fail for nested nonempty\nclosed intervals that are not bounded.",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "has_proof_file": true,
+      "proof_source": "proofs/completeness/prf-boundedness-is-necessary-in-nested-interval-theorem.tex",
+      "proof_sketch_source": "todo_stub_skipped",
+      "depends_on_ids": [
+        "def:closed-interval"
+      ],
+      "used_by_ids": [],
+      "proof_depends_on_ids": [],
+      "proof_used_by_ids": [],
+      "prereq_ids": [],
+      "equivalent_to_ids": [],
+      "implies_ids": [],
+      "depends_on_titles": [
+        "Closed Interval"
+      ],
+      "used_by_titles": [],
+      "proof_depends_on_titles": [],
+      "proof_used_by_titles": [],
+      "dependencies": [
+        "def:closed-interval"
+      ],
+      "proof_dependencies": [],
+      "ignored": false,
+      "is_theorem_like": true,
+      "definitional_root": false,
+      "is_root": false,
+      "root_kind": "",
+      "env_name": "proposition",
+      "text_preview": "The conclusion of the Nested Interval Theorem can fail for nested nonempty closed intervals that are not bounded."
     },
     {
       "id": "def:forward-difference",
@@ -102692,7 +104466,9 @@
         "def:finite-sum",
         "def:summation-over-finite-set"
       ],
-      "proof_used_by_ids": [],
+      "proof_used_by_ids": [
+        "lem:integer-part-lemma"
+      ],
       "prereq_ids": [],
       "equivalent_to_ids": [],
       "implies_ids": [],
@@ -102705,7 +104481,9 @@
         "Finite Sum",
         "Summation over a Finite Set"
       ],
-      "proof_used_by_titles": [],
+      "proof_used_by_titles": [
+        "Integer Part Lemma"
+      ],
       "dependencies": [
         "def:finite-sum",
         "def:summation-over-finite-set"
@@ -104287,6 +106065,14 @@
         "thm:triangle-inequality"
       ],
       "used_by_ids": [
+        "thm:nested-interval-theorem",
+        "cor:nested-interval-intersection-contains-endpoint-supremum",
+        "cor:nested-interval-intersection-contains-endpoint-infimum",
+        "cor:nested-intervals-vanishing-length-have-unique-point",
+        "cor:nested-intervals-vanishing-length-have-equal-endpoint-limits",
+        "cor:unique-point-in-nested-intervals-is-endpoint-limit",
+        "prop:open-nested-intervals-need-not-have-nonempty-intersection",
+        "prop:closedness-is-necessary-in-nested-interval-theorem",
         "thm:compact-implies-closed-bounded"
       ],
       "proof_depends_on_ids": [],
@@ -104301,6 +106087,14 @@
         "Triangle Inequality"
       ],
       "used_by_titles": [
+        "Nested Interval Theorem",
+        "Nested Interval Intersection Contains the Endpoint Supremum",
+        "Nested Interval Intersection Contains the Endpoint Infimum",
+        "Nested Intervals with Vanishing Length Have Unique Point",
+        "Nested Intervals with Vanishing Length Have Equal Endpoint Limits",
+        "Unique Point in Nested Intervals Is Endpoint Limit",
+        "Open Nested Intervals Need Not Have Nonempty Intersection",
+        "Closedness Is Necessary in the Nested Interval Theorem",
         "Compact Subsets of $\\mathbb{R}$ Are Closed and Bounded"
       ],
       "proof_depends_on_titles": [],
@@ -155047,8 +156841,38 @@
       "kind": "depends_on"
     },
     {
+      "from": "cor:archimedean-reciprocal-form",
+      "to": "thm:archimedean-property",
+      "kind": "depends_on"
+    },
+    {
       "from": "cor:archimedean-reciprocal",
       "to": "thm:archimedean-property",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:integer-part-lemma",
+      "to": "thm:archimedean-property",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:archimedean-integer-part-lemma",
+      "to": "lem:integer-part-lemma",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:integer-ceiling-lemma",
+      "to": "lem:archimedean-integer-part-lemma",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:integer-above-lemma",
+      "to": "lem:integer-ceiling-lemma",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:unit-length-interval-contains-integer",
+      "to": "lem:integer-ceiling-lemma",
       "kind": "depends_on"
     },
     {
@@ -155107,6 +156931,26 @@
       "kind": "depends_on"
     },
     {
+      "from": "lem:rational-translation-preserves-irrationality",
+      "to": "lem:rational-difference-preserves-rationality",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:rational-minus-irrational-is-irrational",
+      "to": "lem:rational-difference-preserves-rationality",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:irrational-plus-rational-is-irrational",
+      "to": "lem:rational-translation-preserves-irrationality",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:irrational-minus-rational-is-irrational",
+      "to": "lem:rational-translation-preserves-irrationality",
+      "kind": "depends_on"
+    },
+    {
       "from": "thm:density-of-irrationals-in-reals",
       "to": "def:order-dense-subset",
       "kind": "depends_on"
@@ -155114,6 +156958,21 @@
     {
       "from": "thm:density-of-irrationals-in-reals",
       "to": "thm:density-of-rationals-in-reals",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:irrational-between-any-two-rationals",
+      "to": "thm:density-of-irrationals-in-reals",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:rational-between-any-two-irrationals",
+      "to": "thm:density-of-rationals-in-reals",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:small-irrational-positive-number",
+      "to": "thm:density-of-irrationals-in-reals",
       "kind": "depends_on"
     },
     {
@@ -155127,8 +156986,143 @@
       "kind": "depends_on"
     },
     {
+      "from": "lem:nested-closed-intervals-have-ordered-endpoints",
+      "to": "def:closed-interval",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:left-endpoints-nested-intervals-increasing",
+      "to": "def:closed-interval",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:right-endpoints-nested-intervals-decreasing",
+      "to": "def:closed-interval",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:left-endpoints-bounded-above-by-right-endpoints",
+      "to": "def:closed-interval",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:endpoint-supremum-infimum-inequality",
+      "to": "def:supremum",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:endpoint-supremum-infimum-inequality",
+      "to": "def:infimum",
+      "kind": "depends_on"
+    },
+    {
+      "from": "lem:endpoint-supremum-infimum-inequality",
+      "to": "def:closed-interval",
+      "kind": "depends_on"
+    },
+    {
       "from": "thm:nested-interval-theorem",
       "to": "ax:completeness-of-reals",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:nested-interval-theorem",
+      "to": "def:supremum",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:nested-interval-theorem",
+      "to": "def:closed-interval",
+      "kind": "depends_on"
+    },
+    {
+      "from": "thm:nested-interval-theorem",
+      "to": "def:bounded-subset-of-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:nested-interval-intersection-contains-endpoint-supremum",
+      "to": "def:supremum",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:nested-interval-intersection-contains-endpoint-supremum",
+      "to": "def:closed-interval",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:nested-interval-intersection-contains-endpoint-supremum",
+      "to": "def:bounded-subset-of-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:nested-interval-intersection-contains-endpoint-infimum",
+      "to": "def:infimum",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:nested-interval-intersection-contains-endpoint-infimum",
+      "to": "def:closed-interval",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:nested-interval-intersection-contains-endpoint-infimum",
+      "to": "def:bounded-subset-of-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:nested-intervals-vanishing-length-have-unique-point",
+      "to": "def:closed-interval",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:nested-intervals-vanishing-length-have-unique-point",
+      "to": "def:bounded-subset-of-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:nested-intervals-vanishing-length-have-equal-endpoint-limits",
+      "to": "def:closed-interval",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:nested-intervals-vanishing-length-have-equal-endpoint-limits",
+      "to": "def:bounded-subset-of-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:unique-point-in-nested-intervals-is-endpoint-limit",
+      "to": "def:closed-interval",
+      "kind": "depends_on"
+    },
+    {
+      "from": "cor:unique-point-in-nested-intervals-is-endpoint-limit",
+      "to": "def:bounded-subset-of-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "prop:open-nested-intervals-need-not-have-nonempty-intersection",
+      "to": "def:open-interval",
+      "kind": "depends_on"
+    },
+    {
+      "from": "prop:open-nested-intervals-need-not-have-nonempty-intersection",
+      "to": "def:bounded-subset-of-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "prop:closedness-is-necessary-in-nested-interval-theorem",
+      "to": "def:open-interval",
+      "kind": "depends_on"
+    },
+    {
+      "from": "prop:closedness-is-necessary-in-nested-interval-theorem",
+      "to": "def:bounded-subset-of-r",
+      "kind": "depends_on"
+    },
+    {
+      "from": "prop:boundedness-is-necessary-in-nested-interval-theorem",
+      "to": "def:closed-interval",
       "kind": "depends_on"
     },
     {
@@ -155244,6 +157238,91 @@
     {
       "from": "thm:scalar-mult-positive",
       "to": "thm:ineq-nonstrict-multiply-positive",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "lem:archimedean-integer-part-lemma",
+      "to": "lem:integer-part-lemma",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "cor:archimedean-reciprocal-form",
+      "to": "thm:archimedean-property",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "thm:density-of-rationals-in-reals",
+      "to": "cor:archimedean-reciprocal-form",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "thm:density-of-rationals-in-reals",
+      "to": "lem:unit-length-interval-contains-integer",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "lem:integer-above-lemma",
+      "to": "lem:integer-ceiling-lemma",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "lem:integer-ceiling-lemma",
+      "to": "lem:archimedean-integer-part-lemma",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "lem:integer-part-lemma",
+      "to": "thm:archimedean-property",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "lem:integer-part-lemma",
+      "to": "prop:integer-interval-finite-set-summation",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "thm:irrational-between-any-two-rationals",
+      "to": "thm:density-of-irrationals-in-reals",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "lem:irrational-minus-rational-is-irrational",
+      "to": "lem:irrational-plus-rational-is-irrational",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "lem:irrational-plus-rational-is-irrational",
+      "to": "lem:rational-translation-preserves-irrationality",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "thm:rational-between-any-two-irrationals",
+      "to": "thm:density-of-rationals-in-reals",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "lem:rational-difference-preserves-rationality",
+      "to": "lem:rational-translation-preserves-rationality",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "lem:rational-minus-irrational-is-irrational",
+      "to": "lem:rational-difference-preserves-rationality",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "lem:rational-translation-preserves-irrationality",
+      "to": "lem:rational-difference-preserves-rationality",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "lem:small-irrational-positive-number",
+      "to": "thm:density-of-irrationals-in-reals",
+      "kind": "proof_depends_on"
+    },
+    {
+      "from": "lem:unit-length-interval-contains-integer",
+      "to": "lem:integer-ceiling-lemma",
       "kind": "proof_depends_on"
     },
     {

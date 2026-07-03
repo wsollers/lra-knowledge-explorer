@@ -19190,8 +19190,38 @@
     "kind": "depends_on"
   },
   {
+    "from": "cor:archimedean-reciprocal-form",
+    "to": "thm:archimedean-property",
+    "kind": "depends_on"
+  },
+  {
     "from": "cor:archimedean-reciprocal",
     "to": "thm:archimedean-property",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:integer-part-lemma",
+    "to": "thm:archimedean-property",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:archimedean-integer-part-lemma",
+    "to": "lem:integer-part-lemma",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:integer-ceiling-lemma",
+    "to": "lem:archimedean-integer-part-lemma",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:integer-above-lemma",
+    "to": "lem:integer-ceiling-lemma",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:unit-length-interval-contains-integer",
+    "to": "lem:integer-ceiling-lemma",
     "kind": "depends_on"
   },
   {
@@ -19250,6 +19280,26 @@
     "kind": "depends_on"
   },
   {
+    "from": "lem:rational-translation-preserves-irrationality",
+    "to": "lem:rational-difference-preserves-rationality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:rational-minus-irrational-is-irrational",
+    "to": "lem:rational-difference-preserves-rationality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:irrational-plus-rational-is-irrational",
+    "to": "lem:rational-translation-preserves-irrationality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:irrational-minus-rational-is-irrational",
+    "to": "lem:rational-translation-preserves-irrationality",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:density-of-irrationals-in-reals",
     "to": "def:order-dense-subset",
     "kind": "depends_on"
@@ -19257,6 +19307,21 @@
   {
     "from": "thm:density-of-irrationals-in-reals",
     "to": "thm:density-of-rationals-in-reals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:irrational-between-any-two-rationals",
+    "to": "thm:density-of-irrationals-in-reals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rational-between-any-two-irrationals",
+    "to": "thm:density-of-rationals-in-reals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:small-irrational-positive-number",
+    "to": "thm:density-of-irrationals-in-reals",
     "kind": "depends_on"
   },
   {
@@ -19270,8 +19335,143 @@
     "kind": "depends_on"
   },
   {
+    "from": "lem:nested-closed-intervals-have-ordered-endpoints",
+    "to": "def:closed-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:left-endpoints-nested-intervals-increasing",
+    "to": "def:closed-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:right-endpoints-nested-intervals-decreasing",
+    "to": "def:closed-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:left-endpoints-bounded-above-by-right-endpoints",
+    "to": "def:closed-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:endpoint-supremum-infimum-inequality",
+    "to": "def:supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:endpoint-supremum-infimum-inequality",
+    "to": "def:infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:endpoint-supremum-infimum-inequality",
+    "to": "def:closed-interval",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:nested-interval-theorem",
     "to": "ax:completeness-of-reals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:nested-interval-theorem",
+    "to": "def:supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:nested-interval-theorem",
+    "to": "def:closed-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:nested-interval-theorem",
+    "to": "def:bounded-subset-of-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:nested-interval-intersection-contains-endpoint-supremum",
+    "to": "def:supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:nested-interval-intersection-contains-endpoint-supremum",
+    "to": "def:closed-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:nested-interval-intersection-contains-endpoint-supremum",
+    "to": "def:bounded-subset-of-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:nested-interval-intersection-contains-endpoint-infimum",
+    "to": "def:infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:nested-interval-intersection-contains-endpoint-infimum",
+    "to": "def:closed-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:nested-interval-intersection-contains-endpoint-infimum",
+    "to": "def:bounded-subset-of-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:nested-intervals-vanishing-length-have-unique-point",
+    "to": "def:closed-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:nested-intervals-vanishing-length-have-unique-point",
+    "to": "def:bounded-subset-of-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:nested-intervals-vanishing-length-have-equal-endpoint-limits",
+    "to": "def:closed-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:nested-intervals-vanishing-length-have-equal-endpoint-limits",
+    "to": "def:bounded-subset-of-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:unique-point-in-nested-intervals-is-endpoint-limit",
+    "to": "def:closed-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:unique-point-in-nested-intervals-is-endpoint-limit",
+    "to": "def:bounded-subset-of-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:open-nested-intervals-need-not-have-nonempty-intersection",
+    "to": "def:open-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:open-nested-intervals-need-not-have-nonempty-intersection",
+    "to": "def:bounded-subset-of-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:closedness-is-necessary-in-nested-interval-theorem",
+    "to": "def:open-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:closedness-is-necessary-in-nested-interval-theorem",
+    "to": "def:bounded-subset-of-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:boundedness-is-necessary-in-nested-interval-theorem",
+    "to": "def:closed-interval",
     "kind": "depends_on"
   },
   {
@@ -19387,6 +19587,91 @@
   {
     "from": "thm:scalar-mult-positive",
     "to": "thm:ineq-nonstrict-multiply-positive",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:archimedean-integer-part-lemma",
+    "to": "lem:integer-part-lemma",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:archimedean-reciprocal-form",
+    "to": "thm:archimedean-property",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:density-of-rationals-in-reals",
+    "to": "cor:archimedean-reciprocal-form",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:density-of-rationals-in-reals",
+    "to": "lem:unit-length-interval-contains-integer",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:integer-above-lemma",
+    "to": "lem:integer-ceiling-lemma",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:integer-ceiling-lemma",
+    "to": "lem:archimedean-integer-part-lemma",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:integer-part-lemma",
+    "to": "thm:archimedean-property",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:integer-part-lemma",
+    "to": "prop:integer-interval-finite-set-summation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:irrational-between-any-two-rationals",
+    "to": "thm:density-of-irrationals-in-reals",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:irrational-minus-rational-is-irrational",
+    "to": "lem:irrational-plus-rational-is-irrational",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:irrational-plus-rational-is-irrational",
+    "to": "lem:rational-translation-preserves-irrationality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:rational-between-any-two-irrationals",
+    "to": "thm:density-of-rationals-in-reals",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:rational-difference-preserves-rationality",
+    "to": "lem:rational-translation-preserves-rationality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:rational-minus-irrational-is-irrational",
+    "to": "lem:rational-difference-preserves-rationality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:rational-translation-preserves-irrationality",
+    "to": "lem:rational-difference-preserves-rationality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:small-irrational-positive-number",
+    "to": "thm:density-of-irrationals-in-reals",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:unit-length-interval-contains-integer",
+    "to": "lem:integer-ceiling-lemma",
     "kind": "proof_depends_on"
   },
   {
