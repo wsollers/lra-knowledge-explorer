@@ -2,3 +2,4 @@
 # These may include personally purchased or otherwise non-redistributable files.
 *.pdf
 
+.claude/
