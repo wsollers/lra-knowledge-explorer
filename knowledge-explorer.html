@@ -559,19 +559,27 @@ function proofSourceInfo(record){
 }
 function proofSourceCard(info){
   if(!info)return'';
-  const link=info.blobUrl?`<a class="link-button" href="${attr(info.blobUrl)}" target="_blank" rel="noopener noreferrer">Open source</a>`:'';
+  const link=info.blobUrl?`<div style="margin-top:8px"><a class="link-button" href="${attr(info.blobUrl)}" target="_blank" rel="noopener noreferrer">Open Source</a></div>`:'';
   return`<div class="card source-card-button" role="button" tabindex="0" data-open-proof-source>
     <div class="label">Proof source</div>
-    <div class="value">${link}${link?'<div style="margin-top:8px"></div>':''}${esc(info.source)}</div>
+    <div class="value"><button class="link-button" type="button" data-open-proof-source-rendered>Rendered Source</button>${link}<div style="margin-top:8px">${esc(info.source)}</div></div>
   </div>`;
 }
 function cleanSourceLatex(raw){
   let t=String(raw||'');
-  t=t.replace(/\\newpage\b/g,'');
-  t=t.replace(/\\phantomsection\b/g,'');
+  t=t.replace(/\\(?:newpage|clearpage|phantomsection)\b/g,'');
   t=t.replace(/\\label\{[^{}]*\}/g,'');
   t=t.replace(/\\LRAProofFor\{[^{}]*\}/g,'');
+  t=t.replace(/\\LRAProofBodyStart\b/g,'');
   t=t.replace(/\\begin\{remark\*\}\[Return\][\s\S]*?\\end\{remark\*\}/g,'');
+  t=t.replace(/\\begin\{(theorem|lemma|proposition|corollary|definition)\*?\}(?:\[([^\]]*)\])?/g,(_,kind,title)=>title?`\\textbf{${title}}\n\n`:'');
+  t=t.replace(/\\end\{(theorem|lemma|proposition|corollary|definition)\*?\}/g,'');
+  t=t.replace(/\\begin\{proof\}(?:\[([^\]]*)\])?/g,(_,title)=>title?`\\textbf{${title}}\n\n`:'\\textbf{Proof}\n\n');
+  t=t.replace(/\\end\{proof\}/g,'');
+  t=t.replace(/\\begin\{remark\*\}(?:\[([^\]]*)\])?/g,(_,title)=>title?`\\textbf{${title}}\n\n`:'');
+  t=t.replace(/\\end\{remark\*\}/g,'');
+  t=t.replace(/\\begin\{dependencies\}/g,'\\textbf{Dependencies}\n\n');
+  t=t.replace(/\\end\{dependencies\}/g,'');
   return t.trim();
 }
 async function openSourceModal(info){
@@ -602,6 +610,7 @@ function attachProofSourceCard(container,info){
     card.addEventListener('click',()=>openSourceModal(info));
     card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openSourceModal(info);}});
     card.querySelectorAll('a').forEach(link=>link.addEventListener('click',e=>e.stopPropagation()));
+    card.querySelectorAll('[data-open-proof-source-rendered]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();openSourceModal(info);}));
   });
 }
 
