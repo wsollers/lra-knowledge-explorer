@@ -11,11 +11,18 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+try:
+    import yaml
+except ImportError:  # pragma: no cover
+    yaml = None
+
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_KNOWLEDGE = REPO_ROOT / "knowledge.json"
 DEFAULT_OUTPUT = REPO_ROOT / "to-prove.json"
+DEFAULT_VAULT_ROOT = REPO_ROOT.parent / "lra-proof-vault"
 TRACKER_RE = re.compile(r"^\d+\.\s+\((?P<mark>✅)?\)\s+`(?P<label>[^`]+)`", re.MULTILINE)
+PROOF_ENV_RE = re.compile(r"\\begin\{proof\}(?:\[[^\]]*\])?(?P<body>[\s\S]*?)\\end\{proof\}")
 VOLUME_REPOS = {
     1: "lra-volume-i",
     2: "lra-volume-ii",
@@ -39,6 +46,52 @@ def completed_labels(tracker: Path) -> set[str]:
     return {m.group("label") for m in TRACKER_RE.finditer(text) if m.group("mark")}
 
 
+def load_yaml(path: Path) -> dict[str, Any]:
+    if yaml is None or not path.is_file():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return data if isinstance(data, dict) else {}
+
+
+def proof_body_has_content(body: str) -> bool:
+    cleaned = strip_comments(body)
+    cleaned = re.sub(r"\\LRAProofBodyStart\b", "", cleaned)
+    cleaned = re.sub(r"\\(?:label|phantomsection|newpage|clearpage)\b(?:\{[^{}]*\})?", "", cleaned)
+    cleaned = re.sub(r"\s+", "", cleaned)
+    return bool(cleaned)
+
+
+def proof_file_completed(path: Path) -> bool:
+    if not path.is_file():
+        return False
+    text = path.read_text(encoding="utf-8", errors="replace")
+    bodies = [match.group("body") for match in PROOF_ENV_RE.finditer(text)]
+    if not bodies:
+        return False
+    if any("todo" in strip_comments(body).lower() for body in bodies):
+        return False
+    return all(proof_body_has_content(body) for body in bodies)
+
+
+def accepted_vault_labels(vault_root: Path) -> set[str]:
+    if yaml is None or not vault_root.is_dir():
+        return set()
+    labels: set[str] = set()
+    for metadata_path in sorted(vault_root.glob("volume-*/**/metadata.yaml")):
+        metadata = load_yaml(metadata_path)
+        label = metadata.get("theorem_id")
+        attempts = metadata.get("attempts")
+        if not isinstance(label, str) or not isinstance(attempts, list):
+            continue
+        for attempt in attempts:
+            if not isinstance(attempt, dict):
+                continue
+            if attempt.get("review_status") == "reviewed-correct" and attempt.get("text_review_status") == "accepted":
+                labels.add(label)
+                break
+    return labels
+
+
 def volume_title(volume: dict[str, Any]) -> str:
     roman = str(volume.get("roman") or "").upper()
     title = str(volume.get("title") or "")
@@ -49,6 +102,24 @@ def decode_b64(value: str | None) -> str:
     if not value:
         return ""
     return base64.b64decode(value).decode("utf-8", errors="replace").strip()
+
+
+def strip_comments(text: str) -> str:
+    out = []
+    for line in str(text or "").splitlines():
+        escaped = False
+        kept = []
+        for char in line:
+            if char == "\\" and not escaped:
+                escaped = True
+                kept.append(char)
+                continue
+            if char == "%" and not escaped:
+                break
+            kept.append(char)
+            escaped = False
+        out.append("".join(kept))
+    return "\n".join(out)
 
 
 def braced_group(value: str, start: int) -> tuple[str, int] | None:
@@ -192,7 +263,7 @@ def dependency_first(items: list[dict[str, Any]], order: dict[str, int]) -> list
     return [by_id[node_id] for node_id in out]
 
 
-def build_items(knowledge: dict[str, Any], repos_root: Path) -> tuple[list[dict[str, Any]], dict[int, set[str]]]:
+def build_items(knowledge: dict[str, Any], repos_root: Path, vault_root: Path = DEFAULT_VAULT_ROOT) -> tuple[list[dict[str, Any]], dict[int, set[str]]]:
     nodes = knowledge.get("nodes", [])
     order = {str(node.get("id")): index for index, node in enumerate(nodes) if node.get("id")}
     theorem_deps, proof_deps = dependency_maps(knowledge)
@@ -200,23 +271,32 @@ def build_items(knowledge: dict[str, Any], repos_root: Path) -> tuple[list[dict[
         volume: completed_labels(repos_root / repo / "proofs-to-do.md")
         for volume, repo in VOLUME_REPOS.items()
     }
+    completed_by_vault = accepted_vault_labels(vault_root)
     items: list[dict[str, Any]] = []
     for node in nodes:
         node_id = str(node.get("id") or "")
         if not node_id or not node.get("has_proof_file"):
             continue
         volume = int(node.get("volume") or 0)
-        is_open = node.get("proof_sketch_source") == "todo_stub_skipped"
-        is_completed = node_id in completed_by_volume.get(volume, set())
+        repo = VOLUME_REPOS.get(volume, "")
+        chapter_root = Path(str(node.get("book_dir") or "")) / str(node.get("chapter") or "")
+        proof_source = str(node.get("proof_source") or "")
+        proof_path = (chapter_root / proof_source).as_posix() if proof_source else ""
+        canonical_proof = repos_root / repo / proof_path if repo and proof_path else Path()
+        completion_sources = []
+        if node_id in completed_by_volume.get(volume, set()):
+            completion_sources.append("tracker")
+        if proof_file_completed(canonical_proof):
+            completion_sources.append("proof_file")
+        if node_id in completed_by_vault:
+            completion_sources.append("proof_vault")
+        is_completed = bool(completion_sources)
+        is_open = node.get("proof_sketch_source") == "todo_stub_skipped" and not is_completed
         if not is_open and not is_completed:
             continue
         theorem_dependency_ids = sorted(theorem_deps.get(node_id, set()), key=lambda dep: order.get(dep, 10**9))
         proof_dependency_ids = sorted(proof_deps.get(node_id, set()), key=lambda dep: order.get(dep, 10**9))
-        repo = VOLUME_REPOS.get(volume, "")
-        chapter_root = Path(str(node.get("book_dir") or "")) / str(node.get("chapter") or "")
-        proof_source = str(node.get("proof_source") or "")
         source = str(node.get("source") or "")
-        proof_path = (chapter_root / proof_source).as_posix() if proof_source else ""
         source_path = (chapter_root / source).as_posix() if source else ""
         item = {
             "id": node_id,
@@ -245,6 +325,8 @@ def build_items(knowledge: dict[str, Any], repos_root: Path) -> tuple[list[dict[
             "proof_dependency_ids": proof_dependency_ids,
             "graph_dependency_ids": sorted(set(theorem_dependency_ids) | set(proof_dependency_ids), key=lambda dep: order.get(dep, 10**9)),
         }
+        if completion_sources:
+            item["completion_sources"] = completion_sources
         item["markdown"] = "\n".join(item_markdown(item, 1)).split("\n", 1)[1]
         items.append(item)
     return dependency_first(items, order), completed_by_volume
@@ -287,6 +369,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--knowledge", type=Path, default=DEFAULT_KNOWLEDGE)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--repos-root", type=Path, default=REPO_ROOT.parent)
+    parser.add_argument("--vault-root", type=Path, default=DEFAULT_VAULT_ROOT)
     parser.add_argument("--write-volume-trackers", action="store_true")
     return parser.parse_args()
 
@@ -295,7 +378,8 @@ def main() -> int:
     args = parse_args()
     knowledge = load_json(args.knowledge.resolve())
     repos_root = args.repos_root.resolve()
-    items, _completed = build_items(knowledge, repos_root)
+    vault_root = args.vault_root.resolve()
+    items, _completed = build_items(knowledge, repos_root, vault_root)
     volumes = volume_payloads(knowledge, items)
     payload = {
         "metadata": {

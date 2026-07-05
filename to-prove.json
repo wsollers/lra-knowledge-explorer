@@ -1,11 +1,11 @@
 {
   "metadata": {
     "schema_version": "0.1",
-    "generated_at": "2026-07-04T13:54:18.781822+00:00",
+    "generated_at": "2026-07-04T22:36:57.151705+00:00",
     "source": "knowledge.json",
-    "item_count": 1232,
-    "open_count": 1219,
-    "completed_count": 13
+    "item_count": 1241,
+    "open_count": 1215,
+    "completed_count": 26
   },
   "volumes": [
     {
@@ -14,7 +14,7 @@
       "title": "Logic, Sets, and Proof",
       "repo": "lra-volume-i",
       "open_count": 131,
-      "completed_count": 7,
+      "completed_count": 11,
       "items": [
         {
           "id": "thm:logical-equivalence-equivalence-relation",
@@ -1864,6 +1864,11 @@
           "graph_dependency_ids": [
             "def:well-formed-formula"
           ],
+          "completion_sources": [
+            "tracker",
+            "proof_file",
+            "proof_vault"
+          ],
           "markdown": "   > **Statement.**\n   > The set \\(\\WFF\\) is closed under the propositional formation rules.\n   >\n   > That is, if \\(\\varphi\\in\\WFF\\), then\n   > \\[\n   > \\neg\\varphi\\in\\WFF.\n   > \\]\n   > If \\(\\varphi,\\psi\\in\\WFF\\) and\n   > \\[\n   > \\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\},\n   > \\]\n   > then\n   > \\[\n   > (\\varphi\\circ\\psi)\\in\\WFF.\n   > \\]"
         },
         {
@@ -1895,6 +1900,11 @@
           "proof_dependency_ids": [],
           "graph_dependency_ids": [
             "def:well-formed-formula"
+          ],
+          "completion_sources": [
+            "tracker",
+            "proof_file",
+            "proof_vault"
           ],
           "markdown": "   > **Statement.**\n   > Let \\(S\\) be a set of strings over the propositional alphabet. Suppose:\n   > - \\(\\Prop\\subseteq S\\);\n   > - if \\(\\varphi\\in S\\), then \\(\\neg\\varphi\\in S\\);\n   > - if \\(\\varphi,\\psi\\in S\\) and\n   >  \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then\n   >  \\((\\varphi\\circ\\psi)\\in S\\).\n   > Then\n   > \\[\n   > \\WFF\\subseteq S.\n   > \\]"
         },
@@ -4685,6 +4695,99 @@
           "markdown": "   > **Statement.**\n   > If $|A| \\leq |B|$ and $|B| \\leq |A|$, then $A \\sim B$.\n   >\n   > Equivalently: if there exist injections $f : A \\hookrightarrow B$ and\n   > $g : B \\hookrightarrow A$, then there exists a bijection $h : A \\to B$."
         },
         {
+          "id": "thm:euclid-i-1",
+          "status": "completed",
+          "title": "Euclid I.1: Constructing an equilateral triangle",
+          "kind": "Theorem",
+          "statement": "Given a finite straight line segment $AB$, there exists an equilateral\ntriangle $ABC$ constructed on $AB$.",
+          "volume": 1,
+          "volume_roman": "i",
+          "volume_title": "Logic, Sets, and Proof",
+          "repo": "lra-volume-i",
+          "book": "foundational-geometry",
+          "book_title": "Foundational Geometry",
+          "book_dir": "volume-i/book-geometry",
+          "chapter": "euclidean-geometry",
+          "chapter_title": "Euclidean Geometry",
+          "section": "compass-and-straightedge-constructions",
+          "section_title": "Compass And Straightedge Constructions",
+          "source": "notes/compass-and-straightedge-constructions/propositions.tex",
+          "source_path": "volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+          "proof_source": "proofs/compass-and-straightedge-constructions/prf-euclid-i-1.tex",
+          "proof_path": "volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-1.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-1.tex",
+          "theorem_dependency_ids": [],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [],
+          "completion_sources": [
+            "proof_file"
+          ],
+          "markdown": "   > **Statement.**\n   > Given a finite straight line segment $AB$, there exists an equilateral\n   > triangle $ABC$ constructed on $AB$."
+        },
+        {
+          "id": "thm:euclid-i-2",
+          "status": "completed",
+          "title": "Euclid I.2: Copying a segment from a given point",
+          "kind": "Theorem",
+          "statement": "Given a point $A$ and a finite straight line segment $BC$, there exists a\nstraight line segment beginning at $A$ and equal to $BC$.",
+          "volume": 1,
+          "volume_roman": "i",
+          "volume_title": "Logic, Sets, and Proof",
+          "repo": "lra-volume-i",
+          "book": "foundational-geometry",
+          "book_title": "Foundational Geometry",
+          "book_dir": "volume-i/book-geometry",
+          "chapter": "euclidean-geometry",
+          "chapter_title": "Euclidean Geometry",
+          "section": "compass-and-straightedge-constructions",
+          "section_title": "Compass And Straightedge Constructions",
+          "source": "notes/compass-and-straightedge-constructions/propositions.tex",
+          "source_path": "volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+          "proof_source": "proofs/compass-and-straightedge-constructions/prf-euclid-i-2.tex",
+          "proof_path": "volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-2.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-2.tex",
+          "theorem_dependency_ids": [],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [],
+          "completion_sources": [
+            "proof_file"
+          ],
+          "markdown": "   > **Statement.**\n   > Given a point $A$ and a finite straight line segment $BC$, there exists a\n   > straight line segment beginning at $A$ and equal to $BC$."
+        },
+        {
+          "id": "thm:euclid-i-3",
+          "status": "completed",
+          "title": "Euclid I.3: Cutting off an equal segment",
+          "kind": "Theorem",
+          "statement": "Given two unequal finite straight line segments, there exists a construction\nwhich cuts off from the greater a straight line segment equal to the less.",
+          "volume": 1,
+          "volume_roman": "i",
+          "volume_title": "Logic, Sets, and Proof",
+          "repo": "lra-volume-i",
+          "book": "foundational-geometry",
+          "book_title": "Foundational Geometry",
+          "book_dir": "volume-i/book-geometry",
+          "chapter": "euclidean-geometry",
+          "chapter_title": "Euclidean Geometry",
+          "section": "compass-and-straightedge-constructions",
+          "section_title": "Compass And Straightedge Constructions",
+          "source": "notes/compass-and-straightedge-constructions/propositions.tex",
+          "source_path": "volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+          "proof_source": "proofs/compass-and-straightedge-constructions/prf-euclid-i-3.tex",
+          "proof_path": "volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-3.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-3.tex",
+          "theorem_dependency_ids": [],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [],
+          "completion_sources": [
+            "proof_file"
+          ],
+          "markdown": "   > **Statement.**\n   > Given two unequal finite straight line segments, there exists a construction\n   > which cuts off from the greater a straight line segment equal to the less."
+        },
+        {
           "id": "thm:euclid-i-4",
           "status": "completed",
           "title": "Euclid I.4: Side-angle-side congruence",
@@ -4710,6 +4813,10 @@
           "theorem_dependency_ids": [],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [],
+          "completion_sources": [
+            "tracker",
+            "proof_file"
+          ],
           "markdown": "   > **Statement.**\n   > If two triangles have two sides equal to two sides respectively, and have the\n   > angles contained by the equal straight lines equal, then they also have the\n   > base equal to the base, the triangle equal to the triangle, and the remaining\n   > angles equal to the remaining angles respectively."
         },
         {
@@ -4738,6 +4845,10 @@
           "theorem_dependency_ids": [],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [],
+          "completion_sources": [
+            "tracker",
+            "proof_file"
+          ],
           "markdown": "   > **Statement.**\n   > Through a given point, to draw a straight line parallel to a given straight\n   > line."
         },
         {
@@ -4766,6 +4877,10 @@
           "theorem_dependency_ids": [],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [],
+          "completion_sources": [
+            "tracker",
+            "proof_file"
+          ],
           "markdown": "   > **Statement.**\n   > In any triangle, if one of the sides is produced, then the exterior angle is\n   > equal to the two interior and opposite angles, and the three interior angles of\n   > the triangle are equal to two right angles."
         },
         {
@@ -4794,6 +4909,10 @@
           "theorem_dependency_ids": [],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [],
+          "completion_sources": [
+            "tracker",
+            "proof_file"
+          ],
           "markdown": "   > **Statement.**\n   > If a parallelogram has the same base with a triangle and is in the same\n   > parallels, then the parallelogram is double the triangle."
         },
         {
@@ -4822,7 +4941,42 @@
           "theorem_dependency_ids": [],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [],
+          "completion_sources": [
+            "tracker",
+            "proof_file"
+          ],
           "markdown": "   > **Statement.**\n   > On a given straight line, to describe a square."
+        },
+        {
+          "id": "thm:euclid-i-47",
+          "status": "completed",
+          "title": "Euclid I.47: Pythagorean theorem",
+          "kind": "Theorem",
+          "statement": "In right-angled triangles, the square on the side subtending the right angle is\nequal to the squares on the sides containing the right angle.",
+          "volume": 1,
+          "volume_roman": "i",
+          "volume_title": "Logic, Sets, and Proof",
+          "repo": "lra-volume-i",
+          "book": "foundational-geometry",
+          "book_title": "Foundational Geometry",
+          "book_dir": "volume-i/book-geometry",
+          "chapter": "euclidean-geometry",
+          "chapter_title": "Euclidean Geometry",
+          "section": "compass-and-straightedge-constructions",
+          "section_title": "Compass And Straightedge Constructions",
+          "source": "notes/compass-and-straightedge-constructions/propositions.tex",
+          "source_path": "volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+          "proof_source": "proofs/compass-and-straightedge-constructions/prf-euclid-i-47.tex",
+          "proof_path": "volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-47.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-47.tex",
+          "theorem_dependency_ids": [],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [],
+          "completion_sources": [
+            "proof_file"
+          ],
+          "markdown": "   > **Statement.**\n   > In right-angled triangles, the square on the side subtending the right angle is\n   > equal to the squares on the sides containing the right angle."
         }
       ]
     },
@@ -22005,8 +22159,8 @@
       "roman": "iii",
       "title": "Classical Analysis",
       "repo": "lra-volume-iii",
-      "open_count": 486,
-      "completed_count": 6,
+      "open_count": 482,
+      "completed_count": 15,
       "items": [
         {
           "id": "prop:little-o-quotient-characterization",
@@ -24089,6 +24243,82 @@
           "markdown": "   > **Statement.**\n   > An arbitrary intersection of closed subsets of $\\mathbb{R}$ is closed, and a finite union of closed subsets of $\\mathbb{R}$ is closed."
         },
         {
+          "id": "thm:translation-invariance-supremum",
+          "status": "completed",
+          "title": "Translation Invariance of the Supremum",
+          "kind": "Theorem",
+          "statement": "Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $c\\in\\mathbb{R}$. Then\n\\[\n \\sup(A+c)=\\sup A+c,\n \\qquad\n A+c=\\{a+c:a\\in A\\}.\n\\]",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "bounding",
+          "chapter_title": "Bounding",
+          "section": "bounds-algebra",
+          "section_title": "Bounds Algebra",
+          "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+          "source_path": "volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+          "proof_source": "proofs/bounds-algebra/prf-translation-invariance-supremum.tex",
+          "proof_path": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-translation-invariance-supremum.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-translation-invariance-supremum.tex",
+          "theorem_dependency_ids": [
+            "def:supremum",
+            "def:upper-bound"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:supremum",
+            "def:upper-bound"
+          ],
+          "completion_sources": [
+            "proof_file"
+          ],
+          "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $c\\in\\mathbb{R}$. Then\n   > \\[\n   >  \\sup(A+c)=\\sup A+c,\n   >  \\qquad\n   >  A+c=\\{a+c:a\\in A\\}.\n   > \\]"
+        },
+        {
+          "id": "thm:translation-invariance-infimum",
+          "status": "completed",
+          "title": "Translation Invariance of the Infimum",
+          "kind": "Theorem",
+          "statement": "Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let\n$c\\in\\mathbb{R}$. Then\n\\[\n \\inf(A+c)=\\inf A+c.\n\\]",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "bounding",
+          "chapter_title": "Bounding",
+          "section": "bounds-algebra",
+          "section_title": "Bounds Algebra",
+          "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+          "source_path": "volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+          "proof_source": "proofs/bounds-algebra/prf-translation-invariance-infimum.tex",
+          "proof_path": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-translation-invariance-infimum.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-translation-invariance-infimum.tex",
+          "theorem_dependency_ids": [
+            "def:set-arithmetic-images",
+            "def:infimum",
+            "def:lower-bound"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:set-arithmetic-images",
+            "def:infimum",
+            "def:lower-bound"
+          ],
+          "completion_sources": [
+            "proof_file"
+          ],
+          "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let\n   > $c\\in\\mathbb{R}$. Then\n   > \\[\n   >  \\inf(A+c)=\\inf A+c.\n   > \\]"
+        },
+        {
           "id": "thm:scalar-mult-positive",
           "status": "completed",
           "title": "Scalar Multiplication by a Positive Scalar",
@@ -24120,7 +24350,51 @@
             "def:supremum",
             "def:upper-bound"
           ],
+          "completion_sources": [
+            "tracker",
+            "proof_file",
+            "proof_vault"
+          ],
           "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $k>0$. Then\n   > \\[\n   >  \\sup(kA)=k\\sup A,\n   >  \\qquad\n   >  kA=\\{ka:a\\in A\\}.\n   > \\]"
+        },
+        {
+          "id": "thm:positive-scalar-mult-infimum",
+          "status": "completed",
+          "title": "Positive Scalar Multiplication of the Infimum",
+          "kind": "Theorem",
+          "statement": "Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let $k>0$.\nThen\n\\[\n \\inf(kA)=k\\inf A.\n\\]",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "bounding",
+          "chapter_title": "Bounding",
+          "section": "bounds-algebra",
+          "section_title": "Bounds Algebra",
+          "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+          "source_path": "volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+          "proof_source": "proofs/bounds-algebra/prf-positive-scalar-mult-infimum.tex",
+          "proof_path": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-positive-scalar-mult-infimum.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-positive-scalar-mult-infimum.tex",
+          "theorem_dependency_ids": [
+            "def:displacement-dilation-reflection",
+            "def:infimum",
+            "def:lower-bound"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:displacement-dilation-reflection",
+            "def:infimum",
+            "def:lower-bound"
+          ],
+          "completion_sources": [
+            "proof_file"
+          ],
+          "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let $k>0$.\n   > Then\n   > \\[\n   >  \\inf(kA)=k\\inf A.\n   > \\]"
         },
         {
           "id": "thm:scalar-mult-negative",
@@ -24158,7 +24432,53 @@
             "def:upper-bound",
             "def:lower-bound"
           ],
+          "completion_sources": [
+            "tracker",
+            "proof_file",
+            "proof_vault"
+          ],
           "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let $k<0$. Then\n   > \\[\n   >  \\sup(kA)=k\\inf A,\n   >  \\qquad\n   >  kA=\\{ka:a\\in A\\}.\n   > \\]"
+        },
+        {
+          "id": "thm:negative-scalar-mult-infimum",
+          "status": "completed",
+          "title": "Negative Scalar Multiplication of the Infimum",
+          "kind": "Theorem",
+          "statement": "Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $k<0$.\nThen\n\\[\n \\inf(kA)=k\\sup A.\n\\]",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "bounding",
+          "chapter_title": "Bounding",
+          "section": "bounds-algebra",
+          "section_title": "Bounds Algebra",
+          "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+          "source_path": "volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+          "proof_source": "proofs/bounds-algebra/prf-negative-scalar-mult-infimum.tex",
+          "proof_path": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-negative-scalar-mult-infimum.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-negative-scalar-mult-infimum.tex",
+          "theorem_dependency_ids": [
+            "def:supremum",
+            "def:infimum",
+            "def:upper-bound",
+            "def:lower-bound"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:supremum",
+            "def:infimum",
+            "def:upper-bound",
+            "def:lower-bound"
+          ],
+          "completion_sources": [
+            "proof_file"
+          ],
+          "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $k<0$.\n   > Then\n   > \\[\n   >  \\inf(kA)=k\\sup A.\n   > \\]"
         },
         {
           "id": "thm:negation-exchange-sup-inf",
@@ -24196,11 +24516,16 @@
             "def:upper-bound",
             "def:lower-bound"
           ],
+          "completion_sources": [
+            "tracker",
+            "proof_file",
+            "proof_vault"
+          ],
           "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below. Then $-A=\\{-a:a\\in A\\}$ is bounded above and\n   > \\[\n   >  \\sup(-A)=-\\inf A.\n   > \\]"
         },
         {
           "id": "thm:supremum-sum-set",
-          "status": "open",
+          "status": "completed",
           "title": "Supremum of a Sum Set",
           "kind": "Theorem",
           "statement": "Let $A,B\\subseteq\\mathbb{R}$ be nonempty and bounded above. Then\n\\[\n \\sup(A+B)=\\sup A+\\sup B,\n \\qquad\n A+B=\\{a+b:a\\in A,\\ b\\in B\\}.\n\\]",
@@ -24230,11 +24555,14 @@
             "def:epsilon-characterization-of-supremum",
             "def:supremum"
           ],
+          "completion_sources": [
+            "proof_file"
+          ],
           "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty and bounded above. Then\n   > \\[\n   >  \\sup(A+B)=\\sup A+\\sup B,\n   >  \\qquad\n   >  A+B=\\{a+b:a\\in A,\\ b\\in B\\}.\n   > \\]"
         },
         {
           "id": "thm:infimum-sum-set",
-          "status": "open",
+          "status": "completed",
           "title": "Infimum of a Sum Set",
           "kind": "Theorem",
           "statement": "Let $A,B\\subseteq\\mathbb{R}$ be nonempty and bounded below. Then\n\\[\n \\inf(A+B)=\\inf A+\\inf B.\n\\]",
@@ -24264,11 +24592,14 @@
             "def:set-arithmetic-images",
             "def:infimum"
           ],
+          "completion_sources": [
+            "proof_file"
+          ],
           "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty and bounded below. Then\n   > \\[\n   >  \\inf(A+B)=\\inf A+\\inf B.\n   > \\]"
         },
         {
           "id": "thm:supremum-difference-set",
-          "status": "open",
+          "status": "completed",
           "title": "Supremum of a Difference Set",
           "kind": "Theorem",
           "statement": "Let $A,B\\subseteq\\mathbb{R}$ be nonempty, with $A$ bounded above and $B$ bounded below. Then\n\\[\n \\sup(A-B)=\\sup A-\\inf B,\n \\qquad\n A-B=\\{a-b:a\\in A,\\ b\\in B\\}.\n\\]",
@@ -24302,11 +24633,14 @@
             "def:supremum",
             "def:infimum"
           ],
+          "completion_sources": [
+            "proof_file"
+          ],
           "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty, with $A$ bounded above and $B$ bounded below. Then\n   > \\[\n   >  \\sup(A-B)=\\sup A-\\inf B,\n   >  \\qquad\n   >  A-B=\\{a-b:a\\in A,\\ b\\in B\\}.\n   > \\]"
         },
         {
           "id": "thm:infimum-difference-set",
-          "status": "open",
+          "status": "completed",
           "title": "Infimum of a Difference Set",
           "kind": "Theorem",
           "statement": "Let $A,B\\subseteq\\mathbb{R}$ be nonempty, with $A$ bounded below and $B$\nbounded above. Then\n\\[\n \\inf(A-B)=\\inf A-\\sup B.\n\\]",
@@ -24339,6 +24673,11 @@
             "thm:infimum-sum-set",
             "def:supremum",
             "def:infimum"
+          ],
+          "completion_sources": [
+            "tracker",
+            "proof_file",
+            "proof_vault"
           ],
           "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty, with $A$ bounded below and $B$\n   > bounded above. Then\n   > \\[\n   >  \\inf(A-B)=\\inf A-\\sup B.\n   > \\]"
         },
@@ -24408,6 +24747,11 @@
           "theorem_dependency_ids": [],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [],
+          "completion_sources": [
+            "tracker",
+            "proof_file",
+            "proof_vault"
+          ],
           "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let\n   > $s=\\sup A$. Then $x\\leq s$ for every $x\\in A$."
         },
         {
@@ -25980,6 +26324,11 @@
           "theorem_dependency_ids": [],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [],
+          "completion_sources": [
+            "tracker",
+            "proof_file",
+            "proof_vault"
+          ],
           "markdown": "   > **Statement.**\n   > Let $(S,\\leq)$ be an ordered set and let $A\\subseteq S$ be nonempty. If\n   > $m=\\max A$, then $m=\\sup A$."
         },
         {
@@ -26400,6 +26749,11 @@
           "theorem_dependency_ids": [],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [],
+          "completion_sources": [
+            "tracker",
+            "proof_file",
+            "proof_vault"
+          ],
           "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty, bounded below, and bounded above.\n   > Then $\\inf A\\leq\\sup A$."
         },
         {
@@ -26811,6 +27165,43 @@
             "lem:integer-ceiling-lemma"
           ],
           "markdown": "   > **Statement.**\n   > If $\\alpha,\\beta\\in\\mathbb{R}$ and $\\beta-\\alpha>1$, then there exists\n   > $m\\in\\mathbb{Z}$ such that\n   > \\[\n   > \\alpha<m<\\beta.\n   > \\]"
+        },
+        {
+          "id": "thm:density-of-rationals-in-reals",
+          "status": "completed",
+          "title": "Density of the Rationals",
+          "kind": "Theorem",
+          "statement": "For every $a,b\\in\\mathbb{R}$ with $a<b$, there exists $q\\in\\mathbb{Q}$ such that $a<q<b$.",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "bounding",
+          "chapter_title": "Bounding",
+          "section": "completeness",
+          "section_title": "Completeness",
+          "source": "notes/completeness/notes-density.tex",
+          "source_path": "volume-iii/book-analysis-i/bounding/notes/completeness/notes-density.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/notes/completeness/notes-density.tex",
+          "proof_source": "proofs/completeness/prf-density-of-rationals-in-reals.tex",
+          "proof_path": "volume-iii/book-analysis-i/bounding/proofs/completeness/prf-density-of-rationals-in-reals.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/proofs/completeness/prf-density-of-rationals-in-reals.tex",
+          "theorem_dependency_ids": [
+            "thm:archimedean-property",
+            "def:order-dense-subset"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "thm:archimedean-property",
+            "def:order-dense-subset"
+          ],
+          "completion_sources": [
+            "proof_file"
+          ],
+          "markdown": "   > **Statement.**\n   > For every $a,b\\in\\mathbb{R}$ with $a<b$, there exists $q\\in\\mathbb{Q}$ such that $a<q<b$."
         },
         {
           "id": "lem:rational-translation-preserves-rationality",
@@ -43232,6 +43623,11 @@
       "graph_dependency_ids": [
         "def:well-formed-formula"
       ],
+      "completion_sources": [
+        "tracker",
+        "proof_file",
+        "proof_vault"
+      ],
       "markdown": "   > **Statement.**\n   > The set \\(\\WFF\\) is closed under the propositional formation rules.\n   >\n   > That is, if \\(\\varphi\\in\\WFF\\), then\n   > \\[\n   > \\neg\\varphi\\in\\WFF.\n   > \\]\n   > If \\(\\varphi,\\psi\\in\\WFF\\) and\n   > \\[\n   > \\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\},\n   > \\]\n   > then\n   > \\[\n   > (\\varphi\\circ\\psi)\\in\\WFF.\n   > \\]"
     },
     {
@@ -43263,6 +43659,11 @@
       "proof_dependency_ids": [],
       "graph_dependency_ids": [
         "def:well-formed-formula"
+      ],
+      "completion_sources": [
+        "tracker",
+        "proof_file",
+        "proof_vault"
       ],
       "markdown": "   > **Statement.**\n   > Let \\(S\\) be a set of strings over the propositional alphabet. Suppose:\n   > - \\(\\Prop\\subseteq S\\);\n   > - if \\(\\varphi\\in S\\), then \\(\\neg\\varphi\\in S\\);\n   > - if \\(\\varphi,\\psi\\in S\\) and\n   >  \\(\\circ\\in\\{\\land,\\lor,\\to,\\leftrightarrow\\}\\), then\n   >  \\((\\varphi\\circ\\psi)\\in S\\).\n   > Then\n   > \\[\n   > \\WFF\\subseteq S.\n   > \\]"
     },
@@ -46053,6 +46454,99 @@
       "markdown": "   > **Statement.**\n   > If $|A| \\leq |B|$ and $|B| \\leq |A|$, then $A \\sim B$.\n   >\n   > Equivalently: if there exist injections $f : A \\hookrightarrow B$ and\n   > $g : B \\hookrightarrow A$, then there exists a bijection $h : A \\to B$."
     },
     {
+      "id": "thm:euclid-i-1",
+      "status": "completed",
+      "title": "Euclid I.1: Constructing an equilateral triangle",
+      "kind": "Theorem",
+      "statement": "Given a finite straight line segment $AB$, there exists an equilateral\ntriangle $ABC$ constructed on $AB$.",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "repo": "lra-volume-i",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_dir": "volume-i/book-geometry",
+      "chapter": "euclidean-geometry",
+      "chapter_title": "Euclidean Geometry",
+      "section": "compass-and-straightedge-constructions",
+      "section_title": "Compass And Straightedge Constructions",
+      "source": "notes/compass-and-straightedge-constructions/propositions.tex",
+      "source_path": "volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+      "proof_source": "proofs/compass-and-straightedge-constructions/prf-euclid-i-1.tex",
+      "proof_path": "volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-1.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-1.tex",
+      "theorem_dependency_ids": [],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [],
+      "completion_sources": [
+        "proof_file"
+      ],
+      "markdown": "   > **Statement.**\n   > Given a finite straight line segment $AB$, there exists an equilateral\n   > triangle $ABC$ constructed on $AB$."
+    },
+    {
+      "id": "thm:euclid-i-2",
+      "status": "completed",
+      "title": "Euclid I.2: Copying a segment from a given point",
+      "kind": "Theorem",
+      "statement": "Given a point $A$ and a finite straight line segment $BC$, there exists a\nstraight line segment beginning at $A$ and equal to $BC$.",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "repo": "lra-volume-i",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_dir": "volume-i/book-geometry",
+      "chapter": "euclidean-geometry",
+      "chapter_title": "Euclidean Geometry",
+      "section": "compass-and-straightedge-constructions",
+      "section_title": "Compass And Straightedge Constructions",
+      "source": "notes/compass-and-straightedge-constructions/propositions.tex",
+      "source_path": "volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+      "proof_source": "proofs/compass-and-straightedge-constructions/prf-euclid-i-2.tex",
+      "proof_path": "volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-2.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-2.tex",
+      "theorem_dependency_ids": [],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [],
+      "completion_sources": [
+        "proof_file"
+      ],
+      "markdown": "   > **Statement.**\n   > Given a point $A$ and a finite straight line segment $BC$, there exists a\n   > straight line segment beginning at $A$ and equal to $BC$."
+    },
+    {
+      "id": "thm:euclid-i-3",
+      "status": "completed",
+      "title": "Euclid I.3: Cutting off an equal segment",
+      "kind": "Theorem",
+      "statement": "Given two unequal finite straight line segments, there exists a construction\nwhich cuts off from the greater a straight line segment equal to the less.",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "repo": "lra-volume-i",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_dir": "volume-i/book-geometry",
+      "chapter": "euclidean-geometry",
+      "chapter_title": "Euclidean Geometry",
+      "section": "compass-and-straightedge-constructions",
+      "section_title": "Compass And Straightedge Constructions",
+      "source": "notes/compass-and-straightedge-constructions/propositions.tex",
+      "source_path": "volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+      "proof_source": "proofs/compass-and-straightedge-constructions/prf-euclid-i-3.tex",
+      "proof_path": "volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-3.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-3.tex",
+      "theorem_dependency_ids": [],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [],
+      "completion_sources": [
+        "proof_file"
+      ],
+      "markdown": "   > **Statement.**\n   > Given two unequal finite straight line segments, there exists a construction\n   > which cuts off from the greater a straight line segment equal to the less."
+    },
+    {
       "id": "thm:euclid-i-4",
       "status": "completed",
       "title": "Euclid I.4: Side-angle-side congruence",
@@ -46078,6 +46572,10 @@
       "theorem_dependency_ids": [],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [],
+      "completion_sources": [
+        "tracker",
+        "proof_file"
+      ],
       "markdown": "   > **Statement.**\n   > If two triangles have two sides equal to two sides respectively, and have the\n   > angles contained by the equal straight lines equal, then they also have the\n   > base equal to the base, the triangle equal to the triangle, and the remaining\n   > angles equal to the remaining angles respectively."
     },
     {
@@ -46106,6 +46604,10 @@
       "theorem_dependency_ids": [],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [],
+      "completion_sources": [
+        "tracker",
+        "proof_file"
+      ],
       "markdown": "   > **Statement.**\n   > Through a given point, to draw a straight line parallel to a given straight\n   > line."
     },
     {
@@ -46134,6 +46636,10 @@
       "theorem_dependency_ids": [],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [],
+      "completion_sources": [
+        "tracker",
+        "proof_file"
+      ],
       "markdown": "   > **Statement.**\n   > In any triangle, if one of the sides is produced, then the exterior angle is\n   > equal to the two interior and opposite angles, and the three interior angles of\n   > the triangle are equal to two right angles."
     },
     {
@@ -46162,6 +46668,10 @@
       "theorem_dependency_ids": [],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [],
+      "completion_sources": [
+        "tracker",
+        "proof_file"
+      ],
       "markdown": "   > **Statement.**\n   > If a parallelogram has the same base with a triangle and is in the same\n   > parallels, then the parallelogram is double the triangle."
     },
     {
@@ -46190,7 +46700,42 @@
       "theorem_dependency_ids": [],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [],
+      "completion_sources": [
+        "tracker",
+        "proof_file"
+      ],
       "markdown": "   > **Statement.**\n   > On a given straight line, to describe a square."
+    },
+    {
+      "id": "thm:euclid-i-47",
+      "status": "completed",
+      "title": "Euclid I.47: Pythagorean theorem",
+      "kind": "Theorem",
+      "statement": "In right-angled triangles, the square on the side subtending the right angle is\nequal to the squares on the sides containing the right angle.",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "repo": "lra-volume-i",
+      "book": "foundational-geometry",
+      "book_title": "Foundational Geometry",
+      "book_dir": "volume-i/book-geometry",
+      "chapter": "euclidean-geometry",
+      "chapter_title": "Euclidean Geometry",
+      "section": "compass-and-straightedge-constructions",
+      "section_title": "Compass And Straightedge Constructions",
+      "source": "notes/compass-and-straightedge-constructions/propositions.tex",
+      "source_path": "volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/notes/compass-and-straightedge-constructions/propositions.tex",
+      "proof_source": "proofs/compass-and-straightedge-constructions/prf-euclid-i-47.tex",
+      "proof_path": "volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-47.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-geometry/euclidean-geometry/proofs/compass-and-straightedge-constructions/prf-euclid-i-47.tex",
+      "theorem_dependency_ids": [],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [],
+      "completion_sources": [
+        "proof_file"
+      ],
+      "markdown": "   > **Statement.**\n   > In right-angled triangles, the square on the side subtending the right angle is\n   > equal to the squares on the sides containing the right angle."
     },
     {
       "id": "cor:equality-is-finest-equivalence",
@@ -65437,6 +65982,82 @@
       "markdown": "   > **Statement.**\n   > An arbitrary intersection of closed subsets of $\\mathbb{R}$ is closed, and a finite union of closed subsets of $\\mathbb{R}$ is closed."
     },
     {
+      "id": "thm:translation-invariance-supremum",
+      "status": "completed",
+      "title": "Translation Invariance of the Supremum",
+      "kind": "Theorem",
+      "statement": "Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $c\\in\\mathbb{R}$. Then\n\\[\n \\sup(A+c)=\\sup A+c,\n \\qquad\n A+c=\\{a+c:a\\in A\\}.\n\\]",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "section": "bounds-algebra",
+      "section_title": "Bounds Algebra",
+      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source_path": "volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "proof_source": "proofs/bounds-algebra/prf-translation-invariance-supremum.tex",
+      "proof_path": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-translation-invariance-supremum.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-translation-invariance-supremum.tex",
+      "theorem_dependency_ids": [
+        "def:supremum",
+        "def:upper-bound"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:supremum",
+        "def:upper-bound"
+      ],
+      "completion_sources": [
+        "proof_file"
+      ],
+      "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $c\\in\\mathbb{R}$. Then\n   > \\[\n   >  \\sup(A+c)=\\sup A+c,\n   >  \\qquad\n   >  A+c=\\{a+c:a\\in A\\}.\n   > \\]"
+    },
+    {
+      "id": "thm:translation-invariance-infimum",
+      "status": "completed",
+      "title": "Translation Invariance of the Infimum",
+      "kind": "Theorem",
+      "statement": "Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let\n$c\\in\\mathbb{R}$. Then\n\\[\n \\inf(A+c)=\\inf A+c.\n\\]",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "section": "bounds-algebra",
+      "section_title": "Bounds Algebra",
+      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source_path": "volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "proof_source": "proofs/bounds-algebra/prf-translation-invariance-infimum.tex",
+      "proof_path": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-translation-invariance-infimum.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-translation-invariance-infimum.tex",
+      "theorem_dependency_ids": [
+        "def:set-arithmetic-images",
+        "def:infimum",
+        "def:lower-bound"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:set-arithmetic-images",
+        "def:infimum",
+        "def:lower-bound"
+      ],
+      "completion_sources": [
+        "proof_file"
+      ],
+      "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let\n   > $c\\in\\mathbb{R}$. Then\n   > \\[\n   >  \\inf(A+c)=\\inf A+c.\n   > \\]"
+    },
+    {
       "id": "thm:scalar-mult-positive",
       "status": "completed",
       "title": "Scalar Multiplication by a Positive Scalar",
@@ -65468,7 +66089,51 @@
         "def:supremum",
         "def:upper-bound"
       ],
+      "completion_sources": [
+        "tracker",
+        "proof_file",
+        "proof_vault"
+      ],
       "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $k>0$. Then\n   > \\[\n   >  \\sup(kA)=k\\sup A,\n   >  \\qquad\n   >  kA=\\{ka:a\\in A\\}.\n   > \\]"
+    },
+    {
+      "id": "thm:positive-scalar-mult-infimum",
+      "status": "completed",
+      "title": "Positive Scalar Multiplication of the Infimum",
+      "kind": "Theorem",
+      "statement": "Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let $k>0$.\nThen\n\\[\n \\inf(kA)=k\\inf A.\n\\]",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "section": "bounds-algebra",
+      "section_title": "Bounds Algebra",
+      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source_path": "volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "proof_source": "proofs/bounds-algebra/prf-positive-scalar-mult-infimum.tex",
+      "proof_path": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-positive-scalar-mult-infimum.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-positive-scalar-mult-infimum.tex",
+      "theorem_dependency_ids": [
+        "def:displacement-dilation-reflection",
+        "def:infimum",
+        "def:lower-bound"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:displacement-dilation-reflection",
+        "def:infimum",
+        "def:lower-bound"
+      ],
+      "completion_sources": [
+        "proof_file"
+      ],
+      "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let $k>0$.\n   > Then\n   > \\[\n   >  \\inf(kA)=k\\inf A.\n   > \\]"
     },
     {
       "id": "thm:scalar-mult-negative",
@@ -65506,7 +66171,53 @@
         "def:upper-bound",
         "def:lower-bound"
       ],
+      "completion_sources": [
+        "tracker",
+        "proof_file",
+        "proof_vault"
+      ],
       "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let $k<0$. Then\n   > \\[\n   >  \\sup(kA)=k\\inf A,\n   >  \\qquad\n   >  kA=\\{ka:a\\in A\\}.\n   > \\]"
+    },
+    {
+      "id": "thm:negative-scalar-mult-infimum",
+      "status": "completed",
+      "title": "Negative Scalar Multiplication of the Infimum",
+      "kind": "Theorem",
+      "statement": "Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $k<0$.\nThen\n\\[\n \\inf(kA)=k\\sup A.\n\\]",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "section": "bounds-algebra",
+      "section_title": "Bounds Algebra",
+      "source": "notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source_path": "volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/notes/bounds-algebra/notes-algebra-of-supremum-infimum.tex",
+      "proof_source": "proofs/bounds-algebra/prf-negative-scalar-mult-infimum.tex",
+      "proof_path": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-negative-scalar-mult-infimum.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-negative-scalar-mult-infimum.tex",
+      "theorem_dependency_ids": [
+        "def:supremum",
+        "def:infimum",
+        "def:upper-bound",
+        "def:lower-bound"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:supremum",
+        "def:infimum",
+        "def:upper-bound",
+        "def:lower-bound"
+      ],
+      "completion_sources": [
+        "proof_file"
+      ],
+      "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $k<0$.\n   > Then\n   > \\[\n   >  \\inf(kA)=k\\sup A.\n   > \\]"
     },
     {
       "id": "thm:negation-exchange-sup-inf",
@@ -65544,11 +66255,16 @@
         "def:upper-bound",
         "def:lower-bound"
       ],
+      "completion_sources": [
+        "tracker",
+        "proof_file",
+        "proof_vault"
+      ],
       "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below. Then $-A=\\{-a:a\\in A\\}$ is bounded above and\n   > \\[\n   >  \\sup(-A)=-\\inf A.\n   > \\]"
     },
     {
       "id": "thm:supremum-sum-set",
-      "status": "open",
+      "status": "completed",
       "title": "Supremum of a Sum Set",
       "kind": "Theorem",
       "statement": "Let $A,B\\subseteq\\mathbb{R}$ be nonempty and bounded above. Then\n\\[\n \\sup(A+B)=\\sup A+\\sup B,\n \\qquad\n A+B=\\{a+b:a\\in A,\\ b\\in B\\}.\n\\]",
@@ -65578,11 +66294,14 @@
         "def:epsilon-characterization-of-supremum",
         "def:supremum"
       ],
+      "completion_sources": [
+        "proof_file"
+      ],
       "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty and bounded above. Then\n   > \\[\n   >  \\sup(A+B)=\\sup A+\\sup B,\n   >  \\qquad\n   >  A+B=\\{a+b:a\\in A,\\ b\\in B\\}.\n   > \\]"
     },
     {
       "id": "thm:infimum-sum-set",
-      "status": "open",
+      "status": "completed",
       "title": "Infimum of a Sum Set",
       "kind": "Theorem",
       "statement": "Let $A,B\\subseteq\\mathbb{R}$ be nonempty and bounded below. Then\n\\[\n \\inf(A+B)=\\inf A+\\inf B.\n\\]",
@@ -65612,11 +66331,14 @@
         "def:set-arithmetic-images",
         "def:infimum"
       ],
+      "completion_sources": [
+        "proof_file"
+      ],
       "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty and bounded below. Then\n   > \\[\n   >  \\inf(A+B)=\\inf A+\\inf B.\n   > \\]"
     },
     {
       "id": "thm:supremum-difference-set",
-      "status": "open",
+      "status": "completed",
       "title": "Supremum of a Difference Set",
       "kind": "Theorem",
       "statement": "Let $A,B\\subseteq\\mathbb{R}$ be nonempty, with $A$ bounded above and $B$ bounded below. Then\n\\[\n \\sup(A-B)=\\sup A-\\inf B,\n \\qquad\n A-B=\\{a-b:a\\in A,\\ b\\in B\\}.\n\\]",
@@ -65650,11 +66372,14 @@
         "def:supremum",
         "def:infimum"
       ],
+      "completion_sources": [
+        "proof_file"
+      ],
       "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty, with $A$ bounded above and $B$ bounded below. Then\n   > \\[\n   >  \\sup(A-B)=\\sup A-\\inf B,\n   >  \\qquad\n   >  A-B=\\{a-b:a\\in A,\\ b\\in B\\}.\n   > \\]"
     },
     {
       "id": "thm:infimum-difference-set",
-      "status": "open",
+      "status": "completed",
       "title": "Infimum of a Difference Set",
       "kind": "Theorem",
       "statement": "Let $A,B\\subseteq\\mathbb{R}$ be nonempty, with $A$ bounded below and $B$\nbounded above. Then\n\\[\n \\inf(A-B)=\\inf A-\\sup B.\n\\]",
@@ -65687,6 +66412,11 @@
         "thm:infimum-sum-set",
         "def:supremum",
         "def:infimum"
+      ],
+      "completion_sources": [
+        "tracker",
+        "proof_file",
+        "proof_vault"
       ],
       "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty, with $A$ bounded below and $B$\n   > bounded above. Then\n   > \\[\n   >  \\inf(A-B)=\\inf A-\\sup B.\n   > \\]"
     },
@@ -65756,6 +66486,11 @@
       "theorem_dependency_ids": [],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [],
+      "completion_sources": [
+        "tracker",
+        "proof_file",
+        "proof_vault"
+      ],
       "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let\n   > $s=\\sup A$. Then $x\\leq s$ for every $x\\in A$."
     },
     {
@@ -67328,6 +68063,11 @@
       "theorem_dependency_ids": [],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [],
+      "completion_sources": [
+        "tracker",
+        "proof_file",
+        "proof_vault"
+      ],
       "markdown": "   > **Statement.**\n   > Let $(S,\\leq)$ be an ordered set and let $A\\subseteq S$ be nonempty. If\n   > $m=\\max A$, then $m=\\sup A$."
     },
     {
@@ -67748,6 +68488,11 @@
       "theorem_dependency_ids": [],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [],
+      "completion_sources": [
+        "tracker",
+        "proof_file",
+        "proof_vault"
+      ],
       "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty, bounded below, and bounded above.\n   > Then $\\inf A\\leq\\sup A$."
     },
     {
@@ -68159,6 +68904,43 @@
         "lem:integer-ceiling-lemma"
       ],
       "markdown": "   > **Statement.**\n   > If $\\alpha,\\beta\\in\\mathbb{R}$ and $\\beta-\\alpha>1$, then there exists\n   > $m\\in\\mathbb{Z}$ such that\n   > \\[\n   > \\alpha<m<\\beta.\n   > \\]"
+    },
+    {
+      "id": "thm:density-of-rationals-in-reals",
+      "status": "completed",
+      "title": "Density of the Rationals",
+      "kind": "Theorem",
+      "statement": "For every $a,b\\in\\mathbb{R}$ with $a<b$, there exists $q\\in\\mathbb{Q}$ such that $a<q<b$.",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "bounding",
+      "chapter_title": "Bounding",
+      "section": "completeness",
+      "section_title": "Completeness",
+      "source": "notes/completeness/notes-density.tex",
+      "source_path": "volume-iii/book-analysis-i/bounding/notes/completeness/notes-density.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/notes/completeness/notes-density.tex",
+      "proof_source": "proofs/completeness/prf-density-of-rationals-in-reals.tex",
+      "proof_path": "volume-iii/book-analysis-i/bounding/proofs/completeness/prf-density-of-rationals-in-reals.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/bounding/proofs/completeness/prf-density-of-rationals-in-reals.tex",
+      "theorem_dependency_ids": [
+        "thm:archimedean-property",
+        "def:order-dense-subset"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "thm:archimedean-property",
+        "def:order-dense-subset"
+      ],
+      "completion_sources": [
+        "proof_file"
+      ],
+      "markdown": "   > **Statement.**\n   > For every $a,b\\in\\mathbb{R}$ with $a<b$, there exists $q\\in\\mathbb{Q}$ such that $a<q<b$."
     },
     {
       "id": "lem:rational-translation-preserves-rationality",

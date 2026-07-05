@@ -70,7 +70,8 @@ cards, enriches artifacts with volume/book/chapter metadata, and writes
 **Proof todo data** — `scripts/build_to_prove.py`
 
 Reads `knowledge.json`, preserves existing `(✅)` marks from volume
-`proofs-to-do.md` trackers, dependency-sorts active proof TODOs, and writes
+`proofs-to-do.md` trackers, recognizes completed canonical proof files and
+accepted proof-vault records, dependency-sorts active proof TODOs, and writes
 `to-prove.json`. With `--write-volume-trackers`, it also refreshes each
 `lra-volume-*` repository's root `proofs-to-do.md`.
 
