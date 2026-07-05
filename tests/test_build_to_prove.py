@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from build_to_prove import build_items  # noqa: E402
+from build_to_prove import build_items, published_items  # noqa: E402
 
 
 def proof_file(title: str, body: str) -> str:
@@ -109,6 +109,15 @@ attempts:
             self.assertEqual(by_id["thm:vault-complete"]["completion_sources"], ["proof_vault"])
             self.assertEqual(by_id["thm:still-open"]["status"], "open")
             self.assertNotIn("completion_sources", by_id["thm:still-open"])
+
+    def test_published_items_exclude_completed_by_default(self):
+        items = [
+            {"id": "thm:done", "status": "completed"},
+            {"id": "thm:todo", "status": "open"},
+        ]
+
+        self.assertEqual([item["id"] for item in published_items(items)], ["thm:todo"])
+        self.assertEqual([item["id"] for item in published_items(items, include_completed=True)], ["thm:done", "thm:todo"])
 
 
 if __name__ == "__main__":

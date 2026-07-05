@@ -364,6 +364,12 @@ def write_volume_trackers(volumes: list[dict[str, Any]], repos_root: Path) -> No
         path.write_text(tracker_markdown(volume, volume.get("items") or []), encoding="utf-8")
 
 
+def published_items(items: list[dict[str, Any]], *, include_completed: bool = False) -> list[dict[str, Any]]:
+    if include_completed:
+        return items
+    return [item for item in items if item.get("status") == "open"]
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--knowledge", type=Path, default=DEFAULT_KNOWLEDGE)
@@ -371,6 +377,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--repos-root", type=Path, default=REPO_ROOT.parent)
     parser.add_argument("--vault-root", type=Path, default=DEFAULT_VAULT_ROOT)
     parser.add_argument("--write-volume-trackers", action="store_true")
+    parser.add_argument("--include-completed", action="store_true", help="Include completed proof records in the output artifact.")
     return parser.parse_args()
 
 
@@ -379,7 +386,8 @@ def main() -> int:
     knowledge = load_json(args.knowledge.resolve())
     repos_root = args.repos_root.resolve()
     vault_root = args.vault_root.resolve()
-    items, _completed = build_items(knowledge, repos_root, vault_root)
+    all_items, _completed = build_items(knowledge, repos_root, vault_root)
+    items = published_items(all_items, include_completed=args.include_completed)
     volumes = volume_payloads(knowledge, items)
     payload = {
         "metadata": {
@@ -389,6 +397,7 @@ def main() -> int:
             "item_count": len(items),
             "open_count": sum(1 for item in items if item["status"] == "open"),
             "completed_count": sum(1 for item in items if item["status"] == "completed"),
+            "excluded_completed_count": 0 if args.include_completed else sum(1 for item in all_items if item["status"] == "completed"),
         },
         "volumes": volumes,
         "items": items,
