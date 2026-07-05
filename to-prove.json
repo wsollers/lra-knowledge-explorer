@@ -1,11 +1,11 @@
 {
   "metadata": {
     "schema_version": "0.1",
-    "generated_at": "2026-07-04T22:36:57.151705+00:00",
+    "generated_at": "2026-07-05T02:58:27.723224+00:00",
     "source": "knowledge.json",
     "item_count": 1241,
-    "open_count": 1215,
-    "completed_count": 26
+    "open_count": 1214,
+    "completed_count": 27
   },
   "volumes": [
     {
@@ -4721,6 +4721,7 @@
           "proof_dependency_ids": [],
           "graph_dependency_ids": [],
           "completion_sources": [
+            "tracker",
             "proof_file"
           ],
           "markdown": "   > **Statement.**\n   > Given a finite straight line segment $AB$, there exists an equilateral\n   > triangle $ABC$ constructed on $AB$."
@@ -4752,6 +4753,7 @@
           "proof_dependency_ids": [],
           "graph_dependency_ids": [],
           "completion_sources": [
+            "tracker",
             "proof_file"
           ],
           "markdown": "   > **Statement.**\n   > Given a point $A$ and a finite straight line segment $BC$, there exists a\n   > straight line segment beginning at $A$ and equal to $BC$."
@@ -4783,6 +4785,7 @@
           "proof_dependency_ids": [],
           "graph_dependency_ids": [],
           "completion_sources": [
+            "tracker",
             "proof_file"
           ],
           "markdown": "   > **Statement.**\n   > Given two unequal finite straight line segments, there exists a construction\n   > which cuts off from the greater a straight line segment equal to the less."
@@ -4974,6 +4977,7 @@
           "proof_dependency_ids": [],
           "graph_dependency_ids": [],
           "completion_sources": [
+            "tracker",
             "proof_file"
           ],
           "markdown": "   > **Statement.**\n   > In right-angled triangles, the square on the side subtending the right angle is\n   > equal to the squares on the sides containing the right angle."
@@ -18657,6 +18661,82 @@
           "markdown": "   > **Statement.**\n   > A convergent sequence in $\\mathbb{Q}$ has at most one rational limit."
         },
         {
+          "id": "thm:interval-characterization",
+          "status": "open",
+          "title": "Characterization of Intervals",
+          "kind": "Theorem",
+          "statement": "A subset $I\\subseteq\\mathbb{R}$ is an interval if and only if for all $x,z\\in I$\nwith $x<z$,\n\\[\n[x,z]\\subseteq I.\n\\]",
+          "volume": 2,
+          "volume_roman": "ii",
+          "volume_title": "Origins of Numbers",
+          "repo": "lra-volume-ii",
+          "book": "the-continuum",
+          "book_title": "The Continuum",
+          "book_dir": "volume-ii/book-continuum",
+          "chapter": "number-lines",
+          "chapter_title": "Number Lines",
+          "section": "intervals-on-a-number-line",
+          "section_title": "Intervals On A Number Line",
+          "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+          "source_path": "volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+          "proof_source": "proofs/intervals-on-a-number-line/prf-interval-characterization.tex",
+          "proof_path": "volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-interval-characterization.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-interval-characterization.tex",
+          "theorem_dependency_ids": [
+            "def:interval",
+            "def:closed-interval"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:interval",
+            "def:closed-interval"
+          ],
+          "markdown": "   > **Statement.**\n   > A subset $I\\subseteq\\mathbb{R}$ is an interval if and only if for all $x,z\\in I$\n   > with $x<z$,\n   > \\[\n   > [x,z]\\subseteq I.\n   > \\]"
+        },
+        {
+          "id": "thm:classification-of-intervals-in-r",
+          "status": "open",
+          "title": "Classification of Intervals in $\\mathbb{R}$",
+          "kind": "Theorem",
+          "statement": "Every interval in $\\mathbb{R}$ is one of the standard interval types:\n\\[\n(a,b),\\ [a,b],\\ (a,b],\\ [a,b),\\ (a,\\infty),\\ [a,\\infty),\n\\]\n\\[\n(-\\infty,b),\\ (-\\infty,b],\\ \\mathbb{R},\\ \\varnothing,\n\\]\nincluding degenerate one-point intervals.",
+          "volume": 2,
+          "volume_roman": "ii",
+          "volume_title": "Origins of Numbers",
+          "repo": "lra-volume-ii",
+          "book": "the-continuum",
+          "book_title": "The Continuum",
+          "book_dir": "volume-ii/book-continuum",
+          "chapter": "number-lines",
+          "chapter_title": "Number Lines",
+          "section": "intervals-on-a-number-line",
+          "section_title": "Intervals On A Number Line",
+          "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+          "source_path": "volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+          "proof_source": "proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex",
+          "proof_path": "volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex",
+          "theorem_dependency_ids": [
+            "def:interval",
+            "def:open-interval",
+            "def:closed-interval",
+            "def:left-half-open-interval",
+            "def:right-half-open-interval",
+            "def:ray"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:interval",
+            "def:open-interval",
+            "def:closed-interval",
+            "def:left-half-open-interval",
+            "def:right-half-open-interval",
+            "def:ray"
+          ],
+          "markdown": "   > **Statement.**\n   > Every interval in $\\mathbb{R}$ is one of the standard interval types:\n   > \\[\n   > (a,b),\\ [a,b],\\ (a,b],\\ [a,b),\\ (a,\\infty),\\ [a,\\infty),\n   > \\]\n   > \\[\n   > (-\\infty,b),\\ (-\\infty,b],\\ \\mathbb{R},\\ \\varnothing,\n   > \\]\n   > including degenerate one-point intervals."
+        },
+        {
           "id": "lem:sum-of-cuts-is-a-cut",
           "status": "open",
           "title": "Sum of Cuts Is a Cut",
@@ -21873,82 +21953,6 @@
           "markdown": "   > **Statement.**\n   > Inversion determines a well-defined operation on the nonzero complex numbers."
         },
         {
-          "id": "thm:interval-characterization",
-          "status": "open",
-          "title": "Characterization of Intervals",
-          "kind": "Theorem",
-          "statement": "A subset $I\\subseteq\\mathbb{R}$ is an interval if and only if for all $x,z\\in I$\nwith $x<z$,\n\\[\n[x,z]\\subseteq I.\n\\]",
-          "volume": 2,
-          "volume_roman": "ii",
-          "volume_title": "Origins of Numbers",
-          "repo": "lra-volume-ii",
-          "book": "the-continuum",
-          "book_title": "The Continuum",
-          "book_dir": "volume-ii/book-continuum",
-          "chapter": "number-lines",
-          "chapter_title": "Number Lines",
-          "section": "intervals-on-a-number-line",
-          "section_title": "Intervals On A Number Line",
-          "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-          "source_path": "volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-          "proof_source": "proofs/intervals-on-a-number-line/prf-interval-characterization.tex",
-          "proof_path": "volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-interval-characterization.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-interval-characterization.tex",
-          "theorem_dependency_ids": [
-            "def:interval",
-            "def:closed-interval"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:interval",
-            "def:closed-interval"
-          ],
-          "markdown": "   > **Statement.**\n   > A subset $I\\subseteq\\mathbb{R}$ is an interval if and only if for all $x,z\\in I$\n   > with $x<z$,\n   > \\[\n   > [x,z]\\subseteq I.\n   > \\]"
-        },
-        {
-          "id": "thm:classification-of-intervals-in-r",
-          "status": "open",
-          "title": "Classification of Intervals in $\\mathbb{R}$",
-          "kind": "Theorem",
-          "statement": "Every interval in $\\mathbb{R}$ is one of the standard interval types:\n\\[\n(a,b),\\ [a,b],\\ (a,b],\\ [a,b),\\ (a,\\infty),\\ [a,\\infty),\n\\]\n\\[\n(-\\infty,b),\\ (-\\infty,b],\\ \\mathbb{R},\\ \\varnothing,\n\\]\nincluding degenerate one-point intervals.",
-          "volume": 2,
-          "volume_roman": "ii",
-          "volume_title": "Origins of Numbers",
-          "repo": "lra-volume-ii",
-          "book": "the-continuum",
-          "book_title": "The Continuum",
-          "book_dir": "volume-ii/book-continuum",
-          "chapter": "number-lines",
-          "chapter_title": "Number Lines",
-          "section": "intervals-on-a-number-line",
-          "section_title": "Intervals On A Number Line",
-          "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-          "source_path": "volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-          "proof_source": "proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex",
-          "proof_path": "volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex",
-          "theorem_dependency_ids": [
-            "def:interval",
-            "def:open-interval",
-            "def:closed-interval",
-            "def:left-half-open-interval",
-            "def:right-half-open-interval",
-            "def:ray"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:interval",
-            "def:open-interval",
-            "def:closed-interval",
-            "def:left-half-open-interval",
-            "def:right-half-open-interval",
-            "def:ray"
-          ],
-          "markdown": "   > **Statement.**\n   > Every interval in $\\mathbb{R}$ is one of the standard interval types:\n   > \\[\n   > (a,b),\\ [a,b],\\ (a,b],\\ [a,b),\\ (a,\\infty),\\ [a,\\infty),\n   > \\]\n   > \\[\n   > (-\\infty,b),\\ (-\\infty,b],\\ \\mathbb{R},\\ \\varnothing,\n   > \\]\n   > including degenerate one-point intervals."
-        },
-        {
           "id": "thm:embedding-identifies-with-image",
           "status": "open",
           "title": "Embeddings Identify a System with Its Image",
@@ -22159,8 +22163,8 @@
       "roman": "iii",
       "title": "Classical Analysis",
       "repo": "lra-volume-iii",
-      "open_count": 482,
-      "completed_count": 15,
+      "open_count": 481,
+      "completed_count": 16,
       "items": [
         {
           "id": "prop:little-o-quotient-characterization",
@@ -23767,482 +23771,6 @@
           "markdown": "   > **Statement.**\n   > If there exist residues $r, s \\in \\{0,\\ldots,k-1\\}$ such that\n   > $(a_{kn+r}) \\to L$ and $(a_{kn+s}) \\to M$ with $L \\neq M$, then\n   > $(a_n)$ diverges."
         },
         {
-          "id": "prop:abs-value-is-distance-to-zero",
-          "status": "open",
-          "title": "Absolute Value Is Distance to the Origin",
-          "kind": "Proposition",
-          "statement": "For every $a\\in\\mathbb{R}$, $\\;|a|=d(a,0)$.",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "absolute-value-as-distance",
-          "section_title": "Absolute Value As Distance",
-          "source": "notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
-          "proof_source": "proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex",
-          "theorem_dependency_ids": [
-            "def:distance-on-real-line"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:distance-on-real-line"
-          ],
-          "markdown": "   > **Statement.**\n   > For every $a\\in\\mathbb{R}$, $\\;|a|=d(a,0)$."
-        },
-        {
-          "id": "thm:closed-iff-contains-limit-points",
-          "status": "open",
-          "title": "Closed Sets Contain Their Limit Points",
-          "kind": "Theorem",
-          "statement": "A set $F\\subseteq\\mathbb{R}$ is closed if and only if it contains every one of its limit points.",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "closed-sets",
-          "section_title": "Closed Sets",
-          "source": "notes/closed-sets/notes-closed-sets.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/closed-sets/notes-closed-sets.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/closed-sets/notes-closed-sets.tex",
-          "proof_source": "proofs/closed-sets/prf-closed-iff-contains-limit-points.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/closed-sets/prf-closed-iff-contains-limit-points.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/closed-sets/prf-closed-iff-contains-limit-points.tex",
-          "theorem_dependency_ids": [
-            "def:closed-set",
-            "def:limit-point"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:closed-set",
-            "def:limit-point"
-          ],
-          "markdown": "   > **Statement.**\n   > A set $F\\subseteq\\mathbb{R}$ is closed if and only if it contains every one of its limit points."
-        },
-        {
-          "id": "thm:compact-implies-closed-bounded",
-          "status": "open",
-          "title": "Compact Subsets of $\\mathbb{R}$ Are Closed and Bounded",
-          "kind": "Theorem",
-          "statement": "If $K\\subseteq\\mathbb{R}$ is compact, then $K$ is closed and bounded.",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "compactness-on-r",
-          "section_title": "Compactness On R",
-          "source": "notes/compactness-on-r/notes-compactness-on-r.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/compactness-on-r/notes-compactness-on-r.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/compactness-on-r/notes-compactness-on-r.tex",
-          "proof_source": "proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex",
-          "theorem_dependency_ids": [
-            "def:closed-set",
-            "def:compact-set",
-            "def:bounded-subset-of-r"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:closed-set",
-            "def:compact-set",
-            "def:bounded-subset-of-r"
-          ],
-          "markdown": "   > **Statement.**\n   > If $K\\subseteq\\mathbb{R}$ is compact, then $K$ is closed and bounded."
-        },
-        {
-          "id": "thm:closed-bounded-interval-compact",
-          "status": "open",
-          "title": "Closed Bounded Intervals Are Compact",
-          "kind": "Theorem",
-          "statement": "Every closed bounded interval $[a,b]\\subseteq\\mathbb{R}$ is compact.",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "heine-borel",
-          "section_title": "Heine Borel",
-          "source": "notes/heine-borel/notes-heine-borel.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
-          "proof_source": "proofs/heine-borel/prf-closed-bounded-interval-compact.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-closed-bounded-interval-compact.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-closed-bounded-interval-compact.tex",
-          "theorem_dependency_ids": [
-            "def:compact-set"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:compact-set"
-          ],
-          "markdown": "   > **Statement.**\n   > Every closed bounded interval $[a,b]\\subseteq\\mathbb{R}$ is compact."
-        },
-        {
-          "id": "thm:heine-borel",
-          "status": "open",
-          "title": "Heine--Borel Theorem for $\\mathbb{R}$",
-          "kind": "Theorem",
-          "statement": "A set $K\\subseteq\\mathbb{R}$ is compact if and only if $K$ is closed and bounded.",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "heine-borel",
-          "section_title": "Heine Borel",
-          "source": "notes/heine-borel/notes-heine-borel.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
-          "proof_source": "proofs/heine-borel/prf-heine-borel.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-heine-borel.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-heine-borel.tex",
-          "theorem_dependency_ids": [
-            "thm:compact-implies-closed-bounded",
-            "thm:closed-bounded-interval-compact"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "thm:compact-implies-closed-bounded",
-            "thm:closed-bounded-interval-compact"
-          ],
-          "markdown": "   > **Statement.**\n   > A set $K\\subseteq\\mathbb{R}$ is compact if and only if $K$ is closed and bounded."
-        },
-        {
-          "id": "thm:open-interval-is-open",
-          "status": "open",
-          "title": "Open Intervals Are Open",
-          "kind": "Theorem",
-          "statement": "Every open interval $(a,b)$, every open ray $(a,\\infty)$ and $(-\\infty,b)$, and $\\mathbb{R}$ itself are open sets.",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "open-sets",
-          "section_title": "Open Sets",
-          "source": "notes/open-sets/notes-open-sets.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
-          "proof_source": "proofs/open-sets/prf-open-interval-is-open.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-interval-is-open.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-interval-is-open.tex",
-          "theorem_dependency_ids": [
-            "def:open-set"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:open-set"
-          ],
-          "markdown": "   > **Statement.**\n   > Every open interval $(a,b)$, every open ray $(a,\\infty)$ and $(-\\infty,b)$, and $\\mathbb{R}$ itself are open sets."
-        },
-        {
-          "id": "thm:open-set-closure-operations",
-          "status": "open",
-          "title": "Unions and Finite Intersections of Open Sets",
-          "kind": "Theorem",
-          "statement": "An arbitrary union of open subsets of $\\mathbb{R}$ is open, and a finite intersection of open subsets of $\\mathbb{R}$ is open.",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "open-sets",
-          "section_title": "Open Sets",
-          "source": "notes/open-sets/notes-open-sets.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
-          "proof_source": "proofs/open-sets/prf-open-set-closure-operations.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-set-closure-operations.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-set-closure-operations.tex",
-          "theorem_dependency_ids": [
-            "def:open-set"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:open-set"
-          ],
-          "markdown": "   > **Statement.**\n   > An arbitrary union of open subsets of $\\mathbb{R}$ is open, and a finite intersection of open subsets of $\\mathbb{R}$ is open."
-        },
-        {
-          "id": "lem:minimum-of-positive-numbers-is-positive",
-          "status": "open",
-          "title": "Minimum of Positive Numbers Is Positive",
-          "kind": "Lemma",
-          "statement": "If $a>0$ and $b>0$, then\n\\[\n\\min\\{a,b\\}>0.\n\\]",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "order-distance-length",
-          "section_title": "Order Distance Length",
-          "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-          "proof_source": "proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex",
-          "theorem_dependency_ids": [],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [],
-          "markdown": "   > **Statement.**\n   > If $a>0$ and $b>0$, then\n   > \\[\n   > \\min\\{a,b\\}>0.\n   > \\]"
-        },
-        {
-          "id": "lem:half-epsilon-is-positive",
-          "status": "open",
-          "title": "Half Epsilon Is Positive",
-          "kind": "Lemma",
-          "statement": "If $\\varepsilon>0$, then\n\\[\n\\frac{\\varepsilon}{2}>0.\n\\]",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "order-distance-length",
-          "section_title": "Order Distance Length",
-          "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-          "proof_source": "proofs/order-distance-length/prf-half-epsilon-is-positive.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-half-epsilon-is-positive.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-half-epsilon-is-positive.tex",
-          "theorem_dependency_ids": [],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [],
-          "markdown": "   > **Statement.**\n   > If $\\varepsilon>0$, then\n   > \\[\n   > \\frac{\\varepsilon}{2}>0.\n   > \\]"
-        },
-        {
-          "id": "lem:epsilon-splitting",
-          "status": "open",
-          "title": "Epsilon Splitting",
-          "kind": "Lemma",
-          "statement": "If $\\varepsilon>0$, then\n\\[\n\\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon.\n\\]",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "order-distance-length",
-          "section_title": "Order Distance Length",
-          "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-          "proof_source": "proofs/order-distance-length/prf-epsilon-splitting.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-epsilon-splitting.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-epsilon-splitting.tex",
-          "theorem_dependency_ids": [],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [],
-          "markdown": "   > **Statement.**\n   > If $\\varepsilon>0$, then\n   > \\[\n   > \\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon.\n   > \\]"
-        },
-        {
-          "id": "lem:positive-minimum-bound",
-          "status": "open",
-          "title": "Positive Minimum Bound",
-          "kind": "Lemma",
-          "statement": "If $0<\\delta\\le a$ and $0<\\delta\\le b$, then\n\\[\n\\delta\\le \\min\\{a,b\\}.\n\\]",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "order-distance-length",
-          "section_title": "Order Distance Length",
-          "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-          "proof_source": "proofs/order-distance-length/prf-positive-minimum-bound.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-positive-minimum-bound.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-positive-minimum-bound.tex",
-          "theorem_dependency_ids": [
-            "lem:minimum-of-positive-numbers-is-positive"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "lem:minimum-of-positive-numbers-is-positive"
-          ],
-          "markdown": "   > **Statement.**\n   > If $0<\\delta\\le a$ and $0<\\delta\\le b$, then\n   > \\[\n   > \\delta\\le \\min\\{a,b\\}.\n   > \\]"
-        },
-        {
-          "id": "lem:choosing-a-smaller-positive-number",
-          "status": "open",
-          "title": "Choosing a Smaller Positive Number",
-          "kind": "Lemma",
-          "statement": "If $\\varepsilon>0$ and $c>0$, then there exists $\\delta>0$ such that\n\\[\n0<\\delta<\\varepsilon\n\\quad\\text{and}\\quad\n0<\\delta<c.\n\\]",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "order-distance-length",
-          "section_title": "Order Distance Length",
-          "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-          "proof_source": "proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex",
-          "theorem_dependency_ids": [
-            "lem:minimum-of-positive-numbers-is-positive",
-            "lem:half-epsilon-is-positive"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "lem:minimum-of-positive-numbers-is-positive",
-            "lem:half-epsilon-is-positive"
-          ],
-          "markdown": "   > **Statement.**\n   > If $\\varepsilon>0$ and $c>0$, then there exists $\\delta>0$ such that\n   > \\[\n   > 0<\\delta<\\varepsilon\n   > \\quad\\text{and}\\quad\n   > 0<\\delta<c.\n   > \\]"
-        },
-        {
-          "id": "thm:distance-is-a-metric",
-          "status": "open",
-          "title": "The Distance Function Is a Metric",
-          "kind": "Theorem",
-          "statement": "The map $d(x,y)=|x-y|$ satisfies, for all $x,y,z\\in\\mathbb{R}$: (i) $d(x,y)\\ge 0$ with $d(x,y)=0$ iff $x=y$; (ii) $d(x,y)=d(y,x)$; and (iii) $d(x,z)\\le d(x,y)+d(y,z)$. Hence $(\\mathbb{R},d)$ is a metric space.",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "order-distance-length",
-          "section_title": "Order Distance Length",
-          "source": "notes/order-distance-length/notes-order-distance-length.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
-          "proof_source": "proofs/order-distance-length/prf-distance-is-a-metric.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-distance-is-a-metric.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-distance-is-a-metric.tex",
-          "theorem_dependency_ids": [
-            "def:distance-on-real-line"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:distance-on-real-line"
-          ],
-          "markdown": "   > **Statement.**\n   > The map $d(x,y)=|x-y|$ satisfies, for all $x,y,z\\in\\mathbb{R}$: (i) $d(x,y)\\ge 0$ with $d(x,y)=0$ iff $x=y$; (ii) $d(x,y)=d(y,x)$; and (iii) $d(x,z)\\le d(x,y)+d(y,z)$. Hence $(\\mathbb{R},d)$ is a metric space."
-        },
-        {
-          "id": "thm:real-line-structural-order-facts",
-          "status": "open",
-          "title": "Real Line Structural Order Facts",
-          "kind": "Theorem",
-          "statement": "The real numbers are linearly ordered, form an ordered field, and satisfy the\nleast upper bound property.",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "order-distance-length",
-          "section_title": "Order Distance Length",
-          "source": "notes/order-distance-length/notes-order-distance-length.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
-          "proof_source": "proofs/order-distance-length/prf-real-line-structural-order-facts.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-real-line-structural-order-facts.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-real-line-structural-order-facts.tex",
-          "theorem_dependency_ids": [],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [],
-          "markdown": "   > **Statement.**\n   > The real numbers are linearly ordered, form an ordered field, and satisfy the\n   > least upper bound property."
-        },
-        {
-          "id": "thm:closed-set-closure-operations",
-          "status": "open",
-          "title": "Closure Laws for Closed Sets",
-          "kind": "Theorem",
-          "statement": "An arbitrary intersection of closed subsets of $\\mathbb{R}$ is closed, and a finite union of closed subsets of $\\mathbb{R}$ is closed.",
-          "volume": 3,
-          "volume_roman": "iii",
-          "volume_title": "Classical Analysis",
-          "repo": "lra-volume-iii",
-          "book": "bounds-sequences-and-series",
-          "book_title": "Bounds, Sequences, and Series",
-          "book_dir": "volume-iii/book-analysis-i",
-          "chapter": "structure-of-real-line",
-          "chapter_title": "Structure Of Real Line",
-          "section": "unions-and-intersections",
-          "section_title": "Unions And Intersections",
-          "source": "notes/unions-and-intersections/notes-unions-and-intersections.tex",
-          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/unions-and-intersections/notes-unions-and-intersections.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/unions-and-intersections/notes-unions-and-intersections.tex",
-          "proof_source": "proofs/unions-and-intersections/prf-closed-set-closure-operations.tex",
-          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/unions-and-intersections/prf-closed-set-closure-operations.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/unions-and-intersections/prf-closed-set-closure-operations.tex",
-          "theorem_dependency_ids": [
-            "def:closed-set",
-            "thm:open-set-closure-operations"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:closed-set",
-            "thm:open-set-closure-operations"
-          ],
-          "markdown": "   > **Statement.**\n   > An arbitrary intersection of closed subsets of $\\mathbb{R}$ is closed, and a finite union of closed subsets of $\\mathbb{R}$ is closed."
-        },
-        {
           "id": "thm:translation-invariance-supremum",
           "status": "completed",
           "title": "Translation Invariance of the Supremum",
@@ -24275,6 +23803,7 @@
             "def:upper-bound"
           ],
           "completion_sources": [
+            "tracker",
             "proof_file"
           ],
           "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $c\\in\\mathbb{R}$. Then\n   > \\[\n   >  \\sup(A+c)=\\sup A+c,\n   >  \\qquad\n   >  A+c=\\{a+c:a\\in A\\}.\n   > \\]"
@@ -24314,6 +23843,7 @@
             "def:lower-bound"
           ],
           "completion_sources": [
+            "tracker",
             "proof_file"
           ],
           "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let\n   > $c\\in\\mathbb{R}$. Then\n   > \\[\n   >  \\inf(A+c)=\\inf A+c.\n   > \\]"
@@ -24392,6 +23922,7 @@
             "def:lower-bound"
           ],
           "completion_sources": [
+            "tracker",
             "proof_file"
           ],
           "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let $k>0$.\n   > Then\n   > \\[\n   >  \\inf(kA)=k\\inf A.\n   > \\]"
@@ -24476,6 +24007,7 @@
             "def:lower-bound"
           ],
           "completion_sources": [
+            "tracker",
             "proof_file"
           ],
           "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $k<0$.\n   > Then\n   > \\[\n   >  \\inf(kA)=k\\sup A.\n   > \\]"
@@ -24556,6 +24088,7 @@
             "def:supremum"
           ],
           "completion_sources": [
+            "tracker",
             "proof_file"
           ],
           "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty and bounded above. Then\n   > \\[\n   >  \\sup(A+B)=\\sup A+\\sup B,\n   >  \\qquad\n   >  A+B=\\{a+b:a\\in A,\\ b\\in B\\}.\n   > \\]"
@@ -24593,6 +24126,7 @@
             "def:infimum"
           ],
           "completion_sources": [
+            "tracker",
             "proof_file"
           ],
           "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty and bounded below. Then\n   > \\[\n   >  \\inf(A+B)=\\inf A+\\inf B.\n   > \\]"
@@ -24634,6 +24168,7 @@
             "def:infimum"
           ],
           "completion_sources": [
+            "tracker",
             "proof_file"
           ],
           "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty, with $A$ bounded above and $B$ bounded below. Then\n   > \\[\n   >  \\sup(A-B)=\\sup A-\\inf B,\n   >  \\qquad\n   >  A-B=\\{a-b:a\\in A,\\ b\\in B\\}.\n   > \\]"
@@ -24683,7 +24218,7 @@
         },
         {
           "id": "thm:supremum-dilation",
-          "status": "open",
+          "status": "completed",
           "title": "Supremum of a Dilation",
           "kind": "Theorem",
           "statement": "Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded, and let $\\lambda\\in\\mathbb{R}$. Then\n\\[\n \\sup(\\lambda A)=\\max\\{\\lambda\\sup A,\\lambda\\inf A\\},\n \\qquad\n \\lambda A=\\{\\lambda a:a\\in A\\}.\n\\]",
@@ -24718,6 +24253,11 @@
             "def:maximum",
             "def:supremum",
             "def:infimum"
+          ],
+          "completion_sources": [
+            "tracker",
+            "proof_file",
+            "proof_vault"
           ],
           "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded, and let $\\lambda\\in\\mathbb{R}$. Then\n   > \\[\n   >  \\sup(\\lambda A)=\\max\\{\\lambda\\sup A,\\lambda\\inf A\\},\n   >  \\qquad\n   >  \\lambda A=\\{\\lambda a:a\\in A\\}.\n   > \\]"
         },
@@ -27199,6 +26739,7 @@
             "def:order-dense-subset"
           ],
           "completion_sources": [
+            "tracker",
             "proof_file"
           ],
           "markdown": "   > **Statement.**\n   > For every $a,b\\in\\mathbb{R}$ with $a<b$, there exists $q\\in\\mathbb{Q}$ such that $a<q<b$."
@@ -28214,6 +27755,482 @@
             "thm:dedekind-cut-property"
           ],
           "markdown": "   > **Statement.**\n   > The real line has no Dedekind gaps."
+        },
+        {
+          "id": "prop:abs-value-is-distance-to-zero",
+          "status": "open",
+          "title": "Absolute Value Is Distance to the Origin",
+          "kind": "Proposition",
+          "statement": "For every $a\\in\\mathbb{R}$, $\\;|a|=d(a,0)$.",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "absolute-value-as-distance",
+          "section_title": "Absolute Value As Distance",
+          "source": "notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
+          "proof_source": "proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex",
+          "theorem_dependency_ids": [
+            "def:distance-on-real-line"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:distance-on-real-line"
+          ],
+          "markdown": "   > **Statement.**\n   > For every $a\\in\\mathbb{R}$, $\\;|a|=d(a,0)$."
+        },
+        {
+          "id": "thm:closed-iff-contains-limit-points",
+          "status": "open",
+          "title": "Closed Sets Contain Their Limit Points",
+          "kind": "Theorem",
+          "statement": "A set $F\\subseteq\\mathbb{R}$ is closed if and only if it contains every one of its limit points.",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "closed-sets",
+          "section_title": "Closed Sets",
+          "source": "notes/closed-sets/notes-closed-sets.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/closed-sets/notes-closed-sets.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/closed-sets/notes-closed-sets.tex",
+          "proof_source": "proofs/closed-sets/prf-closed-iff-contains-limit-points.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/closed-sets/prf-closed-iff-contains-limit-points.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/closed-sets/prf-closed-iff-contains-limit-points.tex",
+          "theorem_dependency_ids": [
+            "def:closed-set",
+            "def:limit-point"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:closed-set",
+            "def:limit-point"
+          ],
+          "markdown": "   > **Statement.**\n   > A set $F\\subseteq\\mathbb{R}$ is closed if and only if it contains every one of its limit points."
+        },
+        {
+          "id": "thm:compact-implies-closed-bounded",
+          "status": "open",
+          "title": "Compact Subsets of $\\mathbb{R}$ Are Closed and Bounded",
+          "kind": "Theorem",
+          "statement": "If $K\\subseteq\\mathbb{R}$ is compact, then $K$ is closed and bounded.",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "compactness-on-r",
+          "section_title": "Compactness On R",
+          "source": "notes/compactness-on-r/notes-compactness-on-r.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/compactness-on-r/notes-compactness-on-r.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/compactness-on-r/notes-compactness-on-r.tex",
+          "proof_source": "proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex",
+          "theorem_dependency_ids": [
+            "def:closed-set",
+            "def:compact-set",
+            "def:bounded-subset-of-r"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:closed-set",
+            "def:compact-set",
+            "def:bounded-subset-of-r"
+          ],
+          "markdown": "   > **Statement.**\n   > If $K\\subseteq\\mathbb{R}$ is compact, then $K$ is closed and bounded."
+        },
+        {
+          "id": "thm:closed-bounded-interval-compact",
+          "status": "open",
+          "title": "Closed Bounded Intervals Are Compact",
+          "kind": "Theorem",
+          "statement": "Every closed bounded interval $[a,b]\\subseteq\\mathbb{R}$ is compact.",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "heine-borel",
+          "section_title": "Heine Borel",
+          "source": "notes/heine-borel/notes-heine-borel.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
+          "proof_source": "proofs/heine-borel/prf-closed-bounded-interval-compact.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-closed-bounded-interval-compact.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-closed-bounded-interval-compact.tex",
+          "theorem_dependency_ids": [
+            "def:compact-set"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:compact-set"
+          ],
+          "markdown": "   > **Statement.**\n   > Every closed bounded interval $[a,b]\\subseteq\\mathbb{R}$ is compact."
+        },
+        {
+          "id": "thm:heine-borel",
+          "status": "open",
+          "title": "Heine--Borel Theorem for $\\mathbb{R}$",
+          "kind": "Theorem",
+          "statement": "A set $K\\subseteq\\mathbb{R}$ is compact if and only if $K$ is closed and bounded.",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "heine-borel",
+          "section_title": "Heine Borel",
+          "source": "notes/heine-borel/notes-heine-borel.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
+          "proof_source": "proofs/heine-borel/prf-heine-borel.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-heine-borel.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-heine-borel.tex",
+          "theorem_dependency_ids": [
+            "thm:compact-implies-closed-bounded",
+            "thm:closed-bounded-interval-compact"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "thm:compact-implies-closed-bounded",
+            "thm:closed-bounded-interval-compact"
+          ],
+          "markdown": "   > **Statement.**\n   > A set $K\\subseteq\\mathbb{R}$ is compact if and only if $K$ is closed and bounded."
+        },
+        {
+          "id": "thm:open-interval-is-open",
+          "status": "open",
+          "title": "Open Intervals Are Open",
+          "kind": "Theorem",
+          "statement": "Every open interval $(a,b)$, every open ray $(a,\\infty)$ and $(-\\infty,b)$, and $\\mathbb{R}$ itself are open sets.",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "open-sets",
+          "section_title": "Open Sets",
+          "source": "notes/open-sets/notes-open-sets.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
+          "proof_source": "proofs/open-sets/prf-open-interval-is-open.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-interval-is-open.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-interval-is-open.tex",
+          "theorem_dependency_ids": [
+            "def:open-set"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:open-set"
+          ],
+          "markdown": "   > **Statement.**\n   > Every open interval $(a,b)$, every open ray $(a,\\infty)$ and $(-\\infty,b)$, and $\\mathbb{R}$ itself are open sets."
+        },
+        {
+          "id": "thm:open-set-closure-operations",
+          "status": "open",
+          "title": "Unions and Finite Intersections of Open Sets",
+          "kind": "Theorem",
+          "statement": "An arbitrary union of open subsets of $\\mathbb{R}$ is open, and a finite intersection of open subsets of $\\mathbb{R}$ is open.",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "open-sets",
+          "section_title": "Open Sets",
+          "source": "notes/open-sets/notes-open-sets.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
+          "proof_source": "proofs/open-sets/prf-open-set-closure-operations.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-set-closure-operations.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-set-closure-operations.tex",
+          "theorem_dependency_ids": [
+            "def:open-set"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:open-set"
+          ],
+          "markdown": "   > **Statement.**\n   > An arbitrary union of open subsets of $\\mathbb{R}$ is open, and a finite intersection of open subsets of $\\mathbb{R}$ is open."
+        },
+        {
+          "id": "lem:minimum-of-positive-numbers-is-positive",
+          "status": "open",
+          "title": "Minimum of Positive Numbers Is Positive",
+          "kind": "Lemma",
+          "statement": "If $a>0$ and $b>0$, then\n\\[\n\\min\\{a,b\\}>0.\n\\]",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "order-distance-length",
+          "section_title": "Order Distance Length",
+          "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+          "proof_source": "proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex",
+          "theorem_dependency_ids": [],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [],
+          "markdown": "   > **Statement.**\n   > If $a>0$ and $b>0$, then\n   > \\[\n   > \\min\\{a,b\\}>0.\n   > \\]"
+        },
+        {
+          "id": "lem:half-epsilon-is-positive",
+          "status": "open",
+          "title": "Half Epsilon Is Positive",
+          "kind": "Lemma",
+          "statement": "If $\\varepsilon>0$, then\n\\[\n\\frac{\\varepsilon}{2}>0.\n\\]",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "order-distance-length",
+          "section_title": "Order Distance Length",
+          "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+          "proof_source": "proofs/order-distance-length/prf-half-epsilon-is-positive.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-half-epsilon-is-positive.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-half-epsilon-is-positive.tex",
+          "theorem_dependency_ids": [],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [],
+          "markdown": "   > **Statement.**\n   > If $\\varepsilon>0$, then\n   > \\[\n   > \\frac{\\varepsilon}{2}>0.\n   > \\]"
+        },
+        {
+          "id": "lem:epsilon-splitting",
+          "status": "open",
+          "title": "Epsilon Splitting",
+          "kind": "Lemma",
+          "statement": "If $\\varepsilon>0$, then\n\\[\n\\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon.\n\\]",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "order-distance-length",
+          "section_title": "Order Distance Length",
+          "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+          "proof_source": "proofs/order-distance-length/prf-epsilon-splitting.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-epsilon-splitting.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-epsilon-splitting.tex",
+          "theorem_dependency_ids": [],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [],
+          "markdown": "   > **Statement.**\n   > If $\\varepsilon>0$, then\n   > \\[\n   > \\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon.\n   > \\]"
+        },
+        {
+          "id": "lem:positive-minimum-bound",
+          "status": "open",
+          "title": "Positive Minimum Bound",
+          "kind": "Lemma",
+          "statement": "If $0<\\delta\\le a$ and $0<\\delta\\le b$, then\n\\[\n\\delta\\le \\min\\{a,b\\}.\n\\]",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "order-distance-length",
+          "section_title": "Order Distance Length",
+          "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+          "proof_source": "proofs/order-distance-length/prf-positive-minimum-bound.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-positive-minimum-bound.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-positive-minimum-bound.tex",
+          "theorem_dependency_ids": [
+            "lem:minimum-of-positive-numbers-is-positive"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "lem:minimum-of-positive-numbers-is-positive"
+          ],
+          "markdown": "   > **Statement.**\n   > If $0<\\delta\\le a$ and $0<\\delta\\le b$, then\n   > \\[\n   > \\delta\\le \\min\\{a,b\\}.\n   > \\]"
+        },
+        {
+          "id": "lem:choosing-a-smaller-positive-number",
+          "status": "open",
+          "title": "Choosing a Smaller Positive Number",
+          "kind": "Lemma",
+          "statement": "If $\\varepsilon>0$ and $c>0$, then there exists $\\delta>0$ such that\n\\[\n0<\\delta<\\varepsilon\n\\quad\\text{and}\\quad\n0<\\delta<c.\n\\]",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "order-distance-length",
+          "section_title": "Order Distance Length",
+          "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+          "proof_source": "proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex",
+          "theorem_dependency_ids": [
+            "lem:minimum-of-positive-numbers-is-positive",
+            "lem:half-epsilon-is-positive"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "lem:minimum-of-positive-numbers-is-positive",
+            "lem:half-epsilon-is-positive"
+          ],
+          "markdown": "   > **Statement.**\n   > If $\\varepsilon>0$ and $c>0$, then there exists $\\delta>0$ such that\n   > \\[\n   > 0<\\delta<\\varepsilon\n   > \\quad\\text{and}\\quad\n   > 0<\\delta<c.\n   > \\]"
+        },
+        {
+          "id": "thm:distance-is-a-metric",
+          "status": "open",
+          "title": "The Distance Function Is a Metric",
+          "kind": "Theorem",
+          "statement": "The map $d(x,y)=|x-y|$ satisfies, for all $x,y,z\\in\\mathbb{R}$: (i) $d(x,y)\\ge 0$ with $d(x,y)=0$ iff $x=y$; (ii) $d(x,y)=d(y,x)$; and (iii) $d(x,z)\\le d(x,y)+d(y,z)$. Hence $(\\mathbb{R},d)$ is a metric space.",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "order-distance-length",
+          "section_title": "Order Distance Length",
+          "source": "notes/order-distance-length/notes-order-distance-length.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
+          "proof_source": "proofs/order-distance-length/prf-distance-is-a-metric.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-distance-is-a-metric.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-distance-is-a-metric.tex",
+          "theorem_dependency_ids": [
+            "def:distance-on-real-line"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:distance-on-real-line"
+          ],
+          "markdown": "   > **Statement.**\n   > The map $d(x,y)=|x-y|$ satisfies, for all $x,y,z\\in\\mathbb{R}$: (i) $d(x,y)\\ge 0$ with $d(x,y)=0$ iff $x=y$; (ii) $d(x,y)=d(y,x)$; and (iii) $d(x,z)\\le d(x,y)+d(y,z)$. Hence $(\\mathbb{R},d)$ is a metric space."
+        },
+        {
+          "id": "thm:real-line-structural-order-facts",
+          "status": "open",
+          "title": "Real Line Structural Order Facts",
+          "kind": "Theorem",
+          "statement": "The real numbers are linearly ordered, form an ordered field, and satisfy the\nleast upper bound property.",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "order-distance-length",
+          "section_title": "Order Distance Length",
+          "source": "notes/order-distance-length/notes-order-distance-length.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
+          "proof_source": "proofs/order-distance-length/prf-real-line-structural-order-facts.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-real-line-structural-order-facts.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-real-line-structural-order-facts.tex",
+          "theorem_dependency_ids": [],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [],
+          "markdown": "   > **Statement.**\n   > The real numbers are linearly ordered, form an ordered field, and satisfy the\n   > least upper bound property."
+        },
+        {
+          "id": "thm:closed-set-closure-operations",
+          "status": "open",
+          "title": "Closure Laws for Closed Sets",
+          "kind": "Theorem",
+          "statement": "An arbitrary intersection of closed subsets of $\\mathbb{R}$ is closed, and a finite union of closed subsets of $\\mathbb{R}$ is closed.",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "bounds-sequences-and-series",
+          "book_title": "Bounds, Sequences, and Series",
+          "book_dir": "volume-iii/book-analysis-i",
+          "chapter": "structure-of-real-line",
+          "chapter_title": "Structure Of Real Line",
+          "section": "unions-and-intersections",
+          "section_title": "Unions And Intersections",
+          "source": "notes/unions-and-intersections/notes-unions-and-intersections.tex",
+          "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/unions-and-intersections/notes-unions-and-intersections.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/unions-and-intersections/notes-unions-and-intersections.tex",
+          "proof_source": "proofs/unions-and-intersections/prf-closed-set-closure-operations.tex",
+          "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/unions-and-intersections/prf-closed-set-closure-operations.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/unions-and-intersections/prf-closed-set-closure-operations.tex",
+          "theorem_dependency_ids": [
+            "def:closed-set",
+            "thm:open-set-closure-operations"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:closed-set",
+            "thm:open-set-closure-operations"
+          ],
+          "markdown": "   > **Statement.**\n   > An arbitrary intersection of closed subsets of $\\mathbb{R}$ is closed, and a finite union of closed subsets of $\\mathbb{R}$ is closed."
         },
         {
           "id": "prop:composition-injective",
@@ -46480,6 +46497,7 @@
       "proof_dependency_ids": [],
       "graph_dependency_ids": [],
       "completion_sources": [
+        "tracker",
         "proof_file"
       ],
       "markdown": "   > **Statement.**\n   > Given a finite straight line segment $AB$, there exists an equilateral\n   > triangle $ABC$ constructed on $AB$."
@@ -46511,6 +46529,7 @@
       "proof_dependency_ids": [],
       "graph_dependency_ids": [],
       "completion_sources": [
+        "tracker",
         "proof_file"
       ],
       "markdown": "   > **Statement.**\n   > Given a point $A$ and a finite straight line segment $BC$, there exists a\n   > straight line segment beginning at $A$ and equal to $BC$."
@@ -46542,6 +46561,7 @@
       "proof_dependency_ids": [],
       "graph_dependency_ids": [],
       "completion_sources": [
+        "tracker",
         "proof_file"
       ],
       "markdown": "   > **Statement.**\n   > Given two unequal finite straight line segments, there exists a construction\n   > which cuts off from the greater a straight line segment equal to the less."
@@ -46733,6 +46753,7 @@
       "proof_dependency_ids": [],
       "graph_dependency_ids": [],
       "completion_sources": [
+        "tracker",
         "proof_file"
       ],
       "markdown": "   > **Statement.**\n   > In right-angled triangles, the square on the side subtending the right angle is\n   > equal to the squares on the sides containing the right angle."
@@ -60406,6 +60427,82 @@
       "markdown": "   > **Statement.**\n   > A convergent sequence in $\\mathbb{Q}$ has at most one rational limit."
     },
     {
+      "id": "thm:interval-characterization",
+      "status": "open",
+      "title": "Characterization of Intervals",
+      "kind": "Theorem",
+      "statement": "A subset $I\\subseteq\\mathbb{R}$ is an interval if and only if for all $x,z\\in I$\nwith $x<z$,\n\\[\n[x,z]\\subseteq I.\n\\]",
+      "volume": 2,
+      "volume_roman": "ii",
+      "volume_title": "Origins of Numbers",
+      "repo": "lra-volume-ii",
+      "book": "the-continuum",
+      "book_title": "The Continuum",
+      "book_dir": "volume-ii/book-continuum",
+      "chapter": "number-lines",
+      "chapter_title": "Number Lines",
+      "section": "intervals-on-a-number-line",
+      "section_title": "Intervals On A Number Line",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "source_path": "volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "proof_source": "proofs/intervals-on-a-number-line/prf-interval-characterization.tex",
+      "proof_path": "volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-interval-characterization.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-interval-characterization.tex",
+      "theorem_dependency_ids": [
+        "def:interval",
+        "def:closed-interval"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:interval",
+        "def:closed-interval"
+      ],
+      "markdown": "   > **Statement.**\n   > A subset $I\\subseteq\\mathbb{R}$ is an interval if and only if for all $x,z\\in I$\n   > with $x<z$,\n   > \\[\n   > [x,z]\\subseteq I.\n   > \\]"
+    },
+    {
+      "id": "thm:classification-of-intervals-in-r",
+      "status": "open",
+      "title": "Classification of Intervals in $\\mathbb{R}$",
+      "kind": "Theorem",
+      "statement": "Every interval in $\\mathbb{R}$ is one of the standard interval types:\n\\[\n(a,b),\\ [a,b],\\ (a,b],\\ [a,b),\\ (a,\\infty),\\ [a,\\infty),\n\\]\n\\[\n(-\\infty,b),\\ (-\\infty,b],\\ \\mathbb{R},\\ \\varnothing,\n\\]\nincluding degenerate one-point intervals.",
+      "volume": 2,
+      "volume_roman": "ii",
+      "volume_title": "Origins of Numbers",
+      "repo": "lra-volume-ii",
+      "book": "the-continuum",
+      "book_title": "The Continuum",
+      "book_dir": "volume-ii/book-continuum",
+      "chapter": "number-lines",
+      "chapter_title": "Number Lines",
+      "section": "intervals-on-a-number-line",
+      "section_title": "Intervals On A Number Line",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "source_path": "volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "proof_source": "proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex",
+      "proof_path": "volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex",
+      "theorem_dependency_ids": [
+        "def:interval",
+        "def:open-interval",
+        "def:closed-interval",
+        "def:left-half-open-interval",
+        "def:right-half-open-interval",
+        "def:ray"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:interval",
+        "def:open-interval",
+        "def:closed-interval",
+        "def:left-half-open-interval",
+        "def:right-half-open-interval",
+        "def:ray"
+      ],
+      "markdown": "   > **Statement.**\n   > Every interval in $\\mathbb{R}$ is one of the standard interval types:\n   > \\[\n   > (a,b),\\ [a,b],\\ (a,b],\\ [a,b),\\ (a,\\infty),\\ [a,\\infty),\n   > \\]\n   > \\[\n   > (-\\infty,b),\\ (-\\infty,b],\\ \\mathbb{R},\\ \\varnothing,\n   > \\]\n   > including degenerate one-point intervals."
+    },
+    {
       "id": "lem:sum-of-cuts-is-a-cut",
       "status": "open",
       "title": "Sum of Cuts Is a Cut",
@@ -63622,82 +63719,6 @@
       "markdown": "   > **Statement.**\n   > Inversion determines a well-defined operation on the nonzero complex numbers."
     },
     {
-      "id": "thm:interval-characterization",
-      "status": "open",
-      "title": "Characterization of Intervals",
-      "kind": "Theorem",
-      "statement": "A subset $I\\subseteq\\mathbb{R}$ is an interval if and only if for all $x,z\\in I$\nwith $x<z$,\n\\[\n[x,z]\\subseteq I.\n\\]",
-      "volume": 2,
-      "volume_roman": "ii",
-      "volume_title": "Origins of Numbers",
-      "repo": "lra-volume-ii",
-      "book": "the-continuum",
-      "book_title": "The Continuum",
-      "book_dir": "volume-ii/book-continuum",
-      "chapter": "number-lines",
-      "chapter_title": "Number Lines",
-      "section": "intervals-on-a-number-line",
-      "section_title": "Intervals On A Number Line",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "source_path": "volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "proof_source": "proofs/intervals-on-a-number-line/prf-interval-characterization.tex",
-      "proof_path": "volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-interval-characterization.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-interval-characterization.tex",
-      "theorem_dependency_ids": [
-        "def:interval",
-        "def:closed-interval"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:interval",
-        "def:closed-interval"
-      ],
-      "markdown": "   > **Statement.**\n   > A subset $I\\subseteq\\mathbb{R}$ is an interval if and only if for all $x,z\\in I$\n   > with $x<z$,\n   > \\[\n   > [x,z]\\subseteq I.\n   > \\]"
-    },
-    {
-      "id": "thm:classification-of-intervals-in-r",
-      "status": "open",
-      "title": "Classification of Intervals in $\\mathbb{R}$",
-      "kind": "Theorem",
-      "statement": "Every interval in $\\mathbb{R}$ is one of the standard interval types:\n\\[\n(a,b),\\ [a,b],\\ (a,b],\\ [a,b),\\ (a,\\infty),\\ [a,\\infty),\n\\]\n\\[\n(-\\infty,b),\\ (-\\infty,b],\\ \\mathbb{R},\\ \\varnothing,\n\\]\nincluding degenerate one-point intervals.",
-      "volume": 2,
-      "volume_roman": "ii",
-      "volume_title": "Origins of Numbers",
-      "repo": "lra-volume-ii",
-      "book": "the-continuum",
-      "book_title": "The Continuum",
-      "book_dir": "volume-ii/book-continuum",
-      "chapter": "number-lines",
-      "chapter_title": "Number Lines",
-      "section": "intervals-on-a-number-line",
-      "section_title": "Intervals On A Number Line",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "source_path": "volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "proof_source": "proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex",
-      "proof_path": "volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-continuum/number-lines/proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex",
-      "theorem_dependency_ids": [
-        "def:interval",
-        "def:open-interval",
-        "def:closed-interval",
-        "def:left-half-open-interval",
-        "def:right-half-open-interval",
-        "def:ray"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:interval",
-        "def:open-interval",
-        "def:closed-interval",
-        "def:left-half-open-interval",
-        "def:right-half-open-interval",
-        "def:ray"
-      ],
-      "markdown": "   > **Statement.**\n   > Every interval in $\\mathbb{R}$ is one of the standard interval types:\n   > \\[\n   > (a,b),\\ [a,b],\\ (a,b],\\ [a,b),\\ (a,\\infty),\\ [a,\\infty),\n   > \\]\n   > \\[\n   > (-\\infty,b),\\ (-\\infty,b],\\ \\mathbb{R},\\ \\varnothing,\n   > \\]\n   > including degenerate one-point intervals."
-    },
-    {
       "id": "thm:embedding-identifies-with-image",
       "status": "open",
       "title": "Embeddings Identify a System with Its Image",
@@ -65506,482 +65527,6 @@
       "markdown": "   > **Statement.**\n   > If there exist residues $r, s \\in \\{0,\\ldots,k-1\\}$ such that\n   > $(a_{kn+r}) \\to L$ and $(a_{kn+s}) \\to M$ with $L \\neq M$, then\n   > $(a_n)$ diverges."
     },
     {
-      "id": "prop:abs-value-is-distance-to-zero",
-      "status": "open",
-      "title": "Absolute Value Is Distance to the Origin",
-      "kind": "Proposition",
-      "statement": "For every $a\\in\\mathbb{R}$, $\\;|a|=d(a,0)$.",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "absolute-value-as-distance",
-      "section_title": "Absolute Value As Distance",
-      "source": "notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
-      "proof_source": "proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex",
-      "theorem_dependency_ids": [
-        "def:distance-on-real-line"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:distance-on-real-line"
-      ],
-      "markdown": "   > **Statement.**\n   > For every $a\\in\\mathbb{R}$, $\\;|a|=d(a,0)$."
-    },
-    {
-      "id": "thm:closed-iff-contains-limit-points",
-      "status": "open",
-      "title": "Closed Sets Contain Their Limit Points",
-      "kind": "Theorem",
-      "statement": "A set $F\\subseteq\\mathbb{R}$ is closed if and only if it contains every one of its limit points.",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "closed-sets",
-      "section_title": "Closed Sets",
-      "source": "notes/closed-sets/notes-closed-sets.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/closed-sets/notes-closed-sets.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/closed-sets/notes-closed-sets.tex",
-      "proof_source": "proofs/closed-sets/prf-closed-iff-contains-limit-points.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/closed-sets/prf-closed-iff-contains-limit-points.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/closed-sets/prf-closed-iff-contains-limit-points.tex",
-      "theorem_dependency_ids": [
-        "def:closed-set",
-        "def:limit-point"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:closed-set",
-        "def:limit-point"
-      ],
-      "markdown": "   > **Statement.**\n   > A set $F\\subseteq\\mathbb{R}$ is closed if and only if it contains every one of its limit points."
-    },
-    {
-      "id": "thm:compact-implies-closed-bounded",
-      "status": "open",
-      "title": "Compact Subsets of $\\mathbb{R}$ Are Closed and Bounded",
-      "kind": "Theorem",
-      "statement": "If $K\\subseteq\\mathbb{R}$ is compact, then $K$ is closed and bounded.",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "compactness-on-r",
-      "section_title": "Compactness On R",
-      "source": "notes/compactness-on-r/notes-compactness-on-r.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/compactness-on-r/notes-compactness-on-r.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/compactness-on-r/notes-compactness-on-r.tex",
-      "proof_source": "proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex",
-      "theorem_dependency_ids": [
-        "def:closed-set",
-        "def:compact-set",
-        "def:bounded-subset-of-r"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:closed-set",
-        "def:compact-set",
-        "def:bounded-subset-of-r"
-      ],
-      "markdown": "   > **Statement.**\n   > If $K\\subseteq\\mathbb{R}$ is compact, then $K$ is closed and bounded."
-    },
-    {
-      "id": "thm:closed-bounded-interval-compact",
-      "status": "open",
-      "title": "Closed Bounded Intervals Are Compact",
-      "kind": "Theorem",
-      "statement": "Every closed bounded interval $[a,b]\\subseteq\\mathbb{R}$ is compact.",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "heine-borel",
-      "section_title": "Heine Borel",
-      "source": "notes/heine-borel/notes-heine-borel.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
-      "proof_source": "proofs/heine-borel/prf-closed-bounded-interval-compact.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-closed-bounded-interval-compact.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-closed-bounded-interval-compact.tex",
-      "theorem_dependency_ids": [
-        "def:compact-set"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:compact-set"
-      ],
-      "markdown": "   > **Statement.**\n   > Every closed bounded interval $[a,b]\\subseteq\\mathbb{R}$ is compact."
-    },
-    {
-      "id": "thm:heine-borel",
-      "status": "open",
-      "title": "Heine--Borel Theorem for $\\mathbb{R}$",
-      "kind": "Theorem",
-      "statement": "A set $K\\subseteq\\mathbb{R}$ is compact if and only if $K$ is closed and bounded.",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "heine-borel",
-      "section_title": "Heine Borel",
-      "source": "notes/heine-borel/notes-heine-borel.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
-      "proof_source": "proofs/heine-borel/prf-heine-borel.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-heine-borel.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-heine-borel.tex",
-      "theorem_dependency_ids": [
-        "thm:compact-implies-closed-bounded",
-        "thm:closed-bounded-interval-compact"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "thm:compact-implies-closed-bounded",
-        "thm:closed-bounded-interval-compact"
-      ],
-      "markdown": "   > **Statement.**\n   > A set $K\\subseteq\\mathbb{R}$ is compact if and only if $K$ is closed and bounded."
-    },
-    {
-      "id": "thm:open-interval-is-open",
-      "status": "open",
-      "title": "Open Intervals Are Open",
-      "kind": "Theorem",
-      "statement": "Every open interval $(a,b)$, every open ray $(a,\\infty)$ and $(-\\infty,b)$, and $\\mathbb{R}$ itself are open sets.",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "open-sets",
-      "section_title": "Open Sets",
-      "source": "notes/open-sets/notes-open-sets.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
-      "proof_source": "proofs/open-sets/prf-open-interval-is-open.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-interval-is-open.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-interval-is-open.tex",
-      "theorem_dependency_ids": [
-        "def:open-set"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:open-set"
-      ],
-      "markdown": "   > **Statement.**\n   > Every open interval $(a,b)$, every open ray $(a,\\infty)$ and $(-\\infty,b)$, and $\\mathbb{R}$ itself are open sets."
-    },
-    {
-      "id": "thm:open-set-closure-operations",
-      "status": "open",
-      "title": "Unions and Finite Intersections of Open Sets",
-      "kind": "Theorem",
-      "statement": "An arbitrary union of open subsets of $\\mathbb{R}$ is open, and a finite intersection of open subsets of $\\mathbb{R}$ is open.",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "open-sets",
-      "section_title": "Open Sets",
-      "source": "notes/open-sets/notes-open-sets.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
-      "proof_source": "proofs/open-sets/prf-open-set-closure-operations.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-set-closure-operations.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-set-closure-operations.tex",
-      "theorem_dependency_ids": [
-        "def:open-set"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:open-set"
-      ],
-      "markdown": "   > **Statement.**\n   > An arbitrary union of open subsets of $\\mathbb{R}$ is open, and a finite intersection of open subsets of $\\mathbb{R}$ is open."
-    },
-    {
-      "id": "lem:minimum-of-positive-numbers-is-positive",
-      "status": "open",
-      "title": "Minimum of Positive Numbers Is Positive",
-      "kind": "Lemma",
-      "statement": "If $a>0$ and $b>0$, then\n\\[\n\\min\\{a,b\\}>0.\n\\]",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "order-distance-length",
-      "section_title": "Order Distance Length",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-      "proof_source": "proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex",
-      "theorem_dependency_ids": [],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [],
-      "markdown": "   > **Statement.**\n   > If $a>0$ and $b>0$, then\n   > \\[\n   > \\min\\{a,b\\}>0.\n   > \\]"
-    },
-    {
-      "id": "lem:half-epsilon-is-positive",
-      "status": "open",
-      "title": "Half Epsilon Is Positive",
-      "kind": "Lemma",
-      "statement": "If $\\varepsilon>0$, then\n\\[\n\\frac{\\varepsilon}{2}>0.\n\\]",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "order-distance-length",
-      "section_title": "Order Distance Length",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-      "proof_source": "proofs/order-distance-length/prf-half-epsilon-is-positive.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-half-epsilon-is-positive.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-half-epsilon-is-positive.tex",
-      "theorem_dependency_ids": [],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [],
-      "markdown": "   > **Statement.**\n   > If $\\varepsilon>0$, then\n   > \\[\n   > \\frac{\\varepsilon}{2}>0.\n   > \\]"
-    },
-    {
-      "id": "lem:epsilon-splitting",
-      "status": "open",
-      "title": "Epsilon Splitting",
-      "kind": "Lemma",
-      "statement": "If $\\varepsilon>0$, then\n\\[\n\\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon.\n\\]",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "order-distance-length",
-      "section_title": "Order Distance Length",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-      "proof_source": "proofs/order-distance-length/prf-epsilon-splitting.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-epsilon-splitting.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-epsilon-splitting.tex",
-      "theorem_dependency_ids": [],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [],
-      "markdown": "   > **Statement.**\n   > If $\\varepsilon>0$, then\n   > \\[\n   > \\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon.\n   > \\]"
-    },
-    {
-      "id": "lem:positive-minimum-bound",
-      "status": "open",
-      "title": "Positive Minimum Bound",
-      "kind": "Lemma",
-      "statement": "If $0<\\delta\\le a$ and $0<\\delta\\le b$, then\n\\[\n\\delta\\le \\min\\{a,b\\}.\n\\]",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "order-distance-length",
-      "section_title": "Order Distance Length",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-      "proof_source": "proofs/order-distance-length/prf-positive-minimum-bound.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-positive-minimum-bound.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-positive-minimum-bound.tex",
-      "theorem_dependency_ids": [
-        "lem:minimum-of-positive-numbers-is-positive"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "lem:minimum-of-positive-numbers-is-positive"
-      ],
-      "markdown": "   > **Statement.**\n   > If $0<\\delta\\le a$ and $0<\\delta\\le b$, then\n   > \\[\n   > \\delta\\le \\min\\{a,b\\}.\n   > \\]"
-    },
-    {
-      "id": "lem:choosing-a-smaller-positive-number",
-      "status": "open",
-      "title": "Choosing a Smaller Positive Number",
-      "kind": "Lemma",
-      "statement": "If $\\varepsilon>0$ and $c>0$, then there exists $\\delta>0$ such that\n\\[\n0<\\delta<\\varepsilon\n\\quad\\text{and}\\quad\n0<\\delta<c.\n\\]",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "order-distance-length",
-      "section_title": "Order Distance Length",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
-      "proof_source": "proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex",
-      "theorem_dependency_ids": [
-        "lem:minimum-of-positive-numbers-is-positive",
-        "lem:half-epsilon-is-positive"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "lem:minimum-of-positive-numbers-is-positive",
-        "lem:half-epsilon-is-positive"
-      ],
-      "markdown": "   > **Statement.**\n   > If $\\varepsilon>0$ and $c>0$, then there exists $\\delta>0$ such that\n   > \\[\n   > 0<\\delta<\\varepsilon\n   > \\quad\\text{and}\\quad\n   > 0<\\delta<c.\n   > \\]"
-    },
-    {
-      "id": "thm:distance-is-a-metric",
-      "status": "open",
-      "title": "The Distance Function Is a Metric",
-      "kind": "Theorem",
-      "statement": "The map $d(x,y)=|x-y|$ satisfies, for all $x,y,z\\in\\mathbb{R}$: (i) $d(x,y)\\ge 0$ with $d(x,y)=0$ iff $x=y$; (ii) $d(x,y)=d(y,x)$; and (iii) $d(x,z)\\le d(x,y)+d(y,z)$. Hence $(\\mathbb{R},d)$ is a metric space.",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "order-distance-length",
-      "section_title": "Order Distance Length",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
-      "proof_source": "proofs/order-distance-length/prf-distance-is-a-metric.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-distance-is-a-metric.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-distance-is-a-metric.tex",
-      "theorem_dependency_ids": [
-        "def:distance-on-real-line"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:distance-on-real-line"
-      ],
-      "markdown": "   > **Statement.**\n   > The map $d(x,y)=|x-y|$ satisfies, for all $x,y,z\\in\\mathbb{R}$: (i) $d(x,y)\\ge 0$ with $d(x,y)=0$ iff $x=y$; (ii) $d(x,y)=d(y,x)$; and (iii) $d(x,z)\\le d(x,y)+d(y,z)$. Hence $(\\mathbb{R},d)$ is a metric space."
-    },
-    {
-      "id": "thm:real-line-structural-order-facts",
-      "status": "open",
-      "title": "Real Line Structural Order Facts",
-      "kind": "Theorem",
-      "statement": "The real numbers are linearly ordered, form an ordered field, and satisfy the\nleast upper bound property.",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "order-distance-length",
-      "section_title": "Order Distance Length",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
-      "proof_source": "proofs/order-distance-length/prf-real-line-structural-order-facts.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-real-line-structural-order-facts.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-real-line-structural-order-facts.tex",
-      "theorem_dependency_ids": [],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [],
-      "markdown": "   > **Statement.**\n   > The real numbers are linearly ordered, form an ordered field, and satisfy the\n   > least upper bound property."
-    },
-    {
-      "id": "thm:closed-set-closure-operations",
-      "status": "open",
-      "title": "Closure Laws for Closed Sets",
-      "kind": "Theorem",
-      "statement": "An arbitrary intersection of closed subsets of $\\mathbb{R}$ is closed, and a finite union of closed subsets of $\\mathbb{R}$ is closed.",
-      "volume": 3,
-      "volume_roman": "iii",
-      "volume_title": "Classical Analysis",
-      "repo": "lra-volume-iii",
-      "book": "bounds-sequences-and-series",
-      "book_title": "Bounds, Sequences, and Series",
-      "book_dir": "volume-iii/book-analysis-i",
-      "chapter": "structure-of-real-line",
-      "chapter_title": "Structure Of Real Line",
-      "section": "unions-and-intersections",
-      "section_title": "Unions And Intersections",
-      "source": "notes/unions-and-intersections/notes-unions-and-intersections.tex",
-      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/unions-and-intersections/notes-unions-and-intersections.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/unions-and-intersections/notes-unions-and-intersections.tex",
-      "proof_source": "proofs/unions-and-intersections/prf-closed-set-closure-operations.tex",
-      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/unions-and-intersections/prf-closed-set-closure-operations.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/unions-and-intersections/prf-closed-set-closure-operations.tex",
-      "theorem_dependency_ids": [
-        "def:closed-set",
-        "thm:open-set-closure-operations"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:closed-set",
-        "thm:open-set-closure-operations"
-      ],
-      "markdown": "   > **Statement.**\n   > An arbitrary intersection of closed subsets of $\\mathbb{R}$ is closed, and a finite union of closed subsets of $\\mathbb{R}$ is closed."
-    },
-    {
       "id": "thm:translation-invariance-supremum",
       "status": "completed",
       "title": "Translation Invariance of the Supremum",
@@ -66014,6 +65559,7 @@
         "def:upper-bound"
       ],
       "completion_sources": [
+        "tracker",
         "proof_file"
       ],
       "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $c\\in\\mathbb{R}$. Then\n   > \\[\n   >  \\sup(A+c)=\\sup A+c,\n   >  \\qquad\n   >  A+c=\\{a+c:a\\in A\\}.\n   > \\]"
@@ -66053,6 +65599,7 @@
         "def:lower-bound"
       ],
       "completion_sources": [
+        "tracker",
         "proof_file"
       ],
       "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let\n   > $c\\in\\mathbb{R}$. Then\n   > \\[\n   >  \\inf(A+c)=\\inf A+c.\n   > \\]"
@@ -66131,6 +65678,7 @@
         "def:lower-bound"
       ],
       "completion_sources": [
+        "tracker",
         "proof_file"
       ],
       "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded below, and let $k>0$.\n   > Then\n   > \\[\n   >  \\inf(kA)=k\\inf A.\n   > \\]"
@@ -66215,6 +65763,7 @@
         "def:lower-bound"
       ],
       "completion_sources": [
+        "tracker",
         "proof_file"
       ],
       "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded above, and let $k<0$.\n   > Then\n   > \\[\n   >  \\inf(kA)=k\\sup A.\n   > \\]"
@@ -66295,6 +65844,7 @@
         "def:supremum"
       ],
       "completion_sources": [
+        "tracker",
         "proof_file"
       ],
       "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty and bounded above. Then\n   > \\[\n   >  \\sup(A+B)=\\sup A+\\sup B,\n   >  \\qquad\n   >  A+B=\\{a+b:a\\in A,\\ b\\in B\\}.\n   > \\]"
@@ -66332,6 +65882,7 @@
         "def:infimum"
       ],
       "completion_sources": [
+        "tracker",
         "proof_file"
       ],
       "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty and bounded below. Then\n   > \\[\n   >  \\inf(A+B)=\\inf A+\\inf B.\n   > \\]"
@@ -66373,6 +65924,7 @@
         "def:infimum"
       ],
       "completion_sources": [
+        "tracker",
         "proof_file"
       ],
       "markdown": "   > **Statement.**\n   > Let $A,B\\subseteq\\mathbb{R}$ be nonempty, with $A$ bounded above and $B$ bounded below. Then\n   > \\[\n   >  \\sup(A-B)=\\sup A-\\inf B,\n   >  \\qquad\n   >  A-B=\\{a-b:a\\in A,\\ b\\in B\\}.\n   > \\]"
@@ -66422,7 +65974,7 @@
     },
     {
       "id": "thm:supremum-dilation",
-      "status": "open",
+      "status": "completed",
       "title": "Supremum of a Dilation",
       "kind": "Theorem",
       "statement": "Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded, and let $\\lambda\\in\\mathbb{R}$. Then\n\\[\n \\sup(\\lambda A)=\\max\\{\\lambda\\sup A,\\lambda\\inf A\\},\n \\qquad\n \\lambda A=\\{\\lambda a:a\\in A\\}.\n\\]",
@@ -66457,6 +66009,11 @@
         "def:maximum",
         "def:supremum",
         "def:infimum"
+      ],
+      "completion_sources": [
+        "tracker",
+        "proof_file",
+        "proof_vault"
       ],
       "markdown": "   > **Statement.**\n   > Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded, and let $\\lambda\\in\\mathbb{R}$. Then\n   > \\[\n   >  \\sup(\\lambda A)=\\max\\{\\lambda\\sup A,\\lambda\\inf A\\},\n   >  \\qquad\n   >  \\lambda A=\\{\\lambda a:a\\in A\\}.\n   > \\]"
     },
@@ -68938,6 +68495,7 @@
         "def:order-dense-subset"
       ],
       "completion_sources": [
+        "tracker",
         "proof_file"
       ],
       "markdown": "   > **Statement.**\n   > For every $a,b\\in\\mathbb{R}$ with $a<b$, there exists $q\\in\\mathbb{Q}$ such that $a<q<b$."
@@ -69953,6 +69511,482 @@
         "thm:dedekind-cut-property"
       ],
       "markdown": "   > **Statement.**\n   > The real line has no Dedekind gaps."
+    },
+    {
+      "id": "prop:abs-value-is-distance-to-zero",
+      "status": "open",
+      "title": "Absolute Value Is Distance to the Origin",
+      "kind": "Proposition",
+      "statement": "For every $a\\in\\mathbb{R}$, $\\;|a|=d(a,0)$.",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "absolute-value-as-distance",
+      "section_title": "Absolute Value As Distance",
+      "source": "notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
+      "proof_source": "proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex",
+      "theorem_dependency_ids": [
+        "def:distance-on-real-line"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:distance-on-real-line"
+      ],
+      "markdown": "   > **Statement.**\n   > For every $a\\in\\mathbb{R}$, $\\;|a|=d(a,0)$."
+    },
+    {
+      "id": "thm:closed-iff-contains-limit-points",
+      "status": "open",
+      "title": "Closed Sets Contain Their Limit Points",
+      "kind": "Theorem",
+      "statement": "A set $F\\subseteq\\mathbb{R}$ is closed if and only if it contains every one of its limit points.",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "closed-sets",
+      "section_title": "Closed Sets",
+      "source": "notes/closed-sets/notes-closed-sets.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/closed-sets/notes-closed-sets.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/closed-sets/notes-closed-sets.tex",
+      "proof_source": "proofs/closed-sets/prf-closed-iff-contains-limit-points.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/closed-sets/prf-closed-iff-contains-limit-points.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/closed-sets/prf-closed-iff-contains-limit-points.tex",
+      "theorem_dependency_ids": [
+        "def:closed-set",
+        "def:limit-point"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:closed-set",
+        "def:limit-point"
+      ],
+      "markdown": "   > **Statement.**\n   > A set $F\\subseteq\\mathbb{R}$ is closed if and only if it contains every one of its limit points."
+    },
+    {
+      "id": "thm:compact-implies-closed-bounded",
+      "status": "open",
+      "title": "Compact Subsets of $\\mathbb{R}$ Are Closed and Bounded",
+      "kind": "Theorem",
+      "statement": "If $K\\subseteq\\mathbb{R}$ is compact, then $K$ is closed and bounded.",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "compactness-on-r",
+      "section_title": "Compactness On R",
+      "source": "notes/compactness-on-r/notes-compactness-on-r.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/compactness-on-r/notes-compactness-on-r.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/compactness-on-r/notes-compactness-on-r.tex",
+      "proof_source": "proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex",
+      "theorem_dependency_ids": [
+        "def:closed-set",
+        "def:compact-set",
+        "def:bounded-subset-of-r"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:closed-set",
+        "def:compact-set",
+        "def:bounded-subset-of-r"
+      ],
+      "markdown": "   > **Statement.**\n   > If $K\\subseteq\\mathbb{R}$ is compact, then $K$ is closed and bounded."
+    },
+    {
+      "id": "thm:closed-bounded-interval-compact",
+      "status": "open",
+      "title": "Closed Bounded Intervals Are Compact",
+      "kind": "Theorem",
+      "statement": "Every closed bounded interval $[a,b]\\subseteq\\mathbb{R}$ is compact.",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "heine-borel",
+      "section_title": "Heine Borel",
+      "source": "notes/heine-borel/notes-heine-borel.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
+      "proof_source": "proofs/heine-borel/prf-closed-bounded-interval-compact.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-closed-bounded-interval-compact.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-closed-bounded-interval-compact.tex",
+      "theorem_dependency_ids": [
+        "def:compact-set"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:compact-set"
+      ],
+      "markdown": "   > **Statement.**\n   > Every closed bounded interval $[a,b]\\subseteq\\mathbb{R}$ is compact."
+    },
+    {
+      "id": "thm:heine-borel",
+      "status": "open",
+      "title": "Heine--Borel Theorem for $\\mathbb{R}$",
+      "kind": "Theorem",
+      "statement": "A set $K\\subseteq\\mathbb{R}$ is compact if and only if $K$ is closed and bounded.",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "heine-borel",
+      "section_title": "Heine Borel",
+      "source": "notes/heine-borel/notes-heine-borel.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/heine-borel/notes-heine-borel.tex",
+      "proof_source": "proofs/heine-borel/prf-heine-borel.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-heine-borel.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/heine-borel/prf-heine-borel.tex",
+      "theorem_dependency_ids": [
+        "thm:compact-implies-closed-bounded",
+        "thm:closed-bounded-interval-compact"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "thm:compact-implies-closed-bounded",
+        "thm:closed-bounded-interval-compact"
+      ],
+      "markdown": "   > **Statement.**\n   > A set $K\\subseteq\\mathbb{R}$ is compact if and only if $K$ is closed and bounded."
+    },
+    {
+      "id": "thm:open-interval-is-open",
+      "status": "open",
+      "title": "Open Intervals Are Open",
+      "kind": "Theorem",
+      "statement": "Every open interval $(a,b)$, every open ray $(a,\\infty)$ and $(-\\infty,b)$, and $\\mathbb{R}$ itself are open sets.",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "open-sets",
+      "section_title": "Open Sets",
+      "source": "notes/open-sets/notes-open-sets.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
+      "proof_source": "proofs/open-sets/prf-open-interval-is-open.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-interval-is-open.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-interval-is-open.tex",
+      "theorem_dependency_ids": [
+        "def:open-set"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:open-set"
+      ],
+      "markdown": "   > **Statement.**\n   > Every open interval $(a,b)$, every open ray $(a,\\infty)$ and $(-\\infty,b)$, and $\\mathbb{R}$ itself are open sets."
+    },
+    {
+      "id": "thm:open-set-closure-operations",
+      "status": "open",
+      "title": "Unions and Finite Intersections of Open Sets",
+      "kind": "Theorem",
+      "statement": "An arbitrary union of open subsets of $\\mathbb{R}$ is open, and a finite intersection of open subsets of $\\mathbb{R}$ is open.",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "open-sets",
+      "section_title": "Open Sets",
+      "source": "notes/open-sets/notes-open-sets.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/open-sets/notes-open-sets.tex",
+      "proof_source": "proofs/open-sets/prf-open-set-closure-operations.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-set-closure-operations.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/open-sets/prf-open-set-closure-operations.tex",
+      "theorem_dependency_ids": [
+        "def:open-set"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:open-set"
+      ],
+      "markdown": "   > **Statement.**\n   > An arbitrary union of open subsets of $\\mathbb{R}$ is open, and a finite intersection of open subsets of $\\mathbb{R}$ is open."
+    },
+    {
+      "id": "lem:minimum-of-positive-numbers-is-positive",
+      "status": "open",
+      "title": "Minimum of Positive Numbers Is Positive",
+      "kind": "Lemma",
+      "statement": "If $a>0$ and $b>0$, then\n\\[\n\\min\\{a,b\\}>0.\n\\]",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "order-distance-length",
+      "section_title": "Order Distance Length",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+      "proof_source": "proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex",
+      "theorem_dependency_ids": [],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [],
+      "markdown": "   > **Statement.**\n   > If $a>0$ and $b>0$, then\n   > \\[\n   > \\min\\{a,b\\}>0.\n   > \\]"
+    },
+    {
+      "id": "lem:half-epsilon-is-positive",
+      "status": "open",
+      "title": "Half Epsilon Is Positive",
+      "kind": "Lemma",
+      "statement": "If $\\varepsilon>0$, then\n\\[\n\\frac{\\varepsilon}{2}>0.\n\\]",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "order-distance-length",
+      "section_title": "Order Distance Length",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+      "proof_source": "proofs/order-distance-length/prf-half-epsilon-is-positive.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-half-epsilon-is-positive.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-half-epsilon-is-positive.tex",
+      "theorem_dependency_ids": [],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [],
+      "markdown": "   > **Statement.**\n   > If $\\varepsilon>0$, then\n   > \\[\n   > \\frac{\\varepsilon}{2}>0.\n   > \\]"
+    },
+    {
+      "id": "lem:epsilon-splitting",
+      "status": "open",
+      "title": "Epsilon Splitting",
+      "kind": "Lemma",
+      "statement": "If $\\varepsilon>0$, then\n\\[\n\\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon.\n\\]",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "order-distance-length",
+      "section_title": "Order Distance Length",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+      "proof_source": "proofs/order-distance-length/prf-epsilon-splitting.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-epsilon-splitting.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-epsilon-splitting.tex",
+      "theorem_dependency_ids": [],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [],
+      "markdown": "   > **Statement.**\n   > If $\\varepsilon>0$, then\n   > \\[\n   > \\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon.\n   > \\]"
+    },
+    {
+      "id": "lem:positive-minimum-bound",
+      "status": "open",
+      "title": "Positive Minimum Bound",
+      "kind": "Lemma",
+      "statement": "If $0<\\delta\\le a$ and $0<\\delta\\le b$, then\n\\[\n\\delta\\le \\min\\{a,b\\}.\n\\]",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "order-distance-length",
+      "section_title": "Order Distance Length",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+      "proof_source": "proofs/order-distance-length/prf-positive-minimum-bound.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-positive-minimum-bound.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-positive-minimum-bound.tex",
+      "theorem_dependency_ids": [
+        "lem:minimum-of-positive-numbers-is-positive"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "lem:minimum-of-positive-numbers-is-positive"
+      ],
+      "markdown": "   > **Statement.**\n   > If $0<\\delta\\le a$ and $0<\\delta\\le b$, then\n   > \\[\n   > \\delta\\le \\min\\{a,b\\}.\n   > \\]"
+    },
+    {
+      "id": "lem:choosing-a-smaller-positive-number",
+      "status": "open",
+      "title": "Choosing a Smaller Positive Number",
+      "kind": "Lemma",
+      "statement": "If $\\varepsilon>0$ and $c>0$, then there exists $\\delta>0$ such that\n\\[\n0<\\delta<\\varepsilon\n\\quad\\text{and}\\quad\n0<\\delta<c.\n\\]",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "order-distance-length",
+      "section_title": "Order Distance Length",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-epsilon-algebra.tex",
+      "proof_source": "proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex",
+      "theorem_dependency_ids": [
+        "lem:minimum-of-positive-numbers-is-positive",
+        "lem:half-epsilon-is-positive"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "lem:minimum-of-positive-numbers-is-positive",
+        "lem:half-epsilon-is-positive"
+      ],
+      "markdown": "   > **Statement.**\n   > If $\\varepsilon>0$ and $c>0$, then there exists $\\delta>0$ such that\n   > \\[\n   > 0<\\delta<\\varepsilon\n   > \\quad\\text{and}\\quad\n   > 0<\\delta<c.\n   > \\]"
+    },
+    {
+      "id": "thm:distance-is-a-metric",
+      "status": "open",
+      "title": "The Distance Function Is a Metric",
+      "kind": "Theorem",
+      "statement": "The map $d(x,y)=|x-y|$ satisfies, for all $x,y,z\\in\\mathbb{R}$: (i) $d(x,y)\\ge 0$ with $d(x,y)=0$ iff $x=y$; (ii) $d(x,y)=d(y,x)$; and (iii) $d(x,z)\\le d(x,y)+d(y,z)$. Hence $(\\mathbb{R},d)$ is a metric space.",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "order-distance-length",
+      "section_title": "Order Distance Length",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
+      "proof_source": "proofs/order-distance-length/prf-distance-is-a-metric.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-distance-is-a-metric.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-distance-is-a-metric.tex",
+      "theorem_dependency_ids": [
+        "def:distance-on-real-line"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:distance-on-real-line"
+      ],
+      "markdown": "   > **Statement.**\n   > The map $d(x,y)=|x-y|$ satisfies, for all $x,y,z\\in\\mathbb{R}$: (i) $d(x,y)\\ge 0$ with $d(x,y)=0$ iff $x=y$; (ii) $d(x,y)=d(y,x)$; and (iii) $d(x,z)\\le d(x,y)+d(y,z)$. Hence $(\\mathbb{R},d)$ is a metric space."
+    },
+    {
+      "id": "thm:real-line-structural-order-facts",
+      "status": "open",
+      "title": "Real Line Structural Order Facts",
+      "kind": "Theorem",
+      "statement": "The real numbers are linearly ordered, form an ordered field, and satisfy the\nleast upper bound property.",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "order-distance-length",
+      "section_title": "Order Distance Length",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/order-distance-length/notes-order-distance-length.tex",
+      "proof_source": "proofs/order-distance-length/prf-real-line-structural-order-facts.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-real-line-structural-order-facts.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/order-distance-length/prf-real-line-structural-order-facts.tex",
+      "theorem_dependency_ids": [],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [],
+      "markdown": "   > **Statement.**\n   > The real numbers are linearly ordered, form an ordered field, and satisfy the\n   > least upper bound property."
+    },
+    {
+      "id": "thm:closed-set-closure-operations",
+      "status": "open",
+      "title": "Closure Laws for Closed Sets",
+      "kind": "Theorem",
+      "statement": "An arbitrary intersection of closed subsets of $\\mathbb{R}$ is closed, and a finite union of closed subsets of $\\mathbb{R}$ is closed.",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "bounds-sequences-and-series",
+      "book_title": "Bounds, Sequences, and Series",
+      "book_dir": "volume-iii/book-analysis-i",
+      "chapter": "structure-of-real-line",
+      "chapter_title": "Structure Of Real Line",
+      "section": "unions-and-intersections",
+      "section_title": "Unions And Intersections",
+      "source": "notes/unions-and-intersections/notes-unions-and-intersections.tex",
+      "source_path": "volume-iii/book-analysis-i/structure-of-real-line/notes/unions-and-intersections/notes-unions-and-intersections.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/notes/unions-and-intersections/notes-unions-and-intersections.tex",
+      "proof_source": "proofs/unions-and-intersections/prf-closed-set-closure-operations.tex",
+      "proof_path": "volume-iii/book-analysis-i/structure-of-real-line/proofs/unions-and-intersections/prf-closed-set-closure-operations.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-i/structure-of-real-line/proofs/unions-and-intersections/prf-closed-set-closure-operations.tex",
+      "theorem_dependency_ids": [
+        "def:closed-set",
+        "thm:open-set-closure-operations"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:closed-set",
+        "thm:open-set-closure-operations"
+      ],
+      "markdown": "   > **Statement.**\n   > An arbitrary intersection of closed subsets of $\\mathbb{R}$ is closed, and a finite union of closed subsets of $\\mathbb{R}$ is closed."
     },
     {
       "id": "prop:composition-injective",

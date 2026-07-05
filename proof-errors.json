@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T13:54:10.000634+00:00",
+  "generated_at": "2026-07-05T02:58:18.448954+00:00",
   "chapters": [
     "propositional-logic",
     "predicate-logic",
@@ -21,15 +21,15 @@
     "whole-numbers",
     "integers",
     "rationals",
+    "number-lines",
     "reals",
     "extended-real-numbers",
     "complex-numbers",
-    "number-lines",
     "embedding-number-systems",
     "numbers-summary",
     "real-analysis",
-    "structure-of-real-line",
     "bounding",
+    "structure-of-real-line",
     "functions",
     "discrete-calculus",
     "sequences",
@@ -50,14 +50,14 @@
     "lattice-order",
     "model-theory",
     "lambda-calculus",
+    "numerical-analysis",
     "computational-calculus",
+    "computational-linear-algebra",
     "geometric-modeling",
     "computational-geometry",
-    "computational-linear-algebra",
-    "ordinary-differential-equations",
-    "numerical-analysis"
+    "ordinary-differential-equations"
   ],
-  "error_count": 3640,
+  "error_count": 3645,
   "errors": [
     {
       "type": "missing_dependencies_block",
@@ -20473,6 +20473,226 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Definition",
+      "node_id": "def:interval",
+      "title": "Interval",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A set $I\\subseteq\\mathbb{R}$ is an \\emph{interval} if whenever $x,z\\in I$ and $x<y<z$, then $y\\in I$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:open-interval",
+      "title": "Open Interval",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $a,b\\in\\mathbb{R}$ with $a\\le b$. The \\emph{open interval} with endpoints $a$ and $b$ is \\[ (a,b)=\\{\\,x\\in\\mathbb{R} : a<x<b\\,\\}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:closed-interval",
+      "title": "Closed Interval",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $a,b\\in\\mathbb{R}$ with $a\\le b$. The \\emph{closed interval} with endpoints $a$ and $b$ is \\[ [a,b]=\\{\\,x\\in\\mathbb{R} : a\\le x\\le b\\,\\}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:left-half-open-interval",
+      "title": "Left-Half-Open Interval",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $a,b\\in\\mathbb{R}$ with $a\\le b$. The \\emph{left-half-open interval} with endpoints $a$ and $b$ is \\[ (a,b]=\\{\\,x\\in\\mathbb{R} : a<x\\le b\\,\\}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:right-half-open-interval",
+      "title": "Right-Half-Open Interval",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $a,b\\in\\mathbb{R}$ with $a\\le b$. The \\emph{right-half-open interval} with endpoints $a$ and $b$ is \\[ [a,b)=\\{\\,x\\in\\mathbb{R} : a\\le x<b\\,\\}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:interval-characterization",
+      "title": "Characterization of Intervals",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A subset $I\\subseteq\\mathbb{R}$ is an interval if and only if for all $x,z\\in I$ with $x<z$, \\[ [x,z]\\subseteq I. \\]",
+      "proof_source": "proofs/intervals-on-a-number-line/prf-interval-characterization.tex"
+    },
+    {
+      "type": "predicate_notation_in_standard_field",
+      "kind": "Theorem",
+      "node_id": "thm:interval-characterization",
+      "title": "Characterization of Intervals",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
+      "signals": [
+        "formal:Interval",
+        "fully_quantified_form:Interval",
+        "negation_display:Interval",
+        "negation_formal:Interval"
+      ],
+      "fields": [
+        {
+          "field": "formal",
+          "predicate_names": [
+            "Interval"
+          ]
+        },
+        {
+          "field": "fully_quantified_form",
+          "predicate_names": [
+            "Interval"
+          ]
+        },
+        {
+          "field": "negation_display",
+          "predicate_names": [
+            "Interval"
+          ]
+        },
+        {
+          "field": "negation_formal",
+          "predicate_names": [
+            "Interval"
+          ]
+        }
+      ],
+      "excerpt": "\\[ \\operatorname{Interval}(I) \\Longleftrightarrow \\forall x,z\\in I\\;\\bigl(x<z\\Rightarrow [x,z]\\subseteq I\\bigr). \\]",
+      "proof_source": "proofs/intervals-on-a-number-line/prf-interval-characterization.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:classification-of-intervals-in-r",
+      "title": "Classification of Intervals in $ $",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Every interval in $\\mathbb{R}$ is one of the standard interval types: \\[ (a,b),\\ [a,b],\\ (a,b],\\ [a,b),\\ (a,\\infty),\\ [a,\\infty), \\] \\[ (-\\infty,b),\\ (-\\infty,b],\\ \\mathbb{R},\\ \\varnothing, \\] including degenerate one-point intervals.",
+      "proof_source": "proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex"
+    },
+    {
+      "type": "predicate_notation_in_standard_field",
+      "kind": "Theorem",
+      "node_id": "thm:classification-of-intervals-in-r",
+      "title": "Classification of Intervals in $ $",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
+      "signals": [
+        "formal:Interval",
+        "fully_quantified_form:Interval",
+        "negation_display:Interval, StandardRealInterval",
+        "negation_formal:Interval, StandardRealInterval"
+      ],
+      "fields": [
+        {
+          "field": "formal",
+          "predicate_names": [
+            "Interval"
+          ]
+        },
+        {
+          "field": "fully_quantified_form",
+          "predicate_names": [
+            "Interval"
+          ]
+        },
+        {
+          "field": "negation_display",
+          "predicate_names": [
+            "Interval",
+            "StandardRealInterval"
+          ]
+        },
+        {
+          "field": "negation_formal",
+          "predicate_names": [
+            "Interval",
+            "StandardRealInterval"
+          ]
+        }
+      ],
+      "excerpt": "\\[ \\forall I\\subseteq\\mathbb{R}\\; \\bigl(\\operatorname{Interval}(I)\\Rightarrow I\\text{ is one of the standard interval types}\\bigr). \\]",
+      "proof_source": "proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ray",
+      "title": "Ray",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $a\\in\\mathbb{R}$. The four \\emph{rays} determined by $a$ are \\[ (a,\\infty)=\\{x:x>a\\},\\ [a,\\infty)=\\{x:x\\ge a\\},\\ (-\\infty,a)=\\{x:x<a\\},\\ (-\\infty,a]=\\{x:x\\le a\\}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:number-line",
+      "title": "Number Line",
+      "source": "notes/number-lines/notes-number-lines.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A \\emph{number line} for a linearly ordered system $(A,<_A)$ is a linearly ordered set of points $L$ together with an order isomorphism $\\lambda:A\\to L$, so that for all $a,a'\\in A$, \\[ a<_A a' \\Longleftrightarrow \\lambda(a) \\text{ lies to the left of } \\lambda(a'). \\]"
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:interval",
+      "missing_target_id": "def:reals",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:interval",
+      "missing_target_id": "def:strict-order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:number-line",
+      "missing_target_id": "def:order-embedding",
+      "relationship_kind": "depends_on",
+      "source": "notes/number-lines/notes-number-lines.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
       "node_id": "def:addition-on-r",
       "title": "Addition of Cuts",
       "source": "notes/addition-on-r/notes-addition-on-r.tex",
@@ -23390,226 +23610,6 @@
     },
     {
       "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:interval",
-      "title": "Interval",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A set $I\\subseteq\\mathbb{R}$ is an \\emph{interval} if whenever $x,z\\in I$ and $x<y<z$, then $y\\in I$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:open-interval",
-      "title": "Open Interval",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $a,b\\in\\mathbb{R}$ with $a\\le b$. The \\emph{open interval} with endpoints $a$ and $b$ is \\[ (a,b)=\\{\\,x\\in\\mathbb{R} : a<x<b\\,\\}. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:closed-interval",
-      "title": "Closed Interval",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $a,b\\in\\mathbb{R}$ with $a\\le b$. The \\emph{closed interval} with endpoints $a$ and $b$ is \\[ [a,b]=\\{\\,x\\in\\mathbb{R} : a\\le x\\le b\\,\\}. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:left-half-open-interval",
-      "title": "Left-Half-Open Interval",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $a,b\\in\\mathbb{R}$ with $a\\le b$. The \\emph{left-half-open interval} with endpoints $a$ and $b$ is \\[ (a,b]=\\{\\,x\\in\\mathbb{R} : a<x\\le b\\,\\}. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:right-half-open-interval",
-      "title": "Right-Half-Open Interval",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $a,b\\in\\mathbb{R}$ with $a\\le b$. The \\emph{right-half-open interval} with endpoints $a$ and $b$ is \\[ [a,b)=\\{\\,x\\in\\mathbb{R} : a\\le x<b\\,\\}. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:interval-characterization",
-      "title": "Characterization of Intervals",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A subset $I\\subseteq\\mathbb{R}$ is an interval if and only if for all $x,z\\in I$ with $x<z$, \\[ [x,z]\\subseteq I. \\]",
-      "proof_source": "proofs/intervals-on-a-number-line/prf-interval-characterization.tex"
-    },
-    {
-      "type": "predicate_notation_in_standard_field",
-      "kind": "Theorem",
-      "node_id": "thm:interval-characterization",
-      "title": "Characterization of Intervals",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
-      "signals": [
-        "formal:Interval",
-        "fully_quantified_form:Interval",
-        "negation_display:Interval",
-        "negation_formal:Interval"
-      ],
-      "fields": [
-        {
-          "field": "formal",
-          "predicate_names": [
-            "Interval"
-          ]
-        },
-        {
-          "field": "fully_quantified_form",
-          "predicate_names": [
-            "Interval"
-          ]
-        },
-        {
-          "field": "negation_display",
-          "predicate_names": [
-            "Interval"
-          ]
-        },
-        {
-          "field": "negation_formal",
-          "predicate_names": [
-            "Interval"
-          ]
-        }
-      ],
-      "excerpt": "\\[ \\operatorname{Interval}(I) \\Longleftrightarrow \\forall x,z\\in I\\;\\bigl(x<z\\Rightarrow [x,z]\\subseteq I\\bigr). \\]",
-      "proof_source": "proofs/intervals-on-a-number-line/prf-interval-characterization.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:classification-of-intervals-in-r",
-      "title": "Classification of Intervals in $ $",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Every interval in $\\mathbb{R}$ is one of the standard interval types: \\[ (a,b),\\ [a,b],\\ (a,b],\\ [a,b),\\ (a,\\infty),\\ [a,\\infty), \\] \\[ (-\\infty,b),\\ (-\\infty,b],\\ \\mathbb{R},\\ \\varnothing, \\] including degenerate one-point intervals.",
-      "proof_source": "proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex"
-    },
-    {
-      "type": "predicate_notation_in_standard_field",
-      "kind": "Theorem",
-      "node_id": "thm:classification-of-intervals-in-r",
-      "title": "Classification of Intervals in $ $",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "A standard statement/formal field appears to contain predicate notation. House style reserves canonical predicate names for predicate-reading blocks; standard quantified, negated, contrapositive, and statement fields should use standard mathematical notation.",
-      "signals": [
-        "formal:Interval",
-        "fully_quantified_form:Interval",
-        "negation_display:Interval, StandardRealInterval",
-        "negation_formal:Interval, StandardRealInterval"
-      ],
-      "fields": [
-        {
-          "field": "formal",
-          "predicate_names": [
-            "Interval"
-          ]
-        },
-        {
-          "field": "fully_quantified_form",
-          "predicate_names": [
-            "Interval"
-          ]
-        },
-        {
-          "field": "negation_display",
-          "predicate_names": [
-            "Interval",
-            "StandardRealInterval"
-          ]
-        },
-        {
-          "field": "negation_formal",
-          "predicate_names": [
-            "Interval",
-            "StandardRealInterval"
-          ]
-        }
-      ],
-      "excerpt": "\\[ \\forall I\\subseteq\\mathbb{R}\\; \\bigl(\\operatorname{Interval}(I)\\Rightarrow I\\text{ is one of the standard interval types}\\bigr). \\]",
-      "proof_source": "proofs/intervals-on-a-number-line/prf-classification-of-intervals-in-r.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ray",
-      "title": "Ray",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $a\\in\\mathbb{R}$. The four \\emph{rays} determined by $a$ are \\[ (a,\\infty)=\\{x:x>a\\},\\ [a,\\infty)=\\{x:x\\ge a\\},\\ (-\\infty,a)=\\{x:x<a\\},\\ (-\\infty,a]=\\{x:x\\le a\\}. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:number-line",
-      "title": "Number Line",
-      "source": "notes/number-lines/notes-number-lines.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A \\emph{number line} for a linearly ordered system $(A,<_A)$ is a linearly ordered set of points $L$ together with an order isomorphism $\\lambda:A\\to L$, so that for all $a,a'\\in A$, \\[ a<_A a' \\Longleftrightarrow \\lambda(a) \\text{ lies to the left of } \\lambda(a'). \\]"
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:interval",
-      "missing_target_id": "def:reals",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:interval",
-      "missing_target_id": "def:strict-order-on-r",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:number-line",
-      "missing_target_id": "def:order-embedding",
-      "relationship_kind": "depends_on",
-      "source": "notes/number-lines/notes-number-lines.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "thm:embedding-chain-compatibility",
       "title": "Compatibility of the Embedding Chain",
@@ -24988,694 +24988,6 @@
     },
     {
       "type": "missing_dependencies_block",
-      "kind": "Proposition",
-      "node_id": "prop:abs-value-is-distance-to-zero",
-      "title": "Absolute Value Is Distance to the Origin",
-      "source": "notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "For every $a\\in\\mathbb{R}$, $\\;|a|=d(a,0)$.",
-      "proof_source": "proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:closed-set",
-      "title": "Closed Set in $ $",
-      "source": "notes/closed-sets/notes-closed-sets.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A set $F\\subseteq\\mathbb{R}$ is \\emph{closed} exactly when its complement $\\mathbb{R}\\setminus F$ is open."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:closed-iff-contains-limit-points",
-      "title": "Closed Sets Contain Their Limit Points",
-      "source": "notes/closed-sets/notes-closed-sets.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A set $F\\subseteq\\mathbb{R}$ is closed if and only if it contains every one of its limit points.",
-      "proof_source": "proofs/closed-sets/prf-closed-iff-contains-limit-points.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:compact-set",
-      "title": "Compact Set in $ $",
-      "source": "notes/compactness-on-r/notes-compactness-on-r.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A set $K\\subseteq\\mathbb{R}$ is \\emph{compact} exactly when every open cover of $K$ admits a finite subcover: \\[ \\forall \\{U_i\\}_{i\\in I}\\text{ open cover of }K\\;\\exists \\text{finite } J\\subseteq I\\;\\Bigl(K\\subseteq\\bigcup_{i\\in J}U_i\\Bigr). \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:compact-implies-closed-bounded",
-      "title": "Compact Subsets of $ $ Are Closed and Bounded",
-      "source": "notes/compactness-on-r/notes-compactness-on-r.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $K\\subseteq\\mathbb{R}$ is compact, then $K$ is closed and bounded.",
-      "proof_source": "proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:real-open-cover",
-      "title": "Open Cover",
-      "source": "notes/covers-and-subcovers/notes-covers-and-subcovers.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $E\\subseteq\\mathbb{R}$. An \\emph{open cover} of $E$ is a family $\\{U_{i}\\}_{i\\in I}$ of open subsets of $\\mathbb{R}$ with \\[ E\\subseteq\\bigcup_{i\\in I} U_{i}. \\]"
-    },
-    {
-      "type": "multiple_primary_statements_in_box",
-      "kind": "Definition",
-      "node_id": "def:finite-subcover",
-      "title": "Subcover and Finite Subcover",
-      "source": "notes/covers-and-subcovers/notes-covers-and-subcovers.tex",
-      "message": "Extracted theorem/definition box appears to contain more than one primary statement. Extraction was preserved, but the source should be split into separate boxes and re-extracted.",
-      "signals": [
-        "definition_title_contains_multiple_concepts:Subcover, Finite Subcover",
-        "multiple_definition_sentences:2"
-      ],
-      "excerpt": "Let $\\{U_{i}\\}_{i\\in I}$ be an open cover of $E$. A \\emph{subcover} is a subfamily $\\{U_{i}\\}_{i\\in J}$ with $J\\subseteq I$ that still covers $E$. It is a \\emph{finite subcover} when $J$ is finite."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:finite-subcover",
-      "title": "Subcover and Finite Subcover",
-      "source": "notes/covers-and-subcovers/notes-covers-and-subcovers.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $\\{U_{i}\\}_{i\\in I}$ be an open cover of $E$. A \\emph{subcover} is a subfamily $\\{U_{i}\\}_{i\\in J}$ with $J\\subseteq I$ that still covers $E$. It is a \\emph{finite subcover} when $J$ is finite."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:closed-bounded-interval-compact",
-      "title": "Closed Bounded Intervals Are Compact",
-      "source": "notes/heine-borel/notes-heine-borel.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Every closed bounded interval $[a,b]\\subseteq\\mathbb{R}$ is compact.",
-      "proof_source": "proofs/heine-borel/prf-closed-bounded-interval-compact.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:heine-borel",
-      "title": "Heine--Borel Theorem for $ $",
-      "source": "notes/heine-borel/notes-heine-borel.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A set $K\\subseteq\\mathbb{R}$ is compact if and only if $K$ is closed and bounded.",
-      "proof_source": "proofs/heine-borel/prf-heine-borel.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:interior-point",
-      "title": "Interior Point",
-      "source": "notes/interior-exterior-boundary/notes-interior-exterior-boundary.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $E\\subseteq\\mathbb{R}$ and $x\\in\\mathbb{R}$. Then $x$ is an interior point of $E$ exactly when \\[ \\exists r>0\\;(B_{r}(x)\\subseteq E). \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:exterior-point",
-      "title": "Exterior Point",
-      "source": "notes/interior-exterior-boundary/notes-interior-exterior-boundary.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $E\\subseteq\\mathbb{R}$ and $x\\in\\mathbb{R}$. Then $x$ is an exterior point of $E$ exactly when \\[ \\exists r>0\\;(B_{r}(x)\\subseteq \\mathbb{R}\\setminus E). \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:boundary-point",
-      "title": "Boundary Point",
-      "source": "notes/interior-exterior-boundary/notes-interior-exterior-boundary.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $E\\subseteq\\mathbb{R}$ and $x\\in\\mathbb{R}$. Then $x$ is a boundary point of $E$ exactly when \\[ \\forall r>0\\;(B_{r}(x)\\cap E\\neq\\emptyset \\;\\land\\; B_{r}(x)\\cap(\\mathbb{R}\\setminus E)\\neq\\emptyset). \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:interior-of-set",
-      "title": "Interior of a Set",
-      "source": "notes/interior-exterior-boundary/notes-interior-exterior-boundary.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "The \\emph{interior} of $E\\subseteq\\mathbb{R}$, written $\\operatorname{int}(E)$, is the set of all interior points of $E$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:bounded-subset-of-r",
-      "title": "Bounded Subset of the Real Line",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A set $E\\subseteq\\mathbb{R}$ is \\emph{bounded} exactly when there exists $M\\ge 0$ such that $|x|\\le M$ for all $x\\in E$; equivalently, $E$ is contained in some closed interval $[-M,M]$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:union-of-intervals",
-      "title": "Union of Intervals",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $I,J\\subseteq\\mathbb{R}$ be intervals. Their \\emph{union} is the set \\[ I\\cup J=\\{x\\in\\mathbb{R}:x\\in I\\text{ or }x\\in J\\}. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:intersection-of-intervals",
-      "title": "Intersection of Intervals",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $I,J\\subseteq\\mathbb{R}$ be intervals. Their \\emph{intersection} is the set \\[ I\\cap J=\\{x\\in\\mathbb{R}:x\\in I\\text{ and }x\\in J\\}. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:complement-of-interval",
-      "title": "Complement of an Interval",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $I\\subseteq\\mathbb{R}$ be an interval. Its \\emph{complement} in $\\mathbb{R}$ is the set \\[ I^{c}=\\mathbb{R}\\setminus I =\\{x\\in\\mathbb{R}:x\\notin I\\}. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:difference-of-intervals",
-      "title": "Difference of Intervals",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $I,J\\subseteq\\mathbb{R}$ be intervals. The \\emph{difference} of $I$ by $J$ is the set \\[ I\\setminus J=\\{x\\in\\mathbb{R}:x\\in I\\text{ and }x\\notin J\\} =I\\cap J^{c}. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:limit-point",
-      "title": "Limit Point",
-      "source": "notes/limit-and-isolated-points/notes-limit-and-isolated-points.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $E\\subseteq\\mathbb{R}$ and $x\\in\\mathbb{R}$. Then $x$ is a \\emph{limit point} of $E$ exactly when \\[ \\forall r>0\\;\\exists y\\in E\\;\\bigl(0<|y-x|<r\\bigr). \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:isolated-point",
-      "title": "Isolated Point",
-      "source": "notes/limit-and-isolated-points/notes-limit-and-isolated-points.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $E\\subseteq\\mathbb{R}$ and $x\\in E$. Then $x$ is an \\emph{isolated point} of $E$ exactly when \\[ \\exists r>0\\;\\forall y\\in E\\;\\bigl(|y-x|<r \\Rightarrow y=x\\bigr). \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:open-ball",
-      "title": "Open Ball on the Real Line",
-      "source": "notes/neighborhoods-and-balls/notes-neighborhoods-and-balls.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $x\\in\\mathbb{R}$ and $r>0$. The \\emph{open ball} of radius $r$ about $x$ is \\[ B_{r}(x)=\\{\\,y\\in\\mathbb{R} : |y-x|<r\\,\\}=(x-r,\\,x+r). \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:neighborhood-of-point",
-      "title": "Neighborhood of a Point",
-      "source": "notes/neighborhoods-and-balls/notes-neighborhoods-and-balls.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A set $N\\subseteq\\mathbb{R}$ is a \\emph{neighborhood} of $x\\in\\mathbb{R}$ exactly when there exists $r>0$ with $B_{r}(x)\\subseteq N$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:open-set",
-      "title": "Open Set in $ $",
-      "source": "notes/open-sets/notes-open-sets.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A set $U\\subseteq\\mathbb{R}$ is \\emph{open} exactly when \\[ \\forall x\\in U\\;\\exists r>0\\;(B_{r}(x)\\subseteq U). \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:open-interval-is-open",
-      "title": "Open Intervals Are Open",
-      "source": "notes/open-sets/notes-open-sets.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Every open interval $(a,b)$, every open ray $(a,\\infty)$ and $(-\\infty,b)$, and $\\mathbb{R}$ itself are open sets.",
-      "proof_source": "proofs/open-sets/prf-open-interval-is-open.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:open-set-closure-operations",
-      "title": "Unions and Finite Intersections of Open Sets",
-      "source": "notes/open-sets/notes-open-sets.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "An arbitrary union of open subsets of $\\mathbb{R}$ is open, and a finite intersection of open subsets of $\\mathbb{R}$ is open.",
-      "proof_source": "proofs/open-sets/prf-open-set-closure-operations.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:minimum-of-positive-numbers-is-positive",
-      "title": "Minimum of Positive Numbers Is Positive",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $a>0$ and $b>0$, then \\[ \\min\\{a,b\\}>0. \\]",
-      "proof_source": "proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:half-epsilon-is-positive",
-      "title": "Half Epsilon Is Positive",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $\\varepsilon>0$, then \\[ \\frac{\\varepsilon}{2}>0. \\]",
-      "proof_source": "proofs/order-distance-length/prf-half-epsilon-is-positive.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:epsilon-splitting",
-      "title": "Epsilon Splitting",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $\\varepsilon>0$, then \\[ \\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon. \\]",
-      "proof_source": "proofs/order-distance-length/prf-epsilon-splitting.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:positive-minimum-bound",
-      "title": "Positive Minimum Bound",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $0<\\delta\\le a$ and $0<\\delta\\le b$, then \\[ \\delta\\le \\min\\{a,b\\}. \\]",
-      "proof_source": "proofs/order-distance-length/prf-positive-minimum-bound.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:choosing-a-smaller-positive-number",
-      "title": "Choosing a Smaller Positive Number",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "If $\\varepsilon>0$ and $c>0$, then there exists $\\delta>0$ such that \\[ 0<\\delta<\\varepsilon \\quad\\text{and}\\quad 0<\\delta<c. \\]",
-      "proof_source": "proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:distance-on-real-line",
-      "title": "Distance on the Real Line",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "The \\emph{distance} on $\\mathbb{R}$ is the map $d:\\mathbb{R}\\times\\mathbb{R}\\to\\mathbb{R}$ given by \\[ d(x,y)=|x-y|. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:length-of-interval",
-      "title": "Length of a Bounded Interval",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let $a,b\\in\\mathbb{R}$ with $a\\le b$. The \\emph{length} of any bounded interval with endpoints $a$ and $b$ is \\[ \\ell=b-a. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:distance-is-a-metric",
-      "title": "The Distance Function Is a Metric",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "The map $d(x,y)=|x-y|$ satisfies, for all $x,y,z\\in\\mathbb{R}$: (i) $d(x,y)\\ge 0$ with $d(x,y)=0$ iff $x=y$; (ii) $d(x,y)=d(y,x)$; and (iii) $d(x,z)\\le d(x,y)+d(y,z)$. Hence $(\\mathbb{R},d)$ is a metric space.",
-      "proof_source": "proofs/order-distance-length/prf-distance-is-a-metric.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:real-line-structural-order-facts",
-      "title": "Real Line Structural Order Facts",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "The real numbers are linearly ordered, form an ordered field, and satisfy the least upper bound property.",
-      "proof_source": "proofs/order-distance-length/prf-real-line-structural-order-facts.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:closed-set-closure-operations",
-      "title": "Closure Laws for Closed Sets",
-      "source": "notes/unions-and-intersections/notes-unions-and-intersections.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "An arbitrary intersection of closed subsets of $\\mathbb{R}$ is closed, and a finite union of closed subsets of $\\mathbb{R}$ is closed.",
-      "proof_source": "proofs/unions-and-intersections/prf-closed-set-closure-operations.tex"
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:closed-bounded-interval-compact",
-      "missing_target_id": "def:closed-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/heine-borel/notes-heine-borel.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:closed-bounded-interval-compact",
-      "missing_target_id": "thm:lub-property-r",
-      "relationship_kind": "depends_on",
-      "source": "notes/heine-borel/notes-heine-borel.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:bounded-subset-of-r",
-      "missing_target_id": "def:closed-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:bounded-subset-of-r",
-      "missing_target_id": "thm:triangle-inequality",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:union-of-intervals",
-      "missing_target_id": "def:closed-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:union-of-intervals",
-      "missing_target_id": "def:open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:union-of-intervals",
-      "missing_target_id": "def:union",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:intersection-of-intervals",
-      "missing_target_id": "def:closed-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:intersection-of-intervals",
-      "missing_target_id": "def:intersection",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:intersection-of-intervals",
-      "missing_target_id": "def:open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:complement-of-interval",
-      "missing_target_id": "def:closed-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:complement-of-interval",
-      "missing_target_id": "def:complement",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:complement-of-interval",
-      "missing_target_id": "def:open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:difference-of-intervals",
-      "missing_target_id": "def:closed-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:difference-of-intervals",
-      "missing_target_id": "def:left-half-open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:difference-of-intervals",
-      "missing_target_id": "def:open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:difference-of-intervals",
-      "missing_target_id": "def:right-half-open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:open-ball",
-      "missing_target_id": "def:open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/neighborhoods-and-balls/notes-neighborhoods-and-balls.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:open-interval-is-open",
-      "missing_target_id": "def:open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/open-sets/notes-open-sets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:minimum-of-positive-numbers-is-positive",
-      "missing_target_id": "def:real-ordered-field",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:minimum-of-positive-numbers-is-positive",
-      "missing_target_id": "thm:ineq-transitivity-strict",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:half-epsilon-is-positive",
-      "missing_target_id": "def:real-ordered-field",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:half-epsilon-is-positive",
-      "missing_target_id": "thm:ineq-multiply-positive",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:epsilon-splitting",
-      "missing_target_id": "def:real-ordered-field",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:positive-minimum-bound",
-      "missing_target_id": "def:real-ordered-field",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:distance-on-real-line",
-      "missing_target_id": "thm:triangle-inequality",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:distance-is-a-metric",
-      "missing_target_id": "thm:triangle-inequality",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:real-line-structural-order-facts",
-      "missing_target_id": "thm:lub-property-r",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:real-line-structural-order-facts",
-      "missing_target_id": "thm:r-is-an-ordered-field",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:real-line-structural-order-facts",
-      "missing_target_id": "thm:r-totally-ordered-set",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "missing_dependencies_block",
       "kind": "Definition",
       "node_id": "def:set-arithmetic-images",
       "title": "Set Arithmetic Images",
@@ -25845,6 +25157,12 @@
       "proof_source": "proofs/bounds-algebra/prf-supremum-sum-set.tex"
     },
     {
+      "type": "missing_detailed_learning_proof",
+      "node_id": "thm:supremum-sum-set",
+      "proof_source": "proofs/bounds-algebra/prf-supremum-sum-set.tex",
+      "message": "Proof file has proof content but no Detailed Learning Proof block."
+    },
+    {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "thm:infimum-sum-set",
@@ -25856,6 +25174,12 @@
       ],
       "excerpt": "Let $A,B\\subseteq\\mathbb{R}$ be nonempty and bounded below. Then \\[ \\inf(A+B)=\\inf A+\\inf B. \\]",
       "proof_source": "proofs/bounds-algebra/prf-infimum-sum-set.tex"
+    },
+    {
+      "type": "missing_detailed_learning_proof",
+      "node_id": "thm:infimum-sum-set",
+      "proof_source": "proofs/bounds-algebra/prf-infimum-sum-set.tex",
+      "message": "Proof file has proof content but no Detailed Learning Proof block."
     },
     {
       "type": "missing_dependencies_block",
@@ -25871,6 +25195,12 @@
       "proof_source": "proofs/bounds-algebra/prf-supremum-difference-set.tex"
     },
     {
+      "type": "missing_detailed_learning_proof",
+      "node_id": "thm:supremum-difference-set",
+      "proof_source": "proofs/bounds-algebra/prf-supremum-difference-set.tex",
+      "message": "Proof file has proof content but no Detailed Learning Proof block."
+    },
+    {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "thm:infimum-difference-set",
@@ -25884,6 +25214,12 @@
       "proof_source": "proofs/bounds-algebra/prf-infimum-difference-set.tex"
     },
     {
+      "type": "missing_detailed_learning_proof",
+      "node_id": "thm:infimum-difference-set",
+      "proof_source": "proofs/bounds-algebra/prf-infimum-difference-set.tex",
+      "message": "Proof file has proof content but no Detailed Learning Proof block."
+    },
+    {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "thm:supremum-dilation",
@@ -25895,6 +25231,12 @@
       ],
       "excerpt": "Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded, and let $\\lambda\\in\\mathbb{R}$. Then \\[ \\sup(\\lambda A)=\\max\\{\\lambda\\sup A,\\lambda\\inf A\\}, \\qquad \\lambda A=\\{\\lambda a:a\\in A\\}. \\]",
       "proof_source": "proofs/bounds-algebra/prf-supremum-dilation.tex"
+    },
+    {
+      "type": "missing_detailed_learning_proof",
+      "node_id": "thm:supremum-dilation",
+      "proof_source": "proofs/bounds-algebra/prf-supremum-dilation.tex",
+      "message": "Proof file has proof content but no Detailed Learning Proof block."
     },
     {
       "type": "missing_dependencies_block",
@@ -29343,6 +28685,694 @@
       "missing_target_id": "def:closed-interval",
       "relationship_kind": "depends_on",
       "source": "notes/completeness/notes-nested-interval-property.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Proposition",
+      "node_id": "prop:abs-value-is-distance-to-zero",
+      "title": "Absolute Value Is Distance to the Origin",
+      "source": "notes/absolute-value-as-distance/notes-absolute-value-as-distance.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For every $a\\in\\mathbb{R}$, $\\;|a|=d(a,0)$.",
+      "proof_source": "proofs/absolute-value-as-distance/prf-abs-value-is-distance-to-zero.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:closed-set",
+      "title": "Closed Set in $ $",
+      "source": "notes/closed-sets/notes-closed-sets.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A set $F\\subseteq\\mathbb{R}$ is \\emph{closed} exactly when its complement $\\mathbb{R}\\setminus F$ is open."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:closed-iff-contains-limit-points",
+      "title": "Closed Sets Contain Their Limit Points",
+      "source": "notes/closed-sets/notes-closed-sets.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A set $F\\subseteq\\mathbb{R}$ is closed if and only if it contains every one of its limit points.",
+      "proof_source": "proofs/closed-sets/prf-closed-iff-contains-limit-points.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:compact-set",
+      "title": "Compact Set in $ $",
+      "source": "notes/compactness-on-r/notes-compactness-on-r.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A set $K\\subseteq\\mathbb{R}$ is \\emph{compact} exactly when every open cover of $K$ admits a finite subcover: \\[ \\forall \\{U_i\\}_{i\\in I}\\text{ open cover of }K\\;\\exists \\text{finite } J\\subseteq I\\;\\Bigl(K\\subseteq\\bigcup_{i\\in J}U_i\\Bigr). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:compact-implies-closed-bounded",
+      "title": "Compact Subsets of $ $ Are Closed and Bounded",
+      "source": "notes/compactness-on-r/notes-compactness-on-r.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $K\\subseteq\\mathbb{R}$ is compact, then $K$ is closed and bounded.",
+      "proof_source": "proofs/compactness-on-r/prf-compact-implies-closed-bounded.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:real-open-cover",
+      "title": "Open Cover",
+      "source": "notes/covers-and-subcovers/notes-covers-and-subcovers.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $E\\subseteq\\mathbb{R}$. An \\emph{open cover} of $E$ is a family $\\{U_{i}\\}_{i\\in I}$ of open subsets of $\\mathbb{R}$ with \\[ E\\subseteq\\bigcup_{i\\in I} U_{i}. \\]"
+    },
+    {
+      "type": "multiple_primary_statements_in_box",
+      "kind": "Definition",
+      "node_id": "def:finite-subcover",
+      "title": "Subcover and Finite Subcover",
+      "source": "notes/covers-and-subcovers/notes-covers-and-subcovers.tex",
+      "message": "Extracted theorem/definition box appears to contain more than one primary statement. Extraction was preserved, but the source should be split into separate boxes and re-extracted.",
+      "signals": [
+        "definition_title_contains_multiple_concepts:Subcover, Finite Subcover",
+        "multiple_definition_sentences:2"
+      ],
+      "excerpt": "Let $\\{U_{i}\\}_{i\\in I}$ be an open cover of $E$. A \\emph{subcover} is a subfamily $\\{U_{i}\\}_{i\\in J}$ with $J\\subseteq I$ that still covers $E$. It is a \\emph{finite subcover} when $J$ is finite."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:finite-subcover",
+      "title": "Subcover and Finite Subcover",
+      "source": "notes/covers-and-subcovers/notes-covers-and-subcovers.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $\\{U_{i}\\}_{i\\in I}$ be an open cover of $E$. A \\emph{subcover} is a subfamily $\\{U_{i}\\}_{i\\in J}$ with $J\\subseteq I$ that still covers $E$. It is a \\emph{finite subcover} when $J$ is finite."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:closed-bounded-interval-compact",
+      "title": "Closed Bounded Intervals Are Compact",
+      "source": "notes/heine-borel/notes-heine-borel.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Every closed bounded interval $[a,b]\\subseteq\\mathbb{R}$ is compact.",
+      "proof_source": "proofs/heine-borel/prf-closed-bounded-interval-compact.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:heine-borel",
+      "title": "Heine--Borel Theorem for $ $",
+      "source": "notes/heine-borel/notes-heine-borel.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A set $K\\subseteq\\mathbb{R}$ is compact if and only if $K$ is closed and bounded.",
+      "proof_source": "proofs/heine-borel/prf-heine-borel.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:interior-point",
+      "title": "Interior Point",
+      "source": "notes/interior-exterior-boundary/notes-interior-exterior-boundary.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $E\\subseteq\\mathbb{R}$ and $x\\in\\mathbb{R}$. Then $x$ is an interior point of $E$ exactly when \\[ \\exists r>0\\;(B_{r}(x)\\subseteq E). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:exterior-point",
+      "title": "Exterior Point",
+      "source": "notes/interior-exterior-boundary/notes-interior-exterior-boundary.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $E\\subseteq\\mathbb{R}$ and $x\\in\\mathbb{R}$. Then $x$ is an exterior point of $E$ exactly when \\[ \\exists r>0\\;(B_{r}(x)\\subseteq \\mathbb{R}\\setminus E). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:boundary-point",
+      "title": "Boundary Point",
+      "source": "notes/interior-exterior-boundary/notes-interior-exterior-boundary.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $E\\subseteq\\mathbb{R}$ and $x\\in\\mathbb{R}$. Then $x$ is a boundary point of $E$ exactly when \\[ \\forall r>0\\;(B_{r}(x)\\cap E\\neq\\emptyset \\;\\land\\; B_{r}(x)\\cap(\\mathbb{R}\\setminus E)\\neq\\emptyset). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:interior-of-set",
+      "title": "Interior of a Set",
+      "source": "notes/interior-exterior-boundary/notes-interior-exterior-boundary.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The \\emph{interior} of $E\\subseteq\\mathbb{R}$, written $\\operatorname{int}(E)$, is the set of all interior points of $E$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:bounded-subset-of-r",
+      "title": "Bounded Subset of the Real Line",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A set $E\\subseteq\\mathbb{R}$ is \\emph{bounded} exactly when there exists $M\\ge 0$ such that $|x|\\le M$ for all $x\\in E$; equivalently, $E$ is contained in some closed interval $[-M,M]$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:union-of-intervals",
+      "title": "Union of Intervals",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $I,J\\subseteq\\mathbb{R}$ be intervals. Their \\emph{union} is the set \\[ I\\cup J=\\{x\\in\\mathbb{R}:x\\in I\\text{ or }x\\in J\\}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:intersection-of-intervals",
+      "title": "Intersection of Intervals",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $I,J\\subseteq\\mathbb{R}$ be intervals. Their \\emph{intersection} is the set \\[ I\\cap J=\\{x\\in\\mathbb{R}:x\\in I\\text{ and }x\\in J\\}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:complement-of-interval",
+      "title": "Complement of an Interval",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $I\\subseteq\\mathbb{R}$ be an interval. Its \\emph{complement} in $\\mathbb{R}$ is the set \\[ I^{c}=\\mathbb{R}\\setminus I =\\{x\\in\\mathbb{R}:x\\notin I\\}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:difference-of-intervals",
+      "title": "Difference of Intervals",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $I,J\\subseteq\\mathbb{R}$ be intervals. The \\emph{difference} of $I$ by $J$ is the set \\[ I\\setminus J=\\{x\\in\\mathbb{R}:x\\in I\\text{ and }x\\notin J\\} =I\\cap J^{c}. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:limit-point",
+      "title": "Limit Point",
+      "source": "notes/limit-and-isolated-points/notes-limit-and-isolated-points.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $E\\subseteq\\mathbb{R}$ and $x\\in\\mathbb{R}$. Then $x$ is a \\emph{limit point} of $E$ exactly when \\[ \\forall r>0\\;\\exists y\\in E\\;\\bigl(0<|y-x|<r\\bigr). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:isolated-point",
+      "title": "Isolated Point",
+      "source": "notes/limit-and-isolated-points/notes-limit-and-isolated-points.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $E\\subseteq\\mathbb{R}$ and $x\\in E$. Then $x$ is an \\emph{isolated point} of $E$ exactly when \\[ \\exists r>0\\;\\forall y\\in E\\;\\bigl(|y-x|<r \\Rightarrow y=x\\bigr). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:open-ball",
+      "title": "Open Ball on the Real Line",
+      "source": "notes/neighborhoods-and-balls/notes-neighborhoods-and-balls.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $x\\in\\mathbb{R}$ and $r>0$. The \\emph{open ball} of radius $r$ about $x$ is \\[ B_{r}(x)=\\{\\,y\\in\\mathbb{R} : |y-x|<r\\,\\}=(x-r,\\,x+r). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:neighborhood-of-point",
+      "title": "Neighborhood of a Point",
+      "source": "notes/neighborhoods-and-balls/notes-neighborhoods-and-balls.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A set $N\\subseteq\\mathbb{R}$ is a \\emph{neighborhood} of $x\\in\\mathbb{R}$ exactly when there exists $r>0$ with $B_{r}(x)\\subseteq N$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:open-set",
+      "title": "Open Set in $ $",
+      "source": "notes/open-sets/notes-open-sets.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A set $U\\subseteq\\mathbb{R}$ is \\emph{open} exactly when \\[ \\forall x\\in U\\;\\exists r>0\\;(B_{r}(x)\\subseteq U). \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:open-interval-is-open",
+      "title": "Open Intervals Are Open",
+      "source": "notes/open-sets/notes-open-sets.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Every open interval $(a,b)$, every open ray $(a,\\infty)$ and $(-\\infty,b)$, and $\\mathbb{R}$ itself are open sets.",
+      "proof_source": "proofs/open-sets/prf-open-interval-is-open.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:open-set-closure-operations",
+      "title": "Unions and Finite Intersections of Open Sets",
+      "source": "notes/open-sets/notes-open-sets.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "An arbitrary union of open subsets of $\\mathbb{R}$ is open, and a finite intersection of open subsets of $\\mathbb{R}$ is open.",
+      "proof_source": "proofs/open-sets/prf-open-set-closure-operations.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:minimum-of-positive-numbers-is-positive",
+      "title": "Minimum of Positive Numbers Is Positive",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $a>0$ and $b>0$, then \\[ \\min\\{a,b\\}>0. \\]",
+      "proof_source": "proofs/order-distance-length/prf-minimum-of-positive-numbers-is-positive.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:half-epsilon-is-positive",
+      "title": "Half Epsilon Is Positive",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $\\varepsilon>0$, then \\[ \\frac{\\varepsilon}{2}>0. \\]",
+      "proof_source": "proofs/order-distance-length/prf-half-epsilon-is-positive.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:epsilon-splitting",
+      "title": "Epsilon Splitting",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $\\varepsilon>0$, then \\[ \\frac{\\varepsilon}{2}+\\frac{\\varepsilon}{2}=\\varepsilon. \\]",
+      "proof_source": "proofs/order-distance-length/prf-epsilon-splitting.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:positive-minimum-bound",
+      "title": "Positive Minimum Bound",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $0<\\delta\\le a$ and $0<\\delta\\le b$, then \\[ \\delta\\le \\min\\{a,b\\}. \\]",
+      "proof_source": "proofs/order-distance-length/prf-positive-minimum-bound.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:choosing-a-smaller-positive-number",
+      "title": "Choosing a Smaller Positive Number",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "If $\\varepsilon>0$ and $c>0$, then there exists $\\delta>0$ such that \\[ 0<\\delta<\\varepsilon \\quad\\text{and}\\quad 0<\\delta<c. \\]",
+      "proof_source": "proofs/order-distance-length/prf-choosing-a-smaller-positive-number.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:distance-on-real-line",
+      "title": "Distance on the Real Line",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The \\emph{distance} on $\\mathbb{R}$ is the map $d:\\mathbb{R}\\times\\mathbb{R}\\to\\mathbb{R}$ given by \\[ d(x,y)=|x-y|. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:length-of-interval",
+      "title": "Length of a Bounded Interval",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let $a,b\\in\\mathbb{R}$ with $a\\le b$. The \\emph{length} of any bounded interval with endpoints $a$ and $b$ is \\[ \\ell=b-a. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:distance-is-a-metric",
+      "title": "The Distance Function Is a Metric",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The map $d(x,y)=|x-y|$ satisfies, for all $x,y,z\\in\\mathbb{R}$: (i) $d(x,y)\\ge 0$ with $d(x,y)=0$ iff $x=y$; (ii) $d(x,y)=d(y,x)$; and (iii) $d(x,z)\\le d(x,y)+d(y,z)$. Hence $(\\mathbb{R},d)$ is a metric space.",
+      "proof_source": "proofs/order-distance-length/prf-distance-is-a-metric.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:real-line-structural-order-facts",
+      "title": "Real Line Structural Order Facts",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The real numbers are linearly ordered, form an ordered field, and satisfy the least upper bound property.",
+      "proof_source": "proofs/order-distance-length/prf-real-line-structural-order-facts.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:closed-set-closure-operations",
+      "title": "Closure Laws for Closed Sets",
+      "source": "notes/unions-and-intersections/notes-unions-and-intersections.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "An arbitrary intersection of closed subsets of $\\mathbb{R}$ is closed, and a finite union of closed subsets of $\\mathbb{R}$ is closed.",
+      "proof_source": "proofs/unions-and-intersections/prf-closed-set-closure-operations.tex"
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:closed-bounded-interval-compact",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/heine-borel/notes-heine-borel.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:closed-bounded-interval-compact",
+      "missing_target_id": "thm:lub-property-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/heine-borel/notes-heine-borel.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bounded-subset-of-r",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bounded-subset-of-r",
+      "missing_target_id": "thm:triangle-inequality",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:union-of-intervals",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:union-of-intervals",
+      "missing_target_id": "def:open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:union-of-intervals",
+      "missing_target_id": "def:union",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:intersection-of-intervals",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:intersection-of-intervals",
+      "missing_target_id": "def:intersection",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:intersection-of-intervals",
+      "missing_target_id": "def:open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:complement-of-interval",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:complement-of-interval",
+      "missing_target_id": "def:complement",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:complement-of-interval",
+      "missing_target_id": "def:open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:difference-of-intervals",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:difference-of-intervals",
+      "missing_target_id": "def:left-half-open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:difference-of-intervals",
+      "missing_target_id": "def:open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:difference-of-intervals",
+      "missing_target_id": "def:right-half-open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:open-ball",
+      "missing_target_id": "def:open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/neighborhoods-and-balls/notes-neighborhoods-and-balls.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:open-interval-is-open",
+      "missing_target_id": "def:open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/open-sets/notes-open-sets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:minimum-of-positive-numbers-is-positive",
+      "missing_target_id": "def:real-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:minimum-of-positive-numbers-is-positive",
+      "missing_target_id": "thm:ineq-transitivity-strict",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:half-epsilon-is-positive",
+      "missing_target_id": "def:real-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:half-epsilon-is-positive",
+      "missing_target_id": "thm:ineq-multiply-positive",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:epsilon-splitting",
+      "missing_target_id": "def:real-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:positive-minimum-bound",
+      "missing_target_id": "def:real-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:distance-on-real-line",
+      "missing_target_id": "thm:triangle-inequality",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:distance-is-a-metric",
+      "missing_target_id": "thm:triangle-inequality",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:real-line-structural-order-facts",
+      "missing_target_id": "thm:lub-property-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:real-line-structural-order-facts",
+      "missing_target_id": "thm:r-is-an-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:real-line-structural-order-facts",
+      "missing_target_id": "thm:r-totally-ordered-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
@@ -45469,339 +45499,6 @@
       "excerpt": "The set $\\Lambda$ of $\\lambda$-terms is defined inductively as follows: \\begin{enumerate} \\item Every variable $x$ is a $\\lambda$-term. \\item If $M$ is a $\\lambda$-term and $x$ is a variable, then \\[ \\lambda x.\\,M \\] is a $\\lambda$-term. \\item If $M$ and $N$ are $\\lambda$-terms, then \\[ MN \\] is a $\\lambda$-term. \\end{enumerate}"
     },
     {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:computational-geometry-convex-set",
-      "title": "Convex Set",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A set \\(S \\subseteq \\mathbb{R}^2\\) is \\emph{convex} if for every pair of points \\(a,b\\in S\\) and every \\(\\lambda\\in[0,1]\\), \\[ \\lambda a+(1-\\lambda)b\\in S. \\] Equivalently, \\(S\\) contains the line segment between any two of its points."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:computational-geometry-convex-combination",
-      "title": "Convex Combination",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A \\emph{convex combination} of points \\(q_1,\\dots,q_n\\in\\mathbb{R}^2\\) is a point of the form \\[ \\sum_{i=1}^{n}\\lambda_i q_i, \\qquad \\lambda_i\\ge 0 \\text{ for all } i, \\qquad \\sum_{i=1}^{n}\\lambda_i=1. \\] The numbers \\(\\lambda_i\\) are called the weights."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:computational-geometry-convex-hull",
-      "title": "Convex Hull",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "The \\emph{convex hull} of a set \\(P\\subseteq\\mathbb{R}^2\\), written \\(\\conv(P)\\), is the set of all convex combinations of finitely many points of \\(P\\): \\[ \\conv(P) = \\left\\{ \\sum_{i=1}^{n}\\lambda_i q_i \\;\\middle|\\; n\\ge 1,\\ q_i\\in P,\\ \\lambda_i\\ge 0,\\ \\sum_{i=1}^{n}\\lambda_i=1 \\right\\}. \\] Equivalently, \\(\\conv(P)\\) is the smallest convex set containing \\(P\\), i.e. the intersection of all convex sets that contai..."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:computational-geometry-convex-hull-smallest-convex-set",
-      "title": "Convex hull as the smallest convex set",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let \\(P\\subseteq\\mathbb{R}^2\\). Then \\(\\conv(P)\\) is convex, contains \\(P\\), and is contained in every convex set that contains \\(P\\). Hence \\[ \\conv(P) = \\bigcap\\{K\\subseteq\\mathbb{R}^2 : K\\text{ is convex and }P\\subseteq K\\}. \\]",
-      "proof_source": "proofs/convex-hulls/prf-computational-geometry-convex-hull-smallest-convex-set.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:computational-geometry-extreme-point",
-      "title": "Extreme Point",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let \\(S\\subseteq\\mathbb{R}^2\\) be convex. A point \\(p\\in S\\) is an \\emph{extreme point} of \\(S\\) if whenever \\[ p=\\lambda a+(1-\\lambda)b, \\qquad a,b\\in S,\\quad \\lambda\\in(0,1), \\] it follows that \\(a=b=p\\). For a finite point set \\(P\\), the extreme points of \\(\\conv(P)\\) are called the vertices of the convex hull."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:computational-geometry-supporting-line",
-      "title": "Supporting Line",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A line \\(\\ell\\subseteq\\mathbb{R}^2\\) is a \\emph{supporting line} of a convex set \\(S\\) at a point \\(p\\in S\\) if \\(p\\in\\ell\\) and \\(S\\) lies entirely in one of the two closed half-planes bounded by \\(\\ell\\). Equivalently, there exists \\(d\\in\\mathbb{R}^2\\setminus\\{0\\}\\) such that \\[ \\ell=\\{x\\in\\mathbb{R}^2:\\langle d,x\\rangle=\\langle d,p\\rangle\\} \\] and \\[ \\langle d,q\\rangle\\le \\langle d,p\\rangle \\qquad \\text{for all..."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Lemma",
-      "node_id": "lem:computational-geometry-linear-functionals-convex-combinations",
-      "title": "Linear functionals preserve convex combinations",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let \\(d\\in\\mathbb{R}^2\\), and let \\[ z=\\sum_{i=1}^{n}\\lambda_i q_i \\] be a convex combination of points \\(q_1,\\dots,q_n\\in\\mathbb{R}^2\\). Then \\[ \\langle d,z\\rangle = \\sum_{i=1}^{n}\\lambda_i\\langle d,q_i\\rangle. \\] Consequently, if \\(\\langle d,q_i\\rangle\\le M\\) for every \\(i\\), then \\[ \\langle d,z\\rangle\\le M. \\]",
-      "proof_source": "proofs/convex-hulls/prf-computational-geometry-linear-functionals-convex-combinations.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:computational-geometry-supporting-functional-hull-vertices",
-      "title": "Supporting functional characterization of hull vertices",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let \\(P\\subset\\mathbb{R}^2\\) be finite and in general position. A point \\(p\\in P\\) is a vertex of \\(\\conv(P)\\) if and only if there exists a direction \\(d\\in\\mathbb{R}^2\\setminus\\{0\\}\\) such that \\[ \\langle d,p\\rangle>\\langle d,q\\rangle \\qquad \\text{for all } q\\in P\\setminus\\{p\\}. \\] Equivalently, \\(p\\) is the unique point of \\(P\\) attaining \\[ \\max_{q\\in P}\\langle d,q\\rangle. \\] Thus every hull vertex is a maximu...",
-      "proof_source": "proofs/convex-hulls/prf-computational-geometry-supporting-functional-hull-vertices.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:computational-geometry-monotone-slope-upper-hull",
-      "title": "Monotone slope characterization of the upper hull",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let \\(P\\subset\\mathbb{R}^2\\) be finite and in general position. Let \\[ v_0,v_1,\\dots,v_m \\] be the vertices of the upper hull of \\(P\\), listed in increasing \\(x\\)-coordinate, and define \\[ s_k = \\frac{y(v_{k+1})-y(v_k)}{x(v_{k+1})-x(v_k)}, \\qquad k=0,1,\\dots,m-1. \\] Then \\[ s_0>s_1>\\cdots>s_{m-1}. \\] Conversely, if points \\(w_0,\\dots,w_m\\) satisfy \\[ x(w_0)<x(w_1)<\\cdots<x(w_m) \\] and their consecutive slopes are...",
-      "proof_source": "proofs/convex-hulls/prf-computational-geometry-monotone-slope-upper-hull.tex"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Theorem",
-      "node_id": "thm:computational-geometry-greedy-slope-upper-hull",
-      "title": "Greedy slope construction of the upper hull",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "Let \\(P\\subset\\mathbb{R}^2\\) be finite and in general position. Define \\[ v_0=\\argmin_{p\\in P}x(p). \\] Given \\(v_k\\) with \\[ x(v_k)<\\max_{p\\in P}x(p), \\] define \\[ v_{k+1} = \\argmax_{\\substack{q\\in P\\\\x(q)>x(v_k)}} \\frac{y(q)-y(v_k)}{x(q)-x(v_k)}. \\] Terminate once \\[ v_k=\\argmax_{p\\in P}x(p). \\] Then the points \\[ v_0,v_1,\\dots,v_m \\] produced by this construction are exactly the vertices of the upper hull of \\(P...",
-      "proof_source": "proofs/convex-hulls/prf-computational-geometry-greedy-slope-upper-hull.tex"
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:computational-geometry-linear-functionals-convex-combinations",
-      "missing_target_id": "def:addition-on-r",
-      "relationship_kind": "depends_on",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:computational-geometry-linear-functionals-convex-combinations",
-      "missing_target_id": "def:multiplication-on-r",
-      "relationship_kind": "depends_on",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-models-malthusian-population-growth-model",
-      "title": "Malthusian Population Growth Model",
-      "source": "notes/differential-equations-models/notes-models.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "The \\textbf{Malthusian population growth model} assumes that the rate of change of a population is proportional to the current population. If $P(t)$ denotes the population at time $t$, then the model is \\[ P'(t)=kP(t), \\] where $k$ is a constant called the \\textbf{growth rate} or \\textbf{proportionality constant}."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-models-decay",
-      "title": "Decay",
-      "source": "notes/differential-equations-models/notes-models.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A quantity is said to undergo \\textbf{decay} if it decreases over time. In a differential equation model, if $Q(t)$ denotes the quantity at time $t$, then decay is often modeled by an equation of the form \\[ Q'(t)=-kQ(t), \\] where $k>0$ is a constant."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-models-newton-s-law-of-cooling",
-      "title": "Newton's Law of Cooling",
-      "source": "notes/differential-equations-models/notes-models.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "\\textbf{Newton's Law of Cooling} states that the rate at which an object's temperature changes is proportional to the difference between the object's temperature and the surrounding ambient temperature. If $T(t)$ denotes the temperature of the object at time $t$, and $T_a$ denotes the ambient temperature, then the model is \\[ T'(t)=-k\\bigl(T(t)-T_a\\bigr), \\] where $k>0$ is a constant called the \\textbf{cooling con..."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-solutions-general-solution",
-      "title": "General Solution",
-      "source": "notes/differential-equations-models/notes-solutions.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A \\textbf{general solution} of a differential equation is a family of solutions containing one or more arbitrary constants. For an $n$th-order ordinary differential equation, the general solution typically contains $n$ arbitrary constants: \\[ y(t)=\\Phi(t,C_1,C_2,\\dots,C_n). \\] Each choice of the constants $C_1,C_2,\\dots,C_n$ gives a particular solution of the differential equation."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-solutions-family-of-solutions",
-      "title": "Family of Solutions",
-      "source": "notes/differential-equations-models/notes-solutions.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A \\textbf{family of solutions} of a differential equation is a collection of solution functions described by one or more parameters. For example, a family of solutions may be written in the form \\[ y(t)=\\Phi(t,C), \\] or more generally, \\[ y(t)=\\Phi(t,C_1,C_2,\\dots,C_n), \\] where $C,C_1,\\dots,C_n$ are parameters. Each choice of the parameters gives one particular solution."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-solutions-initial-condition",
-      "title": "Initial Condition",
-      "source": "notes/differential-equations-models/notes-solutions.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "An \\textbf{initial condition} specifies the value of the unknown function at a particular value of the independent variable. For a first-order differential equation involving an unknown function $y=y(t)$, an initial condition has the form \\[ y(t_0)=y_0, \\] where $t_0$ is the initial time and $y_0$ is the initial value."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-solutions-initial-value-problem",
-      "title": "Initial Value Problem",
-      "source": "notes/differential-equations-models/notes-solutions.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "An \\textbf{initial value problem}, or \\textbf{IVP}, is a differential equation together with one or more initial conditions. For a first-order differential equation, an initial value problem has the form \\[ y'=f(t,y), \\qquad y(t_0)=y_0. \\] The differential equation describes how the function changes, while the initial condition specifies the value of the solution at the initial time $t_0$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-solutions-existence",
-      "title": "Existence",
-      "source": "notes/differential-equations-models/notes-solutions.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "An initial value problem is said to have \\textbf{existence} if there is at least one function that satisfies both the differential equation and the initial condition. For a first-order initial value problem \\[ y'=f(t,y), \\qquad y(t_0)=y_0, \\] existence means that there is a function $y(t)$, defined on some interval containing $t_0$, such that \\[ y'(t)=f(t,y(t)) \\] and \\[ y(t_0)=y_0. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-solutions-uniqueness",
-      "title": "Uniqueness",
-      "source": "notes/differential-equations-models/notes-solutions.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "An initial value problem is said to have \\textbf{uniqueness} if it has at most one solution on the interval under consideration. For a first-order initial value problem \\[ y'=f(t,y), \\qquad y(t_0)=y_0, \\] uniqueness means that if $y_1(t)$ and $y_2(t)$ are both solutions on the same interval $I$ containing $t_0$, then \\[ y_1(t)=y_2(t) \\] for every $t\\in I$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-solutions-interval-of-existence",
-      "title": "Interval of Existence",
-      "source": "notes/differential-equations-models/notes-solutions.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "An \\textbf{interval of existence} for a solution of an initial value problem is an interval on which the solution is defined and satisfies the differential equation. For an initial value problem \\[ y'=f(t,y), \\qquad y(t_0)=y_0, \\] an interval $I$ is an interval of existence if $t_0\\in I$ and there is a solution $y:I\\to\\mathbb{R}$ such that \\[ y'(t)=f(t,y(t)) \\] for every $t\\in I$, and \\[ y(t_0)=y_0. \\]"
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-terminology-differential-equation",
-      "title": "Differential Equation",
-      "source": "notes/differential-equations-models/notes-terminology.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A \\textbf{differential equation} is an equation whose unknown is a function and whose terms involve one or more derivatives of that function. For an unknown function $y=y(t)$, a differential equation may be written in the form \\[ F(t,y,y',y'',\\dots,y^{(n)})=0. \\] Here $t$ is the independent variable, $y(t)$ is the unknown function, and \\[ y',y'',\\dots,y^{(n)} \\] are derivatives of $y$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-terminology-order-of-a-differential-equation",
-      "title": "Order of a Differential Equation",
-      "source": "notes/differential-equations-models/notes-terminology.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "The \\textbf{order} of a differential equation is the highest derivative of the unknown function that appears in the equation. For example, if an equation involving an unknown function $y=y(t)$ can be written in the form \\[ F(t,y,y',y'',\\dots,y^{(n)})=0 \\] and $y^{(n)}$ is the highest derivative that appears, then the differential equation has \\textbf{order} $n$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-terminology-solution-of-a-differential-equation",
-      "title": "Solution of a Differential Equation",
-      "source": "notes/differential-equations-models/notes-terminology.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A \\textbf{solution} of a differential equation is a function that satisfies the equation on a specified interval. More precisely, if a differential equation is written in the form \\[ F(t,y,y',y'',\\dots,y^{(n)})=0, \\] then a solution on an interval $I$ is a function $y:I\\to\\mathbb{R}$ such that $y$ has all derivatives required by the equation and \\[ F(t,y(t),y'(t),y''(t),\\dots,y^{(n)}(t))=0 \\] for every $t\\in I$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-terminology-autonomous-differential-equation",
-      "title": "Autonomous Differential Equation",
-      "source": "notes/differential-equations-models/notes-terminology.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "An \\textbf{autonomous differential equation} is a differential equation in which the independent variable does not appear explicitly. For a first-order ordinary differential equation, an autonomous equation has the form \\[ y'=f(y), \\] where the rate of change of $y$ depends only on the current value of $y$, not directly on time $t$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-terminology-non-autonomous-differential-equation",
-      "title": "Non-Autonomous Differential Equation",
-      "source": "notes/differential-equations-models/notes-terminology.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A \\textbf{non-autonomous differential equation} is a differential equation in which the independent variable appears explicitly. For a first-order ordinary differential equation, a non-autonomous equation has the form \\[ y'=f(t,y), \\] where the rate of change of $y$ may depend both on the current value of $y$ and on the independent variable $t$."
-    },
-    {
-      "type": "missing_dependencies_block",
-      "kind": "Definition",
-      "node_id": "def:ordinary-differential-equations-terminology-linear-differential-equation",
-      "title": "Linear Differential Equation",
-      "source": "notes/differential-equations-models/notes-terminology.tex",
-      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
-      "signals": [
-        "missing remark*:Dependencies"
-      ],
-      "excerpt": "A differential equation is called \\textbf{linear} if the unknown function and its derivatives appear only to the first power and are not multiplied together. An $n$th-order linear ordinary differential equation for an unknown function $y=y(t)$ has the form \\[ a_n(t)y^{(n)}+a_{n-1}(t)y^{(n-1)}+\\cdots+a_1(t)y'+a_0(t)y=g(t), \\] where the coefficient functions \\[ a_0(t),a_1(t),\\dots,a_n(t) \\] and the forcing term $g(t..."
-    },
-    {
       "type": "multiple_primary_statements_in_box",
       "kind": "Definition",
       "node_id": "def:numerical-analysis-ieee-754-binary-floating-point-datum",
@@ -46631,6 +46328,339 @@
       "relationship_kind": "depends_on",
       "source": "notes/interval-arithmetic/notes-interval-arithmetic.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:computational-geometry-convex-set",
+      "title": "Convex Set",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A set \\(S \\subseteq \\mathbb{R}^2\\) is \\emph{convex} if for every pair of points \\(a,b\\in S\\) and every \\(\\lambda\\in[0,1]\\), \\[ \\lambda a+(1-\\lambda)b\\in S. \\] Equivalently, \\(S\\) contains the line segment between any two of its points."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:computational-geometry-convex-combination",
+      "title": "Convex Combination",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A \\emph{convex combination} of points \\(q_1,\\dots,q_n\\in\\mathbb{R}^2\\) is a point of the form \\[ \\sum_{i=1}^{n}\\lambda_i q_i, \\qquad \\lambda_i\\ge 0 \\text{ for all } i, \\qquad \\sum_{i=1}^{n}\\lambda_i=1. \\] The numbers \\(\\lambda_i\\) are called the weights."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:computational-geometry-convex-hull",
+      "title": "Convex Hull",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The \\emph{convex hull} of a set \\(P\\subseteq\\mathbb{R}^2\\), written \\(\\conv(P)\\), is the set of all convex combinations of finitely many points of \\(P\\): \\[ \\conv(P) = \\left\\{ \\sum_{i=1}^{n}\\lambda_i q_i \\;\\middle|\\; n\\ge 1,\\ q_i\\in P,\\ \\lambda_i\\ge 0,\\ \\sum_{i=1}^{n}\\lambda_i=1 \\right\\}. \\] Equivalently, \\(\\conv(P)\\) is the smallest convex set containing \\(P\\), i.e. the intersection of all convex sets that contai..."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:computational-geometry-convex-hull-smallest-convex-set",
+      "title": "Convex hull as the smallest convex set",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let \\(P\\subseteq\\mathbb{R}^2\\). Then \\(\\conv(P)\\) is convex, contains \\(P\\), and is contained in every convex set that contains \\(P\\). Hence \\[ \\conv(P) = \\bigcap\\{K\\subseteq\\mathbb{R}^2 : K\\text{ is convex and }P\\subseteq K\\}. \\]",
+      "proof_source": "proofs/convex-hulls/prf-computational-geometry-convex-hull-smallest-convex-set.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:computational-geometry-extreme-point",
+      "title": "Extreme Point",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let \\(S\\subseteq\\mathbb{R}^2\\) be convex. A point \\(p\\in S\\) is an \\emph{extreme point} of \\(S\\) if whenever \\[ p=\\lambda a+(1-\\lambda)b, \\qquad a,b\\in S,\\quad \\lambda\\in(0,1), \\] it follows that \\(a=b=p\\). For a finite point set \\(P\\), the extreme points of \\(\\conv(P)\\) are called the vertices of the convex hull."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:computational-geometry-supporting-line",
+      "title": "Supporting Line",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A line \\(\\ell\\subseteq\\mathbb{R}^2\\) is a \\emph{supporting line} of a convex set \\(S\\) at a point \\(p\\in S\\) if \\(p\\in\\ell\\) and \\(S\\) lies entirely in one of the two closed half-planes bounded by \\(\\ell\\). Equivalently, there exists \\(d\\in\\mathbb{R}^2\\setminus\\{0\\}\\) such that \\[ \\ell=\\{x\\in\\mathbb{R}^2:\\langle d,x\\rangle=\\langle d,p\\rangle\\} \\] and \\[ \\langle d,q\\rangle\\le \\langle d,p\\rangle \\qquad \\text{for all..."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Lemma",
+      "node_id": "lem:computational-geometry-linear-functionals-convex-combinations",
+      "title": "Linear functionals preserve convex combinations",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let \\(d\\in\\mathbb{R}^2\\), and let \\[ z=\\sum_{i=1}^{n}\\lambda_i q_i \\] be a convex combination of points \\(q_1,\\dots,q_n\\in\\mathbb{R}^2\\). Then \\[ \\langle d,z\\rangle = \\sum_{i=1}^{n}\\lambda_i\\langle d,q_i\\rangle. \\] Consequently, if \\(\\langle d,q_i\\rangle\\le M\\) for every \\(i\\), then \\[ \\langle d,z\\rangle\\le M. \\]",
+      "proof_source": "proofs/convex-hulls/prf-computational-geometry-linear-functionals-convex-combinations.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:computational-geometry-supporting-functional-hull-vertices",
+      "title": "Supporting functional characterization of hull vertices",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let \\(P\\subset\\mathbb{R}^2\\) be finite and in general position. A point \\(p\\in P\\) is a vertex of \\(\\conv(P)\\) if and only if there exists a direction \\(d\\in\\mathbb{R}^2\\setminus\\{0\\}\\) such that \\[ \\langle d,p\\rangle>\\langle d,q\\rangle \\qquad \\text{for all } q\\in P\\setminus\\{p\\}. \\] Equivalently, \\(p\\) is the unique point of \\(P\\) attaining \\[ \\max_{q\\in P}\\langle d,q\\rangle. \\] Thus every hull vertex is a maximu...",
+      "proof_source": "proofs/convex-hulls/prf-computational-geometry-supporting-functional-hull-vertices.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:computational-geometry-monotone-slope-upper-hull",
+      "title": "Monotone slope characterization of the upper hull",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let \\(P\\subset\\mathbb{R}^2\\) be finite and in general position. Let \\[ v_0,v_1,\\dots,v_m \\] be the vertices of the upper hull of \\(P\\), listed in increasing \\(x\\)-coordinate, and define \\[ s_k = \\frac{y(v_{k+1})-y(v_k)}{x(v_{k+1})-x(v_k)}, \\qquad k=0,1,\\dots,m-1. \\] Then \\[ s_0>s_1>\\cdots>s_{m-1}. \\] Conversely, if points \\(w_0,\\dots,w_m\\) satisfy \\[ x(w_0)<x(w_1)<\\cdots<x(w_m) \\] and their consecutive slopes are...",
+      "proof_source": "proofs/convex-hulls/prf-computational-geometry-monotone-slope-upper-hull.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:computational-geometry-greedy-slope-upper-hull",
+      "title": "Greedy slope construction of the upper hull",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "Let \\(P\\subset\\mathbb{R}^2\\) be finite and in general position. Define \\[ v_0=\\argmin_{p\\in P}x(p). \\] Given \\(v_k\\) with \\[ x(v_k)<\\max_{p\\in P}x(p), \\] define \\[ v_{k+1} = \\argmax_{\\substack{q\\in P\\\\x(q)>x(v_k)}} \\frac{y(q)-y(v_k)}{x(q)-x(v_k)}. \\] Terminate once \\[ v_k=\\argmax_{p\\in P}x(p). \\] Then the points \\[ v_0,v_1,\\dots,v_m \\] produced by this construction are exactly the vertices of the upper hull of \\(P...",
+      "proof_source": "proofs/convex-hulls/prf-computational-geometry-greedy-slope-upper-hull.tex"
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:computational-geometry-linear-functionals-convex-combinations",
+      "missing_target_id": "def:addition-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:computational-geometry-linear-functionals-convex-combinations",
+      "missing_target_id": "def:multiplication-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-models-malthusian-population-growth-model",
+      "title": "Malthusian Population Growth Model",
+      "source": "notes/differential-equations-models/notes-models.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The \\textbf{Malthusian population growth model} assumes that the rate of change of a population is proportional to the current population. If $P(t)$ denotes the population at time $t$, then the model is \\[ P'(t)=kP(t), \\] where $k$ is a constant called the \\textbf{growth rate} or \\textbf{proportionality constant}."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-models-decay",
+      "title": "Decay",
+      "source": "notes/differential-equations-models/notes-models.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A quantity is said to undergo \\textbf{decay} if it decreases over time. In a differential equation model, if $Q(t)$ denotes the quantity at time $t$, then decay is often modeled by an equation of the form \\[ Q'(t)=-kQ(t), \\] where $k>0$ is a constant."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-models-newton-s-law-of-cooling",
+      "title": "Newton's Law of Cooling",
+      "source": "notes/differential-equations-models/notes-models.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "\\textbf{Newton's Law of Cooling} states that the rate at which an object's temperature changes is proportional to the difference between the object's temperature and the surrounding ambient temperature. If $T(t)$ denotes the temperature of the object at time $t$, and $T_a$ denotes the ambient temperature, then the model is \\[ T'(t)=-k\\bigl(T(t)-T_a\\bigr), \\] where $k>0$ is a constant called the \\textbf{cooling con..."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-solutions-general-solution",
+      "title": "General Solution",
+      "source": "notes/differential-equations-models/notes-solutions.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A \\textbf{general solution} of a differential equation is a family of solutions containing one or more arbitrary constants. For an $n$th-order ordinary differential equation, the general solution typically contains $n$ arbitrary constants: \\[ y(t)=\\Phi(t,C_1,C_2,\\dots,C_n). \\] Each choice of the constants $C_1,C_2,\\dots,C_n$ gives a particular solution of the differential equation."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-solutions-family-of-solutions",
+      "title": "Family of Solutions",
+      "source": "notes/differential-equations-models/notes-solutions.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A \\textbf{family of solutions} of a differential equation is a collection of solution functions described by one or more parameters. For example, a family of solutions may be written in the form \\[ y(t)=\\Phi(t,C), \\] or more generally, \\[ y(t)=\\Phi(t,C_1,C_2,\\dots,C_n), \\] where $C,C_1,\\dots,C_n$ are parameters. Each choice of the parameters gives one particular solution."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-solutions-initial-condition",
+      "title": "Initial Condition",
+      "source": "notes/differential-equations-models/notes-solutions.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "An \\textbf{initial condition} specifies the value of the unknown function at a particular value of the independent variable. For a first-order differential equation involving an unknown function $y=y(t)$, an initial condition has the form \\[ y(t_0)=y_0, \\] where $t_0$ is the initial time and $y_0$ is the initial value."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-solutions-initial-value-problem",
+      "title": "Initial Value Problem",
+      "source": "notes/differential-equations-models/notes-solutions.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "An \\textbf{initial value problem}, or \\textbf{IVP}, is a differential equation together with one or more initial conditions. For a first-order differential equation, an initial value problem has the form \\[ y'=f(t,y), \\qquad y(t_0)=y_0. \\] The differential equation describes how the function changes, while the initial condition specifies the value of the solution at the initial time $t_0$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-solutions-existence",
+      "title": "Existence",
+      "source": "notes/differential-equations-models/notes-solutions.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "An initial value problem is said to have \\textbf{existence} if there is at least one function that satisfies both the differential equation and the initial condition. For a first-order initial value problem \\[ y'=f(t,y), \\qquad y(t_0)=y_0, \\] existence means that there is a function $y(t)$, defined on some interval containing $t_0$, such that \\[ y'(t)=f(t,y(t)) \\] and \\[ y(t_0)=y_0. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-solutions-uniqueness",
+      "title": "Uniqueness",
+      "source": "notes/differential-equations-models/notes-solutions.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "An initial value problem is said to have \\textbf{uniqueness} if it has at most one solution on the interval under consideration. For a first-order initial value problem \\[ y'=f(t,y), \\qquad y(t_0)=y_0, \\] uniqueness means that if $y_1(t)$ and $y_2(t)$ are both solutions on the same interval $I$ containing $t_0$, then \\[ y_1(t)=y_2(t) \\] for every $t\\in I$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-solutions-interval-of-existence",
+      "title": "Interval of Existence",
+      "source": "notes/differential-equations-models/notes-solutions.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "An \\textbf{interval of existence} for a solution of an initial value problem is an interval on which the solution is defined and satisfies the differential equation. For an initial value problem \\[ y'=f(t,y), \\qquad y(t_0)=y_0, \\] an interval $I$ is an interval of existence if $t_0\\in I$ and there is a solution $y:I\\to\\mathbb{R}$ such that \\[ y'(t)=f(t,y(t)) \\] for every $t\\in I$, and \\[ y(t_0)=y_0. \\]"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-terminology-differential-equation",
+      "title": "Differential Equation",
+      "source": "notes/differential-equations-models/notes-terminology.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A \\textbf{differential equation} is an equation whose unknown is a function and whose terms involve one or more derivatives of that function. For an unknown function $y=y(t)$, a differential equation may be written in the form \\[ F(t,y,y',y'',\\dots,y^{(n)})=0. \\] Here $t$ is the independent variable, $y(t)$ is the unknown function, and \\[ y',y'',\\dots,y^{(n)} \\] are derivatives of $y$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-terminology-order-of-a-differential-equation",
+      "title": "Order of a Differential Equation",
+      "source": "notes/differential-equations-models/notes-terminology.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "The \\textbf{order} of a differential equation is the highest derivative of the unknown function that appears in the equation. For example, if an equation involving an unknown function $y=y(t)$ can be written in the form \\[ F(t,y,y',y'',\\dots,y^{(n)})=0 \\] and $y^{(n)}$ is the highest derivative that appears, then the differential equation has \\textbf{order} $n$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-terminology-solution-of-a-differential-equation",
+      "title": "Solution of a Differential Equation",
+      "source": "notes/differential-equations-models/notes-terminology.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A \\textbf{solution} of a differential equation is a function that satisfies the equation on a specified interval. More precisely, if a differential equation is written in the form \\[ F(t,y,y',y'',\\dots,y^{(n)})=0, \\] then a solution on an interval $I$ is a function $y:I\\to\\mathbb{R}$ such that $y$ has all derivatives required by the equation and \\[ F(t,y(t),y'(t),y''(t),\\dots,y^{(n)}(t))=0 \\] for every $t\\in I$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-terminology-autonomous-differential-equation",
+      "title": "Autonomous Differential Equation",
+      "source": "notes/differential-equations-models/notes-terminology.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "An \\textbf{autonomous differential equation} is a differential equation in which the independent variable does not appear explicitly. For a first-order ordinary differential equation, an autonomous equation has the form \\[ y'=f(y), \\] where the rate of change of $y$ depends only on the current value of $y$, not directly on time $t$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-terminology-non-autonomous-differential-equation",
+      "title": "Non-Autonomous Differential Equation",
+      "source": "notes/differential-equations-models/notes-terminology.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A \\textbf{non-autonomous differential equation} is a differential equation in which the independent variable appears explicitly. For a first-order ordinary differential equation, a non-autonomous equation has the form \\[ y'=f(t,y), \\] where the rate of change of $y$ may depend both on the current value of $y$ and on the independent variable $t$."
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Definition",
+      "node_id": "def:ordinary-differential-equations-terminology-linear-differential-equation",
+      "title": "Linear Differential Equation",
+      "source": "notes/differential-equations-models/notes-terminology.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "A differential equation is called \\textbf{linear} if the unknown function and its derivatives appear only to the first power and are not multiplied together. An $n$th-order linear ordinary differential equation for an unknown function $y=y(t)$ has the form \\[ a_n(t)y^{(n)}+a_{n-1}(t)y^{(n-1)}+\\cdots+a_1(t)y'+a_0(t)y=g(t), \\] where the coefficient functions \\[ a_0(t),a_1(t),\\dots,a_n(t) \\] and the forcing term $g(t..."
     }
   ]
 }

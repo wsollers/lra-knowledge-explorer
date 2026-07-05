@@ -9835,6 +9835,46 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:classification-of-intervals-in-r",
+    "to": "def:closed-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:classification-of-intervals-in-r",
+    "to": "def:interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:classification-of-intervals-in-r",
+    "to": "def:left-half-open-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:classification-of-intervals-in-r",
+    "to": "def:open-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:classification-of-intervals-in-r",
+    "to": "def:ray",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:classification-of-intervals-in-r",
+    "to": "def:right-half-open-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:interval-characterization",
+    "to": "def:closed-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:interval-characterization",
+    "to": "def:interval",
+    "kind": "depends_on"
+  },
+  {
     "from": "cor:glb-property-r",
     "to": "thm:lub-property-r",
     "kind": "depends_on"
@@ -10965,46 +11005,6 @@
     "kind": "depends_on"
   },
   {
-    "from": "thm:classification-of-intervals-in-r",
-    "to": "def:closed-interval",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:classification-of-intervals-in-r",
-    "to": "def:interval",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:classification-of-intervals-in-r",
-    "to": "def:left-half-open-interval",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:classification-of-intervals-in-r",
-    "to": "def:open-interval",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:classification-of-intervals-in-r",
-    "to": "def:ray",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:classification-of-intervals-in-r",
-    "to": "def:right-half-open-interval",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:interval-characterization",
-    "to": "def:closed-interval",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:interval-characterization",
-    "to": "def:interval",
-    "kind": "depends_on"
-  },
-  {
     "from": "def:embedding-q-into-r",
     "to": "def:number-system-embedding",
     "kind": "depends_on"
@@ -11347,181 +11347,6 @@
   {
     "from": "thm:reverse-triangle-inequality",
     "to": "thm:absolute-value-symmetric",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:boundary-point",
-    "to": "def:open-ball",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:closed-set",
-    "to": "def:open-set",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:compact-set",
-    "to": "def:finite-subcover",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:compact-set",
-    "to": "def:real-open-cover",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:difference-of-intervals",
-    "to": "def:complement-of-interval",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:difference-of-intervals",
-    "to": "def:intersection-of-intervals",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:difference-of-intervals",
-    "to": "def:union-of-intervals",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:exterior-point",
-    "to": "def:open-ball",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:finite-subcover",
-    "to": "def:real-open-cover",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:interior-of-set",
-    "to": "def:interior-point",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:interior-point",
-    "to": "def:open-ball",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:isolated-point",
-    "to": "def:open-ball",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:length-of-interval",
-    "to": "def:distance-on-real-line",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:limit-point",
-    "to": "def:open-ball",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:neighborhood-of-point",
-    "to": "def:open-ball",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:open-ball",
-    "to": "def:distance-on-real-line",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:open-set",
-    "to": "def:open-ball",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:real-open-cover",
-    "to": "def:open-set",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:choosing-a-smaller-positive-number",
-    "to": "lem:half-epsilon-is-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:choosing-a-smaller-positive-number",
-    "to": "lem:minimum-of-positive-numbers-is-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "lem:positive-minimum-bound",
-    "to": "lem:minimum-of-positive-numbers-is-positive",
-    "kind": "depends_on"
-  },
-  {
-    "from": "prop:abs-value-is-distance-to-zero",
-    "to": "def:distance-on-real-line",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:closed-bounded-interval-compact",
-    "to": "def:compact-set",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:closed-iff-contains-limit-points",
-    "to": "def:closed-set",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:closed-iff-contains-limit-points",
-    "to": "def:limit-point",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:closed-set-closure-operations",
-    "to": "def:closed-set",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:closed-set-closure-operations",
-    "to": "thm:open-set-closure-operations",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:compact-implies-closed-bounded",
-    "to": "def:bounded-subset-of-r",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:compact-implies-closed-bounded",
-    "to": "def:closed-set",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:compact-implies-closed-bounded",
-    "to": "def:compact-set",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:distance-is-a-metric",
-    "to": "def:distance-on-real-line",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:heine-borel",
-    "to": "thm:closed-bounded-interval-compact",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:heine-borel",
-    "to": "thm:compact-implies-closed-bounded",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:open-interval-is-open",
-    "to": "def:open-set",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:open-set-closure-operations",
-    "to": "def:open-set",
     "kind": "depends_on"
   },
   {
@@ -12447,6 +12272,181 @@
   {
     "from": "thm:translation-invariance-supremum",
     "to": "def:upper-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:boundary-point",
+    "to": "def:open-ball",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:closed-set",
+    "to": "def:open-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:compact-set",
+    "to": "def:finite-subcover",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:compact-set",
+    "to": "def:real-open-cover",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:difference-of-intervals",
+    "to": "def:complement-of-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:difference-of-intervals",
+    "to": "def:intersection-of-intervals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:difference-of-intervals",
+    "to": "def:union-of-intervals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:exterior-point",
+    "to": "def:open-ball",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:finite-subcover",
+    "to": "def:real-open-cover",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:interior-of-set",
+    "to": "def:interior-point",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:interior-point",
+    "to": "def:open-ball",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:isolated-point",
+    "to": "def:open-ball",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:length-of-interval",
+    "to": "def:distance-on-real-line",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:limit-point",
+    "to": "def:open-ball",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:neighborhood-of-point",
+    "to": "def:open-ball",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:open-ball",
+    "to": "def:distance-on-real-line",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:open-set",
+    "to": "def:open-ball",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-open-cover",
+    "to": "def:open-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:choosing-a-smaller-positive-number",
+    "to": "lem:half-epsilon-is-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:choosing-a-smaller-positive-number",
+    "to": "lem:minimum-of-positive-numbers-is-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:positive-minimum-bound",
+    "to": "lem:minimum-of-positive-numbers-is-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:abs-value-is-distance-to-zero",
+    "to": "def:distance-on-real-line",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:closed-bounded-interval-compact",
+    "to": "def:compact-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:closed-iff-contains-limit-points",
+    "to": "def:closed-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:closed-iff-contains-limit-points",
+    "to": "def:limit-point",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:closed-set-closure-operations",
+    "to": "def:closed-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:closed-set-closure-operations",
+    "to": "thm:open-set-closure-operations",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:compact-implies-closed-bounded",
+    "to": "def:bounded-subset-of-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:compact-implies-closed-bounded",
+    "to": "def:closed-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:compact-implies-closed-bounded",
+    "to": "def:compact-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:distance-is-a-metric",
+    "to": "def:distance-on-real-line",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:heine-borel",
+    "to": "thm:closed-bounded-interval-compact",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:heine-borel",
+    "to": "thm:compact-implies-closed-bounded",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:open-interval-is-open",
+    "to": "def:open-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:open-set-closure-operations",
+    "to": "def:open-set",
     "kind": "depends_on"
   },
   {
@@ -17245,6 +17245,31 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:box-add",
+    "to": "def:box",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:box-contain",
+    "to": "def:box",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:box-hadamard",
+    "to": "def:box",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:box-smul",
+    "to": "def:box",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:box-sub",
+    "to": "def:box",
+    "kind": "depends_on"
+  },
+  {
     "from": "lem:computational-geometry-convex-hull-smallest-convex-set",
     "to": "def:computational-geometry-convex-combination",
     "kind": "depends_on"
@@ -17332,31 +17357,6 @@
   {
     "from": "thm:computational-geometry-supporting-functional-hull-vertices",
     "to": "lem:computational-geometry-linear-functionals-convex-combinations",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:box-add",
-    "to": "def:box",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:box-contain",
-    "to": "def:box",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:box-hadamard",
-    "to": "def:box",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:box-smul",
-    "to": "def:box",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:box-sub",
-    "to": "def:box",
     "kind": "depends_on"
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T13:54:10.014156+00:00",
+  "generated_at": "2026-07-05T02:58:18.466557+00:00",
   "chapters": [
     "propositional-logic",
     "predicate-logic",
@@ -21,15 +21,15 @@
     "whole-numbers",
     "integers",
     "rationals",
+    "number-lines",
     "reals",
     "extended-real-numbers",
     "complex-numbers",
-    "number-lines",
     "embedding-number-systems",
     "numbers-summary",
     "real-analysis",
-    "structure-of-real-line",
     "bounding",
+    "structure-of-real-line",
     "functions",
     "discrete-calculus",
     "sequences",
@@ -50,12 +50,12 @@
     "lattice-order",
     "model-theory",
     "lambda-calculus",
+    "numerical-analysis",
     "computational-calculus",
+    "computational-linear-algebra",
     "geometric-modeling",
     "computational-geometry",
-    "computational-linear-algebra",
-    "ordinary-differential-equations",
-    "numerical-analysis"
+    "ordinary-differential-equations"
   ],
   "error_count": 986,
   "errors": [
@@ -3581,6 +3581,30 @@
     },
     {
       "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:interval",
+      "missing_target_id": "def:reals",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:interval",
+      "missing_target_id": "def:strict-order-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:number-line",
+      "missing_target_id": "def:order-embedding",
+      "relationship_kind": "depends_on",
+      "source": "notes/number-lines/notes-number-lines.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
       "source_node_id": "def:addition-on-r",
       "missing_target_id": "def:addition-on-q-classes",
       "relationship_kind": "depends_on",
@@ -4285,30 +4309,6 @@
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:interval",
-      "missing_target_id": "def:reals",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:interval",
-      "missing_target_id": "def:strict-order-on-r",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-on-a-number-line/notes-intervals-on-a-number-line.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:number-line",
-      "missing_target_id": "def:order-embedding",
-      "relationship_kind": "depends_on",
-      "source": "notes/number-lines/notes-number-lines.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:embedding-chain-compatibility",
       "missing_target_id": "thm:n-embeds-into-w-as-positive-part",
       "relationship_kind": "depends_on",
@@ -4749,246 +4749,6 @@
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:closed-bounded-interval-compact",
-      "missing_target_id": "def:closed-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/heine-borel/notes-heine-borel.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:closed-bounded-interval-compact",
-      "missing_target_id": "thm:lub-property-r",
-      "relationship_kind": "depends_on",
-      "source": "notes/heine-borel/notes-heine-borel.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:bounded-subset-of-r",
-      "missing_target_id": "def:closed-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:bounded-subset-of-r",
-      "missing_target_id": "thm:triangle-inequality",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:union-of-intervals",
-      "missing_target_id": "def:closed-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:union-of-intervals",
-      "missing_target_id": "def:open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:union-of-intervals",
-      "missing_target_id": "def:union",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:intersection-of-intervals",
-      "missing_target_id": "def:closed-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:intersection-of-intervals",
-      "missing_target_id": "def:intersection",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:intersection-of-intervals",
-      "missing_target_id": "def:open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:complement-of-interval",
-      "missing_target_id": "def:closed-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:complement-of-interval",
-      "missing_target_id": "def:complement",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:complement-of-interval",
-      "missing_target_id": "def:open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:difference-of-intervals",
-      "missing_target_id": "def:closed-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:difference-of-intervals",
-      "missing_target_id": "def:left-half-open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:difference-of-intervals",
-      "missing_target_id": "def:open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:difference-of-intervals",
-      "missing_target_id": "def:right-half-open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:open-ball",
-      "missing_target_id": "def:open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/neighborhoods-and-balls/notes-neighborhoods-and-balls.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:open-interval-is-open",
-      "missing_target_id": "def:open-interval",
-      "relationship_kind": "depends_on",
-      "source": "notes/open-sets/notes-open-sets.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:minimum-of-positive-numbers-is-positive",
-      "missing_target_id": "def:real-ordered-field",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:minimum-of-positive-numbers-is-positive",
-      "missing_target_id": "thm:ineq-transitivity-strict",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:half-epsilon-is-positive",
-      "missing_target_id": "def:real-ordered-field",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:half-epsilon-is-positive",
-      "missing_target_id": "thm:ineq-multiply-positive",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:epsilon-splitting",
-      "missing_target_id": "def:real-ordered-field",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:positive-minimum-bound",
-      "missing_target_id": "def:real-ordered-field",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "def:distance-on-real-line",
-      "missing_target_id": "thm:triangle-inequality",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:distance-is-a-metric",
-      "missing_target_id": "thm:triangle-inequality",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:real-line-structural-order-facts",
-      "missing_target_id": "thm:lub-property-r",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:real-line-structural-order-facts",
-      "missing_target_id": "thm:r-is-an-ordered-field",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "thm:real-line-structural-order-facts",
-      "missing_target_id": "thm:r-totally-ordered-set",
-      "relationship_kind": "depends_on",
-      "source": "notes/order-distance-length/notes-order-distance-length.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
       "source_node_id": "def:set-arithmetic-images",
       "missing_target_id": "def:addition-on-r",
       "relationship_kind": "depends_on",
@@ -5337,6 +5097,246 @@
       "missing_target_id": "def:closed-interval",
       "relationship_kind": "depends_on",
       "source": "notes/completeness/notes-nested-interval-property.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:closed-bounded-interval-compact",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/heine-borel/notes-heine-borel.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:closed-bounded-interval-compact",
+      "missing_target_id": "thm:lub-property-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/heine-borel/notes-heine-borel.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bounded-subset-of-r",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bounded-subset-of-r",
+      "missing_target_id": "thm:triangle-inequality",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:union-of-intervals",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:union-of-intervals",
+      "missing_target_id": "def:open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:union-of-intervals",
+      "missing_target_id": "def:union",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:intersection-of-intervals",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:intersection-of-intervals",
+      "missing_target_id": "def:intersection",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:intersection-of-intervals",
+      "missing_target_id": "def:open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:complement-of-interval",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:complement-of-interval",
+      "missing_target_id": "def:complement",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:complement-of-interval",
+      "missing_target_id": "def:open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:difference-of-intervals",
+      "missing_target_id": "def:closed-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:difference-of-intervals",
+      "missing_target_id": "def:left-half-open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:difference-of-intervals",
+      "missing_target_id": "def:open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:difference-of-intervals",
+      "missing_target_id": "def:right-half-open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/intervals-as-subsets/notes-intervals-as-subsets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:open-ball",
+      "missing_target_id": "def:open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/neighborhoods-and-balls/notes-neighborhoods-and-balls.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:open-interval-is-open",
+      "missing_target_id": "def:open-interval",
+      "relationship_kind": "depends_on",
+      "source": "notes/open-sets/notes-open-sets.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:minimum-of-positive-numbers-is-positive",
+      "missing_target_id": "def:real-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:minimum-of-positive-numbers-is-positive",
+      "missing_target_id": "thm:ineq-transitivity-strict",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:half-epsilon-is-positive",
+      "missing_target_id": "def:real-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:half-epsilon-is-positive",
+      "missing_target_id": "thm:ineq-multiply-positive",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:epsilon-splitting",
+      "missing_target_id": "def:real-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:positive-minimum-bound",
+      "missing_target_id": "def:real-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-epsilon-algebra.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:distance-on-real-line",
+      "missing_target_id": "thm:triangle-inequality",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:distance-is-a-metric",
+      "missing_target_id": "thm:triangle-inequality",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:real-line-structural-order-facts",
+      "missing_target_id": "thm:lub-property-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:real-line-structural-order-facts",
+      "missing_target_id": "thm:r-is-an-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:real-line-structural-order-facts",
+      "missing_target_id": "thm:r-totally-ordered-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/order-distance-length/notes-order-distance-length.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
@@ -7765,22 +7765,6 @@
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:computational-geometry-linear-functionals-convex-combinations",
-      "missing_target_id": "def:addition-on-r",
-      "relationship_kind": "depends_on",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:computational-geometry-linear-functionals-convex-combinations",
-      "missing_target_id": "def:multiplication-on-r",
-      "relationship_kind": "depends_on",
-      "source": "notes/convex-hulls/convex-hulls.tex",
-      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
-    },
-    {
-      "type": "dangling_graph_edge_reference",
       "source_node_id": "def:box",
       "missing_target_id": "def:cartesian-product",
       "relationship_kind": "depends_on",
@@ -7945,6 +7929,22 @@
       "missing_target_id": "def:subset",
       "relationship_kind": "depends_on",
       "source": "notes/interval-arithmetic/notes-interval-arithmetic.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:computational-geometry-linear-functionals-convex-combinations",
+      "missing_target_id": "def:addition-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:computational-geometry-linear-functionals-convex-combinations",
+      "missing_target_id": "def:multiplication-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/convex-hulls/convex-hulls.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     }
   ]
