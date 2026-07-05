@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T02:58:18.448954+00:00",
+  "generated_at": "2026-07-05T15:32:30.154974+00:00",
   "chapters": [
     "propositional-logic",
     "predicate-logic",
@@ -57,7 +57,7 @@
     "computational-geometry",
     "ordinary-differential-equations"
   ],
-  "error_count": 3645,
+  "error_count": 3726,
   "errors": [
     {
       "type": "missing_dependencies_block",
@@ -8611,7 +8611,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $(B, \\leq')$ be a partially ordered set and $f : A \\to B$. The induced order $\\leq_f$ is a partial order on $A$ if and only if $f$ is injective.",
+      "excerpt": "Let $(B, \\leq')$ be a partially ordered set and $f : A \\to B$. The induced order $\\leq_f $ is a partial order on $A$ if and only if $f$ is injective.",
       "proof_source": "proofs/order/prf-induced-poset.tex"
     },
     {
@@ -9451,6 +9451,22 @@
     },
     {
       "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:lattice",
+      "missing_target_id": "def:partial-order",
+      "relationship_kind": "depends_on",
+      "source": "notes/order/notes-order-lattices.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:lattice",
+      "missing_target_id": "def:subset",
+      "relationship_kind": "depends_on",
+      "source": "notes/order/notes-order-lattices.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
       "source_node_id": "def:complete-lattice",
       "missing_target_id": "def:partial-order",
       "relationship_kind": "depends_on",
@@ -9581,6 +9597,14 @@
       "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:trichotomy-for-linear-orders",
       "missing_target_id": "def:total-order",
+      "relationship_kind": "depends_on",
+      "source": "notes/order/notes-order.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:totally-ordered-set",
+      "missing_target_id": "def:partial-order",
       "relationship_kind": "depends_on",
       "source": "notes/order/notes-order.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
@@ -11075,7 +11099,7 @@
       "signals": [
         "definition_title_contains_multiple_concepts:Left, Right Respect"
       ],
-      "excerpt": "The operation $O$ \\emph{respects} $\\sim$ on the left if \\[ a\\sim a'\\Longrightarrow (a\\mathbin{O}b)\\sim(a'\\mathbin{O}b), \\] and respects $\\sim$ on the right if \\[ b\\sim b'\\Longrightarrow (a\\mathbin{O}b)\\sim(a\\mathbin{O}b'). \\]"
+      "excerpt": "The operation $O$ \\emph{respect s} $\\sim$ on the left if \\[ a\\sim a'\\Longrightarrow (a\\mathbin{O}b)\\sim(a'\\mathbin{O}b), \\] and respects $\\sim$ on the right if \\[ b\\sim b'\\Longrightarrow (a\\mathbin{O}b)\\sim(a\\mathbin{O}b'). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -11087,7 +11111,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "The operation $O$ \\emph{respects} $\\sim$ on the left if \\[ a\\sim a'\\Longrightarrow (a\\mathbin{O}b)\\sim(a'\\mathbin{O}b), \\] and respects $\\sim$ on the right if \\[ b\\sim b'\\Longrightarrow (a\\mathbin{O}b)\\sim(a\\mathbin{O}b'). \\]"
+      "excerpt": "The operation $O$ \\emph{respect s} $\\sim$ on the left if \\[ a\\sim a'\\Longrightarrow (a\\mathbin{O}b)\\sim(a'\\mathbin{O}b), \\] and respects $\\sim$ on the right if \\[ b\\sim b'\\Longrightarrow (a\\mathbin{O}b)\\sim(a\\mathbin{O}b'). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -11138,7 +11162,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $P$ be a predicate on $A$. The predicate $P$ \\emph{respects} $\\sim$ if \\[ \\forall a,a'\\in A,\\, a\\sim a'\\Longrightarrow \\bigl(P(a)\\Longleftrightarrow P(a')\\bigr). \\]"
+      "excerpt": "Let $P$ be a predicate on $A$ . The predicate $P$ \\emph{respects} $\\sim$ if \\[ \\forall a,a'\\in A,\\, a\\sim a'\\Longrightarrow \\bigl(P(a)\\Longleftrightarrow P(a')\\bigr). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -11163,7 +11187,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $R$ be a binary relation on $A$. The relation $R$ \\emph{respects} $\\sim$ if \\[ \\forall a,a',b,b'\\in A,\\, \\bigl(a\\sim a'\\land b\\sim b'\\bigr) \\Longrightarrow \\bigl(R(a,b)\\Longleftrightarrow R(a',b')\\bigr). \\]"
+      "excerpt": "Let $R$ be a binary relation on $A$. The relation $R$ \\emph{respects} $\\sim$ if \\[ \\forall a,a',b,b'\\in A,\\, \\bigl(a\\sim a'\\land b\\sim b'\\bigr ) \\Longrightarrow \\bigl(R(a,b)\\Longleftrightarrow R(a',b')\\bigr). \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -11188,7 +11212,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let $g:A\\to B$. If \\[ a\\sim a'\\Longrightarrow g(a)=g(a'), \\] then there is a unique well-defined map \\[ \\overline{g}:A/{\\sim}\\to B \\] such that \\[ \\overline{g}([a])=g(a) \\qquad\\text{and}\\qquad \\overline{g}\\circ\\pi=g, \\] where $\\pi:A\\to A/{\\sim}$ is the canonical projection.",
+      "excerpt": "Let $g:A\\to B$. If \\[ a\\sim a'\\Longrightarrow g(a)=g(a'), \\] then there is a unique w ell-defined map \\[ \\overline{g}:A/{\\sim}\\to B \\] such that \\[ \\overline{g}([a])=g(a) \\qquad\\text{and}\\qquad \\overline{g}\\circ\\pi=g, \\] where $\\pi:A\\to A/{\\sim}$ is the canonical projection.",
       "proof_source": "proofs/equivalence/prf-induced-map-out-of-quotient.tex"
     },
     {
@@ -16388,7 +16412,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $a,b\\in\\mathbb{W}$, \\[ a\\le b \\Longleftrightarrow \\iota(a)\\le\\iota(b). \\]",
+      "excerpt": "For all $a,b\\in\\mathbb{W}$ , \\[ a\\le b \\Longleftrightarrow \\iota(a)\\le\\iota(b). \\]",
       "proof_source": "proofs/embedding-w-into-z/prf-embedding-w-into-z-preserves-order.tex"
     },
     {
@@ -16575,7 +16599,7 @@
       "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "thm:negation-left-additive-inverse-on-z",
-      "title": "Negation Gives a Left Additive Inverse on $ $",
+      "title": "Neg ation Gives a Left Additive Inverse on $ $",
       "source": "notes/operations-on-z-classes/notes-operations-on-z-classes.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
@@ -16690,7 +16714,7 @@
       "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "thm:multiplication-on-z-well-defined",
-      "title": "Multiplication on $ $ Is Well-Defined",
+      "title": "Multiplication o n $ $ Is Well-Defined",
       "source": "notes/operations-on-z-classes/notes-operations-on-z-classes.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
@@ -18906,7 +18930,7 @@
       "type": "missing_dependencies_block",
       "kind": "Definition",
       "node_id": "def:multiplication-on-q-classes",
-      "title": "Multiplication on $ $-Classes",
+      "title": "Multipli cation on $ $-Classes",
       "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
@@ -18976,7 +19000,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Multiplication determines a well-defined binary operation $\\mathbb{Q}\\times\\mathbb{Q}\\to\\mathbb{Q}$.",
+      "excerpt": "Multiplication determines a well-defined binary operation $\\mathbb{Q}\\times\\mathbb{Q}\\to\\mathbb {Q}$.",
       "proof_source": "proofs/operations-on-q-classes/prf-multiplication-on-q-well-defined.tex"
     },
     {
@@ -18996,7 +19020,7 @@
       "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "thm:multiplication-on-q-commutative",
-      "title": "Multiplication on $ $ Is Commutative",
+      "title": "Multiplication on $ $ Is Commuta tive",
       "source": "notes/operations-on-q-classes/notes-operations-on-q-classes.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
@@ -19100,7 +19124,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "If $[a,b]\\ne 0_{\\mathbb{Q}}$, then $a\\ne 0_{\\mathbb{Z}}$, so $(b,a)$ is a prefraction.",
+      "excerpt": "If $[a,b]\\ne 0_ {\\mathbb{Q}}$, then $a\\ne 0_{\\mathbb{Z}}$, so $(b,a)$ is a prefraction.",
       "proof_source": "proofs/operations-on-q-classes/prf-reciprocal-denominator-nonzero-q.tex"
     },
     {
@@ -19337,7 +19361,7 @@
       "type": "missing_dependencies_block",
       "kind": "Proposition",
       "node_id": "prop:product-of-positives-is-positive-q",
-      "title": "Product of Positives Is Positive on $ $",
+      "title": "Product of Positives Is P ositive on $ $",
       "source": "notes/order-on-q/notes-order-on-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
@@ -19408,7 +19432,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x<y\\land y<z \\Longrightarrow x<z. \\]",
+      "excerpt": "For all $x,y,z\\in\\mathbb{Q}$, \\[ x <y\\land y<z \\Longrightarrow x<z. \\]",
       "proof_source": "proofs/order-on-q/prf-strict-order-on-q-transitive.tex"
     },
     {
@@ -19571,7 +19595,7 @@
       "type": "missing_dependencies_block",
       "kind": "Theorem",
       "node_id": "thm:left-positive-multiplication-preserves-strict-order-on-q",
-      "title": "Left Multiplication by Positives Preserves Strict Order on $ $",
+      "title": "Left Multiplication by Positives Preserve s Strict Order on $ $",
       "source": "notes/order-on-q/notes-order-on-q.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
@@ -19696,6 +19720,19 @@
       ],
       "excerpt": "For all $x,y\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<x<y \\Longrightarrow 0_{\\mathbb{Q}}<y^{-1}<x^{-1}. \\]",
       "proof_source": "proofs/order-on-q/prf-reciprocal-reverses-order-on-positives-q.tex"
+    },
+    {
+      "type": "missing_dependencies_block",
+      "kind": "Theorem",
+      "node_id": "thm:reciprocal-reverses-order-on-same-sign-q",
+      "title": "Reciprocal Reverses Order on Same-Sign Rationals",
+      "source": "notes/order-on-q/notes-order-on-q.tex",
+      "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
+      "signals": [
+        "missing remark*:Dependencies"
+      ],
+      "excerpt": "For all nonzero $x,y\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<x<y \\Longrightarrow 0_{\\mathbb{Q}}<y^{-1}<x^{-1}, \\qquad x<y<0_{\\mathbb{Q}} \\Longrightarrow y^{-1}<x^{-1}<0_{\\mathbb{Q}}. \\]",
+      "proof_source": "proofs/order-on-q/prf-reciprocal-reverses-order-on-same-sign-q.tex"
     },
     {
       "type": "missing_dependencies_block",
@@ -19849,7 +19886,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<x \\Longrightarrow 0_{\\mathbb{Q}}<x^{-1}. \\]",
+      "excerpt": "For every $x\\in\\mathbb{Q}$, \\[ 0_{\\mathbb{Q}}<x \\Longrightarrow 0_{\\mathbb{Q}} <x^{-1}. \\]",
       "proof_source": "proofs/ordered-field-structure-of-q/prf-positive-rationals-have-positive-inverses.tex"
     },
     {
@@ -21396,7 +21433,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "If $\\alpha\\ne0_{\\mathbb{R}}$, then $\\alpha^{-1}\\in\\mathbb{R}$.",
+      "excerpt": "If $\\alpha\\ne0_{\\mathbb{R}}$, then $\\alpha^ {-1}\\in\\mathbb{R}$.",
       "proof_source": "proofs/multiplication-on-r/prf-reciprocal-is-a-cut.tex"
     },
     {
@@ -23430,7 +23467,7 @@
       "type": "missing_dependencies_block",
       "kind": "Lemma",
       "node_id": "lem:complex-product-with-conjugate",
-      "title": "Product with the Conjugate Is Real and Nonnegative",
+      "title": "Product with the Con jugate Is Real and Nonnegative",
       "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
@@ -23506,8 +23543,40 @@
     },
     {
       "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:complex-coordinate-equivalence-reflexive",
+      "missing_target_id": "ax:equality-reflexivity",
+      "relationship_kind": "depends_on",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:complex-coordinate-equivalence-symmetric",
+      "missing_target_id": "thm:equality-symmetry",
+      "relationship_kind": "depends_on",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:complex-coordinate-equivalence-transitive",
+      "missing_target_id": "thm:equality-transitivity",
+      "relationship_kind": "depends_on",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
       "source_node_id": "def:complex-numbers",
       "missing_target_id": "def:quotient-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/construction-of-c/notes-construction-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:complex-class-notation",
+      "missing_target_id": "def:equivalence-class",
       "relationship_kind": "depends_on",
       "source": "notes/construction-of-c/notes-construction-of-c.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
@@ -23538,6 +23607,142 @@
     },
     {
       "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:embedding-r-into-c-injective",
+      "missing_target_id": "thm:equality-transitivity",
+      "relationship_kind": "depends_on",
+      "source": "notes/embedding-r-into-c/notes-embedding-r-into-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:embedding-r-into-c-preserves-operations",
+      "missing_target_id": "def:addition-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/embedding-r-into-c/notes-embedding-r-into-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:embedding-r-into-c-preserves-operations",
+      "missing_target_id": "def:multiplication-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/embedding-r-into-c/notes-embedding-r-into-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:embedding-r-into-c-preserves-zero-one",
+      "missing_target_id": "def:one-in-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/embedding-r-into-c/notes-embedding-r-into-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:embedding-r-into-c-preserves-zero-one",
+      "missing_target_id": "def:zero-in-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/embedding-r-into-c/notes-embedding-r-into-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:real-and-imaginary-parts",
+      "missing_target_id": "def:reals",
+      "relationship_kind": "depends_on",
+      "source": "notes/embedding-r-into-c/notes-embedding-r-into-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:real-imaginary-parts-well-defined",
+      "missing_target_id": "def:reals",
+      "relationship_kind": "depends_on",
+      "source": "notes/embedding-r-into-c/notes-embedding-r-into-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:addition-on-c-associative",
+      "missing_target_id": "thm:addition-on-r-associative",
+      "relationship_kind": "depends_on",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:addition-on-c-commutative",
+      "missing_target_id": "thm:addition-on-r-commutative",
+      "relationship_kind": "depends_on",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:zero-additive-identity-on-c",
+      "missing_target_id": "def:zero-in-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:multiplication-on-c-associative",
+      "missing_target_id": "thm:distributivity-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:multiplication-on-c-associative",
+      "missing_target_id": "thm:multiplication-on-r-associative",
+      "relationship_kind": "depends_on",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:multiplication-on-c-commutative",
+      "missing_target_id": "thm:multiplication-on-r-commutative",
+      "relationship_kind": "depends_on",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:one-multiplicative-identity-on-c",
+      "missing_target_id": "thm:one-multiplicative-identity-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:multiplication-distributes-over-addition-on-c",
+      "missing_target_id": "thm:distributivity-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:c-is-not-an-ordered-field",
+      "missing_target_id": "def:real-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:c-is-not-an-ordered-field",
+      "missing_target_id": "thm:r-is-an-ordered-field",
+      "relationship_kind": "depends_on",
+      "source": "notes/field-structure-of-c/notes-field-structure-of-c.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
       "source_node_id": "def:addition-on-c-classes",
       "missing_target_id": "def:addition-on-r",
       "relationship_kind": "depends_on",
@@ -23548,6 +23753,22 @@
       "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:addition-on-c-well-defined",
       "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:negation-on-c-classes",
+      "missing_target_id": "def:negation-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:negation-on-c-respects-equivalence",
+      "missing_target_id": "prop:substitution-preserves-functions",
       "relationship_kind": "depends_on",
       "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
@@ -23586,6 +23807,22 @@
     },
     {
       "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:multiplication-on-c-respects-equivalence",
+      "missing_target_id": "def:addition-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:multiplication-on-c-respects-equivalence",
+      "missing_target_id": "def:multiplication-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:multiplication-on-c-well-defined",
       "missing_target_id": "def:function",
       "relationship_kind": "depends_on",
@@ -23594,8 +23831,40 @@
     },
     {
       "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:complex-conjugation",
+      "missing_target_id": "def:negation-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
       "source_node_id": "thm:complex-conjugation-well-defined",
       "missing_target_id": "def:function",
+      "relationship_kind": "depends_on",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:complex-product-with-conjugate",
+      "missing_target_id": "def:addition-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:complex-product-with-conjugate",
+      "missing_target_id": "def:multiplication-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:multiplicative-inverse-on-c",
+      "missing_target_id": "def:division-on-r",
       "relationship_kind": "depends_on",
       "source": "notes/operations-on-c-classes/notes-operations-on-c-classes.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
@@ -25250,6 +25519,12 @@
       ],
       "excerpt": "Let $A\\subseteq\\mathbb{R}$ be nonempty and bounded. Then \\[ \\sup |A|=\\max\\{|\\sup A|,|\\inf A|\\}, \\qquad |A|=\\{|a|:a\\in A\\}. \\]",
       "proof_source": "proofs/bounds-algebra/prf-supremum-absolute-value-image.tex"
+    },
+    {
+      "type": "missing_detailed_learning_proof",
+      "node_id": "thm:supremum-absolute-value-image",
+      "proof_source": "proofs/bounds-algebra/prf-supremum-absolute-value-image.tex",
+      "message": "Proof file has proof content but no Detailed Learning Proof block."
     },
     {
       "type": "missing_dependencies_block",
@@ -28461,6 +28736,94 @@
       "missing_target_id": "def:function-decreasing",
       "relationship_kind": "depends_on",
       "source": "notes/bounds-algebra/notes-image-inverse-extrema.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:maximum",
+      "missing_target_id": "def:ordered-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/bounds-extremals/notes-maxima-minima.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:minimum",
+      "missing_target_id": "def:ordered-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/bounds-extremals/notes-maxima-minima.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "prop:uniqueness-of-the-maximum",
+      "missing_target_id": "def:ordered-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/bounds-extremals/notes-maxima-minima.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "prop:uniqueness-of-the-minimum",
+      "missing_target_id": "def:ordered-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/bounds-extremals/notes-maxima-minima.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:supremum",
+      "missing_target_id": "def:ordered-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/bounds-extremals/notes-suprema-infima.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:infimum",
+      "missing_target_id": "def:ordered-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/bounds-extremals/notes-suprema-infima.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "prop:uniqueness-of-the-supremum",
+      "missing_target_id": "def:ordered-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/bounds-extremals/notes-suprema-infima.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "prop:uniqueness-of-the-infimum",
+      "missing_target_id": "def:ordered-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/bounds-extremals/notes-suprema-infima.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:subset-inclusion-preserves-upper-bounds",
+      "missing_target_id": "def:ordered-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/bounds-extremals/notes-suprema-infima.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:subset-inclusion-preserves-lower-bounds",
+      "missing_target_id": "def:ordered-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/bounds-extremals/notes-suprema-infima.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:bound",
+      "missing_target_id": "def:ordered-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/bounds-extremals/notes-upper-lower-bounds.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
@@ -33833,6 +34196,14 @@
     },
     {
       "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:natural-logarithm",
+      "missing_target_id": "def:riemann-integral",
+      "relationship_kind": "depends_on",
+      "source": "notes/logarithmic/notes-logarithmic.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
       "source_node_id": "prop:limit-logarithm-fundamental",
       "missing_target_id": "prop:inverse-bijection",
       "relationship_kind": "depends_on",
@@ -33867,6 +34238,22 @@
       "type": "dangling_graph_edge_reference",
       "source_node_id": "def:number-e",
       "missing_target_id": "def:two-sided-inverse",
+      "relationship_kind": "depends_on",
+      "source": "notes/power-exponential/notes-power-exponential.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:exponential",
+      "missing_target_id": "def:convergent-sequence",
+      "relationship_kind": "depends_on",
+      "source": "notes/power-exponential/notes-power-exponential.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:exponential",
+      "missing_target_id": "def:sequence",
       "relationship_kind": "depends_on",
       "source": "notes/power-exponential/notes-power-exponential.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
@@ -33917,6 +34304,14 @@
       "missing_target_id": "def:limit-at-infinity",
       "relationship_kind": "depends_on",
       "source": "notes/power-exponential/notes-power-exponential.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:sine-cosine",
+      "missing_target_id": "def:sequence",
+      "relationship_kind": "depends_on",
+      "source": "notes/trigonometric/notes-trigonometric.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
@@ -39194,15 +39589,14 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Theorem",
-      "node_id": "thm:cauchy-integral-interval-additivity",
+      "node_id": "thm:cauchy-integral-int\nerval-additivity",
       "title": "Interval Additivity for the Cauchy Integral",
       "source": "notes/cauchy-integral/notes-cauchy-integral.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "If \\(c\\in[a,b]\\) and \\(f\\) is Cauchy-integrable on the relevant intervals, then \\[ \\int_a^b f\\,dx=\\int_a^c f\\,dx+\\int_c^b f\\,dx . \\]",
-      "proof_source": "proofs/cauchy-integral/prf-cauchy-integral-interval-additivity.tex"
+      "excerpt": "If \\(c\\in[a,b]\\) and \\(f\\) is Cauchy-integrable on the relevant intervals, then \\[ \\int_a^b f\\,dx=\\int_a^c f\\,dx+\\int_c^b f\\,dx . \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -39875,7 +40269,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Whenever the displayed integrals exist, \\[ \\int_a^b (\\lambda f+\\mu g)\\,d\\alpha = \\lambda\\int_a^b f\\,d\\alpha+\\mu\\int_a^b g\\,d\\alpha \\] and \\[ \\int_a^b f\\,d(\\lambda\\alpha+\\mu\\beta) = \\lambda\\int_a^b f\\,d\\alpha+\\mu\\int_a^b f\\,d\\beta . \\]",
+      "excerpt": "Whenever the displayed integrals exist, \\[ \\int_a^b (\\lambda f+\\mu g)\\,d\\alpha = \\lambda\\int_a^b f\\,d\\alpha+\\mu\\int_a^b g\\,d\\alpha \\] an d \\[ \\int_a^b f\\,d(\\lambda\\alpha+\\mu\\beta) = \\lambda\\int_a^b f\\,d\\alpha+\\mu\\int_a^b f\\,d\\beta . \\]",
       "proof_source": "proofs/riemann-stieltjes/prf-rs-bilinearity.tex"
     },
     {
@@ -39929,6 +40323,190 @@
       ],
       "excerpt": "If \\(\\alpha\\) is constant except for finitely many jumps at points \\(c_k\\) and \\(f\\) is continuous at each \\(c_k\\), then \\[ \\int_a^b f\\,d\\alpha=\\sum_k f(c_k)\\,\\Delta\\alpha(c_k). \\]",
       "proof_source": "proofs/riemann-stieltjes/prf-rs-step-integrator-finite-sum.tex"
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:interval-oscillation-integration",
+      "missing_target_id": "def:infimum",
+      "relationship_kind": "depends_on",
+      "source": "notes/cauchy-integral/notes-cauchy-integral.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:interval-oscillation-integration",
+      "missing_target_id": "def:supremum",
+      "relationship_kind": "depends_on",
+      "source": "notes/cauchy-integral/notes-cauchy-integral.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:darboux-sums",
+      "missing_target_id": "def:infimum",
+      "relationship_kind": "depends_on",
+      "source": "notes/darboux-integral/notes-darboux-integral.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:darboux-sums",
+      "missing_target_id": "def:supremum",
+      "relationship_kind": "depends_on",
+      "source": "notes/darboux-integral/notes-darboux-integral.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:darboux-integrability",
+      "missing_target_id": "def:infimum",
+      "relationship_kind": "depends_on",
+      "source": "notes/darboux-integral/notes-darboux-integral.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:darboux-integrability",
+      "missing_target_id": "def:supremum",
+      "relationship_kind": "depends_on",
+      "source": "notes/darboux-integral/notes-darboux-integral.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:gauge-on-interval",
+      "missing_target_id": "def:interval-partition",
+      "relationship_kind": "depends_on",
+      "source": "notes/henstock-kurzweil/notes-henstock-kurzweil.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "lem:hk-straddle",
+      "missing_target_id": "def:derivative-at-a-point",
+      "relationship_kind": "depends_on",
+      "source": "notes/henstock-kurzweil/notes-henstock-kurzweil.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:hk-fundamental-theorem",
+      "missing_target_id": "def:derivative-at-a-point",
+      "relationship_kind": "depends_on",
+      "source": "notes/henstock-kurzweil/notes-henstock-kurzweil.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:measure-zero",
+      "missing_target_id": "def:open-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/measure-zero/notes-measure-zero.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:point-oscillation-integration",
+      "missing_target_id": "def:function-bounded",
+      "relationship_kind": "depends_on",
+      "source": "notes/measure-zero/notes-measure-zero.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:point-oscillation-integration",
+      "missing_target_id": "def:oscillation-at-a-point",
+      "relationship_kind": "depends_on",
+      "source": "notes/measure-zero/notes-measure-zero.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:lebesgue-criterion-riemann-integrability",
+      "missing_target_id": "def:function-bounded",
+      "relationship_kind": "depends_on",
+      "source": "notes/measure-zero/notes-measure-zero.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:integration-partition",
+      "missing_target_id": "def:interval-partition",
+      "relationship_kind": "depends_on",
+      "source": "notes/partitions/notes-partitions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:partition-mesh",
+      "missing_target_id": "def:maximum",
+      "relationship_kind": "depends_on",
+      "source": "notes/partitions/notes-partitions.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:continuous-riemann-integrable",
+      "missing_target_id": "def:continuous-at-point",
+      "relationship_kind": "depends_on",
+      "source": "notes/riemann-integral/notes-riemann-integral.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:continuous-riemann-integrable",
+      "missing_target_id": "thm:heine-cantor",
+      "relationship_kind": "depends_on",
+      "source": "notes/riemann-integral/notes-riemann-integral.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:riemann-cauchy-criterion",
+      "missing_target_id": "def:function-bounded",
+      "relationship_kind": "depends_on",
+      "source": "notes/riemann-integral/notes-riemann-integral.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:total-variation",
+      "missing_target_id": "def:supremum",
+      "relationship_kind": "depends_on",
+      "source": "notes/riemann-stieltjes/notes-riemann-stieltjes.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "prop:monotone-bounded-variation",
+      "missing_target_id": "def:function-monotone",
+      "relationship_kind": "depends_on",
+      "source": "notes/riemann-stieltjes/notes-riemann-stieltjes.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:rs-continuous-bv-existence",
+      "missing_target_id": "def:continuous-at-point",
+      "relationship_kind": "depends_on",
+      "source": "notes/riemann-stieltjes/notes-riemann-stieltjes.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:rs-c1-reduction",
+      "missing_target_id": "def:derivative-at-a-point",
+      "relationship_kind": "depends_on",
+      "source": "notes/riemann-stieltjes/notes-riemann-stieltjes.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:rs-step-integrator-finite-sum",
+      "missing_target_id": "def:continuous-at-point",
+      "relationship_kind": "depends_on",
+      "source": "notes/riemann-stieltjes/notes-riemann-stieltjes.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
       "type": "missing_dependencies_block",
@@ -40170,7 +40748,7 @@
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let \\((X,d)\\) be a metric space. For every \\(x\\in X\\) and every \\(r>0\\), \\[ B_d(x;r)\\subseteq \\overline{B}_d(x;r). \\]",
+      "excerpt": "Let \\((X,d)\\) be a metric space. For every \\(x \\in X\\) and every \\(r>0\\), \\[ B_d(x;r)\\subseteq \\overline{B}_d(x;r). \\]",
       "proof_source": "proofs/balls-and-bounded-sets/prf-metric-closed-balls-contain-open-balls.tex"
     },
     {
@@ -43315,6 +43893,30 @@
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:nary-operation",
+      "missing_target_id": "def:alg-function",
+      "relationship_kind": "depends_on",
+      "source": "notes/mathematical-structures/locked-part-b-vocabulary.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:magma",
+      "missing_target_id": "def:carrier-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:group-order",
+      "missing_target_id": "def:carrier-set",
+      "relationship_kind": "depends_on",
+      "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
       "type": "multiple_primary_statements_in_box",
       "kind": "Definition",
       "node_id": "def:algebraic-geometry-ring",
@@ -43506,6 +44108,30 @@
         "missing remark*:Dependencies"
       ],
       "excerpt": "Let $R$ be a commutative ring and let $I \\subseteq R$ be an ideal. The \\emph{quotient ring} $R/I$ is the set of cosets \\[ R/I := \\{ a + I : a \\in R \\}, \\] equipped with addition and multiplication defined by \\[ (a + I) + (b + I) := (a + b) + I, \\] \\[ (a + I) \\cdot (b + I) := (a \\cdot b) + I. \\]"
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:algebraic-geometry-ring",
+      "missing_target_id": "def:abelian-group",
+      "relationship_kind": "depends_on",
+      "source": "notes/polynomial-rings/notes-polynomial-rings.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:algebraic-geometry-ring",
+      "missing_target_id": "def:monoid",
+      "relationship_kind": "depends_on",
+      "source": "notes/polynomial-rings/notes-polynomial-rings.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "def:algebraic-geometry-commutative-ring",
+      "missing_target_id": "def:ring",
+      "relationship_kind": "depends_on",
+      "source": "notes/polynomial-rings/notes-polynomial-rings.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
     },
     {
       "type": "missing_dependencies_block",
@@ -46405,15 +47031,14 @@
     {
       "type": "missing_dependencies_block",
       "kind": "Lemma",
-      "node_id": "lem:computational-geometry-linear-functionals-convex-combinations",
+      "node_id": "lem:computational-geometry-linear-functionals-convex-combi\nnations",
       "title": "Linear functionals preserve convex combinations",
       "source": "notes/convex-hulls/convex-hulls.tex",
       "message": "Extracted theorem/definition item has no attached Dependencies remark. Extraction was preserved, but the source should include explicit dependency hyperrefs or 'No local dependencies.' for reliable graph generation.",
       "signals": [
         "missing remark*:Dependencies"
       ],
-      "excerpt": "Let \\(d\\in\\mathbb{R}^2\\), and let \\[ z=\\sum_{i=1}^{n}\\lambda_i q_i \\] be a convex combination of points \\(q_1,\\dots,q_n\\in\\mathbb{R}^2\\). Then \\[ \\langle d,z\\rangle = \\sum_{i=1}^{n}\\lambda_i\\langle d,q_i\\rangle. \\] Consequently, if \\(\\langle d,q_i\\rangle\\le M\\) for every \\(i\\), then \\[ \\langle d,z\\rangle\\le M. \\]",
-      "proof_source": "proofs/convex-hulls/prf-computational-geometry-linear-functionals-convex-combinations.tex"
+      "excerpt": "Let \\(d\\in\\mathbb{R}^2\\), and let \\[ z=\\sum_{i=1}^{n}\\lambda_i q_i \\] be a convex combination of points \\(q_1,\\dots,q_n\\in\\mathbb{R}^2\\). Then \\[ \\langle d,z\\rangle = \\sum_{i=1}^{n}\\lambda_i\\langle d,q_i\\rangle. \\] Consequently, if \\(\\langle d,q_i\\rangle\\le M\\) for every \\(i\\), then \\[ \\langle d,z\\rangle\\le M. \\]"
     },
     {
       "type": "missing_dependencies_block",
@@ -46456,7 +47081,7 @@
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:computational-geometry-linear-functionals-convex-combinations",
+      "source_node_id": "lem:computational-geometry-linear-functionals-convex-combi\nnations",
       "missing_target_id": "def:addition-on-r",
       "relationship_kind": "depends_on",
       "source": "notes/convex-hulls/convex-hulls.tex",
@@ -46464,8 +47089,32 @@
     },
     {
       "type": "dangling_graph_edge_reference",
-      "source_node_id": "lem:computational-geometry-linear-functionals-convex-combinations",
+      "source_node_id": "lem:computational-geometry-linear-functionals-convex-combi\nnations",
       "missing_target_id": "def:multiplication-on-r",
+      "relationship_kind": "depends_on",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:computational-geometry-supporting-functional-hull-vertices",
+      "missing_target_id": "lem:computational-geometry-linear-functionals-convex-combinations",
+      "relationship_kind": "depends_on",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:computational-geometry-monotone-slope-upper-hull",
+      "missing_target_id": "lem:computational-geometry-linear-functionals-convex-combinations",
+      "relationship_kind": "depends_on",
+      "source": "notes/convex-hulls/convex-hulls.tex",
+      "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."
+    },
+    {
+      "type": "dangling_graph_edge_reference",
+      "source_node_id": "thm:computational-geometry-greedy-slope-upper-hull",
+      "missing_target_id": "lem:computational-geometry-linear-functionals-convex-combinations",
       "relationship_kind": "depends_on",
       "source": "notes/convex-hulls/convex-hulls.tex",
       "message": "Graph edge relationship target was not found among extracted node IDs; edge was skipped."

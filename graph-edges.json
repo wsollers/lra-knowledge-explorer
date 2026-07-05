@@ -3220,6 +3220,26 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:equivalence-rel",
+    "to": "def:reflexive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:equivalence-rel",
+    "to": "def:relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:equivalence-rel",
+    "to": "def:symmetric",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:equivalence-rel",
+    "to": "def:transitive",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:index",
     "to": "def:quotient-set",
     "kind": "depends_on"
@@ -4057,6 +4077,11 @@
   {
     "from": "def:hasse",
     "to": "def:cover-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:lattice",
+    "to": "def:sup-inf",
     "kind": "depends_on"
   },
   {
@@ -9645,6 +9670,31 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:reciprocal-reverses-order-on-same-sign-q",
+    "to": "def:order-on-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:reciprocal-reverses-order-on-same-sign-q",
+    "to": "def:reciprocal-on-q-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:reciprocal-reverses-order-on-same-sign-q",
+    "to": "thm:negative-multiplication-reverses-strict-order-on-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:reciprocal-reverses-order-on-same-sign-q",
+    "to": "thm:reciprocal-reverses-order-on-positives-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:reciprocal-reverses-order-on-same-sign-q",
+    "to": "thm:sign-of-reciprocal-q",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:sign-of-reciprocal-q",
     "to": "def:order-on-q",
     "kind": "depends_on"
@@ -10875,6 +10925,16 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:complex-class-notation",
+    "to": "def:complex-coordinate-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complex-conjugation",
+    "to": "def:complex-class-notation",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:complex-coordinate-equivalence",
     "to": "def:complex-prepair-set",
     "kind": "depends_on"
@@ -10895,6 +10955,36 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:multiplicative-inverse-on-c",
+    "to": "def:complex-class-notation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:multiplicative-inverse-on-c",
+    "to": "lem:complex-product-with-conjugate",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:negation-on-c-classes",
+    "to": "def:complex-class-notation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-and-imaginary-parts",
+    "to": "def:complex-class-notation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:subtraction-on-c",
+    "to": "def:addition-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:subtraction-on-c",
+    "to": "def:negation-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:zero-one-i-in-c",
     "to": "def:complex-class-notation",
     "kind": "depends_on"
@@ -10907,6 +10997,76 @@
   {
     "from": "lem:addition-on-c-respects-equivalence",
     "to": "def:complex-coordinate-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:complex-coordinate-equivalence-reflexive",
+    "to": "def:complex-coordinate-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:complex-coordinate-equivalence-symmetric",
+    "to": "def:complex-coordinate-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:complex-coordinate-equivalence-transitive",
+    "to": "def:complex-coordinate-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:complex-product-with-conjugate",
+    "to": "def:complex-conjugation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:complex-product-with-conjugate",
+    "to": "def:multiplication-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:complex-product-with-conjugate",
+    "to": "def:zero-one-i-in-c",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:multiplication-on-c-respects-equivalence",
+    "to": "def:complex-coordinate-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:multiplication-on-c-respects-equivalence",
+    "to": "def:multiplication-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:negation-on-c-respects-equivalence",
+    "to": "def:complex-coordinate-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:negation-on-c-respects-equivalence",
+    "to": "def:negation-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:addition-on-c-associative",
+    "to": "def:addition-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:addition-on-c-associative",
+    "to": "thm:addition-on-c-well-defined",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:addition-on-c-commutative",
+    "to": "def:addition-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:addition-on-c-commutative",
+    "to": "thm:addition-on-c-well-defined",
     "kind": "depends_on"
   },
   {
@@ -10935,6 +11095,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:c-is-not-an-ordered-field",
+    "to": "thm:i-squared-negative-one",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:complex-conjugation-well-defined",
     "to": "def:complex-conjugation",
     "kind": "depends_on"
@@ -10960,6 +11125,91 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:embedding-r-into-c-injective",
+    "to": "def:canonical-embedding-r-into-c",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:embedding-r-into-c-injective",
+    "to": "def:complex-coordinate-equivalence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:embedding-r-into-c-preserves-operations",
+    "to": "def:addition-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:embedding-r-into-c-preserves-operations",
+    "to": "def:canonical-embedding-r-into-c",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:embedding-r-into-c-preserves-operations",
+    "to": "def:multiplication-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:embedding-r-into-c-preserves-zero-one",
+    "to": "def:canonical-embedding-r-into-c",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:embedding-r-into-c-preserves-zero-one",
+    "to": "def:zero-one-i-in-c",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:every-complex-has-additive-inverse",
+    "to": "def:addition-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:every-complex-has-additive-inverse",
+    "to": "def:negation-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:every-complex-has-additive-inverse",
+    "to": "def:zero-one-i-in-c",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:every-nonzero-complex-has-inverse",
+    "to": "def:multiplicative-inverse-on-c",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:every-nonzero-complex-has-inverse",
+    "to": "def:zero-one-i-in-c",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:every-nonzero-complex-has-inverse",
+    "to": "lem:complex-product-with-conjugate",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:every-nonzero-complex-has-inverse",
+    "to": "thm:inversion-on-c-well-defined",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:i-squared-negative-one",
+    "to": "def:multiplication-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:i-squared-negative-one",
+    "to": "def:negation-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:i-squared-negative-one",
+    "to": "def:zero-one-i-in-c",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:inversion-on-c-well-defined",
     "to": "def:multiplicative-inverse-on-c",
     "kind": "depends_on"
@@ -10967,6 +11217,46 @@
   {
     "from": "thm:inversion-on-c-well-defined",
     "to": "lem:complex-product-with-conjugate",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiplication-distributes-over-addition-on-c",
+    "to": "def:addition-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiplication-distributes-over-addition-on-c",
+    "to": "def:multiplication-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiplication-distributes-over-addition-on-c",
+    "to": "thm:addition-on-c-well-defined",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiplication-distributes-over-addition-on-c",
+    "to": "thm:multiplication-on-c-well-defined",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-c-associative",
+    "to": "def:multiplication-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-c-associative",
+    "to": "thm:multiplication-on-c-well-defined",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-c-commutative",
+    "to": "def:multiplication-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:multiplication-on-c-commutative",
+    "to": "thm:multiplication-on-c-well-defined",
     "kind": "depends_on"
   },
   {
@@ -10990,6 +11280,21 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:one-multiplicative-identity-on-c",
+    "to": "def:multiplication-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:one-multiplicative-identity-on-c",
+    "to": "def:zero-one-i-in-c",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:real-imaginary-parts-well-defined",
+    "to": "def:complex-class-notation",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:subtraction-on-c-well-defined",
     "to": "def:subtraction-on-c",
     "kind": "depends_on"
@@ -11002,6 +11307,16 @@
   {
     "from": "thm:subtraction-on-c-well-defined",
     "to": "thm:negation-on-c-well-defined",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:zero-additive-identity-on-c",
+    "to": "def:addition-on-c-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:zero-additive-identity-on-c",
+    "to": "def:zero-one-i-in-c",
     "kind": "depends_on"
   },
   {
@@ -11450,6 +11765,26 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:bounded",
+    "to": "def:bounded-above",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:bounded",
+    "to": "def:bounded-below",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:bounded-above",
+    "to": "def:upper-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:bounded-below",
+    "to": "def:lower-bound",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:epsilon-characterization-of-infimum",
     "to": "def:lower-bound",
     "kind": "depends_on"
@@ -11457,6 +11792,11 @@
   {
     "from": "def:epsilon-characterization-of-supremum",
     "to": "def:upper-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:infimum",
+    "to": "def:lower-bound",
     "kind": "depends_on"
   },
   {
@@ -11470,6 +11810,21 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:lower-bound",
+    "to": "def:bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:maximum",
+    "to": "def:upper-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:minimum",
+    "to": "def:lower-bound",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:pointwise-maximum-minimum-sets",
     "to": "def:maximum",
     "kind": "depends_on"
@@ -11477,6 +11832,16 @@
   {
     "from": "def:pointwise-maximum-minimum-sets",
     "to": "def:minimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:supremum",
+    "to": "def:upper-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:upper-bound",
+    "to": "def:bound",
     "kind": "depends_on"
   },
   {
@@ -11560,6 +11925,16 @@
     "kind": "depends_on"
   },
   {
+    "from": "lem:subset-inclusion-preserves-lower-bounds",
+    "to": "def:lower-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:subset-inclusion-preserves-upper-bounds",
+    "to": "def:upper-bound",
+    "kind": "depends_on"
+  },
+  {
     "from": "lem:subsets-preserve-lower-bounds",
     "to": "def:lower-bound",
     "kind": "depends_on"
@@ -11610,6 +11985,26 @@
     "kind": "depends_on"
   },
   {
+    "from": "prop:every-element-lies-above-the-infimum",
+    "to": "def:infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:every-element-lies-below-the-supremum",
+    "to": "def:supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:infimum-in-the-set-is-the-minimum",
+    "to": "def:infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:infimum-in-the-set-is-the-minimum",
+    "to": "def:minimum",
+    "kind": "depends_on"
+  },
+  {
     "from": "prop:infimum-need-not-belong-to-the-set",
     "to": "def:infimum",
     "kind": "depends_on"
@@ -11620,6 +12015,51 @@
     "kind": "depends_on"
   },
   {
+    "from": "prop:lower-bound-comparison-with-the-infimum",
+    "to": "def:infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:lower-bound-comparison-with-the-infimum",
+    "to": "def:lower-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:lower-bound-property-of-infimum",
+    "to": "def:infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:maximum-implies-supremum",
+    "to": "def:maximum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:maximum-implies-supremum",
+    "to": "def:supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:maximum-implies-supremum",
+    "to": "def:upper-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:minimum-implies-infimum",
+    "to": "def:infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:minimum-implies-infimum",
+    "to": "def:lower-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:minimum-implies-infimum",
+    "to": "def:minimum",
+    "kind": "depends_on"
+  },
+  {
     "from": "prop:negative-dilation-sends-lower-to-upper-bounds",
     "to": "def:displacement-dilation-reflection",
     "kind": "depends_on"
@@ -11647,6 +12087,16 @@
   {
     "from": "prop:negative-dilation-sends-upper-to-lower-bounds",
     "to": "def:upper-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:order-comparison-of-suprema",
+    "to": "def:supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:order-comparison-of-suprema",
+    "to": "prop:every-element-lies-below-the-supremum",
     "kind": "depends_on"
   },
   {
@@ -11677,6 +12127,16 @@
   {
     "from": "prop:suprema-ambient-set",
     "to": "def:upper-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:supremum-in-the-set-is-the-maximum",
+    "to": "def:maximum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:supremum-in-the-set-is-the-maximum",
+    "to": "def:supremum",
     "kind": "depends_on"
   },
   {
@@ -11737,6 +12197,41 @@
   {
     "from": "prop:union-bounded-below-iff-pieces-bounded-below",
     "to": "lem:union-preserves-lower-bounds",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:uniqueness-of-the-infimum",
+    "to": "def:infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:uniqueness-of-the-maximum",
+    "to": "def:maximum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:uniqueness-of-the-minimum",
+    "to": "def:minimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:uniqueness-of-the-supremum",
+    "to": "def:supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:upper-bound-comparison-with-the-supremum",
+    "to": "def:supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:upper-bound-comparison-with-the-supremum",
+    "to": "def:upper-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:upper-bound-property-of-supremum",
+    "to": "def:supremum",
     "kind": "depends_on"
   },
   {
@@ -11825,6 +12320,16 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:glb-property-implies-existence-of-infima",
+    "to": "def:infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:glb-property-implies-existence-of-infima",
+    "to": "def:lower-bound",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:increasing-image-preserves-infima",
     "to": "def:infimum",
     "kind": "depends_on"
@@ -11862,6 +12367,26 @@
   {
     "from": "thm:infimum-difference-set",
     "to": "thm:negative-scalar-mult-infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:infimum-is-monotone-under-inclusion",
+    "to": "def:infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:infimum-is-monotone-under-inclusion",
+    "to": "lem:subset-inclusion-preserves-lower-bounds",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:infimum-less-than-supremum",
+    "to": "def:infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:infimum-less-than-supremum",
+    "to": "def:supremum",
     "kind": "depends_on"
   },
   {
@@ -11967,6 +12492,16 @@
   {
     "from": "thm:irrational-between-any-two-rationals",
     "to": "thm:density-of-irrationals-in-reals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:lub-property-implies-existence-of-suprema",
+    "to": "def:supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:lub-property-implies-existence-of-suprema",
+    "to": "def:upper-bound",
     "kind": "depends_on"
   },
   {
@@ -12157,6 +12692,16 @@
   {
     "from": "thm:supremum-dilation",
     "to": "thm:scalar-mult-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:supremum-is-monotone-under-inclusion",
+    "to": "def:supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:supremum-is-monotone-under-inclusion",
+    "to": "lem:subset-inclusion-preserves-upper-bounds",
     "kind": "depends_on"
   },
   {
@@ -14395,6 +14940,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:hyperbolic",
+    "to": "def:exponential",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:inverse-hyperbolic",
     "to": "def:exponential",
     "kind": "depends_on"
@@ -14410,6 +14960,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:natural-logarithm",
+    "to": "def:exponential",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:number-e",
     "to": "def:exponential",
     "kind": "depends_on"
@@ -14422,6 +14977,21 @@
   {
     "from": "def:other-trig",
     "to": "def:sine-cosine",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:power-function",
+    "to": "def:exponential",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:power-function",
+    "to": "def:natural-logarithm",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:sine-cosine",
+    "to": "def:power-function",
     "kind": "depends_on"
   },
   {
@@ -15825,6 +16395,536 @@
     "kind": "depends_on"
   },
   {
+    "from": "cor:cauchy-integral-bounds",
+    "to": "prop:cauchy-integral-constant",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:cauchy-integral-bounds",
+    "to": "thm:cauchy-integral-monotonicity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:bounded-variation-integration",
+    "to": "def:total-variation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:cauchy-integral",
+    "to": "def:cauchy-sum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:cauchy-integral",
+    "to": "def:partition-mesh",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:cauchy-sum",
+    "to": "def:integration-partition",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:cauchy-sum",
+    "to": "def:subinterval-width-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:darboux-integrability",
+    "to": "def:darboux-sums",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:darboux-sums",
+    "to": "def:integration-partition",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:delta-fine-tagged-partition",
+    "to": "def:gauge-on-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:delta-fine-tagged-partition",
+    "to": "def:tagged-partition-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:henstock-kurzweil-integral",
+    "to": "def:delta-fine-tagged-partition",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:henstock-kurzweil-integral",
+    "to": "def:gauge-on-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:mcshane-fine-tagged-partition",
+    "to": "def:gauge-on-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:mcshane-fine-tagged-partition",
+    "to": "def:tagged-partition-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:mcshane-integral",
+    "to": "def:gauge-on-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:mcshane-integral",
+    "to": "def:mcshane-fine-tagged-partition",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:partition-mesh",
+    "to": "def:integration-partition",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:partition-mesh",
+    "to": "def:subinterval-width-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:partition-refinement",
+    "to": "def:integration-partition",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:point-oscillation-integration",
+    "to": "def:interval-oscillation-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:riemann-integral",
+    "to": "def:partition-mesh",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:riemann-integral",
+    "to": "def:riemann-sum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:riemann-integral",
+    "to": "def:tagged-partition-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:riemann-stieltjes-integral",
+    "to": "def:bounded-variation-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:riemann-stieltjes-integral",
+    "to": "def:partition-mesh",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:riemann-stieltjes-integral",
+    "to": "def:tagged-partition-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:riemann-sum",
+    "to": "def:subinterval-width-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:riemann-sum",
+    "to": "def:tagged-partition-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:subinterval-width-integration",
+    "to": "def:integration-partition",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:tagged-partition-integration",
+    "to": "def:integration-partition",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:total-variation",
+    "to": "def:integration-partition",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:common-refinement-partitions",
+    "to": "def:integration-partition",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:common-refinement-partitions",
+    "to": "def:partition-refinement",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:cousin",
+    "to": "def:delta-fine-tagged-partition",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:cousin",
+    "to": "def:gauge-on-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:darboux-refinement-squeeze",
+    "to": "def:darboux-sums",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:darboux-refinement-squeeze",
+    "to": "def:partition-refinement",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:cauchy-integral-constant",
+    "to": "def:cauchy-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:monotone-bounded-variation",
+    "to": "def:bounded-variation-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:monotone-bounded-variation",
+    "to": "def:total-variation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-integral-int\nerval-additivity",
+    "to": "def:cauchy-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-integral-linearity",
+    "to": "def:cauchy-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-integral-monotonicity",
+    "to": "def:cauchy-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-integral-triangle-inequality",
+    "to": "def:cauchy-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-integral-triangle-inequality",
+    "to": "thm:cauchy-integral-monotonicity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-tag-independence",
+    "to": "def:cauchy-sum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cauchy-tag-independence",
+    "to": "thm:continuous-cauchy-integrable",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:continuous-cauchy-integrable",
+    "to": "def:cauchy-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:continuous-cauchy-integrable",
+    "to": "def:interval-oscillation-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:continuous-darboux-integrable",
+    "to": "def:darboux-integrability",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:continuous-hk-integrable",
+    "to": "thm:continuous-riemann-integrable",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:continuous-hk-integrable",
+    "to": "thm:riemann-integrable-implies-hk-integrable",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:continuous-riemann-integrable",
+    "to": "def:riemann-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:darboux-criterion",
+    "to": "def:darboux-integrability",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:darboux-criterion",
+    "to": "def:darboux-sums",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:darboux-integrable-absolute-value",
+    "to": "def:darboux-integrability",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:darboux-integrable-absolute-value",
+    "to": "thm:darboux-criterion",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:darboux-integrable-continuous-composition",
+    "to": "def:darboux-integrability",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:darboux-integrable-continuous-composition",
+    "to": "thm:darboux-criterion",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:darboux-integrable-linear-combinations",
+    "to": "def:darboux-integrability",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:darboux-integrable-linear-combinations",
+    "to": "thm:darboux-criterion",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:darboux-integrable-products",
+    "to": "def:darboux-integrability",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:darboux-integrable-products",
+    "to": "thm:darboux-criterion",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:finite-discontinuities-darboux-integrable",
+    "to": "def:darboux-integrability",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:finite-discontinuities-darboux-integrable",
+    "to": "thm:darboux-criterion",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hk-fundamental-theorem",
+    "to": "def:henstock-kurzweil-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hk-fundamental-theorem",
+    "to": "lem:hk-straddle",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:lebesgue-criterion-riemann-integrability",
+    "to": "def:measure-zero",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:lebesgue-criterion-riemann-integrability",
+    "to": "def:point-oscillation-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:lebesgue-criterion-riemann-integrability",
+    "to": "def:riemann-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:mcshane-equals-lebesgue",
+    "to": "def:mcshane-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:mcshane-equals-lebesgue",
+    "to": "thm:lebesgue-criterion-riemann-integrability",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:monotone-darboux-integrable",
+    "to": "def:darboux-integrability",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:monotone-darboux-integrable",
+    "to": "thm:darboux-criterion",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-cauchy-criterion",
+    "to": "def:partition-mesh",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-cauchy-criterion",
+    "to": "def:riemann-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-cauchy-criterion",
+    "to": "def:riemann-sum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-darboux-equivalence",
+    "to": "def:darboux-integrability",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-darboux-equivalence",
+    "to": "def:riemann-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-integrable-implies-hk-integrable",
+    "to": "def:gauge-on-interval",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-integrable-implies-hk-integrable",
+    "to": "def:henstock-kurzweil-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-integrable-implies-hk-integrable",
+    "to": "def:riemann-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-integral-interval-additivity",
+    "to": "def:partition-refinement",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-integral-interval-additivity",
+    "to": "def:riemann-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-integral-interval-additivity",
+    "to": "lem:common-refinement-partitions",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-integral-linearity",
+    "to": "def:riemann-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-integral-linearity",
+    "to": "def:riemann-sum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-integral-monotonicity",
+    "to": "def:riemann-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-integral-monotonicity",
+    "to": "def:riemann-sum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-integral-triangle-inequality",
+    "to": "def:riemann-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-integral-triangle-inequality",
+    "to": "thm:riemann-integral-monotonicity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-mcshane-hk-inclusions",
+    "to": "def:henstock-kurzweil-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-mcshane-hk-inclusions",
+    "to": "def:mcshane-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:riemann-mcshane-hk-inclusions",
+    "to": "def:riemann-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rs-bilinearity",
+    "to": "def:riemann-stieltjes-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rs-c1-reduction",
+    "to": "def:riemann-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rs-c1-reduction",
+    "to": "def:riemann-stieltjes-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rs-continuous-bv-existence",
+    "to": "def:bounded-variation-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rs-continuous-bv-existence",
+    "to": "def:riemann-stieltjes-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rs-integration-by-parts",
+    "to": "def:bounded-variation-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rs-integration-by-parts",
+    "to": "def:riemann-stieltjes-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rs-interval-additivity",
+    "to": "def:partition-refinement",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rs-interval-additivity",
+    "to": "def:riemann-stieltjes-integral",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rs-step-integrator-finite-sum",
+    "to": "def:bounded-variation-integration",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rs-step-integrator-finite-sum",
+    "to": "def:riemann-stieltjes-integral",
+    "kind": "depends_on"
+  },
+  {
     "from": "lem:ordered-field-division-order-laws",
     "to": "def:ordered-field",
     "kind": "depends_on"
@@ -16785,13 +17885,303 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:abelian-group",
+    "to": "def:comm",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:abelian-group",
+    "to": "def:group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:absorbing",
+    "to": "def:left-absorbing",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:absorbing",
+    "to": "def:right-absorbing",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:additive-inverse",
+    "to": "def:identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:additive-inverse",
+    "to": "def:inverse",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-left-inverse",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-left-inverse",
+    "to": "def:identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-right-inverse",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-right-inverse",
+    "to": "def:identity",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:algebraic-structure",
     "to": "def:signature",
     "kind": "depends_on"
   },
   {
+    "from": "def:assoc",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:cancellable",
+    "to": "def:left-cancellable",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:cancellable",
+    "to": "def:right-cancellable",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:comm",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:commutative-ring",
+    "to": "def:comm",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:commutative-ring",
+    "to": "def:ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:distrib",
+    "to": "def:left-distrib",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:distrib",
+    "to": "def:right-distrib",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:division-ring",
+    "to": "def:invertible",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:division-ring",
+    "to": "def:ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:field",
+    "to": "def:commutative-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:field",
+    "to": "def:division-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:field",
+    "to": "def:group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:group",
+    "to": "def:inverse",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:group",
+    "to": "def:monoid",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:group-order",
+    "to": "def:group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:idempotent",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:identity",
+    "to": "def:left-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:identity",
+    "to": "def:right-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:integral-domain",
+    "to": "def:commutative-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:integral-domain",
+    "to": "def:zero-divisor",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse",
+    "to": "def:algebraic-left-inverse",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:inverse",
+    "to": "def:algebraic-right-inverse",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:invertible",
+    "to": "def:inverse",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:l-structure",
     "to": "def:signature",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:left-absorbing",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:left-cancellable",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:left-distrib",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:left-identity",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:magma",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:monoid",
+    "to": "def:identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:monoid",
+    "to": "def:semigroup",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:multiplicative-inverse",
+    "to": "def:identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:multiplicative-inverse",
+    "to": "def:inverse",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:nary-operation",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:nullary",
+    "to": "def:nary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:powers",
+    "to": "def:assoc",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:powers",
+    "to": "def:identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:right-absorbing",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:right-cancellable",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:right-distrib",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:right-identity",
+    "to": "def:binop",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:ring",
+    "to": "def:monoid",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:ring",
+    "to": "def:rng",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rng",
+    "to": "def:abelian-group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rng",
+    "to": "def:assoc",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rng",
+    "to": "def:distrib",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:semigroup",
+    "to": "def:assoc",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:semigroup",
+    "to": "def:magma",
     "kind": "depends_on"
   },
   {
@@ -16807,6 +18197,261 @@
   {
     "from": "def:signature",
     "to": "def:unary",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:unary",
+    "to": "def:nary-operation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:zero-divisor",
+    "to": "def:absorbing",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:zero-divisor",
+    "to": "def:ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:absorbing-unique",
+    "to": "def:absorbing",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:domain-cancellation",
+    "to": "def:integral-domain",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:domain-cancellation",
+    "to": "def:zero-divisor",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:field-is-domain",
+    "to": "def:field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:field-is-domain",
+    "to": "def:integral-domain",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:finite-domain-is-field",
+    "to": "def:field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:finite-domain-is-field",
+    "to": "def:integral-domain",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:group-cancellation",
+    "to": "def:group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:group-cancellation",
+    "to": "prop:invertible-implies-cancellable",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:group-identity-unique",
+    "to": "def:group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:group-identity-unique",
+    "to": "prop:identity-collapse",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:group-inverse-unique",
+    "to": "def:group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:group-inverse-unique",
+    "to": "prop:inverse-collapse",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:identity-collapse",
+    "to": "def:left-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:identity-collapse",
+    "to": "def:right-identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:inverse-collapse",
+    "to": "def:algebraic-left-inverse",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:inverse-collapse",
+    "to": "def:algebraic-right-inverse",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:inverse-collapse",
+    "to": "def:identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:inverse-collapse",
+    "to": "thm:general-associativity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:invertible-implies-cancellable",
+    "to": "def:cancellable",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:invertible-implies-cancellable",
+    "to": "def:invertible",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:invertible-implies-cancellable",
+    "to": "def:monoid",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:ring-mult-neg",
+    "to": "def:additive-inverse",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:ring-mult-neg",
+    "to": "def:ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:ring-mult-neg",
+    "to": "prop:ring-mult-zero",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:ring-mult-zero",
+    "to": "def:distrib",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:ring-mult-zero",
+    "to": "def:ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:socks-shoes",
+    "to": "def:group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:socks-shoes",
+    "to": "def:inverse",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:units-form-group",
+    "to": "def:group",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:units-form-group",
+    "to": "def:invertible",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:units-form-group",
+    "to": "def:monoid",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:general-associativity",
+    "to": "def:assoc",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:algebraic-geometry-commutative-ring",
+    "to": "def:algebraic-geometry-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:degree-of-polynomial",
+    "to": "def:polynomial-over-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:finitely-generated-ideal",
+    "to": "def:generated-ideal",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:finitely-generated-ideal",
+    "to": "def:ideal",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:generated-ideal",
+    "to": "def:algebraic-geometry-commutative-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:generated-ideal",
+    "to": "def:ideal",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:ideal",
+    "to": "def:algebraic-geometry-commutative-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:monomial",
+    "to": "def:polynomial-ring-in-n-variables",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:noetherian-ring",
+    "to": "def:algebraic-geometry-commutative-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:noetherian-ring",
+    "to": "def:finitely-generated-ideal",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:polynomial-over-ring",
+    "to": "def:algebraic-geometry-commutative-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:polynomial-ring-in-n-variables",
+    "to": "def:algebraic-geometry-commutative-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:polynomial-ring-in-n-variables",
+    "to": "def:polynomial-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hilbert-basis-theorem",
+    "to": "def:noetherian-ring",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:hilbert-basis-theorem",
+    "to": "def:polynomial-ring",
     "kind": "depends_on"
   },
   {
@@ -17285,7 +18930,7 @@
     "kind": "depends_on"
   },
   {
-    "from": "lem:computational-geometry-linear-functionals-convex-combinations",
+    "from": "lem:computational-geometry-linear-functionals-convex-combi\nnations",
     "to": "def:computational-geometry-convex-combination",
     "kind": "depends_on"
   },
@@ -17297,11 +18942,6 @@
   {
     "from": "thm:computational-geometry-greedy-slope-upper-hull",
     "to": "def:computational-geometry-supporting-line",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:computational-geometry-greedy-slope-upper-hull",
-    "to": "lem:computational-geometry-linear-functionals-convex-combinations",
     "kind": "depends_on"
   },
   {
@@ -17322,11 +18962,6 @@
   {
     "from": "thm:computational-geometry-monotone-slope-upper-hull",
     "to": "def:computational-geometry-supporting-line",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:computational-geometry-monotone-slope-upper-hull",
-    "to": "lem:computational-geometry-linear-functionals-convex-combinations",
     "kind": "depends_on"
   },
   {
@@ -17352,11 +18987,6 @@
   {
     "from": "thm:computational-geometry-supporting-functional-hull-vertices",
     "to": "def:computational-geometry-supporting-line",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:computational-geometry-supporting-functional-hull-vertices",
-    "to": "lem:computational-geometry-linear-functionals-convex-combinations",
     "kind": "depends_on"
   }
 ]
