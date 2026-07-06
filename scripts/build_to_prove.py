@@ -294,8 +294,14 @@ def build_items(knowledge: dict[str, Any], repos_root: Path, vault_root: Path = 
         is_open = node.get("proof_sketch_source") == "todo_stub_skipped" and not is_completed
         if not is_open and not is_completed:
             continue
-        theorem_dependency_ids = sorted(theorem_deps.get(node_id, set()), key=lambda dep: order.get(dep, 10**9))
-        proof_dependency_ids = sorted(proof_deps.get(node_id, set()), key=lambda dep: order.get(dep, 10**9))
+        theorem_dependency_ids = sorted(
+            (dep for dep in theorem_deps.get(node_id, set()) if dep != node_id),
+            key=lambda dep: order.get(dep, 10**9),
+        )
+        proof_dependency_ids = sorted(
+            (dep for dep in proof_deps.get(node_id, set()) if dep != node_id),
+            key=lambda dep: order.get(dep, 10**9),
+        )
         source = str(node.get("source") or "")
         source_path = (chapter_root / source).as_posix() if source else ""
         item = {
