@@ -25,7 +25,7 @@ graph-edges.json              — dependency graph edges
 ```bash
 python scripts/run_extraction.py --repos-root /path/to/workspace-containing-lra-volume-repos
 python scripts/extract_model_artifacts.py --source-root /path/to/workspace-containing-lra-volume-repos
-python scripts/build_to_prove.py --repos-root /path/to/workspace-containing-lra-volume-repos --write-volume-trackers
+python scripts/build_to_prove.py --repos-root /path/to/workspace-containing-lra-volume-repos
 python scripts/build_proof_vault_index.py --vault-root /path/to/lra-proof-vault
 ```
 
@@ -40,8 +40,7 @@ missing.
 
 Generated explorer records include volume, book, chapter, and section metadata.
 The browser UI uses that schema for the Volume → Book → Chapter → Section
-filters. `to-prove.json` uses the same metadata to power the To Prove mode and
-can refresh each volume repo's root `proofs-to-do.md` tracker.
+filters. `to-prove.json` uses the same metadata to power the To Prove mode.
 
 Extraction reads live TeX files through the same volume governance inventory
 provider used by validators, so validation and explorer publication operate on

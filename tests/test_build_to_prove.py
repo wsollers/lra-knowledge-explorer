@@ -82,7 +82,6 @@ class BuildToProveCompletionTest(unittest.TestCase):
             volume = root / "lra-volume-iii"
             proof_dir = volume / "volume-iii" / "book-analysis-i" / "bounding" / "proofs"
             proof_dir.mkdir(parents=True)
-            (volume / "proofs-to-do.md").write_text("", encoding="utf-8")
             (proof_dir / "p-source.tex").write_text(proof_file("Source Complete", "A complete proof."), encoding="utf-8")
             (proof_dir / "p-vault.tex").write_text(proof_file("Vault Complete", "TODO: fill this proof."), encoding="utf-8")
             (proof_dir / "p-open.tex").write_text(proof_file("Still Open", "TODO: fill this proof."), encoding="utf-8")
@@ -100,7 +99,7 @@ attempts:
                 encoding="utf-8",
             )
 
-            items, _ = build_items(self.minimal_knowledge(), root, root / "lra-proof-vault")
+            items = build_items(self.minimal_knowledge(), root, root / "lra-proof-vault")
             by_id = {item["id"]: item for item in items}
 
             self.assertEqual(by_id["thm:source-complete"]["status"], "completed")

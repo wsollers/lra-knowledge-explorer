@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build proof-to-do tracker markdown and Knowledge Explorer to-prove data."""
+"""Build Knowledge Explorer to-prove data."""
 
 from __future__ import annotations
 
@@ -21,7 +21,6 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_KNOWLEDGE = REPO_ROOT / "knowledge.json"
 DEFAULT_OUTPUT = REPO_ROOT / "to-prove.json"
 DEFAULT_VAULT_ROOT = REPO_ROOT.parent / "lra-proof-vault"
-TRACKER_RE = re.compile(r"^\d+\.\s+\((?P<mark>✅)?\)\s+`(?P<label>[^`]+)`", re.MULTILINE)
 PROOF_ENV_RE = re.compile(r"\\begin\{proof\}(?:\[[^\]]*\])?(?P<body>[\s\S]*?)\\end\{proof\}")
 VOLUME_REPOS = {
     1: "lra-volume-i",
@@ -37,13 +36,6 @@ VOLUME_REPOS = {
 
 def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
-
-
-def completed_labels(tracker: Path) -> set[str]:
-    if not tracker.is_file():
-        return set()
-    text = tracker.read_text(encoding="utf-8", errors="replace")
-    return {m.group("label") for m in TRACKER_RE.finditer(text) if m.group("mark")}
 
 
 def load_yaml(path: Path) -> dict[str, Any]:
@@ -193,25 +185,6 @@ def item_markdown(item: dict[str, Any], index: int) -> list[str]:
     return lines
 
 
-def tracker_markdown(volume: dict[str, Any], items: list[dict[str, Any]]) -> str:
-    open_count = sum(1 for item in items if item["status"] == "open")
-    completed_count = sum(1 for item in items if item["status"] == "completed")
-    lines = [
-        f"# {volume_title(volume)} Proofs To Do",
-        "",
-        "Proof-writing order is dependency-first among active TODO proof labels, with the generated knowledge graph order used as the stable tie-breaker.",
-        "Use `✅` to record completion after the canonical proof file has both proof bodies populated and validated.",
-        "",
-        f"Open proofs to do: {open_count}",
-        f"Completed in this tracker: {completed_count}",
-        "",
-    ]
-    for index, item in enumerate(items, start=1):
-        lines.extend(item_markdown(item, index))
-        lines.append("")
-    return "\n".join(lines).rstrip() + "\n"
-
-
 def dependency_maps(knowledge: dict[str, Any]) -> tuple[dict[str, set[str]], dict[str, set[str]]]:
     theorem_deps: dict[str, set[str]] = {}
     proof_deps: dict[str, set[str]] = {}
@@ -263,14 +236,10 @@ def dependency_first(items: list[dict[str, Any]], order: dict[str, int]) -> list
     return [by_id[node_id] for node_id in out]
 
 
-def build_items(knowledge: dict[str, Any], repos_root: Path, vault_root: Path = DEFAULT_VAULT_ROOT) -> tuple[list[dict[str, Any]], dict[int, set[str]]]:
+def build_items(knowledge: dict[str, Any], repos_root: Path, vault_root: Path = DEFAULT_VAULT_ROOT) -> list[dict[str, Any]]:
     nodes = knowledge.get("nodes", [])
     order = {str(node.get("id")): index for index, node in enumerate(nodes) if node.get("id")}
     theorem_deps, proof_deps = dependency_maps(knowledge)
-    completed_by_volume = {
-        volume: completed_labels(repos_root / repo / "proofs-to-do.md")
-        for volume, repo in VOLUME_REPOS.items()
-    }
     completed_by_vault = accepted_vault_labels(vault_root)
     items: list[dict[str, Any]] = []
     for node in nodes:
@@ -284,8 +253,6 @@ def build_items(knowledge: dict[str, Any], repos_root: Path, vault_root: Path = 
         proof_path = (chapter_root / proof_source).as_posix() if proof_source else ""
         canonical_proof = repos_root / repo / proof_path if repo and proof_path else Path()
         completion_sources = []
-        if node_id in completed_by_volume.get(volume, set()):
-            completion_sources.append("tracker")
         if proof_file_completed(canonical_proof):
             completion_sources.append("proof_file")
         if node_id in completed_by_vault:
@@ -335,7 +302,7 @@ def build_items(knowledge: dict[str, Any], repos_root: Path, vault_root: Path = 
             item["completion_sources"] = completion_sources
         item["markdown"] = "\n".join(item_markdown(item, 1)).split("\n", 1)[1]
         items.append(item)
-    return dependency_first(items, order), completed_by_volume
+    return dependency_first(items, order)
 
 
 def volume_payloads(knowledge: dict[str, Any], items: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -361,15 +328,6 @@ def volume_payloads(knowledge: dict[str, Any], items: list[dict[str, Any]]) -> l
     return volumes
 
 
-def write_volume_trackers(volumes: list[dict[str, Any]], repos_root: Path) -> None:
-    for volume in volumes:
-        repo = volume.get("repo")
-        if not repo:
-            continue
-        path = repos_root / repo / "proofs-to-do.md"
-        path.write_text(tracker_markdown(volume, volume.get("items") or []), encoding="utf-8")
-
-
 def published_items(items: list[dict[str, Any]], *, include_completed: bool = False) -> list[dict[str, Any]]:
     if include_completed:
         return items
@@ -382,7 +340,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--repos-root", type=Path, default=REPO_ROOT.parent)
     parser.add_argument("--vault-root", type=Path, default=DEFAULT_VAULT_ROOT)
-    parser.add_argument("--write-volume-trackers", action="store_true")
     parser.add_argument("--include-completed", action="store_true", help="Include completed proof records in the output artifact.")
     return parser.parse_args()
 
@@ -392,7 +349,7 @@ def main() -> int:
     knowledge = load_json(args.knowledge.resolve())
     repos_root = args.repos_root.resolve()
     vault_root = args.vault_root.resolve()
-    all_items, _completed = build_items(knowledge, repos_root, vault_root)
+    all_items = build_items(knowledge, repos_root, vault_root)
     items = published_items(all_items, include_completed=args.include_completed)
     volumes = volume_payloads(knowledge, items)
     payload = {
@@ -409,8 +366,6 @@ def main() -> int:
         "items": items,
     }
     args.output.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
-    if args.write_volume_trackers:
-        write_volume_trackers(volumes, repos_root)
     print(f"Wrote {len(items)} proof todo records to {args.output}")
     return 0
 

@@ -69,11 +69,9 @@ cards, enriches artifacts with volume/book/chapter metadata, and writes
 
 **Proof todo data** — `scripts/build_to_prove.py`
 
-Reads `knowledge.json`, preserves existing `(✅)` marks from volume
-`proofs-to-do.md` trackers, recognizes completed canonical proof files and
-accepted proof-vault records, dependency-sorts active proof TODOs, and writes
-`to-prove.json`. With `--write-volume-trackers`, it also refreshes each
-`lra-volume-*` repository's root `proofs-to-do.md`.
+Reads `knowledge.json`, recognizes completed canonical proof files and accepted
+proof-vault records, dependency-sorts active proof TODOs, and writes
+`to-prove.json`.
 
 ---
 
@@ -93,7 +91,7 @@ scripts/
   seed_to_knowledge_json_v3_fixed6.py  — Pass 2: seed → explorer JSON
   run_extraction.py             — orchestrator
   extract_model_artifacts.py    — model-card extraction
-  build_to_prove.py             — proof todo JSON + tracker generation
+  build_to_prove.py             — proof todo JSON generation
 knowledge-explorer.html         — main interactive explorer
 real-analysis-explorer.html     — alternate explorer UI
 index.html                      — redirect → knowledge-explorer.html

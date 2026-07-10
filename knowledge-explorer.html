@@ -1254,7 +1254,7 @@ function renderToProveSelector(){
   const items=toProveItems();
   const count=items.length;
   const open=(state.toProve.metadata&&state.toProve.metadata.open_count)||items.filter(i=>i.status==='open').length;
-  els.toProveStatus.textContent=count?`Loaded ${count} proof tracker item${count===1?'':'s'} · ${open} open.`:'No proof todos loaded.';
+  els.toProveStatus.textContent=count?`Loaded ${count} proof todo item${count===1?'':'s'} · ${open} open.`:'No proof todos loaded.';
   renderToProveBoard();
 }
 function renderToProveBoard(){
@@ -1281,7 +1281,7 @@ function renderToProveBoard(){
   const selectOptions=['<option value="">Select a proof</option>'].concat(filtered.map(item=>`<option value="${esc(item.id)}">${item.status==='completed'?'✓ ':'□ '}${esc(item.title||item.id)}</option>`));
   els.toProveSelect.innerHTML=selectOptions.join('');
   els.toProveSelect.value=selected;
-  els.toProveBoardStatus.textContent=items.length?`${filtered.length} of ${items.length} proof tracker items shown.`:'No proof todos loaded.';
+  els.toProveBoardStatus.textContent=items.length?`${filtered.length} of ${items.length} proof todo items shown.`:'No proof todos loaded.';
   if(!items.length){
     els.toProveList.innerHTML='<div class="card"><div class="value">No proof todo data loaded.</div></div>';
     return;
