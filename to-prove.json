@@ -1,10 +1,10 @@
 {
   "metadata": {
     "schema_version": "0.1",
-    "generated_at": "2026-07-10T16:58:19.269947+00:00",
+    "generated_at": "2026-07-11T19:54:50.622742+00:00",
     "source": "knowledge.json",
-    "item_count": 1237,
-    "open_count": 1237,
+    "item_count": 1228,
+    "open_count": 1228,
     "completed_count": 0,
     "excluded_completed_count": 54
   },
@@ -14,7 +14,7 @@
       "roman": "i",
       "title": "Logic, Sets, and Proof",
       "repo": "lra-volume-i",
-      "open_count": 133,
+      "open_count": 137,
       "completed_count": 0,
       "items": [
         {
@@ -1961,13 +1961,11 @@
           "proof_path": "volume-i/book-logic/predicate-logic/proofs/proof-theory/prf-eq-sym.tex",
           "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-logic/predicate-logic/proofs/proof-theory/prf-eq-sym.tex",
           "theorem_dependency_ids": [
-            "def:eq-refl",
-            "def:eq-elim"
+            "def:term"
           ],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [
-            "def:eq-refl",
-            "def:eq-elim"
+            "def:term"
           ],
           "markdown": "   > **Statement.**\n   > From $t_1 = t_2$, one may infer $t_2 = t_1$."
         },
@@ -1996,12 +1994,14 @@
           "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-logic/predicate-logic/proofs/proof-theory/prf-eq-trans.tex",
           "theorem_dependency_ids": [
             "def:eq-refl",
-            "def:eq-elim"
+            "def:eq-elim",
+            "def:term"
           ],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [
             "def:eq-refl",
-            "def:eq-elim"
+            "def:eq-elim",
+            "def:term"
           ],
           "markdown": "   > **Statement.**\n   > From $t_1 = t_2$ and $t_2 = t_3$, one may infer $t_1 = t_3$."
         },
@@ -2108,6 +2108,40 @@
             "def:fol-satisfaction"
           ],
           "markdown": "   > **Statement.**\n   > The standard inference rules for first-order logic (UI, UG, EI, EG, and the\n   > propositional rules) are sound: they preserve truth in all structures.\n   >\n   > If $\\Gamma \\vdash \\varphi$, then $\\Gamma \\models \\varphi$."
+        },
+        {
+          "id": "thm:godel-complete",
+          "status": "open",
+          "title": "G\\\"{o}del's Completeness Theorem",
+          "kind": "Theorem",
+          "statement": "First-order logic is complete: every logically valid formula is provable.\n\\[\n\\Gamma \\models \\varphi \\implies \\Gamma \\vdash \\varphi.\n\\]\nEquivalently: if a set of sentences $\\Gamma$ is consistent (has no proof of\ncontradiction), then $\\Gamma$ has a model.",
+          "volume": 1,
+          "volume_roman": "i",
+          "volume_title": "Logic, Sets, and Proof",
+          "repo": "lra-volume-i",
+          "book": "mathematical-logic-and-proof",
+          "book_title": "Mathematical Logic and Proof",
+          "book_dir": "volume-i/book-logic",
+          "chapter": "predicate-logic",
+          "chapter_title": "Predicate Logic",
+          "section": "proof-theory",
+          "section_title": "Proof Theory",
+          "source": "notes/proof-theory/notes-soundness-completeness.tex",
+          "source_path": "volume-i/book-logic/predicate-logic/notes/proof-theory/notes-soundness-completeness.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-logic/predicate-logic/notes/proof-theory/notes-soundness-completeness.tex",
+          "proof_source": "proofs/proof-theory/prf-godel-complete.tex",
+          "proof_path": "volume-i/book-logic/predicate-logic/proofs/proof-theory/prf-godel-complete.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-logic/predicate-logic/proofs/proof-theory/prf-godel-complete.tex",
+          "theorem_dependency_ids": [
+            "def:log-consequence",
+            "def:fol-satisfaction"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:log-consequence",
+            "def:fol-satisfaction"
+          ],
+          "markdown": "   > **Statement.**\n   > First-order logic is complete: every logically valid formula is provable.\n   > \\[\n   > \\Gamma \\models \\varphi \\implies \\Gamma \\vdash \\varphi.\n   > \\]\n   > Equivalently: if a set of sentences $\\Gamma$ is consistent (has no proof of\n   > contradiction), then $\\Gamma$ has a model."
         },
         {
           "id": "thm:qneg",
@@ -3695,19 +3729,19 @@
           "theorem_dependency_ids": [
             "def:composition",
             "def:invertible-function",
+            "def:inverse",
             "def:function",
             "def:bijective",
-            "def:identity",
-            "def:inverse"
+            "def:identity"
           ],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [
             "def:composition",
             "def:invertible-function",
+            "def:inverse",
             "def:function",
             "def:bijective",
-            "def:identity",
-            "def:inverse"
+            "def:identity"
           ],
           "markdown": "   > **Statement.**\n   > Let $f : A \\to B$ be bijective. Then\n   > \\[\n   > f^{-1} \\circ f = \\id_A\n   > \\quad\\text{and}\\quad\n   > f \\circ f^{-1} = \\id_B.\n   > \\]\n   > Conversely, a function admits an inverse iff it is bijective."
         },
@@ -3736,16 +3770,16 @@
           "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/functions/proofs/functions/prf-inverse-comp.tex",
           "theorem_dependency_ids": [
             "def:composition",
+            "def:inverse",
             "def:function",
-            "def:bijective",
-            "def:inverse"
+            "def:bijective"
           ],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [
             "def:composition",
+            "def:inverse",
             "def:function",
-            "def:bijective",
-            "def:inverse"
+            "def:bijective"
           ],
           "markdown": "   > **Statement.**\n   > Let $f : A \\to B$ and $g : B \\to C$ be bijective. Then $g \\circ f$ is\n   > bijective and\n   > \\[\n   > (g \\circ f)^{-1} = f^{-1} \\circ g^{-1}.\n   > \\]"
         },
@@ -4114,9 +4148,41 @@
           "markdown": "   > **Statement.**\n   > Let $f:A\\to B$ be a function. Then $f$ is bijective if and only if\n   > \\[\n   > \\forall a\\in A\\,\\exists! b\\in B,\\quad f(a)=b,\n   > \\]\n   > and\n   > \\[\n   > \\forall b\\in B\\,\\exists! a\\in A,\\quad f(a)=b.\n   > \\]"
         },
         {
+          "id": "thm:szpilrajn",
+          "status": "open",
+          "title": "Szpilrajn Extension Theorem",
+          "kind": "Theorem",
+          "statement": "For any nonempty set $X$ and partial order $\\succsim$ on $X$, there exists a\nlinear order that is an extension of $\\succsim$.",
+          "volume": 1,
+          "volume_roman": "i",
+          "volume_title": "Logic, Sets, and Proof",
+          "repo": "lra-volume-i",
+          "book": "set-theory",
+          "book_title": "Set Theory",
+          "book_dir": "volume-i/book-sets",
+          "chapter": "orderings",
+          "chapter_title": "Orderings",
+          "section": "order",
+          "section_title": "Order",
+          "source": "notes/order/notes-order-extensions.tex",
+          "source_path": "volume-i/book-sets/orderings/notes/order/notes-order-extensions.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/notes/order/notes-order-extensions.tex",
+          "proof_source": "proofs/order/prf-szpilrajn.tex",
+          "proof_path": "volume-i/book-sets/orderings/proofs/order/prf-szpilrajn.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-szpilrajn.tex",
+          "theorem_dependency_ids": [
+            "def:preorder-extension"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:preorder-extension"
+          ],
+          "markdown": "   > **Statement.**\n   > For any nonempty set $X$ and partial order $\\succsim$ on $X$, there exists a\n   > linear order that is an extension of $\\succsim$."
+        },
+        {
           "id": "cor:complete-preorder-extension",
           "status": "open",
-          "title": "Complete preorder extension",
+          "title": "Complete Preorder Extension",
           "kind": "Corollary",
           "statement": "For any nonempty set $X$ and preorder $\\succsim$ on $X$, there exists a\ncomplete preorder that is an extension of $\\succsim$.",
           "volume": 1,
@@ -4138,14 +4204,52 @@
           "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-complete-preorder-extension.tex",
           "theorem_dependency_ids": [
             "def:sym-asym",
-            "def:preorder-extension"
+            "def:preorder-extension",
+            "thm:szpilrajn"
           ],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [
             "def:sym-asym",
-            "def:preorder-extension"
+            "def:preorder-extension",
+            "thm:szpilrajn"
           ],
           "markdown": "   > **Statement.**\n   > For any nonempty set $X$ and preorder $\\succsim$ on $X$, there exists a\n   > complete preorder that is an extension of $\\succsim$."
+        },
+        {
+          "id": "prop:owc-characterization",
+          "status": "open",
+          "title": "Only Weak Cycles Characterization",
+          "kind": "Proposition",
+          "statement": "A binary relation $\\succsim$ on a nonempty set $X$ can be extended to a\ncomplete preorder if and only if it satisfies only weak cycles.",
+          "volume": 1,
+          "volume_roman": "i",
+          "volume_title": "Logic, Sets, and Proof",
+          "repo": "lra-volume-i",
+          "book": "set-theory",
+          "book_title": "Set Theory",
+          "book_dir": "volume-i/book-sets",
+          "chapter": "orderings",
+          "chapter_title": "Orderings",
+          "section": "order",
+          "section_title": "Order",
+          "source": "notes/order/notes-order-extensions.tex",
+          "source_path": "volume-i/book-sets/orderings/notes/order/notes-order-extensions.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/notes/order/notes-order-extensions.tex",
+          "proof_source": "proofs/order/prf-owc-characterization.tex",
+          "proof_path": "volume-i/book-sets/orderings/proofs/order/prf-owc-characterization.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-owc-characterization.tex",
+          "theorem_dependency_ids": [
+            "def:preorder-extension",
+            "cor:complete-preorder-extension",
+            "def:owc"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:preorder-extension",
+            "cor:complete-preorder-extension",
+            "def:owc"
+          ],
+          "markdown": "   > **Statement.**\n   > A binary relation $\\succsim$ on a nonempty set $X$ can be extended to a\n   > complete preorder if and only if it satisfies only weak cycles."
         },
         {
           "id": "prop:order-duality",
@@ -4170,9 +4274,13 @@
           "proof_source": "proofs/order/prf-order-duality.tex",
           "proof_path": "volume-i/book-sets/orderings/proofs/order/prf-order-duality.tex",
           "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-order-duality.tex",
-          "theorem_dependency_ids": [],
+          "theorem_dependency_ids": [
+            "def:dual-poset"
+          ],
           "proof_dependency_ids": [],
-          "graph_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:dual-poset"
+          ],
           "markdown": "   > **Statement.**\n   > Let $\\Phi$ be any first-order statement about a poset $(A, \\leq)$ expressed\n   > using only the relation $\\leq$. Let $\\Phi^*$ be the statement obtained from\n   > $\\Phi$ by replacing every occurrence of $\\leq$ with $\\geq$ (equivalently,\n   > working in the dual poset). Then:\n   > \\[\n   >  (A, \\leq) \\models \\Phi\n   >  \\;\\;\\Longleftrightarrow\\;\\;\n   >  (A, \\geq) \\models \\Phi.\n   > \\]\n   > In particular, if $\\Phi$ is a theorem about all posets, then so is $\\Phi^*$."
         },
         {
@@ -4212,7 +4320,7 @@
           "status": "open",
           "title": "$\\leq_f$ is a partial order iff $f$ is injective",
           "kind": "Proposition",
-          "statement": "Let $(B, \\leq')$ be a partially ordered set and $f : A \\to B$.\nThe induced order $\\leq_f\n$ is a partial order on $A$ if and only if\n$f$ is injective.",
+          "statement": "Let $(B, \\leq')$ be a partially ordered set and $f : A \\to B$.\nThe induced order $\\leq_f$ is a partial order on $A$ if and only if\n$f$ is injective.",
           "volume": 1,
           "volume_roman": "i",
           "volume_title": "Logic, Sets, and Proof",
@@ -4237,7 +4345,7 @@
           "graph_dependency_ids": [
             "def:induced-order"
           ],
-          "markdown": "   > **Statement.**\n   > Let $(B, \\leq')$ be a partially ordered set and $f : A \\to B$.\n   > The induced order $\\leq_f\n   > $ is a partial order on $A$ if and only if\n   > $f$ is injective."
+          "markdown": "   > **Statement.**\n   > Let $(B, \\leq')$ be a partially ordered set and $f : A \\to B$.\n   > The induced order $\\leq_f$ is a partial order on $A$ if and only if\n   > $f$ is injective."
         },
         {
           "id": "prop:embedding-injective",
@@ -4306,6 +4414,42 @@
           "markdown": "   > **Statement.**\n   > If $f : (A, \\leq) \\to (B, \\leq')$ is an order embedding, then $f$ is an\n   > order isomorphism from $(A, \\leq)$ to the suborder $(f(A), \\leq'_{f(A)})$."
         },
         {
+          "id": "thm:knaster-tarski",
+          "status": "open",
+          "title": "Knaster--Tarski Fixed-Point Theorem",
+          "kind": "Theorem",
+          "statement": "Let $(L, \\leq)$ be a complete lattice and $f : L \\to L$ a monotone\nfunction (i.e., $a \\leq b \\Rightarrow f(a) \\leq f(b)$). Then $f$ has a\nleast fixed point and a greatest fixed point in $L$. Specifically:\n\\[\n \\mathrm{lfp}(f) = \\inf\\{\\, a \\in L : f(a) \\leq a \\,\\},\n \\qquad\n \\mathrm{gfp}(f) = \\sup\\{\\, a \\in L : a \\leq f(a) \\,\\}.\n\\]",
+          "volume": 1,
+          "volume_roman": "i",
+          "volume_title": "Logic, Sets, and Proof",
+          "repo": "lra-volume-i",
+          "book": "set-theory",
+          "book_title": "Set Theory",
+          "book_dir": "volume-i/book-sets",
+          "chapter": "orderings",
+          "chapter_title": "Orderings",
+          "section": "order",
+          "section_title": "Order",
+          "source": "notes/order/notes-order-lattices.tex",
+          "source_path": "volume-i/book-sets/orderings/notes/order/notes-order-lattices.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/notes/order/notes-order-lattices.tex",
+          "proof_source": "proofs/order/prf-knaster-tarski.tex",
+          "proof_path": "volume-i/book-sets/orderings/proofs/order/prf-knaster-tarski.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-knaster-tarski.tex",
+          "theorem_dependency_ids": [
+            "def:complete-lattice",
+            "def:distributive-lattice",
+            "def:boolean-lattice"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:complete-lattice",
+            "def:distributive-lattice",
+            "def:boolean-lattice"
+          ],
+          "markdown": "   > **Statement.**\n   > Let $(L, \\leq)$ be a complete lattice and $f : L \\to L$ a monotone\n   > function (i.e., $a \\leq b \\Rightarrow f(a) \\leq f(b)$). Then $f$ has a\n   > least fixed point and a greatest fixed point in $L$. Specifically:\n   > \\[\n   >  \\mathrm{lfp}(f) = \\inf\\{\\, a \\in L : f(a) \\leq a \\,\\},\n   >  \\qquad\n   >  \\mathrm{gfp}(f) = \\sup\\{\\, a \\in L : a \\leq f(a) \\,\\}.\n   > \\]"
+        },
+        {
           "id": "prop:sup-unique",
           "status": "open",
           "title": "Uniqueness of Supremum and Infimum",
@@ -4328,13 +4472,9 @@
           "proof_source": "proofs/order/prf-sup-unique.tex",
           "proof_path": "volume-i/book-sets/orderings/proofs/order/prf-sup-unique.tex",
           "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-sup-unique.tex",
-          "theorem_dependency_ids": [
-            "def:sup-inf"
-          ],
+          "theorem_dependency_ids": [],
           "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:sup-inf"
-          ],
+          "graph_dependency_ids": [],
           "markdown": "   > **Statement.**\n   > Let $(A, \\leq)$ be a poset and $S \\subseteq A$. If $\\sup S$ exists, it is\n   > unique. If $\\inf S$ exists, it is unique."
         },
         {
@@ -4362,12 +4502,14 @@
           "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-sup-char.tex",
           "theorem_dependency_ids": [
             "def:sup-inf",
-            "def:bounds"
+            "def:upper-bound",
+            "def:lower-bound"
           ],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [
             "def:sup-inf",
-            "def:bounds"
+            "def:upper-bound",
+            "def:lower-bound"
           ],
           "markdown": "   > **Statement.**\n   > Let $(A, \\leq)$ be a poset, $S \\subseteq A$, and $u^* \\in A$. Then\n   > $u^* = \\sup S$ if and only if:\n   > - [label=(\\roman*)]\n   > - $u^*$ is an upper bound of $S$; and\n   > - for every $v \\in A$ with $v < u^*$, there exists $s \\in S$ with\n   >  $v < s$."
         },
@@ -4394,15 +4536,9 @@
           "proof_source": "proofs/order/prf-sup-inf-duality.tex",
           "proof_path": "volume-i/book-sets/orderings/proofs/order/prf-sup-inf-duality.tex",
           "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-sup-inf-duality.tex",
-          "theorem_dependency_ids": [
-            "prop:order-duality",
-            "def:sup-inf"
-          ],
+          "theorem_dependency_ids": [],
           "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "prop:order-duality",
-            "def:sup-inf"
-          ],
+          "graph_dependency_ids": [],
           "markdown": "   > **Statement.**\n   > Let $(A, \\leq)$ be a poset and $S \\subseteq A$. Then\n   > $\\inf_{(A,\\leq)} S = \\sup_{(A,\\geq)} S$,\n   > where $(A,\\geq)$ denotes the dual poset.\n   >\n   > In particular: if every nonempty bounded-above subset of $(A,\\leq)$ has a\n   > supremum, then every nonempty bounded-below subset of $(A,\\leq)$ has an\n   > infimum."
         },
         {
@@ -4572,9 +4708,9 @@
         {
           "id": "thm:countable-union",
           "status": "open",
-          "title": "Countable union of countable sets is countable",
+          "title": "Countable Union of Countable Sets",
           "kind": "Theorem",
-          "statement": "Let $\\{A_n\\}_{n \\in \\mathbb{N}}$ be a countable family of countable sets.\nThen $\\bigcup_{n=1}^{\\infty} A_n$ is countable.",
+          "statement": "Let $\\{A_n\\}_{n\\in\\mathbb{N}}$ be a countable family of countable sets.\nThen $\\bigcup_{n=1}^{\\infty}A_n$ is countable.",
           "volume": 1,
           "volume_roman": "i",
           "volume_title": "Logic, Sets, and Proof",
@@ -4599,7 +4735,7 @@
           "graph_dependency_ids": [
             "def:countable"
           ],
-          "markdown": "   > **Statement.**\n   > Let $\\{A_n\\}_{n \\in \\mathbb{N}}$ be a countable family of countable sets.\n   > Then $\\bigcup_{n=1}^{\\infty} A_n$ is countable."
+          "markdown": "   > **Statement.**\n   > Let $\\{A_n\\}_{n\\in\\mathbb{N}}$ be a countable family of countable sets.\n   > Then $\\bigcup_{n=1}^{\\infty}A_n$ is countable."
         },
         {
           "id": "thm:R-uncountable",
@@ -4642,7 +4778,7 @@
           "status": "open",
           "title": "Cantor's Theorem",
           "kind": "Theorem",
-          "statement": "For any set $A$, there is no surjection $A \\to \\mathcal{P}(A)$. In\nparticular, $|A| < |\\mathcal{P}(A)|$.",
+          "statement": "For any set $A$, there is no surjection $A\\to\\mathcal{P}(A)$. In particular,\n$|A|<|\\mathcal{P}(A)|$.",
           "volume": 1,
           "volume_roman": "i",
           "volume_title": "Logic, Sets, and Proof",
@@ -4663,14 +4799,14 @@
           "theorem_dependency_ids": [],
           "proof_dependency_ids": [],
           "graph_dependency_ids": [],
-          "markdown": "   > **Statement.**\n   > For any set $A$, there is no surjection $A \\to \\mathcal{P}(A)$. In\n   > particular, $|A| < |\\mathcal{P}(A)|$."
+          "markdown": "   > **Statement.**\n   > For any set $A$, there is no surjection $A\\to\\mathcal{P}(A)$. In particular,\n   > $|A|<|\\mathcal{P}(A)|$."
         },
         {
           "id": "thm:schroder-bernstein",
           "status": "open",
           "title": "Schr\\\"{o}der--Bernstein Theorem",
           "kind": "Theorem",
-          "statement": "If $|A| \\leq |B|$ and $|B| \\leq |A|$, then $A \\sim B$.\n\nEquivalently: if there exist injections $f : A \\hookrightarrow B$ and\n$g : B \\hookrightarrow A$, then there exists a bijection $h : A \\to B$.",
+          "statement": "If $|A|\\leq |B|$ and $|B|\\leq |A|$, then $A\\sim B$.\nEquivalently, if there exist injections $f:A\\hookrightarrow B$ and\n$g:B\\hookrightarrow A$, then there exists a bijection $h:A\\to B$.",
           "volume": 1,
           "volume_roman": "i",
           "volume_title": "Logic, Sets, and Proof",
@@ -4695,7 +4831,7 @@
           "graph_dependency_ids": [
             "def:cardinality-order"
           ],
-          "markdown": "   > **Statement.**\n   > If $|A| \\leq |B|$ and $|B| \\leq |A|$, then $A \\sim B$.\n   >\n   > Equivalently: if there exist injections $f : A \\hookrightarrow B$ and\n   > $g : B \\hookrightarrow A$, then there exists a bijection $h : A \\to B$."
+          "markdown": "   > **Statement.**\n   > If $|A|\\leq |B|$ and $|B|\\leq |A|$, then $A\\sim B$.\n   > Equivalently, if there exist injections $f:A\\hookrightarrow B$ and\n   > $g:B\\hookrightarrow A$, then there exists a bijection $h:A\\to B$."
         }
       ]
     },
@@ -4704,7 +4840,7 @@
       "roman": "ii",
       "title": "Origins of Numbers",
       "repo": "lra-volume-ii",
-      "open_count": 517,
+      "open_count": 518,
       "completed_count": 0,
       "items": [
         {
@@ -5620,6 +5756,38 @@
             "prop:substitution-preserves-operations-full"
           ],
           "markdown": "   > **Statement.**\n   > Every function, predicate, relation, and operation respects equality in its\n   > displayed arguments."
+        },
+        {
+          "id": "thm:general-associativity",
+          "status": "open",
+          "title": "General Associativity",
+          "kind": "Theorem",
+          "statement": "If $O$ is associative, then every bracketing of\n$x_1\\mathbin{O}\\cdots\\mathbin{O}x_n$ has the same value.",
+          "volume": 2,
+          "volume_roman": "ii",
+          "volume_title": "Origins of Numbers",
+          "repo": "lra-volume-ii",
+          "book": "discrete-number-systems",
+          "book_title": "Discrete Number Systems",
+          "book_dir": "volume-ii/book-discrete-algebraic",
+          "chapter": "arithmetic-operations-relations",
+          "chapter_title": "Arithmetic Operations Relations",
+          "section": "algebraic-laws",
+          "section_title": "Algebraic Laws",
+          "source": "notes/algebraic-laws/notes-algebraic-laws.tex",
+          "source_path": "volume-ii/book-discrete-algebraic/arithmetic-operations-relations/notes/algebraic-laws/notes-algebraic-laws.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-discrete-algebraic/arithmetic-operations-relations/notes/algebraic-laws/notes-algebraic-laws.tex",
+          "proof_source": "proofs/algebraic-laws/prf-general-associativity.tex",
+          "proof_path": "volume-ii/book-discrete-algebraic/arithmetic-operations-relations/proofs/algebraic-laws/prf-general-associativity.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-discrete-algebraic/arithmetic-operations-relations/proofs/algebraic-laws/prf-general-associativity.tex",
+          "theorem_dependency_ids": [
+            "def:associativity"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:associativity"
+          ],
+          "markdown": "   > **Statement.**\n   > If $O$ is associative, then every bracketing of\n   > $x_1\\mathbin{O}\\cdots\\mathbin{O}x_n$ has the same value."
         },
         {
           "id": "thm:general-commutativity",
@@ -22514,7 +22682,7 @@
       "roman": "iii",
       "title": "Classical Analysis",
       "repo": "lra-volume-iii",
-      "open_count": 491,
+      "open_count": 492,
       "completed_count": 0,
       "items": [
         {
@@ -33782,17 +33950,9 @@
           "proof_source": "proofs/gauge/prf-cousins-theorem.tex",
           "proof_path": "volume-iii/book-analysis-ii/continuity/proofs/gauge/prf-cousins-theorem.tex",
           "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-ii/continuity/proofs/gauge/prf-cousins-theorem.tex",
-          "theorem_dependency_ids": [
-            "def:tagged-partition",
-            "def:gauge",
-            "def:delta-fine-partition"
-          ],
+          "theorem_dependency_ids": [],
           "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:tagged-partition",
-            "def:gauge",
-            "def:delta-fine-partition"
-          ],
+          "graph_dependency_ids": [],
           "markdown": "   > **Statement.**\n   > Every gauge $\\delta:[a,b]\\to(0,\\infty)$ on a closed interval $[a,b]$\n   > admits a $\\delta$-fine tagged partition of $[a,b]$."
         },
         {
@@ -35434,13 +35594,9 @@
           "proof_source": "proofs/derivative-definition/prf-differentiable-implies-continuous.tex",
           "proof_path": "volume-iii/book-analysis-ii/differentiation/proofs/derivative-definition/prf-differentiable-implies-continuous.tex",
           "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-ii/differentiation/proofs/derivative-definition/prf-differentiable-implies-continuous.tex",
-          "theorem_dependency_ids": [
-            "def:derivative-at-a-point"
-          ],
+          "theorem_dependency_ids": [],
           "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:derivative-at-a-point"
-          ],
+          "graph_dependency_ids": [],
           "markdown": "   > **Statement.**\n   > Let $f : A \\to \\mathbb{R}$ and $c \\in A$. If $f$ is differentiable at $c$, then $f$ is continuous at $c$."
         },
         {
@@ -37714,6 +37870,38 @@
           "markdown": "   > **Statement.**\n   > If \\(f\\) and \\(|f|\\) are Cauchy-integrable on \\([a,b]\\), then\n   > \\[\n   >  \\left|\\int_a^b f\\,dx\\right|\\le \\int_a^b |f|\\,dx .\n   > \\]"
         },
         {
+          "id": "thm:cauchy-integral-interval-additivity",
+          "status": "open",
+          "title": "Interval Additivity for the Cauchy Integral",
+          "kind": "Theorem",
+          "statement": "If \\(c\\in[a,b]\\) and \\(f\\) is Cauchy-integrable on the relevant intervals,\nthen\n\\[\n \\int_a^b f\\,dx=\\int_a^c f\\,dx+\\int_c^b f\\,dx .\n\\]",
+          "volume": 3,
+          "volume_roman": "iii",
+          "volume_title": "Classical Analysis",
+          "repo": "lra-volume-iii",
+          "book": "integration",
+          "book_title": "Integration",
+          "book_dir": "volume-iii/book-integration",
+          "chapter": "riemann-integration",
+          "chapter_title": "Riemann Integration",
+          "section": "cauchy-integral",
+          "section_title": "Cauchy Integral",
+          "source": "notes/cauchy-integral/notes-cauchy-integral.tex",
+          "source_path": "volume-iii/book-integration/riemann-integration/notes/cauchy-integral/notes-cauchy-integral.tex",
+          "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-integration/riemann-integration/notes/cauchy-integral/notes-cauchy-integral.tex",
+          "proof_source": "proofs/cauchy-integral/prf-cauchy-integral-interval-additivity.tex",
+          "proof_path": "volume-iii/book-integration/riemann-integration/proofs/cauchy-integral/prf-cauchy-integral-interval-additivity.tex",
+          "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-integration/riemann-integration/proofs/cauchy-integral/prf-cauchy-integral-interval-additivity.tex",
+          "theorem_dependency_ids": [
+            "def:cauchy-integral"
+          ],
+          "proof_dependency_ids": [],
+          "graph_dependency_ids": [
+            "def:cauchy-integral"
+          ],
+          "markdown": "   > **Statement.**\n   > If \\(c\\in[a,b]\\) and \\(f\\) is Cauchy-integrable on the relevant intervals,\n   > then\n   > \\[\n   >  \\int_a^b f\\,dx=\\int_a^c f\\,dx+\\int_c^b f\\,dx .\n   > \\]"
+        },
+        {
           "id": "thm:continuous-cauchy-integrable",
           "status": "open",
           "title": "Continuous Functions Are Cauchy-Integrable",
@@ -39658,7 +39846,7 @@
           "status": "open",
           "title": "Closure of a Bounded Set Is Bounded",
           "kind": "Theorem",
-          "statement": "Let \\((X,d)\\) be a metric space. If \\(A\\subseteq X\\) is bounded, then\n\\(\\operatorname{cl}(A)\\) is bounded.",
+          "statement": "Let \\((X,d)\\) be a metric space. If \\(A\\subseteq X\\) is bounded, then\n\\(\\operatorname{Closure}(A)\\) is bounded.",
           "volume": 4,
           "volume_roman": "iv",
           "volume_title": "Mathematical Spaces",
@@ -39685,7 +39873,7 @@
             "def:metric-bounded-set",
             "def:metric-closure"
           ],
-          "markdown": "   > **Statement.**\n   > Let \\((X,d)\\) be a metric space. If \\(A\\subseteq X\\) is bounded, then\n   > \\(\\operatorname{cl}(A)\\) is bounded."
+          "markdown": "   > **Statement.**\n   > Let \\((X,d)\\) be a metric space. If \\(A\\subseteq X\\) is bounded, then\n   > \\(\\operatorname{Closure}(A)\\) is bounded."
         },
         {
           "id": "thm:metric-compact-sets-bounded",
@@ -40624,7 +40812,7 @@
           "status": "open",
           "title": "Closure of an Open Ball Is Contained in the Closed Ball",
           "kind": "Theorem",
-          "statement": "Let \\((X,d)\\) be a metric space. For every \\(x\\in X\\) and every \\(r>0\\),\n\\[\n \\operatorname{cl}\\bigl(B_d(x;r)\\bigr)\\subseteq \\overline{B}_d(x;r).\n\\]",
+          "statement": "Let \\((X,d)\\) be a metric space. For every \\(x\\in X\\) and every \\(r>0\\),\n\\[\n \\operatorname{Closure}\\bigl(B_d(x;r)\\bigr)\\subseteq \\overline{B}_d(x;r).\n\\]",
           "volume": 4,
           "volume_roman": "iv",
           "volume_title": "Mathematical Spaces",
@@ -40653,7 +40841,7 @@
             "def:metric-closed-ball",
             "def:metric-closure"
           ],
-          "markdown": "   > **Statement.**\n   > Let \\((X,d)\\) be a metric space. For every \\(x\\in X\\) and every \\(r>0\\),\n   > \\[\n   >  \\operatorname{cl}\\bigl(B_d(x;r)\\bigr)\\subseteq \\overline{B}_d(x;r).\n   > \\]"
+          "markdown": "   > **Statement.**\n   > Let \\((X,d)\\) be a metric space. For every \\(x\\in X\\) and every \\(r>0\\),\n   > \\[\n   >  \\operatorname{Closure}\\bigl(B_d(x;r)\\bigr)\\subseteq \\overline{B}_d(x;r).\n   > \\]"
         },
         {
           "id": "thm:metric-interior-largest-open-subset",
@@ -40955,527 +41143,9 @@
       "roman": "vi",
       "title": "Algebra",
       "repo": "lra-volume-vi",
-      "open_count": 32,
+      "open_count": 17,
       "completed_count": 0,
       "items": [
-        {
-          "id": "prop:identity-collapse",
-          "status": "open",
-          "title": "Identity Collapse and Uniqueness",
-          "kind": "Proposition",
-          "statement": "If $\\star$ has a left identity $e_L$ and a right identity $e_R$, then\n$e_L=e_R$. Consequently a two-sided identity, if it exists, is unique.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "proof_source": "proofs/mathematical-structures/prf-identity-collapse.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-identity-collapse.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-identity-collapse.tex",
-          "theorem_dependency_ids": [
-            "def:left-identity",
-            "def:right-identity"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:left-identity",
-            "def:right-identity"
-          ],
-          "markdown": "   > **Statement.**\n   > If $\\star$ has a left identity $e_L$ and a right identity $e_R$, then\n   > $e_L=e_R$. Consequently a two-sided identity, if it exists, is unique."
-        },
-        {
-          "id": "prop:absorbing-unique",
-          "status": "open",
-          "title": "Uniqueness of the Absorbing Element",
-          "kind": "Proposition",
-          "statement": "A two-sided absorbing element, if it exists, is unique.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "proof_source": "proofs/mathematical-structures/prf-absorbing-unique.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-absorbing-unique.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-absorbing-unique.tex",
-          "theorem_dependency_ids": [
-            "def:absorbing"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:absorbing"
-          ],
-          "markdown": "   > **Statement.**\n   > A two-sided absorbing element, if it exists, is unique."
-        },
-        {
-          "id": "thm:general-associativity",
-          "status": "open",
-          "title": "General Associativity",
-          "kind": "Theorem",
-          "statement": "If $\\star$ is associative, then any finite product\n$a_1\\star a_2\\star\\cdots\\star a_n$ has a value independent of\nparenthesization.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "proof_source": "proofs/mathematical-structures/prf-general-associativity.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-general-associativity.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-general-associativity.tex",
-          "theorem_dependency_ids": [
-            "def:associativity",
-            "def:assoc"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:associativity",
-            "def:assoc"
-          ],
-          "markdown": "   > **Statement.**\n   > If $\\star$ is associative, then any finite product\n   > $a_1\\star a_2\\star\\cdots\\star a_n$ has a value independent of\n   > parenthesization."
-        },
-        {
-          "id": "prop:inverse-collapse",
-          "status": "open",
-          "title": "Inverse Collapse and Uniqueness in a Monoid",
-          "kind": "Proposition",
-          "statement": "If $\\star$ is associative with identity $e$, and $a$ has a left inverse $b$\nand a right inverse $c$, then $b=c$. Hence the inverse of an invertible\nelement is unique.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "proof_source": "proofs/mathematical-structures/prf-inverse-collapse.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-inverse-collapse.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-inverse-collapse.tex",
-          "theorem_dependency_ids": [
-            "def:identity",
-            "def:algebraic-left-inverse",
-            "def:algebraic-right-inverse",
-            "thm:general-associativity"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:identity",
-            "def:algebraic-left-inverse",
-            "def:algebraic-right-inverse",
-            "thm:general-associativity"
-          ],
-          "markdown": "   > **Statement.**\n   > If $\\star$ is associative with identity $e$, and $a$ has a left inverse $b$\n   > and a right inverse $c$, then $b=c$. Hence the inverse of an invertible\n   > element is unique."
-        },
-        {
-          "id": "prop:units-form-group",
-          "status": "open",
-          "title": "Units of a Monoid Form a Group",
-          "kind": "Proposition",
-          "statement": "In a monoid $(A,\\star,e)$, the set $A^\\times$ of invertible elements is\nclosed under $\\star$ and forms a group.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "proof_source": "proofs/mathematical-structures/prf-units-form-group.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-units-form-group.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-units-form-group.tex",
-          "theorem_dependency_ids": [
-            "def:invertible",
-            "def:monoid",
-            "def:group"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:invertible",
-            "def:monoid",
-            "def:group"
-          ],
-          "markdown": "   > **Statement.**\n   > In a monoid $(A,\\star,e)$, the set $A^\\times$ of invertible elements is\n   > closed under $\\star$ and forms a group."
-        },
-        {
-          "id": "prop:invertible-implies-cancellable",
-          "status": "open",
-          "title": "Invertible Implies Cancellable",
-          "kind": "Proposition",
-          "statement": "In a monoid, every invertible element is cancellable.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-          "proof_source": "proofs/mathematical-structures/prf-invertible-implies-cancellable.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-invertible-implies-cancellable.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-invertible-implies-cancellable.tex",
-          "theorem_dependency_ids": [
-            "def:invertible",
-            "def:cancellable",
-            "def:monoid"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:invertible",
-            "def:cancellable",
-            "def:monoid"
-          ],
-          "markdown": "   > **Statement.**\n   > In a monoid, every invertible element is cancellable."
-        },
-        {
-          "id": "prop:group-identity-unique",
-          "status": "open",
-          "title": "Uniqueness of the Identity in a Group",
-          "kind": "Proposition",
-          "statement": "The identity of a group is unique.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "proof_source": "proofs/mathematical-structures/prf-group-identity-unique.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-group-identity-unique.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-group-identity-unique.tex",
-          "theorem_dependency_ids": [
-            "prop:identity-collapse",
-            "def:group"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "prop:identity-collapse",
-            "def:group"
-          ],
-          "markdown": "   > **Statement.**\n   > The identity of a group is unique."
-        },
-        {
-          "id": "prop:group-inverse-unique",
-          "status": "open",
-          "title": "Uniqueness of Inverses in a Group",
-          "kind": "Proposition",
-          "statement": "Each element of a group has a unique inverse.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "proof_source": "proofs/mathematical-structures/prf-group-inverse-unique.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-group-inverse-unique.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-group-inverse-unique.tex",
-          "theorem_dependency_ids": [
-            "prop:inverse-collapse",
-            "def:group"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "prop:inverse-collapse",
-            "def:group"
-          ],
-          "markdown": "   > **Statement.**\n   > Each element of a group has a unique inverse."
-        },
-        {
-          "id": "prop:group-cancellation",
-          "status": "open",
-          "title": "Cancellation Laws in a Group",
-          "kind": "Proposition",
-          "statement": "In a group, $ab=ac$ implies $b=c$, and $ba=ca$ implies $b=c$.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "proof_source": "proofs/mathematical-structures/prf-group-cancellation.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-group-cancellation.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-group-cancellation.tex",
-          "theorem_dependency_ids": [
-            "prop:invertible-implies-cancellable",
-            "def:group"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "prop:invertible-implies-cancellable",
-            "def:group"
-          ],
-          "markdown": "   > **Statement.**\n   > In a group, $ab=ac$ implies $b=c$, and $ba=ca$ implies $b=c$."
-        },
-        {
-          "id": "prop:socks-shoes",
-          "status": "open",
-          "title": "Socks--Shoes",
-          "kind": "Proposition",
-          "statement": "In a group, $(ab)^{-1}=b^{-1}a^{-1}$.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "proof_source": "proofs/mathematical-structures/prf-socks-shoes.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-socks-shoes.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-socks-shoes.tex",
-          "theorem_dependency_ids": [
-            "def:inverse",
-            "def:group"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:inverse",
-            "def:group"
-          ],
-          "markdown": "   > **Statement.**\n   > In a group, $(ab)^{-1}=b^{-1}a^{-1}$."
-        },
-        {
-          "id": "prop:ring-mult-zero",
-          "status": "open",
-          "title": "Multiplication by Zero",
-          "kind": "Proposition",
-          "statement": "In a ring, $a\\cdot 0=0\\cdot a=0$ for all $a$.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "proof_source": "proofs/rings/prf-ring-mult-zero.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/rings/prf-ring-mult-zero.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/rings/prf-ring-mult-zero.tex",
-          "theorem_dependency_ids": [
-            "def:distrib",
-            "def:ring"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:distrib",
-            "def:ring"
-          ],
-          "markdown": "   > **Statement.**\n   > In a ring, $a\\cdot 0=0\\cdot a=0$ for all $a$."
-        },
-        {
-          "id": "prop:ring-mult-neg",
-          "status": "open",
-          "title": "Multiplication by Additive Inverse",
-          "kind": "Proposition",
-          "statement": "In a ring,\n\\[\na\\cdot(-b)=-(a\\cdot b)=(-a)\\cdot b.\n\\]\nIn a ring, $(-1)\\cdot a=-a$.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "proof_source": "proofs/rings/prf-ring-mult-neg.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/rings/prf-ring-mult-neg.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/rings/prf-ring-mult-neg.tex",
-          "theorem_dependency_ids": [
-            "def:additive-inverse",
-            "def:ring",
-            "prop:ring-mult-zero"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:additive-inverse",
-            "def:ring",
-            "prop:ring-mult-zero"
-          ],
-          "markdown": "   > **Statement.**\n   > In a ring,\n   > \\[\n   > a\\cdot(-b)=-(a\\cdot b)=(-a)\\cdot b.\n   > \\]\n   > In a ring, $(-1)\\cdot a=-a$."
-        },
-        {
-          "id": "prop:domain-cancellation",
-          "status": "open",
-          "title": "Cancellation in Integral Domains",
-          "kind": "Proposition",
-          "statement": "In an integral domain, if $a\\neq 0$ and $ab=ac$, then $b=c$.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "proof_source": "proofs/rings/prf-domain-cancellation.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/rings/prf-domain-cancellation.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/rings/prf-domain-cancellation.tex",
-          "theorem_dependency_ids": [
-            "def:zero-divisor",
-            "def:integral-domain"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:zero-divisor",
-            "def:integral-domain"
-          ],
-          "markdown": "   > **Statement.**\n   > In an integral domain, if $a\\neq 0$ and $ab=ac$, then $b=c$."
-        },
-        {
-          "id": "prop:field-is-domain",
-          "status": "open",
-          "title": "Every Field is an Integral Domain",
-          "kind": "Proposition",
-          "statement": "Every field is an integral domain.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "proof_source": "proofs/mathematical-structures/prf-field-is-domain.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-field-is-domain.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-field-is-domain.tex",
-          "theorem_dependency_ids": [
-            "def:integral-domain",
-            "def:field"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:integral-domain",
-            "def:field"
-          ],
-          "markdown": "   > **Statement.**\n   > Every field is an integral domain."
-        },
-        {
-          "id": "prop:finite-domain-is-field",
-          "status": "open",
-          "title": "Finite Integral Domain is a Field",
-          "kind": "Proposition",
-          "statement": "Every finite integral domain is a field.",
-          "volume": 6,
-          "volume_roman": "vi",
-          "volume_title": "Algebra",
-          "repo": "lra-volume-vi",
-          "book": "algebra",
-          "book_title": "Algebra",
-          "book_dir": "volume-vi/book-algebra",
-          "chapter": "algebraic-structures",
-          "chapter_title": "Algebraic Structures",
-          "section": "mathematical-structures",
-          "section_title": "Mathematical Structures",
-          "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-          "proof_source": "proofs/mathematical-structures/prf-finite-domain-is-field.tex",
-          "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-finite-domain-is-field.tex",
-          "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-finite-domain-is-field.tex",
-          "theorem_dependency_ids": [
-            "def:integral-domain",
-            "def:field"
-          ],
-          "proof_dependency_ids": [],
-          "graph_dependency_ids": [
-            "def:integral-domain",
-            "def:field"
-          ],
-          "markdown": "   > **Statement.**\n   > Every finite integral domain is a field."
-        },
         {
           "id": "thm:hilbert-basis-theorem",
           "status": "open",
@@ -41953,7 +41623,7 @@
           "status": "open",
           "title": "Every Nonempty Finite Poset Has a Maximal Element",
           "kind": "Proposition",
-          "statement": "Let $(P, \\leq)$ be a finite partially ordered set. Then every nonempty\nsubset $Q \\subseteq P$ has at least one maximal element. Furthermore,\nfor every $x \\in P$ there exists $y \\in \\operatorname{Max}(P)$ with\n$x \\leq y$.",
+          "statement": "Let $(P, \\leq)$ be a finite partially ordered set. Then every nonempty\nsubset $Q \\subseteq P$ has at least one maximal element. Furthermore,\nfor every $x \\in P$ there exists a maximal element $y \\in P$ with\n$x \\leq y$.",
           "volume": 6,
           "volume_roman": "vi",
           "volume_title": "Algebra",
@@ -41980,7 +41650,7 @@
             "def:maximal-element",
             "def:lattice-order-partial-order"
           ],
-          "markdown": "   > **Statement.**\n   > Let $(P, \\leq)$ be a finite partially ordered set. Then every nonempty\n   > subset $Q \\subseteq P$ has at least one maximal element. Furthermore,\n   > for every $x \\in P$ there exists $y \\in \\operatorname{Max}(P)$ with\n   > $x \\leq y$."
+          "markdown": "   > **Statement.**\n   > Let $(P, \\leq)$ be a finite partially ordered set. Then every nonempty\n   > subset $Q \\subseteq P$ has at least one maximal element. Furthermore,\n   > for every $x \\in P$ there exists a maximal element $y \\in P$ with\n   > $x \\leq y$."
         },
         {
           "id": "prop:predicates-power-sets-iso",
@@ -44165,13 +43835,11 @@
       "proof_path": "volume-i/book-logic/predicate-logic/proofs/proof-theory/prf-eq-sym.tex",
       "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-logic/predicate-logic/proofs/proof-theory/prf-eq-sym.tex",
       "theorem_dependency_ids": [
-        "def:eq-refl",
-        "def:eq-elim"
+        "def:term"
       ],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [
-        "def:eq-refl",
-        "def:eq-elim"
+        "def:term"
       ],
       "markdown": "   > **Statement.**\n   > From $t_1 = t_2$, one may infer $t_2 = t_1$."
     },
@@ -44200,12 +43868,14 @@
       "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-logic/predicate-logic/proofs/proof-theory/prf-eq-trans.tex",
       "theorem_dependency_ids": [
         "def:eq-refl",
-        "def:eq-elim"
+        "def:eq-elim",
+        "def:term"
       ],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [
         "def:eq-refl",
-        "def:eq-elim"
+        "def:eq-elim",
+        "def:term"
       ],
       "markdown": "   > **Statement.**\n   > From $t_1 = t_2$ and $t_2 = t_3$, one may infer $t_1 = t_3$."
     },
@@ -44312,6 +43982,40 @@
         "def:fol-satisfaction"
       ],
       "markdown": "   > **Statement.**\n   > The standard inference rules for first-order logic (UI, UG, EI, EG, and the\n   > propositional rules) are sound: they preserve truth in all structures.\n   >\n   > If $\\Gamma \\vdash \\varphi$, then $\\Gamma \\models \\varphi$."
+    },
+    {
+      "id": "thm:godel-complete",
+      "status": "open",
+      "title": "G\\\"{o}del's Completeness Theorem",
+      "kind": "Theorem",
+      "statement": "First-order logic is complete: every logically valid formula is provable.\n\\[\n\\Gamma \\models \\varphi \\implies \\Gamma \\vdash \\varphi.\n\\]\nEquivalently: if a set of sentences $\\Gamma$ is consistent (has no proof of\ncontradiction), then $\\Gamma$ has a model.",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "repo": "lra-volume-i",
+      "book": "mathematical-logic-and-proof",
+      "book_title": "Mathematical Logic and Proof",
+      "book_dir": "volume-i/book-logic",
+      "chapter": "predicate-logic",
+      "chapter_title": "Predicate Logic",
+      "section": "proof-theory",
+      "section_title": "Proof Theory",
+      "source": "notes/proof-theory/notes-soundness-completeness.tex",
+      "source_path": "volume-i/book-logic/predicate-logic/notes/proof-theory/notes-soundness-completeness.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-logic/predicate-logic/notes/proof-theory/notes-soundness-completeness.tex",
+      "proof_source": "proofs/proof-theory/prf-godel-complete.tex",
+      "proof_path": "volume-i/book-logic/predicate-logic/proofs/proof-theory/prf-godel-complete.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-logic/predicate-logic/proofs/proof-theory/prf-godel-complete.tex",
+      "theorem_dependency_ids": [
+        "def:log-consequence",
+        "def:fol-satisfaction"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:log-consequence",
+        "def:fol-satisfaction"
+      ],
+      "markdown": "   > **Statement.**\n   > First-order logic is complete: every logically valid formula is provable.\n   > \\[\n   > \\Gamma \\models \\varphi \\implies \\Gamma \\vdash \\varphi.\n   > \\]\n   > Equivalently: if a set of sentences $\\Gamma$ is consistent (has no proof of\n   > contradiction), then $\\Gamma$ has a model."
     },
     {
       "id": "thm:qneg",
@@ -45899,19 +45603,19 @@
       "theorem_dependency_ids": [
         "def:composition",
         "def:invertible-function",
+        "def:inverse",
         "def:function",
         "def:bijective",
-        "def:identity",
-        "def:inverse"
+        "def:identity"
       ],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [
         "def:composition",
         "def:invertible-function",
+        "def:inverse",
         "def:function",
         "def:bijective",
-        "def:identity",
-        "def:inverse"
+        "def:identity"
       ],
       "markdown": "   > **Statement.**\n   > Let $f : A \\to B$ be bijective. Then\n   > \\[\n   > f^{-1} \\circ f = \\id_A\n   > \\quad\\text{and}\\quad\n   > f \\circ f^{-1} = \\id_B.\n   > \\]\n   > Conversely, a function admits an inverse iff it is bijective."
     },
@@ -45940,16 +45644,16 @@
       "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/functions/proofs/functions/prf-inverse-comp.tex",
       "theorem_dependency_ids": [
         "def:composition",
+        "def:inverse",
         "def:function",
-        "def:bijective",
-        "def:inverse"
+        "def:bijective"
       ],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [
         "def:composition",
+        "def:inverse",
         "def:function",
-        "def:bijective",
-        "def:inverse"
+        "def:bijective"
       ],
       "markdown": "   > **Statement.**\n   > Let $f : A \\to B$ and $g : B \\to C$ be bijective. Then $g \\circ f$ is\n   > bijective and\n   > \\[\n   > (g \\circ f)^{-1} = f^{-1} \\circ g^{-1}.\n   > \\]"
     },
@@ -46318,9 +46022,41 @@
       "markdown": "   > **Statement.**\n   > Let $f:A\\to B$ be a function. Then $f$ is bijective if and only if\n   > \\[\n   > \\forall a\\in A\\,\\exists! b\\in B,\\quad f(a)=b,\n   > \\]\n   > and\n   > \\[\n   > \\forall b\\in B\\,\\exists! a\\in A,\\quad f(a)=b.\n   > \\]"
     },
     {
+      "id": "thm:szpilrajn",
+      "status": "open",
+      "title": "Szpilrajn Extension Theorem",
+      "kind": "Theorem",
+      "statement": "For any nonempty set $X$ and partial order $\\succsim$ on $X$, there exists a\nlinear order that is an extension of $\\succsim$.",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "repo": "lra-volume-i",
+      "book": "set-theory",
+      "book_title": "Set Theory",
+      "book_dir": "volume-i/book-sets",
+      "chapter": "orderings",
+      "chapter_title": "Orderings",
+      "section": "order",
+      "section_title": "Order",
+      "source": "notes/order/notes-order-extensions.tex",
+      "source_path": "volume-i/book-sets/orderings/notes/order/notes-order-extensions.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/notes/order/notes-order-extensions.tex",
+      "proof_source": "proofs/order/prf-szpilrajn.tex",
+      "proof_path": "volume-i/book-sets/orderings/proofs/order/prf-szpilrajn.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-szpilrajn.tex",
+      "theorem_dependency_ids": [
+        "def:preorder-extension"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:preorder-extension"
+      ],
+      "markdown": "   > **Statement.**\n   > For any nonempty set $X$ and partial order $\\succsim$ on $X$, there exists a\n   > linear order that is an extension of $\\succsim$."
+    },
+    {
       "id": "cor:complete-preorder-extension",
       "status": "open",
-      "title": "Complete preorder extension",
+      "title": "Complete Preorder Extension",
       "kind": "Corollary",
       "statement": "For any nonempty set $X$ and preorder $\\succsim$ on $X$, there exists a\ncomplete preorder that is an extension of $\\succsim$.",
       "volume": 1,
@@ -46342,14 +46078,52 @@
       "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-complete-preorder-extension.tex",
       "theorem_dependency_ids": [
         "def:sym-asym",
-        "def:preorder-extension"
+        "def:preorder-extension",
+        "thm:szpilrajn"
       ],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [
         "def:sym-asym",
-        "def:preorder-extension"
+        "def:preorder-extension",
+        "thm:szpilrajn"
       ],
       "markdown": "   > **Statement.**\n   > For any nonempty set $X$ and preorder $\\succsim$ on $X$, there exists a\n   > complete preorder that is an extension of $\\succsim$."
+    },
+    {
+      "id": "prop:owc-characterization",
+      "status": "open",
+      "title": "Only Weak Cycles Characterization",
+      "kind": "Proposition",
+      "statement": "A binary relation $\\succsim$ on a nonempty set $X$ can be extended to a\ncomplete preorder if and only if it satisfies only weak cycles.",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "repo": "lra-volume-i",
+      "book": "set-theory",
+      "book_title": "Set Theory",
+      "book_dir": "volume-i/book-sets",
+      "chapter": "orderings",
+      "chapter_title": "Orderings",
+      "section": "order",
+      "section_title": "Order",
+      "source": "notes/order/notes-order-extensions.tex",
+      "source_path": "volume-i/book-sets/orderings/notes/order/notes-order-extensions.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/notes/order/notes-order-extensions.tex",
+      "proof_source": "proofs/order/prf-owc-characterization.tex",
+      "proof_path": "volume-i/book-sets/orderings/proofs/order/prf-owc-characterization.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-owc-characterization.tex",
+      "theorem_dependency_ids": [
+        "def:preorder-extension",
+        "cor:complete-preorder-extension",
+        "def:owc"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:preorder-extension",
+        "cor:complete-preorder-extension",
+        "def:owc"
+      ],
+      "markdown": "   > **Statement.**\n   > A binary relation $\\succsim$ on a nonempty set $X$ can be extended to a\n   > complete preorder if and only if it satisfies only weak cycles."
     },
     {
       "id": "prop:order-duality",
@@ -46374,9 +46148,13 @@
       "proof_source": "proofs/order/prf-order-duality.tex",
       "proof_path": "volume-i/book-sets/orderings/proofs/order/prf-order-duality.tex",
       "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-order-duality.tex",
-      "theorem_dependency_ids": [],
+      "theorem_dependency_ids": [
+        "def:dual-poset"
+      ],
       "proof_dependency_ids": [],
-      "graph_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:dual-poset"
+      ],
       "markdown": "   > **Statement.**\n   > Let $\\Phi$ be any first-order statement about a poset $(A, \\leq)$ expressed\n   > using only the relation $\\leq$. Let $\\Phi^*$ be the statement obtained from\n   > $\\Phi$ by replacing every occurrence of $\\leq$ with $\\geq$ (equivalently,\n   > working in the dual poset). Then:\n   > \\[\n   >  (A, \\leq) \\models \\Phi\n   >  \\;\\;\\Longleftrightarrow\\;\\;\n   >  (A, \\geq) \\models \\Phi.\n   > \\]\n   > In particular, if $\\Phi$ is a theorem about all posets, then so is $\\Phi^*$."
     },
     {
@@ -46416,7 +46194,7 @@
       "status": "open",
       "title": "$\\leq_f$ is a partial order iff $f$ is injective",
       "kind": "Proposition",
-      "statement": "Let $(B, \\leq')$ be a partially ordered set and $f : A \\to B$.\nThe induced order $\\leq_f\n$ is a partial order on $A$ if and only if\n$f$ is injective.",
+      "statement": "Let $(B, \\leq')$ be a partially ordered set and $f : A \\to B$.\nThe induced order $\\leq_f$ is a partial order on $A$ if and only if\n$f$ is injective.",
       "volume": 1,
       "volume_roman": "i",
       "volume_title": "Logic, Sets, and Proof",
@@ -46441,7 +46219,7 @@
       "graph_dependency_ids": [
         "def:induced-order"
       ],
-      "markdown": "   > **Statement.**\n   > Let $(B, \\leq')$ be a partially ordered set and $f : A \\to B$.\n   > The induced order $\\leq_f\n   > $ is a partial order on $A$ if and only if\n   > $f$ is injective."
+      "markdown": "   > **Statement.**\n   > Let $(B, \\leq')$ be a partially ordered set and $f : A \\to B$.\n   > The induced order $\\leq_f$ is a partial order on $A$ if and only if\n   > $f$ is injective."
     },
     {
       "id": "prop:embedding-injective",
@@ -46510,6 +46288,42 @@
       "markdown": "   > **Statement.**\n   > If $f : (A, \\leq) \\to (B, \\leq')$ is an order embedding, then $f$ is an\n   > order isomorphism from $(A, \\leq)$ to the suborder $(f(A), \\leq'_{f(A)})$."
     },
     {
+      "id": "thm:knaster-tarski",
+      "status": "open",
+      "title": "Knaster--Tarski Fixed-Point Theorem",
+      "kind": "Theorem",
+      "statement": "Let $(L, \\leq)$ be a complete lattice and $f : L \\to L$ a monotone\nfunction (i.e., $a \\leq b \\Rightarrow f(a) \\leq f(b)$). Then $f$ has a\nleast fixed point and a greatest fixed point in $L$. Specifically:\n\\[\n \\mathrm{lfp}(f) = \\inf\\{\\, a \\in L : f(a) \\leq a \\,\\},\n \\qquad\n \\mathrm{gfp}(f) = \\sup\\{\\, a \\in L : a \\leq f(a) \\,\\}.\n\\]",
+      "volume": 1,
+      "volume_roman": "i",
+      "volume_title": "Logic, Sets, and Proof",
+      "repo": "lra-volume-i",
+      "book": "set-theory",
+      "book_title": "Set Theory",
+      "book_dir": "volume-i/book-sets",
+      "chapter": "orderings",
+      "chapter_title": "Orderings",
+      "section": "order",
+      "section_title": "Order",
+      "source": "notes/order/notes-order-lattices.tex",
+      "source_path": "volume-i/book-sets/orderings/notes/order/notes-order-lattices.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/notes/order/notes-order-lattices.tex",
+      "proof_source": "proofs/order/prf-knaster-tarski.tex",
+      "proof_path": "volume-i/book-sets/orderings/proofs/order/prf-knaster-tarski.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-knaster-tarski.tex",
+      "theorem_dependency_ids": [
+        "def:complete-lattice",
+        "def:distributive-lattice",
+        "def:boolean-lattice"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:complete-lattice",
+        "def:distributive-lattice",
+        "def:boolean-lattice"
+      ],
+      "markdown": "   > **Statement.**\n   > Let $(L, \\leq)$ be a complete lattice and $f : L \\to L$ a monotone\n   > function (i.e., $a \\leq b \\Rightarrow f(a) \\leq f(b)$). Then $f$ has a\n   > least fixed point and a greatest fixed point in $L$. Specifically:\n   > \\[\n   >  \\mathrm{lfp}(f) = \\inf\\{\\, a \\in L : f(a) \\leq a \\,\\},\n   >  \\qquad\n   >  \\mathrm{gfp}(f) = \\sup\\{\\, a \\in L : a \\leq f(a) \\,\\}.\n   > \\]"
+    },
+    {
       "id": "prop:sup-unique",
       "status": "open",
       "title": "Uniqueness of Supremum and Infimum",
@@ -46532,13 +46346,9 @@
       "proof_source": "proofs/order/prf-sup-unique.tex",
       "proof_path": "volume-i/book-sets/orderings/proofs/order/prf-sup-unique.tex",
       "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-sup-unique.tex",
-      "theorem_dependency_ids": [
-        "def:sup-inf"
-      ],
+      "theorem_dependency_ids": [],
       "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:sup-inf"
-      ],
+      "graph_dependency_ids": [],
       "markdown": "   > **Statement.**\n   > Let $(A, \\leq)$ be a poset and $S \\subseteq A$. If $\\sup S$ exists, it is\n   > unique. If $\\inf S$ exists, it is unique."
     },
     {
@@ -46566,12 +46376,14 @@
       "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-sup-char.tex",
       "theorem_dependency_ids": [
         "def:sup-inf",
-        "def:bounds"
+        "def:upper-bound",
+        "def:lower-bound"
       ],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [
         "def:sup-inf",
-        "def:bounds"
+        "def:upper-bound",
+        "def:lower-bound"
       ],
       "markdown": "   > **Statement.**\n   > Let $(A, \\leq)$ be a poset, $S \\subseteq A$, and $u^* \\in A$. Then\n   > $u^* = \\sup S$ if and only if:\n   > - [label=(\\roman*)]\n   > - $u^*$ is an upper bound of $S$; and\n   > - for every $v \\in A$ with $v < u^*$, there exists $s \\in S$ with\n   >  $v < s$."
     },
@@ -46598,15 +46410,9 @@
       "proof_source": "proofs/order/prf-sup-inf-duality.tex",
       "proof_path": "volume-i/book-sets/orderings/proofs/order/prf-sup-inf-duality.tex",
       "proof_url": "https://github.com/wsollers/lra-volume-i/blob/main/volume-i/book-sets/orderings/proofs/order/prf-sup-inf-duality.tex",
-      "theorem_dependency_ids": [
-        "prop:order-duality",
-        "def:sup-inf"
-      ],
+      "theorem_dependency_ids": [],
       "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "prop:order-duality",
-        "def:sup-inf"
-      ],
+      "graph_dependency_ids": [],
       "markdown": "   > **Statement.**\n   > Let $(A, \\leq)$ be a poset and $S \\subseteq A$. Then\n   > $\\inf_{(A,\\leq)} S = \\sup_{(A,\\geq)} S$,\n   > where $(A,\\geq)$ denotes the dual poset.\n   >\n   > In particular: if every nonempty bounded-above subset of $(A,\\leq)$ has a\n   > supremum, then every nonempty bounded-below subset of $(A,\\leq)$ has an\n   > infimum."
     },
     {
@@ -46776,9 +46582,9 @@
     {
       "id": "thm:countable-union",
       "status": "open",
-      "title": "Countable union of countable sets is countable",
+      "title": "Countable Union of Countable Sets",
       "kind": "Theorem",
-      "statement": "Let $\\{A_n\\}_{n \\in \\mathbb{N}}$ be a countable family of countable sets.\nThen $\\bigcup_{n=1}^{\\infty} A_n$ is countable.",
+      "statement": "Let $\\{A_n\\}_{n\\in\\mathbb{N}}$ be a countable family of countable sets.\nThen $\\bigcup_{n=1}^{\\infty}A_n$ is countable.",
       "volume": 1,
       "volume_roman": "i",
       "volume_title": "Logic, Sets, and Proof",
@@ -46803,7 +46609,7 @@
       "graph_dependency_ids": [
         "def:countable"
       ],
-      "markdown": "   > **Statement.**\n   > Let $\\{A_n\\}_{n \\in \\mathbb{N}}$ be a countable family of countable sets.\n   > Then $\\bigcup_{n=1}^{\\infty} A_n$ is countable."
+      "markdown": "   > **Statement.**\n   > Let $\\{A_n\\}_{n\\in\\mathbb{N}}$ be a countable family of countable sets.\n   > Then $\\bigcup_{n=1}^{\\infty}A_n$ is countable."
     },
     {
       "id": "thm:R-uncountable",
@@ -46846,7 +46652,7 @@
       "status": "open",
       "title": "Cantor's Theorem",
       "kind": "Theorem",
-      "statement": "For any set $A$, there is no surjection $A \\to \\mathcal{P}(A)$. In\nparticular, $|A| < |\\mathcal{P}(A)|$.",
+      "statement": "For any set $A$, there is no surjection $A\\to\\mathcal{P}(A)$. In particular,\n$|A|<|\\mathcal{P}(A)|$.",
       "volume": 1,
       "volume_roman": "i",
       "volume_title": "Logic, Sets, and Proof",
@@ -46867,14 +46673,14 @@
       "theorem_dependency_ids": [],
       "proof_dependency_ids": [],
       "graph_dependency_ids": [],
-      "markdown": "   > **Statement.**\n   > For any set $A$, there is no surjection $A \\to \\mathcal{P}(A)$. In\n   > particular, $|A| < |\\mathcal{P}(A)|$."
+      "markdown": "   > **Statement.**\n   > For any set $A$, there is no surjection $A\\to\\mathcal{P}(A)$. In particular,\n   > $|A|<|\\mathcal{P}(A)|$."
     },
     {
       "id": "thm:schroder-bernstein",
       "status": "open",
       "title": "Schr\\\"{o}der--Bernstein Theorem",
       "kind": "Theorem",
-      "statement": "If $|A| \\leq |B|$ and $|B| \\leq |A|$, then $A \\sim B$.\n\nEquivalently: if there exist injections $f : A \\hookrightarrow B$ and\n$g : B \\hookrightarrow A$, then there exists a bijection $h : A \\to B$.",
+      "statement": "If $|A|\\leq |B|$ and $|B|\\leq |A|$, then $A\\sim B$.\nEquivalently, if there exist injections $f:A\\hookrightarrow B$ and\n$g:B\\hookrightarrow A$, then there exists a bijection $h:A\\to B$.",
       "volume": 1,
       "volume_roman": "i",
       "volume_title": "Logic, Sets, and Proof",
@@ -46899,7 +46705,7 @@
       "graph_dependency_ids": [
         "def:cardinality-order"
       ],
-      "markdown": "   > **Statement.**\n   > If $|A| \\leq |B|$ and $|B| \\leq |A|$, then $A \\sim B$.\n   >\n   > Equivalently: if there exist injections $f : A \\hookrightarrow B$ and\n   > $g : B \\hookrightarrow A$, then there exists a bijection $h : A \\to B$."
+      "markdown": "   > **Statement.**\n   > If $|A|\\leq |B|$ and $|B|\\leq |A|$, then $A\\sim B$.\n   > Equivalently, if there exist injections $f:A\\hookrightarrow B$ and\n   > $g:B\\hookrightarrow A$, then there exists a bijection $h:A\\to B$."
     },
     {
       "id": "cor:equality-is-finest-equivalence",
@@ -47814,6 +47620,38 @@
         "prop:substitution-preserves-operations-full"
       ],
       "markdown": "   > **Statement.**\n   > Every function, predicate, relation, and operation respects equality in its\n   > displayed arguments."
+    },
+    {
+      "id": "thm:general-associativity",
+      "status": "open",
+      "title": "General Associativity",
+      "kind": "Theorem",
+      "statement": "If $O$ is associative, then every bracketing of\n$x_1\\mathbin{O}\\cdots\\mathbin{O}x_n$ has the same value.",
+      "volume": 2,
+      "volume_roman": "ii",
+      "volume_title": "Origins of Numbers",
+      "repo": "lra-volume-ii",
+      "book": "discrete-number-systems",
+      "book_title": "Discrete Number Systems",
+      "book_dir": "volume-ii/book-discrete-algebraic",
+      "chapter": "arithmetic-operations-relations",
+      "chapter_title": "Arithmetic Operations Relations",
+      "section": "algebraic-laws",
+      "section_title": "Algebraic Laws",
+      "source": "notes/algebraic-laws/notes-algebraic-laws.tex",
+      "source_path": "volume-ii/book-discrete-algebraic/arithmetic-operations-relations/notes/algebraic-laws/notes-algebraic-laws.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-discrete-algebraic/arithmetic-operations-relations/notes/algebraic-laws/notes-algebraic-laws.tex",
+      "proof_source": "proofs/algebraic-laws/prf-general-associativity.tex",
+      "proof_path": "volume-ii/book-discrete-algebraic/arithmetic-operations-relations/proofs/algebraic-laws/prf-general-associativity.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-ii/blob/main/volume-ii/book-discrete-algebraic/arithmetic-operations-relations/proofs/algebraic-laws/prf-general-associativity.tex",
+      "theorem_dependency_ids": [
+        "def:associativity"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:associativity"
+      ],
+      "markdown": "   > **Statement.**\n   > If $O$ is associative, then every bracketing of\n   > $x_1\\mathbin{O}\\cdots\\mathbin{O}x_n$ has the same value."
     },
     {
       "id": "thm:general-commutativity",
@@ -75966,17 +75804,9 @@
       "proof_source": "proofs/gauge/prf-cousins-theorem.tex",
       "proof_path": "volume-iii/book-analysis-ii/continuity/proofs/gauge/prf-cousins-theorem.tex",
       "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-ii/continuity/proofs/gauge/prf-cousins-theorem.tex",
-      "theorem_dependency_ids": [
-        "def:tagged-partition",
-        "def:gauge",
-        "def:delta-fine-partition"
-      ],
+      "theorem_dependency_ids": [],
       "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:tagged-partition",
-        "def:gauge",
-        "def:delta-fine-partition"
-      ],
+      "graph_dependency_ids": [],
       "markdown": "   > **Statement.**\n   > Every gauge $\\delta:[a,b]\\to(0,\\infty)$ on a closed interval $[a,b]$\n   > admits a $\\delta$-fine tagged partition of $[a,b]$."
     },
     {
@@ -77618,13 +77448,9 @@
       "proof_source": "proofs/derivative-definition/prf-differentiable-implies-continuous.tex",
       "proof_path": "volume-iii/book-analysis-ii/differentiation/proofs/derivative-definition/prf-differentiable-implies-continuous.tex",
       "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-analysis-ii/differentiation/proofs/derivative-definition/prf-differentiable-implies-continuous.tex",
-      "theorem_dependency_ids": [
-        "def:derivative-at-a-point"
-      ],
+      "theorem_dependency_ids": [],
       "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:derivative-at-a-point"
-      ],
+      "graph_dependency_ids": [],
       "markdown": "   > **Statement.**\n   > Let $f : A \\to \\mathbb{R}$ and $c \\in A$. If $f$ is differentiable at $c$, then $f$ is continuous at $c$."
     },
     {
@@ -79898,6 +79724,38 @@
       "markdown": "   > **Statement.**\n   > If \\(f\\) and \\(|f|\\) are Cauchy-integrable on \\([a,b]\\), then\n   > \\[\n   >  \\left|\\int_a^b f\\,dx\\right|\\le \\int_a^b |f|\\,dx .\n   > \\]"
     },
     {
+      "id": "thm:cauchy-integral-interval-additivity",
+      "status": "open",
+      "title": "Interval Additivity for the Cauchy Integral",
+      "kind": "Theorem",
+      "statement": "If \\(c\\in[a,b]\\) and \\(f\\) is Cauchy-integrable on the relevant intervals,\nthen\n\\[\n \\int_a^b f\\,dx=\\int_a^c f\\,dx+\\int_c^b f\\,dx .\n\\]",
+      "volume": 3,
+      "volume_roman": "iii",
+      "volume_title": "Classical Analysis",
+      "repo": "lra-volume-iii",
+      "book": "integration",
+      "book_title": "Integration",
+      "book_dir": "volume-iii/book-integration",
+      "chapter": "riemann-integration",
+      "chapter_title": "Riemann Integration",
+      "section": "cauchy-integral",
+      "section_title": "Cauchy Integral",
+      "source": "notes/cauchy-integral/notes-cauchy-integral.tex",
+      "source_path": "volume-iii/book-integration/riemann-integration/notes/cauchy-integral/notes-cauchy-integral.tex",
+      "source_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-integration/riemann-integration/notes/cauchy-integral/notes-cauchy-integral.tex",
+      "proof_source": "proofs/cauchy-integral/prf-cauchy-integral-interval-additivity.tex",
+      "proof_path": "volume-iii/book-integration/riemann-integration/proofs/cauchy-integral/prf-cauchy-integral-interval-additivity.tex",
+      "proof_url": "https://github.com/wsollers/lra-volume-iii/blob/main/volume-iii/book-integration/riemann-integration/proofs/cauchy-integral/prf-cauchy-integral-interval-additivity.tex",
+      "theorem_dependency_ids": [
+        "def:cauchy-integral"
+      ],
+      "proof_dependency_ids": [],
+      "graph_dependency_ids": [
+        "def:cauchy-integral"
+      ],
+      "markdown": "   > **Statement.**\n   > If \\(c\\in[a,b]\\) and \\(f\\) is Cauchy-integrable on the relevant intervals,\n   > then\n   > \\[\n   >  \\int_a^b f\\,dx=\\int_a^c f\\,dx+\\int_c^b f\\,dx .\n   > \\]"
+    },
+    {
       "id": "thm:continuous-cauchy-integrable",
       "status": "open",
       "title": "Continuous Functions Are Cauchy-Integrable",
@@ -81832,7 +81690,7 @@
       "status": "open",
       "title": "Closure of a Bounded Set Is Bounded",
       "kind": "Theorem",
-      "statement": "Let \\((X,d)\\) be a metric space. If \\(A\\subseteq X\\) is bounded, then\n\\(\\operatorname{cl}(A)\\) is bounded.",
+      "statement": "Let \\((X,d)\\) be a metric space. If \\(A\\subseteq X\\) is bounded, then\n\\(\\operatorname{Closure}(A)\\) is bounded.",
       "volume": 4,
       "volume_roman": "iv",
       "volume_title": "Mathematical Spaces",
@@ -81859,7 +81717,7 @@
         "def:metric-bounded-set",
         "def:metric-closure"
       ],
-      "markdown": "   > **Statement.**\n   > Let \\((X,d)\\) be a metric space. If \\(A\\subseteq X\\) is bounded, then\n   > \\(\\operatorname{cl}(A)\\) is bounded."
+      "markdown": "   > **Statement.**\n   > Let \\((X,d)\\) be a metric space. If \\(A\\subseteq X\\) is bounded, then\n   > \\(\\operatorname{Closure}(A)\\) is bounded."
     },
     {
       "id": "thm:metric-compact-sets-bounded",
@@ -82798,7 +82656,7 @@
       "status": "open",
       "title": "Closure of an Open Ball Is Contained in the Closed Ball",
       "kind": "Theorem",
-      "statement": "Let \\((X,d)\\) be a metric space. For every \\(x\\in X\\) and every \\(r>0\\),\n\\[\n \\operatorname{cl}\\bigl(B_d(x;r)\\bigr)\\subseteq \\overline{B}_d(x;r).\n\\]",
+      "statement": "Let \\((X,d)\\) be a metric space. For every \\(x\\in X\\) and every \\(r>0\\),\n\\[\n \\operatorname{Closure}\\bigl(B_d(x;r)\\bigr)\\subseteq \\overline{B}_d(x;r).\n\\]",
       "volume": 4,
       "volume_roman": "iv",
       "volume_title": "Mathematical Spaces",
@@ -82827,7 +82685,7 @@
         "def:metric-closed-ball",
         "def:metric-closure"
       ],
-      "markdown": "   > **Statement.**\n   > Let \\((X,d)\\) be a metric space. For every \\(x\\in X\\) and every \\(r>0\\),\n   > \\[\n   >  \\operatorname{cl}\\bigl(B_d(x;r)\\bigr)\\subseteq \\overline{B}_d(x;r).\n   > \\]"
+      "markdown": "   > **Statement.**\n   > Let \\((X,d)\\) be a metric space. For every \\(x\\in X\\) and every \\(r>0\\),\n   > \\[\n   >  \\operatorname{Closure}\\bigl(B_d(x;r)\\bigr)\\subseteq \\overline{B}_d(x;r).\n   > \\]"
     },
     {
       "id": "thm:metric-interior-largest-open-subset",
@@ -83112,524 +82970,6 @@
         "def:topological-closed-subset"
       ],
       "markdown": "   > **Statement.**\n   > Let \\(X\\) be a set, and let \\(\\mathcal{C}\\) be a collection of subsets of\n   > \\(X\\). Suppose that:\n   > - \\(\\emptyset\\in\\mathcal{C}\\) and \\(X\\in\\mathcal{C}\\);\n   > - the intersection of any family of elements of \\(\\mathcal{C}\\) belongs\n   >  to \\(\\mathcal{C}\\);\n   > - the union of any two elements of \\(\\mathcal{C}\\) belongs to\n   >  \\(\\mathcal{C}\\).\n   > Then there is a unique topology \\(\\tau\\) on \\(X\\) whose family of closed sets\n   > is exactly \\(\\mathcal{C}\\)."
-    },
-    {
-      "id": "prop:identity-collapse",
-      "status": "open",
-      "title": "Identity Collapse and Uniqueness",
-      "kind": "Proposition",
-      "statement": "If $\\star$ has a left identity $e_L$ and a right identity $e_R$, then\n$e_L=e_R$. Consequently a two-sided identity, if it exists, is unique.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "proof_source": "proofs/mathematical-structures/prf-identity-collapse.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-identity-collapse.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-identity-collapse.tex",
-      "theorem_dependency_ids": [
-        "def:left-identity",
-        "def:right-identity"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:left-identity",
-        "def:right-identity"
-      ],
-      "markdown": "   > **Statement.**\n   > If $\\star$ has a left identity $e_L$ and a right identity $e_R$, then\n   > $e_L=e_R$. Consequently a two-sided identity, if it exists, is unique."
-    },
-    {
-      "id": "prop:absorbing-unique",
-      "status": "open",
-      "title": "Uniqueness of the Absorbing Element",
-      "kind": "Proposition",
-      "statement": "A two-sided absorbing element, if it exists, is unique.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "proof_source": "proofs/mathematical-structures/prf-absorbing-unique.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-absorbing-unique.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-absorbing-unique.tex",
-      "theorem_dependency_ids": [
-        "def:absorbing"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:absorbing"
-      ],
-      "markdown": "   > **Statement.**\n   > A two-sided absorbing element, if it exists, is unique."
-    },
-    {
-      "id": "thm:general-associativity",
-      "status": "open",
-      "title": "General Associativity",
-      "kind": "Theorem",
-      "statement": "If $\\star$ is associative, then any finite product\n$a_1\\star a_2\\star\\cdots\\star a_n$ has a value independent of\nparenthesization.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "proof_source": "proofs/mathematical-structures/prf-general-associativity.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-general-associativity.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-general-associativity.tex",
-      "theorem_dependency_ids": [
-        "def:associativity",
-        "def:assoc"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:associativity",
-        "def:assoc"
-      ],
-      "markdown": "   > **Statement.**\n   > If $\\star$ is associative, then any finite product\n   > $a_1\\star a_2\\star\\cdots\\star a_n$ has a value independent of\n   > parenthesization."
-    },
-    {
-      "id": "prop:inverse-collapse",
-      "status": "open",
-      "title": "Inverse Collapse and Uniqueness in a Monoid",
-      "kind": "Proposition",
-      "statement": "If $\\star$ is associative with identity $e$, and $a$ has a left inverse $b$\nand a right inverse $c$, then $b=c$. Hence the inverse of an invertible\nelement is unique.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "proof_source": "proofs/mathematical-structures/prf-inverse-collapse.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-inverse-collapse.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-inverse-collapse.tex",
-      "theorem_dependency_ids": [
-        "def:identity",
-        "def:algebraic-left-inverse",
-        "def:algebraic-right-inverse",
-        "thm:general-associativity"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:identity",
-        "def:algebraic-left-inverse",
-        "def:algebraic-right-inverse",
-        "thm:general-associativity"
-      ],
-      "markdown": "   > **Statement.**\n   > If $\\star$ is associative with identity $e$, and $a$ has a left inverse $b$\n   > and a right inverse $c$, then $b=c$. Hence the inverse of an invertible\n   > element is unique."
-    },
-    {
-      "id": "prop:units-form-group",
-      "status": "open",
-      "title": "Units of a Monoid Form a Group",
-      "kind": "Proposition",
-      "statement": "In a monoid $(A,\\star,e)$, the set $A^\\times$ of invertible elements is\nclosed under $\\star$ and forms a group.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "proof_source": "proofs/mathematical-structures/prf-units-form-group.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-units-form-group.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-units-form-group.tex",
-      "theorem_dependency_ids": [
-        "def:invertible",
-        "def:monoid",
-        "def:group"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:invertible",
-        "def:monoid",
-        "def:group"
-      ],
-      "markdown": "   > **Statement.**\n   > In a monoid $(A,\\star,e)$, the set $A^\\times$ of invertible elements is\n   > closed under $\\star$ and forms a group."
-    },
-    {
-      "id": "prop:invertible-implies-cancellable",
-      "status": "open",
-      "title": "Invertible Implies Cancellable",
-      "kind": "Proposition",
-      "statement": "In a monoid, every invertible element is cancellable.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-b-vocabulary.tex",
-      "proof_source": "proofs/mathematical-structures/prf-invertible-implies-cancellable.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-invertible-implies-cancellable.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-invertible-implies-cancellable.tex",
-      "theorem_dependency_ids": [
-        "def:invertible",
-        "def:cancellable",
-        "def:monoid"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:invertible",
-        "def:cancellable",
-        "def:monoid"
-      ],
-      "markdown": "   > **Statement.**\n   > In a monoid, every invertible element is cancellable."
-    },
-    {
-      "id": "prop:group-identity-unique",
-      "status": "open",
-      "title": "Uniqueness of the Identity in a Group",
-      "kind": "Proposition",
-      "statement": "The identity of a group is unique.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "proof_source": "proofs/mathematical-structures/prf-group-identity-unique.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-group-identity-unique.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-group-identity-unique.tex",
-      "theorem_dependency_ids": [
-        "prop:identity-collapse",
-        "def:group"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "prop:identity-collapse",
-        "def:group"
-      ],
-      "markdown": "   > **Statement.**\n   > The identity of a group is unique."
-    },
-    {
-      "id": "prop:group-inverse-unique",
-      "status": "open",
-      "title": "Uniqueness of Inverses in a Group",
-      "kind": "Proposition",
-      "statement": "Each element of a group has a unique inverse.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "proof_source": "proofs/mathematical-structures/prf-group-inverse-unique.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-group-inverse-unique.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-group-inverse-unique.tex",
-      "theorem_dependency_ids": [
-        "prop:inverse-collapse",
-        "def:group"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "prop:inverse-collapse",
-        "def:group"
-      ],
-      "markdown": "   > **Statement.**\n   > Each element of a group has a unique inverse."
-    },
-    {
-      "id": "prop:group-cancellation",
-      "status": "open",
-      "title": "Cancellation Laws in a Group",
-      "kind": "Proposition",
-      "statement": "In a group, $ab=ac$ implies $b=c$, and $ba=ca$ implies $b=c$.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "proof_source": "proofs/mathematical-structures/prf-group-cancellation.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-group-cancellation.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-group-cancellation.tex",
-      "theorem_dependency_ids": [
-        "prop:invertible-implies-cancellable",
-        "def:group"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "prop:invertible-implies-cancellable",
-        "def:group"
-      ],
-      "markdown": "   > **Statement.**\n   > In a group, $ab=ac$ implies $b=c$, and $ba=ca$ implies $b=c$."
-    },
-    {
-      "id": "prop:socks-shoes",
-      "status": "open",
-      "title": "Socks--Shoes",
-      "kind": "Proposition",
-      "statement": "In a group, $(ab)^{-1}=b^{-1}a^{-1}$.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "proof_source": "proofs/mathematical-structures/prf-socks-shoes.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-socks-shoes.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-socks-shoes.tex",
-      "theorem_dependency_ids": [
-        "def:inverse",
-        "def:group"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:inverse",
-        "def:group"
-      ],
-      "markdown": "   > **Statement.**\n   > In a group, $(ab)^{-1}=b^{-1}a^{-1}$."
-    },
-    {
-      "id": "prop:ring-mult-zero",
-      "status": "open",
-      "title": "Multiplication by Zero",
-      "kind": "Proposition",
-      "statement": "In a ring, $a\\cdot 0=0\\cdot a=0$ for all $a$.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "proof_source": "proofs/rings/prf-ring-mult-zero.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/rings/prf-ring-mult-zero.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/rings/prf-ring-mult-zero.tex",
-      "theorem_dependency_ids": [
-        "def:distrib",
-        "def:ring"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:distrib",
-        "def:ring"
-      ],
-      "markdown": "   > **Statement.**\n   > In a ring, $a\\cdot 0=0\\cdot a=0$ for all $a$."
-    },
-    {
-      "id": "prop:ring-mult-neg",
-      "status": "open",
-      "title": "Multiplication by Additive Inverse",
-      "kind": "Proposition",
-      "statement": "In a ring,\n\\[\na\\cdot(-b)=-(a\\cdot b)=(-a)\\cdot b.\n\\]\nIn a ring, $(-1)\\cdot a=-a$.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "proof_source": "proofs/rings/prf-ring-mult-neg.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/rings/prf-ring-mult-neg.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/rings/prf-ring-mult-neg.tex",
-      "theorem_dependency_ids": [
-        "def:additive-inverse",
-        "def:ring",
-        "prop:ring-mult-zero"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:additive-inverse",
-        "def:ring",
-        "prop:ring-mult-zero"
-      ],
-      "markdown": "   > **Statement.**\n   > In a ring,\n   > \\[\n   > a\\cdot(-b)=-(a\\cdot b)=(-a)\\cdot b.\n   > \\]\n   > In a ring, $(-1)\\cdot a=-a$."
-    },
-    {
-      "id": "prop:domain-cancellation",
-      "status": "open",
-      "title": "Cancellation in Integral Domains",
-      "kind": "Proposition",
-      "statement": "In an integral domain, if $a\\neq 0$ and $ab=ac$, then $b=c$.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "proof_source": "proofs/rings/prf-domain-cancellation.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/rings/prf-domain-cancellation.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/rings/prf-domain-cancellation.tex",
-      "theorem_dependency_ids": [
-        "def:zero-divisor",
-        "def:integral-domain"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:zero-divisor",
-        "def:integral-domain"
-      ],
-      "markdown": "   > **Statement.**\n   > In an integral domain, if $a\\neq 0$ and $ab=ac$, then $b=c$."
-    },
-    {
-      "id": "prop:field-is-domain",
-      "status": "open",
-      "title": "Every Field is an Integral Domain",
-      "kind": "Proposition",
-      "statement": "Every field is an integral domain.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "proof_source": "proofs/mathematical-structures/prf-field-is-domain.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-field-is-domain.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-field-is-domain.tex",
-      "theorem_dependency_ids": [
-        "def:integral-domain",
-        "def:field"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:integral-domain",
-        "def:field"
-      ],
-      "markdown": "   > **Statement.**\n   > Every field is an integral domain."
-    },
-    {
-      "id": "prop:finite-domain-is-field",
-      "status": "open",
-      "title": "Finite Integral Domain is a Field",
-      "kind": "Proposition",
-      "statement": "Every finite integral domain is a field.",
-      "volume": 6,
-      "volume_roman": "vi",
-      "volume_title": "Algebra",
-      "repo": "lra-volume-vi",
-      "book": "algebra",
-      "book_title": "Algebra",
-      "book_dir": "volume-vi/book-algebra",
-      "chapter": "algebraic-structures",
-      "chapter_title": "Algebraic Structures",
-      "section": "mathematical-structures",
-      "section_title": "Mathematical Structures",
-      "source": "notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_path": "volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "source_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/notes/mathematical-structures/locked-part-c-structure-tower.tex",
-      "proof_source": "proofs/mathematical-structures/prf-finite-domain-is-field.tex",
-      "proof_path": "volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-finite-domain-is-field.tex",
-      "proof_url": "https://github.com/wsollers/lra-volume-vi/blob/main/volume-vi/book-algebra/algebraic-structures/proofs/mathematical-structures/prf-finite-domain-is-field.tex",
-      "theorem_dependency_ids": [
-        "def:integral-domain",
-        "def:field"
-      ],
-      "proof_dependency_ids": [],
-      "graph_dependency_ids": [
-        "def:integral-domain",
-        "def:field"
-      ],
-      "markdown": "   > **Statement.**\n   > Every finite integral domain is a field."
     },
     {
       "id": "thm:hilbert-basis-theorem",
@@ -84108,7 +83448,7 @@
       "status": "open",
       "title": "Every Nonempty Finite Poset Has a Maximal Element",
       "kind": "Proposition",
-      "statement": "Let $(P, \\leq)$ be a finite partially ordered set. Then every nonempty\nsubset $Q \\subseteq P$ has at least one maximal element. Furthermore,\nfor every $x \\in P$ there exists $y \\in \\operatorname{Max}(P)$ with\n$x \\leq y$.",
+      "statement": "Let $(P, \\leq)$ be a finite partially ordered set. Then every nonempty\nsubset $Q \\subseteq P$ has at least one maximal element. Furthermore,\nfor every $x \\in P$ there exists a maximal element $y \\in P$ with\n$x \\leq y$.",
       "volume": 6,
       "volume_roman": "vi",
       "volume_title": "Algebra",
@@ -84135,7 +83475,7 @@
         "def:maximal-element",
         "def:lattice-order-partial-order"
       ],
-      "markdown": "   > **Statement.**\n   > Let $(P, \\leq)$ be a finite partially ordered set. Then every nonempty\n   > subset $Q \\subseteq P$ has at least one maximal element. Furthermore,\n   > for every $x \\in P$ there exists $y \\in \\operatorname{Max}(P)$ with\n   > $x \\leq y$."
+      "markdown": "   > **Statement.**\n   > Let $(P, \\leq)$ be a finite partially ordered set. Then every nonempty\n   > subset $Q \\subseteq P$ has at least one maximal element. Furthermore,\n   > for every $x \\in P$ there exists a maximal element $y \\in P$ with\n   > $x \\leq y$."
     },
     {
       "id": "prop:predicates-power-sets-iso",
