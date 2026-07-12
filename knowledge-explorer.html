@@ -63,6 +63,14 @@ svg{position:absolute;inset:0}
 code{background:#111827;padding:1px 5px;border-radius:6px}
 .math-list{margin:.35rem 0 .2rem 1.25rem;padding-left:1rem}
 .math-list li{margin:.35rem 0}
+.description-list{margin:.35rem 0}
+.description-item{padding:8px 0;border-top:1px solid rgba(255,255,255,.08)}
+.description-item:first-child{border-top:0;padding-top:0}
+.description-label{display:block;color:#bfdbfe;font-weight:800;margin-bottom:4px}
+.failure-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 10px}
+.failure-tab{width:auto;padding:7px 10px;border-radius:8px;font-size:.84rem;color:#cbd5e1}
+.failure-tab.active{background:rgba(239,68,68,.18);border-color:rgba(239,68,68,.65);color:#fecaca}
+.failure-tab-panel.hidden{display:none}
 .proof-panel{border-color:rgba(96,165,250,.28);background:rgba(96,165,250,.08)}
 .node-chip{display:inline-block;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:6px;padding:2px 8px;margin:2px 3px 2px 0;font-size:.78rem;color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s}
 .node-chip:hover{background:rgba(245,158,11,.18);border-color:rgba(245,158,11,.6);color:#fde68a}
@@ -358,13 +366,16 @@ const DEFAULT_KATEX_MACROS={'\\colonequiv':'\\equiv','\\coloniff':'\\Longleftrig
 function extractedKatexMacros(){return (state.modelArtifacts&&state.modelArtifacts.katex_macros&&state.modelArtifacts.katex_macros.macros)||{};}
 function katexOptions(display){return{throwOnError:false,strict:false,displayMode:!!display,macros:{...DEFAULT_KATEX_MACROS,...extractedKatexMacros()}};}
 function renderLatex(src,display){const s=src.trim();if(!s)return'';try{return katex.renderToString(s,katexOptions(display));}catch(e){return'<span style="color:#f87171">'+esc(s)+'</span>';}}
-function renderListBlock(kind,body){const tag=kind==='enumerate'?'ol':'ul';const items=[];const re=/\\item(?:\[([^\]]*)\])?\s*/g;let m,last=null;while((m=re.exec(body))!==null){if(last){items.push({label:last.label,body:body.slice(last.end,m.index).trim()});}last={label:m[1]||'',end:re.lastIndex};}if(last)items.push({label:last.label,body:body.slice(last.end).trim()});const filtered=items.filter(i=>i.body);if(!filtered.length)return'';return`<${tag} class="math-list">${filtered.map(i=>`<li>${i.label?`<span class="item-label">${texToHtml(i.label)}</span> `:''}${renderMixedMath(i.body)}</li>`).join('')}</${tag}>`;}
-function renderList(src){const t=src.trim();const m=t.match(/^\\begin\{(itemize|enumerate)\}([\s\S]*?)\\end\{\1\}$/);if(!m)return null;return renderListBlock(m[1],m[2]);}
+function parseLatexItems(body){const items=[];const re=/\\item(?:\[([^\]]*)\])?\s*/g;let m,last=null;while((m=re.exec(body))!==null){if(last){items.push({label:last.label,body:body.slice(last.end,m.index).trim()});}last={label:(m[1]||'').trim(),end:re.lastIndex};}if(last)items.push({label:last.label,body:body.slice(last.end).trim()});return items.filter(i=>i.body);}
+function renderListBlock(kind,body){const tag=kind==='enumerate'?'ol':'ul';const items=parseLatexItems(body);if(!items.length)return'';return`<${tag} class="math-list">${items.map(i=>`<li>${i.label?`<span class="item-label">${texToHtml(i.label)}</span> `:''}${renderMixedMath(i.body)}</li>`).join('')}</${tag}>`;}
+function renderDescriptionBlock(body){const items=parseLatexItems(body);if(!items.length)return'';return`<div class="description-list">${items.map(i=>`<div class="description-item">${i.label?`<span class="description-label">${texToHtml(i.label)}</span>`:''}<div>${renderMixedMath(i.body)}</div></div>`).join('')}</div>`;}
+function descriptionItems(src){const t=String(src||'').trim();const m=t.match(/^\\begin\{description\}([\s\S]*?)\\end\{description\}$/);return m?parseLatexItems(m[1]):[];}
+function renderList(src){const t=src.trim();const m=t.match(/^\\begin\{(itemize|enumerate|description)\}([\s\S]*?)\\end\{\1\}$/);if(!m)return null;return m[1]==='description'?renderDescriptionBlock(m[2]):renderListBlock(m[1],m[2]);}
 function splitTableCells(row){const cells=[];let cur='',escaped=false;for(const ch of row){if(escaped){cur+=ch;escaped=false;continue;}if(ch==='\\'){cur+=ch;escaped=true;continue;}if(ch==='&'){cells.push(cur.trim());cur='';continue;}cur+=ch;}cells.push(cur.trim());return cells;}
 function renderLatexTable(src){let t=String(src||'').trim();t=t.replace(/^\\begin\{center\}\s*/,'').replace(/\s*\\end\{center\}$/,'').trim();const begin=t.match(/^\\begin\{(tabularx|tabular)\}/);if(!begin)return null;const endTag=`\\end{${begin[1]}}`;const end=t.lastIndexOf(endTag);if(end<0)return null;const firstBreak=t.indexOf('\n',begin.index+begin[0].length);if(firstBreak<0||firstBreak>end)return null;let body=t.slice(firstBreak+1,end);body=body.replace(/\\(?:toprule|midrule|bottomrule)\b/g,'');const rows=body.split(/\\\\/).map(r=>r.trim()).filter(Boolean);if(!rows.length)return null;const parsed=rows.map(splitTableCells);const cols=Math.max(...parsed.map(r=>r.length));const header=parsed[0]||[];const data=parsed.slice(1);const headHtml=`<thead><tr>${Array.from({length:cols},(_,i)=>`<th>${texToHtml(header[i]||'')}</th>`).join('')}</tr></thead>`;const bodyHtml=`<tbody>${data.map(row=>`<tr>${Array.from({length:cols},(_,i)=>`<td>${texToHtml(row[i]||'')}</td>`).join('')}</tr>`).join('')}</tbody>`;return`<div class="math-table-wrap"><table class="math-table">${headHtml}${bodyHtml}</table></div>`;}
 function normalizeLatex(t){let o=Array.isArray(t)?t.join('\n'):String(t??'');o=o.replace(/\\colonequiv\b/g,'\\equiv');o=o.replace(/\\coloniff\b/g,'\\Longleftrightarrow');o=o.replace(/\\coloneqq\b/g,':=');o=o.replace(/\\textbf\s*\{([^{}]*)\}/g,'<strong>$1</strong>');o=o.replace(/\\textit\s*\{([^{}]*)\}/g,'<em>$1</em>');o=o.replace(/\\emph\s*\{([^{}]*)\}/g,'<em>$1</em>');return o;}
 function renderInlineMath(src){const re=/(\\\[[\s\S]*?\\\]|\$\$[\s\S]*?\$\$|\\\((?:[\s\S]*?)\\\)|\$(?:[^$\\]|\\.)*\$)/g;let out='',pos=0,m;while((m=re.exec(src))!==null){const plain=src.slice(pos,m.index);if(plain)out+=plain.replace(/\n/g,'<br>').replace(/&(?![a-z#0-9]+;)/g,'&amp;');const tk=m[0];if(tk.startsWith('\\[')){out+=renderLatex(tk.slice(2,-2),true);}else if(tk.startsWith('$$')){out+=renderLatex(tk.slice(2,-2),true);}else if(tk.startsWith('\\(')){out+=renderLatex(tk.slice(2,-2),false);}else{out+=renderLatex(tk.slice(1,-1),false);}pos=re.lastIndex;}const tail=src.slice(pos);if(tail)out+=tail.replace(/\n/g,'<br>').replace(/&(?![a-z#0-9]+;)/g,'&amp;');return out;}
-function renderMixedMath(text){const tableHtml=renderLatexTable(text);if(tableHtml)return tableHtml;const listHtml=renderList(text);if(listHtml)return listHtml;const src=normalizeLatex(text);const listRe=/\\begin\{(itemize|enumerate)\}([\s\S]*?)\\end\{\1\}/g;let out='',pos=0,m;while((m=listRe.exec(src))!==null){const plain=src.slice(pos,m.index);if(plain)out+=renderInlineMath(plain);out+=renderListBlock(m[1],m[2]);pos=listRe.lastIndex;}const tail=src.slice(pos);if(tail)out+=renderInlineMath(tail);return out;}
+function renderMixedMath(text){const tableHtml=renderLatexTable(text);if(tableHtml)return tableHtml;const listHtml=renderList(text);if(listHtml)return listHtml;const src=normalizeLatex(text);const listRe=/\\begin\{(itemize|enumerate|description)\}([\s\S]*?)\\end\{\1\}/g;let out='',pos=0,m;while((m=listRe.exec(src))!==null){const plain=src.slice(pos,m.index);if(plain)out+=renderInlineMath(plain);out+=m[1]==='description'?renderDescriptionBlock(m[2]):renderListBlock(m[1],m[2]);pos=listRe.lastIndex;}const tail=src.slice(pos);if(tail)out+=renderInlineMath(tail);return out;}
 function texToHtml(s){if(!s)return'';return renderMixedMath(String(s));}
 function renderDataMeta(){
   const m=(state.knowledge&&state.knowledge.metadata)||{};
@@ -1363,6 +1374,7 @@ function renderDetails(n){
   els.detailEmpty.style.display='none';els.detailContent.style.display='block';
   const blocks=[];
   function add(t,v,danger=false){if(!v&&v!==0)return;const cls=danger?'card danger':'card';blocks.push(`<div class="${cls}"><div class="label">${esc(t)}</div><div class="value">${texToHtml(String(v))}</div></div>`);}
+  function addFailure(t,v){if(!v&&v!==0)return;const items=descriptionItems(v);let body='';if(items.length>1){body=`<div class="failure-tabs">${items.map((item,i)=>`<button class="failure-tab${i===0?' active':''}" type="button" data-failure-tab="${i}">${texToHtml(item.label||`Part ${i+1}`)}</button>`).join('')}</div>${items.map((item,i)=>`<div class="failure-tab-panel${i===0?'':' hidden'}" data-failure-panel="${i}">${renderMixedMath(item.body)}</div>`).join('')}`;}else if(items.length===1){body=renderMixedMath(items[0].body);}else{body=texToHtml(String(v));}blocks.push(`<div class="card danger failure-card"><div class="label">${esc(t)}</div><div class="value">${body}</div></div>`);}
   function addProof(t,v){const cleaned=cleanProofText(v);if(!cleaned)return;blocks.push(`<div class="card"><div class="label">${esc(t)}</div><div class="value">${texToHtml(cleaned)}</div></div>`);}
   function addChips(label,ids,treeMode){if(!ids||!ids.length)return;const html=chipList(ids,treeMode);if(!html)return;blocks.push(`<div class="card"><div class="label">${esc(label)}</div><div class="value" style="line-height:2">${html}</div></div>`);}
   const rootTag=(function(){const rk=String(n.root_kind||'').toLowerCase();if(rk==='primitive')return' · <strong style="color:#c7d2fe">policy</strong>';if(rk==='axiom')return' · <strong style="color:#c7d2fe">axiom · root</strong>';return'';})();
@@ -1375,8 +1387,8 @@ function renderDetails(n){
   add('Predicate logic statement',pred);
   add('Negation',n.negation_formal||n.negation_display,true);
   add('Negation predicate',n.negation_predicate,true);
-  add('Failure modes',n.failure_modes,true);
-  add('Failure mode decomposition',n.failure_mode_decomposition,true);
+  addFailure('Failure modes',n.failure_modes);
+  addFailure('Failure mode decomposition',n.failure_mode_decomposition);
   add('Contrapositive',n.contrapositive,true);
   if(Array.isArray(n.expositions)){
     n.expositions.forEach((exp,i)=>{
@@ -1413,6 +1425,15 @@ function renderDetails(n){
   });
   els.detailContent.querySelectorAll('[data-open-examples]').forEach(btn=>{
     btn.addEventListener('click',()=>openExamplesModal(btn.dataset.openExamples));
+  });
+  els.detailContent.querySelectorAll('.failure-card').forEach(card=>{
+    card.querySelectorAll('[data-failure-tab]').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const active=btn.dataset.failureTab;
+        card.querySelectorAll('[data-failure-tab]').forEach(tab=>tab.classList.toggle('active',tab.dataset.failureTab===active));
+        card.querySelectorAll('[data-failure-panel]').forEach(panel=>panel.classList.toggle('hidden',panel.dataset.failurePanel!==active));
+      });
+    });
   });
   attachProofSourceCard(els.detailContent,sourceInfo);
 }
