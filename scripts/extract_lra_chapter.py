@@ -94,6 +94,14 @@ SECTION_RE = re.compile(r"\\(?:section|subsection|subsubsection)\{([^{}]+)\}")
 # environment / structural wrapper or the next sectioning command.
 DEFINITIONAL_ROOT_RE = re.compile(r"\\DefinitionalRoot\b")
 NO_LOCAL_DEPENDENCIES_RE = re.compile(r"\\NoLocalDependencies\b")
+SOURCE_VARIANT_RE = re.compile(
+    r"\\SourceVariantOf"
+    r"\{(?P<target>(?:def|ax|thm|lem|prop|cor):[^{}]+)\}"
+    r"\{(?P<author>[^{}]+)\}"
+    r"\{(?P<book>[^{}]+)\}"
+    r"\{(?P<kind>source_variant_of|reduces_to)\}",
+    re.IGNORECASE,
+)
 DEFROOT_BOUNDARY_RE = re.compile(r"\\(?:chapter|section|subsection|subsubsection)\*?\{")
 STRIP_CMD_RE = re.compile(r"\\[A-Za-z@]+\*?(?:\[[^\]]*\])?(?:\{[^{}]*\})?")
 WHITESPACE_RE = re.compile(r"\s+")
@@ -139,6 +147,7 @@ class ExtractedItem:
     dependency_refs: list[str]
     remark_blocks: list[dict[str, Any]]
     dependency_blocks: list[dict[str, Any]] = field(default_factory=list)
+    source_variants: list[dict[str, Any]] = field(default_factory=list)
     no_local_dependencies: bool = False
     expositions: list[dict[str, Any]] = field(default_factory=list)
     proof_source_path: str | None = None
@@ -727,6 +736,35 @@ def collect_definitional_root(text: str, envs: list[EnvBlock], idx: int) -> bool
     return bool(DEFINITIONAL_ROOT_RE.search(window))
 
 
+def collect_source_variants(text: str, envs: list[EnvBlock], idx: int) -> list[dict[str, Any]]:
+    current = envs[idx]
+    start = current.end_end
+    boundary = len(text)
+    for j in range(idx + 1, len(envs)):
+        nxt = envs[j]
+        if nxt.begin_start <= start:
+            continue
+        if nxt.name in LOOKAHEAD_FENCE_ENVS:
+            boundary = nxt.begin_start
+            break
+    section = DEFROOT_BOUNDARY_RE.search(text, start)
+    if section and section.start() < boundary:
+        boundary = section.start()
+    window = strip_comments_keep_length(text[start:boundary])
+    variants: list[dict[str, Any]] = []
+    for match in SOURCE_VARIANT_RE.finditer(window):
+        variants.append(
+            {
+                "target": match.group("target").strip(),
+                "author": re.sub(r"\s+", " ", match.group("author").strip()),
+                "book": re.sub(r"\s+", " ", match.group("book").strip()),
+                "kind": match.group("kind").strip().lower(),
+                "source_line_start": line_number(text, start + match.start()),
+            }
+        )
+    return variants
+
+
 def make_fallback_id(kind: str, path: Path, ordinal: int) -> str:
     stem = re.sub(r"[^A-Za-z0-9]+", "-", path.stem).strip("-").lower()
     return f"{kind.lower()}:{stem}:{ordinal:03d}"
@@ -798,6 +836,7 @@ def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
             remarks = collect_trailing_remarks(text, envs, idx)
             dependency_refs, dependency_blocks, no_local_dependencies = collect_dependency_info(text, envs, idx)
             definitional_root = collect_definitional_root(text, envs, idx)
+            source_variants = collect_source_variants(text, envs, idx)
             source_path = relative_posix(path, chapter_root)
             section_slug = find_section_slug(path, chapter_root)
             expositions = exposition_metadata(remarks, item_id, kind, label, section_slug, source_path)
@@ -820,6 +859,7 @@ def extract_note_items(chapter_root: Path) -> list[ExtractedItem]:
                 theorem_refs=theorem_refs,
                 dependency_refs=dependency_refs,
                 dependency_blocks=dependency_blocks,
+                source_variants=source_variants,
                 no_local_dependencies=no_local_dependencies,
                 remark_blocks=remarks,
                 expositions=expositions,
@@ -881,6 +921,19 @@ def build_edges(items: Iterable[ExtractedItem]) -> list[dict[str, str]]:
             if edge not in seen:
                 seen.add(edge)
                 edges.append({"from": edge[0], "to": edge[1], "kind": edge[2]})
+        for variant in item.source_variants:
+            edge = (item.id, variant.get("target", ""), variant.get("kind", "source_variant_of"))
+            if edge[1] and edge not in seen:
+                seen.add(edge)
+                edges.append(
+                    {
+                        "from": edge[0],
+                        "to": edge[1],
+                        "kind": edge[2],
+                        "source_author": variant.get("author", ""),
+                        "source_book": variant.get("book", ""),
+                    }
+                )
     return edges
 
 
@@ -902,6 +955,7 @@ def item_to_json(item: ExtractedItem) -> dict[str, Any]:
         "theorem_refs": item.theorem_refs,
         "dependency_refs": item.dependency_refs,
         "dependency_blocks": item.dependency_blocks,
+        "source_variants": item.source_variants,
         "no_local_dependencies": item.no_local_dependencies,
         "proof_return_targets": item.proof_return_targets,
         "raw_latex_b64": item.raw_latex_b64,

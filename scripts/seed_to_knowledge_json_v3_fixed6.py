@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any
 
 DEFAULT_SCHEMA_VERSION = "0.4"
-RECOGNIZED_EDGE_KINDS = {"depends_on", "equivalent_to", "implies", "prereq", "used_by"}
+RECOGNIZED_EDGE_KINDS = {"depends_on", "equivalent_to", "implies", "prereq", "reduces_to", "source_variant_of", "used_by"}
 
 LABEL_RE = re.compile(r"\\label\{[^{}]+\}")
 HYPERREF_LINE_RE = re.compile(r"^\s*\\hyperref\[[^\]]+\]\{.*?\}\s*$", re.MULTILINE | re.DOTALL)
@@ -141,6 +141,8 @@ FIELD_DEFAULTS: dict[str, Any] = {
     "prereq_ids": [],
     "equivalent_to_ids": [],
     "implies_ids": [],
+    "source_variant_of": [],
+    "source_variants": [],
     "aliases": [],
     "tags": [],
     "symbol": "",
@@ -168,6 +170,8 @@ FIELD_DEFAULTS: dict[str, Any] = {
     "prereq_titles": [],
     "equivalent_to_titles": [],
     "implies_titles": [],
+    "source_variant_titles": [],
+    "source_variant_of_titles": [],
 }
 
 
@@ -772,6 +776,7 @@ def build_node(seed_node: dict[str, Any], chapter_name: str, primitive_definitio
     node["proof_raw_latex_b64"] = seed_node.get("proof_raw_latex_b64", "")
     node["remark_blocks"] = seed_node.get("remark_blocks", [])
     node["dependency_blocks"] = seed_node.get("dependency_blocks", [])
+    node["source_variant_of"] = seed_node.get("source_variants", [])
     node["no_local_dependencies"] = bool(seed_node.get("no_local_dependencies", False))
     node["expositions"] = seed_node.get("expositions", [])
     node["proof_file_blocks"] = seed_node.get("proof_file_blocks", [])
@@ -828,6 +833,9 @@ def normalize_edge_kind(kind: str) -> str:
         "consequences": "implies",
         "equivalent": "equivalent_to",
         "equivalence": "equivalent_to",
+        "source_variant": "source_variant_of",
+        "variant": "source_variant_of",
+        "reduction": "reduces_to",
     }
     return aliases.get(k, k)
 
@@ -873,14 +881,21 @@ def operators_used_by_node(node: dict[str, Any]) -> set[str]:
     return set(OPERATOR_NAME_RE.findall(text))
 
 
-def build_edges(nodes: list[dict[str, Any]], edge_seed: list[dict[str, Any]]) -> tuple[list[dict[str, str]], list[dict[str, Any]]]:
+def build_edges(nodes: list[dict[str, Any]], edge_seed: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     node_ids = {n["id"] for n in nodes}
     by_id = {n["id"]: n for n in nodes}
-    edges: list[dict[str, str]] = []
+    edges: list[dict[str, Any]] = []
     warnings: list[dict[str, Any]] = []
     seen: set[tuple[str, str, str]] = set()
 
-    def add(frm: str, to: str, kind: str, source_node: dict[str, Any] | None = None, warn_missing: bool = True) -> None:
+    def add(
+        frm: str,
+        to: str,
+        kind: str,
+        source_node: dict[str, Any] | None = None,
+        warn_missing: bool = True,
+        metadata: dict[str, Any] | None = None,
+    ) -> None:
         kind = normalize_edge_kind(kind)
         if not frm or not to or frm == to:
             return
@@ -895,7 +910,10 @@ def build_edges(nodes: list[dict[str, Any]], edge_seed: list[dict[str, Any]]) ->
         if key in seen:
             return
         seen.add(key)
-        edges.append({"from": frm, "to": to, "kind": kind})
+        record: dict[str, Any] = {"from": frm, "to": to, "kind": kind}
+        if metadata:
+            record.update({k: v for k, v in metadata.items() if v not in (None, "")})
+        edges.append(record)
 
     for n in nodes:
         for dep in split_relationship_ids(n.get("dependencies", [])):
@@ -913,6 +931,19 @@ def build_edges(nodes: list[dict[str, Any]], edge_seed: list[dict[str, Any]]) ->
         for target in split_relationship_ids(n.get("equivalent_to_ids", [])):
             add(n["id"], target, "equivalent_to", n)
             add(target, n["id"], "equivalent_to", by_id.get(target), warn_missing=False)
+        for variant in n.get("source_variant_of", []) or []:
+            target = str(variant.get("target") or "").strip()
+            if target:
+                add(
+                    n["id"],
+                    target,
+                    str(variant.get("kind") or "source_variant_of"),
+                    n,
+                    metadata={
+                        "source_author": variant.get("author", ""),
+                        "source_book": variant.get("book", ""),
+                    },
+                )
         for ref in split_relationship_ids(n.get("seed_theorem_refs", [])):
             add(ref, n["id"], "depends_on", n)
 
@@ -922,7 +953,16 @@ def build_edges(nodes: list[dict[str, Any]], edge_seed: list[dict[str, Any]]) ->
             frm = e.get("from", "")
             to = e.get("to", "")
             source_node = by_id.get(to) or by_id.get(frm)
-            add(frm, to, kind, source_node)
+            add(
+                frm,
+                to,
+                kind,
+                source_node,
+                metadata={
+                    "source_author": e.get("source_author", ""),
+                    "source_book": e.get("source_book", ""),
+                },
+            )
 
     edges.sort(key=lambda e: (e["kind"], e["from"], e["to"]))
     unique_warnings: list[dict[str, Any]] = []
@@ -936,7 +976,7 @@ def build_edges(nodes: list[dict[str, Any]], edge_seed: list[dict[str, Any]]) ->
     return edges, unique_warnings
 
 
-def attach_edge_lists(nodes: list[dict[str, Any]], edges: list[dict[str, str]]) -> None:
+def attach_edge_lists(nodes: list[dict[str, Any]], edges: list[dict[str, Any]]) -> None:
     by_id = {n["id"]: n for n in nodes}
     for e in edges:
         frm, to, kind = e["from"], e["to"], e["kind"]
@@ -953,6 +993,18 @@ def attach_edge_lists(nodes: list[dict[str, Any]], edges: list[dict[str, str]]) 
             by_id[frm]["equivalent_to_ids"].append(to)
         elif kind == "implies":
             by_id[frm]["implies_ids"].append(to)
+        elif kind in {"source_variant_of", "reduces_to"}:
+            record = {
+                "source": frm,
+                "target": to,
+                "kind": kind,
+                "author": str(e.get("source_author") or ""),
+                "book": str(e.get("source_book") or ""),
+            }
+            if record not in by_id[frm]["source_variant_of"]:
+                by_id[frm]["source_variant_of"].append(record)
+            if record not in by_id[to]["source_variants"]:
+                by_id[to]["source_variants"].append(record)
 
     def names(ids: list[str]) -> list[str]:
         return [by_id[x]["name"] for x in ids if x in by_id]
@@ -971,9 +1023,11 @@ def attach_edge_lists(nodes: list[dict[str, Any]], edges: list[dict[str, str]]) 
         n["prereq_titles"] = names(n["prereq_ids"])
         n["equivalent_to_titles"] = names(n["equivalent_to_ids"])
         n["implies_titles"] = names(n["implies_ids"])
+        n["source_variant_of_titles"] = names([v.get("target", "") for v in n.get("source_variant_of", [])])
+        n["source_variant_titles"] = names([v.get("source", "") for v in n.get("source_variants", [])])
 
 
-def build_metadata(chapter_root: Path, chapter_name: str, nodes: list[dict[str, Any]], edges: list[dict[str, str]], errors: list[dict[str, Any]]) -> dict[str, Any]:
+def build_metadata(chapter_root: Path, chapter_name: str, nodes: list[dict[str, Any]], edges: list[dict[str, Any]], errors: list[dict[str, Any]]) -> dict[str, Any]:
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "roots": [str(chapter_root)],
