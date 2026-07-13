@@ -356,7 +356,7 @@ const VOLUME_NUMBER_BY_ID={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
 const CHAPTER_TO_VOLUME={'propositional-logic':1,'predicate-logic':1,'sets-relations-functions':1,'relations-functions':1,'set-theory':1,'cardinality':1,'orderings':1,'axiom-systems':1,'proof-techniques':1,'identity-equality-equivalence':2,'arithmetic-operations-relations':2,'peano-systems':2,'natural-numbers':2,'whole-numbers':2,'integers':2,'rationals':2,'reals':2,'numbers-summary':2,'embedding-number-systems':2,'constructing-number-systems':2,'number-lines':2,'structure-of-real-line':2,'formalizing-number-systems':2,'lean':2,'complex-numbers':2,'real-analysis':3,'bounding':3,'sequences':3,'elementary-functions':3,'functions':3,'continuity':3,'differentiation':3,'riemann-integration':3,'measure-theory':3,'probability-theory':3,'functional-analysis':3,'complex-analysis':3,'series':3,'function-sequences':3,'foundations':3,'discrete-calculus':3,'algebraic-structures':4,'abstract-algebra':4,'linear-algebra':4,'lattice-order':4,'set-algebra':4,'algebraic-geometry':4,'summation-algebra':4,'euclidean-geometry':5,'analytical-geometry':5,'trigonometry':5,'non-euclidean-geometry':5,'differential-geometry':5,'riemannian-geometry':5,'topology':5,'calculus':6,'geometric-modeling':6,'computational-geometry':6,'computational-linear-algebra':6,'computational-probability':6,'ordinary-differential-equations':6,'partial-differential-equations':6,'fourier-analysis':6,'numerical-analysis':7,'numerical-pde':7,'category-theory':8,'model-theory':8,'proof-theory':8,'type-theory':8,'lambda-calculus':8,'algebras-of-sets':8};
 function nodeVolume(n){return CHAPTER_TO_VOLUME[n&&n.chapter]||0;}
 
-const state={knowledge:{metadata:{},nodes:[]},edges:[],modelArtifacts:{metadata:{},artifacts:[],errors:[]},toProve:{metadata:{},volumes:[],items:[]},proofVault:{records:{}},activeTab:'knowledge',modelBoardSearch:'',modelVolume:'All',modelBook:'All',modelChapter:'All',modelTopic:'All',toProveVolume:'All',toProveBook:'All',toProveChapter:'All',toProveStatusFilter:'open',toProveGraphMode:'union',activeDependencyGraphMode:'union',selectedToProveId:null,activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,activeSourceRequest:0,pdfVolume:'',pdfEdition:'digital',zoom:1,selectedId:null,selectedModelArtifactId:null,nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showProofDepends:false,showImplies:true,volume:'All',book:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
+const state={knowledge:{metadata:{},nodes:[]},edges:[],modelArtifacts:{metadata:{},artifacts:[],errors:[]},toProve:{metadata:{},volumes:[],items:[]},proofVault:{records:{}},activeTab:'knowledge',modelBoardSearch:'',modelVolume:'All',modelBook:'All',modelChapter:'All',modelTopic:'All',toProveVolume:'All',toProveBook:'All',toProveChapter:'All',toProveStatusFilter:'open',toProveGraphMode:'union',activeDependencyGraphMode:'union',selectedToProveId:null,activeProofNode:null,activeProofTab:'standard',activeExampleNode:null,activeExampleIndex:0,activeSourceRequest:0,pdfVolume:'',pdfEdition:'digital',zoom:1,selectedId:null,selectedModelArtifactId:null,initialGraphNodeIds:[],nodePositions:{},dragging:null,suppressNextClick:false,renderedGraph:null,filters:{search:'',showDefinitions:true,showAxioms:true,showResults:true,showPrimitives:true,showDepends:true,showProofDepends:false,showImplies:true,volume:'All',book:'All',chapter:'All',deck:'All',treeMode:'off',layoutMode:'topo'}};
 const els={status:document.getElementById('status'),graphWrap:document.getElementById('graphWrap'),graphInner:document.getElementById('graphInner'),edgeLayer:document.getElementById('edgeLayer'),nodeLayer:document.getElementById('nodeLayer'),tooltip:document.getElementById('tooltip'),knowledgeTabBtn:document.getElementById('knowledgeTabBtn'),modelTabBtn:document.getElementById('modelTabBtn'),toProveTabBtn:document.getElementById('toProveTabBtn'),knowledgePanels:Array.from(document.querySelectorAll('.knowledge-panel')),modelPanels:Array.from(document.querySelectorAll('.model-panel')),toProvePanels:Array.from(document.querySelectorAll('.to-prove-panel')),modelBoard:document.getElementById('modelBoard'),modelBoardStatus:document.getElementById('modelBoardStatus'),modelBoardList:document.getElementById('modelBoardList'),modelBoardSearch:document.getElementById('modelBoardSearch'),modelVolumeFilter:document.getElementById('modelVolumeFilter'),modelBookFilter:document.getElementById('modelBookFilter'),modelChapterFilter:document.getElementById('modelChapterFilter'),modelTopicFilter:document.getElementById('modelTopicFilter'),modelBoardGraphBtn:document.getElementById('modelBoardGraphBtn'),toProveBoard:document.getElementById('toProveBoard'),toProveBoardStatus:document.getElementById('toProveBoardStatus'),toProveList:document.getElementById('toProveList'),toProveStatus:document.getElementById('toProveStatus'),toProveVolumeFilter:document.getElementById('toProveVolumeFilter'),toProveBookFilter:document.getElementById('toProveBookFilter'),toProveChapterFilter:document.getElementById('toProveChapterFilter'),toProveStatusFilter:document.getElementById('toProveStatusFilter'),toProveGraphMode:document.getElementById('toProveGraphMode'),toProveSelect:document.getElementById('toProveSelect'),toProveGraphBtn:document.getElementById('toProveGraphBtn'),searchBox:document.getElementById('searchBox'),showDefinitions:document.getElementById('showDefinitions'),showAxioms:document.getElementById('showAxioms'),showResults:document.getElementById('showResults'),showPrimitives:document.getElementById('showPrimitives'),showDepends:document.getElementById('showDepends'),showProofDepends:document.getElementById('showProofDepends'),showImplies:document.getElementById('showImplies'),layoutMode:document.getElementById('layoutMode'),treeMode:document.getElementById('treeMode'),volumeFilter:document.getElementById('volumeFilter'),bookFilter:document.getElementById('bookFilter'),chapterFilter:document.getElementById('chapterFilter'),deckFilter:document.getElementById('deckFilter'),dataMeta:document.getElementById('dataMeta'),detailTitle:document.getElementById('detailTitle'),detailEmpty:document.getElementById('detailEmpty'),detailContent:document.getElementById('detailContent'),modelArtifactStatus:document.getElementById('modelArtifactStatus'),modelArtifactSelect:document.getElementById('modelArtifactSelect'),zoomInBtn:document.getElementById('zoomInBtn'),zoomOutBtn:document.getElementById('zoomOutBtn'),resetBtn:document.getElementById('resetBtn'),proofModal:document.getElementById('proofModal'),proofModalTitle:document.getElementById('proofModalTitle'),proofModalBody:document.getElementById('proofModalBody'),proofModalClose:document.getElementById('proofModalClose'),examplesModal:document.getElementById('examplesModal'),examplesModalTitle:document.getElementById('examplesModalTitle'),examplesModalBody:document.getElementById('examplesModalBody'),examplesModalClose:document.getElementById('examplesModalClose'),examplesSelect:document.getElementById('examplesSelect'),pdfModal:document.getElementById('pdfModal'),pdfModalClose:document.getElementById('pdfModalClose'),pdfModalBody:document.getElementById('pdfModalBody'),pdfVolumeSelect:document.getElementById('pdfVolumeSelect'),pdfEditionSelect:document.getElementById('pdfEditionSelect'),sourceModal:document.getElementById('sourceModal'),sourceModalTitle:document.getElementById('sourceModalTitle'),sourceModalBody:document.getElementById('sourceModalBody'),sourceModalClose:document.getElementById('sourceModalClose')};
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
@@ -828,6 +828,13 @@ function getNodes(){return state.knowledge.nodes||[];}
 function visibleGraph(){
   const nodes=getNodes();
   syncFilters(nodes);
+  if(state.initialGraphNodeIds?.length){
+    const requested=new Set(state.initialGraphNodeIds);
+    const outNodes=nodes.filter(n=>requested.has(n.id));
+    const ids=new Set(outNodes.map(n=>n.id));
+    const outEdges=state.edges.filter(e=>{const k=normalizeEdgeKind(e.kind);return ids.has(e.from)&&ids.has(e.to)&&((isDependencyKind(k)&&state.filters.showDepends)||(isProofDependencyKind(k)&&state.filters.showProofDepends)||((k==='uses'||k==='used_by')&&state.filters.showDepends)||((k==='implies'||k==='equivalent_to'||k==='source_variant_of'||k==='reduces_to')&&state.filters.showImplies));});
+    return{nodes:outNodes,edges:outEdges};
+  }
   const tm=state.filters.treeMode;
   if(tm!=='off'&&state.selectedId){
     return tm==='dep'?depTree(nodes,state.edges,state.selectedId):usedByTree(nodes,state.edges,state.selectedId);
@@ -935,6 +942,30 @@ function rectPt(rect,target,inset=0){const cx=rect.x+rect.w/2,cy=rect.y+rect.h/2
 
 function scrollToGraphPoint(gx,gy){const z=state.zoom;const vw=els.graphWrap.clientWidth;const vh=els.graphWrap.clientHeight;els.graphWrap.scrollLeft=gx*z-vw/2;els.graphWrap.scrollTop=gy*z-vh/2;}
 function centerOnNode(id){const g=state.renderedGraph;if(!g)return;const node=g.nodes.find(n=>n.id===id);if(!node)return;scrollToGraphPoint(node.x+(node.w||250)/2,node.y+(node.h||86)/2);}
+function resolveNodeRequest(value,nodes){
+  const requested=String(value||'').trim();
+  if(!requested)return null;
+  const exact=nodes.find(n=>n.id===requested);
+  if(exact)return exact.id;
+  const lc=requested.toLowerCase();
+  const hit=nodes.find(n=>String(n.id).toLowerCase()===lc||String(n.label||'').toLowerCase()===lc||String(nodeTitle(n)).toLowerCase()===lc);
+  return hit?hit.id:null;
+}
+function resolveInitialGraphNodeIds(){
+  const nodes=state.knowledge.nodes||[];
+  const params=new URLSearchParams(location.search);
+  const values=[
+    ...params.getAll('nodeId'),
+    ...params.getAll('nodeIds'),
+  ].flatMap(v=>String(v||'').split(',')).map(v=>v.trim()).filter(Boolean);
+  const ids=[];
+  const seen=new Set();
+  for(const value of values){
+    const id=resolveNodeRequest(value,nodes);
+    if(id&&!seen.has(id)){seen.add(id);ids.push(id);}
+  }
+  return ids;
+}
 function resolveInitialAnchor(){
   const nodes=state.knowledge.nodes||[];
   const exists=id=>!!id&&nodes.some(n=>n.id===id);
@@ -942,10 +973,8 @@ function resolveInitialAnchor(){
   const params=new URLSearchParams(location.search);
   const requested=(params.get('node')||params.get('focus')||params.get('center')||params.get('id')||'').trim();
   if(requested){
-    if(exists(requested))return requested;
-    const lc=requested.toLowerCase();
-    const hit=nodes.find(n=>String(n.id).toLowerCase()===lc||String(n.label||'').toLowerCase()===lc||String(nodeTitle(n)).toLowerCase()===lc);
-    if(hit)return hit.id;
+    const id=resolveNodeRequest(requested,nodes);
+    if(id)return id;
   }
   // 2) Default anchor: the Supremum.
   if(exists(INITIAL_ANCHOR_ID))return INITIAL_ANCHOR_ID;
@@ -953,7 +982,8 @@ function resolveInitialAnchor(){
   return chooseAnchor(nodes,state.edges)||(nodes[0]&&nodes[0].id)||null;
 }
 function applyInitialView(){
-  const anchor=resolveInitialAnchor();
+  state.initialGraphNodeIds=resolveInitialGraphNodeIds();
+  const anchor=state.initialGraphNodeIds[0]||resolveInitialAnchor();
   state.selectedId=anchor;
   state.zoom=INITIAL_ZOOM;
   render();
@@ -964,6 +994,7 @@ function applyInitialView(){
 }
 
 function focusFilteredGraph(){
+  state.initialGraphNodeIds=[];
   state.filters.treeMode='off';
   els.treeMode.value='off';
   state.nodePositions={};
@@ -979,6 +1010,7 @@ function focusFilteredGraph(){
   else{els.detailEmpty.style.display='block';els.detailContent.style.display='none';}
   requestAnimationFrame(()=>requestAnimationFrame(()=>{if(anchor)centerOnNode(anchor);else{els.graphWrap.scrollLeft=0;els.graphWrap.scrollTop=0;}}));
 }
+function clearInitialGraph(){state.initialGraphNodeIds=[];}
 
 function drawEdges(g=state.renderedGraph){if(!g)return;els.edgeLayer.querySelectorAll('path.edge').forEach(p=>p.remove());const nm=new Map(g.nodes.map(n=>[n.id,n]));const flowDeps=state.filters.layoutMode==='topo';for(const e of g.edges){let a=nm.get(e.from),b=nm.get(e.to);if(!a||!b)continue;if(flowDeps&&isFlowDependencyKind(e.kind)){a=nm.get(e.to);b=nm.get(e.from);}const aB=nodeBox(a),bB=nodeBox(b);const aC={x:aB.x+aB.w/2,y:aB.y+aB.h/2},bC={x:bB.x+bB.w/2,y:bB.y+bB.h/2};const s=rectPt(aB,bC,0),en=rectPt(bB,aC,1);const dir=Math.sign(en.x-s.x)||1,bend=Math.max(80,Math.abs(en.x-s.x)*.45);const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.classList.add('edge');p.setAttribute('d',`M ${s.x} ${s.y} C ${s.x+dir*bend} ${s.y}, ${en.x-dir*bend} ${en.y}, ${en.x} ${en.y}`);p.setAttribute('fill','none');const v=edgeVisual(e.kind);p.setAttribute('stroke',v.color);p.setAttribute('stroke-width',v.width);p.setAttribute('opacity',v.opacity);p.setAttribute('marker-end',v.marker);els.edgeLayer.appendChild(p);}}
 
@@ -1496,16 +1528,16 @@ els.modelVolumeFilter.onchange=e=>{state.modelVolume=e.target.value;state.modelB
 els.modelBookFilter.onchange=e=>{state.modelBook=e.target.value;state.modelChapter='All';state.modelTopic='All';renderModelBoard();};
 els.modelChapterFilter.onchange=e=>{state.modelChapter=e.target.value;state.modelTopic='All';renderModelBoard();};
 els.modelTopicFilter.onchange=e=>{state.modelTopic=e.target.value;renderModelBoard();};
-els.searchBox.oninput=e=>{state.filters.search=e.target.value;render();};
-els.showDefinitions.onchange=e=>{state.filters.showDefinitions=e.target.checked;render();};
-els.showAxioms.onchange=e=>{state.filters.showAxioms=e.target.checked;render();};
-els.showResults.onchange=e=>{state.filters.showResults=e.target.checked;render();};
-els.showPrimitives.onchange=e=>{state.filters.showPrimitives=e.target.checked;render();};
-els.showDepends.onchange=e=>{state.filters.showDepends=e.target.checked;render();};
-els.showProofDepends.onchange=e=>{state.filters.showProofDepends=e.target.checked;render();};
-els.showImplies.onchange=e=>{state.filters.showImplies=e.target.checked;render();};
+els.searchBox.oninput=e=>{clearInitialGraph();state.filters.search=e.target.value;render();};
+els.showDefinitions.onchange=e=>{clearInitialGraph();state.filters.showDefinitions=e.target.checked;render();};
+els.showAxioms.onchange=e=>{clearInitialGraph();state.filters.showAxioms=e.target.checked;render();};
+els.showResults.onchange=e=>{clearInitialGraph();state.filters.showResults=e.target.checked;render();};
+els.showPrimitives.onchange=e=>{clearInitialGraph();state.filters.showPrimitives=e.target.checked;render();};
+els.showDepends.onchange=e=>{clearInitialGraph();state.filters.showDepends=e.target.checked;render();};
+els.showProofDepends.onchange=e=>{clearInitialGraph();state.filters.showProofDepends=e.target.checked;render();};
+els.showImplies.onchange=e=>{clearInitialGraph();state.filters.showImplies=e.target.checked;render();};
 els.layoutMode.onchange=e=>{state.filters.layoutMode=e.target.value;state.nodePositions={};render();};
-els.treeMode.onchange=e=>{state.filters.treeMode=e.target.value;state.nodePositions={};render();};
+els.treeMode.onchange=e=>{clearInitialGraph();state.filters.treeMode=e.target.value;state.nodePositions={};render();};
 // Treat TOC filters as navigation: redraw the scoped graph and center a visible default node.
 els.volumeFilter.onchange=e=>{state.filters.volume=e.target.value;state.filters.book='All';state.filters.chapter='All';state.filters.deck='All';els.bookFilter.value='All';els.chapterFilter.value='All';els.deckFilter.value='All';focusFilteredGraph();};
 els.bookFilter.onchange=e=>{state.filters.book=e.target.value;state.filters.chapter='All';state.filters.deck='All';els.chapterFilter.value='All';els.deckFilter.value='All';focusFilteredGraph();};
