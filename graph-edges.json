@@ -8795,6 +8795,13 @@
     "source_book": "Number Systems and the Foundations of Analysis, Chapter 2"
   },
   {
+    "from": "def:men-equivalence-relation",
+    "to": "def:integer-prepair",
+    "kind": "source_variant_of",
+    "source_author": "Mendelson",
+    "source_book": "Number Systems and the Foundations of Analysis, Chapter 2"
+  },
+  {
     "from": "def:men-integers",
     "to": "def:integers",
     "kind": "source_variant_of",
