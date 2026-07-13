@@ -444,8 +444,13 @@ function proofBundle(n){
   const detailed=proofSection(raw,'detailed');
   return{standard,detailed,mine:proofVaultRecords(n)};
 }
+function verificationRecords(n){
+  if(Array.isArray(n.verifications)&&n.verifications.length)return n.verifications;
+  if(n.verification)return[n.verification];
+  return hasVerification(n)?[verificationBundle(n)]:[];
+}
 function verificationBundle(n){
-  const v=n.verification||{};
+  const v=(Array.isArray(n.verifications)&&n.verifications.length?n.verifications[0]:n.verification)||{};
   const code=decodeB64(v.lean_code_b64||v.code_b64||n.lean_code_b64||n.verification_code_b64)
     ||v.lean_code||v.code||n.lean_code||n.verification_code||'';
   return{
@@ -460,8 +465,9 @@ function verificationBundle(n){
 }
 function hasVerification(n){
   const v=n.verification||{};
-  return!!(v.status||v.module||v.declaration||v.decl||v.source_path||v.source||v.code_b64||v.lean_code_b64||v.lean_code||v.code||n.verification_status||n.lean_module||n.verification_module||n.lean_decl||n.verification_decl||n.lean_source||n.verification_source||n.lean_code_b64||n.verification_code_b64||n.lean_code||n.verification_code);
+  return!!((Array.isArray(n.verifications)&&n.verifications.length)||v.status||v.module||v.declaration||v.decl||v.source_path||v.source||v.code_b64||v.lean_code_b64||v.lean_code||v.code||n.verification_status||n.lean_module||n.verification_module||n.lean_decl||n.verification_decl||n.lean_source||n.verification_source||n.lean_code_b64||n.verification_code_b64||n.lean_code||n.verification_code);
 }
+function hasBookProof(n){const b=proofBundle(n);return!!(b.standard||b.detailed||b.mine.length);}
 function hasAnyProof(n){const b=proofBundle(n);return!!(b.standard||b.detailed||b.mine.length||hasVerification(n));}
 function examplesForNode(n){return Array.isArray(n.examples)?n.examples:[];}
 function hasExamples(n){return examplesForNode(n).length>0;}
@@ -482,20 +488,24 @@ function renderMine(records){
   }).join('');
 }
 function renderVerification(n){
-  const v=verificationBundle(n);
-  if(!hasVerification(n))return'<div class="proof-empty">No formal verification target is recorded for this item yet.</div>';
-  const statusClass=String(v.status||'pending').toLowerCase().replace(/[^a-z0-9_-]+/g,'_');
-  const fields=[
-    ['System',esc(v.system)],
-    ['Status',`<span class="verification-status ${esc(statusClass)}">${esc(v.status||'pending')}</span>`],
-    ['Module',esc(v.module)],
-    ['Declaration',esc(v.declaration)],
-    ['Source',esc(v.source)],
-    ['Label',esc(v.label)]
-  ].filter(([,value])=>value);
-  const meta=`<div class="verification-meta">${fields.map(([label,value])=>`<div class="verification-field"><div class="label">${esc(label)}</div><div class="value">${value}</div></div>`).join('')}</div>`;
-  const code=v.code?`<pre class="proof-pre"><code>${esc(v.code)}</code></pre>`:'<div class="proof-empty">No formal code is available in the explorer record yet.</div>';
-  return meta+code;
+  const records=verificationRecords(n);
+  if(!records.length)return'<div class="proof-empty">No formal verification target is recorded for this item yet.</div>';
+  return records.map(raw=>{
+    const v={...verificationBundle(n),...(raw||{})};
+    const statusClass=String(v.status||'pending').toLowerCase().replace(/[^a-z0-9_-]+/g,'_');
+    const fields=[
+      ['System',esc(v.system||'Lean 4')],
+      ['Status',`<span class="verification-status ${esc(statusClass)}">${esc(v.status||'pending')}</span>`],
+      ['Repository',esc(v.repo||v.repository||'')],
+      ['Module',esc(v.module||'')],
+      ['Declaration',esc(v.declaration||v.decl||'')],
+      ['Source',esc(v.source_path||v.source||'')],
+      ['Label',esc(v.label||v.source_label||n.id)]
+    ].filter(([,value])=>value);
+    const meta=`<div class="verification-meta">${fields.map(([label,value])=>`<div class="verification-field"><div class="label">${esc(label)}</div><div class="value">${value}</div></div>`).join('')}</div>`;
+    const code=v.code?`<pre class="proof-pre"><code>${esc(v.code)}</code></pre>`:'<div class="proof-empty">No formal code is available in the explorer record yet.</div>';
+    return`<div class="proof-attempt">${meta}${code}</div>`;
+  }).join('');
 }
 function renderProofTab(){
   const n=state.activeProofNode;if(!n)return;
@@ -508,7 +518,7 @@ function renderProofTab(){
 }
 function openProofModal(id,tab='standard'){
   const n=(state.knowledge.nodes||[]).find(x=>x.id===id);if(!n)return;
-  state.activeProofNode=n;state.activeProofTab=tab;
+  state.activeProofNode=n;state.activeProofTab=(tab==='standard'&&!hasBookProof(n)&&hasVerification(n))?'verification':tab;
   els.proofModalTitle.innerHTML=texToHtml(nodeTitle(n)||n.id);
   renderProofTab();
   els.proofModal.style.display='flex';
