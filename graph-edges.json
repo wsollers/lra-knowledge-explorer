@@ -12635,6 +12635,76 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:rational-square",
+    "to": "def:rationals",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rational-square",
+    "to": "def:multiplication-on-q-classes",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-exists-on-rational-squares",
+    "to": "def:rational-square",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-exists-on-rational-squares",
+    "to": "def:absolute-value-on-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-exists-on-rational-squares",
+    "to": "thm:absolute-value-nonnegative-on-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:uniqueness-of-nonnegative-rational-square-roots",
+    "to": "thm:q-is-an-ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:uniqueness-of-nonnegative-rational-square-roots",
+    "to": "thm:trichotomy-on-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rational-square-root",
+    "to": "thm:rational-square-root-exists-on-rational-squares",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:rational-square-root",
+    "to": "thm:uniqueness-of-nonnegative-rational-square-roots",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-well-defined",
+    "to": "thm:rational-square-root-exists-on-rational-squares",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-well-defined",
+    "to": "thm:uniqueness-of-nonnegative-rational-square-roots",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-of-square",
+    "to": "def:rational-square-root",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-of-square",
+    "to": "def:absolute-value-on-q",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-of-square",
+    "to": "thm:rational-square-root-well-defined",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:no-rational-square-root-of-two",
     "to": "thm:q-is-a-field",
     "kind": "depends_on"
@@ -13177,6 +13247,56 @@
   {
     "from": "lem:rational-limit-unique",
     "to": "thm:q-is-an-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-exists-on-rational-squares",
+    "to": "def:rational-square",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-exists-on-rational-squares",
+    "to": "def:absolute-value-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-exists-on-rational-squares",
+    "to": "thm:absolute-value-nonnegative-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-of-square",
+    "to": "def:rational-square-root",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-of-square",
+    "to": "def:absolute-value-on-q",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-of-square",
+    "to": "thm:rational-square-root-well-defined",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-well-defined",
+    "to": "thm:rational-square-root-exists-on-rational-squares",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:rational-square-root-well-defined",
+    "to": "thm:uniqueness-of-nonnegative-rational-square-roots",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:uniqueness-of-nonnegative-rational-square-roots",
+    "to": "thm:q-is-an-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:uniqueness-of-nonnegative-rational-square-roots",
+    "to": "thm:trichotomy-on-q",
     "kind": "proof_depends_on"
   },
   {
@@ -25562,6 +25682,11 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:real-order-trichotomy",
+    "to": "thm:trichotomy-on-r",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:ineq-add-both-sides",
     "to": "def:real-ordered-field",
     "kind": "depends_on"
@@ -25599,6 +25724,26 @@
   {
     "from": "thm:ineq-nonstrict-add-inequalities",
     "to": "thm:ineq-nonstrict-add-both-sides",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:positive-sum",
+    "to": "thm:r-is-an-ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:positive-sum",
+    "to": "thm:ineq-add-inequalities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:subtraction-of-inequalities-not-valid",
+    "to": "thm:ineq-add-inequalities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:subtraction-of-inequalities-not-valid",
+    "to": "thm:ineq-multiply-negative",
     "kind": "depends_on"
   },
   {
@@ -25732,6 +25877,26 @@
     "kind": "depends_on"
   },
   {
+    "from": "lem:positive-multiplication-cancellation",
+    "to": "lem:division-by-positive-preserves-order",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:positive-multiplication-cancellation",
+    "to": "thm:r-is-an-ordered-field",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:division-of-inequalities-not-valid",
+    "to": "lem:division-by-positive-preserves-order",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:division-of-inequalities-not-valid",
+    "to": "lem:division-by-negative-reverses-order",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:ineq-squeeze",
     "to": "def:real-ordered-field",
     "kind": "depends_on"
@@ -25797,6 +25962,126 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:square-nonnegative",
+    "to": "lem:positive-product",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:square-nonnegative",
+    "to": "lem:negative-times-negative-is-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:square-nonnegative",
+    "to": "thm:real-order-trichotomy",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-square-root-function",
+    "to": "def:square-root",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-square-root-function",
+    "to": "thm:existence-of-square-roots",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:real-square-root-function",
+    "to": "thm:uniqueness-of-nonnegative-square-roots",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-nonnegative",
+    "to": "def:real-square-root-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-square",
+    "to": "def:real-square-root-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-zero-one",
+    "to": "def:real-square-root-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-zero-one",
+    "to": "thm:uniqueness-of-nonnegative-square-roots",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-positive",
+    "to": "thm:sqrt-nonnegative",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-positive",
+    "to": "thm:sqrt-square",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-positive",
+    "to": "thm:sqrt-zero-one",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-of-square-absolute-value",
+    "to": "def:real-square-root-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-of-square-absolute-value",
+    "to": "def:absolute-value",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-of-square-absolute-value",
+    "to": "thm:uniqueness-of-nonnegative-square-roots",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-product",
+    "to": "thm:sqrt-nonnegative",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-product",
+    "to": "thm:sqrt-square",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-product",
+    "to": "thm:uniqueness-of-nonnegative-square-roots",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-quotient",
+    "to": "thm:sqrt-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-quotient",
+    "to": "thm:sqrt-product",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sqrt-quotient",
+    "to": "thm:sqrt-square",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-square-root-strict-monotone",
+    "to": "thm:ineq-square-monotone",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-square-root-strict-monotone",
+    "to": "thm:sqrt-square",
+    "kind": "depends_on"
+  },
+  {
     "from": "lem:positive-powers-are-positive",
     "to": "def:real-ordered-field",
     "kind": "depends_on"
@@ -25838,22 +26123,152 @@
   },
   {
     "from": "thm:ineq-square-root-monotone",
-    "to": "thm:ineq-square-monotone",
+    "to": "def:real-square-root-function",
     "kind": "depends_on"
   },
   {
-    "from": "thm:ineq-am-gm-two",
-    "to": "prop:product-of-positives-is-positive-q",
+    "from": "thm:ineq-square-root-monotone",
+    "to": "thm:ineq-square-root-strict-monotone",
     "kind": "depends_on"
   },
   {
-    "from": "thm:ineq-am-gm-two",
-    "to": "thm:ineq-square-monotone",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:ineq-am-gm-two",
+    "from": "thm:positive-square-comparison",
     "to": "thm:ineq-square-root-monotone",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:positive-square-comparison",
+    "to": "thm:sqrt-of-square-absolute-value",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:unit-interval-square-bounds",
+    "to": "thm:ineq-multiply-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:unit-interval-square-bounds",
+    "to": "lem:positive-multiplication-cancellation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm-two",
+    "to": "lem:positive-product",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm-two",
+    "to": "thm:ineq-square-monotone",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm-two",
+    "to": "thm:sqrt-product",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:classical-means",
+    "to": "def:real-square-root-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:classical-means",
+    "to": "thm:sqrt-product",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm",
+    "to": "def:classical-means",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm",
+    "to": "thm:ineq-am-gm-two",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm",
+    "to": "thm:square-nonnegative",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm-hm",
+    "to": "def:classical-means",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm-hm",
+    "to": "thm:ineq-am-gm",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm-hm",
+    "to": "thm:ineq-reciprocal-positive",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-cauchy-schwarz",
+    "to": "thm:square-nonnegative",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-cauchy-schwarz",
+    "to": "thm:sqrt-product",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-cauchy-schwarz",
+    "to": "thm:triangle-inequality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-chebyshev-sum",
+    "to": "thm:ineq-add-inequalities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-chebyshev-sum",
+    "to": "thm:ineq-nonstrict-multiply-nonneg",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-rearrangement",
+    "to": "thm:ineq-chebyshev-sum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-rearrangement",
+    "to": "thm:ineq-add-inequalities",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-holder",
+    "to": "thm:ineq-am-gm",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-holder",
+    "to": "thm:ineq-cauchy-schwarz",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-holder",
+    "to": "def:absolute-value",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-minkowski",
+    "to": "thm:ineq-holder",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-minkowski",
+    "to": "thm:triangle-inequality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:ineq-minkowski",
+    "to": "def:absolute-value",
     "kind": "depends_on"
   },
   {
@@ -26117,6 +26532,126 @@
     "kind": "proof_depends_on"
   },
   {
+    "from": "prop:division-of-inequalities-not-valid",
+    "to": "lem:division-by-positive-preserves-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:division-of-inequalities-not-valid",
+    "to": "lem:division-by-negative-reverses-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm-hm",
+    "to": "def:classical-means",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm-hm",
+    "to": "thm:ineq-am-gm",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm-hm",
+    "to": "thm:ineq-reciprocal-positive",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm-two",
+    "to": "thm:sqrt-product",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm-two",
+    "to": "lem:positive-product",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm-two",
+    "to": "lem:division-by-positive-preserves-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm",
+    "to": "def:classical-means",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm",
+    "to": "thm:ineq-am-gm-two",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-am-gm",
+    "to": "thm:square-nonnegative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-cauchy-schwarz",
+    "to": "thm:square-nonnegative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-cauchy-schwarz",
+    "to": "thm:sqrt-product",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-cauchy-schwarz",
+    "to": "thm:triangle-inequality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-chebyshev-sum",
+    "to": "thm:ineq-add-inequalities",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-chebyshev-sum",
+    "to": "thm:ineq-nonstrict-multiply-nonneg",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-holder",
+    "to": "thm:ineq-am-gm",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-holder",
+    "to": "thm:ineq-cauchy-schwarz",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-holder",
+    "to": "def:absolute-value",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-minkowski",
+    "to": "thm:ineq-holder",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-minkowski",
+    "to": "thm:triangle-inequality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-minkowski",
+    "to": "def:absolute-value",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-rearrangement",
+    "to": "thm:ineq-chebyshev-sum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-rearrangement",
+    "to": "thm:ineq-add-inequalities",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "thm:ineq-reciprocal-flip",
     "to": "thm:ineq-reciprocal-positive",
     "kind": "proof_depends_on"
@@ -26144,6 +26679,36 @@
   {
     "from": "thm:ineq-reciprocal-positive",
     "to": "thm:ineq-multiply-positive",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-square-monotone",
+    "to": "lem:positive-product",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-square-monotone",
+    "to": "lem:order-and-subtraction",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-square-root-monotone",
+    "to": "thm:ineq-square-root-strict-monotone",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-square-root-strict-monotone",
+    "to": "thm:sqrt-nonnegative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-square-root-strict-monotone",
+    "to": "thm:sqrt-square",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:ineq-square-root-strict-monotone",
+    "to": "thm:ineq-square-monotone",
     "kind": "proof_depends_on"
   },
   {
@@ -26187,6 +26752,16 @@
     "kind": "proof_depends_on"
   },
   {
+    "from": "lem:positive-multiplication-cancellation",
+    "to": "lem:division-by-positive-preserves-order",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:positive-multiplication-cancellation",
+    "to": "thm:r-is-an-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "lem:positive-powers-are-positive",
     "to": "def:real-ordered-field",
     "kind": "proof_depends_on"
@@ -26207,6 +26782,26 @@
     "kind": "proof_depends_on"
   },
   {
+    "from": "thm:positive-square-comparison",
+    "to": "thm:ineq-square-root-monotone",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:positive-square-comparison",
+    "to": "thm:sqrt-of-square-absolute-value",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:positive-sum",
+    "to": "thm:r-is-an-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:positive-sum",
+    "to": "thm:ineq-add-inequalities",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "lem:positive-times-negative-is-negative",
     "to": "thm:r-is-an-ordered-field",
     "kind": "proof_depends_on"
@@ -26224,6 +26819,116 @@
   {
     "from": "lem:powers-preserve-order-for-positive-numbers",
     "to": "thm:ineq-multiply-positive",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:real-order-trichotomy",
+    "to": "thm:trichotomy-on-r",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-nonnegative",
+    "to": "def:real-square-root-function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-of-square-absolute-value",
+    "to": "def:absolute-value",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-of-square-absolute-value",
+    "to": "thm:uniqueness-of-nonnegative-square-roots",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-positive",
+    "to": "thm:sqrt-nonnegative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-positive",
+    "to": "thm:sqrt-square",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-product",
+    "to": "thm:sqrt-nonnegative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-product",
+    "to": "thm:sqrt-square",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-product",
+    "to": "thm:uniqueness-of-nonnegative-square-roots",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-quotient",
+    "to": "thm:sqrt-positive",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-quotient",
+    "to": "thm:sqrt-square",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-quotient",
+    "to": "thm:uniqueness-of-nonnegative-square-roots",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-square",
+    "to": "def:real-square-root-function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-zero-one",
+    "to": "def:real-square-root-function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sqrt-zero-one",
+    "to": "thm:uniqueness-of-nonnegative-square-roots",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:square-nonnegative",
+    "to": "lem:positive-product",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:square-nonnegative",
+    "to": "lem:negative-times-negative-is-positive",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:square-nonnegative",
+    "to": "thm:real-order-trichotomy",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:subtraction-of-inequalities-not-valid",
+    "to": "thm:ineq-add-inequalities",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:subtraction-of-inequalities-not-valid",
+    "to": "thm:ineq-multiply-negative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:unit-interval-square-bounds",
+    "to": "thm:ineq-multiply-positive",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:unit-interval-square-bounds",
+    "to": "lem:positive-multiplication-cancellation",
     "kind": "proof_depends_on"
   },
   {
