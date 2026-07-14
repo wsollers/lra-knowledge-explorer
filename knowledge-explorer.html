@@ -370,6 +370,21 @@ function parseLatexItems(body){const items=[];const re=/\\item(?:\[([^\]]*)\])?\
 function renderListBlock(kind,body){const tag=kind==='enumerate'?'ol':'ul';const items=parseLatexItems(body);if(!items.length)return'';return`<${tag} class="math-list">${items.map(i=>`<li>${i.label?`<span class="item-label">${texToHtml(i.label)}</span> `:''}${renderMixedMath(i.body)}</li>`).join('')}</${tag}>`;}
 function renderDescriptionBlock(body){const items=parseLatexItems(body);if(!items.length)return'';return`<div class="description-list">${items.map(i=>`<div class="description-item">${i.label?`<span class="description-label">${texToHtml(i.label)}</span>`:''}<div>${renderMixedMath(i.body)}</div></div>`).join('')}</div>`;}
 function descriptionItems(src){const t=String(src||'').trim();const m=t.match(/^\\begin\{description\}([\s\S]*?)\\end\{description\}$/);return m?parseLatexItems(m[1]):[];}
+function failureItems(src){
+  if(Array.isArray(src)){
+    return src.map((item,i)=>{
+      if(item&&typeof item==='object'){
+        return{label:item.title||item.label||`Part ${i+1}`,body:item.body_tex||item.body||item.text||''};
+      }
+      return{label:`Part ${i+1}`,body:String(item||'')};
+    }).filter(item=>String(item.body||'').trim());
+  }
+  if(src&&typeof src==='object'){
+    const body=src.body_tex||src.body||src.text||'';
+    return String(body).trim()?[{label:src.title||src.label||'',body}]:[];
+  }
+  return descriptionItems(src);
+}
 function renderList(src){const t=src.trim();const m=t.match(/^\\begin\{(itemize|enumerate|description)\}([\s\S]*?)\\end\{\1\}$/);if(!m)return null;return m[1]==='description'?renderDescriptionBlock(m[2]):renderListBlock(m[1],m[2]);}
 function splitTableCells(row){const cells=[];let cur='',escaped=false;for(const ch of row){if(escaped){cur+=ch;escaped=false;continue;}if(ch==='\\'){cur+=ch;escaped=true;continue;}if(ch==='&'){cells.push(cur.trim());cur='';continue;}cur+=ch;}cells.push(cur.trim());return cells;}
 function renderLatexTable(src){let t=String(src||'').trim();t=t.replace(/^\\begin\{center\}\s*/,'').replace(/\s*\\end\{center\}$/,'').trim();const begin=t.match(/^\\begin\{(tabularx|tabular)\}/);if(!begin)return null;const endTag=`\\end{${begin[1]}}`;const end=t.lastIndexOf(endTag);if(end<0)return null;const firstBreak=t.indexOf('\n',begin.index+begin[0].length);if(firstBreak<0||firstBreak>end)return null;let body=t.slice(firstBreak+1,end);body=body.replace(/\\(?:toprule|midrule|bottomrule)\b/g,'');const rows=body.split(/\\\\/).map(r=>r.trim()).filter(Boolean);if(!rows.length)return null;const parsed=rows.map(splitTableCells);const cols=Math.max(...parsed.map(r=>r.length));const header=parsed[0]||[];const data=parsed.slice(1);const headHtml=`<thead><tr>${Array.from({length:cols},(_,i)=>`<th>${texToHtml(header[i]||'')}</th>`).join('')}</tr></thead>`;const bodyHtml=`<tbody>${data.map(row=>`<tr>${Array.from({length:cols},(_,i)=>`<td>${texToHtml(row[i]||'')}</td>`).join('')}</tr>`).join('')}</tbody>`;return`<div class="math-table-wrap"><table class="math-table">${headHtml}${bodyHtml}</table></div>`;}
@@ -1416,7 +1431,7 @@ function renderDetails(n){
   els.detailEmpty.style.display='none';els.detailContent.style.display='block';
   const blocks=[];
   function add(t,v,danger=false){if(!v&&v!==0)return;const cls=danger?'card danger':'card';blocks.push(`<div class="${cls}"><div class="label">${esc(t)}</div><div class="value">${texToHtml(String(v))}</div></div>`);}
-  function addFailure(t,v){if(!v&&v!==0)return;const items=descriptionItems(v);let body='';if(items.length>1){body=`<div class="failure-tabs">${items.map((item,i)=>`<button class="failure-tab${i===0?' active':''}" type="button" data-failure-tab="${i}">${texToHtml(item.label||`Part ${i+1}`)}</button>`).join('')}</div>${items.map((item,i)=>`<div class="failure-tab-panel${i===0?'':' hidden'}" data-failure-panel="${i}">${renderMixedMath(item.body)}</div>`).join('')}`;}else if(items.length===1){body=renderMixedMath(items[0].body);}else{body=texToHtml(String(v));}blocks.push(`<div class="card danger failure-card"><div class="label">${esc(t)}</div><div class="value">${body}</div></div>`);}
+  function addFailure(t,v){if(!v&&v!==0)return;const items=failureItems(v);let body='';if(items.length>1){body=`<div class="failure-tabs">${items.map((item,i)=>`<button class="failure-tab${i===0?' active':''}" type="button" data-failure-tab="${i}">${texToHtml(item.label||`Part ${i+1}`)}</button>`).join('')}</div>${items.map((item,i)=>`<div class="failure-tab-panel${i===0?'':' hidden'}" data-failure-panel="${i}">${renderMixedMath(item.body)}</div>`).join('')}`;}else if(items.length===1){body=renderMixedMath(items[0].body);}else if(Array.isArray(v)||typeof v==='object'){return;}else{body=texToHtml(String(v));}blocks.push(`<div class="card danger failure-card"><div class="label">${esc(t)}</div><div class="value">${body}</div></div>`);}
   function addProof(t,v){const cleaned=cleanProofText(v);if(!cleaned)return;blocks.push(`<div class="card"><div class="label">${esc(t)}</div><div class="value">${texToHtml(cleaned)}</div></div>`);}
   function addChips(label,ids,treeMode){if(!ids||!ids.length)return;const html=chipList(ids,treeMode);if(!html)return;blocks.push(`<div class="card"><div class="label">${esc(label)}</div><div class="value" style="line-height:2">${html}</div></div>`);}
   function variantRows(list,direction){if(!Array.isArray(list)||!list.length)return'';return list.map(v=>{const id=direction==='incoming'?(v.source||v.from):(v.target||v.to);const rel=normalizeEdgeKind(v.kind)==='reduces_to'?'reduces to':'source variant of';const src=[v.author||v.source_author||'',v.book||v.source_book||''].filter(Boolean).join(' · ');return`<div style="margin:.35rem 0">${chipList([id],'dep')} <span class="tiny">${esc(rel)}${src?` · ${esc(src)}`:''}</span></div>`;}).join('');}
