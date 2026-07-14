@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": "0.1",
-    "generated_at": "2026-07-13T03:19:27.623146+00:00",
+    "generated_at": "2026-07-14T11:10:26.814541+00:00",
     "source_root": "repos",
     "source_registry": "lra-governance/docs/architecture/book-registry.json",
     "artifact_count": 11,
@@ -285,6 +285,10 @@
       },
       {
         "name": "\\SignatureMetadata",
+        "reason": "takes arguments or optional arguments"
+      },
+      {
+        "name": "\\SourceVariantOf",
         "reason": "takes arguments or optional arguments"
       },
       {
