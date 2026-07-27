@@ -1,5 +1,5 @@
 {
-  "version_id": 32,
-  "updated_at": "2026-07-13T23:40:26.382770+00:00",
+  "version_id": 33,
+  "updated_at": "2026-07-27T22:14:39.600140+00:00",
   "source": "lra-governance/tools/governance/extraction_pipeline/export_knowledge_explorer.py"
 }
