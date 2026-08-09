@@ -1845,8 +1845,133 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:axiomatic-equality-structure",
+    "to": "def:axiomatic-equality-language",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:distinctness",
+    "to": "def:axiomatic-equality-language",
+    "kind": "depends_on"
+  },
+  {
+    "from": "ax:axiomatic-equality-reflexivity",
+    "to": "def:axiomatic-equality-language",
+    "kind": "depends_on"
+  },
+  {
+    "from": "ax:axiomatic-equality-substitution",
+    "to": "ax:axiomatic-equality-reflexivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-symmetry",
+    "to": "ax:axiomatic-equality-reflexivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-symmetry",
+    "to": "ax:axiomatic-equality-substitution",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-transitivity",
+    "to": "ax:axiomatic-equality-substitution",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-equivalence-relation",
+    "to": "ax:axiomatic-equality-reflexivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-equivalence-relation",
+    "to": "thm:axiomatic-equality-symmetry",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-equivalence-relation",
+    "to": "thm:axiomatic-equality-transitivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-function-congruence",
+    "to": "ax:axiomatic-equality-substitution",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-relation-congruence",
+    "to": "ax:axiomatic-equality-substitution",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:axiomatic-equality-unique-existence",
+    "to": "def:distinctness",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:axiomatic-equality-unique-existence",
+    "to": "thm:axiomatic-equality-equivalence-relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:two-element-bounds",
+    "to": "def:distinctness",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-equivalence-relation",
+    "to": "ax:axiomatic-equality-reflexivity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-equivalence-relation",
+    "to": "thm:axiomatic-equality-symmetry",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-equivalence-relation",
+    "to": "thm:axiomatic-equality-transitivity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-function-congruence",
+    "to": "ax:axiomatic-equality-substitution",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-function-congruence",
+    "to": "thm:axiomatic-equality-symmetry",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-relation-congruence",
+    "to": "ax:axiomatic-equality-substitution",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-symmetry",
+    "to": "ax:axiomatic-equality-reflexivity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-symmetry",
+    "to": "ax:axiomatic-equality-substitution",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:axiomatic-equality-transitivity",
+    "to": "ax:axiomatic-equality-substitution",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "def:eq-refl",
     "to": "def:term",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:eq-refl",
+    "to": "ax:axiomatic-equality-reflexivity",
     "kind": "depends_on"
   },
   {
@@ -1855,8 +1980,18 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:eq-elim",
+    "to": "ax:axiomatic-equality-substitution",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:eq-sym",
     "to": "def:term",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:eq-sym",
+    "to": "thm:axiomatic-equality-symmetry",
     "kind": "depends_on"
   },
   {
@@ -1875,13 +2010,28 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:eq-trans",
+    "to": "thm:axiomatic-equality-transitivity",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:eq-term",
     "to": "def:eq-elim",
     "kind": "depends_on"
   },
   {
+    "from": "thm:eq-term",
+    "to": "thm:axiomatic-equality-function-congruence",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:eq-pred",
     "to": "def:eq-elim",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:eq-pred",
+    "to": "thm:axiomatic-equality-relation-congruence",
     "kind": "depends_on"
   },
   {
@@ -6790,6 +6940,96 @@
     "kind": "proof_depends_on"
   },
   {
+    "from": "def:lattice",
+    "to": "def:partial-order",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:lattice",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:lattice",
+    "to": "def:sup-inf",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complete-lattice",
+    "to": "def:partial-order",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complete-lattice",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:complete-lattice",
+    "to": "def:sup-inf",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:distributive-lattice",
+    "to": "def:lattice",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:distributive-lattice",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:distributive-lattice",
+    "to": "def:sup-inf",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:boolean-lattice",
+    "to": "def:distributive-lattice",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:boolean-lattice",
+    "to": "def:complete-lattice",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:boolean-lattice",
+    "to": "def:sup-inf",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:knaster-tarski",
+    "to": "def:distributive-lattice",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:knaster-tarski",
+    "to": "def:complete-lattice",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:knaster-tarski",
+    "to": "def:boolean-lattice",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:knaster-tarski",
+    "to": "def:complete-lattice",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:knaster-tarski",
+    "to": "def:order-preserving-map-ordered-sets",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:knaster-tarski",
+    "to": "def:sup-inf",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "def:sym-asym",
     "to": "def:relation",
     "kind": "depends_on"
@@ -7102,81 +7342,6 @@
   {
     "from": "prop:embedding-iso",
     "to": "def:partial-order",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:lattice",
-    "to": "def:partial-order",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:lattice",
-    "to": "def:subset",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:lattice",
-    "to": "def:sup-inf",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:complete-lattice",
-    "to": "def:partial-order",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:complete-lattice",
-    "to": "def:subset",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:complete-lattice",
-    "to": "def:sup-inf",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:distributive-lattice",
-    "to": "def:lattice",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:distributive-lattice",
-    "to": "def:subset",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:distributive-lattice",
-    "to": "def:sup-inf",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:boolean-lattice",
-    "to": "def:distributive-lattice",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:boolean-lattice",
-    "to": "def:complete-lattice",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:boolean-lattice",
-    "to": "def:sup-inf",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:knaster-tarski",
-    "to": "def:distributive-lattice",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:knaster-tarski",
-    "to": "def:complete-lattice",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:knaster-tarski",
-    "to": "def:boolean-lattice",
     "kind": "depends_on"
   },
   {
@@ -7608,21 +7773,6 @@
     "from": "thm:hausdorff",
     "to": "def:upper-bound",
     "kind": "depends_on"
-  },
-  {
-    "from": "thm:knaster-tarski",
-    "to": "def:complete-lattice",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:knaster-tarski",
-    "to": "def:order-preserving-map-ordered-sets",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:knaster-tarski",
-    "to": "def:sup-inf",
-    "kind": "proof_depends_on"
   },
   {
     "from": "thm:linear-order-induced-by-strict-linear-order",
@@ -8565,51 +8715,6 @@
     "kind": "depends_on"
   },
   {
-    "from": "thm:indexed-de-morgan",
-    "to": "def:indexed-family",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:indexed-de-morgan",
-    "to": "def:indexed-union",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:indexed-de-morgan",
-    "to": "def:indexed-intersection",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:indexed-de-morgan",
-    "to": "def:complement",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:indexed-distributivity",
-    "to": "def:indexed-family",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:indexed-distributivity",
-    "to": "def:indexed-union",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:indexed-distributivity",
-    "to": "def:indexed-intersection",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:indexed-distributivity",
-    "to": "def:union",
-    "kind": "depends_on"
-  },
-  {
-    "from": "thm:indexed-distributivity",
-    "to": "def:intersection",
-    "kind": "depends_on"
-  },
-  {
     "from": "def:pairwise-disjoint",
     "to": "def:indexed-family",
     "kind": "depends_on"
@@ -8705,6 +8810,31 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:indexed-distributivity",
+    "to": "def:indexed-family",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:indexed-distributivity",
+    "to": "def:indexed-union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:indexed-distributivity",
+    "to": "def:indexed-intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:indexed-distributivity",
+    "to": "def:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:indexed-distributivity",
+    "to": "def:intersection",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:identity-absorption",
     "to": "ax:extensionality",
     "kind": "depends_on"
@@ -8740,13 +8870,83 @@
     "kind": "depends_on"
   },
   {
-    "from": "def:empty-set",
+    "from": "thm:de-morgan",
+    "to": "def:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:de-morgan",
+    "to": "def:intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:de-morgan",
+    "to": "def:complement",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:indexed-de-morgan",
+    "to": "def:indexed-family",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:indexed-de-morgan",
+    "to": "def:indexed-union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:indexed-de-morgan",
+    "to": "def:indexed-intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:indexed-de-morgan",
+    "to": "def:complement",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:set-duality",
+    "to": "def:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:set-duality",
+    "to": "def:intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:set-duality",
+    "to": "def:empty-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:set-duality",
+    "to": "def:complement",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:set-duality",
+    "to": "def:set-duality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:set-duality",
+    "to": "ax:extensionality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:empty-set-exists-unique",
     "to": "ax:empty-set",
     "kind": "depends_on"
   },
   {
-    "from": "def:subset",
-    "to": "ax:separation",
+    "from": "thm:empty-set-exists-unique",
+    "to": "ax:extensionality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:empty-set",
+    "to": "thm:empty-set-exists-unique",
     "kind": "depends_on"
   },
   {
@@ -8770,13 +8970,58 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:pairing-output-exists-unique",
+    "to": "ax:pairing",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:pairing-output-exists-unique",
+    "to": "ax:extensionality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:union-output-exists-unique",
+    "to": "ax:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:union-output-exists-unique",
+    "to": "ax:extensionality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:binary-union-exists-unique",
+    "to": "thm:pairing-output-exists-unique",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:binary-union-exists-unique",
+    "to": "thm:union-output-exists-unique",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:union",
     "to": "def:set-membership",
     "kind": "depends_on"
   },
   {
     "from": "def:union",
+    "to": "cor:binary-union-exists-unique",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:separation-output-exists-unique",
     "to": "ax:separation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:separation-output-exists-unique",
+    "to": "ax:extensionality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:intersection-exists-unique",
+    "to": "thm:separation-output-exists-unique",
     "kind": "depends_on"
   },
   {
@@ -8786,7 +9031,12 @@
   },
   {
     "from": "def:intersection",
-    "to": "ax:separation",
+    "to": "cor:intersection-exists-unique",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:set-difference-exists-unique",
+    "to": "thm:separation-output-exists-unique",
     "kind": "depends_on"
   },
   {
@@ -8796,22 +9046,27 @@
   },
   {
     "from": "def:set-difference",
-    "to": "ax:separation",
+    "to": "cor:set-difference-exists-unique",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:symmetric-difference-exists-unique",
+    "to": "cor:set-difference-exists-unique",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:symmetric-difference-exists-unique",
+    "to": "cor:binary-union-exists-unique",
     "kind": "depends_on"
   },
   {
     "from": "def:sym-diff",
-    "to": "def:set-difference",
+    "to": "cor:symmetric-difference-exists-unique",
     "kind": "depends_on"
   },
   {
-    "from": "def:sym-diff",
-    "to": "def:union",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:sym-diff",
-    "to": "def:intersection",
+    "from": "cor:relative-complement-exists-unique",
+    "to": "cor:set-difference-exists-unique",
     "kind": "depends_on"
   },
   {
@@ -8821,7 +9076,7 @@
   },
   {
     "from": "def:complement",
-    "to": "ax:separation",
+    "to": "cor:relative-complement-exists-unique",
     "kind": "depends_on"
   },
   {
@@ -8845,8 +9100,18 @@
     "kind": "depends_on"
   },
   {
-    "from": "def:power-set",
+    "from": "thm:power-set-output-exists-unique",
     "to": "ax:power-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:power-set-output-exists-unique",
+    "to": "ax:extensionality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:power-set",
+    "to": "thm:power-set-output-exists-unique",
     "kind": "depends_on"
   },
   {
@@ -8922,47 +9187,17 @@
   {
     "from": "thm:de-morgan",
     "to": "def:union",
-    "kind": "depends_on"
+    "kind": "proof_depends_on"
   },
   {
     "from": "thm:de-morgan",
     "to": "def:intersection",
-    "kind": "depends_on"
+    "kind": "proof_depends_on"
   },
   {
     "from": "thm:de-morgan",
     "to": "def:complement",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:set-duality",
-    "to": "def:union",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:set-duality",
-    "to": "def:intersection",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:set-duality",
-    "to": "def:empty-set",
-    "kind": "depends_on"
-  },
-  {
-    "from": "def:set-duality",
-    "to": "def:complement",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:set-duality",
-    "to": "def:set-duality",
-    "kind": "depends_on"
-  },
-  {
-    "from": "cor:set-duality",
-    "to": "ax:extensionality",
-    "kind": "depends_on"
+    "kind": "proof_depends_on"
   },
   {
     "from": "thm:indexed-de-morgan",
@@ -8997,6 +9232,16 @@
   {
     "from": "thm:indexed-distributivity",
     "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:binary-union-exists-unique",
+    "to": "thm:pairing-output-exists-unique",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:binary-union-exists-unique",
+    "to": "thm:union-output-exists-unique",
     "kind": "proof_depends_on"
   },
   {
@@ -9015,18 +9260,18 @@
     "kind": "proof_depends_on"
   },
   {
-    "from": "thm:de-morgan",
-    "to": "def:union",
+    "from": "thm:empty-set-exists-unique",
+    "to": "ax:empty-set",
     "kind": "proof_depends_on"
   },
   {
-    "from": "thm:de-morgan",
-    "to": "def:intersection",
+    "from": "thm:empty-set-exists-unique",
+    "to": "ax:extensionality",
     "kind": "proof_depends_on"
   },
   {
-    "from": "thm:de-morgan",
-    "to": "def:complement",
+    "from": "cor:intersection-exists-unique",
+    "to": "thm:separation-output-exists-unique",
     "kind": "proof_depends_on"
   },
   {
@@ -9045,6 +9290,16 @@
     "kind": "proof_depends_on"
   },
   {
+    "from": "thm:pairing-output-exists-unique",
+    "to": "ax:pairing",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:pairing-output-exists-unique",
+    "to": "ax:extensionality",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "thm:power-set-monotone-inclusion",
     "to": "thm:power-set-monotone-inclusion",
     "kind": "proof_depends_on"
@@ -9057,6 +9312,31 @@
   {
     "from": "thm:power-set-monotone-inclusion",
     "to": "def:power-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:power-set-output-exists-unique",
+    "to": "ax:power-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:power-set-output-exists-unique",
+    "to": "ax:extensionality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:relative-complement-exists-unique",
+    "to": "cor:set-difference-exists-unique",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:separation-output-exists-unique",
+    "to": "ax:separation",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:separation-output-exists-unique",
+    "to": "ax:extensionality",
     "kind": "proof_depends_on"
   },
   {
@@ -9075,6 +9355,11 @@
     "kind": "proof_depends_on"
   },
   {
+    "from": "cor:set-difference-exists-unique",
+    "to": "thm:separation-output-exists-unique",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "thm:set-difference-monotone-left",
     "to": "thm:set-difference-monotone-left",
     "kind": "proof_depends_on"
@@ -9090,6 +9375,16 @@
     "kind": "proof_depends_on"
   },
   {
+    "from": "cor:symmetric-difference-exists-unique",
+    "to": "cor:set-difference-exists-unique",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:symmetric-difference-exists-unique",
+    "to": "cor:binary-union-exists-unique",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "thm:union-monotone-inclusion",
     "to": "thm:union-monotone-inclusion",
     "kind": "proof_depends_on"
@@ -9102,6 +9397,16 @@
   {
     "from": "thm:union-monotone-inclusion",
     "to": "def:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:union-output-exists-unique",
+    "to": "ax:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:union-output-exists-unique",
+    "to": "ax:extensionality",
     "kind": "proof_depends_on"
   },
   {
@@ -16372,8 +16677,18 @@
     "kind": "depends_on"
   },
   {
+    "from": "ax:leibniz-law",
+    "to": "ax:axiomatic-equality-substitution",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:equality-relation",
     "to": "def:relation",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:equality-relation",
+    "to": "def:axiomatic-equality-structure",
     "kind": "depends_on"
   },
   {
@@ -16627,6 +16942,16 @@
     "kind": "depends_on"
   },
   {
+    "from": "ax:equality-reflexivity",
+    "to": "ax:axiomatic-equality-reflexivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:equality-symmetry",
+    "to": "thm:axiomatic-equality-symmetry",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:equality-symmetry",
     "to": "ax:leibniz-law",
     "kind": "depends_on"
@@ -16634,6 +16959,11 @@
   {
     "from": "thm:equality-symmetry",
     "to": "ax:equality-reflexivity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:equality-transitivity",
+    "to": "thm:axiomatic-equality-transitivity",
     "kind": "depends_on"
   },
   {
@@ -16649,6 +16979,11 @@
   {
     "from": "thm:equality-transitivity",
     "to": "thm:equality-symmetry",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:equality-is-equivalence-relation",
+    "to": "thm:axiomatic-equality-equivalence-relation",
     "kind": "depends_on"
   },
   {
@@ -16667,13 +17002,33 @@
     "kind": "depends_on"
   },
   {
+    "from": "ax:equality-substitution",
+    "to": "ax:axiomatic-equality-substitution",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:substitution-preserves-predicates",
+    "to": "thm:axiomatic-equality-relation-congruence",
+    "kind": "depends_on"
+  },
+  {
     "from": "prop:substitution-preserves-predicates",
     "to": "ax:equality-substitution",
     "kind": "depends_on"
   },
   {
     "from": "prop:substitution-preserves-relations-left",
+    "to": "thm:axiomatic-equality-relation-congruence",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:substitution-preserves-relations-left",
     "to": "ax:equality-substitution",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:substitution-preserves-relations-right",
+    "to": "thm:axiomatic-equality-function-congruence",
     "kind": "depends_on"
   },
   {
@@ -25352,6 +25707,71 @@
     "kind": "depends_on"
   },
   {
+    "from": "cor:maximum-iff-supremum-in-the-set",
+    "to": "def:maximum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:maximum-iff-supremum-in-the-set",
+    "to": "def:supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:maximum-iff-supremum-in-the-set",
+    "to": "prop:maximum-implies-supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:maximum-iff-supremum-in-the-set",
+    "to": "prop:supremum-in-the-set-is-the-maximum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:maximum-iff-supremum-in-the-set",
+    "to": "prop:uniqueness-of-the-supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:relative-bounds",
+    "to": "def:ordered-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:relative-bounds",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:relative-bounds",
+    "to": "def:real-upper-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:relative-bounds",
+    "to": "def:real-lower-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:relative-supremum-infimum",
+    "to": "def:supremum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:relative-supremum-infimum",
+    "to": "def:infimum",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:relative-supremum-infimum",
+    "to": "def:real-upper-bound",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:relative-supremum-infimum",
+    "to": "def:real-lower-bound",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:supremum",
     "to": "def:ordered-set",
     "kind": "depends_on"
@@ -25782,6 +26202,21 @@
     "kind": "depends_on"
   },
   {
+    "from": "cor:bounded-set-has-supremum-and-infimum",
+    "to": "def:bounded",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:bounded-set-has-supremum-and-infimum",
+    "to": "thm:lub-property-implies-existence-of-suprema",
+    "kind": "depends_on"
+  },
+  {
+    "from": "cor:bounded-set-has-supremum-and-infimum",
+    "to": "thm:glb-property-implies-existence-of-infima",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:bound",
     "to": "def:ordered-set",
     "kind": "depends_on"
@@ -25890,6 +26325,416 @@
     "from": "def:bounded",
     "to": "def:bounded-below",
     "kind": "depends_on"
+  },
+  {
+    "from": "prop:bounded-iff-absolute-value-bound",
+    "to": "def:bounded",
+    "kind": "depends_on"
+  },
+  {
+    "from": "prop:bounded-iff-absolute-value-bound",
+    "to": "def:real-chapter-absolute-value-on-r",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:infimum-difference-set",
+    "to": "def:set-arithmetic-images",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-difference-set",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-difference-set",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-difference-set",
+    "to": "def:epsilon-characterization-of-infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-difference-set",
+    "to": "def:epsilon-characterization-of-supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-reciprocal-set",
+    "to": "def:bounded",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-reciprocal-set",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-reciprocal-set",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-reciprocal-set",
+    "to": "thm:reciprocal-reverses-nonstrict-order-on-same-sign-r",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-reciprocal-set",
+    "to": "thm:supremum-reciprocal-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-sum-set",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-sum-set",
+    "to": "def:epsilon-characterization-of-infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-exchange-sup-inf",
+    "to": "def:real-lower-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-exchange-sup-inf",
+    "to": "def:real-upper-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-exchange-sup-inf",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-exchange-sup-inf",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negation-exchange-sup-inf",
+    "to": "def:real-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negative-scalar-mult-infimum",
+    "to": "def:displacement-dilation-reflection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negative-scalar-mult-infimum",
+    "to": "def:real-lower-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negative-scalar-mult-infimum",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:negative-scalar-mult-infimum",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:positive-scalar-mult-infimum",
+    "to": "def:displacement-dilation-reflection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:positive-scalar-mult-infimum",
+    "to": "def:real-lower-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:positive-scalar-mult-infimum",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:scalar-mult-negative",
+    "to": "thm:scalar-mult-positive",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:scalar-mult-negative",
+    "to": "thm:negation-exchange-sup-inf",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:scalar-mult-negative",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:scalar-mult-negative",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:scalar-mult-positive",
+    "to": "def:real-upper-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:scalar-mult-positive",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:scalar-mult-positive",
+    "to": "prop:upper-bound-comparison-with-the-supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:scalar-mult-positive",
+    "to": "thm:ineq-nonstrict-multiply-positive",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-absolute-value-image",
+    "to": "def:absolute-value",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-absolute-value-image",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-absolute-value-image",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-absolute-value-image",
+    "to": "def:maximum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-absolute-value-image",
+    "to": "def:epsilon-characterization-of-supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-absolute-value-image",
+    "to": "def:epsilon-characterization-of-infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-difference-set",
+    "to": "def:set-arithmetic-images",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-difference-set",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-difference-set",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-difference-set",
+    "to": "def:epsilon-characterization-of-supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-difference-set",
+    "to": "def:epsilon-characterization-of-infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-dilation",
+    "to": "def:bounded",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-dilation",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-dilation",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-dilation",
+    "to": "def:maximum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-dilation",
+    "to": "thm:infimum-less-than-supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-dilation",
+    "to": "thm:scalar-mult-positive",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-dilation",
+    "to": "thm:scalar-mult-negative",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-reciprocal-set",
+    "to": "def:bounded",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-reciprocal-set",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-reciprocal-set",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-reciprocal-set",
+    "to": "thm:reciprocal-reverses-nonstrict-order-on-same-sign-r",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-sum-set",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:supremum-sum-set",
+    "to": "def:epsilon-characterization-of-supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:translation-invariance-infimum",
+    "to": "def:set-arithmetic-images",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:translation-invariance-infimum",
+    "to": "def:real-lower-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:translation-invariance-infimum",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:translation-invariance-supremum",
+    "to": "def:set-arithmetic-images",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:translation-invariance-supremum",
+    "to": "def:real-upper-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:translation-invariance-supremum",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:every-element-lies-below-the-supremum",
+    "to": "def:real-upper-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:every-element-lies-below-the-supremum",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-less-than-supremum",
+    "to": "def:real-lower-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-less-than-supremum",
+    "to": "def:real-upper-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-less-than-supremum",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-less-than-supremum",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:infimum-less-than-supremum",
+    "to": "def:real-ordered-field",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:infimum-need-not-belong-to-the-set",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:infimum-need-not-belong-to-the-set",
+    "to": "thm:glb-property-implies-existence-of-infima",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:infimum-strict-lower-approximation",
+    "to": "def:infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:infimum-strict-lower-approximation",
+    "to": "def:epsilon-characterization-of-infimum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:maximum-implies-supremum",
+    "to": "def:maximum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:maximum-implies-supremum",
+    "to": "def:real-upper-bound",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:maximum-implies-supremum",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:supremum-need-not-belong-to-the-set",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:supremum-need-not-belong-to-the-set",
+    "to": "thm:lub-property-implies-existence-of-suprema",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:supremum-strict-upper-approximation",
+    "to": "def:supremum",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:supremum-strict-upper-approximation",
+    "to": "def:epsilon-characterization-of-supremum",
+    "kind": "proof_depends_on"
   },
   {
     "from": "thm:archimedean-property",
@@ -26720,406 +27565,6 @@
     "from": "cor:no-gaps-in-r",
     "to": "thm:dedekind-cut-property",
     "kind": "depends_on"
-  },
-  {
-    "from": "thm:infimum-difference-set",
-    "to": "def:set-arithmetic-images",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-difference-set",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-difference-set",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-difference-set",
-    "to": "def:epsilon-characterization-of-infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-difference-set",
-    "to": "def:epsilon-characterization-of-supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-reciprocal-set",
-    "to": "def:bounded",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-reciprocal-set",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-reciprocal-set",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-reciprocal-set",
-    "to": "thm:reciprocal-reverses-nonstrict-order-on-same-sign-r",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-reciprocal-set",
-    "to": "thm:supremum-reciprocal-set",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-sum-set",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-sum-set",
-    "to": "def:epsilon-characterization-of-infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:negation-exchange-sup-inf",
-    "to": "def:real-lower-bound",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:negation-exchange-sup-inf",
-    "to": "def:real-upper-bound",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:negation-exchange-sup-inf",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:negation-exchange-sup-inf",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:negation-exchange-sup-inf",
-    "to": "def:real-ordered-field",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:negative-scalar-mult-infimum",
-    "to": "def:displacement-dilation-reflection",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:negative-scalar-mult-infimum",
-    "to": "def:real-lower-bound",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:negative-scalar-mult-infimum",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:negative-scalar-mult-infimum",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:positive-scalar-mult-infimum",
-    "to": "def:displacement-dilation-reflection",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:positive-scalar-mult-infimum",
-    "to": "def:real-lower-bound",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:positive-scalar-mult-infimum",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:scalar-mult-negative",
-    "to": "thm:scalar-mult-positive",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:scalar-mult-negative",
-    "to": "thm:negation-exchange-sup-inf",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:scalar-mult-negative",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:scalar-mult-negative",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:scalar-mult-positive",
-    "to": "def:real-upper-bound",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:scalar-mult-positive",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:scalar-mult-positive",
-    "to": "prop:upper-bound-comparison-with-the-supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:scalar-mult-positive",
-    "to": "thm:ineq-nonstrict-multiply-positive",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-absolute-value-image",
-    "to": "def:absolute-value",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-absolute-value-image",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-absolute-value-image",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-absolute-value-image",
-    "to": "def:maximum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-absolute-value-image",
-    "to": "def:epsilon-characterization-of-supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-absolute-value-image",
-    "to": "def:epsilon-characterization-of-infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-difference-set",
-    "to": "def:set-arithmetic-images",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-difference-set",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-difference-set",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-difference-set",
-    "to": "def:epsilon-characterization-of-supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-difference-set",
-    "to": "def:epsilon-characterization-of-infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-dilation",
-    "to": "def:bounded",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-dilation",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-dilation",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-dilation",
-    "to": "def:maximum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-dilation",
-    "to": "thm:infimum-less-than-supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-dilation",
-    "to": "thm:scalar-mult-positive",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-dilation",
-    "to": "thm:scalar-mult-negative",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-reciprocal-set",
-    "to": "def:bounded",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-reciprocal-set",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-reciprocal-set",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-reciprocal-set",
-    "to": "thm:reciprocal-reverses-nonstrict-order-on-same-sign-r",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-sum-set",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:supremum-sum-set",
-    "to": "def:epsilon-characterization-of-supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:translation-invariance-infimum",
-    "to": "def:set-arithmetic-images",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:translation-invariance-infimum",
-    "to": "def:real-lower-bound",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:translation-invariance-infimum",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:translation-invariance-supremum",
-    "to": "def:set-arithmetic-images",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:translation-invariance-supremum",
-    "to": "def:real-upper-bound",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:translation-invariance-supremum",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "prop:every-element-lies-below-the-supremum",
-    "to": "def:real-upper-bound",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "prop:every-element-lies-below-the-supremum",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-less-than-supremum",
-    "to": "def:real-lower-bound",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-less-than-supremum",
-    "to": "def:real-upper-bound",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-less-than-supremum",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-less-than-supremum",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:infimum-less-than-supremum",
-    "to": "def:real-ordered-field",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "prop:infimum-need-not-belong-to-the-set",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "prop:infimum-need-not-belong-to-the-set",
-    "to": "thm:glb-property-implies-existence-of-infima",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "lem:infimum-strict-lower-approximation",
-    "to": "def:infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "lem:infimum-strict-lower-approximation",
-    "to": "def:epsilon-characterization-of-infimum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "prop:maximum-implies-supremum",
-    "to": "def:maximum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "prop:maximum-implies-supremum",
-    "to": "def:real-upper-bound",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "prop:maximum-implies-supremum",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "prop:supremum-need-not-belong-to-the-set",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "prop:supremum-need-not-belong-to-the-set",
-    "to": "thm:lub-property-implies-existence-of-suprema",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "lem:supremum-strict-upper-approximation",
-    "to": "def:supremum",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "lem:supremum-strict-upper-approximation",
-    "to": "def:epsilon-characterization-of-supremum",
-    "kind": "proof_depends_on"
   },
   {
     "from": "lem:archimedean-integer-part-lemma",
@@ -35847,6 +36292,31 @@
     "kind": "depends_on"
   },
   {
+    "from": "cor:cauchy-integral-bounds",
+    "to": "prop:cauchy-integral-constant",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:cauchy-integral-bounds",
+    "to": "thm:cauchy-integral-monotonicity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:cauchy-integral-interval-additivity",
+    "to": "def:cauchy-integral",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:cauchy-integral-monotonicity",
+    "to": "def:cauchy-integral",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:cauchy-integral-triangle-inequality",
+    "to": "thm:cauchy-integral-monotonicity",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "def:darboux-sums",
     "to": "def:supremum",
     "kind": "depends_on"
@@ -35970,6 +36440,36 @@
     "from": "thm:darboux-integrable-continuous-composition",
     "to": "thm:darboux-criterion",
     "kind": "depends_on"
+  },
+  {
+    "from": "thm:continuous-darboux-integrable",
+    "to": "thm:darboux-criterion",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:continuous-darboux-integrable",
+    "to": "thm:heine-cantor",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:darboux-integrable-absolute-value",
+    "to": "thm:darboux-criterion",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:darboux-integrable-continuous-composition",
+    "to": "thm:darboux-criterion",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:darboux-integrable-linear-combinations",
+    "to": "thm:darboux-criterion",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:darboux-integrable-products",
+    "to": "thm:darboux-criterion",
+    "kind": "proof_depends_on"
   },
   {
     "from": "def:gauge-on-interval",
@@ -36287,6 +36787,36 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:continuous-riemann-integrable",
+    "to": "thm:cauchy-tag-independence",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:continuous-riemann-integrable",
+    "to": "def:riemann-integral",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:riemann-integral-interval-additivity",
+    "to": "def:riemann-integral",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:riemann-integral-linearity",
+    "to": "def:riemann-integral",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:riemann-integral-monotonicity",
+    "to": "def:riemann-integral",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:riemann-integral-triangle-inequality",
+    "to": "thm:riemann-integral-monotonicity",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "def:total-variation",
     "to": "def:integration-partition",
     "kind": "depends_on"
@@ -36400,91 +36930,6 @@
     "from": "thm:rs-step-integrator-finite-sum",
     "to": "def:bounded-variation-integration",
     "kind": "depends_on"
-  },
-  {
-    "from": "cor:cauchy-integral-bounds",
-    "to": "prop:cauchy-integral-constant",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "cor:cauchy-integral-bounds",
-    "to": "thm:cauchy-integral-monotonicity",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:cauchy-integral-interval-additivity",
-    "to": "def:cauchy-integral",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:cauchy-integral-monotonicity",
-    "to": "def:cauchy-integral",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:cauchy-integral-triangle-inequality",
-    "to": "thm:cauchy-integral-monotonicity",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:continuous-darboux-integrable",
-    "to": "thm:darboux-criterion",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:continuous-darboux-integrable",
-    "to": "thm:heine-cantor",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:darboux-integrable-absolute-value",
-    "to": "thm:darboux-criterion",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:darboux-integrable-continuous-composition",
-    "to": "thm:darboux-criterion",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:darboux-integrable-linear-combinations",
-    "to": "thm:darboux-criterion",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:darboux-integrable-products",
-    "to": "thm:darboux-criterion",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:continuous-riemann-integrable",
-    "to": "thm:cauchy-tag-independence",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:continuous-riemann-integrable",
-    "to": "def:riemann-integral",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:riemann-integral-interval-additivity",
-    "to": "def:riemann-integral",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:riemann-integral-linearity",
-    "to": "def:riemann-integral",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:riemann-integral-monotonicity",
-    "to": "def:riemann-integral",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:riemann-integral-triangle-inequality",
-    "to": "thm:riemann-integral-monotonicity",
-    "kind": "proof_depends_on"
   },
   {
     "from": "thm:rs-bilinearity",
@@ -37427,8 +37872,33 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:topological-closed-set",
+    "to": "def:topological-space",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:closed-set-family-of-topology",
+    "to": "def:topological-space",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:closed-set-family-of-topology",
+    "to": "def:topological-closed-set",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:closed-sets-in-topological-space",
     "to": "def:topological-space",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:closed-sets-in-topological-space",
+    "to": "def:topological-closed-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:closed-sets-in-topological-space",
+    "to": "def:closed-set-family-of-topology",
     "kind": "depends_on"
   },
   {
@@ -37439,6 +37909,21 @@
   {
     "from": "thm:closed-set-characterization-topologies",
     "to": "thm:closed-sets-in-topological-space",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:topological-closure",
+    "to": "def:topological-space",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:topological-closure",
+    "to": "thm:closed-sets-in-topological-space",
+    "kind": "depends_on"
+  },
+  {
+    "from": "lem:topological-closure-monotone",
+    "to": "def:topological-closure",
     "kind": "depends_on"
   },
   {
@@ -37454,6 +37939,21 @@
   {
     "from": "thm:closed-sets-in-topological-space",
     "to": "def:topological-space",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:closed-sets-in-topological-space",
+    "to": "def:topological-closed-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:closed-sets-in-topological-space",
+    "to": "def:closed-set-family-of-topology",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "lem:topological-closure-monotone",
+    "to": "def:topological-closure",
     "kind": "proof_depends_on"
   },
   {
