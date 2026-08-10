@@ -1,15 +1,15 @@
 {
   "schema": "lra.proof_vault_index",
   "schema_version": 2,
-  "generated_at": "2026-08-06T17:55:09.998266+00:00",
+  "generated_at": "2026-08-10T14:09:05.533287+00:00",
   "source": "lra-proof-vault",
-  "record_count": 124,
+  "record_count": 128,
   "warning_count": 0,
   "warnings": [],
   "records": {
     "cor:archimedean-reciprocal": [
       {
-        "title": "Archimedean Reciprocal Corollary (proof-2026-06-29-001)",
+        "title": "The Reciprocal Sequence Converges to Zero (proof-2026-06-29-001)",
         "path": "volume-iii/book-analysis-i/bounding/cor-archimedean-reciprocal/attempts/proof-2026-06-29-001.html",
         "vault_record": "volume-iii/book-analysis-i/bounding/cor-archimedean-reciprocal",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/book-analysis-i/bounding/cor-archimedean-reciprocal",
@@ -41,7 +41,7 @@
         "text_review_status": "accepted"
       },
       {
-        "title": "Archimedean Reciprocal Corollary (proof-2026-07-31-001)",
+        "title": "The Reciprocal Sequence Converges to Zero (proof-2026-07-31-001)",
         "path": "volume-iii/book-analysis-i/bounding/cor-archimedean-reciprocal/metadata.yaml",
         "vault_record": "volume-iii/book-analysis-i/bounding/cor-archimedean-reciprocal",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/book-analysis-i/bounding/cor-archimedean-reciprocal",
@@ -373,7 +373,7 @@
     ],
     "def:epsilon-characterization-of-infimum": [
       {
-        "title": "Epsilon Characterization of Infimum (proof-2026-07-31-001)",
+        "title": "Epsilon Characterization of the Infimum (proof-2026-07-31-001)",
         "path": "volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-infimum/metadata.yaml",
         "vault_record": "volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-infimum",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-infimum",
@@ -405,7 +405,7 @@
         "text_review_status": "manual-transcript"
       },
       {
-        "title": "Epsilon Characterization of Infimum (proof-2026-07-31-002)",
+        "title": "Epsilon Characterization of the Infimum (proof-2026-07-31-002)",
         "path": "volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-infimum/metadata.yaml",
         "vault_record": "volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-infimum",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-infimum",
@@ -439,7 +439,7 @@
     ],
     "def:epsilon-characterization-of-supremum": [
       {
-        "title": "Epsilon Characterization of Supremum (proof-2026-07-31-001)",
+        "title": "Epsilon Characterization of the Supremum (proof-2026-07-31-001)",
         "path": "volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-supremum/metadata.yaml",
         "vault_record": "volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-supremum",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-supremum",
@@ -471,7 +471,7 @@
         "text_review_status": "manual-transcript"
       },
       {
-        "title": "Epsilon Characterization of Supremum (proof-2026-07-31-002)",
+        "title": "Epsilon Characterization of the Supremum (proof-2026-07-31-002)",
         "path": "volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-supremum/metadata.yaml",
         "vault_record": "volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-supremum",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-supremum",
@@ -503,7 +503,7 @@
         "text_review_status": "manual-transcript"
       },
       {
-        "title": "Epsilon Characterization of Supremum (proof-2026-07-31-003)",
+        "title": "Epsilon Characterization of the Supremum (proof-2026-07-31-003)",
         "path": "volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-supremum/metadata.yaml",
         "vault_record": "volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-supremum",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-supremum",
@@ -535,7 +535,7 @@
         "text_review_status": "manual-transcript"
       },
       {
-        "title": "Epsilon Characterization of Supremum (proof-2026-07-31-004)",
+        "title": "Epsilon Characterization of the Supremum (proof-2026-07-31-004)",
         "path": "volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-supremum/metadata.yaml",
         "vault_record": "volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-supremum",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/book-analysis-i/bounding/def-epsilon-characterization-of-supremum",
@@ -735,7 +735,7 @@
     ],
     "lem:iterator-relation-consistency": [
       {
-        "title": "Consistency of the Minimal Iterator Relation (proof-2026-07-31-001)",
+        "title": "The Minimal Iterator Relation Is an Iterator Relation (proof-2026-07-31-001)",
         "path": "volume-ii/book-discrete-algebraic/peano-systems/lem-iterator-relation-consistency/metadata.yaml",
         "vault_record": "volume-ii/book-discrete-algebraic/peano-systems/lem-iterator-relation-consistency",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-ii/book-discrete-algebraic/peano-systems/lem-iterator-relation-consistency",
@@ -767,7 +767,7 @@
         "text_review_status": "generated"
       },
       {
-        "title": "Consistency of the Minimal Iterator Relation (proof-2026-07-31-002)",
+        "title": "The Minimal Iterator Relation Is an Iterator Relation (proof-2026-07-31-002)",
         "path": "volume-ii/book-discrete-algebraic/peano-systems/lem-iterator-relation-consistency/metadata.yaml",
         "vault_record": "volume-ii/book-discrete-algebraic/peano-systems/lem-iterator-relation-consistency",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-ii/book-discrete-algebraic/peano-systems/lem-iterator-relation-consistency",
@@ -799,7 +799,7 @@
         "text_review_status": "manual-transcript"
       },
       {
-        "title": "Consistency of the Minimal Iterator Relation (proof-2026-07-31-003)",
+        "title": "The Minimal Iterator Relation Is an Iterator Relation (proof-2026-07-31-003)",
         "path": "volume-ii/book-discrete-algebraic/peano-systems/lem-iterator-relation-consistency/metadata.yaml",
         "vault_record": "volume-ii/book-discrete-algebraic/peano-systems/lem-iterator-relation-consistency",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-ii/book-discrete-algebraic/peano-systems/lem-iterator-relation-consistency",
@@ -848,7 +848,7 @@
         "section": "",
         "subsection": "",
         "theorem_tex": "volume-iii/book-analysis-i/bounding/notes/bounds-extremals/notes-suprema-infima.tex",
-        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-every-element-lies-below-the-supremum.tex",
+        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-extremals/prf-every-element-lies-below-the-supremum.tex",
         "proof_label": "prf:every-element-lies-below-the-supremum",
         "vault_path": "volume-iii/book-analysis-i/bounding/prop-every-element-lies-below-the-supremum",
         "route_confidence": "confirmed",
@@ -880,7 +880,7 @@
         "section": "",
         "subsection": "",
         "theorem_tex": "volume-iii/book-analysis-i/bounding/notes/bounds-extremals/notes-suprema-infima.tex",
-        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-every-element-lies-below-the-supremum.tex",
+        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-extremals/prf-every-element-lies-below-the-supremum.tex",
         "proof_label": "prf:every-element-lies-below-the-supremum",
         "vault_path": "volume-iii/book-analysis-i/bounding/prop-every-element-lies-below-the-supremum",
         "route_confidence": "confirmed",
@@ -914,7 +914,7 @@
         "section": "",
         "subsection": "",
         "theorem_tex": "volume-iii/book-analysis-i/bounding/notes/bounds-extremals/notes-maxima-minima.tex",
-        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-maximum-implies-supremum.tex",
+        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-extremals/prf-maximum-implies-supremum.tex",
         "proof_label": "prf:maximum-implies-supremum",
         "vault_path": "volume-iii/book-analysis-i/bounding/prop-maximum-implies-supremum",
         "route_confidence": "confirmed",
@@ -946,7 +946,7 @@
         "section": "",
         "subsection": "",
         "theorem_tex": "volume-iii/book-analysis-i/bounding/notes/bounds-extremals/notes-maxima-minima.tex",
-        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-maximum-implies-supremum.tex",
+        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-extremals/prf-maximum-implies-supremum.tex",
         "proof_label": "prf:maximum-implies-supremum",
         "vault_path": "volume-iii/book-analysis-i/bounding/prop-maximum-implies-supremum",
         "route_confidence": "confirmed",
@@ -978,7 +978,7 @@
         "section": "",
         "subsection": "",
         "theorem_tex": "volume-iii/book-analysis-i/bounding/notes/bounds-extremals/notes-maxima-minima.tex",
-        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-maximum-implies-supremum.tex",
+        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-extremals/prf-maximum-implies-supremum.tex",
         "proof_label": "prf:maximum-implies-supremum",
         "vault_path": "volume-iii/book-analysis-i/bounding/prop-maximum-implies-supremum",
         "route_confidence": "confirmed",
@@ -1046,7 +1046,7 @@
         "section": "",
         "subsection": "",
         "theorem_tex": "volume-iii/book-analysis-i/bounding/notes/bounds-extremals/notes-suprema-infima.tex",
-        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-order-comparison-of-suprema.tex",
+        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-extremals/prf-order-comparison-of-suprema.tex",
         "proof_label": "prf:order-comparison-of-suprema",
         "vault_path": "volume-iii/book-analysis-i/bounding/prop-order-comparison-of-suprema",
         "route_confidence": "confirmed",
@@ -1078,7 +1078,7 @@
         "section": "",
         "subsection": "",
         "theorem_tex": "volume-iii/book-analysis-i/bounding/notes/bounds-extremals/notes-suprema-infima.tex",
-        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-order-comparison-of-suprema.tex",
+        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-extremals/prf-order-comparison-of-suprema.tex",
         "proof_label": "prf:order-comparison-of-suprema",
         "vault_path": "volume-iii/book-analysis-i/bounding/prop-order-comparison-of-suprema",
         "route_confidence": "confirmed",
@@ -1163,7 +1163,7 @@
     ],
     "prop:upper-bound-comparison-with-the-supremum": [
       {
-        "title": "Upper Bound Comparison with the Supremum (proof-2026-07-31-001)",
+        "title": "Upper-Bound Comparison with the Supremum (proof-2026-07-31-001)",
         "path": "volume-iii/book-analysis-i/bounding/prop-upper-bound-comparison-with-the-supremum/metadata.yaml",
         "vault_record": "volume-iii/book-analysis-i/bounding/prop-upper-bound-comparison-with-the-supremum",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/book-analysis-i/bounding/prop-upper-bound-comparison-with-the-supremum",
@@ -1178,7 +1178,7 @@
         "section": "",
         "subsection": "",
         "theorem_tex": "volume-iii/book-analysis-i/bounding/notes/bounds-extremals/notes-suprema-infima.tex",
-        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-upper-bound-comparison-with-the-supremum.tex",
+        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-extremals/prf-upper-bound-comparison-with-the-supremum.tex",
         "proof_label": "prf:upper-bound-comparison-with-the-supremum",
         "vault_path": "volume-iii/book-analysis-i/bounding/prop-upper-bound-comparison-with-the-supremum",
         "route_confidence": "confirmed",
@@ -1327,6 +1327,108 @@
         "tex": "Corollary. For every x > 0 and every y in R there exists n in N such that nx > y.\n\nProof.\nChoose n > y/x. Then\nn > floor(y/x) + 1\nso n > y/x.\n\nTherefore nx > y.",
         "text_source": "ocr",
         "text_review_status": "manual-transcript"
+      }
+    ],
+    "thm:axiomatic-equality-function-congruence": [
+      {
+        "title": "Function Congruence (proof-2026-08-09-001)",
+        "path": "volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-function-congruence/metadata.yaml",
+        "vault_record": "volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-function-congruence",
+        "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-function-congruence",
+        "theorem_id": "thm:axiomatic-equality-function-congruence",
+        "source_repo": "lra-volume-i",
+        "volume": "volume-i",
+        "book": "book-logic",
+        "book_slug": "mathematical-logic-and-proof",
+        "book_title": "Mathematical Logic and Proof",
+        "book_dir": "volume-i/book-logic",
+        "chapter": "axiomatic-equality",
+        "section": "",
+        "subsection": "",
+        "theorem_tex": "volume-i/book-logic/axiomatic-equality/notes/logic-with-equality/notes-logic-with-equality.tex",
+        "proof_tex": "volume-i/book-logic/axiomatic-equality/proofs/logic-with-equality/prf-axiomatic-equality-function-congruence.tex",
+        "proof_label": "prf:axiomatic-equality-function-congruence",
+        "vault_path": "volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-function-congruence",
+        "route_confidence": "confirmed",
+        "attempt_id": "proof-2026-08-09-001",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-function-congruence/attempts/proof-2026-08-09-001.jpg"
+        ],
+        "body": "Correct handwritten attempt; proof verified and canonical proof populated.\n\nTags: corrected-attempt, verified",
+        "ocr_text": "Thm: Function Congruence\nIf x=y then f(x)=f(y)\n\\forall x \\forall y (x=y -> f(x)=f(y))\n\nProof: Assume x=y. By reflexivity x=x.\nx=x. f(x)=f(x) by reflexivity.\nLet phi(z) := f(x)=f(z).\nSince x=y, phi(x) <-> phi(y).\nSince phi(x) = f(x)=f(x),\nphi(y) = f(x)=f(y).\nHence if x=y then f(x)=f(y).",
+        "markdown": "# Function Congruence\n\nCanonical theorem label: `thm:axiomatic-equality-function-congruence`\n\n## OCR Text\n\nThm: Function Congruence\nIf x=y then f(x)=f(y)\n\\forall x \\forall y (x=y -> f(x)=f(y))\n\nProof: Assume x=y. By reflexivity x=x.\nx=x. f(x)=f(x) by reflexivity.\nLet phi(z) := f(x)=f(z).\nSince x=y, phi(x) <-> phi(y).\nSince phi(x) = f(x)=f(x),\nphi(y) = f(x)=f(y).\nHence if x=y then f(x)=f(y).\n\n## Polished Markdown\n\nAssume $x=y$. By reflexivity of equality, $f(x)=f(x)$. Let $\\Phi(z)$\nbe the formula $f(x)=f(z)$. Then $\\Phi(x)$ holds. Since $x=y$,\nsubstitution of identicals applied to the formula-context $\\Phi$ gives\n$\\Phi(y)$. Hence $f(x)=f(y)$. Therefore $x=y\\to f(x)=f(y)$, and\nuniversal generalization gives\n$$\n\\forall x\\,\\forall y\\,(x=y\\to f(x)=f(y)).\n$$\n\n## Polished TeX\n\n```latex\nAssume \\(x=y\\). By reflexivity of equality, \\(f(x)=f(x)\\). Let \\(\\Phi(z)\\)\nbe the formula \\(f(x)=f(z)\\). Then \\(\\Phi(x)\\) holds. Since \\(x=y\\),\nsubstitution of identicals applied to the formula-context \\(\\Phi\\) gives\n\\(\\Phi(y)\\). Hence \\(f(x)=f(y)\\). Therefore \\(x=y\\to f(x)=f(y)\\), and\nuniversal generalization gives\n\\[\n\\forall x\\,\\forall y\\,(x=y\\to f(x)=f(y)).\n\\]\n```\n\n## Provenance\n\nPolished text was reconstructed from the accepted canonical proof `lra-volume-i/volume-i/book-logic/axiomatic-equality/proofs/logic-with-equality/prf-axiomatic-equality-function-congruence.tex`.",
+        "tex": "Assume \\(x=y\\). By reflexivity of equality, \\(f(x)=f(x)\\). Let \\(\\Phi(z)\\)\nbe the formula \\(f(x)=f(z)\\). Then \\(\\Phi(x)\\) holds. Since \\(x=y\\),\nsubstitution of identicals applied to the formula-context \\(\\Phi\\) gives\n\\(\\Phi(y)\\). Hence \\(f(x)=f(y)\\). Therefore \\(x=y\\to f(x)=f(y)\\), and\nuniversal generalization gives\n\\[\n\\forall x\\,\\forall y\\,(x=y\\to f(x)=f(y)).\n\\]",
+        "text_source": "canonical-proof-with-ai-assisted-ocr",
+        "text_review_status": "accepted"
+      }
+    ],
+    "thm:axiomatic-equality-symmetry": [
+      {
+        "title": "Symmetry of Equality (proof-2026-08-09-001)",
+        "path": "volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-symmetry/metadata.yaml",
+        "vault_record": "volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-symmetry",
+        "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-symmetry",
+        "theorem_id": "thm:axiomatic-equality-symmetry",
+        "source_repo": "lra-volume-i",
+        "volume": "volume-i",
+        "book": "book-logic",
+        "book_slug": "mathematical-logic-and-proof",
+        "book_title": "Mathematical Logic and Proof",
+        "book_dir": "volume-i/book-logic",
+        "chapter": "axiomatic-equality",
+        "section": "",
+        "subsection": "",
+        "theorem_tex": "volume-i/book-logic/axiomatic-equality/notes/logic-with-equality/notes-logic-with-equality.tex",
+        "proof_tex": "volume-i/book-logic/axiomatic-equality/proofs/logic-with-equality/prf-axiomatic-equality-symmetry.tex",
+        "proof_label": "prf:axiomatic-equality-symmetry",
+        "vault_path": "volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-symmetry",
+        "route_confidence": "confirmed",
+        "attempt_id": "proof-2026-08-09-001",
+        "review_status": "needs-review",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-symmetry/attempts/proof-2026-08-09-001.jpg"
+        ],
+        "body": "Handwritten Codex-mobile learning proof for equality symmetry; route-confirmed to Volume I theorem. Vault-only memorialization; canonical proof file not populated in this pass.\n\nTags: handwritten, identity, equality, substitution",
+        "ocr_text": "SS\n\n“Si\n\ni\"\n\nYT\n\ney\n\nSe oe\n\n“HE Ti. _\n\nBuk\n\nAB\n\nERED\n\naz\n\n3\n\n——\n\nal\n\n| te\n\nrd\n\n1,\n\nA?\n\nty\n\n/\n\ncy\n\n¢,\n\nI~\n\nee wa\n\niB.\n\nfz,\n\nABER aF\n\nfe Lt\n\n<@CRRRaas\n\nomen §\n\nbot | ES\n\nmo\n\nake |\n\na aes\n\n~\n\n(\\\")\n\nSa\n\nal\n\naan\n\ni\n\nfine:\n\n¥\n\nBREREE?\n\n|\n\nSane\n\n<3,\n\nRib\n\n\"ae\n\nEu ©\n\nBE hapre Perore oie. cuba\n\nPEP PCT EE\n\nptt\n\nSERRE\n\na8\n\nCEC\n\nlek\n\ntt tet\n\nRARecoeece\n\n¥\n\nSa\n\n>_>\n\n|\n\nwv\n\nPan's\n\nSpe\n\n_\n\na8\n\nSy\n\nele\n\netal\n\ni\n\nEee\n\nSEEEEE:\n\nam)\n\nat\n\n=I\n\nPPT\n\n-=<~—\n\na et\n\newe\n\nTy\n\nce\n\nBEX\n\naN\n\nSRRREE\n\nPe\n\ndet\n\ntie\n\nan,\n\nMf\n\nae\n\nPry tts\n\nAS RE\n\n6, 89\n\ni\n\nERE\n\nae\n\nEES\n\nBe Ss.\n\noer\n\neee\n\nEaESE\n\n*\n\nee\n\nane\n\nka\n\nZe\n\npel as\n\nie\n\nws\n\n=\n\nPt dd\n\nhelene\n\nLoy Sy\n\nmae 5\n\n%\n\n“ Mee: ih\n\n* a\n\n=e\n\nson\n\npk fy\n\nSk\n\n=\n\neer\n\nTar ie\n\nee tes\n\nAU\n\nCe\n\nES i\n\nfe\n\n=e\n\n=\n\nREEe\n\na\n\n] ro\n\n=\n\n-Tzl\n\nky\n\nAe deci\n\n¥ Se\n\n‘ees\n\na\n\n2s\n\nig Se\n\nim\n\n=~\n\n: sae\n\n_\n\nSoe\n\nbe tad\n\n<4\n\n=\n\n- ust\n\nex\n\nBee\n\ngre\n\nanes\n\n1%\n\n=f\n\nte\n\nut\n\nsv eet\n\nre SG\n\nam\n\nvie\n\nWe\n\n__\n\nnels\n\nans\n\n—_\n\ni i\n\nCe.\n\nKh oe\n\n“=\n\n+az\n\nist\n\nsual “ts\n\nat\n\nA\n\n2 SE ra Ads:\n\naT\n\nrat\n\namt\n\nnine\n\nWE,\n\nPte\n\na\n\nka\n\nVw\n\nS25\n\nLe\n\nwe:\n\nTl\n\npn Bt",
+        "markdown": "# Symmetry of Equality\n\nCanonical theorem label: `thm:axiomatic-equality-symmetry`\n\n## OCR Text\n\nMachine OCR was garbled for this image. The raw OCR output is preserved in `attempts/proof-2026-08-09-001.ocr.txt`.\n\n## Polished Markdown\n\nTheorem. Symmetry of Equality.\nIf x = y, then y = x.\n\nProof.\nAssume x = y.\nBy reflexivity, x = x.\nUsing substitution of identicals in the context `[blank] = x`, substitute y for the first x in x = x. This gives y = x.\nTherefore, if x = y, then y = x.\n\n## Polished TeX\n\n```latex\n\\textbf{Theorem.} Symmetry of Equality.\nIf \\(x=y\\), then \\(y=x\\).\n\n\\textbf{Proof.}\nAssume \\(x=y\\). By reflexivity, \\(x=x\\). Using substitution of identicals in the formula context \\(\\varphi(t)\\) given by \\(t=x\\), substitute \\(y\\) for the first occurrence of \\(x\\) in \\(x=x\\). This gives \\(y=x\\). Therefore, if \\(x=y\\), then \\(y=x\\).\n```\n\n## Provenance\n\nPolished text was manually transcribed from the handwritten photo and the surrounding Codex discussion. The raw OCR artifact is retained separately as evidence.",
+        "tex": "\\textbf{Theorem.} Symmetry of Equality.\nIf \\(x=y\\), then \\(y=x\\).\n\n\\textbf{Proof.}\nAssume \\(x=y\\). By reflexivity, \\(x=x\\). Using substitution of identicals in the formula context \\(\\varphi(t)\\) given by \\(t=x\\), substitute \\(y\\) for the first occurrence of \\(x\\) in \\(x=x\\). This gives \\(y=x\\). Therefore, if \\(x=y\\), then \\(y=x\\).",
+        "text_source": "ocr",
+        "text_review_status": "manual-transcript"
+      }
+    ],
+    "thm:axiomatic-equality-transitivity": [
+      {
+        "title": "Transitivity of Equality (proof-2026-08-09-001)",
+        "path": "volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-transitivity/metadata.yaml",
+        "vault_record": "volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-transitivity",
+        "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-transitivity",
+        "theorem_id": "thm:axiomatic-equality-transitivity",
+        "source_repo": "lra-volume-i",
+        "volume": "volume-i",
+        "book": "book-logic",
+        "book_slug": "mathematical-logic-and-proof",
+        "book_title": "Mathematical Logic and Proof",
+        "book_dir": "volume-i/book-logic",
+        "chapter": "axiomatic-equality",
+        "section": "",
+        "subsection": "",
+        "theorem_tex": "volume-i/book-logic/axiomatic-equality/notes/logic-with-equality/notes-logic-with-equality.tex",
+        "proof_tex": "volume-i/book-logic/axiomatic-equality/proofs/logic-with-equality/prf-axiomatic-equality-transitivity.tex",
+        "proof_label": "prf:axiomatic-equality-transitivity",
+        "vault_path": "volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-transitivity",
+        "route_confidence": "confirmed",
+        "attempt_id": "proof-2026-08-09-001",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-i/book-logic/axiomatic-equality/thm-axiomatic-equality-transitivity/attempts/proof-2026-08-09-001.jpg"
+        ],
+        "body": "Correct handwritten attempt; proof verified and converted into canonical two-layer proof.\n\nTags: corrected-attempt, verified",
+        "ocr_text": "Thm: Transitivity of Equality\n\nIf x = y and y = z then x = z\n\nFor all x, for all y, for all z,\n((x = y and y = z) -> x = z)\n\nProof: Assume hypothesis, x = y and y = z.\n\nSubstitute z for y in x = y, because y = z.\n\nx = z and y = z.\n\nHence x = z as desired.\n\nTherefore if x = y and y = z then x = z.",
+        "markdown": "# Transitivity of Equality\n\nCanonical theorem label: `thm:axiomatic-equality-transitivity`\n\n## OCR Text\n\nThm: Transitivity of Equality\n\nIf x = y and y = z then x = z\n\nFor all x, for all y, for all z,\n((x = y and y = z) -> x = z)\n\nProof: Assume hypothesis, x = y and y = z.\n\nSubstitute z for y in x = y, because y = z.\n\nx = z and y = z.\n\nHence x = z as desired.\n\nTherefore if x = y and y = z then x = z.\n\n## Polished Markdown\n\nAssume $x=y$ and $y=z$. Let $\\Phi(w)$ be the formula $x=w$. From the\nfirst assumption, $\\Phi(y)$ holds. From the second assumption and\nsubstitution of identicals applied to the formula-context $\\Phi$, it follows\nthat $\\Phi(z)$ holds. Hence $x=z$. Therefore\n$(x=y\\land y=z)\\to x=z$, and universal generalization gives\n$$\n\\forall x\\,\\forall y\\,\\forall z\\,\\bigl((x=y\\land y=z)\\to x=z\\bigr).\n$$\n\n## Polished TeX\n\n```latex\nAssume \\(x=y\\) and \\(y=z\\). Let \\(\\Phi(w)\\) be the formula \\(x=w\\). From the\nfirst assumption, \\(\\Phi(y)\\) holds. From the second assumption and\nsubstitution of identicals applied to the formula-context \\(\\Phi\\), it follows\nthat \\(\\Phi(z)\\) holds. Hence \\(x=z\\). Therefore\n\\((x=y\\land y=z)\\to x=z\\), and universal generalization gives\n\\[\n\\forall x\\,\\forall y\\,\\forall z\\,\\bigl((x=y\\land y=z)\\to x=z\\bigr).\n\\]\n```\n\n## Provenance\n\nPolished text was reconstructed from the accepted canonical proof `lra-volume-i/volume-i/book-logic/axiomatic-equality/proofs/logic-with-equality/prf-axiomatic-equality-transitivity.tex`.",
+        "tex": "Assume \\(x=y\\) and \\(y=z\\). Let \\(\\Phi(w)\\) be the formula \\(x=w\\). From the\nfirst assumption, \\(\\Phi(y)\\) holds. From the second assumption and\nsubstitution of identicals applied to the formula-context \\(\\Phi\\), it follows\nthat \\(\\Phi(z)\\) holds. Hence \\(x=z\\). Therefore\n\\((x=y\\land y=z)\\to x=z\\), and universal generalization gives\n\\[\n\\forall x\\,\\forall y\\,\\forall z\\,\\bigl((x=y\\land y=z)\\to x=z\\bigr).\n\\]",
+        "text_source": "canonical-proof-with-ai-assisted-ocr",
+        "text_review_status": "accepted"
       }
     ],
     "thm:bezout-identity-on-z": [
@@ -1545,7 +1647,7 @@
         "proof_tex": "volume-iii/book-analysis-i/sequences/proofs/cauchy/prf-cauchy-sequence-with-convergent-subsequence.tex",
         "proof_label": "prf:cauchy-sequence-with-convergent-subsequence",
         "vault_path": "volume-iii/book-analysis-i/sequences/thm-cauchy-sequence-with-convergent-subsequence",
-        "route_confidence": "confirmed",
+        "route_confidence": "unmapped",
         "attempt_id": "proof-2026-07-31-001",
         "review_status": "reviewed-correct",
         "images": [
@@ -1645,7 +1747,7 @@
         "proof_tex": "volume-iii/book-analysis-i/sequences/proofs/convergence/prf-constant-comparison-for-sequence-limits.tex",
         "proof_label": "prf:constant-comparison-for-sequence-limits",
         "vault_path": "volume-iii/book-analysis-i/sequences/thm-constant-comparison-for-sequence-limits",
-        "route_confidence": "confirmed",
+        "route_confidence": "unmapped",
         "attempt_id": "proof-2026-07-31-001",
         "review_status": "reviewed-correct",
         "images": [
@@ -1759,6 +1861,40 @@
         "text_review_status": "manual-transcript"
       }
     ],
+    "thm:empty-set-exists-unique": [
+      {
+        "title": "Existence and Uniqueness of the Empty Set (proof-2026-08-10-001)",
+        "path": "volume-i/book-sets/set-theory/thm-empty-set-exists-unique/metadata.yaml",
+        "vault_record": "volume-i/book-sets/set-theory/thm-empty-set-exists-unique",
+        "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-i/book-sets/set-theory/thm-empty-set-exists-unique",
+        "theorem_id": "thm:empty-set-exists-unique",
+        "source_repo": "lra-volume-i",
+        "volume": "volume-i",
+        "book": "book-sets",
+        "book_slug": "set-theory",
+        "book_title": "Set Theory",
+        "book_dir": "volume-i/book-sets",
+        "chapter": "set-theory",
+        "section": "",
+        "subsection": "",
+        "theorem_tex": "volume-i/book-sets/set-theory/notes/sets/notes-set-operations.tex",
+        "proof_tex": "volume-i/book-sets/set-theory/proofs/sets/prf-empty-set-exists-unique.tex",
+        "proof_label": "prf:empty-set-exists-unique",
+        "vault_path": "volume-i/book-sets/set-theory/thm-empty-set-exists-unique",
+        "route_confidence": "confirmed",
+        "attempt_id": "proof-2026-08-10-001",
+        "review_status": "reviewed-correct",
+        "images": [
+          "https://github.com/wsollers/lra-proof-vault/blob/master/volume-i/book-sets/set-theory/thm-empty-set-exists-unique/attempts/proof-2026-08-10-001.jpg"
+        ],
+        "body": "Handwritten proof has the right high-level idea. The canonical volume proof records the clean extensionality argument and avoids the informal circular set-builder line.\n\nTags: handwritten, reviewed-correct, corrected-canonical",
+        "ocr_text": "Thm: Existence and uniqueness of Empty Set\n\nThere exists a unique set E such that no object is an element of E.\n\nexists! E forall x (x notin E)\n\nProof: By the Axiom of the empty set there exists a set E with no elements.\n\nE := {x : x notin E}\n\nLet F be a set satisfying the empty set.\n\nTo show E is unique must show E = F. By Axiom of Extensionality, to show E = F\niff E and F have the same members.\n\nCase => forall x (x in E -> x in F) is true because x in E is false.\n\nCase <= forall x (x in F -> x in E) is true because x in F is false.\n\nTherefore E = F as desired.",
+        "markdown": "# Existence and Uniqueness of the Empty Set\n\nCanonical theorem label: `thm:empty-set-exists-unique`\n\n## OCR Text\n\nThm: Existence and uniqueness of Empty Set\n\nThere exists a unique set E such that no object is an element of E.\n\nexists! E forall x (x notin E)\n\nProof: By the Axiom of the empty set there exists a set E with no elements.\n\nE := {x : x notin E}\n\nLet F be a set satisfying the empty set.\n\nTo show E is unique must show E = F. By Axiom of Extensionality, to show E = F\niff E and F have the same members.\n\nCase => forall x (x in E -> x in F) is true because x in E is false.\n\nCase <= forall x (x in F -> x in E) is true because x in F is false.\n\nTherefore E = F as desired.\n\n## Polished Markdown\n\nBy the Axiom of Empty Set, there is a set $E$ such that\n$$\n\\forall x,\\ x\\notin E.\n$$\nIt remains to prove uniqueness. Let $F$ be any set such that\n$$\n\\forall x,\\ x\\notin F.\n$$\nFor every object $x$, the implications $x\\in E\\to x\\in F$ and\n$x\\in F\\to x\\in E$ are true, since their antecedents are false. Hence\n$$\n\\forall x,\\ (x\\in E\\leftrightarrow x\\in F).\n$$\nBy the Axiom of Extensionality, $E=F$. Therefore there exists a unique set\nwith no elements.\n\n## Polished TeX\n\n```latex\nBy the Axiom of Empty Set, there is a set $E$ such that\n\\[\n\\forall x,\\ x\\notin E.\n\\]\nIt remains to prove uniqueness. Let $F$ be any set such that\n\\[\n\\forall x,\\ x\\notin F.\n\\]\nFor every object $x$, the implications $x\\in E\\to x\\in F$ and\n$x\\in F\\to x\\in E$ are true, since their antecedents are false. Hence\n\\[\n\\forall x,\\ (x\\in E\\leftrightarrow x\\in F).\n\\]\nBy the Axiom of Extensionality, $E=F$. Therefore there exists a unique set\nwith no elements.\n```\n\n## Provenance\n\nPolished text was reconstructed from the accepted canonical proof `lra-volume-i/volume-i/book-sets/set-theory/proofs/sets/prf-empty-set-exists-unique.tex`.",
+        "tex": "By the Axiom of Empty Set, there is a set $E$ such that\n\\[\n\\forall x,\\ x\\notin E.\n\\]\nIt remains to prove uniqueness. Let $F$ be any set such that\n\\[\n\\forall x,\\ x\\notin F.\n\\]\nFor every object $x$, the implications $x\\in E\\to x\\in F$ and\n$x\\in F\\to x\\in E$ are true, since their antecedents are false. Hence\n\\[\n\\forall x,\\ (x\\in E\\leftrightarrow x\\in F).\n\\]\nBy the Axiom of Extensionality, $E=F$. Therefore there exists a unique set\nwith no elements.",
+        "text_source": "canonical-proof-with-ai-assisted-ocr",
+        "text_review_status": "accepted"
+      }
+    ],
     "thm:infimum-difference-set": [
       {
         "title": "Infimum of a Difference Set (proof-2026-07-04-001)",
@@ -1827,7 +1963,7 @@
     ],
     "thm:infimum-is-monotone-under-inclusion": [
       {
-        "title": "Infimum Is Monotone Under Inclusion (proof-2026-07-31-001)",
+        "title": "Infimum Is Antitone Under Inclusion (proof-2026-07-31-001)",
         "path": "volume-iii/book-analysis-i/bounding/thm-infimum-is-monotone-under-inclusion/metadata.yaml",
         "vault_record": "volume-iii/book-analysis-i/bounding/thm-infimum-is-monotone-under-inclusion",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/book-analysis-i/bounding/thm-infimum-is-monotone-under-inclusion",
@@ -1876,7 +2012,7 @@
         "section": "",
         "subsection": "",
         "theorem_tex": "volume-iii/book-analysis-i/bounding/notes/bounds-extremals/notes-suprema-infima.tex",
-        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-infimum-less-than-supremum.tex",
+        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-extremals/prf-infimum-less-than-supremum.tex",
         "proof_label": "prf:infimum-less-than-supremum",
         "vault_path": "volume-iii/book-analysis-i/bounding/thm-infimum-less-than-supremum",
         "route_confidence": "confirmed",
@@ -1908,7 +2044,7 @@
         "section": "",
         "subsection": "",
         "theorem_tex": "volume-iii/book-analysis-i/bounding/notes/bounds-extremals/notes-suprema-infima.tex",
-        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-infimum-less-than-supremum.tex",
+        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-extremals/prf-infimum-less-than-supremum.tex",
         "proof_label": "prf:infimum-less-than-supremum",
         "vault_path": "volume-iii/book-analysis-i/bounding/thm-infimum-less-than-supremum",
         "route_confidence": "confirmed",
@@ -2321,7 +2457,7 @@
     ],
     "thm:lub-property-implies-existence-of-suprema": [
       {
-        "title": "Least Upper Bound Property Implies Existence of Suprema (proof-2026-07-31-001)",
+        "title": "Least-Upper-Bound Property Implies Existence of Suprema (proof-2026-07-31-001)",
         "path": "volume-iii/book-analysis-i/bounding/thm-lub-property-implies-existence-of-suprema/metadata.yaml",
         "vault_record": "volume-iii/book-analysis-i/bounding/thm-lub-property-implies-existence-of-suprema",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/book-analysis-i/bounding/thm-lub-property-implies-existence-of-suprema",
@@ -2353,7 +2489,7 @@
         "text_review_status": "manual-transcript"
       },
       {
-        "title": "Least Upper Bound Property Implies Existence of Suprema (proof-2026-07-31-002)",
+        "title": "Least-Upper-Bound Property Implies Existence of Suprema (proof-2026-07-31-002)",
         "path": "volume-iii/book-analysis-i/bounding/thm-lub-property-implies-existence-of-suprema/metadata.yaml",
         "vault_record": "volume-iii/book-analysis-i/bounding/thm-lub-property-implies-existence-of-suprema",
         "vault_url": "https://github.com/wsollers/lra-proof-vault/tree/master/volume-iii/book-analysis-i/bounding/thm-lub-property-implies-existence-of-suprema",
@@ -3588,7 +3724,7 @@
         "section": "",
         "subsection": "",
         "theorem_tex": "volume-iii/book-analysis-i/bounding/notes/bounds-extremals/notes-suprema-infima.tex",
-        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-algebra/prf-supremum-is-monotone-under-inclusion.tex",
+        "proof_tex": "volume-iii/book-analysis-i/bounding/proofs/bounds-extremals/prf-supremum-is-monotone-under-inclusion.tex",
         "proof_label": "prf:supremum-is-monotone-under-inclusion",
         "vault_path": "volume-iii/book-analysis-i/bounding/thm-supremum-is-monotone-under-inclusion",
         "route_confidence": "confirmed",

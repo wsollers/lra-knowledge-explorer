@@ -1936,12 +1936,12 @@
   },
   {
     "from": "thm:axiomatic-equality-function-congruence",
-    "to": "ax:axiomatic-equality-substitution",
+    "to": "ax:axiomatic-equality-reflexivity",
     "kind": "proof_depends_on"
   },
   {
     "from": "thm:axiomatic-equality-function-congruence",
-    "to": "thm:axiomatic-equality-symmetry",
+    "to": "ax:axiomatic-equality-substitution",
     "kind": "proof_depends_on"
   },
   {
@@ -6000,6 +6000,46 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:identity",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:composition",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:preimage",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:set-difference",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:sym-diff",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:indexed-preimage-ops",
     "to": "def:function",
     "kind": "depends_on"
@@ -6077,6 +6117,36 @@
   {
     "from": "thm:image-preimage-adjunction",
     "to": "def:surjective",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:image-of-preimage",
+    "to": "def:function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:image-of-preimage",
+    "to": "def:image-function",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:image-of-preimage",
+    "to": "def:image-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:image-of-preimage",
+    "to": "def:preimage",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:image-of-preimage",
+    "to": "def:intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:image-of-preimage",
+    "to": "def:subset",
     "kind": "depends_on"
   },
   {
@@ -6365,6 +6435,46 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:identity",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:composition",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:preimage",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:subset",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:set-difference",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:basic-preimage-laws",
+    "to": "def:sym-diff",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "prop:bijection-unique-both-directions",
     "to": "def:bijective",
     "kind": "proof_depends_on"
@@ -6392,6 +6502,36 @@
   {
     "from": "thm:function-total-functional-characterization",
     "to": "def:total-relation-on-domain",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:image-of-preimage",
+    "to": "def:function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:image-of-preimage",
+    "to": "def:image-function",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:image-of-preimage",
+    "to": "def:image-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:image-of-preimage",
+    "to": "def:preimage",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:image-of-preimage",
+    "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:image-of-preimage",
+    "to": "def:subset",
     "kind": "proof_depends_on"
   },
   {
@@ -8570,6 +8710,91 @@
     "kind": "proof_depends_on"
   },
   {
+    "from": "def:closed-under-set-operation-vocabulary",
+    "to": "def:indexed-family",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:closed-under-set-operation-vocabulary",
+    "to": "def:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:closed-under-set-operation-vocabulary",
+    "to": "def:intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:closed-under-set-operation-vocabulary",
+    "to": "def:complement",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:closed-under-set-operation-vocabulary",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:closure-rule-intersection-stability",
+    "to": "def:closed-under-set-operation-vocabulary",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:closure-rule-intersection-stability",
+    "to": "def:collection-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:closure-rule-intersection-stability",
+    "to": "def:indexed-intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:closure-rule-intersection-stability",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:pairwise-closure-implies-finite-closure",
+    "to": "def:closed-under-set-operation-vocabulary",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:pairwise-closure-implies-finite-closure",
+    "to": "def:empty-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:pairwise-closure-implies-finite-closure",
+    "to": "def:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:pairwise-closure-implies-finite-closure",
+    "to": "def:intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complement-union-intersection-closure-duality",
+    "to": "def:closed-under-set-operation-vocabulary",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complement-union-intersection-closure-duality",
+    "to": "thm:de-morgan",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complement-union-intersection-closure-duality",
+    "to": "thm:involution",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complement-union-intersection-closure-duality",
+    "to": "thm:pairwise-closure-implies-finite-closure",
+    "kind": "depends_on"
+  },
+  {
     "from": "def:cover-full",
     "to": "def:subset",
     "kind": "depends_on"
@@ -8647,6 +8872,56 @@
   {
     "from": "def:fip",
     "to": "def:finite-infinite",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cover-failure-relative-complements",
+    "to": "def:cover-full",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cover-failure-relative-complements",
+    "to": "def:set-difference",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cover-failure-relative-complements",
+    "to": "def:indexed-intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cover-failure-relative-complements",
+    "to": "def:empty-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:cover-failure-relative-complements",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:no-finite-subcover-fip",
+    "to": "def:cover-full",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:no-finite-subcover-fip",
+    "to": "def:subcover",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:no-finite-subcover-fip",
+    "to": "def:finite-cover",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:no-finite-subcover-fip",
+    "to": "def:fip",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:no-finite-subcover-fip",
+    "to": "thm:cover-failure-relative-complements",
     "kind": "depends_on"
   },
   {
@@ -8765,6 +9040,66 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:collection-system",
+    "to": "def:power-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:collection-system",
+    "to": "def:indexed-family",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:closure-system",
+    "to": "def:collection-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:closure-system",
+    "to": "def:indexed-intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:closure-system",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:generated-collection",
+    "to": "def:closure-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:generated-collection",
+    "to": "def:indexed-intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:generated-collection",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:generated-collection-closure-laws",
+    "to": "def:generated-collection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:generated-collection-closure-laws",
+    "to": "def:closure-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:generated-collection-closure-laws",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:generated-collection-closure-laws",
+    "to": "def:indexed-intersection",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:commutativity",
     "to": "ax:extensionality",
     "kind": "depends_on"
@@ -8860,6 +9195,51 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:idempotency",
+    "to": "ax:extensionality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:idempotency",
+    "to": "def:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:idempotency",
+    "to": "def:intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complement-laws",
+    "to": "ax:extensionality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complement-laws",
+    "to": "def:empty-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complement-laws",
+    "to": "def:complement",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complement-laws",
+    "to": "def:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complement-laws",
+    "to": "def:intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:complement-laws",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:involution",
     "to": "ax:extensionality",
     "kind": "depends_on"
@@ -8867,6 +9247,166 @@
   {
     "from": "thm:involution",
     "to": "def:complement",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "ax:extensionality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "def:set-difference",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "def:complement",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "def:empty-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "def:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "def:intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "thm:de-morgan",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "thm:complement-laws",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "ax:extensionality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "def:sym-diff",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "def:set-difference",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "def:empty-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "def:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "def:intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "thm:difference-laws",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:set-algebra",
+    "to": "def:closed-under-set-operation-vocabulary",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:set-algebra",
+    "to": "thm:pairwise-closure-implies-finite-closure",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:set-algebra",
+    "to": "thm:complement-union-intersection-closure-duality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:set-algebra",
+    "to": "def:power-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:set-algebra",
+    "to": "def:complement",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:set-algebra",
+    "to": "def:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:set-algebra-equivalent-definitions",
+    "to": "def:set-algebra",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:set-algebra-equivalent-definitions",
+    "to": "def:empty-set",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:set-algebra-equivalent-definitions",
+    "to": "thm:complement-laws",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:set-algebra-equivalent-definitions",
+    "to": "thm:complement-union-intersection-closure-duality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:set-algebra-closure-consequences",
+    "to": "def:set-algebra",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:set-algebra-closure-consequences",
+    "to": "thm:set-algebra-equivalent-definitions",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:set-algebra-closure-consequences",
+    "to": "thm:difference-laws",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:set-algebra-closure-consequences",
+    "to": "thm:symmetric-difference-laws",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:set-algebra-closure-consequences",
+    "to": "thm:complement-union-intersection-closure-duality",
     "kind": "depends_on"
   },
   {
@@ -8935,6 +9475,206 @@
     "kind": "depends_on"
   },
   {
+    "from": "def:sigma-algebra",
+    "to": "def:set-algebra",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:sigma-algebra",
+    "to": "def:closed-under-set-operation-vocabulary",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:sigma-algebra",
+    "to": "def:indexed-family",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:sigma-algebra",
+    "to": "def:indexed-union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sigma-algebra-closure-consequences",
+    "to": "def:sigma-algebra",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sigma-algebra-closure-consequences",
+    "to": "thm:set-algebra-closure-consequences",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sigma-algebra-closure-consequences",
+    "to": "thm:indexed-de-morgan",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sigma-algebra-closure-consequences",
+    "to": "def:closed-under-set-operation-vocabulary",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sigma-algebra-closure-consequences",
+    "to": "def:indexed-union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sigma-algebra-closure-consequences",
+    "to": "def:indexed-intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sigma-algebras-closed-under-intersection",
+    "to": "def:sigma-algebra",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sigma-algebras-closed-under-intersection",
+    "to": "thm:sigma-algebra-closure-consequences",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sigma-algebras-closed-under-intersection",
+    "to": "thm:closure-rule-intersection-stability",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sigma-algebras-closed-under-intersection",
+    "to": "def:collection-system",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:sigma-algebras-closed-under-intersection",
+    "to": "def:indexed-intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:generated-sigma-algebra",
+    "to": "def:sigma-algebra",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:generated-sigma-algebra",
+    "to": "def:generated-collection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:generated-sigma-algebra",
+    "to": "thm:sigma-algebras-closed-under-intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:generated-sigma-algebra",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:generated-sigma-algebra-closure-laws",
+    "to": "def:generated-sigma-algebra",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:generated-sigma-algebra-closure-laws",
+    "to": "thm:generated-collection-closure-laws",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:generated-sigma-algebra-closure-laws",
+    "to": "thm:sigma-algebras-closed-under-intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:generated-sigma-algebra-closure-laws",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:topology",
+    "to": "def:closed-under-set-operation-vocabulary",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:topology",
+    "to": "def:indexed-union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:topology",
+    "to": "def:indexed-intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:topology",
+    "to": "thm:pairwise-closure-implies-finite-closure",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:borel-sigma-algebra",
+    "to": "def:topology",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:borel-sigma-algebra",
+    "to": "def:generated-sigma-algebra",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:borel-sigma-algebra",
+    "to": "def:sigma-algebra",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:borel-sigma-algebra-closure-laws",
+    "to": "def:borel-sigma-algebra",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:borel-sigma-algebra-closure-laws",
+    "to": "thm:generated-sigma-algebra-closure-laws",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:borel-sigma-algebra-closure-laws",
+    "to": "def:topology",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:borel-sigma-algebra-closure-laws",
+    "to": "def:sigma-algebra",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:metric-topology",
+    "to": "def:topology",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:metric-topology",
+    "to": "def:borel-sigma-algebra",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:metric-topology",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:borel-sigma-algebra-rn",
+    "to": "def:metric-topology",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:borel-sigma-algebra-rn",
+    "to": "def:borel-sigma-algebra",
+    "kind": "depends_on"
+  },
+  {
+    "from": "def:borel-sigma-algebra-rn",
+    "to": "thm:borel-sigma-algebra-closure-laws",
+    "kind": "depends_on"
+  },
+  {
     "from": "thm:empty-set-exists-unique",
     "to": "ax:empty-set",
     "kind": "depends_on"
@@ -8966,6 +9706,46 @@
   },
   {
     "from": "def:set-equality",
+    "to": "ax:extensionality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:extensional-equality-criteria",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:extensional-equality-criteria",
+    "to": "def:set-equality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:extensional-equality-criteria",
+    "to": "ax:extensionality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:subset-absorption-criteria",
+    "to": "def:subset",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:subset-absorption-criteria",
+    "to": "def:set-equality",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:subset-absorption-criteria",
+    "to": "def:union",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:subset-absorption-criteria",
+    "to": "def:intersection",
+    "kind": "depends_on"
+  },
+  {
+    "from": "thm:subset-absorption-criteria",
     "to": "ax:extensionality",
     "kind": "depends_on"
   },
@@ -9185,6 +9965,151 @@
     "kind": "depends_on"
   },
   {
+    "from": "thm:associativity",
+    "to": "ax:extensionality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:associativity",
+    "to": "def:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:associativity",
+    "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:borel-sigma-algebra-closure-laws",
+    "to": "def:borel-sigma-algebra",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:borel-sigma-algebra-closure-laws",
+    "to": "thm:generated-sigma-algebra-closure-laws",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:borel-sigma-algebra-closure-laws",
+    "to": "def:topology",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:borel-sigma-algebra-closure-laws",
+    "to": "def:sigma-algebra",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:closure-rule-intersection-stability",
+    "to": "def:closed-under-set-operation-vocabulary",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:closure-rule-intersection-stability",
+    "to": "def:collection-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:closure-rule-intersection-stability",
+    "to": "def:indexed-intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:closure-rule-intersection-stability",
+    "to": "def:subset",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:commutativity",
+    "to": "ax:extensionality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:commutativity",
+    "to": "def:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:commutativity",
+    "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complement-laws",
+    "to": "ax:extensionality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complement-laws",
+    "to": "def:empty-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complement-laws",
+    "to": "def:complement",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complement-laws",
+    "to": "def:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complement-laws",
+    "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complement-laws",
+    "to": "def:subset",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complement-union-intersection-closure-duality",
+    "to": "def:closed-under-set-operation-vocabulary",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complement-union-intersection-closure-duality",
+    "to": "thm:de-morgan",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complement-union-intersection-closure-duality",
+    "to": "thm:involution",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:complement-union-intersection-closure-duality",
+    "to": "thm:pairwise-closure-implies-finite-closure",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:cover-failure-relative-complements",
+    "to": "def:cover-full",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:cover-failure-relative-complements",
+    "to": "def:set-difference",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:cover-failure-relative-complements",
+    "to": "def:indexed-intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:cover-failure-relative-complements",
+    "to": "def:empty-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:cover-failure-relative-complements",
+    "to": "def:subset",
+    "kind": "proof_depends_on"
+  },
+  {
     "from": "thm:de-morgan",
     "to": "def:union",
     "kind": "proof_depends_on"
@@ -9197,6 +10122,181 @@
   {
     "from": "thm:de-morgan",
     "to": "def:complement",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "ax:extensionality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "def:set-difference",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "def:complement",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "def:empty-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "def:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "def:subset",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "thm:de-morgan",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:difference-laws",
+    "to": "thm:complement-laws",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:distributivity",
+    "to": "ax:extensionality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:distributivity",
+    "to": "def:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:distributivity",
+    "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:distributivity",
+    "to": "cor:set-duality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:fip-duality",
+    "to": "def:cover-full",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:fip-duality",
+    "to": "def:fip",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:fip-duality",
+    "to": "def:complement",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:fip-duality",
+    "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:fip-duality",
+    "to": "def:subset",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "prop:fip-duality",
+    "to": "thm:indexed-de-morgan",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:generated-collection-closure-laws",
+    "to": "def:generated-collection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:generated-collection-closure-laws",
+    "to": "def:closure-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:generated-collection-closure-laws",
+    "to": "def:subset",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:generated-collection-closure-laws",
+    "to": "def:indexed-intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:generated-sigma-algebra-closure-laws",
+    "to": "def:generated-sigma-algebra",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:generated-sigma-algebra-closure-laws",
+    "to": "thm:generated-collection-closure-laws",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:generated-sigma-algebra-closure-laws",
+    "to": "thm:sigma-algebras-closed-under-intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:generated-sigma-algebra-closure-laws",
+    "to": "def:subset",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:idempotency",
+    "to": "ax:extensionality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:idempotency",
+    "to": "def:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:idempotency",
+    "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:identity-absorption",
+    "to": "ax:extensionality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:identity-absorption",
+    "to": "def:empty-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:identity-absorption",
+    "to": "def:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:identity-absorption",
+    "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:identity-absorption",
+    "to": "def:subset",
     "kind": "proof_depends_on"
   },
   {
@@ -9232,6 +10332,226 @@
   {
     "from": "thm:indexed-distributivity",
     "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:involution",
+    "to": "ax:extensionality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:involution",
+    "to": "def:complement",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-finite-subcover-fip",
+    "to": "def:cover-full",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-finite-subcover-fip",
+    "to": "def:subcover",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-finite-subcover-fip",
+    "to": "def:finite-cover",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-finite-subcover-fip",
+    "to": "def:fip",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:no-finite-subcover-fip",
+    "to": "thm:cover-failure-relative-complements",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:pairwise-closure-implies-finite-closure",
+    "to": "def:closed-under-set-operation-vocabulary",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:pairwise-closure-implies-finite-closure",
+    "to": "def:empty-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:pairwise-closure-implies-finite-closure",
+    "to": "def:set-membership",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:pairwise-closure-implies-finite-closure",
+    "to": "def:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:pairwise-closure-implies-finite-closure",
+    "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:set-algebra-closure-consequences",
+    "to": "def:set-algebra",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:set-algebra-closure-consequences",
+    "to": "thm:set-algebra-equivalent-definitions",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:set-algebra-closure-consequences",
+    "to": "thm:difference-laws",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:set-algebra-closure-consequences",
+    "to": "thm:symmetric-difference-laws",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:set-algebra-closure-consequences",
+    "to": "thm:complement-union-intersection-closure-duality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:set-algebra-equivalent-definitions",
+    "to": "def:set-algebra",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:set-algebra-equivalent-definitions",
+    "to": "def:empty-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:set-algebra-equivalent-definitions",
+    "to": "def:set-membership",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:set-algebra-equivalent-definitions",
+    "to": "thm:complement-laws",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:set-algebra-equivalent-definitions",
+    "to": "thm:complement-union-intersection-closure-duality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:set-duality",
+    "to": "def:set-duality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:set-duality",
+    "to": "thm:de-morgan",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:set-duality",
+    "to": "ax:extensionality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sigma-algebra-closure-consequences",
+    "to": "def:sigma-algebra",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sigma-algebra-closure-consequences",
+    "to": "thm:set-algebra-closure-consequences",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sigma-algebra-closure-consequences",
+    "to": "thm:indexed-de-morgan",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sigma-algebra-closure-consequences",
+    "to": "def:closed-under-set-operation-vocabulary",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sigma-algebra-closure-consequences",
+    "to": "def:indexed-union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sigma-algebra-closure-consequences",
+    "to": "def:indexed-intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sigma-algebras-closed-under-intersection",
+    "to": "def:sigma-algebra",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sigma-algebras-closed-under-intersection",
+    "to": "thm:sigma-algebra-closure-consequences",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sigma-algebras-closed-under-intersection",
+    "to": "thm:closure-rule-intersection-stability",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sigma-algebras-closed-under-intersection",
+    "to": "def:collection-system",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:sigma-algebras-closed-under-intersection",
+    "to": "def:indexed-intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "ax:extensionality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "def:sym-diff",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "def:set-difference",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "def:empty-set",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "def:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "def:subset",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:symmetric-difference-laws",
+    "to": "thm:difference-laws",
     "kind": "proof_depends_on"
   },
   {
@@ -9242,11 +10562,6 @@
   {
     "from": "cor:binary-union-exists-unique",
     "to": "thm:union-output-exists-unique",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:complement-antitone-inclusion",
-    "to": "thm:complement-antitone-inclusion",
     "kind": "proof_depends_on"
   },
   {
@@ -9270,13 +10585,23 @@
     "kind": "proof_depends_on"
   },
   {
-    "from": "cor:intersection-exists-unique",
-    "to": "thm:separation-output-exists-unique",
+    "from": "thm:extensional-equality-criteria",
+    "to": "def:subset",
     "kind": "proof_depends_on"
   },
   {
-    "from": "thm:intersection-monotone-inclusion",
-    "to": "thm:intersection-monotone-inclusion",
+    "from": "thm:extensional-equality-criteria",
+    "to": "def:set-equality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:extensional-equality-criteria",
+    "to": "ax:extensionality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "cor:intersection-exists-unique",
+    "to": "thm:separation-output-exists-unique",
     "kind": "proof_depends_on"
   },
   {
@@ -9297,11 +10622,6 @@
   {
     "from": "thm:pairing-output-exists-unique",
     "to": "ax:extensionality",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:power-set-monotone-inclusion",
-    "to": "thm:power-set-monotone-inclusion",
     "kind": "proof_depends_on"
   },
   {
@@ -9341,11 +10661,6 @@
   },
   {
     "from": "thm:set-difference-antitone-right",
-    "to": "thm:set-difference-antitone-right",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:set-difference-antitone-right",
     "to": "def:subset",
     "kind": "proof_depends_on"
   },
@@ -9361,17 +10676,37 @@
   },
   {
     "from": "thm:set-difference-monotone-left",
-    "to": "thm:set-difference-monotone-left",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:set-difference-monotone-left",
     "to": "def:subset",
     "kind": "proof_depends_on"
   },
   {
     "from": "thm:set-difference-monotone-left",
     "to": "def:set-difference",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:subset-absorption-criteria",
+    "to": "def:subset",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:subset-absorption-criteria",
+    "to": "def:set-equality",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:subset-absorption-criteria",
+    "to": "def:union",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:subset-absorption-criteria",
+    "to": "def:intersection",
+    "kind": "proof_depends_on"
+  },
+  {
+    "from": "thm:subset-absorption-criteria",
+    "to": "ax:extensionality",
     "kind": "proof_depends_on"
   },
   {
@@ -9382,11 +10717,6 @@
   {
     "from": "cor:symmetric-difference-exists-unique",
     "to": "cor:binary-union-exists-unique",
-    "kind": "proof_depends_on"
-  },
-  {
-    "from": "thm:union-monotone-inclusion",
-    "to": "thm:union-monotone-inclusion",
     "kind": "proof_depends_on"
   },
   {
