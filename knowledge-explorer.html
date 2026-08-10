@@ -426,8 +426,21 @@ function extractProofEnv(s){
   const m=String(s||'').match(/\\begin\{proof\}(?:\[[^\]]*\])?([\s\S]*?)\\end\{proof\}/);
   return m?m[1].trim():String(s||'').trim();
 }
+function proofEnvByTitle(raw,titleRe){
+  const s=String(raw||'');
+  const re=/\\begin\{proof\}(?:\[([^\]]*)\])?([\s\S]*?)\\end\{proof\}/g;
+  let m;
+  while((m=re.exec(s))!==null){
+    if(titleRe.test(m[1]||''))return cleanProofText(m[2]||'');
+  }
+  return'';
+}
 function proofSection(raw,kind){
   if(!raw)return'';
+  const env=kind==='standard'
+    ?proofEnvByTitle(raw,/Professional Standard|Standard/i)
+    :proofEnvByTitle(raw,/Detailed Learning|Detailed/i);
+  if(env)return env;
   const detailed=/\\textbf\s*\{Detailed Learning Proof\.\}\s*~?\\\\?/i;
   const standard=/\\textbf\s*\{Professional Standard Proof\.\}\s*~?\\\\?/i;
   const structure=/\\begin\{remark\*\}\[Proof structure\]/i;
@@ -1445,7 +1458,7 @@ function renderDetails(n){
   add('Predicate logic statement',pred);
   add('Negation',n.negation_formal||n.negation_display,true);
   add('Negation predicate',n.negation_predicate,true);
-  addFailure('Failure modes',n.failure_modes);
+  addFailure('Failure modes',(Array.isArray(n.failure_mode_items)&&n.failure_mode_items.length)?n.failure_mode_items:n.failure_modes);
   addFailure('Failure mode decomposition',n.failure_mode_decomposition);
   add('Contrapositive',n.contrapositive,true);
   if(Array.isArray(n.expositions)){
