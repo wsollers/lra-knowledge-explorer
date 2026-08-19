@@ -2,7 +2,7 @@
 GENERATED POINTER WRAPPER — DO NOT EDIT BY HAND.
 
 Source repo: wsollers/lra-governance
-Canonical overlay: docs/governance/repo-overlays/lra-knowledge-explorer.md
+Canonical overlay: capabilities/overlays/lra-knowledge-explorer.md
 
 Regenerate from lra-governance.
 Emergency downstream edits must be ported upstream before regeneration.
@@ -13,8 +13,10 @@ Emergency downstream edits must be ported upstream before regeneration.
 This repository uses canonical LRA governance by pointer, not by copied rules.
 
 Repository: `lra-knowledge-explorer`
-Canonical task router: `docs/agent-task-index.md`
-Canonical repo overlay: `docs/governance/repo-overlays/lra-knowledge-explorer.md`
+Canonical repo overlay: `capabilities/overlays/lra-knowledge-explorer.md`
+Canonical route resolver:
+`python <governance-root>/scripts/govpy.py capabilities/resolve.py --repo lra-knowledge-explorer --task "<user task>" --root <repo-root>`
+Human route index (lazy reference only): `capabilities/task-index.md`
 
 Resolve canonical governance in this order:
 
@@ -25,8 +27,11 @@ Resolve canonical governance in this order:
 If canonical governance cannot be resolved, stop and report that
 `lra-governance` is not present.
 
-When working here, read the canonical task router, then load exactly the
-smallest relevant governance docs and the canonical repo overlay. Do not treat
-this wrapper as a local source of truth.
+After resolving canonical governance, run the route resolver. Load its eager
+packet only; follow lazy references, tools, schemas, and examples on demand.
+If the resolver prints a route catalog instead of a packet (exit code 2), pick
+the route whose description matches the task's intent and re-run with
+`--route <id>` added.
+Do not treat this wrapper as a local source of truth.
 
 Provider note: Codex reads this file as the local entrypoint, then follows canonical governance.
