@@ -9,6 +9,7 @@ lra-proof-vault into proof-vault-index.json, keyed by canonical theorem label.
 
 from __future__ import annotations
 
+import argparse
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -128,13 +129,34 @@ def build(vault_root: Path) -> dict[str, Any]:
     }
 
 
-def main() -> None:
-    if not DEFAULT_VAULT_ROOT.exists():
-        raise SystemExit(f"Proof vault not found: {DEFAULT_VAULT_ROOT}")
-    index = build(DEFAULT_VAULT_ROOT)
-    OUTPUT.write_text(json.dumps(index, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"Wrote {OUTPUT} with {index['record_count']} records and {index['warning_count']} warnings.")
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--vault-root",
+        type=Path,
+        default=DEFAULT_VAULT_ROOT,
+        help="Path to the lra-proof-vault checkout to snapshot.",
+    )
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=OUTPUT,
+        help="Destination JSON file for the generated proof-vault index.",
+    )
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    vault_root = args.vault_root.resolve()
+    output_path = args.output.resolve()
+    if not vault_root.exists():
+        raise SystemExit(f"Proof vault not found: {vault_root}")
+    index = build(vault_root)
+    output_path.write_text(json.dumps(index, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Wrote {output_path} with {index['record_count']} records and {index['warning_count']} warnings.")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

@@ -1,11 +1,129 @@
+# LRA shared ignore policy
+# Copy this file for each new governed repository. Keep repository-specific
+# patterns below the shared policy section in that repository's .gitignore.
+
+# LaTeX intermediate files
+*.aux
+*.log
+*.ilg
+*.idx
+*.ind
+*.toc
+*.lof
+*.lot
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.run.xml
+
+# Build output
+build/
+build-*/
+out/
+dist/
+.generated/
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+
+# Node / web tooling
+node_modules/
+.next/
+.vite/
+coverage/
+
+# CMake and compiled output
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+.cmake/
+vcpkg_installed/
+cmake-build-*/
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.app
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.spv
+
+# Lean
+.lake/
+lean/.lake/
+
+# Generated reports and local process output
+**/.explorer/
+baselines/
+migration-reports/
+reports/
+!docs/reports/
+!docs/reports/**
+runs/extraction-*/
+logs/extraction-log-*.log
+logs/extraction-report-*.md
+
+# Local temp/cache output
+.cache/
+.test-tmp/
+tmp/
+temp/
+*.tmp
+*.bak
+*.zip
+.tmp.driveupload/
+**/.tmp.driveupload/
+
+# IDE / editor
+.vscode/
+.idea/
+.vs/
+*.suo
+*.user
+*.sln.docinfo
+*.vcxproj.user
+*.cbp
+*.code-workspace
+*.clangd
+.clangd/
+.clang-tidy-cache
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
 # Local source PDFs
 # These may include personally purchased or otherwise non-redistributable files.
 *.pdf
 
+# Local agent state and attachments
 .claude/
-
-# Local Google Drive upload scratch directories
-.tmp.driveupload/
-**/.tmp.driveupload/
-
 .codex-remote-attachments/
